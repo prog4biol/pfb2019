@@ -29,5 +29,9 @@
 ### [Files: I/O](python_files.md)
 ### [Exceptions](python_exceptions.md)
 ### [Regular Expressions](python_regex.md)
+### [Datastructures](python_datastructures.md)
+### [BioPython](python_biopyton.md)
 ### [Questions](python_questions.md)
+
+
 
