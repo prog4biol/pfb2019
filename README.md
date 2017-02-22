@@ -6,6 +6,7 @@
 ### [Unix Overview](unix_0.md)
 ### [Getting Around](unix_1.md)
 ### [Getting things done](unix_2.md)
+### [Text Editors](texteditors_0.md)
 
 # 3. AWS
 
