@@ -14,6 +14,20 @@
 
 #Python
 ### [Python Overview](python_0.md)
-### [Python Variabes](python_1.md)
-### [Python Questions](python_questions.md)
+### [Syntax](python_syntax.md)
+### [Variabes](python_variables.md)
+### [Operators](python_operators.md)
+### [Logic: Control Statements](python_logic.md)
+### [Loops](python_loops.md)
+### [Numbers](python_numbers.md)
+### [Strings](python_strings.md)
+### [Lists](python_lists.md)
+### [Tuples](python_tuples.md)
+### [Dictionaries](python_dict.md)
+### [Functions](python_functions.md)
+### [Modules](python_modules.md)
+### [Files: I/O](python_files.md)
+### [Exceptions](python_exceptions.md)
+### [Regular Expressions](python_regex.md)
+### [Questions](python_questions.md)
 
