@@ -2,6 +2,6 @@
 
 ```
 str = "some string"
-stringlength = len(str)
-cap_string = str.capitalize()
+str_length = len(str)
+cap_str = str.capitalize()
 ```
