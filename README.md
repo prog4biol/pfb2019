@@ -1,6 +1,7 @@
 # PFB2017
 
 #Bioinformatics
+### [Bioinformatics Overview](bioinfo_0.md)
 
 #Unix
 ### [Unix Overview](unix_0.md)
@@ -12,7 +13,7 @@
 ### [AWS Overview](aws_0.md)
 
 #Python
-## [Python Overview](python_0.md)
-## [Python Variabes](python_1.md)
-## [Python Questions](python_questions.md)
+### [Python Overview](python_0.md)
+### [Python Variabes](python_1.md)
+### [Python Questions](python_questions.md)
 
