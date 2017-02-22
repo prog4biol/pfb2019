@@ -7,3 +7,5 @@
  - less/more  
  - grep  
  - wc
+ - ssh
+ - scp 
