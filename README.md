@@ -32,7 +32,7 @@
 ### [Regular Expressions](python_regex.md)
 ### [Datastructures](python_datastructures.md)
 ### [BioPython](python_biopyton.md)
-### [Questions](python_questions.md)
+### [My Questions](python_questions.md)
 
 ## Bioinformatic Topics
 ### Sequence Search and Alignments
