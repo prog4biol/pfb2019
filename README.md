@@ -8,6 +8,7 @@
 ### [Getting Around](unix_1.md)
 ### [Getting things done](unix_2.md)
 ### [Text Editors](texteditors_0.md)
+### [Git for Beginners](git_0.md)
 
 #AWS
 ### [AWS Overview](aws_0.md)
