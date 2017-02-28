@@ -34,5 +34,13 @@
 ### [BioPython](python_biopyton.md)
 ### [Questions](python_questions.md)
 
+## Bioinformatic Topics
+### Sequence Search and Alignments
+### Assembly (DNA/RNA)
+### NGS
+### Variant Calling
+### Ontology
+### Bioinformatics Projects (GMOD)
+
 
 
