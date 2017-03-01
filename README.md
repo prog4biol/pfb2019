@@ -34,7 +34,7 @@
 ### [BioPython](python_biopyton.md)
 ### [My Questions](python_questions.md)
 
-## Bioinformatic Topics
+# Bioinformatic Topics
 ### Sequence Search and Alignments
 ### Assembly (DNA/RNA)
 ### NGS
