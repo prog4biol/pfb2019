@@ -1,19 +1,19 @@
 # PFB2017
 
-#Bioinformatics
+# Bioinformatics
 ### [Bioinformatics Overview](bioinfo_0.md)
 
-#Unix
+# Unix
 ### [Unix Overview](unix_0.md)
 ### [Getting Around](unix_1.md)
 ### [Getting things done](unix_2.md)
 ### [Text Editors](texteditors_0.md)
 ### [Git for Beginners](git_0.md)
 
-#AWS
+# AWS
 ### [AWS Overview](aws_0.md)
 
-#Python
+# Python
 ### [Python Overview](python_overview.md)
 ### [Syntax](python_syntax.md)
 ### [Variabes](python_variables.md)
