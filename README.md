@@ -29,7 +29,7 @@ Language basics: 3.x, interpreted, slow
 ### [Syntax](python_syntax.md)
 example code, statements, functions(), tab spacing
 
-### [Variables etc](python_variables.md)
+### [Variables, Types etc](python_variables.md)
 overview of all types: start with constants: numbers, strings '' "" ''' ''' r'' = raw strings, + for concat, * for repeat
 iterable, string, int, float, tuple, list, dictionary, set
 ### [Operators](python_operators.md)
