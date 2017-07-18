@@ -18,7 +18,7 @@
 
 # Python
 
-#We are teaching the simplest form of the language, no 'clever' stuff.
+# We are teaching the simplest form of the language, no 'clever' stuff.
 # We can expand on this in subsequent years
 
 ## Functions and statements we are NOT covering
