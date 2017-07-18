@@ -27,7 +27,7 @@
 ### [Python Overview](python_overview.md)
 Language basics: 3.x, interpreted, slow
 ### [Syntax](python_syntax.md)
-example code, statements, functions(), tab spacing
+example code, statements, functions(), tab spacing, interactive interpreter, debugger
 
 ### [Variables, Types etc](python_variables.md)
 overview of all types: start with constants: numbers, strings '' "" ''' ''' r'' = raw strings, + for concat, * for repeat
