@@ -17,6 +17,10 @@
 ### [AWS Overview](aws_0.md)
 
 # Python
+
+## Functions and statements we are NOT covering
+assert
+
 ### [Python Overview](python_overview.md)
 ### [Syntax](python_syntax.md)
 ### [Variabes](python_variables.md)
