@@ -3,15 +3,13 @@
 ## Why we had to switch to an inferior language
 
 
-# [Bioinformatics Overview](#bioinformatics-overview)
-
-
-# Unix
-### [Unix Overview](unix_0.md)
-### [Getting Around](unix_1.md)
-### [Getting things done](unix_2.md)
-### [Text Editors](texteditors_0.md)
-### [Git for Beginners](git_0.md)
+ * [Bioinformatics Overview](#bioinformatics-overview)
+ * Unix
+     * [Unix Overview](unix_0.md)
+     * [Getting Around](unix_1.md)  
+     * [Getting things done](unix_2.md)
+     * [Text Editors](texteditors_0.md)
+     * [Git for Beginners](git_0.md)
 
 # AWS
 ### [AWS Overview](aws_0.md)
@@ -111,6 +109,6 @@ import json
 
 ===
 
-# Bioinformatics
+# Bioinformatics Overview
 
 
