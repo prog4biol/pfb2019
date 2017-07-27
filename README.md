@@ -89,7 +89,8 @@ Git for Beginners
 
 ***
 # AWS
-***
+***  
+
 
 
 AWS Overview
@@ -102,11 +103,14 @@ Note: I think it would work nicely if we can get prepaid visa credit cards for e
 - create and launch an instance
 - ssh into instance
 
+  
+  
 
 ***
 # Python
 ***
-
+  
+  
 
 
 Python Overview
