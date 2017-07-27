@@ -25,7 +25,8 @@
 `assert`
 
 ### [Python Overview](python_overview.md)
-Language basics: 3.x, interpreted, slow
+Language basics: 3.x, interpreted, slow, python notebook eg jupyter
+
 ### [Syntax](python_syntax.md)
 example code, statements, functions(), tab spacing, interactive interpreter, debugger
 
