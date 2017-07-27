@@ -113,8 +113,8 @@ Running Python
 
 Interactive Interpreter
 -----------------------
-Python can be run one line at a time in an interactive interpreter.
-To lauch the interpreter type the followin into your terminal window:
+Python can be run one line at a time in an interactive interpreter.  
+To lauch the interpreter type the following into your terminal window:
 
 `$ python`  
 Note: '$' indicates the command line prompt  
