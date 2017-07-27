@@ -4,7 +4,7 @@
 
 
 # [Bioinformatics](#bioinformatics)
-### [Bioinformatics Overview](bioinfo_0.md)
+### [Bioinformatics Overview](#bioinformataics-overview)
 
 # Unix
 ### [Unix Overview](unix_0.md)
@@ -112,4 +112,5 @@ import json
 ===
 
 # Bioinformatics
+## Bioinformatics Overview
 
