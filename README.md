@@ -22,7 +22,7 @@
      * [Strings](#strings) 
      * [Tuples and Lists](#tuples-and-lists)
      * [Loops](#loops)
-     * [Files: I/O](#files-i-o)
+     * [Files: I/O](#files-io)
      * [Dictionaries and Sets](#dictionaries-and-sets)
      * [Functions](#functions)
      * [Modules](#modules)
