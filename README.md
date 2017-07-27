@@ -3,7 +3,7 @@
 ## Why we had to switch to an inferior language
 
 
-# Bioinformatics
+# [Bioinformatics](#bioinformatics)
 ### [Bioinformatics Overview](bioinfo_0.md)
 
 # Unix
@@ -108,4 +108,8 @@ import json
 
 
 
+
+===
+
+# Bioinformatics
 
