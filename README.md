@@ -73,6 +73,16 @@ Note: I think it could work nicely if we  get prepaid visa credit cards for each
 
 Getting Around  
 ==============
+ - ls  
+ - cd  
+ - cp  
+ - rm  
+ - cat  
+ - less/more  
+ - grep  
+ - wc
+ - ssh
+ - scp 
 
 
 Getting things done
