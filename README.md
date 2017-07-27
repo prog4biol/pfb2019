@@ -165,13 +165,12 @@ Syntax
 
 @sep example code, statements, functions(), tab spacing, interactive interpreter, debugger
 
-Python Identifiers
-------------------
+__Python Identifiers__: 
 A Python identifier is a name used to identify a variable, function, class, module or other object. An identifier starts with a letter A to Z or a to z or an underscore (_) followed by zero or more letters, underscores and digits (0 to 9).
 
 Python does not allow punctuation characters such as @, $, and % within identifiers. Python is a case sensitive programming language. Thus, seq_id and seq_ID are two different identifiers in Python.
 
-__Naming conventions for Python identifiers__: 
+__Naming conventions for Python Identifiers__: 
  * 1st character is lowercase, unless it is a name of a Class. Classes should begin with an uppercase characters. (ex. seq)
  * Private identifiers begin with an underscore. (ex. \_private)
  * Strong private identifiers begin with two underscores. (ex. \_\_private)
@@ -201,11 +200,8 @@ The number of spaces in the indentation need to be consistent but a specific num
 __Comments__: 
 Comments are a good programming practice. Making a note of what a line or block of code is doing will help the writer and readers of the code.
 
-__#__ : The pound or hash symbol is used to prepend a comment. All characters after the # and to the end of the line are apart of the comment and it will not be interpreted. 
-
-
-
-
+__#__ : 
+The pound or hash symbol is used to prepend a comment. All characters after the # and to the end of the line are apart of the comment and it will not be interpreted. 
 ```python
 #!/usr/bin/python3
 
@@ -214,12 +210,11 @@ print ("Hello, PFB2017!") # this line prints
 ```
 
 
-__Blank Lines__
+__Blank Lines__: 
 Blank lines are also important for increasing the readability of the code. Blank lines are ignored by the interpreptor
 
 
-__Python Options__
-
+__Python Options__: 
 ```bash
 $ python -h
 usage: python [option] ... [-c cmd | -m mod | file | -] [arg] ...
