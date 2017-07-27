@@ -87,7 +87,12 @@ Getting Around
 
 Getting things done
 ==================
-
+ - sort
+ - uniq
+ - awk
+ - sed
+ - perl
+ - for
 
 Text Editors
 ============
