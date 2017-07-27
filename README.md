@@ -108,7 +108,8 @@ Language basics: 3.x, interpreted, slow, python notebook eg jupyter
 
 
 Running Python
-==============
+==============  
+
 
 Interactive Interpreter
 -----------------------
@@ -128,7 +129,32 @@ $ python
 ```python
 >>> print ("Hello, PFB2017!")
 Hello, PFB2017!
+```  
+
+Script Programming
+-----------------------
+Calling the python commnad with a script name as an argument will cause the execution of the script.  
+
+__Python Script__
+* The same code from above is typed into a text file. 
+* This file will have the extension .py. 
+
+File Contents:  
 ```
+print ("Hello, PFB2017!")
+```  
+
+Execute the Python script:
+```bash
+$ python test.py 
+```
+
+This produces the following result:
+```bash
+Hello, PFB2017!
+```
+
+
 
 
 
