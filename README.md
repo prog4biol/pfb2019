@@ -115,12 +115,17 @@ Interactive Interpreter
 Python can be run one line at a time in an interactive interpreter.
 To lauch the interpreter type the followin into your terminal window:
 
-`% python`  
-Note: '%' indicates the command line prompt  
+`$ python`  
+Note: '$' indicates the command line prompt  
 
-First Python Script!:  
+First Python Script:
+
+```bash
+$ python
+```  
+
+
 ```python
-% python
 >>> print ("Hello, PFB2017!")
 Hello, PFB2017!
 ```
