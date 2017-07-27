@@ -171,13 +171,13 @@ A Python identifier is a name used to identify a variable, function, class, modu
 
 Python does not allow punctuation characters such as @, $, and % within identifiers. Python is a case sensitive programming language. Thus, seq_id and seq_ID are two different identifiers in Python.
 
-__Naming conventions for Python identifiers__
+__Naming conventions for Python identifiers__: 
  * 1st character is lowercase, unless it is a name of a Class. Classes should begin with an uppercase characters. (ex. seq)
  * Private identifiers begin with an underscore. (ex. \_private)
  * Strong private identifiers begin with two underscores. (ex. \_\_private)
  * Language-defined special names begin and end with two underscores. (ex.\_\_special\_\_)
 
-__Reserved Words__
+__Reserved Words__: 
 The following is a list of Python keywords. These are special words that already have a purpose in python and therefore cannot be used in indentifier names.
 
 and	      exec	     not
@@ -192,21 +192,23 @@ elif	  is	    with
 else	  lambda	yield
 except	
 
-__Lines and Indentation__
+__Lines and Indentation__: 
 Python does not use braces({}) to indicate blocks of code for class and function definitions or flow control. Blocks of code are denoted by line indentation. Incorrect line spacing and indention will cause an error to be reported.
 
 The number of spaces in the indentation need to be consistent but a specific number is not required. All lines of code, or statements, within a single block must be indented in the same way. For example:
 
 
-__Comments__
+__Comments__: 
 Comments are a good programming practice. Making a note of what a line or block of code is doing will help the writer and readers of the code.
 
-__#__ The pound or hash symbol is used to prepend a comment. All characters after the # and to the end of the line are apart of the comment and it will not be interpreted. 
+__#__ : The pound or hash symbol is used to prepend a comment. All characters after the # and to the end of the line are apart of the comment and it will not be interpreted. 
 
-#!/usr/bin/python3
+
 
 
 ```python
+#!/usr/bin/python3
+
 # this is my first script
 print ("Hello, PFB2017!") # this line prints
 ```
