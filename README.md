@@ -2,9 +2,11 @@ Programming For Biology 2017
 ===========================
 
 
-* Instructors
-    * Simon Prochnik
-    * Sofia Robb
+Instructors
+============
+ * Simon Prochnik
+ * Sofia Robb  
+    
 
 
 
@@ -19,6 +21,7 @@ Programming For Biology 2017
      * [AWS Overview](#aws-overview)
   * [Python](#python)
      * [Python Overview](#python-overview)
+     * [Running Python](#running-python)
      * [Syntax](#syntax)
      * [Variables, Types, etc](#variables-types-etc)
      * [Operators](operators)
@@ -104,8 +107,32 @@ Functions and statements we are NOT covering
 Language basics: 3.x, interpreted, slow, python notebook eg jupyter
 
 
+Running Python
+==============
+
+Interactive Interpreter
+-----------------------
+Python can be run one line at a time in an interactive interpreter.
+To lauch the interpreter type the followin into your terminal window:
+
+`% python`  
+Note: '%' indicates the command line prompt  
+
+First Python Script!:  
+```python
+% python
+>>> print ("Hello, PFB2017!")
+Hello, PFB2017!
+```
+
+
+
+
 Syntax
 =======
+
+
+
 example code, statements, functions(), tab spacing, interactive interpreter, debugger
 
 
