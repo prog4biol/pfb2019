@@ -4,12 +4,12 @@ Programming For Biology 2017
 
 Instructors
 ============
- * Simon Prochnik
- * Sofia Robb  
+Simon Prochnik
+Sofia Robb  
     
+***
 
-
-
+Table of Contents
  * [Big Picture](#big-picture)
  * [Unix](#unix)
      * [Unix Overview](#unix-overview)
@@ -113,14 +113,12 @@ Running Python
 
 Interactive Interpreter
 -----------------------
-Python can be run one line at a time in an interactive interpreter.
-To lauch the interpreter type the followin into your terminal window:
-
+Python can be run one line at a time in an interactive interpreter.  
+To lauch the interpreter type the following into your terminal window:
 `$ python`  
 Note: '$' indicates the command line prompt  
 
 First Python Script:
-
 ```bash
 $ python
 ```  
@@ -130,6 +128,8 @@ $ python
 >>> print ("Hello, PFB2017!")
 Hello, PFB2017!
 ```  
+
+
 
 Script Programming
 -----------------------
@@ -141,6 +141,7 @@ __Python Script__
 
 File Contents:  
 ```
+#!/usr/bin/python3
 print ("Hello, PFB2017!")
 ```  
 
@@ -162,9 +163,73 @@ Hello, PFB2017!
 Syntax
 =======
 
+@sep example code, statements, functions(), tab spacing, interactive interpreter, debugger
+
+__Python Identifiers__: 
+A Python identifier is a name used to identify a variable, function, class, module or other object. An identifier starts with a letter A to Z or a to z or an underscore (_) followed by zero or more letters, underscores and digits (0 to 9).
+
+Python does not allow punctuation characters such as @, $, and % within identifiers. Python is a case sensitive programming language. Thus, seq_id and seq_ID are two different identifiers in Python.
+
+__Naming conventions for Python Identifiers__: 
+ * 1st character is lowercase, unless it is a name of a Class. Classes should begin with an uppercase characters. (ex. seq)
+ * Private identifiers begin with an underscore. (ex. \_private)
+ * Strong private identifiers begin with two underscores. (ex. \_\_private)
+ * Language-defined special names begin and end with two underscores. (ex.\_\_special\_\_)
+
+__Reserved Words__: 
+The following is a list of Python keywords. These are special words that already have a purpose in python and therefore cannot be used in indentifier names.
+
+```
+and         exec        not
+as          finally     or
+assert      for         pass
+break       from        print
+class       global      raise
+continue    if          return
+def         import      try
+del         in          while
+elif        is          with
+else        lambda      yield
+except
+```
+
+__Lines and Indentation__: 
+Python does not use braces({}) to indicate blocks of code for class and function definitions or flow control. Blocks of code are denoted by line indentation. Incorrect line spacing and indention will cause an error to be reported.
+
+The number of spaces in the indentation need to be consistent but a specific number is not required. All lines of code, or statements, within a single block must be indented in the same way. For example:
 
 
-example code, statements, functions(), tab spacing, interactive interpreter, debugger
+__Comments__: 
+Comments are a good programming practice. Making a note of what a line or block of code is doing will help the writer and readers of the code.
+
+__#__ : 
+The pound or hash symbol is used to prepend a comment. All characters after the # and to the end of the line are apart of the comment and it will not be interpreted. 
+```python
+#!/usr/bin/python3
+
+# this is my first script
+print ("Hello, PFB2017!") # this line prints
+```
+
+
+__Blank Lines__: 
+Blank lines are also important for increasing the readability of the code. Blank lines are ignored by the interpreptor
+
+
+__Python Options__: 
+```bash
+$ python -h
+usage: python [option] ... [-c cmd | -m mod | file | -] [arg] ...
+Options and arguments (and corresponding environment variables):
+-c cmd : program passed in as string (terminates option list)
+-d     : debug output from parser (also PYTHONDEBUG=x)
+-E     : ignore environment variables (such as PYTHONPATH)
+-h     : print this help message and exit
+```
+
+
+
+
 
 
 Variables, Types, etc
@@ -193,6 +258,17 @@ Strings
 ========
 .format()
 strip()
+
+
+__Quotation Marks__
+Python accepts single ('), double (") and triple (''' or """) quotes to denote string literals, as long as the same type of quote starts and ends the string.
+
+The triple quotes are used to span the string across multiple lines. For example, all the following are allowed:
+
+word = 'word'
+sentence = "This is a sentence."
+paragraph = """This is a paragraph. It is
+made up of multiple lines and sentences."""
 
 
 Tuples and Lists
