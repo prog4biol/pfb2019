@@ -180,17 +180,17 @@ __Reserved Words__:
 The following is a list of Python keywords. These are special words that already have a purpose in python and therefore cannot be used in indentifier names.
 
 ```
-and	      exec	     not
-as	      finally	 or
-assert	  for	     pass
-break	  from	     print
-class	  global	raise
-continue  if	    return
-def	      import	try
-del	      in	    while
-elif	  is	    with
-else	  lambda	yield
-except	
+and     exec        not
+as      finally     or
+assert      for     pass
+break       from        print
+class       global      raise
+continue        if      return
+def     import      try
+del     in      while
+elif        is      with
+else        lambda      yield
+except
 ```
 
 __Lines and Indentation__: 
