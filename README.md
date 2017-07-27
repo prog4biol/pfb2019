@@ -1,18 +1,23 @@
-# PFB2017
+Programming For Biology 2017
+===========================
 
-## Why we had to switch to an inferior language
+
+* Instructors
+    * Simon Prochnik
+    * Sofia Robb
 
 
- * [Bioinformatics Overview](#bioinformatics-overview)
- * Unix
+
+ * [Big Picture](#big-picture)
+ * Unix(#unix)
      * [Unix Overview](#unix-overview)
      * [Getting Around](#getting-around)  
      * [Getting things done](#getting-things-done)
      * [Text Editors](#text-editors)
      * [Git for Beginners](#git-for-beginners)
-  * AWS
+  * AWS(#aws)
      * [AWS Overview](#aws-overview)
-  * Python
+  * Python(#python)
      * [Python Overview](#python-overview)
      * [Syntax](#syntax)
      * [Variables, Types, etc](#variables-types-etc)
@@ -29,44 +34,63 @@
      * [Exceptions](#exceptions)
      * [Classes](#classes) 
      * [Datastructures](#datastructures)
- * BioPython
+ * BioPython(#biopython)
     * [BioPython Overview](#biopython-overview)
     * [BioPython Subtopic 1](#biopython-subtopic-1)
     * [BioPython Subtopic 2](#biopython-subtopic-2)
  * [My Questions](#my-questions)
- * [Bioinformatics Analysis and Tools](#bioinformatic-analysis-and-tools)
- * [Sequence Search and Alignments](#sequence-search-and-alignments)
- * [Assembly](#assembly)
- * [NGS](#ngs)
- * [Variant Calling](#variant-calling)
- * [Ontology](#ontology)
+ * [Bioinformatic Analysis and Tools](#bioinformatic-analysis-and-tools)
+   * [Bioinformatic Analysis and Tools Overview](#bioinformatics-analysis-and-tools-overview)
+   * [Sequence Search and Alignments](#sequence-search-and-alignments)
+   * [Assembly](#assembly)
+   * [NGS](#ngs)
+   * [Variant Calling](#variant-calling)
+   * [Ontology](#ontology)
 
 
 
 
-Bioinformatics Overview
+Big Picture
 =======================
+Why is it important for Biologists to learn to program?
 
-Unix
-=====
+***
+# Unix
+***
+
 Unix Overview
--------------
+=============
+
 
 Getting Around  
---------------
+==============
+
 
 Getting things done
--------------------
+==================
+
 
 Text Editors
-------------
+============
+
 
 Git for Beginners
------------------
+=================
+
+
+***
+# AWS
+***
 
 
 AWS Overview
 ============
+
+
+***
+# Python
+***
+
 
 
 Python Overview
@@ -84,28 +108,34 @@ Syntax
 =======
 example code, statements, functions(), tab spacing, interactive interpreter, debugger
 
+
 Variables, Types, etc
 =====================
 overview of all types: start with constants: numbers, strings '' "" ''' ''' r'' = raw strings, + for concat, * for repeat
 iterable, string, int, float, tuple, list, dictionary, set
+
 
 Operators
 ==========
 These depend on the type of variable, so revisit the most relevant ones in subsequent sections
 include // floor division and % modulus
 
+
 Logic: Control Statements
 =========================
 while, if, elif, else, break, continue, 
 ugh: else in while loop
 
+
 Numbers
 ========
+
 
 Strings
 ========
 .format()
 strip()
+
 
 Tuples and Lists
 ===============
@@ -115,11 +145,13 @@ list comprehension
 zip() -- loop over two lists at the same time
 iterators: next(), generators
 
+
 Loops
 =====
 for i in list: 
 (ugh: else in for loop)
 iterators, range()
+
 
 Files: I/O
 ==========
@@ -129,10 +161,12 @@ read() readline()
 write()
 close()
 
+
 Dictionaries and Sets
 ======================
 for k, v in knights.items():
 keys()
+
 
 Functions
 =========
@@ -151,12 +185,17 @@ from bla import boo
 The standard library:
 os, sys, glob, shutil, math, random, statistics (scipy), zlib, sqlite3 (DB access)? urllib.request 
 
+
 Regular Expressions
 ====================
+
+
 
 Exceptions
 ==========
 try/except/finally (see with/as)
+
+
 
 Classes 
 =======
@@ -164,14 +203,21 @@ Classes
 scope & namespace, 
 `global, nonlocal`
 
+
+
 Datastructures
 ==============
 import json
 
 
+***
+# BioPython
+***
+
 
 BioPython Overview
 ==================
+
 
 BioPython Subtopic 1
 --------------------
@@ -185,27 +231,45 @@ My Questions
 ============
 
 
-Bioinformatics Analysis and Tools
-================================
+***
+# Bioinformatic Analysis and Tools
+***
+
+
+Bioinformatic Analysis and Tools Overview
+========================================
   * What you want to do:
       * tools to do it
+
+
 
 Sequence Search and Alignments
 ==============================
 
+
+
 Assembly
 ========
+
 DNA
 ----
 
 RNA
 ----
 
+
+
 NGS
 ===
 
+
+
+
 Variant Calling
 ===============
+
+
+
 
 Ontology
 ========
