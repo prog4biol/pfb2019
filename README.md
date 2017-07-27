@@ -97,12 +97,15 @@ import json
 ### [My Questions](python_questions.md)
 
 # Bioinformatic Topics
+### Bioinformatics Analysis and Tools
+#### What you want to do:
+##### tools to do it
 ### Sequence Search and Alignments
 ### Assembly (DNA/RNA)
 ### NGS
 ### Variant Calling
 ### Ontology
-### Bioinformatics Projects (GMOD)
+
 
 
 
