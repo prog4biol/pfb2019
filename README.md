@@ -179,6 +179,7 @@ __Naming conventions for Python Identifiers__:
 __Reserved Words__: 
 The following is a list of Python keywords. These are special words that already have a purpose in python and therefore cannot be used in indentifier names.
 
+```
 and	      exec	     not
 as	      finally	 or
 assert	  for	     pass
@@ -190,6 +191,7 @@ del	      in	    while
 elif	  is	    with
 else	  lambda	yield
 except	
+```
 
 __Lines and Indentation__: 
 Python does not use braces({}) to indicate blocks of code for class and function definitions or flow control. Blocks of code are denoted by line indentation. Incorrect line spacing and indention will cause an error to be reported.
