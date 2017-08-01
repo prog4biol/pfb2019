@@ -35,7 +35,7 @@ __Mon, Oct 16__
   7:00PM -  8:00PM  | Review Section | TA | Hereshy
   8:30PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
   __Wed, Oct 18__ 
-    7:30AM -  9:00AM  | Breakfast | All | Blackford
+  7:30AM -  9:00AM  | Breakfast | All | Blackford
   9:00AM -  9:45AM  | Lecture: Morning Lecture Part I | Instructor | Hereshy
   9:45AM -  9:55AM  | Break | Instructor | Hereshy
   9:55AM - 10:30AM  | Lecture: Morning Lecture Part II| Instructor | Hereshy
