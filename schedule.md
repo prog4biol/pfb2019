@@ -48,7 +48,7 @@ __Mon, Oct 16__
   5:30PM -  7:00PM  | Dinner | All | Blackford
   7:00PM -  8:00PM  | Review Section | TA | Hereshy
   8:30PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
-    __Thu, Oct 19__ 
+  __Thu, Oct 19__ 
   7:30AM -  9:00AM  | Breakfast | All | Blackford
   9:00AM -  9:45AM  | Lecture: Morning Lecture Part I | Instructor | Hereshy
   9:45AM -  9:55AM  | Break | Instructor | Hereshy
@@ -62,7 +62,7 @@ __Mon, Oct 16__
   5:30PM -  7:00PM  | Dinner | All | Blackford
   7:00PM -  8:00PM  | Review Section | TA | Hereshy
   8:30PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
-    __Fri, Oct 20__ 
+  __Fri, Oct 20__ 
   7:30AM -  9:00AM  | Breakfast | All | Blackford
   9:00AM -  9:45AM  | Lecture: Morning Lecture Part I | Instructor | Hereshy
   9:45AM -  9:55AM  | Break | Instructor | Hereshy
@@ -76,22 +76,21 @@ __Mon, Oct 16__
   5:30PM -  7:00PM  | Dinner | All | Blackford
   7:00PM -  8:00PM  | Review Section | TA | Hereshy
   8:30PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
-    8:30PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
-    __Sat, Oct 21__ 
-    7:30AM -  9:00AM  | Breakfast | All | Blackford
-                      | Day Off | All | 
+  __Sat, Oct 21__ 
+  7:30AM -  9:00AM  | Breakfast | All | Blackford
+  | Day Off | All | 
  12:00PM -  2:00PM  | Lunch | All | Blackford
-                      | Day Off | All | 
-  5:30PM -  7:00PM  | Dinner | All | Blackford
-                       | Day Off | All | 
-    __Sun, Oct 22__ 
-    7:30AM -  9:00AM  | Breakfast | All | Blackford
-                      | Day Off | All | 
+ | Day Off | All | 
+ 5:30PM -  7:00PM  | Dinner | All | Blackford 
+ | Day Off | All | 
+ __Sun, Oct 22__ 
+ 7:30AM -  9:00AM  | Breakfast | All | Blackford
+ | Day Off | All | 
  12:00PM -  2:00PM  | Lunch | All | Blackford
-                      | Day Off | All | 
-  5:30PM -  7:00PM  | Dinner | All | Blackford
-                       | Day Off | All | 
-  __Mon, Oct 23__ 
+| Day Off | All | 
+ 5:30PM -  7:00PM  | Dinner | All | Blackford
+| Day Off | All | 
+ __Mon, Oct 23__ 
   7:30AM -  9:00AM  | Breakfast | All | Blackford
   9:00AM -  9:45AM  | Lecture: Morning Lecture Part I | Instructor | Hereshy
   9:45AM -  9:55AM  | Break | Instructor | Hereshy
