@@ -4,7 +4,7 @@ PFB 2017 Tentative Schedule
 
  Time | Description | Who | Location  
  ---- | ----------- | --- | ---------  
- __Sun, Oct 15__||   
+ __Sun, Oct 15__
   7:00PM -  9:00PM  | Social: Meet and Greet | All | Bar 
 __Mon, Oct 16__ |||   
   7:30AM -  9:00AM  | Breakfast | All | Blackford
