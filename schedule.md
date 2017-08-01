@@ -19,7 +19,7 @@ __Mon, Oct 16__
   3:30PM -  5:30PM  | Practical: Afternoon Problem Sets | Instructor | Hereshy
   5:30PM -  7:00PM  | Dinner | All | Blackford
   7:00PM -  8:00PM  | Review Section | TA | Hereshy
-  8:30PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
+  8:00PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
  __Tue, Oct 17__ 
   7:30AM -  9:00AM  | Breakfast | All | Blackford
   9:00AM -  9:45AM  | Lecture: Morning Lecture Part I | Instructor | Hereshy
@@ -33,7 +33,7 @@ __Mon, Oct 16__
   3:30PM -  5:30PM  | Practical: Afternoon Problem Sets | Instructor | Hereshy
   5:30PM -  7:00PM  | Dinner | All | Blackford
   7:00PM -  8:00PM  | Review Section | TA | Hereshy
-  8:30PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
+  8:00PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
   __Wed, Oct 18__ 
   7:30AM -  9:00AM  | Breakfast | All | Blackford
   9:00AM -  9:45AM  | Lecture: Morning Lecture Part I | Instructor | Hereshy
@@ -47,7 +47,7 @@ __Mon, Oct 16__
   3:30PM -  5:30PM  | Practical: Afternoon Problem Sets | Instructor | Hereshy
   5:30PM -  7:00PM  | Dinner | All | Blackford
   7:00PM -  8:00PM  | Review Section | TA | Hereshy
-  8:30PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
+  8:00PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
   __Thu, Oct 19__ 
   7:30AM -  9:00AM  | Breakfast | All | Blackford
   9:00AM -  9:45AM  | Lecture: Morning Lecture Part I | Instructor | Hereshy
@@ -61,7 +61,7 @@ __Mon, Oct 16__
   3:30PM -  5:30PM  | Practical: Afternoon Problem Sets | Instructor | Hereshy
   5:30PM -  7:00PM  | Dinner | All | Blackford
   7:00PM -  8:00PM  | Review Section | TA | Hereshy
-  8:30PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
+  8:00PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
   __Fri, Oct 20__ 
   7:30AM -  9:00AM  | Breakfast | All | Blackford
   9:00AM -  9:45AM  | Lecture: Morning Lecture Part I | Instructor | Hereshy
@@ -75,7 +75,7 @@ __Mon, Oct 16__
   3:30PM -  5:30PM  | Practical: Afternoon Problem Sets | Instructor | Hereshy
   5:30PM -  7:00PM  | Dinner | All | Blackford
   7:00PM -  8:00PM  | Review Section | TA | Hereshy
-  8:30PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
+  8:00PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
   __Sat, Oct 21__ | __Day Off__ 
   7:30AM -  9:00AM  | Breakfast | All | Blackford
  12:00PM -  2:00PM  | Lunch | All | Blackford
@@ -97,7 +97,6 @@ __Mon, Oct 16__
 4:00PM -  6:00PM  | Practical: Sequence Searches and Alignment Problem Sets | TAs | Hereshy
 6:00PM -  7:00PM  | Dinner | All | Blackford
 7:00PM - 11:00PM  | Practical: Any Problem Sets | TAs | Hereshy
-  8:30PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
 __Tue, Oct 24__ 
 7:30AM -  9:00AM  | Breakfast | All | Blackford
 9:00AM -  9:55AM  | Lecture: Assembly (RNA/DNA) | Lecturer | Hereshy
