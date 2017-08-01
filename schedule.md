@@ -4,9 +4,9 @@ PFB 2017 Tentative Schedule
 
  Time | Description | Who | Location  
  ---- | ----------- | --- | ---------  
- __Sun, Oct 15__|  |  |    
+ __Sun, Oct 15__|||    
   7:00PM -  9:00PM  | Social: Meet and Greet | All | Bar 
-__Mon, Oct 16__ |  |  |   
+__Mon, Oct 16__ |||   
   7:30AM -  9:00AM  | Breakfast | All | Blackford
   9:00AM -  9:45AM  | Lecture: Morning Lecture Part I | Instructor | Hereshy
   9:45AM -  9:55AM  | Break | Instructor | Hereshy
@@ -20,7 +20,7 @@ __Mon, Oct 16__ |  |  |
   5:30PM -  7:00PM  | Dinner | All | Blackford
   7:00PM -  8:00PM  | Review Section | TA | Hereshy
   8:30PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
- __Tue, Oct 17__ |  |  | 
+ __Tue, Oct 17__ ||| 
   7:30AM -  9:00AM  | Breakfast | All | Blackford
   9:00AM -  9:45AM  | Lecture: Morning Lecture Part I | Instructor | Hereshy
   9:45AM -  9:55AM  | Break | Instructor | Hereshy
@@ -34,4 +34,4 @@ __Mon, Oct 16__ |  |  |
   5:30PM -  7:00PM  | Dinner | All | Blackford
   7:00PM -  8:00PM  | Review Section | TA | Hereshy
   8:30PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
-  __Wed, Oct 18__ |  |  |    
+  __Wed, Oct 18__ |||    
