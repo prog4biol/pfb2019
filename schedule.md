@@ -85,52 +85,50 @@ __Mon, Oct 16__
  12:00PM -  2:00PM  | Lunch | All | Blackford
  5:30PM -  7:00PM  | Dinner | All | Blackford
  __Mon, Oct 23__ 
-  7:30AM -  9:00AM  | Breakfast | All | Blackford
-  9:00AM -  9:45AM  | Lecture: Morning Lecture Part I | Instructor | Hereshy
-  9:45AM -  9:55AM  | Break | Instructor | Hereshy
-  9:55AM - 10:30AM  | Lecture: Morning Lecture Part II| Instructor | Hereshy
- 10:30AM - 12:00PM  | Practical: Morning Problem Sets | Instructor | Hereshy
- 12:00PM -  2:00PM  | Lunch | All | Blackford
-  2:00PM -  2:45PM  | Lecture: Afternoon Lecture Part I | Instructor | Hereshy
-  2:45PM -  2:55PM  | Break | Instructor | Hereshy
-  2:55PM -  3:30PM  | Lecture: Afternoon Lecture Part II| Instructor | Hereshy
-  3:30PM -  5:30PM  | Practical: Afternoon Problem Sets | Instructor | Hereshy
-  5:30PM -  7:00PM  | Dinner | All | Blackford
-  7:00PM -  8:00PM  | Review Section | TA | Hereshy
+7:30AM -  9:00AM  | Breakfast | All | Blackford
+9:00AM -  9:55AM  | Lecture: Bioinformatics Overview | Lecturer | Hereshy
+9:55AM -  10:00AM  | Break | Instructor | Hereshy
+10:00AM - 12:00PM  | Practical: Bioinformatics Overview  Problem Sets | TAs | Hereshy
+12:00PM -  2:00PM  | Lunch | All | Blackford
+2:00PM -  2:55PM  | Practical: Any Problem Sets | TAs | Hereshy
+2:55PM -  3:00PM  | Break | | Hereshy
+3:00PM -  3:55PM  | Lecture: Sequence Searches and Alignment | Lecturer | Hereshy
+3:55PM -  4:00PM  | Break |  | Hereshy
+4:00PM -  6:00PM  | Practical: Sequence Searches and Alignment Problem Sets | TAs | Hereshy
+6:00PM -  7:00PM  | Dinner | All | Blackford
+7:00PM - 11:00PM  | Practical: Any Problem Sets | TAs | Hereshy
   8:30PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
 __Tue, Oct 24__ 
 7:30AM -  9:00AM  | Breakfast | All | Blackford
-9:00AM -  9:45AM  | Lecture: Morning Lecture Part I | Instructor | Hereshy
-9:45AM -  9:55AM  | Break | Instructor | Hereshy
-9:55AM - 10:30AM  | Lecture: Morning Lecture Part II| Instructor | Hereshy
- 10:30AM - 12:00PM  | Practical: Morning Problem Sets | Instructor | Hereshy
- 12:00PM -  2:00PM  | Lunch | All | Blackford
-  2:00PM -  2:45PM  | Lecture: Afternoon Lecture Part I | Instructor | Hereshy
-  2:45PM -  2:55PM  | Break | Instructor | Hereshy
-  2:55PM -  3:30PM  | Lecture: Afternoon Lecture Part II| Instructor | Hereshy
-  3:30PM -  5:30PM  | Practical: Afternoon Problem Sets | Instructor | Hereshy
-  5:30PM -  7:00PM  | Dinner | All | Blackford
-  7:00PM -  8:00PM  | Review Section | TA | Hereshy
-  8:30PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
-__Wed, Oct 25__ 
-  7:30AM -  9:00AM  | Breakfast | All | Blackford
-  9:00AM -  9:45AM  | Lecture: Morning Lecture Part I | Instructor | Hereshy
-  9:45AM -  9:55AM  | Break | Instructor | Hereshy
-  9:55AM - 10:30AM  | Lecture: Morning Lecture Part II| Instructor | Hereshy
- 10:30AM - 12:00PM  | Practical: Morning Problem Sets | Instructor | Hereshy
- 12:00PM -  2:00PM  | Lunch | All | Blackford
-  2:00PM -  2:45PM  | Lecture: Afternoon Lecture Part I | Instructor | Hereshy
-  2:45PM -  2:55PM  | Break | Instructor | Hereshy
-  2:55PM -  3:30PM  | Lecture: Afternoon Lecture Part II| Instructor | Hereshy
-  3:30PM -  5:30PM  | Practical: Afternoon Problem Sets | Instructor | Hereshy
-  5:30PM -  7:00PM  | Dinner | All | Blackford
-  7:00PM -  8:00PM  | Review Section | TA | Hereshy
-  8:30PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
-__Thr, Oct 26 | __Day Off__ 
+9:00AM -  9:55AM  | Lecture: Assembly (RNA/DNA) | Lecturer | Hereshy
+9:55AM -  10:00AM  | Break | Instructor | Hereshy
+10:00AM - 12:00PM  | Practical: Assembly (RNA/DNA) Problem Sets | TAs | Hereshy
+12:00PM -  2:00PM  | Lunch | All | Blackford
+2:00PM -  2:55PM  | Practical: Any Problem Sets | TAs | Hereshy
+2:55PM -  3:00PM  | Break | | Hereshy
+3:00PM -  3:55PM  | Lecture: NGS | Lecturer | Hereshy
+3:55PM -  4:00PM  | Break |  | Hereshy
+4:00PM -  6:00PM  | Practical: NGS Problem Sets | TAs | Hereshy
+6:00PM -  7:00PM  | Dinner | All | Blackford
+7:00PM - 11:00PM  | Practical: Any Problem Sets | TAs | Hereshy
+__Wed, Oct 25__  | __Day Off__ 
 7:30AM -  9:00AM  | Breakfast | All | Blackford
+9:00AM -  9:55AM  | Lecture: Variant Calling | Lecturer | Hereshy
+9:55AM -  10:00AM  | Break | Instructor | Hereshy
+10:00AM - 12:00PM  | Practical: Variant Calling Problem Sets | TAs | Hereshy
+12:00PM -  2:00PM  | Lunch | All | Blackford
+2:00PM -  2:55PM  | Practical: Any Problem Sets | TAs | Hereshy
+2:55PM -  3:00PM  | Break | | Hereshy
+3:00PM -  3:55PM  | Lecture: Ontology| Lecturer | Hereshy
+3:55PM -  4:00PM  | Break |  | Hereshy
+4:00PM -  6:00PM  | Practical: Ontolooy Problem Sets | TAs | Hereshy
+6:00PM -  7:00PM  | Dinner | All | Blackford
+7:00PM - 11:00PM  | Practical: Any Problem Sets | TAs | Hereshy
+__Thr, Oct 26__  | __Day Off__ 
+ 7:30AM -  9:00AM  | Breakfast | All | Blackford
  12:00PM -  2:00PM  | Lunch | All | Blackford
-  5:30PM -  7:00PM  | Dinner | All | Blackford
-  __Fri, Oct 27__ 
+ 5:30PM -  7:00PM  | Dinner | All | Blackford
+__Fri, Oct 27__ 
 7:30AM -  9:00AM  | Breakfast | All | Blackford
 9:00AM -  12:00PM  | Projects | TAs | Hereshy
 12:00PM -  2:00PM  | Lunch | All | Blackford
