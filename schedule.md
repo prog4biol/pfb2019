@@ -88,7 +88,7 @@ __Mon, Oct 16__
 7:30AM -  9:00AM  | Breakfast | All | Blackford
 9:00AM -  9:55AM  | Lecture: Bioinformatics Overview | Lecturer | Hereshy
 9:55AM -  10:00AM  | Break | Instructor | Hereshy
-10:00AM - 12:00PM  | Practical: Bioinformatics Overview  Problem Sets | TAs | Hereshy
+10:00AM - 12:00PM  | Practical: Bioinformatics Overview or Any Remaining Problem Sets | TAs | Hereshy
 12:00PM -  2:00PM  | Lunch | All | Blackford
 2:00PM -  2:55PM  | Practical: Any Problem Sets | TAs | Hereshy
 2:55PM -  3:00PM  | Break | | Hereshy
