@@ -469,7 +469,9 @@ Which means that these are True
 - 'None'
 - 'False'
 - 'True'
-- ' ' (string of one blank space
+- ' ' (string of one blank space)
+
+<p>&nbsp;</p>  
 
 __Use bool() to test for truth__
 ```pthyon
@@ -477,18 +479,26 @@ __Use bool() to test for truth__
 True
 >>> bool('True')
 True
+>>>
+>>>
 >>> bool(False)
 False
 >>> bool('False')
 True
+>>>
+>>>
 >>> bool(0)
 False
 >>> bool('0')
 True
+>>>
+>>>
 >>> bool('')
 False
 >>> bool(' ')
 True
+>>>
+>>>
 >>> bool(())
 False
 >>> bool([])
