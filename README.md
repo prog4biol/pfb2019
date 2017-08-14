@@ -530,7 +530,7 @@ Which means that these are True
 
 __Use bool() to test for truth__  
 
-```pthyon
+```python
 >>> bool(True)
 True
 >>> bool('True')
