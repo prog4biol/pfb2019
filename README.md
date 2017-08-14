@@ -23,7 +23,7 @@ Table of Contents
      * [Python Overview](#python-overview)
      * [Running Python](#running-python)
      * [Syntax](#syntax)
-     * [Variables, Types, etc](#variables-types-etc)
+     * [Data Types and Variables](#data_types_and_variables)
      * [Operators](operators)
      * [Logic: Control Statements](#logic-control-statements)
      * [Numbers](#numbers)
@@ -262,10 +262,123 @@ Options and arguments (and corresponding environment variables):
 
 
 
-Variables, Types, etc
-=====================
-overview of all types: start with constants: numbers, strings '' "" ''' ''' r'' = raw strings, + for concat, * for repeat
-iterable, string, int, float, tuple, list, dictionary, set
+Data Types and Variables
+========================
+sep note:  overview of all types: start with constants: numbers, strings '' "" ''' ''' r'' = raw strings, + for concat, * for repeat
+iterable, string, int, float, tuple, list, dictionary, set  
+
+This is our first look at the 5 data types and variables. Each will be discussed in more detail in subsequent sections. 
+
+- Variables enable you to store a value in memory. 
+- Simply use the equal sign, '=', to assign a value to a variable.  
+
+
+For Example:  
+```python
+first_variable = 5
+```  
+
+Differnt types of data can be assigned to variables, i.e., intergers, floats, and strings.
+  
+For Example:
+```python
+count   = 10     # this is an integer
+average = 2.5    # this is a float
+message = "Welcome to python" # this is a string
+```  
+
+The last example are singular pieces of data being stored in an indivudual varialbe.  
+  
+Collections of data can also be stored in an individual variable, i.e., lists, tuples, and dictionaries.  
+  
+__List__  
+- Lists are used to store an ordered, *indexed* collection of data.
+- Values are separated by commas
+- Values are enclosed in square brackets '[]'
+- Lists can grown and shrink
+- Values are mutatable
+
+```python
+codons = [ 'atg' , 'aaa' , 'agg' ]
+```  
+
+Index | Value
+------|-------
+0 | atg
+1 | aaa
+2 | agg
+
+
+__Tuple__
+- Tuples are similar to lists and contain ordered, *indexed* collection of data.
+- Items are separated by commas
+- **Items are enclosed in parenthesis '()'**
+- **Tupels cannot change in size**
+- **Values are immutable**
+
+```python  
+months = ( 'Jan' , 'Feb' , 'Mar' , 'Apr' , 'May' , 'Jun' , 'Jul' , 'Aug' , 'Sep' , 'Oct' , 'Nov' , 'Dec' )
+```
+
+Index | Value
+------|-------
+0 | Jan
+1 | Feb
+2 | Mar
+3 | Apr
+4 | May
+5 | Jun
+6 | Jul
+7 | Aug
+8 | Sep
+9 | Oct
+10 | Nov
+11 | Dec
+
+__Dictionary__
+- Dictionaries are unordered collections of key/value pairs.
+- Sets of Key/Value pairs are separated by commas 
+- A key and value are grouped with a colon
+
+```python  
+genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRACA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
+```  
+
+Key | Value
+------|-------
+TP53 | GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
+BRACA1 | GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
+
+
+__Type Conversion__
+Sometimes you may need to convert data into a specific type. Here are some examples of functions that will help you to do this.
+
+Function | Description
+---------|------------
+int(x) | Converts x to an integer.
+float(x) | Converts x to a floating-point number.
+str(x) | Converts x to a string.
+chr(x) | Converts an integer to a character.
+tuple(s) | Converts s to a tuple.
+list(s) | Converts s to a list.
+
+
+
+__Should we include these??? I think they are too complicated__ 
+Function | Description
+---------|------------
+eval(str) | Evaluates a string and returns an object.
+complex(real [,imag]) | Creates a complex number.
+repr(x) | Converts x to an expression string.
+set(s) | Converts s to a set.
+dict(d) | Creates a dictionary. d must be a sequence of (key,value) tuples.
+frozenset(s) | Converts s to a frozen set.
+unichr(x) | Converts an integer to a Unicode character.
+ord(x) | Converts a single character to its integer value.
+hex(x) | Converts an integer to a hexadecimal string.
+oct(x) | Converts an integer to an octal string.
+
+
 
 
 Operators
@@ -309,6 +422,9 @@ list comprehension
 zip() -- loop over two lists at the same time
 iterators: next(), generators
 
+
+__Tuples__
+The main reason why tuples exist is to get data to and from function calls. 
 
 Loops
 =====
