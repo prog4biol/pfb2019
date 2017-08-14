@@ -323,7 +323,7 @@ __Tuple__
 - **Values are immutable**
   
   
-```python  
+```python
 months = ( 'Jan' , 'Feb' , 'Mar' , 'Apr' , 'May' , 'Jun' , 'Jul' , 'Aug' , 'Sep' , 'Oct' , 'Nov' , 'Dec' )
 ```
   
@@ -351,7 +351,7 @@ __Dictionary__
 - A key and value are grouped with a colon
   
   
-```python  
+```python
 genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRACA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
 ```  
   
@@ -528,7 +528,8 @@ Which means that these are True
 
 <p>&nbsp;</p>  
 
-__Use bool() to test for truth__
+__Use bool() to test for truth__  
+
 ```pthyon
 >>> bool(True)
 True
