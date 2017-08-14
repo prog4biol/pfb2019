@@ -435,7 +435,9 @@ Operator | Equivalent to | Example | result evaluates to
 
 <p>&nbsp;</p>  
 
-__Logical Operators__  
+
+
+__Comparison Operators__  
 
 These operators compare two values and returns true or false.  
 
@@ -450,6 +452,38 @@ Operator | Description | Example | Result
 \<=       | less than or equal  | 3 \<= 2  | False
 
 <p>&nbsp;</p>  
+
+__Logical Operators__
+ 
+Operator | Description | Example | Result
+---------|-------------|---------|--------
+and | True if left operand is True and right operand is True | bool(3>=2 and 2<3) | True
+or | TRUE if left operand is Treu or right operand is True | bool(3==2 or 2<3) | True
+not | Reverses the logical status | bool(not False)  | True
+
+<p>&nbsp;</p>
+__Membership Operators__
+
+
+
+Operator | Description
+---------|-------------
+in      | True if a value is included in a list, tuple, or string  
+not in  | True if a value is absent in a list, tuple, or string
+
+For Example:  
+```python
+>>> dna = 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'
+>>> 'TCT' in dna
+True
+>>>
+>>> 'ATG' in dna
+False
+>>> 'ATG' not in dna
+True
+
+```
+
 
 Truth
 ======
@@ -506,6 +540,30 @@ False
 >>> bool({})
 False
 ```
+
+<p>&nbsp;</p>
+
+__Operator Precedence__
+
+Operators are listed in order of precedence. Highest listed first. Not all the operators listed here are mentioned above. 
+
+Operator | Description	
+---------|------------
+\*\* | Exponentiation (raise to the power)
+\~ \+ \- | Complement, unary plus and minus (method names for the last two are +@ and -@)
+\* / % // | Multiply, divide, modulo and floor division
+\+ \- | Addition and subtraction
+\>> \<< | Right and left bitwise shift
+\& |  Bitwise 'AND'
+\^ \| | Bitwise exclusive 'OR' and regular 'OR'
+\<= < > >= | Comparison operators
+\<> == != | Equality operators	
+\= %= /= //= -= += \*= \*\*= | Assignment operators
+is is not | Identity operators
+in not in |  Membership operators
+not or and | Logical operators
+
+
 
 Logic: Control Statements
 =========================
