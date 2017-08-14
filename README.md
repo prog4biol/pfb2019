@@ -23,8 +23,9 @@ Table of Contents
      * [Python Overview](#python-overview)
      * [Running Python](#running-python)
      * [Syntax](#syntax)
-     * [Data Types and Variables](#data_types_and_variables)
-     * [Operators](operators)
+     * [Data Types and Variables](#data-types-and-variables)
+     * [Operators](#operators)
+     * [Truth](#truth)
      * [Logic: Control Statements](#logic-control-statements)
      * [Numbers](#numbers)
      * [Strings](#strings) 
@@ -290,6 +291,8 @@ message = "Welcome to python" # this is a string
 The last example are singular pieces of data being stored in an indivudual varialbe.  
   
 Collections of data can also be stored in an individual variable, i.e., lists, tuples, and dictionaries.  
+ 
+ <p>&nbsp;</p>
   
 __List__  
 - Lists are used to store an ordered, *indexed* collection of data.
@@ -297,29 +300,34 @@ __List__
 - Values are enclosed in square brackets '[]'
 - Lists can grown and shrink
 - Values are mutatable
-
+  
+  
 ```python
 codons = [ 'atg' , 'aaa' , 'agg' ]
 ```  
-
+  
+  
 Index | Value
 ------|-------
 0 | atg
 1 | aaa
 2 | agg
 
-
+  <p>&nbsp;</p>
+  
 __Tuple__
 - Tuples are similar to lists and contain ordered, *indexed* collection of data.
 - Items are separated by commas
 - **Items are enclosed in parenthesis '()'**
 - **Tupels cannot change in size**
 - **Values are immutable**
-
+  
+  
 ```python  
 months = ( 'Jan' , 'Feb' , 'Mar' , 'Apr' , 'May' , 'Jun' , 'Jul' , 'Aug' , 'Sep' , 'Oct' , 'Nov' , 'Dec' )
 ```
-
+  
+  
 Index | Value
 ------|-------
 0 | Jan
@@ -335,24 +343,31 @@ Index | Value
 10 | Nov
 11 | Dec
 
+<p>&nbsp;</p>
+  
 __Dictionary__
 - Dictionaries are unordered collections of key/value pairs.
 - Sets of Key/Value pairs are separated by commas 
 - A key and value are grouped with a colon
-
+  
+  
 ```python  
 genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRACA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
 ```  
-
+  
+  
 Key | Value
 ------|-------
 TP53 | GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 BRACA1 | GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
 
-
+  
+   <p>&nbsp;</p>
+   
 __Type Conversion__
 Sometimes you may need to convert data into a specific type. Here are some examples of functions that will help you to do this.
-
+  
+  
 Function | Description
 ---------|------------
 int(x) | Converts x to an integer.
@@ -379,13 +394,127 @@ hex(x) | Converts an integer to a hexadecimal string.
 oct(x) | Converts an integer to an octal string.
 
 
-
+  
+  
 
 Operators
 ==========
-These depend on the type of variable, so revisit the most relevant ones in subsequent sections
+@sep These depend on the type of variable, so revisit the most relevant ones in subsequent sections
 include // floor division and % modulus
+  
+  
+<p>&nbsp;</p>  
 
+__Arthmetic Operators__  
+
+
+Operator | Description | Example | Result
+---------|-------------|---------|-------   
+\+        | Addition    | 3+2     |  5
+\-        | Subtraction | 3-2     |  1
+\*        | Multiplication | 3\*2 | 6
+\/        | Division    | 3/2     | 1.5
+\%        | Modulus (divides left operand by right operand and returns the remainder)    | 3%2     | 1
+\*\*       | Exponent    | 3\*\*2  | 9
+\//       | Floor Division (result is the quotient with digits after the decimal point removed. If one of the operands is negative, the result is floored, i.e., rounded away from zero | 3//2  ; -11//3 | 1 ; -4
+
+<p>&nbsp;</p>  
+
+__Assignment Operators__  
+
+Operator | Equivalent to | Example | result evaluates to 
+---------|---------------|---------|---------------------
+\=       | a = 3         | 	result = 3 |  3
+\+= | result = result + 2 | result = 3 ; result += 2 | 5
+\-= | result = result - 2 | result = 3 ; result -= 2 | 1
+\*= | result = result * 2| result = 3  ; result \*= 2 | 6
+/=  | result = result / 2 | result = 3 ; result /= 2 | 1.5
+%=  | result = result % 2 | result = 3 ; result %= 2 | 1 	
+\*\*= | result = result \*\* 2 | result = 3 ; result \*\*= 2 | 9 
+//=  | result = result // 2 | result = 3 ; result //= 3 | 1 
+
+<p>&nbsp;</p>  
+
+__Logical Operators__  
+
+These operators compare two values and returns true or false.  
+
+
+Operator | Description | Example | Result
+---------|-------------|---------|-------   
+==       | equal to    | 3 == 2  | False
+!=       | not equal   | 3 != 2  | True
+\>        | greater than | 3 \> 2  | True
+\<        | less than   | 3 \< 2  | False
+\>=       | greater than or equal   | 3 \>= 2  | True
+\<=       | less than or equal  | 3 \<= 2  | False
+
+<p>&nbsp;</p>  
+
+Truth
+======
+Lets take a step back, What is truth?  
+
+Everything is true, except for:  
+- 0
+- None
+- False
+- '' (empty string)
+- [] (empty list)
+- () (empty tuple)
+- {} (empty dictionary)
+
+Which means that these are True
+- '0'
+- 'None'
+- 'False'
+- 'True'
+- ' ' (string of one blank space
+
+__Use bool() to test for truth__
+```pthyon
+bool(True)
+```
+```
+True
+```  
+
+<p>&nbsp;</p>  
+
+```pthyon
+bool('True')
+```
+```
+True
+```  
+
+<p>&nbsp;</p>  
+
+```pthyon
+bool(False)
+```
+```
+False
+```  
+
+<p>&nbsp;</p>  
+
+```pthyon
+bool(0)
+```
+```
+False
+```  
+
+<p>&nbsp;</p>  
+
+```pthyon
+bool('0')
+```  
+
+```
+True
+```
 
 Logic: Control Statements
 =========================
