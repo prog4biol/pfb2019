@@ -473,47 +473,28 @@ Which means that these are True
 
 __Use bool() to test for truth__
 ```pthyon
-bool(True)
-```
-```
+>>> bool(True)
 True
-```  
-
-<p>&nbsp;</p>  
-
-```pthyon
-bool('True')
-```
-```
+>>> bool('True')
 True
-```  
-
-<p>&nbsp;</p>  
-
-```pthyon
-bool(False)
-```
-```
+>>> bool(False)
 False
-```  
-
-<p>&nbsp;</p>  
-
-```pthyon
-bool(0)
-```
-```
-False
-```  
-
-<p>&nbsp;</p>  
-
-```pthyon
-bool('0')
-```  
-
-```
+>>> bool('False')
 True
+>>> bool(0)
+False
+>>> bool('0')
+True
+>>> bool('')
+False
+>>> bool(' ')
+True
+>>> bool(())
+False
+>>> bool([])
+False
+>>> bool({})
+False
 ```
 
 Logic: Control Statements
