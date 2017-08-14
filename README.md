@@ -571,8 +571,128 @@ False
 
 Logic: Control Statements
 =========================
-while, if, elif, else, break, continue, 
-ugh: else in while loop
+@sep while, if, elif, else, break, continue, 
+@sep ugh: else in while loop
+
+Control Statements are used to direct the flow of your code and create the oportunity for decision making. Control statements foundation is build on truth.
+
+__If Statement__
+- Use the If Statement to test for truth and to execute lines of code if true.  
+- When the expression evaluates to true each of the statements indented below the if statment, also known as the nested statement block, will be executed.
+
+If Statement Syntax:  
+```python
+if expression :
+  statement
+  statement
+```
+
+For Example:  
+```python
+dna = 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'
+if 'AGC' in dna:
+  print('found AGC in your dna sequence')
+```
+Returns:  
+```
+found AGC in your dna sequence
+```
+  
+
+__If/Else Statement__
+- The If portion of the if/else statement behave as before. 
+- When the if statement is true the if nested statement block will be executed. 
+- When the if statement is false the else nested statement block will be executed.
+
+```python
+dna = 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'
+if 'ATG' in dna:
+  print('found ATG in your dna sequence')
+else:
+  print('did not find ATG in your dna sequence')
+```
+Returns:  
+```
+did not find ATG in your dna sequence
+```
+
+
+__if/elif__
+- The If portion of the if/else statement behave as before. 
+- When the if statement is true the if nested statement block will be executed.
+- When the if statement is false, the first elif expression will be tested. 
+- When the first elif statement is true, the first elif statement block will be executed. 
+- When the if and all the elif statements are false, the nested else statement block will be executed.
+- The if and every elif statement are tested in order. 
+- The first if/elif statement found to be true is the last statement tested. 
+- All subsequent elif statements will not be tested. 
+- When the if and every elif statements are false the else nested statement block will be executed  
+
+```python
+count = 60
+if count < 0:
+  message = "is less than 0"
+  print(count, message)
+elif count < 50:
+  message = "is less than 50"
+  print (count, message)
+elif count > 50:
+  message = "is greater than 50"
+  print (count, message)
+else:
+  message = "must be 50"
+  print(count, message)
+```
+Returns:  
+```
+60 is greater than 50
+```
+
+Let's change count to 20, what statement block gets executed?  
+
+```python
+count = 20
+if count < 0:
+  message = "is less than 0"
+  print(count, message)
+elif count < 50:
+  message = "is less than 50"
+  print (count, message)
+elif count > 50:
+  message = "is greater than 50"
+  print (count, message)
+else:
+  message = "must be 50"
+  print(count, message)
+```
+Returns:  
+```
+20 is less than 100
+```
+
+What happens when count is 50?  
+
+```python
+count = 50
+if count < 0:
+  message = "is less than 0"
+  print(count, message)
+elif count < 50:
+  message = "is less than 50"
+  print (count, message)
+elif count > 50:
+  message = "is greater than 50"
+  print (count, message)
+else:
+  message = "must be 50"
+  print(count, message)
+```
+Returns:  
+```
+50 must be 50
+```
+
+
 
 
 Numbers
