@@ -461,10 +461,9 @@ and | True if left operand is True and right operand is True | bool(3>=2 and 2<3
 or | TRUE if left operand is Treu or right operand is True | bool(3==2 or 2<3) | True
 not | Reverses the logical status | bool(not False)  | True
 
-<p>&nbsp;</p>
-__Membership Operators__
+<p>&nbsp;</p>  
 
-
+__Membership Operators__  
 
 Operator | Description
 ---------|-------------
@@ -483,6 +482,28 @@ False
 True
 
 ```
+
+<p>&nbsp;</p> 
+
+__Operator Precedence__
+
+Operators are listed in order of precedence. Highest listed first. Not all the operators listed here are mentioned above. 
+
+Operator | Description	
+---------|------------
+\*\* | Exponentiation (raise to the power)
+\~ \+ \- | Complement, unary plus and minus (method names for the last two are +@ and -@)
+\* / % // | Multiply, divide, modulo and floor division
+\+ \- | Addition and subtraction
+\>> \<< | Right and left bitwise shift
+\& |  Bitwise 'AND'
+\^ \| | Bitwise exclusive 'OR' and regular 'OR'
+\<= < > >= | Comparison operators
+\<> == != | Equality operators	
+\= %= /= //= -= += \*= \*\*= | Assignment operators
+is is not | Identity operators
+in not in |  Membership operators
+not or and | Logical operators
 
 
 Truth
@@ -543,25 +564,7 @@ False
 
 <p>&nbsp;</p>
 
-__Operator Precedence__
 
-Operators are listed in order of precedence. Highest listed first. Not all the operators listed here are mentioned above. 
-
-Operator | Description	
----------|------------
-\*\* | Exponentiation (raise to the power)
-\~ \+ \- | Complement, unary plus and minus (method names for the last two are +@ and -@)
-\* / % // | Multiply, divide, modulo and floor division
-\+ \- | Addition and subtraction
-\>> \<< | Right and left bitwise shift
-\& |  Bitwise 'AND'
-\^ \| | Bitwise exclusive 'OR' and regular 'OR'
-\<= < > >= | Comparison operators
-\<> == != | Equality operators	
-\= %= /= //= -= += \*= \*\*= | Assignment operators
-is is not | Identity operators
-in not in |  Membership operators
-not or and | Logical operators
 
 
 
