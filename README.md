@@ -180,7 +180,7 @@ __Python Script__
 * This file will have the extension .py. 
 
 File Contents:  
-```
+```python
 #!/usr/bin/python3
 print ("Hello, PFB2017!")
 ```  
