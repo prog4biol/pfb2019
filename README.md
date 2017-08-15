@@ -297,7 +297,7 @@ average = 2.5    # this is a float
 message = "Welcome to python" # this is a string
 ```  
 
-The last example are singular pieces of data being stored in an indivudual varialbe.  
+10, 2.5, and "Welcome to python" are singular pieces of data being stored in an indivudual variables.  
   
 Collections of data can also be stored in an individual variable, i.e., lists, tuples, and dictionaries.  
  
