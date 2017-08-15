@@ -388,7 +388,8 @@ list(s) | Converts s to a list.
 
 
 
-__Should we include these??? I think they are too complicated__ 
+__Should we include these??? I think they are too complicated__   
+
 Function | Description
 ---------|------------
 eval(str) | Evaluates a string and returns an object.
