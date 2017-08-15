@@ -60,6 +60,15 @@ Big Picture
 =======================
 Why is it important for Biologists to learn to program?
 
+What are our tips for being successful in your efforts to learn to program?
+1. Practice, practice, practice. Please, spend as much time possible actually coding.
+2. Write only a line or two of code, then test it. If you write to many lines, it becomes more difficult to debug if there is an error.
+3. Errors are not failures. Every error you get is a learning opportunity. Every single error you debug is a major success. Fixing errors is how you will cement what you have learned.
+4. Don't spend too much time trying to figure out a problem. We are here to help. It is important for you to try and solve an isssue on your own but not for you to waste your time. We want to help you to independently solve your problem.
+5. Lectures are important, but the practice is more important.
+6. Review sessions are important, but practice is more important.
+6. It is essential that we help you to learn how to find solutions on your own.
+
 ***
 # Unix
 ***
