@@ -385,6 +385,8 @@ str(x) | Converts x to a string.
 chr(x) | Converts an integer to a character.
 tuple(s) | Converts s to a tuple.
 list(s) | Converts s to a list.
+set(s) | Converts s to a set.
+dict(d) | Creates a dictionary. d must be a sequence of (key,value) tuples.
 
 
 
@@ -395,8 +397,6 @@ Function | Description
 eval(str) | Evaluates a string and returns an object.
 complex(real [,imag]) | Creates a complex number.
 repr(x) | Converts x to an expression string.
-set(s) | Converts s to a set.
-dict(d) | Creates a dictionary. d must be a sequence of (key,value) tuples.
 frozenset(s) | Converts s to a frozen set.
 unichr(x) | Converts an integer to a Unicode character.
 ord(x) | Converts a single character to its integer value.
