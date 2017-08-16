@@ -1014,6 +1014,7 @@ ATGGGTCTAC
 > The varialbe 'dna' does not get interpolated when it is inside of quotes
 
 __ERRORS__
+
 Let's look at the typical errors you will encouter when you use the print() function.
 
 What will happen if you forget to close your quotes:
