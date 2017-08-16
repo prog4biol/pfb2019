@@ -1131,6 +1131,38 @@ can be stored in a variable.
 >>> print(dna_length)
 20
 ```
+<p>&nbsp;</p>
+
+Something to note about the 
+`len()`
+function is that it takes a string as an argument but returns an int.  
+
+This is in contrast to the concatenation operator. It takes strings as arguments and returns a string.  
+
+Let's try to concatenate an int.  
+```python
+>>> dna_length = len(dna)
+>>> details = "The lenth of the DNA sequence: " + dna + " is " + dna_length
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: Can't convert 'int' object to str implicitly
+```
+> We get a TypeError. Because an int is stored in dna_length and concatenation only works with strings, this value cannot be concatenated to the rest of the strings.
+
+To use an int with the concatenation operator we need to covert the int to a string.  
+```python
+>>> details = "The lenth of the DNA sequence: " + dna + " is " + str(dna_length)
+>>> print(details)
+The lenth of the DNA sequence: TAGCTATATAAAATCATAAT is 20
+```
+
+Another solution to this issue is to skip the concatenation and just print. The 
+`print()`
+fuction takes both strings and ints as arguments.  
+```python
+>>> print("The lenth of the DNA sequence:" , dna , "is" , dna_length)
+The lenth of the DNA sequence: TAGCTATATAAAATCATAAT is 20
+```
 
 
 
