@@ -1098,7 +1098,7 @@ this is a 'word'
 
 __Working with Strings__
 
-<p>nbsp;</p>  
+<p>&nbsp;</p>   
 
 __Concatenation__: Use the concatenation operator '+'  
 
@@ -1112,7 +1112,7 @@ TAGCTATATAAAATCATAAT
 ```
 > The concatenation operator can be used to combine strings. The newly combined string can be stored in a variable.
 
-<p>nbsp;</p>  
+<p>&nbsp;</p>  
 
 __Determine the length of a string__: use the 
 'len()'
@@ -1169,7 +1169,7 @@ The lenth of the DNA sequence: TAGCTATATAAAATCATAAT is 20
 ```
 
 
-<p>nbsp;</p>  
+<p>&nbsp;</p>  
 
 __Changing String Case__: Changing the case of a string is a bit different that you might first expect. For example, to lowercase a string we need to use a method. A method is a function that is specific to a object. When we assign a string to a variable we are creating an instance of a string object. This object has a series of methods that will work on the data that is stored in the object. 
 `lower()`
@@ -1230,8 +1230,21 @@ attgct
 ```
 > The contents of the variable 'dna', 'attgct' was returned and uppercased. The actual contents of 'dna' were not altered.
 
-__Find and Replace__: Exact matches to a given string will be found and replaced with a given replacement value with another string method, 
+__Find and Count__: Exact matches to a given string will be found and the count of occurances will be returned when using the string method
+`count`
+This method takes the search string as an argument and returns an int.
+
+```python
+>>> dna = 'ATGCTGCATT'
+>>> dna.count('T')
+4
+```
+> The number of times 'T' is found is returned. The string stored in 'dna' is not altered.
+
+
+__Find and Replace__: Exact matches to the given string will be found and replaced with the given replacement value with another string method, 
 `replace()`
+
 
 ```python
 >>> dna = 'ATGCTGCATT'
@@ -1246,6 +1259,74 @@ AUGCUGCAUU
 > All occurances of T are replaced by U. The new string is returned. The orginal string has not actually been altered. If you want to reuse the new string, store it in a variable.
 
 
+
+__Extracting a Substring__: Parts of a string can be located based on position and returned. This is accomplised by appending the start and ending position in square brackets to the string variable name.  
+<p>&nbsp</p>
+This string 'TTTAAAGGGCCC' has the following positional information:
+
+Position/Index | Character
+---------|----------
+0 | T
+1 | T
+2 | T
+3 | A
+4 | A
+5 | A
+6 | G
+7 | G
+8 | G
+9 | C
+10 | C
+11 | C
+
+Let's return the 4th, 5th, and 6th nucleotides. To do this, we need to count like a computer and start our string at 0 and return the 3rd, 4th, and 5th characters. This will be everything from 3 to 6.
+
+```python
+>>> dna = 'TTTAAAGGGCCC'
+>>> sub_dna = dna[3:6]
+>>> print(sub_dna)
+AAA
+```
+> The chacters with the positional index of 3, 4, 5 are returned. Or in other words, every chacater starting at index 3 and up to but not including, the index of 6 are returned. 
+
+Let's return the first 6 characters.
+```python
+>>> dna = 'TTTAAAGGGCCC'
+>>> sub_dna = dna[0:6]
+>>> print(sub_dna)
+TTTAAA
+```
+> Every character starting at index 0 and up to but not including index 6 are returned. This is the same as dna[:6]
+
+Let's return every character from index 6 to the end of the string.
+```python
+>>> dna = 'TTTAAAGGGCCC'
+>>> sub_dna = dna[6:]
+>>> print(sub_dna)
+GGGCCC
+```
+> When the second argument is left blank, every character from index 6 and greater is returned.
+
+Let's return the last 3 characters.
+```python
+>>> sub_dna = dna[-3:]
+>>> print(sub_dna)
+CCC
+```
+> When the second argument is left blank and the first argument is negative (-X), X characters from the end of the string are returned.
+
+__Locate and Report__: The positional index of an exact string in a larger string can be found and returned with the string method 
+`find`
+. A exact string is given as an argument and the index of its first occurance is returned. -1 is returned if it is not found.
+
+```python
+>>> dna = 'TTTAAAGGGCCC'
+>>> dna.find('A')
+3
+>>> dna.find('N')
+-1
+```
+> The substring 'A' is found for the first time at index 3 in the string 'dna' so 3 is returned. The substring 'N' is not found, so -1 is returned.
 
 Tuples and Lists
 ===============
