@@ -155,9 +155,9 @@ Python has
 
 __Data types__ are just different types of data which are discussed in more detail later. Examples of data types are integers and strings.  
 
-__Objects__ are a organized collection of predefined data and code to act on that data
+__Objects__ are a organized collection of predefined data and functions (methods) to act on that data
 
-__Classes__ is an instance of an object that you can create and will usually add a specific piece of data to.
+__Class__ is a encapulation of variables and functions. Objects get their variables and methods from classess. 
 
 __Funtions__ are a grouping of code that does something specific. There are functions that are built into Python. You can create your own functions. 
 
@@ -1098,6 +1098,8 @@ this is a 'word'
 
 __Working with Strings__
 
+<p>nbsp;</p>  
+
 __Concatenation__: Use the concatenation operator '+'  
 
 ```python
@@ -1109,6 +1111,8 @@ __Concatenation__: Use the concatenation operator '+'
 TAGCTATATAAAATCATAAT
 ```
 > The concatenation operator can be used to combine strings. The newly combined string can be stored in a variable.
+
+<p>nbsp;</p>  
 
 __Determine the length of a string__: use the 
 'len()'
@@ -1163,6 +1167,83 @@ fuction takes both strings and ints as arguments.
 >>> print("The lenth of the DNA sequence:" , dna , "is" , dna_length)
 The lenth of the DNA sequence: TAGCTATATAAAATCATAAT is 20
 ```
+
+
+<p>nbsp;</p>  
+
+__Changing String Case__: Changing the case of a string is a bit different that you might first expect. For example, to lowercase a string we need to use a method. A method is a function that is specific to a object. When we assign a string to a variable we are creating an instance of a string object. This object has a series of methods that will work on the data that is stored in the object. 
+`lower()`
+function is one of these object methods. 
+
+Let's do create a new string object.    
+```python
+dna = "ATGCTTG"
+```
+> Look familiar? It should. Creating a string object is what we have been doing all along.
+
+Now that we have a string object we can use string methods. The way you use a method is to append the method with a '.' to the variable name.  
+```python
+>>> dna = "ATGCTTG"
+>>> dna.lower()
+'atgcttg'
+```
+> the lower() method returns the contents stored in the 'dna' variable in lowercase.
+
+The contents of the 'dna' variable have not been changed. If you want to reuse the returned lowercased value, store it in a new variable.
+```python
+>>> print(dna)
+ATGCTTG
+>>> dna_lowercase = dna.lower()
+>>> print(dna)
+ATGCTTG
+>>> print(dna_lowercase)
+atgcttg
+```
+> Now the contents of the variable 'dna_lowercase' is the lowercased DNA sequence and can be used later
+
+The string method can be nested inside of other functions.
+```python
+>>> dna = "ATGCTTG"
+>>> print(dna.lower())
+atgcttg
+```
+> The value of 'dna' is lowercased and returned. The print() function takes the returned value from the lower() method and prints it.
+
+If you try to use a string method on a object that is not a string you will get an error.
+```python
+>>> dna = "ATGCTTG"
+>>> nt_count = len(dna)
+>>> dna_lc = nt_count.lower()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'int' object has no attribute 'lower'
+```
+> You get an AttributeError when you use a method on the an incorrect object type. We are told that the int object (an int is returned by len()) does not have a function called lower.
+
+Now let's uppercase a string.
+```python
+>>> dna = 'attgct'
+>>> dna.upper()
+'ATTGCT'
+>>> print(dna)
+attgct
+```
+> The contents of the variable 'dna', 'attgct' was returned and uppercased. The actual contents of 'dna' were not altered.
+
+__Find and Replace__: Exact matches to a given string will be found and replaced with a given replacement value with another string method, 
+`replace()`
+
+```python
+>>> dna = 'ATGCTGCATT'
+>>> dna.replace('T','U')
+'AUGCUGCAUU'
+>>> print(dna)
+ATGCTGCATT
+>>> rna = dna.replace('T','U')
+>>> print(rna)
+AUGCUGCAUU
+```
+> All occurances of T are replaced by U. The new string is returned. The orginal string has not actually been altered. If you want to reuse the new string, store it in a variable.
 
 
 
