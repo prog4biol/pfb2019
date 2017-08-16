@@ -939,7 +939,7 @@ earlier. Lets talk about it a bit more.
 
 print is a function that takes one or more comma separated arguments. 
 
-Let's use the print() function to print a string:  
+Let's use the print() function to print a string.  
 ```python
 >>>print("ATG")
 ATG
@@ -947,7 +947,7 @@ ATG
 > We get ATG printed to the screen like we expect.
 
 
-Let's assign a string to a variable and print the variable
+Let's assign a string to a variable and print the variable.
 ```python
 >>>dna = 'ATG'
 ATG
@@ -966,14 +966,14 @@ dna
 ```
 > The literal value of 'dna' is printed to the screen. The variable called 'dna' is not interpolated when it is inside of quotes.
 
-Let's see what happens when we give print() two literal strings as arguments:  
+Let's see what happens when we give print() two literal strings as arguments.  
 ```python
 >>> print("ATG","GGTCTAC")
 ATG GGTCTAC
 ```
 > We get the two literal strings printed to the screen separated by a space
 
-What if you do not want your strings separated by a space? Use the concatenation operator to concatenate the two strings before or within the print() function:  
+What if you do not want your strings separated by a space? Use the concatenation operator to concatenate the two strings before or within the print() function.  
 ```python
 >>> print("ATG"+"GGTCTAC")
 ATGGGTCTAC
@@ -985,7 +985,7 @@ ATGGGTCTAC
 > We get the two strings printed to the screen without being separated by a space
 
 
-Now, lets give one variable and one literal string:
+Now, lets give one variable and one literal string.
 ```python
 >>>dna = 'ATG'
 ATG
@@ -1003,8 +1003,10 @@ ATGGGTCTAC
 ```
 > We can use the concatenation operator to get the value of the variable and the literal string printed to the screen without being separated by a space
 
-Let's try to concatenate our variable with a literal string by putting both within quotes:
+Let's try to concatenate our variable with a literal string by putting both within quotes.
 ```python
+>>>dna = 'ATG'
+ATG
 >>> print("dna GGTCTAC")
 dna GGTCTAC
 >>> print(dna + "GGTCTAC")
@@ -1013,11 +1015,24 @@ ATGGGTCTAC
 ```
 > The varialbe 'dna' does not get interpolated when it is inside of quotes
 
+Something to think about: Values of variable are variable. Or in other words, they are mutable, changeable.  
+```python
+>>>dna = 'ATG'
+ATG
+>>> print(dna)
+ATG
+>>>dna = 'TTT'
+TTT
+>>> print(dna)
+TTT
+```
+> The new value of the variable 'dna' is printed to the screen when 'dna' is an agrument for the print() function.
+
 __ERRORS__
 
 Let's look at the typical errors you will encouter when you use the print() function.
 
-What will happen if you forget to close your quotes:
+What will happen if you forget to close your quotes?
 ```python
 >>> print("GGTCTAC)
   File "<stdin>", line 1
@@ -1027,7 +1042,7 @@ SyntaxError: EOL while scanning string literal
 ```
 > We get a 'SyntaxError' if the closing quote is not used
 
-What will happen if you forget to enclose your literal string in quotes:
+What will happen if you forget to enclose your literal string in quotes in a print statement?
 ```python
 print(GGTCTAC)
 Traceback (most recent call last):
@@ -1035,6 +1050,89 @@ Traceback (most recent call last):
 NameError: name 'GGTCTAC' is not defined
 ```
 > We get a 'NameError' when the literal string is not enclosed in quotes. 
+
+__Special/Escape Characters__
+How would you include a new line, carrage return, or tab in your string?  
+
+Escape Character | Description
+-----------------|------------
+\n | New line
+\r | Carrage Return 
+\t | Tab
+
+Let's include some escape charcters in our strings and print() functions.
+```python
+>>> string_with_newline = 'this sting has a new line\nthis is the second line'
+>>> print(string_with_newline)
+this sting has a new line
+this is the second line
+```
+> We printed a new line to the screen
+
+You can print multiple lines without using '\n' by using tripal quotes (""").
+```python
+>>> print("""this sting has a new line
+... this is the second line""")
+this sting has a new line
+this is the second line
+```
+> Enclosing multiple lines in tripal quotes will retain the multi-line structure
+
+Let's print a tab character (\t).
+```python
+>>> line = "value1\tvalue2\tvalue3"
+>>> print(line)
+value1	value2	value3
+```
+> We get the three words separated by tab characters. A common format for data is tab separated.
+
+You can backslash any chacter to escape it and have it printed as a literal. Although, since nothing is interpolated within the quotes, this can often be redundant.
+
+```python
+>>> print("this is a \'word\'")
+this is a 'word'
+>>> print("this is a 'word'")
+this is a 'word'
+```
+> In both cases the single quote is printed to the screen as a quote.
+
+__Working with Strings__
+
+__Concatenation__: Use the concatenation operator '+'  
+
+```python
+>>> promoter= 'TATAAA'
+>>> upstream = 'TAGCTA'
+>>> downstream = 'ATCATAAT'
+>>> dna = upstream + promoter + downstream
+>>> print(dna)
+TAGCTATATAAAATCATAAT
+```
+> The concatenation operator can be used to combine strings. The newly combined string can be stored in a variable.
+
+__Determine the length of a string__: use the 
+'len()'
+function  
+
+
+```python
+>>> print(dna)
+TAGCTATATAAAATCATAAT
+>>> len(dna)
+20
+```
+> The length of the string, including spaces, is calculated and returned.
+
+The returned value of 
+`len()`
+can be stored in a variable.  
+```python
+>>> dna_length = len(dna)
+>>> print(dna_length)
+20
+```
+
+
 
 Tuples and Lists
 ===============
