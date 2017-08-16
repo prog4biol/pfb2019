@@ -146,6 +146,26 @@ Functions and statements we are NOT covering
 Language basics: 3.x, interpreted, slow, python notebook eg jupyter
 
 
+Python has 
+- data types
+- objects
+- classes
+- functions
+- methods
+
+__Data types__ are just different types of data which are discussed in more detail later. Examples of data types are integers and strings.  
+
+__Objects__ are a organized collection of predefined data and code to act on that data
+
+__Classes__ is an instance of an object that you can create and will usually add a specific piece of data to.
+
+__Funtions__ are a grouping of code that does something specific. There are functions that are built into Python. You can create your own functions. 
+
+__Methods__ is a function that belongs to an object and can only work on the data stored in the object.
+
+
+
+
 Running Python
 ==============  
 
@@ -168,6 +188,8 @@ $ python
 >>> print ("Hello, PFB2017!")
 Hello, PFB2017!
 ```  
+
+> Note: `print` is a function.
 
 
 
@@ -707,6 +729,174 @@ Returns:
 
 Numbers
 ========
+Python recognizes 3 types of numbers, integers, float point numbers, and complex numbers. 
+
+__integer__
+- konwn as an int
+- an int can be positve or negative
+- and **does not** contain a decimal.
+
+__floating point number__
+- known as a float
+- a floating point number can be positve or negative
+- and **does** contain a decimal
+
+__complex number__
+- known as complex
+- is in the form of a+bi where i is the imaginary part.
+
+__Conversion functions__
+
+function | Description
+---------|------------
+int(x)   | to convert x to a plain integer
+float(x) | to convert x to a floating-point number
+complex(x) | to convert x to a complex number with real part x and imaginary part zero
+complex(x, y) | to convert x and y to a complex number with real part x and imaginary part y
+
+```python
+>>> int(2.3)
+2
+>>> float(2)
+2.0
+>>> complex(2.3)
+(2.3+0j)
+>>> complex(2.3,2)
+(2.3+2j)
+```
+
+
+__Numeric Functions__
+many numeric functions are not built into the Python core and need to be included in our script if we want to use them. To include them we need to type `import math` at the top of the script.
+
+function | Description
+---------|------------
+abs(x) | The absolute value of x: the (positive) distance between x and zero.
+round(x [,n]) |  x rounded to n digits from the decimal point. round(0.5) is 1.0 and round(-0.5) is -1.0.
+max(x1, x2,...) | The largest positive argument is returned
+min(x1, x2,...) | The smallest argument is returned
+
+```python
+>>> abs(2.3)
+2.3
+>>> abs(-2.9)
+2.9
+>>> round(2.3)
+2
+>>> round(2.5)
+2
+>>> round(2.9)
+3
+>>> round(-2.9)
+-3
+>>> round(-2.3)
+-2
+>>> round(-2.009,2)
+-2.01
+>>> max(4,-5,5,1,11)
+11
+>>> min(4,-5,5,1,11)
+-5
+```
+
+<p>&nbsp;</p>
+
+These next functions are found in the math module and need to be imported. To use these function, prepend the function with the moudule name, i.e, math.ceil(15.5)  
+
+
+math.function | Description
+--------------|------------
+ceil(x) | The smallest integer not greater than x is returned
+floor(x) | the largest integer not greater than x is returned.
+exp(x) | The exponential of x: e^x^ is returned
+log(x) | the natural logarithm of x, for x > 0 is returned
+log10(x) | The base-10 logarithm of x for x > 0 is returned
+modf(x) | The fractional and integer parts of x in a two-item tuple are returned.
+pow(x, y) | The value of x\*\*y is returned
+sqrt(x) | The square root of x for x > 0 is returned
+
+
+```python
+>>> import math
+>>>
+>>> math.ceil(2.3)
+3
+>>> math.ceil(2.9)
+3
+>>> math.ceil(-2.9)
+-2
+>>>
+>>>
+>>> math.floor(2.3)
+2
+>>> math.floor(2.9)
+2
+>>> math.floor(-2.9)
+-3
+>>>
+>>>
+>>> math.exp(2.3)
+9.974182454814718
+>>> math.exp(2.9)
+18.17414536944306
+>>> math.exp(-2.9)
+0.05502322005640723
+>>>
+>>>
+>>> math.log(2.3)
+0.8329091229351039
+>>> math.log(2.9)
+1.0647107369924282
+>>> math.log(-2.9)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: math domain error
+>>>
+>>>
+>>> math.log10(2.3)
+0.36172783601759284
+>>> math.log10(2.9)
+0.4623979978989561
+>>>
+>>>
+>>> math.modf(2.3)
+(0.2999999999999998, 2.0)
+>>> math.modf(2.9)
+(0.8999999999999999, 2.0)
+>>> math.modf(-2.9)
+(-0.8999999999999999, -2.0)
+>>>
+>>>
+>>> math.pow(2.3,1)
+2.3
+>>> math.pow(2.3,2)
+5.289999999999999
+>>> math.pow(-2.3,2)
+5.289999999999999
+>>> math.pow(2.3,-2)
+0.18903591682419663
+>>>
+>>>
+>>> math.sqrt(25)
+5.0
+>>> math.sqrt(2.3)
+1.51657508881031
+>>> math.sqrt(2.9)
+1.70293863659264
+```
+
+<p>&nbsp;</p>
+
+A useful yet depricated function in Python 3 is cmp(x,y)
+It is used to compare two numbers
+- if x<y -1 is returned
+- if x>y 1 is returned
+- x == y 0 is returned
+
+Use this instead:  
+```python
+cmp = (x>y)-(x<y)
+```
 
 
 Strings
