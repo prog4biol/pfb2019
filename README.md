@@ -805,7 +805,7 @@ Many numeric functions are not built into the Python core and need to be include
 `import math`
 <p>&nbsp;</p>
 These next functions are found in the math module and need to be imported. To use these function, prepend the function with the moudule name, i.e, math.ceil(15.5)  
-
+<p>&nbsp;</p>
 
 math.function | Description
 --------------|------------
