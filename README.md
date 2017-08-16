@@ -801,8 +801,9 @@ min(x1, x2,...) | The smallest argument is returned
 ```
 
 <p>&nbsp;</p>
-Many numeric functions are not built into the Python core and need to be included in our script if we want to use them. To include them we need to type `import math` at the top of the script.  
-
+Many numeric functions are not built into the Python core and need to be included in our script if we want to use them. To include them at the tip of the script type: 
+`import math`
+<p>&nbsp;</p>
 These next functions are found in the math module and need to be imported. To use these function, prepend the function with the moudule name, i.e, math.ceil(15.5)  
 
 
@@ -810,7 +811,7 @@ math.function | Description
 --------------|------------
 ceil(x) | The smallest integer not greater than x is returned
 floor(x) | the largest integer not greater than x is returned.
-exp(x) | The exponential of x: e^x^ is returned
+exp(x) | The exponential of x: e<sup>x</sup> is returned
 log(x) | the natural logarithm of x, for x > 0 is returned
 log10(x) | The base-10 logarithm of x for x > 0 is returned
 modf(x) | The fractional and integer parts of x in a two-item tuple are returned.
