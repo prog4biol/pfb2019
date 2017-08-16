@@ -905,20 +905,135 @@ cmp = (x>y)-(x<y)
 
 Strings
 ========
-.format()
-strip()
+@sep
+>.format()
+>strip()
 
+
+- Strings are collections of characters and are always surrounded by quotes.
+- Strings are an example of a Python Sequence. A sequence is a positionally ordered set. A list is also a sequence. 
 
 __Quotation Marks__
-Python accepts single ('), double (") and triple (''' or """) quotes to denote string literals, as long as the same type of quote starts and ends the string.
+- Single (')
+- Double (") 
+- Triple (''' or """)   
 
-The triple quotes are used to span the string across multiple lines. For example, all the following are allowed:
+Notes about quotes:
+- Single and double quotes are the same.
+- a variable will not be interpolated if placed inside of quotes.
+- Triple quotes are used to span the string across multiple lines.  
 
+Use of quotation examples:  
+
+```python
 word = 'word'
 sentence = "This is a sentence."
 paragraph = """This is a paragraph. It is
 made up of multiple lines and sentences."""
+```
 
+__Strings and the print() function__
+You saw examples of 
+`print()`
+earlier. Lets talk about it a bit more.  
+
+print is a function that takes one or more comma separated arguments. 
+
+Let's use the print() function to print a string:  
+```python
+>>>print("ATG")
+ATG
+```
+> We get ATG printed to the screen like we expect.
+
+
+Let's assign a string to a variable and print the variable
+```python
+>>>dna = 'ATG'
+ATG
+>>> print(dna)
+ATG
+```
+> We get ATG printed to the screen
+
+
+What happens if we put the variable in quotes?  
+```python
+>>>dna = 'ATG'
+ATG
+>>> print("dna")
+dna
+```
+> The literal value of 'dna' is printed to the screen. The variable called 'dna' is not interpolated when it is inside of quotes.
+
+Let's see what happens when we give print() two literal strings as arguments:  
+```python
+>>> print("ATG","GGTCTAC")
+ATG GGTCTAC
+```
+> We get the two literal strings printed to the screen separated by a space
+
+What if you do not want your strings separated by a space? Use the concatenation operator to concatenate the two strings before or within the print() function:  
+```python
+>>> print("ATG"+"GGTCTAC")
+ATGGGTCTAC
+>>> combined_string = "ATG"+"GGTCTAC"
+ATGGGTCTAC
+>>> print(combined_string)
+ATGGGTCTAC
+```
+> We get the two strings printed to the screen without being separated by a space
+
+
+Now, lets give one variable and one literal string:
+```python
+>>>dna = 'ATG'
+ATG
+>>> print(dna,"GGTCTAC")
+ATG GGTCTAC
+```
+> We get the value of the variable and the literal string printed to the screen separated by a space
+
+How would we print the two without a space?
+```python
+>>>dna = 'ATG'
+ATG
+>>> print(dna + "GGTCTAC")
+ATGGGTCTAC
+```
+> We can use the concatenation operator to get the value of the variable and the literal string printed to the screen without being separated by a space
+
+Let's try to concatenate our variable with a literal string by putting both within quotes:
+```python
+>>> print("dna GGTCTAC")
+dna GGTCTAC
+>>> print(dna + "GGTCTAC")
+ATGGGTCTAC
+>>>
+```
+> The varialbe 'dna' does not get interpolated when it is inside of quotes
+
+__ERRORS__
+Let's look at the typical errors you will encouter when you use the print() function.
+
+What will happen if you forget to close your quotes:
+```python
+>>> print("GGTCTAC)
+  File "<stdin>", line 1
+    print("GGTCTAC)
+                  ^
+SyntaxError: EOL while scanning string literal
+```
+> We get a 'SyntaxError' if the closing quote is not used
+
+What will happen if you forget to enclose your literal string in quotes:
+```python
+print(GGTCTAC)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'GGTCTAC' is not defined
+```
+> We get a 'NameError' when the literal string is not enclosed in quotes. 
 
 Tuples and Lists
 ===============
