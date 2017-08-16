@@ -890,8 +890,9 @@ ValueError: math domain error
 
 <p>&nbsp;</p>
 
-A useful yet depricated function in Python 3 is cmp(x,y)
-It is used to compare two numbers
+A useful yet depricated function in Python 3 is cmp(x,y).  
+It is used to compare two numbers.  
+
 - if x<y -1 is returned
 - if x>y 1 is returned
 - x == y 0 is returned
