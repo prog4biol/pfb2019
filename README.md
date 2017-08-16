@@ -767,7 +767,8 @@ complex(x, y) | to convert x and y to a complex number with real part x and imag
 
 
 __Numeric Functions__
-many numeric functions are not built into the Python core and need to be included in our script if we want to use them. To include them we need to type `import math` at the top of the script.
+
+
 
 function | Description
 ---------|------------
@@ -800,6 +801,7 @@ min(x1, x2,...) | The smallest argument is returned
 ```
 
 <p>&nbsp;</p>
+Many numeric functions are not built into the Python core and need to be included in our script if we want to use them. To include them we need to type `import math` at the top of the script.  
 
 These next functions are found in the math module and need to be imported. To use these function, prepend the function with the moudule name, i.e, math.ceil(15.5)  
 
