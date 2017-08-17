@@ -1283,7 +1283,7 @@ AUGCUGCAUU
 
 
 
-__Extracting a Substring__
+__Extracting a Substring, or Slicing__
 
 Parts of a string can be located based on position and returned. This is accomplised by appending the start and ending position in square brackets to the string variable name.  
 <p>&nbsp</p>
@@ -1515,15 +1515,152 @@ None |	Similar to 'g', except that fixed-point notation, when used, has at least
 
 Tuples and Lists
 ===============
-append(x), .extend(iter) pop() insert() sort() reverse()
-list comprehension 
-`squares = [x**2 for x in range(10)]`
-zip() -- loop over two lists at the same time
-iterators: next(), generators
+@sep
+> append(x), .extend(iter) pop() insert() sort() reverse()
+> list comprehension 
+> `squares = [x**2 for x in range(10)]`
+> zip() -- loop over two lists at the same time
+> iterators: next(), generators
+
+__Lists__
+
+Lists are valuable data types that can store a collection of data in a single variable.
+
+
+- Lists are used to store an ordered, *indexed* collection of data.
+- Values are separated by commas
+- Values are enclosed in square brackets '[]'
+- Lists can grown and shrink
+- Values are mutatable
+
+  
+__Accessing Values in Lists__
+To retrieve a single value in a list use the value's index in this format list[index]. This will return the value at the specified index. 
+
+```python
+codons = [ 'atg' , 'aaa' , 'agg' ]
+```
+
+Index | Value
+------|-------
+0 | atg
+1 | aaa
+2 | agg
+
+   
+
+```python
+>>> print(codons[0])
+atg
+>>> print(codons[1])
+aaa
+>>> print(codons[2])
+agg
+>>> print(codons[-1])
+agg
+>>> print(codons[-2])
+aaa
+```
+> Using a negative index will return the values from the end of the list. For example, -1 is the index of the last value 'agg'. This value also has an index of 2.
+
+__Changing Values in a List__
+Indivudual values can be changed using the value's index and the assignment operator.
+
+```python
+>>> print(codons)
+['atg', 'aaa', 'agg']
+>>> codons[2] = 'cgc'
+>>> print(codons)
+['atg', 'aaa', 'cgc']
+```
+> codon[2] used to contain 'agg'. We reassigned condon[2] to contain the new value 'cgc'
+
+What about trying to assign a value to an index that does not exist?
+```python
+>>> codons[5] = 'aac'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list assignment index out of range
+```
+> codon[5] does not exist, and when we try to assign a value to this index we get an IndexError.
+
+__Exracting a Subset of a List, or Slicing__
+This works in exactly the same way with lists as it does with strings. This is because both are Sequences, or ordered collections of data with positional information.
+
+Index | Value
+------|-------
+0 | atg
+1 | aaa
+2 | agg
+3 | aac
+4 | cgc
+5 | acg
+
+```python
+>>> codons = [ 'atg' , 'aaa' , 'agg' , 'aac' , 'cgc' , 'acg']
+>>> print (codons[1:3])
+['aaa', 'agg']
+>>> print (codons[3:])
+['aac', 'cgc', 'acg']
+>>> print (codons[:3])
+['atg', 'aaa', 'agg']
+>>> print (codons[0:3])
+['atg', 'aaa', 'agg']
+```
+> codons[1:3] returns every value starting with the value of codons[1] up to but not including codons[3]
+> codons[3:] returns every value starting with the value of codons[3] and every value after.
+> codons[:3] returns every value up to but not including codons[3]
+> codons[0:3] is the same as codons[:3]
+
+
+__List Operators__
+Operator | Description | Example
+---------|-------------|---------
+\+ | Concatenation | [10, 20, 30] + [40, 50, 60] returns [10, 20, 30, 40, 50, 60]
+\* | Repetition | ['atg'] * 4 returns ['atg','atg','atg','atg']
+in | Membership | 20 in [10, 20, 30]  returns True
+
+__List Functions__
+Functions | Description | Example
+---------|-------------|---------
+len(list) | returns the length or the number of values in list | len([1,2,3]) returns 3 
+max(list) | returns the value with the largest ascii value |  max(['a','A','z']) returns 'z' 
+min(list) | returns the value with the smallest ascii value |  min(['a','A','z']) returns 'A' 
+list(seq) | converts a tuple into a list |  list(('a','A','z')) returns ['a', 'A', 'z']
+
+__List Methods__
+Remember methods are apart of the object and are used in the following format list.method().   
+
+For these examples use: list = [1,2,3] and codons = [ 'atg' , 'aaa' , 'agg' ]
+
+Method | Description | Example
+-------|-------------|--------
+list.append(obj) | appends an object to the end of a list | list.append(9) ; print(list) ; returns [1,2,3,9]
+list.count(obj) | counts the occurance of an object in a list | list.count(2) returns 1
+list.index(obj) | returns the lowest index where the given object is found | list.index(2) returns 1
+list.pop() | removes and returns the last value in the list. The list is now 1 value shorter | list.pop() returns 3
+list.pop(index) | removes and returns the value of the index argument. The list is now 1 value shorter | list.pop(0) returns 1 
+list.remove(obj) | finds the lowest index of the given object and removes the value. The list is now 1 value shorter | codons.remove('aaa') ; print(codons) returns  [ 'atg' , 'agg' ]
+list.reverse() | reverses the order of the list | list.reverse() ; print(list) returns [3,2,1]
+list.sort([func]) | sorts a list using the provided function | codons.sort() ; print(codons) returns ['aaa', 'agg', 'atg']
+
+
+Advanced list sort using a function will be covered once writting your own functions has been disccussed.
+
 
 
 __Tuples__
-The main reason why tuples exist is to get data to and from function calls. 
+- Tuples are similar to lists and contain ordered, *indexed* collection of data.
+- Items are separated by commas
+- **Items are enclosed in parenthesis '()'**
+- **Tupels cannot change in size**
+- **Values are immutable**
+
+The main reason why tuples exist is to get data to and from function calls.
+<p>&nbsp;</p>
+Everything you can do with lists you can do with tupels, EXCEPT change them. 
+
+
 
 Loops
 =====
