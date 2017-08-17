@@ -29,7 +29,7 @@ Table of Contents
      * [Logic: Control Statements](#logic-control-statements)
      * [Numbers](#numbers)
      * [Strings](#strings) 
-     * [Tuples and Lists](#tuples-and-lists)
+     * [Lists and Tuples](#lists-and-tuples)
      * [Loops](#loops)
      * [Files: I/O](#files-io)
      * [Dictionaries and Sets](#dictionaries-and-sets)
@@ -1513,7 +1513,7 @@ Float Type | Description
 None |	Similar to 'g', except that fixed-point notation, when used, has at least one digit past the decimal point. The default precision is as high as needed to represent the particular value. The overall effect is to match the output of str() as altered by the other format modifiers.
 
 
-Tuples and Lists
+Lists and Tuples
 ===============
 @sep
 > append(x), .extend(iter) pop() insert() sort() reverse()
@@ -1535,6 +1535,7 @@ Lists are valuable data types that can store a collection of data in a single va
 
   
 __Accessing Values in Lists__
+
 To retrieve a single value in a list use the value's index in this format list[index]. This will return the value at the specified index. 
 
 ```python
@@ -1564,6 +1565,7 @@ aaa
 > Using a negative index will return the values from the end of the list. For example, -1 is the index of the last value 'agg'. This value also has an index of 2.
 
 __Changing Values in a List__
+
 Indivudual values can be changed using the value's index and the assignment operator.
 
 ```python
@@ -1585,6 +1587,7 @@ IndexError: list assignment index out of range
 > codon[5] does not exist, and when we try to assign a value to this index we get an IndexError.
 
 __Exracting a Subset of a List, or Slicing__
+
 This works in exactly the same way with lists as it does with strings. This is because both are Sequences, or ordered collections of data with positional information.
 
 Index | Value
@@ -1614,6 +1617,7 @@ Index | Value
 
 
 __List Operators__
+
 Operator | Description | Example
 ---------|-------------|---------
 \+ | Concatenation | [10, 20, 30] + [40, 50, 60] returns [10, 20, 30, 40, 50, 60]
@@ -1621,6 +1625,7 @@ Operator | Description | Example
 in | Membership | 20 in [10, 20, 30]  returns True
 
 __List Functions__
+
 Functions | Description | Example
 ---------|-------------|---------
 len(list) | returns the length or the number of values in list | len([1,2,3]) returns 3 
@@ -1629,6 +1634,7 @@ min(list) | returns the value with the smallest ascii value |  min(['a','A','z']
 list(seq) | converts a tuple into a list |  list(('a','A','z')) returns ['a', 'A', 'z']
 
 __List Methods__
+
 Remember methods are apart of the object and are used in the following format list.method().   
 
 For these examples use: list = [1,2,3] and codons = [ 'atg' , 'aaa' , 'agg' ]
