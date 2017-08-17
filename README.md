@@ -1657,6 +1657,20 @@ list.sort([func]) | sorts a list using the provided function | codons.sort() ; p
 Advanced list sort using a function will be covered once writting your own functions has been disccussed.
 
 
+__Building a List one Value at a Time__
+
+Now that you have seen the append() function we can go over how to build a list one value at a time.
+
+```python
+>>> words = []
+>>> print(words)
+[]
+>>> words.append('one')
+>>> words.append('two')
+>>> print(words)
+['one', 'two']
+```
+> We start with a an empty list called 'words'. We use append() to add the value 'one' then to add the value 'two'. We end up with a list with two values.
 
 __Tuples__
 - Tuples are similar to lists and contain ordered, *indexed* collection of data.
@@ -1688,9 +1702,10 @@ There are two loop types:
 
 
 __while loop__ 
+
 The while loop will continue to execute the while loop block as long as a given condition returns True. 
 
-__Syntax__
+__While Loop Syntax__
 
 ```
 while expression:
@@ -1763,6 +1778,7 @@ count: 0
 >The statement that increments the count is missing. To stop the code from forever printing use Cntl+C.
 
 __While/Else__
+
 An Else statment can be used with a while statement. It behaves in the same way as with an If statement. When the while statement is false, the else block is excuted ONE TIME.
 
 ```python
@@ -1790,10 +1806,12 @@ Done
 ```
 > The while loop was executed five times like before. Now when count is equal to 5 and therefore not less than 5, the else block is executed. Finally the lines of code outside the while/else are executed.
 
-__For loops__
+__For Loops__
+
 A for loop is a loop that executes the for block of code for every iteration of a sequence. Remember a sequence is an ordered collection of data.
 
-__Syntax__
+__For Loop Syntax__
+
 ```python
 for iterating_variable in sequence:
   statement(s)
@@ -1871,11 +1889,13 @@ $ python list_range.py
 
 
 __For/Else__
+
 An else statement can be used with a for loop as well. The else block of code will be executed when the for loop exits normally.
 
 > Can we just skip this. it seems pretty stupid
 
 __Loop Control__
+
 Loops control statements allow for altering the normal flow of execution. 
 
 Control Statement | Description
