@@ -1645,10 +1645,13 @@ list.append(obj) | appends an object to the end of a list | list.append(9) ; pri
 list.count(obj) | counts the occurance of an object in a list | list.count(2) returns 1
 list.index(obj) | returns the lowest index where the given object is found | list.index(2) returns 1
 list.pop() | removes and returns the last value in the list. The list is now 1 value shorter | list.pop() returns 3
+list.insert(index, obj)   | inserts a value at the given index | list.insert(0,100) ; print(list) returns [100, 1, 2, 3]
+list.extend(new_list) | adds the provided list to the end of list | list.extend(['a', 'z']) ; print(list) returns [1, 2, 3, 'a', 'z']
 list.pop(index) | removes and returns the value of the index argument. The list is now 1 value shorter | list.pop(0) returns 1 
 list.remove(obj) | finds the lowest index of the given object and removes the value. The list is now 1 value shorter | codons.remove('aaa') ; print(codons) returns  [ 'atg' , 'agg' ]
 list.reverse() | reverses the order of the list | list.reverse() ; print(list) returns [3,2,1]
 list.sort([func]) | sorts a list using the provided function | codons.sort() ; print(codons) returns ['aaa', 'agg', 'atg']
+
 
 
 Advanced list sort using a function will be covered once writting your own functions has been disccussed.
@@ -1670,9 +1673,275 @@ Everything you can do with lists you can do with tupels, EXCEPT change them.
 
 Loops
 =====
-for i in list: 
-(ugh: else in for loop)
-iterators, range()
+@sep
+> for i in list: 
+> (ugh: else in for loop)
+> iterators, range()
+
+All of the coding that we have gone over so far has been executed line by line. Sometimes there are blocks of code that we want to execute more than once. Loops let us do this.  
+
+<p>&nbsp;</p>
+
+There are two loop types:
+1. while loop
+2. for loop
+
+
+__while loop__ 
+The while loop will continue to execute the while loop block as long as a given condition returns True. 
+
+__Syntax__
+
+```
+while expression:
+  statement(s)
+```
+> The condition is found in the expression. The while loop block of code is the indented statements following teh expression.
+
+This example is not using the python interpretor. It is a python script that will be executed on the command line.
+
+Code: 
+```python
+#!/usr/bin/python3
+
+count = 0
+while count < 5:
+  print("count:" , count)
+  count+=1
+print("Done") 
+```
+
+
+Output:
+```
+$ python while.py
+count: 0
+count: 1
+count: 2
+count: 3
+count: 4
+Done
+```
+> The while condition was true 5 times and the while block of code was executed 5 times.
+
+- count is equal to 0 when we begin
+- 0 is less than 5 so we execute the while block 1 time
+- count is printed
+- count is incremented (count = count + 1)
+- count is now equal to 1.
+- 1 is less than 5 so we execute the while block for the 2nd time.
+- this continues until count is 5. 
+- 5 is not less than 5 so the while block is not executed.
+- The first line following the while statement is executed, "Done" is printed
+
+
+An infiite loop is when a while condition is always true. Here is an example of an infinit loop.  
+```python
+#!/usr/bin/python3
+
+count = 0
+while count < 5:
+  print("count:" , count)
+print("Done") 
+```
+
+Output:
+```
+$ python infinit.py
+count: 0
+count: 0
+count: 0
+count: 0
+count: 0
+count: 0
+count: 0
+count: 0
+...
+...
+```
+> What caused this code to never be true? 
+>The statement that increments the count is missing. To stop the code from forever printing use Cntl+C.
+
+__While/Else__
+An Else statment can be used with a while statement. It behaves in the same way as with an If statement. When the while statement is false, the else block is excuted ONE TIME.
+
+```python
+#!/usr/bin/python3
+
+count = 0
+while count < 5:
+  print("count:" , count)
+  count+=1
+else:
+  print("count:", count, "is now not less than 5")
+print("Done")
+```
+
+Output:
+```
+$ python while_else.py
+count: 0
+count: 1
+count: 2
+count: 3
+count: 4
+count: 5 is now not less than 5
+Done
+```
+> The while loop was executed five times like before. Now when count is equal to 5 and therefore not less than 5, the else block is executed. Finally the lines of code outside the while/else are executed.
+
+__For loops__
+A for loop is a loop that executes the for block of code for every iteration of a sequence. Remember a sequence is an ordered collection of data.
+
+__Syntax__
+```python
+for iterating_variable in sequence:
+  statement(s)
+```
+
+An example of a sequence is a list. Let's use a for loop list of words. 
+
+Code:
+```python
+#!/usr/bin/python3
+
+words = ['zero','one','two','three','four']
+for word in words:
+  print(word)
+```
+
+Output: 
+```
+python3 list_words.py
+zero
+one
+two
+three
+four
+```
+
+Code:
+```python
+#!/usr/bin/python3
+
+numbers = [0,1,2,3,4]
+for num in numbers:
+  print(num)
+```
+
+Let's do the same on a list of numbers.
+Output:
+```
+$ python3 list_numbers.py
+0
+1
+2
+3
+4
+```
+
+Python has a function called range() that will return numbers that can be converted to a list. 
+```python
+>>> range(5)
+range(0, 5)
+>>> list(range(5))
+[0, 1, 2, 3, 4]
+```
+
+This can be used in conjunction with a for loop to iterate over a range of numbers
+Code:
+```python
+#!/usr/bin/python3
+
+for num in range(5):
+  print(num)
+``` 
+
+Output:
+```
+$ python list_range.py
+0
+1
+2
+3
+4
+```
+> As you can see this is the same output as using the list numbers = [0, 1, 2, 3, 4]
+> And this has the same functionality as a while loop with a condition of count = 0 ; count < 5.
+
+
+__For/Else__
+An else statement can be used with a for loop as well. The else block of code will be executed when the for loop exits normally.
+
+> Can we just skip this. it seems pretty stupid
+
+__Loop Control__
+Loops control statements allow for altering the normal flow of execution. 
+
+Control Statement | Description
+------------------|-----------
+break   | A loop is terminated when a break statement is executed. All the lines of code after the break, but within the loop block are not executed. No more iteration of the loop are preformed
+continue | A single iteration of a loop is terminated when a continue statement is executed. The next iteration will proceed normally.
+
+
+__Loop Conrol: Break__  
+
+Code:
+```python
+#!/usr/bin/python3
+
+count = 0
+while count < 5:
+  print("count:" , count)
+  count+=1
+  if count == 3:
+    break
+print("Done")
+```
+
+Output:
+```
+$ python break.py
+count: 0
+count: 1
+count: 2
+Done
+```
+> when the count is equal to 3, all iterations of the while loop are terminated
+
+__Loop Control: Continue__
+
+Code:
+```python
+#!/usr/bin/python3
+
+count = 0
+while count < 5:
+  print("count:" , count)
+  count+=1
+  if count == 3:
+    continue
+  print("line after our continue")
+print("Done")
+```
+
+Output:
+```
+$ python continue.py
+count: 0
+line after our continue
+count: 1
+line after our continue
+count: 2
+count: 3
+line after our continue
+count: 4
+line after our continue
+Done
+```
+> When the count is equal to 3 the continue is executed. This causes all the lines within the loop block to be skipped. "line after our continue" is not printed when count is equal to 3. The next loop is executed normally.
+
+__Iterators__
 
 
 Files: I/O
