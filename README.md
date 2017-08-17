@@ -729,7 +729,7 @@ Returns:
 
 Numbers
 ========
-Python recognizes 3 types of numbers, integers, float point numbers, and complex numbers. 
+Python recognizes 3 types of numbers: integers, float point numbers, and complex numbers. 
 
 __integer__
 - konwn as an int
@@ -906,8 +906,8 @@ cmp = (x>y)-(x<y)
 Strings
 ========
 @sep
->.format()
->strip()
+> .format()
+> strip()
 
 
 - Strings are collections of characters and are always surrounded by quotes.
@@ -1028,7 +1028,7 @@ TTT
 ```
 > The new value of the variable 'dna' is printed to the screen when 'dna' is an agrument for the print() function.
 
-__ERRORS__
+__Errors and Printing__
 
 Let's look at the typical errors you will encouter when you use the print() function.
 
@@ -1096,11 +1096,17 @@ this is a 'word'
 ```
 > In both cases the single quote is printed to the screen as a quote.
 
-__Working with Strings__
+If you want escape character to remain as they are literally, declare your string a raw string literal with 'r'.
+```python
+>>> line = r"value1\tvalue2\tvalue3"
+>>> print(line)
+value1\tvalue2\tvalue3
+```
+> Our escape characters '\t' remain as we typed them, they are not converted to actual tab characters.
 
-<p>&nbsp;</p>   
+__Concatenation__
 
-__Concatenation__: Use the concatenation operator '+'  
+To concatenate strings use the concatenation operator '+'  
 
 ```python
 >>> promoter= 'TATAAA'
@@ -1114,9 +1120,15 @@ TAGCTATATAAAATCATAAT
 
 <p>&nbsp;</p>  
 
-__Determine the length of a string__: use the 
+
+
+
+
+__Determine the length of a string__: 
+
+Use the 
 'len()'
-function  
+function to calculate the length of a string. This function takes a string as an argument and returns an int
 
 
 ```python
@@ -1171,7 +1183,9 @@ The lenth of the DNA sequence: TAGCTATATAAAATCATAAT is 20
 
 <p>&nbsp;</p>  
 
-__Changing String Case__: Changing the case of a string is a bit different that you might first expect. For example, to lowercase a string we need to use a method. A method is a function that is specific to a object. When we assign a string to a variable we are creating an instance of a string object. This object has a series of methods that will work on the data that is stored in the object. 
+__Changing String Case__
+
+Changing the case of a string is a bit different that you might first expect. For example, to lowercase a string we need to use a method. A method is a function that is specific to a object. When we assign a string to a variable we are creating an instance of a string object. This object has a series of methods that will work on the data that is stored in the object. 
 `lower()`
 function is one of these object methods. 
 
@@ -1230,7 +1244,9 @@ attgct
 ```
 > The contents of the variable 'dna', 'attgct' was returned and uppercased. The actual contents of 'dna' were not altered.
 
-__Find and Count__: Exact matches to a given string will be found and the count of occurances will be returned when using the string method
+__Find and Count__
+
+Exact matches to a given string will be found and the count of occurances will be returned when using the string method
 `count`
 This method takes the search string as an argument and returns an int.
 
@@ -1242,7 +1258,9 @@ This method takes the search string as an argument and returns an int.
 > The number of times 'T' is found is returned. The string stored in 'dna' is not altered.
 
 
-__Find and Replace__: Exact matches to the given string will be found and replaced with the given replacement value with another string method, 
+__Find and Replace__
+
+Exact matches to the given string will be found and replaced with the given replacement value with another string method, 
 `replace()`
 
 
@@ -1260,7 +1278,9 @@ AUGCUGCAUU
 
 
 
-__Extracting a Substring__: Parts of a string can be located based on position and returned. This is accomplised by appending the start and ending position in square brackets to the string variable name.  
+__Extracting a Substring__
+
+Parts of a string can be located based on position and returned. This is accomplised by appending the start and ending position in square brackets to the string variable name.  
 <p>&nbsp</p>
 This string 'TTTAAAGGGCCC' has the following positional information:
 
@@ -1315,7 +1335,9 @@ CCC
 ```
 > When the second argument is left blank and the first argument is negative (-X), X characters from the end of the string are returned.
 
-__Locate and Report__: The positional index of an exact string in a larger string can be found and returned with the string method 
+__Locate and Report__
+
+The positional index of an exact string in a larger string can be found and returned with the string method 
 `find`
 . A exact string is given as an argument and the index of its first occurance is returned. -1 is returned if it is not found.
 
@@ -1327,6 +1349,164 @@ __Locate and Report__: The positional index of an exact string in a larger strin
 -1
 ```
 > The substring 'A' is found for the first time at index 3 in the string 'dna' so 3 is returned. The substring 'N' is not found, so -1 is returned.
+
+
+__Other String Methods__
+
+Since these are methods, be sure to use in this format string.method().
+
+function | Description
+---------|-------------
+s.strip() | returns a string with the whitespace removed from the start and end
+s.isalpha() | tests if all the characters of the string are alphabetic characters. Returns True or False.
+s.isdigit() | tests if all the characters of the string are numeric characters. Returns True or False.
+s.startswith('other_string') | tests if the string starts with the string provided as an argument. Returns True or False.
+s.endswith('other_string') | tests if the string ends with the string provided as an argument. Returns True or False.
+s.split('delim') | splits the string on the given exact delimiter. Returns a list of substrings. If no argument is supplied, the string will be split on whitespace.
+s.join(list) | opposite of split(). The elements of a list will be concatenated together using the string stored in 's' as a delimiter.
+
+<p>&nbsp;</p>   
+
+__String Formatting__
+
+Strings can be formated using the  
+`format()`
+function. Pretty intuitive! For example, if you want to include literal stings and variables in your print statement and do not want to concatenate or use multiple arguments in the print() function you can use string formatting.  
+
+```python
+>>> string = "This sequence: {} is {} nucleotides long and is found in {}."
+>>> string.format(dna,dna_len,gene_name)
+'This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.'
+>>> print(string)
+This sequence: {} is {} nucleotides long and is found in {}.
+>>> new_string = string.format(dna,dna_len,gene_name)
+>>> print(new_string)
+This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.
+```
+> We put together the three variables and literal strings in one clean line using string format(). The {} are placeholders for the values in the argument list. The original string is not altered, a new string is returned that incorporates the arguments. You can save the returned value in a new variable.
+
+You can also directly format and print.
+```python
+>>> string = "This sequence: {} is {} nucleotides long and is found in {}."
+>>> print(string.format(dna,dna_len,gene_name))
+This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.
+```
+> Something nice about format() is that you can have mixed variable types and there are no TypeErrors.
+
+You can create a string on the fly and use the format() function.
+```python
+>>> print( "This sequence: {} is {} nucleotides long and is found in {}.".format(dna,dna_len,gene_name))
+This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.
+```
+> No need to store the string in a variable.
+
+Lets right justify some numbers.  
+```python
+>>> print( "{:>5}".format(2) )
+    2
+>>> print( "{:>5}".format(20) )
+   20
+>>> print( "{:>5}".format(200) )
+  200
+>>> print( "{:>5}".format(2000) )
+ 2000
+ ```
+ > The arguments: 2, 20, 200, 2000 have all been right justified by a width of 5 columns by using '{:>5}'
+
+
+How about padding with a 0?
+```python
+>>> print( "{:>05}".format(2) )
+00002
+>>> print( "{:>05}".format(20) )
+00020
+>>> print( "{:>05}".format(200) )
+00200
+>>> print( "{:>05}".format(2000) )
+02000
+```
+> Now all of the arguments: 2 ,20, 200, 2000 are right justified to a witdh of 5 and any empty space is filled with a zero. 
+
+
+Left Justify.
+```python
+>>> print( "{:<5} next".format(2) )
+2     next
+>>> print( "{:<5} next".format(20) )
+20    next
+>>> print( "{:<5} next".format(200) )
+200   next
+>>> print( "{:<5} next".format(2000) )
+2000  next
+```
+ > The arguments: 2, 20, 200, 2000 have all been left justified by a width of 5 columns by using '{:<5}'
+
+Left Justify with padding.
+```python
+>>> print( "{:_<5} next".format(2) )
+2____ next
+>>> print( "{:_<5} next".format(20) )
+20___ next
+>>> print( "{:_<5} next".format(200) )
+200__ next
+>>> print( "{:_<5} next".format(2000) )
+2000_ next
+```
+ > The arguments: 2, 20, 200, 2000 have all been left justified by a width of 5 columns and any empty space is filled with a '-'
+
+Center Align.
+```python
+>>> print( "{:_^10}".format(2) )
+____2_____
+>>> print( "{:_^10}".format(20) )
+____20____
+>>> print( "{:_^10}".format(200) )
+___200____
+>>> print( "{:_^10}".format(2000) )
+___2000___
+```
+> Text can be center aligned by using ':^10'. 10 of course is your column width. The '^' indicates center justification. In our example an underscore is used to illustrate the empty spaces. 
+
+So much can be done with the format() function. Here is one last example, but not the last functionality of this function.  Let truncate a long floating point number.  
+```python
+'{:f}'.format(3.141592653589793)
+'3.141593'
+>>> '{:.2f}'.format(3.141592653589793)
+'3.14'
+```
+> We have truncated pi. By default format() truncates floats to 6 places by using '{:f}'. 'f' is a presenation type that indicates a floating point, fixed number out to 6 places.  Truncation can be customized by adding a '.' and the decimal places to display '{.2f}'. Find more examples at [docs.python.org](https://docs.python.org/3/library/string.html#format-examples) 
+
+
+
+The available presentation types are:
+String Type | Description
+-----|------------
+'s' |	String format. This is the default type for strings and may be omitted.
+None | 	The same as 's'.
+
+Integer Type | Description
+-----|------------
+'b'	| Binary format. Outputs the number in base 2.
+'c'	| Character. Converts the integer to the corresponding unicode character before printing.
+'d'	| Decimal Integer. Outputs the number in base 10.
+'o'	| Octal format. Outputs the number in base 8.
+'x'	| Hex format. Outputs the number in base 16, using lower- case letters for the digits above 9.
+'X'	| Hex format. Outputs the number in base 16, using upper- case letters for the digits above 9.
+'n'	| Number. This is the same as 'd', except that it uses the current locale setting to insert the appropriate number separator characters.
+None |	The same as 'd'.
+
+Float Type | Description
+-----|------------
+'e'	| Exponent notation. Prints the number in scientific notation using the letter ‘e’ to indicate the exponent. The default precision is 6.
+'E'	| Exponent notation. Same as 'e' except it uses an upper case ‘E’ as the separator character.
+'f'	| Fixed point. Displays the number as a fixed-point number. The default precision is 6.
+'F'	| Fixed point. Same as 'f', but converts nan to NAN and inf to INF.
+'g'	| General format. For a given precision p >= 1, this rounds the number to p significant digits and then formats the result in either fixed-point format or in scientific notation, depending on its magnitude.
+'G'	| General format. Same as 'g' except switches to 'E' if the number gets too large. The representations of infinity and NaN are uppercased, too.
+'n'	| Number. This is the same as 'g', except that it uses the current locale setting to insert the appropriate number separator characters.
+'%'	| Percentage. Multiplies the number by 100 and displays in fixed ('f') format, followed by a percent sign.
+None |	Similar to 'g', except that fixed-point notation, when used, has at least one digit past the decimal point. The default precision is as high as needed to represent the particular value. The overall effect is to match the output of str() as altered by the other format modifiers.
+
 
 Tuples and Lists
 ===============
