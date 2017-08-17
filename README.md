@@ -512,8 +512,13 @@ True
 False
 >>> 'ATG' not in dna
 True
-
+>>> codons = [ 'atg' , 'aaa' , 'agg' ]
+>>> 'atg' in codons
+True
+>>> 'ttt' in codons
+False
 ```
+
 
 <p>&nbsp;</p> 
 
