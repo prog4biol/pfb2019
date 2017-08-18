@@ -1661,6 +1661,7 @@ list(seq) | converts a tuple into a list |  list(('a','A','z')) returns ['a', 'A
 sorted(list, key=None, reverse=False) | returns a sorted list based on the key provided |sorted(['a','A','z']) returns ['A', 'a', 'z']
 ;  sorted(['a','A','z'],key=str.lower) returns ['a', 'A', 'z']
 
+
 __List Methods__
 
 Remember methods are apart of the object and are used in the following format list.method().   
@@ -1678,11 +1679,32 @@ list.extend(new_list) | adds the provided list to the end of list | list.extend(
 list.pop(index) | removes and returns the value of the index argument. The list is now 1 value shorter | list.pop(0) returns 1 
 list.remove(obj) | finds the lowest index of the given object and removes the value. The list is now 1 value shorter | codons.remove('aaa') ; print(codons) returns  [ 'atg' , 'agg' ]
 list.reverse() | reverses the order of the list | list.reverse() ; print(list) returns [3,2,1]
-list.sort([func]) | sorts a list using the provided function. Does not return a list. The list has been changed. | codons.sort() ; print(codons) returns ['aaa', 'agg', 'atg']
+list.copy() | Returns a shallow copy of list. Shallow vs Deep only matters in multidementional datastructures.
+list.sort([func]) | sorts a list using the provided function. Does not return a list. The list has been changed. Advanced list sort will be covered once writting your own functions has been disccussed. | codons.sort() ; print(codons) returns ['aaa', 'agg', 'atg']
+
+
+Be careful how you make a copy of your list
+```python
+>>> list=['a', 'one', 'two']
+>>> l=list
+>>> l.append('1')
+>>> print(list)
+['a', 'one', 'two', '1']
+```
+> Not what you expected?! The orginal list has changed when a value is added to the copy of list
+
+Let's copy the list using the copy() method.
+```python
+>>> list=['a', 'one', 'two']
+>>> l=list.copy()
+>>> l.append('1')
+>>> print(list)
+['a', 'one', 'two']
+```
+> There we go, we get what we expect this time!
 
 
 
-Advanced list sort using a function will be covered once writting your own functions has been disccussed.
 
 
 __Building a List one Value at a Time__
@@ -2114,7 +2136,7 @@ NameError: name 'HDAC' is not defined
 > We get a NameError if a key is not in the dictionary
 
 
-__Changing Values in a Dictionary
+__Changing Values in a Dictionary__
 
 Indivudual values can be changed using the value's key and the assignment operator.
 
@@ -2174,24 +2196,13 @@ dict.clear() | Removes all elements of dictionary dict
 dict.copy() | Returns a shallow copy of dictionary dict. Shallow vs Deep only matters in multidementional datastructures.
 dict.fromkeys(seq,value) | Create a new dictionary with keys from seq (python sequence type) and values set to value.
 dict.get(key, default=None) | For key key, returns value or default if key not in dictionary
+dict.items() | Returns a list of (key, value) tuple pairs
+dict.keys() | Returns list of keys
+dict.setdefault(key, default = None) | Similar to get(), but will set dict[key] = default if key is not already in dict
+dict.update(dict2) | Adds dictionary dict2's key-values pairs to dict
+dict.values() | Returns list of dictionary dict's values
 
-5	dict.has_key(key)
-Removed, use the in operation instead.
 
-6	dict.items()
-Returns a list of dict's (key, value) tuple pairs
-
-7	dict.keys()
-Returns list of dictionary dict's keys
-
-8	dict.setdefault(key, default = None)
-Similar to get(), but will set dict[key] = default if key is not already in dict
-
-9	dict.update(dict2)
-Adds dictionary dict2's key-values pairs to dict
-
-10	dict.values()
-Returns list of dictionary dict's values
 
 Functions
 =========
