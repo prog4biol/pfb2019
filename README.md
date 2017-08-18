@@ -33,7 +33,8 @@ Table of Contents
      * [Loops](#loops)
      * [Dictionaries](#dictionaries)
      * [Sets](#sets)
-     * [Files](#files)
+     * [I/O and Files](#io-and-files)
+     * [Regular Expressions](#regular-expressions)
      * [Functions](#functions)
      * [Modules](#modules)
      * [Exceptions](#exceptions)
@@ -2474,6 +2475,10 @@ Total: 142
 > Finally we close each of the files
 
 
+Regular Expressions
+====================
+
+
 Functions
 =========
 @sep
@@ -2494,8 +2499,7 @@ Modules
 >os, sys, glob, shutil, math, random, statistics (scipy), zlib, sqlite3 (DB access)? urllib.request 
 
 
-Regular Expressions
-====================
+
 
 
 
