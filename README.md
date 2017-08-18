@@ -1538,9 +1538,11 @@ __Accessing Values in Lists__
 
 To retrieve a single value in a list use the value's index in this format list[index]. This will return the value at the specified index. 
 
+Here is our list:  
 ```python
-codons = [ 'atg' , 'aaa' , 'agg' ]
+>>> codons = [ 'atg' , 'aaa' , 'agg' ]
 ```
+> There are 3 values with the indices of 0, 1, 2
 
 Index | Value
 ------|-------
@@ -1548,15 +1550,39 @@ Index | Value
 1 | aaa
 2 | agg
 
-   
-
+Let's access the 0th value. 
 ```python
+>>> codons = [ 'atg' , 'aaa' , 'agg' ]
+>>> codons[0]
+'atg'
+```
+> The the value of the 0th index is returned by using the syntax list[index]
+
+The value cana be saved for later use by storing in a variable.
+```python
+>>> codons = [ 'atg' , 'aaa' , 'agg' ]
+>>> codon_0 = codons[0]
+>>> print(codon_0)
+atg
+```
+> Each value can be saved in a new variable to use later.
+
+The values can be retrieved an used directly.
+```python
+>>> codons = [ 'atg' , 'aaa' , 'agg' ]
 >>> print(codons[0])
 atg
 >>> print(codons[1])
 aaa
 >>> print(codons[2])
 agg
+```
+> The 3 values are independently accesses and immediately printed. They are not stored in a variable.
+
+
+If you want to access the values in reverse, use negative indices.
+```python
+>>> codons = [ 'atg' , 'aaa' , 'agg' ]
 >>> print(codons[-1])
 agg
 >>> print(codons[-2])
@@ -1632,6 +1658,8 @@ len(list) | returns the length or the number of values in list | len([1,2,3]) re
 max(list) | returns the value with the largest ascii value |  max(['a','A','z']) returns 'z' 
 min(list) | returns the value with the smallest ascii value |  min(['a','A','z']) returns 'A' 
 list(seq) | converts a tuple into a list |  list(('a','A','z')) returns ['a', 'A', 'z']
+sorted(list, key=None, reverse=False) | returns a sorted list based on the key provided |sorted(['a','A','z']) returns ['A', 'a', 'z']
+;  sorted(['a','A','z'],key=str.lower) returns ['a', 'A', 'z']
 
 __List Methods__
 
@@ -1650,7 +1678,7 @@ list.extend(new_list) | adds the provided list to the end of list | list.extend(
 list.pop(index) | removes and returns the value of the index argument. The list is now 1 value shorter | list.pop(0) returns 1 
 list.remove(obj) | finds the lowest index of the given object and removes the value. The list is now 1 value shorter | codons.remove('aaa') ; print(codons) returns  [ 'atg' , 'agg' ]
 list.reverse() | reverses the order of the list | list.reverse() ; print(list) returns [3,2,1]
-list.sort([func]) | sorts a list using the provided function | codons.sort() ; print(codons) returns ['aaa', 'agg', 'atg']
+list.sort([func]) | sorts a list using the provided function. Does not return a list. The list has been changed. | codons.sort() ; print(codons) returns ['aaa', 'agg', 'atg']
 
 
 
@@ -1838,6 +1866,35 @@ three
 four
 ```
 
+This is an example of iterating over a string. Remember a string is a sequence like a list. It is data where position is important. Look back at "Extracting a Substring, or Slicing" in the [Strings](#strings) section to see other ways of how strings can be treated like lists.
+
+Code:
+```python
+#!/usr/bin/python3
+
+dna = 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'
+for nt in dna:
+  print(nt)
+```
+
+Output:
+```
+$ python3 for_string.py
+G
+T
+A
+C
+C
+T
+T
+...
+...
+```
+> This is a easy way to access each character in a string. It is especially nice for DNA sequences.
+
+
+Another example of iterating over a list of variables, this time numbers.
+
 Code:
 ```python
 #!/usr/bin/python3
@@ -1847,7 +1904,6 @@ for num in numbers:
   print(num)
 ```
 
-Let's do the same on a list of numbers.
 Output:
 ```
 $ python3 list_numbers.py
@@ -1963,38 +2019,198 @@ Done
 
 __Iterators__
 
+An iterable is any data type that is iterable, or can be used in iteration. An iterable can be made into an iterator with the iter() function. This means you can use the next() function.
+
+```python
+>>> codons = [ 'atg' , 'aaa' , 'agg' ]
+>>> codons_iterator=iter(codons)
+>>> next(codons_iterator)
+'atg'
+>>> next(codons_iterator)
+'aaa'
+>>> next(codons_iterator)
+'agg'
+>>> next(codons_iterator)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+StopIteration
+```
+> An iterator allows you to get the next element in the iterator until there are no more elements. If you want to go through each element again, you will need to redefine the iterator.
 
 Files: I/O
 ==========
-with open() as f:
-open()
-read() readline()
-write()
-close()
+@sep
+> with open() as f:
+> open()
+> read() readline()
+> write()
+> close()
 
 
 Dictionaries and Sets
 ======================
-for k, v in knights.items():
-keys()
+@sep
+> for k, v in knights.items():
+> keys()
 
+
+Dictionaries are another iterable, like a string and list. Unlike strings and lists, dictionaries are not a sequence, or in other words, the position is not important. Dictionaries are a collection of key value pairs.  
+
+Each key is separated from its value by a colon (:), the items are separated by commas, and the whole thing is enclosed in curly braces. An empty dictionary without any items is written with just two curly braces, like this: {}.
+
+Keys are unique within a dictionary while values may not be. The values of a dictionary can be of any type, but the keys must be of an immutable data type such as strings, numbers, or tuples.
+  
+Data that is appropriate for dictionaries are pieces of information that naturally go together, like gene name and sequence. 
+
+Key | Value
+------|-------
+TP53 | GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
+BRCA1 | GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
+
+__Creating a Dictionary__
+  
+```python
+genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
+```  
+
+Breaking up the key/value pairs over multiple lines make them easier to read.
+```python
+genes = { 
+           'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 
+           'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' 
+         }
+``` 
+
+__Accessing Values in Dictionaries__
+To retrieve a single value in a dictionary use the value's key in this format dict[key]. This will return the value at the specified key. 
+
+```python
+>>> genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
+>>>
+>>>
+>>> genes['TP53']
+GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
+```
+> The sequence of the gene TP53 is stored as a value of the key 'TP53'. We can assess the sequence by using the key in this format dict[key]
+
+The value can be accessed and passed directly to a function or stored in a variable.
+```python
+>>> print(genes['TP53'])
+GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
+>>>
+>>> seq = genes['TP53'];
+>>> print(seq)
+GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
+```
+> Nesting is what we call the first example where we retrieve the value and immediately pass the returned object to a function.
+
+An error is given when a key that does not exist is used to try to access a value in a dictionary.
+```python
+>>> print(genes['HDAC'])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'HDAC' is not defined
+```
+> We get a NameError if a key is not in the dictionary
+
+
+__Changing Values in a Dictionary
+
+Indivudual values can be changed using the value's key and the assignment operator.
+
+```python
+>>> genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
+>>> print(genes)
+{'BRCA1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA', 'TP53': 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC'}
+>>> genes['TP53'] = 'atg'
+>>> print(genes)
+{'BRCA1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA', 'TP53': 'atg'}
+```
+> We have changed the value of the key 'TP53' and the contents of the dictionary have changed.
+
+Other assignment operators can also be used to change a value of a dictionary key. 
+```python
+>>> genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
+>>> genes['TP53'] += 'TAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTG'
+>>> print(genes)
+{'BRCA1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA', 'TP53': 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTG'}
+```
+> Here we have used the '+=' concatenation assignemt operator. This is equivalent to  genes['TP53'] = genes['TP53'] + 'TAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTG'.
+> The same can be done with list elements.
+  
+__Building a Dictionary one Key/Value at a Time__
+
+Building a dictionary one key/value at a time is akin to what we just saw when we change a key's value.
+
+```python
+>>> genes = {}
+>>> print(genes)
+{}
+>>> genes['Brca1'] = 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'
+>>> genes['TP53'] = 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC'
+>>> print(genes)
+{'Brca1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA', 'TP53': 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC'}
+```
+> We start by creating an empty dictionary. Then we add each key/value pair using the same syntax as when we change a key's value. dict[key] = new_value  
+  
+   <p>&nbsp;</p>
+
+__Dictionary Operators__
+
+
+__Dictionary Functions__
+
+Function | Description
+---------|------------
+len(dict) | returns the total number of key/value pairs
+str(dict) | returns a string representatin of the dictionary
+type(variable) | Returns the type of the passed variable. If passed variable is dictionary, then it would return a dictionary type.
+
+__Dictionary Methods__
+
+Method | Description
+---------|------------
+dict.clear() | Removes all elements of dictionary dict
+dict.copy() | Returns a shallow copy of dictionary dict. Shallow vs Deep only matters in multidementional datastructures.
+dict.fromkeys(seq,value) | Create a new dictionary with keys from seq (python sequence type) and values set to value.
+dict.get(key, default=None) | For key key, returns value or default if key not in dictionary
+
+5	dict.has_key(key)
+Removed, use the in operation instead.
+
+6	dict.items()
+Returns a list of dict's (key, value) tuple pairs
+
+7	dict.keys()
+Returns list of dictionary dict's keys
+
+8	dict.setdefault(key, default = None)
+Similar to get(), but will set dict[key] = default if key is not already in dict
+
+9	dict.update(dict2)
+Adds dictionary dict2's key-values pairs to dict
+
+10	dict.values()
+Returns list of dictionary dict's values
 
 Functions
 =========
-`def, return, positional arguments, keyword arguments, *arguments **keywords`
-lambda e.g.
-`squares = list(map(lambda x: x**2, range(10)))`
+@sep
+> `def, return, positional arguments, keyword arguments, *arguments **keywords`
+> lambda e.g.
+> `squares = list(map(lambda x: x**2, range(10)))`
 
 
 Modules
 =======
-dir()
-import
-from bla import boo
+@sep
+> dir()
+> import
+> from bla import boo
 
 
-The standard library:
-os, sys, glob, shutil, math, random, statistics (scipy), zlib, sqlite3 (DB access)? urllib.request 
+>The standard library:
+>os, sys, glob, shutil, math, random, statistics (scipy), zlib, sqlite3 (DB access)? urllib.request 
 
 
 Regular Expressions
@@ -2004,21 +2220,24 @@ Regular Expressions
 
 Exceptions
 ==========
-try/except/finally (see with/as)
+@sep
+> try/except/finally (see with/as)
 
 
 
 Classes 
 =======
-`class`
-scope & namespace, 
-`global, nonlocal`
+@sep
+> `class`
+> scope & namespace, 
+> `global, nonlocal`
 
 
 
 Datastructures
 ==============
-import json
+@sep
+> import json
 
 
 ***
