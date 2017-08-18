@@ -2179,6 +2179,11 @@ Building a dictionary one key/value at a time is akin to what we just saw when w
 
 __Dictionary Operators__
 
+Operator | Descsription
+---------|-------------
+in | key in dict returns True if the key exists in the dictionary
+not in | key not in dict returns True if the key does not exist in the dictionary
+
 
 __Dictionary Functions__
 
@@ -2202,6 +2207,108 @@ dict.setdefault(key, default = None) | Similar to get(), but will set dict[key] 
 dict.update(dict2) | Adds dictionary dict2's key-values pairs to dict
 dict.values() | Returns list of dictionary dict's values
 
+Sets
+=====
+
+A set is another Python data type.
+
+- A set is unordered 
+- A set is a collection of data with no duplicate elements. 
+- Common uses include membership testing and eliminating duplicate entries. 
+
+Curly braces or the set() function can be used to create sets. Note: to create an empty set you have to use set(), not {}; the latter creates an empty dictionary.
+
+```python
+>>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+>>> print(basket)                     
+{'orange', 'banana', 'pear', 'apple'}
+```
+> Look, duplicates have been removed
+
+Test to see if an value is in the set
+```python
+>>> 'orange' in basket                 
+True
+>>> 'crabgrass' in basket
+False
+```
+> The in operator works the same with sets as it does with lists and dictionaries
+
+
+Union, intersection, difference and symmetric difference can be done with sets
+```python
+>>> a = set('abracadabra')
+>>> b = set('alacazam')
+>>> a                                 
+{'a', 'r', 'b', 'c', 'd'}
+```
+> Sets contain unique elements, therefore, even if duplicate elements are provided they will be removed.
+
+__Set Operators__
+
+Difference:
+```python
+>>> a - b                             
+{'r', 'd', 'b'}
+```
+> This returns the letters that are in a but not in b
+
+Union:
+```python
+>>> a | b                          
+{'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}
+```
+> This returns letters that are in a or b both
+
+Intersection:
+```python
+>>> a & b                            
+{'a', 'c'}
+```
+> This returns letters that are in both a and b
+
+Symmetric Difference:
+```python
+>>> a ^ b                             
+{'r', 'd', 'b', 'm', 'z', 'l'}
+```
+> This returns the letters that are in a or b but not in both
+
+__Set Functions__
+
+Function  |	Description
+----------|-------------
+all() |	returns True if all elements of the set are true (or if the set is empty).
+any() |	returns True if any element of the set is true. If the set is empty, return False.
+enumerate()	| return an enumerate object. It contains the index and value of all the items of set as a pair.
+len() |	return the number of items in the set.
+max() |	return the largest item in the set.
+min() |	return the smallest item in the set.
+sorted() |	returns a new sorted list from elements in the set (does not alter the original set).
+sum() | retrune the sum of all elements in the set.	
+
+
+__Set Methods__
+
+Method | Description
+-------|------------
+set.add(new) | adds a new element
+set.clear() | remove all elements 
+set.copy() | returns a shallow copy of a set
+set.difference(set2) |	returns the difference of set and set2
+set.difference_update(set2)	| removes all elements of another set from this set
+set.discard(element) |	removes an element from set if it is found in set. (Do nothing if the element is not in set)
+set.intersection(sets) | return the intersection of set and the other provided sets
+set.intersection_update(sets) |	updates set with the intersection of set and the other provided sets
+set.isdisjoint(set2) | returns True if set and set2 have no intersection
+set.issubset(set2) | returns True if set2 contains set
+set.issuperset(set2) |	returns True if set contains set2
+set.pop() |	removes and returns an arbitary element of set. 
+set.remove(element)	| removes element from a set. 
+set.symmetric_difference(set2) | returns the symmetric difference of set and set2
+set.symmetric_difference_update(set2) |	updates set with the symmetric difference of set and set2
+set.union(sets) | returns the union of set and the other provided sets
+set.update(set2) | update set with the union of set and set2
 
 
 Functions
