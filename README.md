@@ -135,7 +135,7 @@ Note: I think it would work nicely if we can get prepaid visa credit cards for e
 ***
   
   
-
+<p>&nbsp;</p>
 
 Python Overview
 ===============
@@ -166,7 +166,7 @@ __Funtions__ are a grouping of code that does something specific. There are func
 __Methods__ is a function that belongs to an object and can only work on the data stored in the object.
 
 
-
+<p>&nbsp;</p>
 
 Running Python
 ==============  
@@ -218,6 +218,8 @@ This produces the following result:
 ```bash
 Hello, PFB2017!
 ```
+
+<p>&nbsp;</p>
 
 Syntax
 =======
@@ -286,6 +288,7 @@ Options and arguments (and corresponding environment variables):
 -h     : print this help message and exit
 ```
 
+<p>&nbsp;</p>
 
 Data Types and Variables
 ========================
@@ -422,7 +425,7 @@ hex(x) | Converts an integer to a hexadecimal string.
 oct(x) | Converts an integer to an octal string.
 
 
-  
+<p>&nbsp;</p>
   
 
 Operators
@@ -538,6 +541,8 @@ is is not | Identity operators
 in not in |  Membership operators
 not or and | Logical operators
 
+
+<p>&nbsp;</p>
 
 Truth
 ======
@@ -723,7 +728,7 @@ Returns:
 50 must be 50
 ```
 
-
+<p>&nbsp;</p>
 
 
 Numbers
@@ -901,6 +906,7 @@ Use this instead:
 cmp = (x>y)-(x<y)
 ```
 
+<p>&nbsp;</p>
 
 Strings
 ========
@@ -1506,6 +1512,8 @@ Float Type | Description
 '%'	| Percentage. Multiplies the number by 100 and displays in fixed ('f') format, followed by a percent sign.
 None |	Similar to 'g', except that fixed-point notation, when used, has at least one digit past the decimal point. The default precision is as high as needed to represent the particular value. The overall effect is to match the output of str() as altered by the other format modifiers.
 
+<p>&nbsp;</p>
+
 
 Lists and Tuples
 ===============
@@ -1727,7 +1735,7 @@ The main reason why tuples exist is to get data to and from function calls.
 <p>&nbsp;</p>
 Everything you can do with lists you can do with tupels, EXCEPT change them. 
 
-
+<p>&nbsp;</p>
 
 Loops
 =====
@@ -2053,10 +2061,10 @@ StopIteration
 ```
 > An iterator allows you to get the next element in the iterator until there are no more elements. If you want to go through each element again, you will need to redefine the iterator.
 
+<p>&nbsp;</p>
 
-
-Dictionaries and Sets
-======================
+Dictionaries
+============
 @sep
 > for k, v in knights.items():
 > keys()
@@ -2193,6 +2201,8 @@ dict.setdefault(key, default = None) | Similar to get(), but will set dict[key] 
 dict.update(dict2) | Adds dictionary dict2's key-values pairs to dict
 dict.values() | Returns list of dictionary dict's values
 
+<p>&nbsp;</p>
+
 Sets
 =====
 
@@ -2296,6 +2306,8 @@ set.symmetric_difference_update(set2) |	updates set with the symmetric differenc
 set.union(sets) | returns the union of set and the other provided sets
 set.update(set2) | update set with the union of set and set2
 
+
+<p>&nbsp;</p>
 
 I/O and Files
 =============
@@ -2474,10 +2486,12 @@ Total: 142
 > Once we go through each line of our file we are reading, we print out the total count of nts
 > Finally we close each of the files
 
+<p>&nbsp;</p>
 
 Regular Expressions
 ====================
 
+<p>&nbsp;</p>
 
 Functions
 =========
@@ -2486,6 +2500,7 @@ Functions
 > lambda e.g.
 > `squares = list(map(lambda x: x**2, range(10)))`
 
+<p>&nbsp;</p>
 
 Modules
 =======
@@ -2503,12 +2518,17 @@ Modules
 
 
 
+<p>&nbsp;</p>
+
 Exceptions
 ==========
 @sep
 > try/except/finally (see with/as)
 
 
+
+
+<p>&nbsp;</p>
 
 Classes 
 =======
@@ -2519,12 +2539,18 @@ Classes
 
 
 
+
+<p>&nbsp;</p>
+
 Datastructures
 ==============
 @sep
 > import json
 
 
+
+
+<p>&nbsp;</p>
 ***
 # BioPython
 ***
