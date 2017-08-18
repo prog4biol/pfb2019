@@ -31,9 +31,9 @@ Table of Contents
      * [Strings](#strings) 
      * [Lists and Tuples](#lists-and-tuples)
      * [Loops](#loops)
-     * [Files: I/O](#files-io)
      * [Dictionaries](#dictionaries)
      * [Sets](#sets)
+     * [Files](#files)
      * [Functions](#functions)
      * [Modules](#modules)
      * [Exceptions](#exceptions)
@@ -218,11 +218,6 @@ This produces the following result:
 Hello, PFB2017!
 ```
 
-
-
-
-
-
 Syntax
 =======
 
@@ -289,10 +284,6 @@ Options and arguments (and corresponding environment variables):
 -E     : ignore environment variables (such as PYTHONPATH)
 -h     : print this help message and exit
 ```
-
-
-
-
 
 
 Data Types and Variables
@@ -605,8 +596,6 @@ False
 ```
 
 <p>&nbsp;</p>
-
-
 
 
 
@@ -2307,14 +2296,182 @@ set.union(sets) | returns the union of set and the other provided sets
 set.update(set2) | update set with the union of set and set2
 
 
-Files: I/O
-==========
+I/O and Files
+=============
 @sep
 > with open() as f:
 > open()
 > read() readline()
 > write()
 > close()
+
+I/O stands for input and output. This is in reference to getting data into and out of your script. Writing to the screen, reading from the keyboard, reading from a file, and writing to a file are all examples of I/O.
+
+
+__Writing to the Screen__
+
+You should be well versed in writing to the screen. We have been using the print() function to do this.  
+
+
+```python
+>>> print ("Hello, PFB2017!")
+Hello, PFB2017!
+```  
+> Remember this example from one of our first lessons?
+
+__Reading from Keyboard Input__
+
+This is something new. There is a function which prints a message to the screen and waits for input from the keyboard. This input can be stored in a variable.
+
+```python 
+>>> user_input = input("Type Something Now: ")
+Type Something Now: Hi
+>>> print(user_input)
+Hi
+```
+> All inputed text will be treated as a string. If you are to do math with the input, convert to an int or float first.
+
+__Reading from a File__
+
+Most of the data we will be dealing with will be contained in files. 
+
+The first thing to do with a file is open it. We can do this with the open() function. The open() function takes the file name, access mode as arguments and returns a file object.
+
+The most common access modes are reading (r) and writing (w).
+
+__Open a File__
+```python
+>>> file_object = open("seq.nt.fa","r")
+```
+> 'file_object' is a name of a variable. This can be anything. 
+
+Now that we have opened a file and created a file object we can do things with it, like read it. Lets read all the contents at once.  
+
+Let't cat the contents on the _command line_ to see what's in it before we open it in python
+
+```bash
+$ cat seq.nt.fa
+ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
+ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
+```
+
+Now, lets print the contents to the screen with Python
+```python
+>>> file_object = open("seq.nt.fa","r")
+>>> contents = file_object.read()
+>>> file_name = file_object.name
+>>> print(file_name)
+seq.nt.fa
+>>> print(contents)
+ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
+ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
+
+>>> file_object.close()
+```
+> The complete contents can be retrieved with teh read() method. Another attribure of file_object that can be accessed is the file name. Notice the blank line following the last line of text when the contents are printed to the screen.
+> It is good practice to close your file. Use the close() method. 
+
+
+A for loop can be used to go through the file_object one line at a time.
+```python
+#!/usr/bin/python3
+
+file_object = open("seq.nt.fa","r")
+for line in file_object:
+  print(line)
+```
+
+Output:
+```
+$ python3 file_for.py
+ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
+
+ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
+
+```
+> Notice the blank line at after each line we print. print() automatically adds a newline and we have a newline at the end of each line in our file. Use rstrip() method to remove the newline from each line.
+
+Let's use rstrip() method to remove the newline from our file input.
+```python
+mp02gtfh05:PFB2017 smr$ cat file_for_rstrip.py
+#!/usr/bin/python3
+
+file_object = open("seq.nt.fa","r")
+for line in file_object:
+  line = line.rstrip()
+  print(line)
+```
+> rstrip() method removes the newline from the end of the line by default.
+
+Output:
+```
+$ python3 file_for_rstrip.py
+ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
+ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
+```
+
+__Writing to a File__
+Writing to a file is nothing more than opening a file for writing then using the write() method.  
+
+The write() method is like the print() function. The biggest difference is that it writes to your file object instead of the screen. write() can only take one string type argument. 
+
+Let's write a few lines to a file named "writing.txt".  
+```python
+#!/usr/bin/python3
+
+fo = open("writing.txt" , "w")
+fo.write("One line.\n")
+fo.write("2nd line.\n")
+fo.write("3rd line" + " has extra text\n")
+some_var = 5
+fo.write("4th line has " + str(some_var) + " words\n")
+fo.close()
+```
+
+Output:
+```
+$ python3 file_write.py
+$ cat writing.txt
+One line.
+2nd line.
+3rd line has extra text
+4th line has 5 words
+```
+> As you can see, literal strings, return values from operators, return values from functions and variables can be written to a file with the write() method.
+
+Now, lets get crazy! Lets read from one file a line at a time. Do something to each line and write the results to a new file.
+```python
+#!/usr/bin/python3
+
+seq_read  = open("seq.nt.fa","r")
+seq_write = open("nt.counts.txt","w")
+
+total_nts = 0
+for line in seq_read:
+  nt_count = len(line)
+  total_nts += nt_count
+  seq_write.write(str(nt_count) + "\n")
+
+seq_write.write("Total: " + str(total_nts))
+
+seq_read.close()
+seq_write.close()
+```
+
+Output:
+```
+$ python file_read_write.py
+$ cat nt.counts.txt
+71
+71
+Total: 142
+```
+> The file we are reading from is named, "seq.nt.fa"
+> The file we are writing to is named, "nt.counts.txt"
+> We read each line, calculate the length of each line and print the length
+> We also create a variable to keep track of the total nt count
+> Once we go through each line of our file we are reading, we print out the total count of nts
+> Finally we close each of the files
 
 
 Functions
