@@ -32,7 +32,8 @@ Table of Contents
      * [Lists and Tuples](#lists-and-tuples)
      * [Loops](#loops)
      * [Files: I/O](#files-io)
-     * [Dictionaries and Sets](#dictionaries-and-sets)
+     * [Dictionaries](#dictionaries)
+     * [Sets](#sets)
      * [Functions](#functions)
      * [Modules](#modules)
      * [Exceptions](#exceptions)
@@ -299,11 +300,14 @@ Data Types and Variables
 sep note:  overview of all types: start with constants: numbers, strings '' "" ''' ''' r'' = raw strings, + for concat, * for repeat
 iterable, string, int, float, tuple, list, dictionary, set  
 
-This is our first look at the 5 data types and variables. Each will be discussed in more detail in subsequent sections. 
+This is our first look at varialbes and data types. Each data type will be discussed in more detail in subsequent sections. 
 
 - Variables enable you to store a value in memory. 
 - Simply use the equal sign, '=', to assign a value to a variable.  
 
+__Numbers and Strings__
+
+Numbers and strings are 2 data types. Data types can be stored in variables.
 
 For Example:  
 ```python
@@ -2059,14 +2063,6 @@ StopIteration
 ```
 > An iterator allows you to get the next element in the iterator until there are no more elements. If you want to go through each element again, you will need to redefine the iterator.
 
-Files: I/O
-==========
-@sep
-> with open() as f:
-> open()
-> read() readline()
-> write()
-> close()
 
 
 Dictionaries and Sets
@@ -2309,6 +2305,16 @@ set.symmetric_difference(set2) | returns the symmetric difference of set and set
 set.symmetric_difference_update(set2) |	updates set with the symmetric difference of set and set2
 set.union(sets) | returns the union of set and the other provided sets
 set.update(set2) | update set with the union of set and set2
+
+
+Files: I/O
+==========
+@sep
+> with open() as f:
+> open()
+> read() readline()
+> write()
+> close()
 
 
 Functions
