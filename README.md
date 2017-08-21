@@ -2490,6 +2490,86 @@ Total: 142
 
 Regular Expressions
 ====================
+Regular Expressions is a language for pattern matching. Many different computer languages incorporate regular expressions as well as some unix commands like grep and sed. So far we have seen a few functions for finding exact matches in strings, but this is not always sufficient.  
+
+Functions that utilize regular expressions allow for non-exact pattern matching.  
+
+These specialized functions are not included in the core of Python. We need to import them by typing
+`import re`
+at the top of your script
+
+```python 
+#!/usr/bin/python3
+
+import re
+```
+
+First we will go over a few examples then go into the mechanics in more detail.  
+
+Let's start simple and find an exact match for the EcoRI restriction site in a string.
+```python
+>>> dna = 'ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG'
+>>> if re.search(r"GAATTC",dna):
+...   print("Found an EcoRI site!")
+...
+Found an EcoRI site!
+>>>
+```
+> Since we can search for control characters like a tab (\t) it is good to get in the habit of using the raw string function 
+`r`
+ when defining patterns.
+
+> Here we used the search() function with two arguments, 1) our pattern and 2) the string we want to search. 
+
+
+Let's find out what is returned by the search() function. 
+```python
+>>> dna = 'ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG'
+>>> found=re.search(r"GAATTC",dna)
+>>> print(found)
+<_sre.SRE_Match object; span=(70, 76), match='GAATTC'>
+```
+>Information about the first match is returned
+
+
+How about a non-exact match. Let's seach for a methylation site that has to match the following critera:  
+- G or A 
+- followed by C
+- followed by one of anything or nothing
+- followed by a G 
+
+This could match any of these:  
+GCAG  
+GCTG  
+GCGG  
+GCCG  
+GCG  
+ACAG  
+ACTG  
+ACGG  
+ACCG  
+ACG  
+
+We could test for each of these, or use regular expressions. This is exactly what regular expressions can do for us.  
+```python
+>>> dna = 'ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG'
+>>> found=re.search(r"[GA]C.?G",dna)
+>>> print(found)
+<_sre.SRE_Match object; span=(7, 10), match='ACG'>
+```
+> Here you can see in the returned infomratin that ACG starts at string postion 7 (nt 8). The first postion not in the match is at string postion 10 (nt 11).
+
+What about other potential matches in our DNA string? We can use findall() function to find all matches.
+```python
+>>> dna = 'ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG'
+>>> found=re.findall(r"[GA]C.?G",dna)
+>>> print(found)
+['ACG', 'GCTG', 'ACTG', 'ACCG', 'ACAG', 'ACCG', 'ACAG']
+```
+> findall() returns a list of all the
+
+
+
 
 <p>&nbsp;</p>
 
