@@ -66,7 +66,7 @@ What are our tips for being successful in your efforts to learn to program?
 1. Practice, practice, practice. Please, spend as much time possible actually coding.
 2. Write only a line or two of code, then test it. If you write too many lines, it becomes more difficult to debug if there is an error.
 3. Errors are not failures. Every error you get is a learning opportunity. Every single error you debug is a major success. Fixing errors is how you will cement what you have learned.
-4. Don't spend too much time trying to figure out a problem. We are here to help. It is important for you to try and solve an isssue on your own but not for you to waste your time. We want to help you to independently solve your problem.
+4. Don't spend too much time trying to figure out a problem. While it's a great learning experience to try to solve an isssue on your own, it's not fun getting frustrated or spending a lot of time stuck. We are here to help you, so please ask us whenever you need help.
 5. Lectures are important, but the practice is more important.
 6. Review sessions are important, but practice is more important.
 6. It is essential that we help you to learn how to find solutions on your own.
@@ -80,8 +80,8 @@ Unix Overview
 
 
 
-Getting Around  
-==============
+Working With Files 
+===================
  - ls  
  - cd  
  - cp  
@@ -90,6 +90,9 @@ Getting Around
  - less/more  
  - grep  
  - wc
+ 
+ Working with Servers
+ ====================
  - ssh
  - scp 
 
@@ -145,26 +148,25 @@ Python Overview
 Functions and statements we are NOT covering
 `assert`
 
-Language basics: 3.x, interpreted, slow, python notebook eg jupyter
+Language basics: 3.x, interpreted, object-based, slow, python notebook eg jupyter
 
 
 Python has 
 - data types
+- functions
 - objects
 - classes
-- functions
 - methods
 
-__Data types__ are just different types of data which are discussed in more detail later. Examples of data types are integers and strings.  
+__Data types__ are just different types of data which are discussed in more detail later. Examples of data types are integer numbers and strings of letters and numbers (text). These can be stored in variables.
 
-__Objects__ are a organized collection of predefined data and functions (methods) to act on that data
+__Funtions__ do something with data, such as a calculation. Some functions are already built into Python. You can create your own functions as well. 
 
-__Class__ is a encapulation of variables and functions. Objects get their variables and methods from classess. 
+__Objects__ are a way of grouping a set of data and functions (methods) that act on that data
 
-__Funtions__ are a grouping of code that does something specific. There are functions that are built into Python. You can create your own functions. 
+__Classes__ are a way to encapulate (organize) variables and functions. Objects get their variables and methods from the class they belong to. 
 
-__Methods__ is a function that belongs to an object and can only work on the data stored in the object.
-
+__Methods__ are just functions that belong to a Class. Objects that belong to the a Class can use Methods from that Class.
 
 <p>&nbsp;</p>
 
@@ -180,28 +182,28 @@ To lauch the interpreter type the following into your terminal window:
 `$ python`    
 Note: '$' indicates the command line prompt  
 
-First Python Script:
+First Python Commands:
 ```bash
 $ python
 ```  
 
 
 ```python
->>> print ("Hello, PFB2017!")
+>>> print("Hello, PFB2017!")
 Hello, PFB2017!
 ```  
 
-> Note: `print` is a function.
+> Note: `print` is a function. Function names are followed by (), so formally, the function is `print()`
 
 
 
-Script Programming
+Running Python Scripts
 -----------------------
-Calling the python commnad with a script name as an argument will cause the execution of the script.  
+Typing the python command followed by the name of a script makes python execute the script. Recall that we just saw you can run an interactive interpreter by just typing `python` on the command line
 
 __Python Script__
 * The same code from above is typed into a text file. 
-* This file will have the extension .py. 
+* Python scripts are always saved in files whose names have the extension '.py' (i.e. the filename ends with '.py').
 
 File Contents:  
 ```python
@@ -232,7 +234,7 @@ A Python identifier is a name used to identify a variable, function, class, modu
 Python does not allow punctuation characters such as @, $, and % within identifiers. Python is a case sensitive programming language. Thus, seq_id and seq_ID are two different identifiers in Python.
 
 __Naming conventions for Python Identifiers__: 
- * 1st character is lowercase, unless it is a name of a Class. Classes should begin with an uppercase characters. (ex. seq)
+ * The first character is lowercase, unless it is a name of a Class. Classes should begin with an uppercase characters. (ex. Seq)
  * Private identifiers begin with an underscore. (ex. \_private)
  * Strong private identifiers begin with two underscores. (ex. \_\_private)
  * Language-defined special names begin and end with two underscores. (ex.\_\_special\_\_)
@@ -255,16 +257,16 @@ except
 ```
 
 __Lines and Indentation__: 
-Python does not use braces({}) to indicate blocks of code for class and function definitions or flow control. Blocks of code are denoted by line indentation. Incorrect line spacing and indention will cause an error to be reported.
+Python denotes blocks of code by line indentation. Incorrect line spacing and/or indention will cause an error to be reported or could make your code run in a way you don't expect. You can get help with indentation from good text editors or IDEs.
 
 The number of spaces in the indentation need to be consistent but a specific number is not required. All lines of code, or statements, within a single block must be indented in the same way. For example:
 
 
 __Comments__: 
-Comments are a good programming practice. Making a note of what a line or block of code is doing will help the writer and readers of the code.
+Comments are an essential programming practice. Making a note of what a line or block of code is doing will help the writer and readers of the code. This includes you!
 
 __#__ : 
-The pound or hash symbol is used to prepend a comment. All characters after the # and to the end of the line are apart of the comment and it will not be interpreted. 
+The pound or hash symbol is used to prepend a comment. All characters after the # and to the end of the line are apart of the comment and it will be ignored by python. 
 ```python
 #!/usr/bin/python3
 
@@ -274,7 +276,7 @@ print ("Hello, PFB2017!") # this line prints
 
 
 __Blank Lines__: 
-Blank lines are also important for increasing the readability of the code. Blank lines are ignored by the interpreptor
+Blank lines are also important for increasing the readability of the code. Blank lines are ignored by the python interpreptor
 
 
 __Python Options__: 
