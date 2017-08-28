@@ -2566,11 +2566,308 @@ What about other potential matches in our DNA string? We can use findall() funct
 >>> print(found)
 ['ACG', 'GCTG', 'ACTG', 'ACCG', 'ACAG', 'ACCG', 'ACAG']
 ```
-> findall() returns a list of all the
+> findall() returns a list of all the pieces of the string that match the regex.
+
+A quick count of all the matching sites can be done by counting the length of the returned list.
+```
+python
+>>> len (re.findall(r"[GA]C.?G",dna))
+7
+```
+> There are 7 methylation sites.
+> Here we have another example of nesting. We call the findall() function, searching for all the matches of a methylation site. This function returns a list, the list is past to the len() function, which in turn returns the number of elements in the list.
+
+Let's talk a bit more about all the new characters we see in the pattern.
+
+The pattern in made up of atoms.  
+
+__Individual Characters__
+
+Atom | Description 
+-----|------------
+a-z, A-Z, 0-9 and some punctution | These are ordinary characters that match themselves
+"." | The dot, or period. This matches any single character execpt for the newline.
 
 
+__Character Classes__
+
+A group of characters to that are allowed to be matched one time. There are a few predefined classes, symbol that means a series of characters.
+ 
+Atom | Description
+-----|------------
+[ ]  | A bracketed list of characters, like [GA]. This indicates a single character can match any charcater in the bracketed list.
+\d | __Digits__. Also can be written [0-9]
+\w | __Word character__. Also can be written [A-Za-z_0-9]
+\s | __White Space character__. Also can be written [ \t\n\r]
+\D | __A Non-Digit character__. Also can be written [^0-9]
+\W | __A Non-word charcter__. Also can be written [^A-Za-z_0-9]
+\S | __A Non-White Space Character__. Also can be written [^ \t\n\r]
+
+__Anchors__
+
+A pattern can be anhcored to a region in the string
+
+Atom | Description
+-----|------------
+^ | Matches the beginning of the string
+$ | Matches the end of the string
+\b | Matches a word boundry. This is between a \w and a \W
 
 
+Examples:
+
+```
+/g..t/
+``` 
+> matches "gaat", "goat", and "gotta get a goat" (twice)
+
+
+```
+/g[gatc][gatc]t/
+``` 
+> matches "gaat", "gttt", "gatt", and "gotta get an agatt" (once)</li>
+
+```
+/\d\d\d-\d\d\d\d/`
+```
+> matches 376-8380, and 5128-8181
+> but not 055-98-2818.
+
+```
+/^\d\d\d-\d\d\d\d/
+```
+>  matches 376-8380 and 376-83801
+> but not 5128-8181.
+
+```
+/^\d\d\d-\d\d\d\d$/
+```
+> only matches telephone numbers
+
+```
+/\bcat/
+``` 
+> matches "cat", "catsup" and "more catsup please" 
+> but not "scat".
+
+```
+/\bcat\b/
+```
+> only text containing the word "cat".
+
+__Quantifiers__
+
+Quantifiers quantify how many atoms are to be found. By default an atom matches only once. This behaviour can be modified following an atom with a quantifier.
+
+Quantifier | Description
+-----------|------------
+? | atom matches zero or exactly once
+\* | atom matches zero or more times
+\+ | atom matches one or more times
+{3} | atom matches exactly 3 times
+{2,4} | atom matches between 2 and 4 times, inclusive
+{4,} | atom matches at least 4 times
+
+Examples:  
+
+```
+/goa?t/
+```
+> matches "goat" and "got".  Also any text that contains these words.
+
+```
+/g.+t/
+```
+>  matches "goat", "goot", and "grant", among others.
+
+```
+/g.*t/
+```
+>  matches "gt", "goat", "goot", and "grant", among others.
+
+```
+/^\d{3}-\d{4}$/
+```
+>  matches US telephone numbers (no extra text allowed).
+
+
+Something to think about.  
+1) What would be a pattern to recogize an email address?
+2) What would be a pattern to recogize the ID portion of a sequence record in a FASTA file?
+
+
+__Variables and Patterns__
+
+Variables can be used to store patterns.  
+
+``python
+>>> pattern = r"[GA]C.?G"
+>>> len (re.findall(pattern,dna))
+7
+```
+> In this example we stored our methylation pattern in the variable named 'pattern' and used it as the first argument to findall.
+
+
+__Either Or__
+
+A pipe '|' can be used to indicated that either the pattern before or after the '|' can match. Enclose the the two options in parenthesis.
+
+```
+big bad (wolf|sheep)
+```
+> This pattern must match a string that contains "big" followed by a space followed by "bad" followed by a space followed by _either_ "wolf" or "sheep" 
+> This would match, "big bad wolf"
+> Or "big bad sheep"
+
+Something to think about.
+1) What would a pattern to match 'ATG' followed by a C or a T look like?
+
+__Subpatterns__
+
+Subpatterns, or parts of the pattern enclosed in parenthesis can be extracted and stored for later use.
+
+```
+Who's afraid of the big bad w(.+)f
+``` 
+> This pattern has only one subpattern (.+)
+
+You can combine parenthesis and quantifiers to quantify entire subpatterns
+
+```
+/Who's afraid of the big (bad )?wolf\?/
+```
+> This matches "Who's afraid of the big bad wolf?".
+> As well as "Who's afraid of the big wolf?".
+> The 'bad ' is optional, it can be present 0 or 1 times in our string.
+> This also shows how to literally match special characters. Use a '\' in to escape them.
+
+Something to think about:
+How would you create a pattern to capture the ID in a sequence record of a FASTA file in a subpattern.
+
+Example FASTA sequence record.
+```
+>ID Optional Descrption
+SEQUENCE
+SEQUENCE
+SEQUENCE 
+```
+
+
+__Using Subpatterns Inside the Regular Expression Match__
+
+This is helpful when you want to find a subpattern and then match the contents again
+
+Once a subpattern matches, you can refer to it within the same regular expression.  The first subpattern becomes \1, the second \2, the third \3, and so on.
+
+```
+Who's afraid of the big bad w(.)\1f
+```
+> This would match "Who's afraid of the big bad woof"
+> "Who's afraid of the big bad weef"
+> "Who's afraid of the big bad waaf"
+> But Not, "Who's afraid of the big bad wolf" 
+> Or, "Who's afraid of the big bad wife"
+
+
+In a similar vein, 
+```
+\b(\w+)s love \1 food\b
+```
+> This pattern will match "dogs love dog food"
+> But not "dogs love monkey food".
+
+__Using Subpatterns Outside the Regular Expression Match__
+
+Using the captured subpattern in code that follows the regular expression.
+
+Outside the regular expression match statement, the matched subpatterns can be access with the group() method.
+
+Example:
+```
+>>> dna = 'ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG'
+>>> found=re.search( r"(.{50})TATTAT(.{25})"  , dna )
+>>> upstream = found.group(1))
+>>> print(upstream)
+TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA
+>>> downstream = found.group(2))
+>>  print(downstream)
+CCGGTTTCCAAAGACAGTCTTCTAA
+```
+> This pattern will recognize a consensus transcription start site (TATTAT) 
+> And store the 50 base pairs upstream of the site 
+> And the 25 base pairs downstream of the site
+
+
+If you want to find the upstream and downstream sequence of ALL 'TATTAT' sites, use the findall() function.
+```python
+>>> dna="ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG"
+>>> found = re.findall( r"(.{50})TATTAT(.{25})"  , dna )
+>>> print(found)
+[('TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA', 'CCGGTTTCCAAAGACAGTCTTCTAA'), ('TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA', 'CCGGTTTCCAAAGACAGTCTTCTAA')]
+```
+> The subpatterns are stored in tuples within a list. More about this type of datastructure later.
+
+Another option for retrieving the upstream and downstream subpatters is to put the findall() in a for loop
+
+```python
+>>> dna="ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG"
+>>> for (upstream, downstream) in re.findall( r"(.{50})TATTAT(.{25})"  , dna ):
+...   print("upstream:" , upstream)
+...   print("downstream:" , downstream)
+...
+upstream: TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA
+downstream: CCGGTTTCCAAAGACAGTCTTCTAA
+upstream: TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA
+downstream: CCGGTTTCCAAAGACAGTCTTCTAA
+```
+> This code executes the findall() function once
+> The subpatterns are returned 
+> The subpatterns are stored in the variables upstream and downstream
+> The for block of code is executed
+> The findall() searches again
+> A match is found
+> New subpatterns are returned
+> The for block of code gets executed again
+> The findall() searches again, but no match is found
+> The for loop ends
+
+One other way to get this done is with the finditer() function in a for loop
+```python
+>>> dna="ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG"
+>>> for match in re.finditer(r"(.{50})TATTAT(.{25})"  , dna):
+...   print("upstream:" , match.group(1))
+...   print("downstream:" , match.group(2))
+...
+upstream: TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA
+downstream: CCGGTTTCCAAAGACAGTCTTCTAA
+upstream: TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA
+downstream: CCGGTTTCCAAAGACAGTCTTCTAA
+```
+> This code executes finditer() function once.
+> The match object is returned. A match object will have all the information about the match
+> In the for block we call the group() method on the first match object returned
+> We print out the first and second subpattern using the group() method
+> The finditer() function is executed a second time and a match is found
+> The second match object is returned
+> The second subpatterns are retrieved from the match object using the group() method
+> The finditer() functin is executed again, but no matches found, so the loop ends
+
+__Truth and Regular Expression Matches__
+
+The search(), match(), findall(), and finditer() can be used in conditional tests. If a match is not found an empty list or 'None' is returned. These both are False.
+
+```python
+>>> found=re.search( r"(.{50})TATTATZ(.{25})"  , dna )
+>>> if found:
+...    print("found it")
+... else:
+...    print("not found")
+...
+not found
+>>> print(found)
+None
+```
+> None is False so the else block is executed and "not found" is printed
 <p>&nbsp;</p>
 
 Functions
