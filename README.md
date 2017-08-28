@@ -2799,7 +2799,7 @@ Who's afraid of the big bad w(.+)f
 You can combine parenthesis and quantifiers to quantify entire subpatterns
 
 ```
-/Who's afraid of the big (bad )?wolf\?/
+Who's afraid of the big (bad )?wolf\?
 ```
 > This matches "Who's afraid of the big bad wolf?".
 > As well as "Who's afraid of the big wolf?".
@@ -2858,9 +2858,9 @@ TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA
 >>  print(downstream)
 CCGGTTTCCAAAGACAGTCTTCTAA
 ```
-> This pattern will recognize a consensus transcription start site (TATTAT) 
-> And store the 50 base pairs upstream of the site 
-> And the 25 base pairs downstream of the site
+> 1) This pattern will recognize a consensus transcription start site (TATTAT) 
+> 2) And store the 50 base pairs upstream of the site 
+> 3) And the 25 base pairs downstream of the site
 
 
 If you want to find the upstream and downstream sequence of ALL 'TATTAT' sites, use the findall() function.
@@ -2885,16 +2885,16 @@ downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 upstream: TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA
 downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 ```
-> This code executes the findall() function once  
-> The subpatterns are returned   
-> The subpatterns are stored in the variables upstream and downstream  
-> The for block of code is executed  
-> The findall() searches again  
-> A match is found  
-> New subpatterns are returned  
-> The for block of code gets executed again  
-> The findall() searches again, but no match is found  
-> The for loop ends  
+> 1) This code executes the findall() function once  
+> 2) The subpatterns are returned   
+> 3) The subpatterns are stored in the variables upstream and downstream  
+> 4) The for block of code is executed  
+> 5) The findall() searches again  
+> 6) A match is found  
+> 7) New subpatterns are returned  
+> 8) The for block of code gets executed again  
+> 9) The findall() searches again, but no match is found  
+> 10) The for loop ends  
 
 One other way to get this done is with the finditer() function in a for loop
 ```python
@@ -2908,14 +2908,14 @@ downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 upstream: TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA
 downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 ```
-> This code executes finditer() function once.  
-> The match object is returned. A match object will have all the information about the match  
-> In the for block we call the group() method on the first match object returned  
-> We print out the first and second subpattern using the group() method  
-> The finditer() function is executed a second time and a match is found  
-> The second match object is returned  
-> The second subpatterns are retrieved from the match object using the group() method  
-> The finditer() functin is executed again, but no matches found, so the loop ends  
+> 1) This code executes finditer() function once.  
+> 2) The match object is returned. A match object will have all the information about the match  
+> 3) In the for block we call the group() method on the first match object returned  
+> 4) We print out the first and second subpattern using the group() method  
+> 5) The finditer() function is executed a second time and a match is found  
+> 6) The second match object is returned  
+> 7) The second subpatterns are retrieved from the match object using the group() method  
+> 8) The finditer() functin is executed again, but no matches found, so the loop ends  
 
 __Truth and Regular Expression Matches__
 
@@ -2933,6 +2933,7 @@ not found
 None
 ```
 > None is False so the else block is executed and "not found" is printed
+
 <p>&nbsp;</p>
 
 Functions
