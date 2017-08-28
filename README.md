@@ -2875,6 +2875,25 @@ Not Found
 
 __Subpatterns and Greediness__
 
+By default, regular expressions are "greedy".  They try to match as much as they can. Use the quantifier '?' to make the match not greedy. The not greedy match is called 'lazy' 
+
+```python
+>>> str = 'The fox ate my box of doughnuts'
+>>> found = re.search(r"(f.+x)",str)
+>>> print(found.group(1))
+fox ate my box
+```
+> The pattern f.+x does not match what you might expect, it matches past 'fox' all the way out to 'fox ate my box'.  
+> The '.+' id greedy 
+> As many characters as possible are found that are between the 'f' and the 'x'. 
+
+Let's make this match lazy by using '?'
+```python
+>>> found = re.search(r"(f.+?x)",str)
+>>> print(found.group(1))
+fox
+```
+> The match is now lazy and will only match 'fox'
 
 
 
