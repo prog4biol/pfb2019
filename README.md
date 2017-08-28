@@ -2841,6 +2841,43 @@ In a similar vein,
 > This pattern will match "dogs love dog food"
 > But not "dogs love monkey food".
 
+```python
+>>> str="dogs love dog food"
+>>> found=re.search(r"\b(\w+)s love \1 food\b", str)
+>>> if found:
+...   print(found.group(1))
+... else:
+...   print("Not Found")
+...
+dog
+>>> str="cats love cat food"
+>>> found=re.search(r"\b(\w+)s love \1 food\b", str)
+>>> if found:
+...   print(found.group(1))
+... else:
+...   print("Not Found")
+...
+cat
+>>> str="dogs love monkey food"
+>>> found=re.search(r"\b(\w+)s love \1 food\b", str)
+>>> if found:
+...   print(found.group(1))
+... else:
+...   print("Not Found")
+...
+Not Found
+```
+> This pattern matches:  
+>  -  "dogs love dog food"
+>  -  "cats love cat food"
+>  -  but not "dogs love monkey food" 
+
+
+__Subpatterns and Greediness__
+
+
+
+
 __Using Subpatterns Outside the Regular Expression Match__
 
 Using the captured subpattern in code that follows the regular expression.
@@ -2917,6 +2954,9 @@ downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 > 7) The second subpatterns are retrieved from the match object using the group() method  
 > 8) The finditer() functin is executed again, but no matches found, so the loop ends  
 
+FYI: match() function is another regular expression function that looks for patterns. It is similar to search but it only looks at the begining of the string for the pattern while search() looks in the entire string. Usually search() and findall() will be more useful.
+
+
 __Truth and Regular Expression Matches__
 
 The search(), match(), findall(), and finditer() can be used in conditional tests. If a match is not found an empty list or 'None' is returned. These both are False.
@@ -2933,6 +2973,14 @@ not found
 None
 ```
 > None is False so the else block is executed and "not found" is printed
+
+
+__Using Regular expressions in substitutions__
+
+Earlier we went over how to find an exact pattern and replace it using the replace() method. To find a pattern and make a replacement the regular expression sub() function is used. This function takes the pattern, the replacement, the string to be searched, the number of times to do the replacement, and flags.
+
+
+
 
 <p>&nbsp;</p>
 
