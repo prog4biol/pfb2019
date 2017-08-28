@@ -10,48 +10,48 @@ Sofia Robb
 ***
 
 Table of Contents
- * [Big Picture](#big-picture)
- * [Unix](#unix)
-     * [Unix Overview](#unix-overview)
-     * [Getting Around](#getting-around)  
-     * [Getting things done](#getting-things-done)
-     * [Text Editors](#text-editors)
-     * [Git for Beginners](#git-for-beginners)
-  * [AWS](#aws)
-     * [AWS Overview](#aws-overview)
-  * [Python](#python)
-     * [Python Overview](#python-overview)
-     * [Running Python](#running-python)
-     * [Syntax](#syntax)
-     * [Data Types and Variables](#data-types-and-variables)
-     * [Operators](#operators)
-     * [Truth](#truth)
-     * [Logic: Control Statements](#logic-control-statements)
-     * [Numbers](#numbers)
-     * [Strings](#strings) 
-     * [Lists and Tuples](#lists-and-tuples)
-     * [Loops](#loops)
-     * [Dictionaries](#dictionaries)
-     * [Sets](#sets)
-     * [I/O and Files](#io-and-files)
-     * [Regular Expressions](#regular-expressions)
-     * [Functions](#functions)
-     * [Modules](#modules)
-     * [Exceptions](#exceptions)
-     * [Classes](#classes) 
-     * [Datastructures](#datastructures)
- * [BioPython](#biopython)
-    * [BioPython Overview](#biopython-overview)
-    * [BioPython Subtopic 1](#biopython-subtopic-1)
-    * [BioPython Subtopic 2](#biopython-subtopic-2)
- * [My Questions](#my-questions)
- * [Bioinformatic Analysis and Tools](#bioinformatic-analysis-and-tools)
-   * [Bioinformatic Analysis and Tools Overview](#bioinformatics-analysis-and-tools-overview)
-   * [Sequence Search and Alignments](#sequence-search-and-alignments)
-   * [Assembly](#assembly)
-   * [NGS](#ngs)
-   * [Variant Calling](#variant-calling)
-   * [Ontology](#ontology)
+ * [Big Picture](#big-picture)  
+ * [Unix](#unix)  
+     * [Unix Overview](#unix-overview)  
+     * [Getting Around](#getting-around)    
+     * [Getting things done](#getting-things-done)  
+     * [Text Editors](#text-editors)  
+     * [Git for Beginners](#git-for-beginners)  
+  * [AWS](#aws)  
+     * [AWS Overview](#aws-overview)  
+  * [Python](#python)  
+     * [Python Overview](#python-overview)  
+     * [Running Python](#running-python)  
+     * [Syntax](#syntax)  
+     * [Data Types and Variables](#data-types-and-variables)  
+     * [Operators](#operators)  
+     * [Truth](#truth)  
+     * [Logic: Control Statements](#logic-control-statements)  
+     * [Numbers](#numbers)  
+     * [Strings](#strings)   
+     * [Lists and Tuples](#lists-and-tuples)  
+     * [Loops](#loops)  
+     * [Dictionaries](#dictionaries)  
+     * [Sets](#sets)  
+     * [I/O and Files](#io-and-files)  
+     * [Regular Expressions](#regular-expressions)  
+     * [Functions](#functions)  
+     * [Modules](#modules)  
+     * [Exceptions](#exceptions)  
+     * [Classes](#classes)   
+     * [Datastructures](#datastructures)  
+ * [BioPython](#biopython)  
+    * [BioPython Overview](#biopython-overview)  
+    * [BioPython Subtopic 1](#biopython-subtopic-1)  
+    * [BioPython Subtopic 2](#biopython-subtopic-2)  
+ * [My Questions](#my-questions)  
+ * [Bioinformatic Analysis and Tools](#bioinformatic-analysis-and-tools)  
+   * [Bioinformatic Analysis and Tools Overview](#bioinformatics-analysis-and-tools-overview)  
+   * [Sequence Search and Alignments](#sequence-search-and-alignments)  
+   * [Assembly](#assembly)  
+   * [NGS](#ngs)  
+   * [Variant Calling](#variant-calling)  
+   * [Ontology](#ontology)  
 
   
   
@@ -71,12 +71,20 @@ What are our tips for being successful in your efforts to learn to program?
 6. Review sessions are important, but practice is more important.
 6. It is essential that we help you to learn how to find solutions on your own.
 
+
+
+
+
 ***
 # Unix
 ***
 
 Unix Overview
 =============
+
+
+
+
 
 
 
@@ -97,6 +105,9 @@ Working With Files
  - scp 
 
 
+
+
+
 Getting things done
 ==================
  - sort
@@ -105,6 +116,9 @@ Getting things done
  - sed
  - perl
  - for
+
+
+
 
 Text Editors
 ============
