@@ -10,48 +10,48 @@ Sofia Robb
 ***
 
 Table of Contents
- * [Big Picture](#big-picture)
- * [Unix](#unix)
-     * [Unix Overview](#unix-overview)
-     * [Getting Around](#getting-around)  
-     * [Getting things done](#getting-things-done)
-     * [Text Editors](#text-editors)
-     * [Git for Beginners](#git-for-beginners)
-  * [AWS](#aws)
-     * [AWS Overview](#aws-overview)
-  * [Python](#python)
-     * [Python Overview](#python-overview)
-     * [Running Python](#running-python)
-     * [Syntax](#syntax)
-     * [Data Types and Variables](#data-types-and-variables)
-     * [Operators](#operators)
-     * [Truth](#truth)
-     * [Logic: Control Statements](#logic-control-statements)
-     * [Numbers](#numbers)
-     * [Strings](#strings) 
-     * [Lists and Tuples](#lists-and-tuples)
-     * [Loops](#loops)
-     * [Dictionaries](#dictionaries)
-     * [Sets](#sets)
-     * [I/O and Files](#io-and-files)
-     * [Regular Expressions](#regular-expressions)
-     * [Functions](#functions)
-     * [Modules](#modules)
-     * [Exceptions](#exceptions)
-     * [Classes](#classes) 
-     * [Datastructures](#datastructures)
- * [BioPython](#biopython)
-    * [BioPython Overview](#biopython-overview)
-    * [BioPython Subtopic 1](#biopython-subtopic-1)
-    * [BioPython Subtopic 2](#biopython-subtopic-2)
- * [My Questions](#my-questions)
- * [Bioinformatic Analysis and Tools](#bioinformatic-analysis-and-tools)
-   * [Bioinformatic Analysis and Tools Overview](#bioinformatics-analysis-and-tools-overview)
-   * [Sequence Search and Alignments](#sequence-search-and-alignments)
-   * [Assembly](#assembly)
-   * [NGS](#ngs)
-   * [Variant Calling](#variant-calling)
-   * [Ontology](#ontology)
+ * [Big Picture](#big-picture)  
+ * [Unix](#unix)  
+     * [Unix Overview](#unix-overview)  
+     * [Getting Around](#getting-around)    
+     * [Getting things done](#getting-things-done)  
+     * [Text Editors](#text-editors)  
+     * [Git for Beginners](#git-for-beginners)  
+  * [AWS](#aws)  
+     * [AWS Overview](#aws-overview)  
+  * [Python](#python)  
+     * [Python Overview](#python-overview)  
+     * [Running Python](#running-python)  
+     * [Syntax](#syntax)  
+     * [Data Types and Variables](#data-types-and-variables)  
+     * [Operators](#operators)  
+     * [Truth](#truth)  
+     * [Logic: Control Statements](#logic-control-statements)  
+     * [Numbers](#numbers)  
+     * [Strings](#strings)   
+     * [Lists and Tuples](#lists-and-tuples)  
+     * [Loops](#loops)  
+     * [Dictionaries](#dictionaries)  
+     * [Sets](#sets)  
+     * [I/O and Files](#io-and-files)  
+     * [Regular Expressions](#regular-expressions)  
+     * [Functions](#functions)  
+     * [Modules](#modules)  
+     * [Exceptions](#exceptions)  
+     * [Classes](#classes)   
+     * [Datastructures](#datastructures)  
+ * [BioPython](#biopython)  
+    * [BioPython Overview](#biopython-overview)  
+    * [BioPython Subtopic 1](#biopython-subtopic-1)  
+    * [BioPython Subtopic 2](#biopython-subtopic-2)  
+ * [My Questions](#my-questions)  
+ * [Bioinformatic Analysis and Tools](#bioinformatic-analysis-and-tools)  
+   * [Bioinformatic Analysis and Tools Overview](#bioinformatics-analysis-and-tools-overview)  
+   * [Sequence Search and Alignments](#sequence-search-and-alignments)  
+   * [Assembly](#assembly)  
+   * [NGS](#ngs)  
+   * [Variant Calling](#variant-calling)  
+   * [Ontology](#ontology)  
 
   
   
@@ -66,10 +66,14 @@ What are our tips for being successful in your efforts to learn to program?
 1. Practice, practice, practice. Please, spend as much time possible actually coding.
 2. Write only a line or two of code, then test it. If you write too many lines, it becomes more difficult to debug if there is an error.
 3. Errors are not failures. Every error you get is a learning opportunity. Every single error you debug is a major success. Fixing errors is how you will cement what you have learned.
-4. Don't spend too much time trying to figure out a problem. We are here to help. It is important for you to try and solve an isssue on your own but not for you to waste your time. We want to help you to independently solve your problem.
+4. Don't spend too much time trying to figure out a problem. While it's a great learning experience to try to solve an isssue on your own, it's not fun getting frustrated or spending a lot of time stuck. We are here to help you, so please ask us whenever you need help.
 5. Lectures are important, but the practice is more important.
 6. Review sessions are important, but practice is more important.
 6. It is essential that we help you to learn how to find solutions on your own.
+
+
+
+
 
 ***
 # Unix
@@ -80,8 +84,12 @@ Unix Overview
 
 
 
-Getting Around  
-==============
+
+
+
+
+Working With Files 
+===================
  - ls  
  - cd  
  - cp  
@@ -90,8 +98,14 @@ Getting Around
  - less/more  
  - grep  
  - wc
+ 
+ Working with Servers
+ ====================
  - ssh
  - scp 
+
+
+
 
 
 Getting things done
@@ -102,6 +116,9 @@ Getting things done
  - sed
  - perl
  - for
+
+
+
 
 Text Editors
 ============
@@ -145,26 +162,25 @@ Python Overview
 Functions and statements we are NOT covering
 `assert`
 
-Language basics: 3.x, interpreted, slow, python notebook eg jupyter
+Language basics: 3.x, interpreted, object-based, slow, python notebook eg jupyter
 
 
 Python has 
 - data types
+- functions
 - objects
 - classes
-- functions
 - methods
 
-__Data types__ are just different types of data which are discussed in more detail later. Examples of data types are integers and strings.  
+__Data types__ are just different types of data which are discussed in more detail later. Examples of data types are integer numbers and strings of letters and numbers (text). These can be stored in variables.
 
-__Objects__ are a organized collection of predefined data and functions (methods) to act on that data
+__Funtions__ do something with data, such as a calculation. Some functions are already built into Python. You can create your own functions as well. 
 
-__Class__ is a encapulation of variables and functions. Objects get their variables and methods from classess. 
+__Objects__ are a way of grouping a set of data and functions (methods) that act on that data
 
-__Funtions__ are a grouping of code that does something specific. There are functions that are built into Python. You can create your own functions. 
+__Classes__ are a way to encapulate (organize) variables and functions. Objects get their variables and methods from the class they belong to. 
 
-__Methods__ is a function that belongs to an object and can only work on the data stored in the object.
-
+__Methods__ are just functions that belong to a Class. Objects that belong to the a Class can use Methods from that Class.
 
 <p>&nbsp;</p>
 
@@ -180,28 +196,28 @@ To lauch the interpreter type the following into your terminal window:
 `$ python`    
 Note: '$' indicates the command line prompt  
 
-First Python Script:
+First Python Commands:
 ```bash
 $ python
 ```  
 
 
 ```python
->>> print ("Hello, PFB2017!")
+>>> print("Hello, PFB2017!")
 Hello, PFB2017!
 ```  
 
-> Note: `print` is a function.
+> Note: `print` is a function. Function names are followed by (), so formally, the function is `print()`
 
 
 
-Script Programming
+Running Python Scripts
 -----------------------
-Calling the python commnad with a script name as an argument will cause the execution of the script.  
+Typing the python command followed by the name of a script makes python execute the script. Recall that we just saw you can run an interactive interpreter by just typing `python` on the command line
 
 __Python Script__
 * The same code from above is typed into a text file. 
-* This file will have the extension .py. 
+* Python scripts are always saved in files whose names have the extension '.py' (i.e. the filename ends with '.py').
 
 File Contents:  
 ```python
@@ -232,7 +248,7 @@ A Python identifier is a name used to identify a variable, function, class, modu
 Python does not allow punctuation characters such as @, $, and % within identifiers. Python is a case sensitive programming language. Thus, seq_id and seq_ID are two different identifiers in Python.
 
 __Naming conventions for Python Identifiers__: 
- * 1st character is lowercase, unless it is a name of a Class. Classes should begin with an uppercase characters. (ex. seq)
+ * The first character is lowercase, unless it is a name of a Class. Classes should begin with an uppercase characters. (ex. Seq)
  * Private identifiers begin with an underscore. (ex. \_private)
  * Strong private identifiers begin with two underscores. (ex. \_\_private)
  * Language-defined special names begin and end with two underscores. (ex.\_\_special\_\_)
@@ -255,16 +271,16 @@ except
 ```
 
 __Lines and Indentation__: 
-Python does not use braces({}) to indicate blocks of code for class and function definitions or flow control. Blocks of code are denoted by line indentation. Incorrect line spacing and indention will cause an error to be reported.
+Python denotes blocks of code by line indentation. Incorrect line spacing and/or indention will cause an error to be reported or could make your code run in a way you don't expect. You can get help with indentation from good text editors or IDEs.
 
 The number of spaces in the indentation need to be consistent but a specific number is not required. All lines of code, or statements, within a single block must be indented in the same way. For example:
 
 
 __Comments__: 
-Comments are a good programming practice. Making a note of what a line or block of code is doing will help the writer and readers of the code.
+Comments are an essential programming practice. Making a note of what a line or block of code is doing will help the writer and readers of the code. This includes you!
 
 __#__ : 
-The pound or hash symbol is used to prepend a comment. All characters after the # and to the end of the line are apart of the comment and it will not be interpreted. 
+The pound or hash symbol is used to prepend a comment. All characters after the # and to the end of the line are apart of the comment and it will be ignored by python. 
 ```python
 #!/usr/bin/python3
 
@@ -274,7 +290,7 @@ print ("Hello, PFB2017!") # this line prints
 
 
 __Blank Lines__: 
-Blank lines are also important for increasing the readability of the code. Blank lines are ignored by the interpreptor
+Blank lines are also important for increasing the readability of the code. Blank lines are ignored by the python interpreptor
 
 
 __Python Options__: 
@@ -2070,13 +2086,13 @@ Dictionaries
 > keys()
 
 
-Dictionaries are another iterable, like a string and list. Unlike strings and lists, dictionaries are not a sequence, or in other words, the position is not important. Dictionaries are a collection of key value pairs.  
+Dictionaries are another iterable, like a string and list. Unlike strings and lists, dictionaries are not a sequence, or in other words, the position is not important. 
 
-Each key is separated from its value by a colon (:), the items are separated by commas, and the whole thing is enclosed in curly braces. An empty dictionary without any items is written with just two curly braces, like this: {}.
+Dictionaries are a collection of key value pairs. In python, each key is separated from its value by a colon (:), the items are separated by commas, and the whole thing is enclosed in curly braces. An empty dictionary without any items is written with just two curly braces, like this: {}.
 
 Keys are unique within a dictionary while values may not be. The values of a dictionary can be of any type, but the keys must be of an immutable data type such as strings, numbers, or tuples.
   
-Data that is appropriate for dictionaries are pieces of information that naturally go together, like gene name and sequence. 
+Data that is appropriate for dictionaries are two pieces of information that naturally go together, like gene name and sequence. 
 
 Key | Value
 ------|-------
@@ -2098,7 +2114,7 @@ genes = {
 ``` 
 
 __Accessing Values in Dictionaries__
-To retrieve a single value in a dictionary use the value's key in this format dict[key]. This will return the value at the specified key. 
+To retrieve a single value in a dictionary use the value's key in this format `dict[key]`. This will return the value at the specified key. 
 
 ```python
 >>> genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
@@ -2118,21 +2134,11 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 >>> print(seq)
 GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 ```
-> Nesting is what we call the first example where we retrieve the value and immediately pass the returned object to a function.
-
-An error is given when a key that does not exist is used to try to access a value in a dictionary.
-```python
->>> print(genes['HDAC'])
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'HDAC' is not defined
-```
-> We get a NameError if a key is not in the dictionary
 
 
 __Changing Values in a Dictionary__
 
-Indivudual values can be changed using the value's key and the assignment operator.
+Individual values can be changed via the key and the assignment operator.
 
 ```python
 >>> genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
@@ -2142,7 +2148,7 @@ Indivudual values can be changed using the value's key and the assignment operat
 >>> print(genes)
 {'BRCA1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA', 'TP53': 'atg'}
 ```
-> We have changed the value of the key 'TP53' and the contents of the dictionary have changed.
+> The contents of the dictionary have changed.
 
 Other assignment operators can also be used to change a value of a dictionary key. 
 ```python
@@ -2152,11 +2158,11 @@ Other assignment operators can also be used to change a value of a dictionary ke
 {'BRCA1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA', 'TP53': 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTG'}
 ```
 > Here we have used the '+=' concatenation assignemt operator. This is equivalent to  genes['TP53'] = genes['TP53'] + 'TAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTG'.
-> The same can be done with list elements.
   
 __Building a Dictionary one Key/Value at a Time__
 
 Building a dictionary one key/value at a time is akin to what we just saw when we change a key's value.
+Normally you won't do this. We'll talk about ways to build a dictionary from a file in a later lecture.
 
 ```python
 >>> genes = {}
@@ -2167,25 +2173,50 @@ Building a dictionary one key/value at a time is akin to what we just saw when w
 >>> print(genes)
 {'Brca1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA', 'TP53': 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC'}
 ```
-> We start by creating an empty dictionary. Then we add each key/value pair using the same syntax as when we change a key's value. dict[key] = new_value  
+> We start by creating an empty dictionary. Then we add each key/value pair using the same syntax as when we change a value.  
+dict[key] = new_value  
   
    <p>&nbsp;</p>
 
-__Dictionary Operators__
+__Dictionary Key Operators__
+
+Python generates an error (NameError) if you try to access a key that does not exist.  
+
+```python
+>>> print(genes['HDAC'])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'HDAC' is not defined
+```
 
 Operator | Descsription
 ---------|-------------
 in | key in dict returns True if the key exists in the dictionary
 not in | key not in dict returns True if the key does not exist in the dictionary
 
+Because python generates a NameError if you try to use a key that doesn't exist in the dictionary, you probably need to check whether a key exists before trying to use it.
+The best way to check whether a key exists is to use `in`
+
+```
+>>> gene = 'TP53'
+>>> if gene in genes: print('found')
+... 
+found
+>>> 
+>>> if gene in genes:
+...     print(genes[gene])
+... 
+GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
+>>> 
+```
 
 __Dictionary Functions__
 
 Function | Description
 ---------|------------
 len(dict) | returns the total number of key/value pairs
-str(dict) | returns a string representatin of the dictionary
-type(variable) | Returns the type of the passed variable. If passed variable is dictionary, then it would return a dictionary type.
+str(dict) | returns a string representation of the dictionary
+type(variable) | Returns the type or class of the variable passed to the function. If the variable is dictionary, then it would return a dictionary type.
 
 __Dictionary Methods__
 
@@ -2194,7 +2225,6 @@ Method | Description
 dict.clear() | Removes all elements of dictionary dict
 dict.copy() | Returns a shallow copy of dictionary dict. Shallow vs Deep only matters in multidementional datastructures.
 dict.fromkeys(seq,value) | Create a new dictionary with keys from seq (python sequence type) and values set to value.
-dict.get(key, default=None) | For key key, returns value or default if key not in dictionary
 dict.items() | Returns a list of (key, value) tuple pairs
 dict.keys() | Returns list of keys
 dict.setdefault(key, default = None) | Similar to get(), but will set dict[key] = default if key is not already in dict
@@ -2206,7 +2236,7 @@ dict.values() | Returns list of dictionary dict's values
 Sets
 =====
 
-A set is another Python data type.
+A set is another Python data type. It is essentially a dictionary with keys but no values.
 
 - A set is unordered 
 - A set is a collection of data with no duplicate elements. 
@@ -2312,13 +2342,13 @@ set.update(set2) | update set with the union of set and set2
 I/O and Files
 =============
 @sep
-> with open() as f:
+NOT SURE WE'RE GOING TO USE THIS: I DON'T UNDERSTAND THE MECHANICS OF WITH... AS... YET > with open() as f:
 > open()
 > read() readline()
 > write()
 > close()
 
-I/O stands for input and output. This is in reference to getting data into and out of your script. Writing to the screen, reading from the keyboard, reading from a file, and writing to a file are all examples of I/O.
+I/O stands for input/output. The in and out refer to getting data into and out of your script. It might be a little surprising at first, but writing to the screen, reading from the keyboard, reading from a file, and writing to a file are all examples of I/O.
 
 
 __Writing to the Screen__
@@ -2462,6 +2492,7 @@ seq_write = open("nt.counts.txt","w")
 total_nts = 0
 for line in seq_read:
   nt_count = len(line)
+  *** DOES THIS COUNT THE NEWLINE AS PART OF THE SEQUENCE? ***
   total_nts += nt_count
   seq_write.write(str(nt_count) + "\n")
 
@@ -2485,6 +2516,40 @@ Total: 142
 > We also create a variable to keep track of the total nt count
 > Once we go through each line of our file we are reading, we print out the total count of nts
 > Finally we close each of the files
+
+
+
+__Building a Dictionary from a File__
+
+This is a very common task. It will use a loop, file I/O and a dictionary.
+
+Assume we have a file called "sequence_data.txt" that contains tab-delimited gene names and sequences that looks something like this
+
+`
+TP53    GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
+BRCA1   GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
+`
+
+How can we read this whole file in to a dictionary? 
+
+```python
+#!/usr/bin/python3                                                                                    
+
+seq_read  = open("sequence_data.txt","r")
+genes = {}
+for line in seq_read:
+    line = line.rstrip()
+    id,seq = line.split() #split on whitespace                                                        
+    genes[id] =	seq
+
+print(genes)
+```
+
+Output:
+`
+{'TP53': 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC', 'BRCA1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'}
+`
+
 
 <p>&nbsp;</p>
 
