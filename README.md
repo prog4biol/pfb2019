@@ -2072,13 +2072,13 @@ Dictionaries
 > keys()
 
 
-Dictionaries are another iterable, like a string and list. Unlike strings and lists, dictionaries are not a sequence, or in other words, the position is not important. Dictionaries are a collection of key value pairs.  
+Dictionaries are another iterable, like a string and list. Unlike strings and lists, dictionaries are not a sequence, or in other words, the position is not important. 
 
-Each key is separated from its value by a colon (:), the items are separated by commas, and the whole thing is enclosed in curly braces. An empty dictionary without any items is written with just two curly braces, like this: {}.
+Dictionaries are a collection of key value pairs. In python, each key is separated from its value by a colon (:), the items are separated by commas, and the whole thing is enclosed in curly braces. An empty dictionary without any items is written with just two curly braces, like this: {}.
 
 Keys are unique within a dictionary while values may not be. The values of a dictionary can be of any type, but the keys must be of an immutable data type such as strings, numbers, or tuples.
   
-Data that is appropriate for dictionaries are pieces of information that naturally go together, like gene name and sequence. 
+Data that is appropriate for dictionaries are two pieces of information that naturally go together, like gene name and sequence. 
 
 Key | Value
 ------|-------
@@ -2100,7 +2100,7 @@ genes = {
 ``` 
 
 __Accessing Values in Dictionaries__
-To retrieve a single value in a dictionary use the value's key in this format dict[key]. This will return the value at the specified key. 
+To retrieve a single value in a dictionary use the value's key in this format `dict[key]`. This will return the value at the specified key. 
 
 ```python
 >>> genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
@@ -2120,21 +2120,11 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 >>> print(seq)
 GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 ```
-> Nesting is what we call the first example where we retrieve the value and immediately pass the returned object to a function.
-
-An error is given when a key that does not exist is used to try to access a value in a dictionary.
-```python
->>> print(genes['HDAC'])
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'HDAC' is not defined
-```
-> We get a NameError if a key is not in the dictionary
 
 
 __Changing Values in a Dictionary__
 
-Indivudual values can be changed using the value's key and the assignment operator.
+Individual values can be changed via the key and the assignment operator.
 
 ```python
 >>> genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
@@ -2144,7 +2134,7 @@ Indivudual values can be changed using the value's key and the assignment operat
 >>> print(genes)
 {'BRCA1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA', 'TP53': 'atg'}
 ```
-> We have changed the value of the key 'TP53' and the contents of the dictionary have changed.
+> The contents of the dictionary have changed.
 
 Other assignment operators can also be used to change a value of a dictionary key. 
 ```python
@@ -2154,11 +2144,11 @@ Other assignment operators can also be used to change a value of a dictionary ke
 {'BRCA1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA', 'TP53': 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTG'}
 ```
 > Here we have used the '+=' concatenation assignemt operator. This is equivalent to  genes['TP53'] = genes['TP53'] + 'TAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTG'.
-> The same can be done with list elements.
   
 __Building a Dictionary one Key/Value at a Time__
 
 Building a dictionary one key/value at a time is akin to what we just saw when we change a key's value.
+Normally you won't do this. We'll talk about ways to build a dictionary from a file in a later lecture.
 
 ```python
 >>> genes = {}
@@ -2169,25 +2159,50 @@ Building a dictionary one key/value at a time is akin to what we just saw when w
 >>> print(genes)
 {'Brca1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA', 'TP53': 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC'}
 ```
-> We start by creating an empty dictionary. Then we add each key/value pair using the same syntax as when we change a key's value. dict[key] = new_value  
+> We start by creating an empty dictionary. Then we add each key/value pair using the same syntax as when we change a value.  
+dict[key] = new_value  
   
    <p>&nbsp;</p>
 
-__Dictionary Operators__
+__Dictionary Key Operators__
+
+Python generates an error (NameError) if you try to access a key that does not exist.  
+
+```python
+>>> print(genes['HDAC'])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'HDAC' is not defined
+```
 
 Operator | Descsription
 ---------|-------------
 in | key in dict returns True if the key exists in the dictionary
 not in | key not in dict returns True if the key does not exist in the dictionary
 
+Because python generates a NameError if you try to use a key that doesn't exist in the dictionary, you probably need to check whether a key exists before trying to use it.
+The best way to check whether a key exists is to use `in`
+
+```
+>>> gene = 'TP53'
+>>> if gene in genes: print('found')
+... 
+found
+>>> 
+>>> if gene in genes:
+...     print(genes[gene])
+... 
+GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
+>>> 
+```
 
 __Dictionary Functions__
 
 Function | Description
 ---------|------------
 len(dict) | returns the total number of key/value pairs
-str(dict) | returns a string representatin of the dictionary
-type(variable) | Returns the type of the passed variable. If passed variable is dictionary, then it would return a dictionary type.
+str(dict) | returns a string representation of the dictionary
+type(variable) | Returns the type or class of the variable passed to the function. If the variable is dictionary, then it would return a dictionary type.
 
 __Dictionary Methods__
 
@@ -2196,7 +2211,6 @@ Method | Description
 dict.clear() | Removes all elements of dictionary dict
 dict.copy() | Returns a shallow copy of dictionary dict. Shallow vs Deep only matters in multidementional datastructures.
 dict.fromkeys(seq,value) | Create a new dictionary with keys from seq (python sequence type) and values set to value.
-dict.get(key, default=None) | For key key, returns value or default if key not in dictionary
 dict.items() | Returns a list of (key, value) tuple pairs
 dict.keys() | Returns list of keys
 dict.setdefault(key, default = None) | Similar to get(), but will set dict[key] = default if key is not already in dict
@@ -2208,7 +2222,7 @@ dict.values() | Returns list of dictionary dict's values
 Sets
 =====
 
-A set is another Python data type.
+A set is another Python data type. It is essentially a dictionary with keys but no values.
 
 - A set is unordered 
 - A set is a collection of data with no duplicate elements. 
@@ -2314,13 +2328,13 @@ set.update(set2) | update set with the union of set and set2
 I/O and Files
 =============
 @sep
-> with open() as f:
+NOT SURE WE'RE GOING TO USE THIS: I DON'T UNDERSTAND THE MECHANICS OF WITH... AS... YET > with open() as f:
 > open()
 > read() readline()
 > write()
 > close()
 
-I/O stands for input and output. This is in reference to getting data into and out of your script. Writing to the screen, reading from the keyboard, reading from a file, and writing to a file are all examples of I/O.
+I/O stands for input/output. The in and out refer to getting data into and out of your script. It might be a little surprising at first, but writing to the screen, reading from the keyboard, reading from a file, and writing to a file are all examples of I/O.
 
 
 __Writing to the Screen__
@@ -2464,6 +2478,7 @@ seq_write = open("nt.counts.txt","w")
 total_nts = 0
 for line in seq_read:
   nt_count = len(line)
+  *** DOES THIS COUNT THE NEWLINE AS PART OF THE SEQUENCE? ***
   total_nts += nt_count
   seq_write.write(str(nt_count) + "\n")
 
@@ -2487,6 +2502,40 @@ Total: 142
 > We also create a variable to keep track of the total nt count
 > Once we go through each line of our file we are reading, we print out the total count of nts
 > Finally we close each of the files
+
+
+
+__Building a Dictionary from a File__
+
+This is a very common task. It will use a loop, file I/O and a dictionary.
+
+Assume we have a file called "sequence_data.txt" that contains tab-delimited gene names and sequences that looks something like this
+
+`
+TP53    GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
+BRCA1   GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
+`
+
+How can we read this whole file in to a dictionary? 
+
+```python
+#!/usr/bin/python3                                                                                    
+
+seq_read  = open("sequence_data.txt","r")
+genes = {}
+for line in seq_read:
+    line = line.rstrip()
+    id,seq = line.split() #split on whitespace                                                        
+    genes[id] =	seq
+
+print(genes)
+```
+
+Output:
+`
+{'TP53': 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC', 'BRCA1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'}
+`
+
 
 <p>&nbsp;</p>
 
