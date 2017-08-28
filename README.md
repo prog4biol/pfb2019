@@ -2885,16 +2885,16 @@ downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 upstream: TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA
 downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 ```
-> This code executes the findall() function once
-> The subpatterns are returned 
-> The subpatterns are stored in the variables upstream and downstream
-> The for block of code is executed
-> The findall() searches again
-> A match is found
-> New subpatterns are returned
-> The for block of code gets executed again
-> The findall() searches again, but no match is found
-> The for loop ends
+> This code executes the findall() function once  
+> The subpatterns are returned   
+> The subpatterns are stored in the variables upstream and downstream  
+> The for block of code is executed  
+> The findall() searches again  
+> A match is found  
+> New subpatterns are returned  
+> The for block of code gets executed again  
+> The findall() searches again, but no match is found  
+> The for loop ends  
 
 One other way to get this done is with the finditer() function in a for loop
 ```python
@@ -2908,14 +2908,14 @@ downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 upstream: TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA
 downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 ```
-> This code executes finditer() function once.
-> The match object is returned. A match object will have all the information about the match
-> In the for block we call the group() method on the first match object returned
-> We print out the first and second subpattern using the group() method
-> The finditer() function is executed a second time and a match is found
-> The second match object is returned
-> The second subpatterns are retrieved from the match object using the group() method
-> The finditer() functin is executed again, but no matches found, so the loop ends
+> This code executes finditer() function once.  
+> The match object is returned. A match object will have all the information about the match  
+> In the for block we call the group() method on the first match object returned  
+> We print out the first and second subpattern using the group() method  
+> The finditer() function is executed a second time and a match is found  
+> The second match object is returned  
+> The second subpatterns are retrieved from the match object using the group() method  
+> The finditer() functin is executed again, but no matches found, so the loop ends  
 
 __Truth and Regular Expression Matches__
 
