@@ -2682,41 +2682,41 @@ $ | Matches the end of the string
 Examples:
 
 ```
-/g..t/
+g..t
 ``` 
 > matches "gaat", "goat", and "gotta get a goat" (twice)
 
 
 ```
-/g[gatc][gatc]t/
+g[gatc][gatc]t
 ``` 
 > matches "gaat", "gttt", "gatt", and "gotta get an agatt" (once)</li>
 
 ```
-/\d\d\d-\d\d\d\d/`
+\d\d\d-\d\d\d\d`
 ```
 > matches 376-8380, and 5128-8181
 > but not 055-98-2818.
 
 ```
-/^\d\d\d-\d\d\d\d/
+^\d\d\d-\d\d\d\d
 ```
 >  matches 376-8380 and 376-83801
 > but not 5128-8181.
 
 ```
-/^\d\d\d-\d\d\d\d$/
+^\d\d\d-\d\d\d\d$
 ```
 > only matches telephone numbers
 
 ```
-/\bcat/
+\bcat
 ``` 
 > matches "cat", "catsup" and "more catsup please" 
 > but not "scat".
 
 ```
-/\bcat\b/
+\bcat\b
 ```
 > only text containing the word "cat".
 
@@ -2736,22 +2736,22 @@ Quantifier | Description
 Examples:  
 
 ```
-/goa?t/
+goa?t
 ```
 > matches "goat" and "got".  Also any text that contains these words.
 
 ```
-/g.+t/
+g.+t
 ```
 >  matches "goat", "goot", and "grant", among others.
 
 ```
-/g.*t/
+g.*t
 ```
 >  matches "gt", "goat", "goot", and "grant", among others.
 
 ```
-/^\d{3}-\d{4}$/
+^\d{3}-\d{4}$
 ```
 >  matches US telephone numbers (no extra text allowed).
 
