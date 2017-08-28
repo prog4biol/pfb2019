@@ -2765,7 +2765,7 @@ __Variables and Patterns__
 
 Variables can be used to store patterns.  
 
-``python
+```python
 >>> pattern = r"[GA]C.?G"
 >>> len (re.findall(pattern,dna))
 7
