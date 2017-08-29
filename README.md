@@ -927,22 +927,22 @@ cmp = (x>y)-(x<y)
 Strings
 ========
 @sep
-> .format()
+> .format()  
 > strip()
 
 
-- Strings are collections of characters and are always surrounded by quotes.
-- Strings are an example of a Python Sequence. A sequence is a positionally ordered set. A list is also a sequence. 
+- A string is a series of characters starting and ending with a quotation mark.
+- Strings are an example of a Python Sequence. A sequence is defined as a positionally ordered set. This means each element in the set has a position, starting with zero, i.e. 0,1,2,3 and so on until you get to the end of the string. If this is confusing, think about a string as being made up of individual characters: character 0, character 1, character 2 and so on.
 
-__Quotation Marks__
-- Single (')
-- Double (") 
+__Quotation Marks__  
+- Single (')  
+- Double (")   
 - Triple (''' or """)   
 
 Notes about quotes:
-- Single and double quotes are the same.
-- a variable will not be interpolated if placed inside of quotes.
-- Triple quotes are used to span the string across multiple lines.  
+- Single and double quotes are the same.  
+- A variable will not be replaced with its value (sometimes called 'interpolation') if placed inside of quotes.  
+- Triple quotes are used before and after a string that spans multiple lines.  
 
 Use of quotation examples:  
 
@@ -950,19 +950,20 @@ Use of quotation examples:
 word = 'word'
 sentence = "This is a sentence."
 paragraph = """This is a paragraph. It is
-made up of multiple lines and sentences."""
+made up of multiple lines and sentences.
+"""
 ```
 
 __Strings and the print() function__
-You saw examples of 
+We saw examples of 
 `print()`
 earlier. Lets talk about it a bit more.  
 
-print is a function that takes one or more comma separated arguments. 
+`print()` is a function that takes one or more comma-separated arguments. 
 
 Let's use the print() function to print a string.  
 ```python
->>>print("ATG")
+>>>print("ATG")  
 ATG
 ```
 > We get ATG printed to the screen like we expect.
@@ -994,7 +995,7 @@ ATG GGTCTAC
 ```
 > We get the two literal strings printed to the screen separated by a space
 
-What if you do not want your strings separated by a space? Use the concatenation operator to concatenate the two strings before or within the print() function.  
+What if you do not want your strings separated by a space? Use the concatenation operator to concatenate the two strings before or within the print() function. 
 ```python
 >>> print("ATG"+"GGTCTAC")
 ATGGGTCTAC
@@ -1003,10 +1004,14 @@ ATGGGTCTAC
 >>> print(combined_string)
 ATGGGTCTAC
 ```
-> We get the two strings printed to the screen without being separated by a space
+> We get the two strings printed to the screen without being separated by a space.  
+You can also use this
+```python
+>>> print("ATG","GGTCTAC",sep='')
+ATGGGTCTAC
+```
 
-
-Now, lets give one variable and one literal string.
+Now, lets print a variable and a literal string.
 ```python
 >>>dna = 'ATG'
 ATG
@@ -1022,19 +1027,6 @@ ATG
 >>> print(dna + "GGTCTAC")
 ATGGGTCTAC
 ```
-> We can use the concatenation operator to get the value of the variable and the literal string printed to the screen without being separated by a space
-
-Let's try to concatenate our variable with a literal string by putting both within quotes.
-```python
->>>dna = 'ATG'
-ATG
->>> print("dna GGTCTAC")
-dna GGTCTAC
->>> print(dna + "GGTCTAC")
-ATGGGTCTAC
->>>
-```
-> The varialbe 'dna' does not get interpolated when it is inside of quotes
 
 Something to think about: Values of variable are variable. Or in other words, they are mutable, changeable.  
 ```python
@@ -1072,6 +1064,15 @@ NameError: name 'GGTCTAC' is not defined
 ```
 > We get a 'NameError' when the literal string is not enclosed in quotes. 
 
+```python
+>>> print "boo"
+  File "<stdin>", line 1
+    print "boo"
+              ^
+SyntaxError: Missing parentheses in call to 'print'
+```
+In python2, the command was `print`, but this changed in python3 to `print()`, so don't forget the parentheses!
+
 __Special/Escape Characters__
 How would you include a new line, carrage return, or tab in your string?  
 
@@ -1090,14 +1091,17 @@ this is the second line
 ```
 > We printed a new line to the screen
 
-You can print multiple lines without using '\n' by using tripal quotes (""").
+Generally, you don't have to worry about adding whitespace between arguments because print() adds space between arguments and a new line at the end for you.
+You can change these with sep= and end=
+`print('one line', 'second line' , 'third line', sep='\n', end = '')`
+
+A neater way to do this is to express a multi-line string enclosed in triple quotes (""").
 ```python
 >>> print("""this sting has a new line
 ... this is the second line""")
 this sting has a new line
 this is the second line
 ```
-> Enclosing multiple lines in tripal quotes will retain the multi-line structure
 
 Let's print a tab character (\t).
 ```python
@@ -1107,7 +1111,7 @@ value1	value2	value3
 ```
 > We get the three words separated by tab characters. A common format for data is tab separated.
 
-You can backslash any chacter to escape it and have it printed as a literal. Although, since nothing is interpolated within the quotes, this can often be redundant.
+You can add a backslash before any chacter to force it to be printed as a literal. This is called 'escaping'. This is only really useful for printing literal quotes ' and " 
 
 ```python
 >>> print("this is a \'word\'")
@@ -1117,7 +1121,7 @@ this is a 'word'
 ```
 > In both cases the single quote is printed to the screen as a quote.
 
-If you want escape character to remain as they are literally, declare your string a raw string literal with 'r'.
+If you want every character in your string to remain exactly as it is, declare your string a raw string literal with 'r' before the first quote. This looks ugly, but it works.
 ```python
 >>> line = r"value1\tvalue2\tvalue3"
 >>> print(line)
