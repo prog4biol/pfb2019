@@ -2454,6 +2454,7 @@ ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 ```
 
 __Writing to a File__
+
 Writing to a file is nothing more than opening a file for writing then using the write() method.  
 
 The write() method is like the print() function. The biggest difference is that it writes to your file object instead of the screen. write() can only take one string type argument. 
@@ -2975,6 +2976,36 @@ downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 FYI: match() function is another regular expression function that looks for patterns. It is similar to search but it only looks at the begining of the string for the pattern while search() looks in the entire string. Usually search() and findall() will be more useful.
 
 
+__Practical Example: Codons__
+
+Extracting codons from a string of DNA can be accomplished by using a subpattern in a findall() function. Remember the findall() function will return a list of the matches.  
+
+```python
+>>> dna = 'GTTGCCTGAAATGGCGGAACCTTGAA'
+>>> codons = re.findall(r"(.{3})",dna)
+>>> print(codons)
+['GTT', 'GCC', 'TGA', 'AAT', 'GGC', 'GGA', 'ACC', 'TTG']
+```
+
+Or you can use a for loop to do something to each match.
+```python
+>>> for codon in re.findall(r"(.{3})",dna):
+...   print(codon)
+...
+GTT
+GCC
+TGA
+AAT
+GGC
+GGA
+ACC
+TTG
+>>>
+```
+> finditer() would also work in this for loop. Each codon can be accessed by using the group() method.
+
+  
+  
 __Truth and Regular Expression Matches__
 
 The search(), match(), findall(), and finditer() can be used in conditional tests. If a match is not found an empty list or 'None' is returned. These both are False.
@@ -3033,7 +3064,8 @@ Who's afraid of the bad big wolf?
 > \\2 refers to the second subpattern
 > \\1 refers to the first subpattern
 
-Something to think about.
+Something to think about.  
+How would you use regular expressions to find all occurances of 'ATG' and replace with '-M-' in this sequence 'GCAGAGGTGATGGACTCCGTAATGGCCAAATGACACGT'? 
 
 
 <p>&nbsp;</p>
