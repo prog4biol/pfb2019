@@ -2998,7 +2998,43 @@ __Using Regular expressions in substitutions__
 
 Earlier we went over how to find an exact pattern and replace it using the replace() method. To find a pattern and make a replacement the regular expression sub() function is used. This function takes the pattern, the replacement, the string to be searched, the number of times to do the replacement, and flags.
 
+```python
+>>> str = "Who's afraid of the big bad wolf?"
+>>> re.sub(r'w.+f' , 'goat', str)
+"Who's afraid of the big bad goat?"
+>>> print(str)
+Who's afraid of the big bad wolf?
+```
+> The sub() function returns "Who's afraid of the big bad goat?"  
+> The value of variable str has not been altered  
+> The new string can be stored in a new variable for later use.
 
+Let's save the returned new string in a variable
+```python
+>>> str = "He had a wife."
+>>> new_str = re.sub(r'w.+f' , 'goat', str)
+>>> print(new_str)
+He had a goate.
+>>> print(str)
+He had a wife.
+```
+> The characters between 'w' and 'f' have been replaced with 'goat'.  
+> The new string is saved in new_str
+ 
+__Using subpatterns in the replacement__
+
+Sometimes you want to find a pattern and use it in the replacement. 
+```python
+>>> str = "Who's afraid of the big bad wolf?"
+>>> new_str = re.sub(r"(\w+) (\w+) wolf" , r"\2 \1 wolf" , str)
+>>> print(new_str)
+Who's afraid of the bad big wolf?
+```
+> We found two words before 'wolf' and swapped the order.
+> \\2 refers to the second subpattern
+> \\1 refers to the first subpattern
+
+Something to think about.
 
 
 <p>&nbsp;</p>
