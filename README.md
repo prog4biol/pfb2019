@@ -2634,8 +2634,7 @@ What about other potential matches in our DNA string? We can use findall() funct
 > findall() returns a list of all the pieces of the string that match the regex.
 
 A quick count of all the matching sites can be done by counting the length of the returned list.
-```
-python
+```python
 >>> len (re.findall(r"[GA]C.?G",dna))
 7
 ```
