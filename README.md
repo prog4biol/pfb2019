@@ -2491,8 +2491,8 @@ seq_write = open("nt.counts.txt","w")
 
 total_nts = 0
 for line in seq_read:
+  line = line.rstrip()
   nt_count = len(line)
-  *** DOES THIS COUNT THE NEWLINE AS PART OF THE SEQUENCE? ***
   total_nts += nt_count
   seq_write.write(str(nt_count) + "\n")
 
@@ -2510,12 +2510,12 @@ $ cat nt.counts.txt
 71
 Total: 142
 ```
-> The file we are reading from is named, "seq.nt.fa"
-> The file we are writing to is named, "nt.counts.txt"
-> We read each line, calculate the length of each line and print the length
-> We also create a variable to keep track of the total nt count
-> Once we go through each line of our file we are reading, we print out the total count of nts
-> Finally we close each of the files
+> The file we are reading from is named, "seq.nt.fa"  
+> The file we are writing to is named, "nt.counts.txt"  
+> We read each line, calculate the length of each line and print the length  
+> We also create a variable to keep track of the total nt count  
+> Once we go through each line of our file we are reading, we print out the total count of nts  
+> Finally we close each of the files  
 
 
 
