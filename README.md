@@ -126,6 +126,21 @@ Text Editors
 
 Git for Beginners
 =================
+Git is a tool for managing files. It allows you to keep track of changes. You are going to be using Git to store your course work and keep your copy of the lecture notes and files up to date. Git can help you do very complex task with files. We are going to keep it simple.
+
+
+
+GitHub is an online repository for code. They offer free accounts. You will sign up if you already don't have an account.  
+
+Basic:
+- Repository
+- git clone
+- git pull
+- git add
+- git commit 
+- git push
+
+
 
 
 ***
