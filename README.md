@@ -311,7 +311,7 @@ Data Types and Variables
 sep note:  overview of all types: start with constants: numbers, strings '' "" ''' ''' r'' = raw strings, + for concat, * for repeat
 iterable, string, int, float, tuple, list, dictionary, set  
 
-This is our first look at varialbes and data types. Each data type will be discussed in more detail in subsequent sections. 
+This is our first look at variables and data types. Each data type will be discussed in more detail in subsequent sections. 
 
 - Variables enable you to store a value in memory. 
 - Simply use the equal sign, '=', to assign a value to a variable.  
@@ -325,7 +325,7 @@ For Example:
 first_variable = 5
 ```  
 
-Differnt types of data can be assigned to variables, i.e., intergers, floats, and strings.
+Different types of data can be assigned to variables, i.e., integers (1,2,3), floats (floating point numbers, 3.1415), and strings (text).
   
 For Example:
 ```python
@@ -336,7 +336,7 @@ message = "Welcome to python" # this is a string
 
 10, 2.5, and "Welcome to python" are singular pieces of data being stored in an indivudual variables.  
   
-Collections of data can also be stored in an individual variable, i.e., lists, tuples, and dictionaries.  
+Collections of data can also be stored in a single variable, i.e., lists, tuples, and dictionaries.  
  
  <p>&nbsp;</p>
   
@@ -358,6 +358,35 @@ Index | Value
 0 | atg
 1 | aaa
 2 | agg
+
+__Command line parameters: A Special Built-in List__
+
+Python stores command line parameters in a special list called sys.argv.
+Command line parameters follow the name of a script or program and have spaces between them. They allow a user to pass information to a script on the command line when that script is being run. To do this in python, the simple way is as follows. 
+
+You need to import the sys module at the beginning of your script like this
+
+```
+import sys
+```
+
+if you write this on the command line
+```bash
+$ calculate_sum.py 5 7
+```
+
+inside the script, the numbers 5 and 7 appear in a list called `sys.argv`. These are the command line parameters, or arguments you want to pass to your script.
+You can access values by their indices, starting with 0, so `sys.argv[0]` is 5 and `sys.argv[1]` is 7.
+If you wanted to calculate the sum in your script, you would add these two variables and print the result. Maybe your code would look something like this
+
+```python
+#!/usr/bin/python3
+import sys
+a = sys.argv[0]
+b = sys.argv[1]
+print(a+b) # + is a sum operator on integers
+
+
 
   <p>&nbsp;</p>
   
