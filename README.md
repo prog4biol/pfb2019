@@ -6,7 +6,7 @@ Instructors
 ============
 Simon Prochnik  
 Sofia Robb  
-    
+​    
 ***
 
 Table of Contents
@@ -53,9 +53,8 @@ Table of Contents
    * [Variant Calling](#variant-calling)  
    * [Ontology](#ontology)  
 
-  
-  
-***  
+
+***
 
 
 Big Picture
@@ -69,8 +68,7 @@ What are our tips for being successful in your efforts to learn to program?
 4. Don't spend too much time trying to figure out a problem. While it's a great learning experience to try to solve an isssue on your own, it's not fun getting frustrated or spending a lot of time stuck. We are here to help you, so please ask us whenever you need help.
 5. Lectures are important, but the practice is more important.
 6. Review sessions are important, but practice is more important.
-6. It is essential that we help you to learn how to find solutions on your own.
-
+7. It is essential that we help you to learn how to find solutions on your own.
 
 
 
@@ -98,7 +96,7 @@ Working With Files
  - less/more  
  - grep  
  - wc
- 
+
  Working with Servers
  ====================
  - ssh
@@ -145,7 +143,7 @@ Basic:
 
 ***
 # AWS
-***  
+***
 
 
 
@@ -159,14 +157,12 @@ Note: I think it would work nicely if we can get prepaid visa credit cards for e
 - create and launch an instance
 - ssh into instance
 
-  
-  
 
 ***
 # Python
 ***
-  
-  
+
+
 <p>&nbsp;</p>
 
 Python Overview
@@ -207,20 +203,20 @@ Interactive Interpreter
 -----------------------
 Python can be run one line at a time in an interactive interpreter.  
 To lauch the interpreter type the following into your terminal window:  
-  
+
 `$ python`    
 Note: '$' indicates the command line prompt  
 
 First Python Commands:
 ```bash
 $ python
-```  
+```
 
 
 ```python
 >>> print("Hello, PFB2017!")
 Hello, PFB2017!
-```  
+```
 
 > Note: `print` is a function. Function names are followed by (), so formally, the function is `print()`
 
@@ -238,7 +234,7 @@ File Contents:
 ```python
 #!/usr/bin/python3
 print ("Hello, PFB2017!")
-```  
+```
 
 Execute the Python script:
 ```bash
@@ -338,46 +334,45 @@ Numbers and strings are 2 data types. Data types can be stored in variables.
 For Example:  
 ```python
 first_variable = 5
-```  
+```
 
 Different types of data can be assigned to variables, i.e., integers (1,2,3), floats (floating point numbers, 3.1415), and strings (text).
-  
+
 For Example:
 ```python
 count   = 10     # this is an integer
 average = 2.5    # this is a float
 message = "Welcome to python" # this is a string
-```  
+```
 
 10, 2.5, and "Welcome to python" are singular pieces of data being stored in an indivudual variables.  
-  
+
 Collections of data can also be stored in a single variable, i.e., lists, tuples, and dictionaries.  
- 
+
  <p>&nbsp;</p>
-  
+
 __List__  
 - Lists are used to store an ordered, *indexed* collection of data.
 - Values are separated by commas
 - Values are enclosed in square brackets '[]'
 - Lists can grown and shrink
 - Values are mutatable
-  
-  
+
+  ​
 ```python
 codons = [ 'atg' , 'aaa' , 'agg' ]
-```  
-  
-  
-Index | Value
-------|-------
-0 | atg
-1 | aaa
-2 | agg
+```
+
+
+| Index | Value |
+| ----- | ----- |
+| 0     | atg   |
+| 1     | aaa   |
+| 2     | agg   |
 
 __Command line parameters: A Special Built-in List__
 
-Python stores command line parameters in a special list called sys.argv.
-Command line parameters follow the name of a script or program and have spaces between them. They allow a user to pass information to a script on the command line when that script is being run. To do this in python, the simple way is as follows. 
+Command line parameters follow the name of a script or program and have spaces between them. They allow a user to pass information to a script on the command line when that script is being run. Python stores all the pieces of the command line in a special list called sys.argv. 
 
 You need to import the sys module at the beginning of your script like this
 
@@ -390,139 +385,139 @@ if you write this on the command line
 $ calculate_sum.py 5 7
 ```
 
-inside the script, the numbers 5 and 7 appear in a list called `sys.argv`. These are the command line parameters, or arguments you want to pass to your script.
-You can access values by their indices, starting with 0, so `sys.argv[0]` is 5 and `sys.argv[1]` is 7.
+inside the script, the script name, and the numbers 5 and 7 appear in a list called `sys.argv`. These are the command line parameters, or arguments you want to pass to your script. `sys.argv[0]` is the script name. 
+You can access values of the other parameters by their indices, starting with 1, so `sys.argv[1]` is 5 and `sys.argv[2]` is 7.
 If you wanted to calculate the sum in your script, you would add these two variables and print the result. Maybe your code would look something like this
 
 ```python
 #!/usr/bin/python3
 import sys
-a = sys.argv[0]
-b = sys.argv[1]
+a = sys.argv[1]
+b = sys.argv[2]
 print(a+b) # + is a sum operator on integers
 ```
 
 
   <p>&nbsp;</p>
-  
+
 __Tuple__
 - Tuples are similar to lists and contain ordered, *indexed* collection of data.
 - Items are separated by commas
 - **Items are enclosed in parenthesis '()'**
 - **Tupels cannot change in size**
 - **Values are immutable**
-  
-  
+
+  ​
 ```python
 months = ( 'Jan' , 'Feb' , 'Mar' , 'Apr' , 'May' , 'Jun' , 'Jul' , 'Aug' , 'Sep' , 'Oct' , 'Nov' , 'Dec' )
 ```
-  
-  
-Index | Value
-------|-------
-0 | Jan
-1 | Feb
-2 | Mar
-3 | Apr
-4 | May
-5 | Jun
-6 | Jul
-7 | Aug
-8 | Sep
-9 | Oct
-10 | Nov
-11 | Dec
+
+
+| Index | Value |
+| ----- | ----- |
+| 0     | Jan   |
+| 1     | Feb   |
+| 2     | Mar   |
+| 3     | Apr   |
+| 4     | May   |
+| 5     | Jun   |
+| 6     | Jul   |
+| 7     | Aug   |
+| 8     | Sep   |
+| 9     | Oct   |
+| 10    | Nov   |
+| 11    | Dec   |
 
 <p>&nbsp;</p>
-  
+
 __Dictionary__
 - Dictionaries are unordered collections of key/value pairs.
 - Sets of Key/Value pairs are separated by commas 
 - A key and value are grouped with a colon
-  
-  
+
+  ​
 ```python
 genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
-```  
-  
-  
-Key | Value
-------|-------
-TP53 | GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
-BRCA1 | GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
+```
 
-  
+
+| Key   | Value                                    |
+| ----- | ---------------------------------------- |
+| TP53  | GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC |
+| BRCA1 | GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA |
+
+
    <p>&nbsp;</p>
-   
+
 __Type Conversion__
 Sometimes you may need to convert data into a specific type. Here are some examples of functions that will help you to do this.
-  
-  
-Function | Description
----------|------------
-int(x) | Converts x to an integer.
-float(x) | Converts x to a floating-point number.
-str(x) | Converts x to a string.
-chr(x) | Converts an integer to a character.
-tuple(s) | Converts s to a tuple.
-list(s) | Converts s to a list.
-set(s) | Converts s to a set.
-dict(d) | Creates a dictionary. d must be a sequence of (key,value) tuples.
+
+
+| Function | Description                              |
+| -------- | ---------------------------------------- |
+| int(x)   | Converts x to an integer.                |
+| float(x) | Converts x to a floating-point number.   |
+| str(x)   | Converts x to a string.                  |
+| chr(x)   | Converts an integer to a character.      |
+| tuple(s) | Converts s to a tuple.                   |
+| list(s)  | Converts s to a list.                    |
+| set(s)   | Converts s to a set.                     |
+| dict(d)  | Creates a dictionary. d must be a sequence of (key,value) tuples. |
 
 
 
 __Should we include these??? I think they are too complicated__   
 
-Function | Description
----------|------------
-eval(str) | Evaluates a string and returns an object.
-complex(real [,imag]) | Creates a complex number.
-repr(x) | Converts x to an expression string.
-frozenset(s) | Converts s to a frozen set.
-unichr(x) | Converts an integer to a Unicode character.
-ord(x) | Converts a single character to its integer value.
-hex(x) | Converts an integer to a hexadecimal string.
-oct(x) | Converts an integer to an octal string.
+| Function              | Description                              |
+| --------------------- | ---------------------------------------- |
+| eval(str)             | Evaluates a string and returns an object. |
+| complex(real [,imag]) | Creates a complex number.                |
+| repr(x)               | Converts x to an expression string.      |
+| frozenset(s)          | Converts s to a frozen set.              |
+| unichr(x)             | Converts an integer to a Unicode character. |
+| ord(x)                | Converts a single character to its integer value. |
+| hex(x)                | Converts an integer to a hexadecimal string. |
+| oct(x)                | Converts an integer to an octal string.  |
 
 
 <p>&nbsp;</p>
-  
+
 
 Operators
 ==========
 @sep These depend on the type of variable, so revisit the most relevant ones in subsequent sections
 include // floor division and % modulus
-  
-  
+
+
 <p>&nbsp;</p>  
 
 __Arthmetic Operators__  
 
 
-Operator | Description | Example | Result
----------|-------------|---------|-------   
-\+        | Addition    | 3+2     |  5
-\-        | Subtraction | 3-2     |  1
-\*        | Multiplication | 3\*2 | 6
-\/        | Division    | 3/2     | 1.5
-\%        | Modulus (divides left operand by right operand and returns the remainder)    | 3%2     | 1
-\*\*       | Exponent    | 3\*\*2  | 9
-\//       | Floor Division (result is the quotient with digits after the decimal point removed. If one of the operands is negative, the result is floored, i.e., rounded away from zero | 3//2  ; -11//3 | 1 ; -4
+| Operator | Description                              | Example        | Result |
+| -------- | ---------------------------------------- | -------------- | ------ |
+| \+       | Addition                                 | 3+2            | 5      |
+| \-       | Subtraction                              | 3-2            | 1      |
+| \*       | Multiplication                           | 3\*2           | 6      |
+| \/       | Division                                 | 3/2            | 1.5    |
+| \%       | Modulus (divides left operand by right operand and returns the remainder) | 3%2            | 1      |
+| \*\*     | Exponent                                 | 3\*\*2         | 9      |
+| \//      | Floor Division (result is the quotient with digits after the decimal point removed. If one of the operands is negative, the result is floored, i.e., rounded away from zero | 3//2  ; -11//3 | 1 ; -4 |
 
 <p>&nbsp;</p>  
 
 __Assignment Operators__  
 
-Operator | Equivalent to | Example | result evaluates to 
----------|---------------|---------|---------------------
-\=       | a = 3         | 	result = 3 |  3
-\+= | result = result + 2 | result = 3 ; result += 2 | 5
-\-= | result = result - 2 | result = 3 ; result -= 2 | 1
-\*= | result = result * 2| result = 3  ; result \*= 2 | 6
-/=  | result = result / 2 | result = 3 ; result /= 2 | 1.5
-%=  | result = result % 2 | result = 3 ; result %= 2 | 1 	
-\*\*= | result = result \*\* 2 | result = 3 ; result \*\*= 2 | 9 
-//=  | result = result // 2 | result = 3 ; result //= 3 | 1 
+| Operator | Equivalent to          | Example                     | result evaluates to |
+| -------- | ---------------------- | --------------------------- | ------------------- |
+| \=       | a = 3                  | result = 3                  | 3                   |
+| \+=      | result = result + 2    | result = 3 ; result += 2    | 5                   |
+| \-=      | result = result - 2    | result = 3 ; result -= 2    | 1                   |
+| \*=      | result = result * 2    | result = 3  ; result \*= 2  | 6                   |
+| /=       | result = result / 2    | result = 3 ; result /= 2    | 1.5                 |
+| %=       | result = result % 2    | result = 3 ; result %= 2    | 1                   |
+| \*\*=    | result = result \*\* 2 | result = 3 ; result \*\*= 2 | 9                   |
+| //=      | result = result // 2   | result = 3 ; result //= 3   | 1                   |
 
 <p>&nbsp;</p>  
 
@@ -533,33 +528,33 @@ __Comparison Operators__
 These operators compare two values and returns true or false.  
 
 
-Operator | Description | Example | Result
----------|-------------|---------|-------   
-==       | equal to    | 3 == 2  | False
-!=       | not equal   | 3 != 2  | True
-\>        | greater than | 3 \> 2  | True
-\<        | less than   | 3 \< 2  | False
-\>=       | greater than or equal   | 3 \>= 2  | True
-\<=       | less than or equal  | 3 \<= 2  | False
+| Operator | Description           | Example | Result |
+| -------- | --------------------- | ------- | ------ |
+| ==       | equal to              | 3 == 2  | False  |
+| !=       | not equal             | 3 != 2  | True   |
+| \>       | greater than          | 3 \> 2  | True   |
+| \<       | less than             | 3 \< 2  | False  |
+| \>=      | greater than or equal | 3 \>= 2 | True   |
+| \<=      | less than or equal    | 3 \<= 2 | False  |
 
 <p>&nbsp;</p>  
 
 __Logical Operators__
- 
-Operator | Description | Example | Result
----------|-------------|---------|--------
-and | True if left operand is True and right operand is True | bool(3>=2 and 2<3) | True
-or | TRUE if left operand is Treu or right operand is True | bool(3==2 or 2<3) | True
-not | Reverses the logical status | bool(not False)  | True
+
+| Operator | Description                              | Example            | Result |
+| -------- | ---------------------------------------- | ------------------ | ------ |
+| and      | True if left operand is True and right operand is True | bool(3>=2 and 2<3) | True   |
+| or       | TRUE if left operand is Treu or right operand is True | bool(3==2 or 2<3)  | True   |
+| not      | Reverses the logical status              | bool(not False)    | True   |
 
 <p>&nbsp;</p>  
 
 __Membership Operators__  
 
-Operator | Description
----------|-------------
-in      | True if a value is included in a list, tuple, or string  
-not in  | True if a value is absent in a list, tuple, or string
+| Operator | Description                              |
+| -------- | ---------------------------------------- |
+| in       | True if a value is included in a list, tuple, or string |
+| not in   | True if a value is absent in a list, tuple, or string |
 
 For Example:  
 ```python
@@ -585,21 +580,21 @@ __Operator Precedence__
 
 Operators are listed in order of precedence. Highest listed first. Not all the operators listed here are mentioned above. 
 
-Operator | Description	
----------|------------
-\*\* | Exponentiation (raise to the power)
-\~ \+ \- | Complement, unary plus and minus (method names for the last two are +@ and -@)
-\* / % // | Multiply, divide, modulo and floor division
-\+ \- | Addition and subtraction
-\>> \<< | Right and left bitwise shift
-\& |  Bitwise 'AND'
-\^ \| | Bitwise exclusive 'OR' and regular 'OR'
-\<= < > >= | Comparison operators
-\<> == != | Equality operators	
-\= %= /= //= -= += \*= \*\*= | Assignment operators
-is is not | Identity operators
-in not in |  Membership operators
-not or and | Logical operators
+| Operator                     | Description                              |
+| ---------------------------- | ---------------------------------------- |
+| \*\*                         | Exponentiation (raise to the power)      |
+| \~ \+ \-                     | Complement, unary plus and minus (method names for the last two are +@ and -@) |
+| \* / % //                    | Multiply, divide, modulo and floor division |
+| \+ \-                        | Addition and subtraction                 |
+| \>> \<<                      | Right and left bitwise shift             |
+| \&                           | Bitwise 'AND'                            |
+| \^ \|                        | Bitwise exclusive 'OR' and regular 'OR'  |
+| \<= < > >=                   | Comparison operators                     |
+| \<> == !=                    | Equality operators                       |
+| \= %= /= //= -= += \*= \*\*= | Assignment operators                     |
+| is is not                    | Identity operators                       |
+| in not in                    | Membership operators                     |
+| not or and                   | Logical operators                        |
 
 
 <p>&nbsp;</p>
@@ -693,7 +688,7 @@ Returns:
 ```
 found AGC in your dna sequence
 ```
-  
+
 
 __If/Else Statement__
 - The If portion of the if/else statement behave as before. 
@@ -811,12 +806,12 @@ __complex number__
 
 __Conversion functions__
 
-function | Description
----------|------------
-int(x)   | to convert x to a plain integer
-float(x) | to convert x to a floating-point number
-complex(x) | to convert x to a complex number with real part x and imaginary part zero
-complex(x, y) | to convert x and y to a complex number with real part x and imaginary part y
+| function      | Description                              |
+| ------------- | ---------------------------------------- |
+| int(x)        | to convert x to a plain integer          |
+| float(x)      | to convert x to a floating-point number  |
+| complex(x)    | to convert x to a complex number with real part x and imaginary part zero |
+| complex(x, y) | to convert x and y to a complex number with real part x and imaginary part y |
 
 ```python
 >>> int(2.3)
@@ -834,12 +829,12 @@ __Numeric Functions__
 
 
 
-function | Description
----------|------------
-abs(x) | The absolute value of x: the (positive) distance between x and zero.
-round(x [,n]) |  x rounded to n digits from the decimal point. round(0.5) is 1.0 and round(-0.5) is -1.0.
-max(x1, x2,...) | The largest positive argument is returned
-min(x1, x2,...) | The smallest argument is returned
+| function        | Description                              |
+| --------------- | ---------------------------------------- |
+| abs(x)          | The absolute value of x: the (positive) distance between x and zero. |
+| round(x [,n])   | x rounded to n digits from the decimal point. round(0.5) is 1.0 and round(-0.5) is -1.0. |
+| max(x1, x2,...) | The largest positive argument is returned |
+| min(x1, x2,...) | The smallest argument is returned        |
 
 ```python
 >>> abs(2.3)
@@ -871,16 +866,16 @@ Many numeric functions are not built into the Python core and need to be include
 These next functions are found in the math module and need to be imported. To use these function, prepend the function with the moudule name, i.e, math.ceil(15.5)  
 <p>&nbsp;</p>
 
-math.function | Description
---------------|------------
-ceil(x) | The smallest integer not greater than x is returned
-floor(x) | the largest integer not greater than x is returned.
-exp(x) | The exponential of x: e<sup>x</sup> is returned
-log(x) | the natural logarithm of x, for x > 0 is returned
-log10(x) | The base-10 logarithm of x for x > 0 is returned
-modf(x) | The fractional and integer parts of x in a two-item tuple are returned.
-pow(x, y) | The value of x\*\*y is returned
-sqrt(x) | The square root of x for x > 0 is returned
+| math.function | Description                              |
+| ------------- | ---------------------------------------- |
+| ceil(x)       | The smallest integer not greater than x is returned |
+| floor(x)      | the largest integer not greater than x is returned. |
+| exp(x)        | The exponential of x: e<sup>x</sup> is returned |
+| log(x)        | the natural logarithm of x, for x > 0 is returned |
+| log10(x)      | The base-10 logarithm of x for x > 0 is returned |
+| modf(x)       | The fractional and integer parts of x in a two-item tuple are returned. |
+| pow(x, y)     | The value of x\*\*y is returned          |
+| sqrt(x)       | The square root of x for x > 0 is returned |
 
 
 ```python
@@ -1049,7 +1044,7 @@ ATGGGTCTAC
 ATGGGTCTAC
 ```
 > We get the two strings printed to the screen without being separated by a space.  
-You can also use this
+> You can also use this
 ```python
 >>> print("ATG","GGTCTAC",sep='')
 ATGGGTCTAC
@@ -1120,11 +1115,11 @@ In python2, the command was `print`, but this changed in python3 to `print()`, s
 __Special/Escape Characters__
 How would you include a new line, carrage return, or tab in your string?  
 
-Escape Character | Description
------------------|------------
-\n | New line
-\r | Carrage Return 
-\t | Tab
+| Escape Character | Description    |
+| ---------------- | -------------- |
+| \n               | New line       |
+| \r               | Carrage Return |
+| \t               | Tab            |
 
 Let's include some escape charcters in our strings and print() functions.
 ```python
@@ -1353,20 +1348,20 @@ Parts of a string can be located based on position and returned. This is accompl
 <p>&nbsp</p>
 This string 'TTTAAAGGGCCC' has the following positional information:
 
-Position/Index | Character
----------|----------
-0 | T
-1 | T
-2 | T
-3 | A
-4 | A
-5 | A
-6 | G
-7 | G
-8 | G
-9 | C
-10 | C
-11 | C
+| Position/Index | Character |
+| -------------- | --------- |
+| 0              | T         |
+| 1              | T         |
+| 2              | T         |
+| 3              | A         |
+| 4              | A         |
+| 5              | A         |
+| 6              | G         |
+| 7              | G         |
+| 8              | G         |
+| 9              | C         |
+| 10             | C         |
+| 11             | C         |
 
 Let's return the 4th, 5th, and 6th nucleotides. To do this, we need to count like a computer and start our string at 0 and return the 3rd, 4th, and 5th characters. This will be everything from 3 to 6.
 
@@ -1424,15 +1419,15 @@ __Other String Methods__
 
 Since these are methods, be sure to use in this format string.method().
 
-function | Description
----------|-------------
-s.strip() | returns a string with the whitespace removed from the start and end
-s.isalpha() | tests if all the characters of the string are alphabetic characters. Returns True or False.
-s.isdigit() | tests if all the characters of the string are numeric characters. Returns True or False.
-s.startswith('other_string') | tests if the string starts with the string provided as an argument. Returns True or False.
-s.endswith('other_string') | tests if the string ends with the string provided as an argument. Returns True or False.
-s.split('delim') | splits the string on the given exact delimiter. Returns a list of substrings. If no argument is supplied, the string will be split on whitespace.
-s.join(list) | opposite of split(). The elements of a list will be concatenated together using the string stored in 's' as a delimiter.
+| function                     | Description                              |
+| ---------------------------- | ---------------------------------------- |
+| s.strip()                    | returns a string with the whitespace removed from the start and end |
+| s.isalpha()                  | tests if all the characters of the string are alphabetic characters. Returns True or False. |
+| s.isdigit()                  | tests if all the characters of the string are numeric characters. Returns True or False. |
+| s.startswith('other_string') | tests if the string starts with the string provided as an argument. Returns True or False. |
+| s.endswith('other_string')   | tests if the string ends with the string provided as an argument. Returns True or False. |
+| s.split('delim')             | splits the string on the given exact delimiter. Returns a list of substrings. If no argument is supplied, the string will be split on whitespace. |
+| s.join(list)                 | opposite of split(). The elements of a list will be concatenated together using the string stored in 's' as a delimiter. |
 
 <p>&nbsp;</p>   
 
@@ -1479,7 +1474,7 @@ Lets right justify some numbers.
   200
 >>> print( "{:>5}".format(2000) )
  2000
- ```
+```
  > The arguments: 2, 20, 200, 2000 have all been right justified by a width of 5 columns by using '{:>5}'
 
 
@@ -1548,33 +1543,33 @@ So much can be done with the format() function. Here is one last example, but no
 
 
 The available presentation types are:
-String Type | Description
------|------------
-'s' |	String format. This is the default type for strings and may be omitted.
-None | 	The same as 's'.
+| String Type | Description                              |
+| ----------- | ---------------------------------------- |
+| 's'         | String format. This is the default type for strings and may be omitted. |
+| None        | The same as 's'.                         |
 
-Integer Type | Description
------|------------
-'b'	| Binary format. Outputs the number in base 2.
-'c'	| Character. Converts the integer to the corresponding unicode character before printing.
-'d'	| Decimal Integer. Outputs the number in base 10.
-'o'	| Octal format. Outputs the number in base 8.
-'x'	| Hex format. Outputs the number in base 16, using lower- case letters for the digits above 9.
-'X'	| Hex format. Outputs the number in base 16, using upper- case letters for the digits above 9.
-'n'	| Number. This is the same as 'd', except that it uses the current locale setting to insert the appropriate number separator characters.
-None |	The same as 'd'.
+| Integer Type | Description                              |
+| ------------ | ---------------------------------------- |
+| 'b'          | Binary format. Outputs the number in base 2. |
+| 'c'          | Character. Converts the integer to the corresponding unicode character before printing. |
+| 'd'          | Decimal Integer. Outputs the number in base 10. |
+| 'o'          | Octal format. Outputs the number in base 8. |
+| 'x'          | Hex format. Outputs the number in base 16, using lower- case letters for the digits above 9. |
+| 'X'          | Hex format. Outputs the number in base 16, using upper- case letters for the digits above 9. |
+| 'n'          | Number. This is the same as 'd', except that it uses the current locale setting to insert the appropriate number separator characters. |
+| None         | The same as 'd'.                         |
 
-Float Type | Description
------|------------
-'e'	| Exponent notation. Prints the number in scientific notation using the letter ‘e’ to indicate the exponent. The default precision is 6.
-'E'	| Exponent notation. Same as 'e' except it uses an upper case ‘E’ as the separator character.
-'f'	| Fixed point. Displays the number as a fixed-point number. The default precision is 6.
-'F'	| Fixed point. Same as 'f', but converts nan to NAN and inf to INF.
-'g'	| General format. For a given precision p >= 1, this rounds the number to p significant digits and then formats the result in either fixed-point format or in scientific notation, depending on its magnitude.
-'G'	| General format. Same as 'g' except switches to 'E' if the number gets too large. The representations of infinity and NaN are uppercased, too.
-'n'	| Number. This is the same as 'g', except that it uses the current locale setting to insert the appropriate number separator characters.
-'%'	| Percentage. Multiplies the number by 100 and displays in fixed ('f') format, followed by a percent sign.
-None |	Similar to 'g', except that fixed-point notation, when used, has at least one digit past the decimal point. The default precision is as high as needed to represent the particular value. The overall effect is to match the output of str() as altered by the other format modifiers.
+| Float Type | Description                              |
+| ---------- | ---------------------------------------- |
+| 'e'        | Exponent notation. Prints the number in scientific notation using the letter ‘e’ to indicate the exponent. The default precision is 6. |
+| 'E'        | Exponent notation. Same as 'e' except it uses an upper case ‘E’ as the separator character. |
+| 'f'        | Fixed point. Displays the number as a fixed-point number. The default precision is 6. |
+| 'F'        | Fixed point. Same as 'f', but converts nan to NAN and inf to INF. |
+| 'g'        | General format. For a given precision p >= 1, this rounds the number to p significant digits and then formats the result in either fixed-point format or in scientific notation, depending on its magnitude. |
+| 'G'        | General format. Same as 'g' except switches to 'E' if the number gets too large. The representations of infinity and NaN are uppercased, too. |
+| 'n'        | Number. This is the same as 'g', except that it uses the current locale setting to insert the appropriate number separator characters. |
+| '%'        | Percentage. Multiplies the number by 100 and displays in fixed ('f') format, followed by a percent sign. |
+| None       | Similar to 'g', except that fixed-point notation, when used, has at least one digit past the decimal point. The default precision is as high as needed to represent the particular value. The overall effect is to match the output of str() as altered by the other format modifiers. |
 
 <p>&nbsp;</p>
 
@@ -1599,7 +1594,7 @@ Lists are valuable data types that can store a collection of data in a single va
 - Lists can grown and shrink
 - Values are mutatable
 
-  
+
 __Accessing Values in Lists__
 
 To retrieve a single value in a list use the value's index in this format list[index]. This will return the value at the specified index. 
@@ -1610,11 +1605,11 @@ Here is our list:
 ```
 > There are 3 values with the indices of 0, 1, 2
 
-Index | Value
-------|-------
-0 | atg
-1 | aaa
-2 | agg
+| Index | Value |
+| ----- | ----- |
+| 0     | atg   |
+| 1     | aaa   |
+| 2     | agg   |
 
 Let's access the 0th value. 
 ```python
@@ -1682,14 +1677,14 @@ __Exracting a Subset of a List, or Slicing__
 
 This works in exactly the same way with lists as it does with strings. This is because both are Sequences, or ordered collections of data with positional information.
 
-Index | Value
-------|-------
-0 | atg
-1 | aaa
-2 | agg
-3 | aac
-4 | cgc
-5 | acg
+| Index | Value |
+| ----- | ----- |
+| 0     | atg   |
+| 1     | aaa   |
+| 2     | agg   |
+| 3     | aac   |
+| 4     | cgc   |
+| 5     | acg   |
 
 ```python
 >>> codons = [ 'atg' , 'aaa' , 'agg' , 'aac' , 'cgc' , 'acg']
@@ -1710,21 +1705,21 @@ Index | Value
 
 __List Operators__
 
-Operator | Description | Example
----------|-------------|---------
-\+ | Concatenation | [10, 20, 30] + [40, 50, 60] returns [10, 20, 30, 40, 50, 60]
-\* | Repetition | ['atg'] * 4 returns ['atg','atg','atg','atg']
-in | Membership | 20 in [10, 20, 30]  returns True
+| Operator | Description   | Example                                  |
+| -------- | ------------- | ---------------------------------------- |
+| \+       | Concatenation | [10, 20, 30] + [40, 50, 60] returns [10, 20, 30, 40, 50, 60] |
+| \*       | Repetition    | ['atg'] * 4 returns ['atg','atg','atg','atg'] |
+| in       | Membership    | 20 in [10, 20, 30]  returns True         |
 
 __List Functions__
 
-Functions | Description | Example
----------|-------------|---------
-len(list) | returns the length or the number of values in list | len([1,2,3]) returns 3 
-max(list) | returns the value with the largest ascii value |  max(['a','A','z']) returns 'z' 
-min(list) | returns the value with the smallest ascii value |  min(['a','A','z']) returns 'A' 
-list(seq) | converts a tuple into a list |  list(('a','A','z')) returns ['a', 'A', 'z']
-sorted(list, key=None, reverse=False) | returns a sorted list based on the key provided |sorted(['a','A','z']) returns ['A', 'a', 'z']
+| Functions                             | Description                              | Example                                  |
+| ------------------------------------- | ---------------------------------------- | ---------------------------------------- |
+| len(list)                             | returns the length or the number of values in list | len([1,2,3]) returns 3                   |
+| max(list)                             | returns the value with the largest ascii value | max(['a','A','z']) returns 'z'           |
+| min(list)                             | returns the value with the smallest ascii value | min(['a','A','z']) returns 'A'           |
+| list(seq)                             | converts a tuple into a list             | list(('a','A','z')) returns ['a', 'A', 'z'] |
+| sorted(list, key=None, reverse=False) | returns a sorted list based on the key provided | sorted(['a','A','z']) returns ['A', 'a', 'z'] |
 ;  sorted(['a','A','z'],key=str.lower) returns ['a', 'A', 'z']
 
 
@@ -1734,19 +1729,19 @@ Remember methods are apart of the object and are used in the following format li
 
 For these examples use: list = [1,2,3] and codons = [ 'atg' , 'aaa' , 'agg' ]
 
-Method | Description | Example
--------|-------------|--------
-list.append(obj) | appends an object to the end of a list | list.append(9) ; print(list) ; returns [1,2,3,9]
-list.count(obj) | counts the occurance of an object in a list | list.count(2) returns 1
-list.index(obj) | returns the lowest index where the given object is found | list.index(2) returns 1
-list.pop() | removes and returns the last value in the list. The list is now 1 value shorter | list.pop() returns 3
-list.insert(index, obj)   | inserts a value at the given index | list.insert(0,100) ; print(list) returns [100, 1, 2, 3]
-list.extend(new_list) | adds the provided list to the end of list | list.extend(['a', 'z']) ; print(list) returns [1, 2, 3, 'a', 'z']
-list.pop(index) | removes and returns the value of the index argument. The list is now 1 value shorter | list.pop(0) returns 1 
-list.remove(obj) | finds the lowest index of the given object and removes the value. The list is now 1 value shorter | codons.remove('aaa') ; print(codons) returns  [ 'atg' , 'agg' ]
-list.reverse() | reverses the order of the list | list.reverse() ; print(list) returns [3,2,1]
-list.copy() | Returns a shallow copy of list. Shallow vs Deep only matters in multidementional datastructures.
-list.sort([func]) | sorts a list using the provided function. Does not return a list. The list has been changed. Advanced list sort will be covered once writting your own functions has been disccussed. | codons.sort() ; print(codons) returns ['aaa', 'agg', 'atg']
+| Method                  | Description                              | Example                                  |
+| ----------------------- | ---------------------------------------- | ---------------------------------------- |
+| list.append(obj)        | appends an object to the end of a list   | list.append(9) ; print(list) ; returns [1,2,3,9] |
+| list.count(obj)         | counts the occurance of an object in a list | list.count(2) returns 1                  |
+| list.index(obj)         | returns the lowest index where the given object is found | list.index(2) returns 1                  |
+| list.pop()              | removes and returns the last value in the list. The list is now 1 value shorter | list.pop() returns 3                     |
+| list.insert(index, obj) | inserts a value at the given index       | list.insert(0,100) ; print(list) returns [100, 1, 2, 3] |
+| list.extend(new_list)   | adds the provided list to the end of list | list.extend(['a', 'z']) ; print(list) returns [1, 2, 3, 'a', 'z'] |
+| list.pop(index)         | removes and returns the value of the index argument. The list is now 1 value shorter | list.pop(0) returns 1                    |
+| list.remove(obj)        | finds the lowest index of the given object and removes the value. The list is now 1 value shorter | codons.remove('aaa') ; print(codons) returns  [ 'atg' , 'agg' ] |
+| list.reverse()          | reverses the order of the list           | list.reverse() ; print(list) returns [3,2,1] |
+| list.copy()             | Returns a shallow copy of list. Shallow vs Deep only matters in multidementional datastructures. |                                          |
+| list.sort([func])       | sorts a list using the provided function. Does not return a list. The list has been changed. Advanced list sort will be covered once writting your own functions has been disccussed. | codons.sort() ; print(codons) returns ['aaa', 'agg', 'atg'] |
 
 
 Be careful how you make a copy of your list
@@ -1891,7 +1886,7 @@ count: 0
 ...
 ```
 > What caused this code to never be true? 
->The statement that increments the count is missing. To stop the code from forever printing use Cntl+C.
+> The statement that increments the count is missing. To stop the code from forever printing use Cntl+C.
 
 __While/Else__
 
@@ -2017,7 +2012,7 @@ Code:
 
 for num in range(5):
   print(num)
-``` 
+```
 
 Output:
 ```
@@ -2042,10 +2037,10 @@ __Loop Control__
 
 Loops control statements allow for altering the normal flow of execution. 
 
-Control Statement | Description
-------------------|-----------
-break   | A loop is terminated when a break statement is executed. All the lines of code after the break, but within the loop block are not executed. No more iteration of the loop are preformed
-continue | A single iteration of a loop is terminated when a continue statement is executed. The next iteration will proceed normally.
+| Control Statement | Description                              |
+| ----------------- | ---------------------------------------- |
+| break             | A loop is terminated when a break statement is executed. All the lines of code after the break, but within the loop block are not executed. No more iteration of the loop are preformed |
+| continue          | A single iteration of a loop is terminated when a continue statement is executed. The next iteration will proceed normally. |
 
 
 __Loop Conrol: Break__  
@@ -2139,19 +2134,19 @@ Dictionaries are another iterable, like a string and list. Unlike strings and li
 Dictionaries are a collection of key value pairs. In python, each key is separated from its value by a colon (:), the items are separated by commas, and the whole thing is enclosed in curly braces. An empty dictionary without any items is written with just two curly braces, like this: {}.
 
 Keys are unique within a dictionary while values may not be. The values of a dictionary can be of any type, but the keys must be of an immutable data type such as strings, numbers, or tuples.
-  
+
 Data that is appropriate for dictionaries are two pieces of information that naturally go together, like gene name and sequence. 
 
-Key | Value
-------|-------
-TP53 | GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
-BRCA1 | GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
+| Key   | Value                                    |
+| ----- | ---------------------------------------- |
+| TP53  | GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC |
+| BRCA1 | GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA |
 
 __Creating a Dictionary__
-  
+
 ```python
 genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
-```  
+```
 
 Breaking up the key/value pairs over multiple lines make them easier to read.
 ```python
@@ -2159,7 +2154,7 @@ genes = {
            'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 
            'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' 
          }
-``` 
+```
 
 __Accessing Values in Dictionaries__
 To retrieve a single value in a dictionary use the value's key in this format `dict[key]`. This will return the value at the specified key. 
@@ -2206,7 +2201,7 @@ Other assignment operators can also be used to change a value of a dictionary ke
 {'BRCA1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA', 'TP53': 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTG'}
 ```
 > Here we have used the '+=' concatenation assignemt operator. This is equivalent to  genes['TP53'] = genes['TP53'] + 'TAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTG'.
-  
+
 __Building a Dictionary one Key/Value at a Time__
 
 Building a dictionary one key/value at a time is akin to what we just saw when we change a key's value.
@@ -2222,8 +2217,8 @@ Normally you won't do this. We'll talk about ways to build a dictionary from a f
 {'Brca1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA', 'TP53': 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC'}
 ```
 > We start by creating an empty dictionary. Then we add each key/value pair using the same syntax as when we change a value.  
-dict[key] = new_value  
-  
+> dict[key] = new_value  
+
    <p>&nbsp;</p>
 
 __Dictionary Key Operators__
@@ -2237,10 +2232,10 @@ Traceback (most recent call last):
 NameError: name 'HDAC' is not defined
 ```
 
-Operator | Descsription
----------|-------------
-in | key in dict returns True if the key exists in the dictionary
-not in | key not in dict returns True if the key does not exist in the dictionary
+| Operator | Descsription                             |
+| -------- | ---------------------------------------- |
+| in       | key in dict returns True if the key exists in the dictionary |
+| not in   | key not in dict returns True if the key does not exist in the dictionary |
 
 Because python generates a NameError if you try to use a key that doesn't exist in the dictionary, you probably need to check whether a key exists before trying to use it.
 The best way to check whether a key exists is to use `in`
@@ -2260,24 +2255,24 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 
 __Dictionary Functions__
 
-Function | Description
----------|------------
-len(dict) | returns the total number of key/value pairs
-str(dict) | returns a string representation of the dictionary
-type(variable) | Returns the type or class of the variable passed to the function. If the variable is dictionary, then it would return a dictionary type.
+| Function       | Description                              |
+| -------------- | ---------------------------------------- |
+| len(dict)      | returns the total number of key/value pairs |
+| str(dict)      | returns a string representation of the dictionary |
+| type(variable) | Returns the type or class of the variable passed to the function. If the variable is dictionary, then it would return a dictionary type. |
 
 __Dictionary Methods__
 
-Method | Description
----------|------------
-dict.clear() | Removes all elements of dictionary dict
-dict.copy() | Returns a shallow copy of dictionary dict. Shallow vs Deep only matters in multidementional datastructures.
-dict.fromkeys(seq,value) | Create a new dictionary with keys from seq (python sequence type) and values set to value.
-dict.items() | Returns a list of (key, value) tuple pairs
-dict.keys() | Returns list of keys
-dict.setdefault(key, default = None) | Similar to get(), but will set dict[key] = default if key is not already in dict
-dict.update(dict2) | Adds dictionary dict2's key-values pairs to dict
-dict.values() | Returns list of dictionary dict's values
+| Method                               | Description                              |
+| ------------------------------------ | ---------------------------------------- |
+| dict.clear()                         | Removes all elements of dictionary dict  |
+| dict.copy()                          | Returns a shallow copy of dictionary dict. Shallow vs Deep only matters in multidementional datastructures. |
+| dict.fromkeys(seq,value)             | Create a new dictionary with keys from seq (python sequence type) and values set to value. |
+| dict.items()                         | Returns a list of (key, value) tuple pairs |
+| dict.keys()                          | Returns list of keys                     |
+| dict.setdefault(key, default = None) | Similar to get(), but will set dict[key] = default if key is not already in dict |
+| dict.update(dict2)                   | Adds dictionary dict2's key-values pairs to dict |
+| dict.values()                        | Returns list of dictionary dict's values |
 
 <p>&nbsp;</p>
 
@@ -2350,39 +2345,39 @@ Symmetric Difference:
 
 __Set Functions__
 
-Function  |	Description
-----------|-------------
-all() |	returns True if all elements of the set are true (or if the set is empty).
-any() |	returns True if any element of the set is true. If the set is empty, return False.
-enumerate()	| return an enumerate object. It contains the index and value of all the items of set as a pair.
-len() |	return the number of items in the set.
-max() |	return the largest item in the set.
-min() |	return the smallest item in the set.
-sorted() |	returns a new sorted list from elements in the set (does not alter the original set).
-sum() | retrune the sum of all elements in the set.	
+| Function    | Description                              |
+| ----------- | ---------------------------------------- |
+| all()       | returns True if all elements of the set are true (or if the set is empty). |
+| any()       | returns True if any element of the set is true. If the set is empty, return False. |
+| enumerate() | return an enumerate object. It contains the index and value of all the items of set as a pair. |
+| len()       | return the number of items in the set.   |
+| max()       | return the largest item in the set.      |
+| min()       | return the smallest item in the set.     |
+| sorted()    | returns a new sorted list from elements in the set (does not alter the original set). |
+| sum()       | retrune the sum of all elements in the set. |
 
 
 __Set Methods__
 
-Method | Description
--------|------------
-set.add(new) | adds a new element
-set.clear() | remove all elements 
-set.copy() | returns a shallow copy of a set
-set.difference(set2) |	returns the difference of set and set2
-set.difference_update(set2)	| removes all elements of another set from this set
-set.discard(element) |	removes an element from set if it is found in set. (Do nothing if the element is not in set)
-set.intersection(sets) | return the intersection of set and the other provided sets
-set.intersection_update(sets) |	updates set with the intersection of set and the other provided sets
-set.isdisjoint(set2) | returns True if set and set2 have no intersection
-set.issubset(set2) | returns True if set2 contains set
-set.issuperset(set2) |	returns True if set contains set2
-set.pop() |	removes and returns an arbitary element of set. 
-set.remove(element)	| removes element from a set. 
-set.symmetric_difference(set2) | returns the symmetric difference of set and set2
-set.symmetric_difference_update(set2) |	updates set with the symmetric difference of set and set2
-set.union(sets) | returns the union of set and the other provided sets
-set.update(set2) | update set with the union of set and set2
+| Method                                | Description                              |
+| ------------------------------------- | ---------------------------------------- |
+| set.add(new)                          | adds a new element                       |
+| set.clear()                           | remove all elements                      |
+| set.copy()                            | returns a shallow copy of a set          |
+| set.difference(set2)                  | returns the difference of set and set2   |
+| set.difference_update(set2)           | removes all elements of another set from this set |
+| set.discard(element)                  | removes an element from set if it is found in set. (Do nothing if the element is not in set) |
+| set.intersection(sets)                | return the intersection of set and the other provided sets |
+| set.intersection_update(sets)         | updates set with the intersection of set and the other provided sets |
+| set.isdisjoint(set2)                  | returns True if set and set2 have no intersection |
+| set.issubset(set2)                    | returns True if set2 contains set        |
+| set.issuperset(set2)                  | returns True if set contains set2        |
+| set.pop()                             | removes and returns an arbitary element of set. |
+| set.remove(element)                   | removes element from a set.              |
+| set.symmetric_difference(set2)        | returns the symmetric difference of set and set2 |
+| set.symmetric_difference_update(set2) | updates set with the symmetric difference of set and set2 |
+| set.union(sets)                       | returns the union of set and the other provided sets |
+| set.update(set2)                      | update set with the union of set and set2 |
 
 
 <p>&nbsp;</p>
@@ -2407,7 +2402,7 @@ You should be well versed in writing to the screen. We have been using the print
 ```python
 >>> print ("Hello, PFB2017!")
 Hello, PFB2017!
-```  
+```
 > Remember this example from one of our first lessons?
 
 __Reading from Keyboard Input__
@@ -2630,8 +2625,8 @@ Found an EcoRI site!
 >>>
 ```
 > Since we can search for control characters like a tab (\t) it is good to get in the habit of using the raw string function 
-`r`
- when defining patterns.
+> `r`
+>  when defining patterns.
 
 > Here we used the search() function with two arguments, 1) our pattern and 2) the string we want to search. 
 
@@ -2696,48 +2691,48 @@ The pattern in made up of atoms.
 
 __Individual Characters__
 
-Atom | Description 
------|------------
-a-z, A-Z, 0-9 and some punctution | These are ordinary characters that match themselves
-"." | The dot, or period. This matches any single character execpt for the newline.
+| Atom                              | Description                              |
+| --------------------------------- | ---------------------------------------- |
+| a-z, A-Z, 0-9 and some punctution | These are ordinary characters that match themselves |
+| "."                               | The dot, or period. This matches any single character execpt for the newline. |
 
 
 __Character Classes__
 
 A group of characters to that are allowed to be matched one time. There are a few predefined classes, symbol that means a series of characters.
- 
-Atom | Description
------|------------
-[ ]  | A bracketed list of characters, like [GA]. This indicates a single character can match any charcater in the bracketed list.
-\d | __Digits__. Also can be written [0-9]
-\w | __Word character__. Also can be written [A-Za-z_0-9]
-\s | __White Space character__. Also can be written [ \t\n\r]
-\D | __A Non-Digit character__. Also can be written [^0-9]
-\W | __A Non-word charcter__. Also can be written [^A-Za-z_0-9]
-\S | __A Non-White Space Character__. Also can be written [^ \t\n\r]
+
+| Atom | Description                              |
+| ---- | ---------------------------------------- |
+| [ ]  | A bracketed list of characters, like [GA]. This indicates a single character can match any charcater in the bracketed list. |
+| \d   | __Digits__. Also can be written [0-9]    |
+| \w   | __Word character__. Also can be written [A-Za-z_0-9] |
+| \s   | __White Space character__. Also can be written [ \t\n\r] |
+| \D   | __A Non-Digit character__. Also can be written [^0-9] |
+| \W   | __A Non-word charcter__. Also can be written [^A-Za-z_0-9] |
+| \S   | __A Non-White Space Character__. Also can be written [^ \t\n\r] |
 
 __Anchors__
 
 A pattern can be anhcored to a region in the string
 
-Atom | Description
------|------------
-^ | Matches the beginning of the string
-$ | Matches the end of the string
-\b | Matches a word boundry. This is between a \w and a \W
+| Atom | Description                              |
+| ---- | ---------------------------------------- |
+| ^    | Matches the beginning of the string      |
+| $    | Matches the end of the string            |
+| \b   | Matches a word boundry. This is between a \w and a \W |
 
 
 Examples:
 
 ```
 g..t
-``` 
+```
 > matches "gaat", "goat", and "gotta get a goat" (twice)
 
 
 ```
 g[gatc][gatc]t
-``` 
+```
 > matches "gaat", "gttt", "gatt", and "gotta get an agatt" (once)</li>
 
 ```
@@ -2750,7 +2745,7 @@ g[gatc][gatc]t
 ^\d\d\d-\d\d\d\d
 ```
 >  matches 376-8380 and 376-83801
-> but not 5128-8181.
+>  but not 5128-8181.
 
 ```
 ^\d\d\d-\d\d\d\d$
@@ -2759,7 +2754,7 @@ g[gatc][gatc]t
 
 ```
 \bcat
-``` 
+```
 > matches "cat", "catsup" and "more catsup please" 
 > but not "scat".
 
@@ -2772,14 +2767,14 @@ __Quantifiers__
 
 Quantifiers quantify how many atoms are to be found. By default an atom matches only once. This behaviour can be modified following an atom with a quantifier.
 
-Quantifier | Description
------------|------------
-? | atom matches zero or exactly once
-\* | atom matches zero or more times
-\+ | atom matches one or more times
-{3} | atom matches exactly 3 times
-{2,4} | atom matches between 2 and 4 times, inclusive
-{4,} | atom matches at least 4 times
+| Quantifier | Description                              |
+| ---------- | ---------------------------------------- |
+| ?          | atom matches zero or exactly once        |
+| \*         | atom matches zero or more times          |
+| \+         | atom matches one or more times           |
+| {3}        | atom matches exactly 3 times             |
+| {2,4}      | atom matches between 2 and 4 times, inclusive |
+| {4,}       | atom matches at least 4 times            |
 
 Examples:  
 
@@ -2841,7 +2836,7 @@ Subpatterns, or parts of the pattern enclosed in parenthesis can be extracted an
 
 ```
 Who's afraid of the big bad w(.+)f
-``` 
+```
 > This pattern has only one subpattern (.+)
 
 You can combine parenthesis and quantifiers to quantify entire subpatterns
@@ -3053,7 +3048,7 @@ TTG
 > finditer() would also work in this for loop. Each codon can be accessed by using the group() method.
 
   
-  
+
 __Truth and Regular Expression Matches__
 
 The search(), match(), findall(), and finditer() can be used in conditional tests. If a match is not found an empty list or 'None' is returned. These both are False.
@@ -3098,7 +3093,7 @@ He had a wife.
 ```
 > The characters between 'w' and 'f' have been replaced with 'goat'.  
 > The new string is saved in new_str
- 
+
 __Using subpatterns in the replacement__
 
 Sometimes you want to find a pattern and use it in the replacement. 
@@ -3140,7 +3135,105 @@ Modules
 
 
 
+## os
 
+`os.path` has common utilities for working file paths. A path is either a relative or absolute list of directories (often ending with a filename) that tells you where to find a file or directory.
+
+| function               | description                              |
+| ---------------------- | ---------------------------------------- |
+| os.path.basename(path) | what's the last element of the path? Note `/home/tmp/` returns `''`, rather than `tmp` |
+| os.path.dirname(path)  | what's the directory the file is in?     |
+| os.path.exists(path)   | does the path exist?                     |
+| os.path.getsize(path)  | returns path (file) size in bytes or error |
+| os.path.isfile(path)   | does the path point to a file?           |
+| os.path.isdir(path)    | does the path point to a directory?      |
+
+
+
+## sys
+
+A couple of useful variables for beginners. Many more advanced not covered here.
+
+| function | description                          |
+| -------- | ------------------------------------ |
+| sys.argv | list of command line parameters      |
+| sys.path | where python should look for modules |
+
+
+
+## re
+
+see notes on regular expressions
+
+## collections
+
+`from collections import deque`
+
+# copy
+
+`copy.copy()`
+
+and 
+
+`copy.deepcopy()`
+
+## math
+
+| function            | description |
+| ------------------- | ----------- |
+| math.exp()          | e**x        |
+| math.log2()         |             |
+| math.log10()        |             |
+| math.sqrt()         |             |
+| math.sin()          |             |
+| math.pi(), math.e() | constants   |
+|                     |             |
+|                     |             |
+| etc                 |             |
+
+
+
+## random
+
+
+
+## statistics
+
+
+
+## glob
+
+## argparse
+
+Great (and complicated) tool for parsing command line arguments. Here's a simple script that explains a little of what it does.
+
+```python
+#!/usr/bin/python3
+import argparse
+parser = argparse.ArgumentParser(description="A test program that reads in some number of lines from an input file. The output can be screen or an output file")
+# we want the first argument to be the filename
+parser.add_argument("file", help="path to input fasta filename")
+# second argument will be line number
+# default type is string, need to specify if expecting an int
+parser.add_argument("lines", type=int, help ="how many lines to print")
+# optional outfile argument specified with -o or --out
+parser.add_argument("-o","--outfile", help = "optional: supply output filename, otherwise write to screen", dest = 'out')
+args = parser.parse_args()
+# arguments appear in args
+filename = args.file
+lines = args.line
+if args.out:
+  print("writing output to", args.out)
+```
+
+
+
+
+## Many more modules in many areas
+
+time, HTML, XML, email, CGI, sockets, audio, GUIs with Tk, debugging, testing, unix utils
+
+Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 
 
 <p>&nbsp;</p>
@@ -3195,7 +3288,6 @@ BioPython Subtopic 2
 
 My Questions
 ============
-
 
 ***
 # Bioinformatic Analysis and Tools
