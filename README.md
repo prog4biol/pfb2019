@@ -3137,7 +3137,7 @@ Modules
 
 ## os
 
-`os.path` has common utilities for working file paths. A path is either a relative or absolute list of directories (often ending with a filename) that tells you where to find a file or directory.
+`os.path` has common utilities for working file paths (filenames and directories). A path is either a relative or absolute list of directories (often ending with a filename) that tells you where to find a file or directory.
 
 | function               | description                              |
 | ---------------------- | ---------------------------------------- |
@@ -3152,7 +3152,7 @@ Modules
 
 ## sys
 
-A couple of useful variables for beginners. Many more advanced not covered here.
+A couple of useful variables for beginners. Many more advanced system parameters and settings that we are not covering here.
 
 | function | description                          |
 | -------- | ------------------------------------ |
@@ -3191,7 +3191,7 @@ and
 |                     |             |
 | etc                 |             |
 
-
+see also numpy
 
 ## random
 
@@ -3205,7 +3205,7 @@ and
 
 ## argparse
 
-Great (and complicated) tool for parsing command line arguments. Here's a simple script that explains a little of what it does.
+Great (and overly-complicated) tool for parsing command line arguments and automatically generating help messages for scripts (very handy!). Here's a simple script that explains a little of what it does.
 
 ```python
 #!/usr/bin/python3
