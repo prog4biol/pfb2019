@@ -28,6 +28,7 @@ Table of Contents
      * [Truth](#truth)  
      * [Logic: Control Statements](#logic-control-statements)  
      * [Numbers](#numbers)  
+     * [Sequences](#sequences)
      * [Strings](#strings)   
      * [Lists and Tuples](#lists-and-tuples)  
      * [Loops](#loops)  
@@ -290,8 +291,11 @@ The number of spaces in the indentation need to be consistent but a specific num
 __Comments__: 
 Comments are an essential programming practice. Making a note of what a line or block of code is doing will help the writer and readers of the code. This includes you!
 
-__#__ : 
-The pound or hash symbol is used to prepend a comment. All characters after the # and to the end of the line are apart of the comment and it will be ignored by python. 
+__#__
+Comments start after a pound or hash symbol. All characters after the #, up to the end of the line are part of the comment and are ignored by python. 
+
+The first line of a script starting with `#!` is a special example of a comment that also has the special function in unix of telling the unix shell how to run the script.
+
 ```python
 #!/usr/bin/python3
 
@@ -324,12 +328,11 @@ iterable, string, int, float, tuple, list, dictionary, set
 
 This is our first look at variables and data types. Each data type will be discussed in more detail in subsequent sections. 
 
-- Variables enable you to store a value in memory. 
-- Simply use the equal sign, '=', to assign a value to a variable.  
+The first concept to consider is that python data types are either immutable (unchangeable) or not. Literal numbers, strings and tuples cannot be changed. Lists, dictionaries and sets can be changed. So can individual (scalar) variables. You can store data in memory by putting it in different kinds variables. You use the = sign to assign a value to a variable.
 
 __Numbers and Strings__
 
-Numbers and strings are 2 data types. Data types can be stored in variables.
+Numbers and strings are two data types. Literal numbers and strings like this `5` or `'my name is'`  are immutable. However, their values can be stored in variables and then changed.
 
 For Example:  
 ```python
@@ -347,20 +350,20 @@ message = "Welcome to python" # this is a string
 
 10, 2.5, and "Welcome to python" are singular pieces of data being stored in an indivudual variables.  
 
-Collections of data can also be stored in a single variable, i.e., lists, tuples, and dictionaries.  
+Collections of data can also be stored in special data types, i.e., tuples, lists, sets, and dictionaries.  
 
  <p>&nbsp;</p>
 
-__List__  
+__Lists__  
 - Lists are used to store an ordered, *indexed* collection of data.
-- Values are separated by commas
-- Values are enclosed in square brackets '[]'
-- Lists can grown and shrink
-- Values are mutatable
+
+- Lists are mutable: the number of elements in the list and what's stored in each element can change
+
+- Lists are enclosed in square brackets and items are separated by commas
 
   ​
 ```python
-codons = [ 'atg' , 'aaa' , 'agg' ]
+[ 'atg' , 'aaa' , 'agg' ]
 ```
 
 
@@ -402,14 +405,10 @@ print(a+b) # + is a sum operator on integers
 
 __Tuple__
 - Tuples are similar to lists and contain ordered, *indexed* collection of data.
-- Items are separated by commas
-- **Items are enclosed in parenthesis '()'**
-- **Tupels cannot change in size**
-- **Values are immutable**
-
-  ​
+- **Tuples are immutable: you can't change the values or the number of values**
+- A tuple is enclosed in parenteses and items are separated by commas.
 ```python
-months = ( 'Jan' , 'Feb' , 'Mar' , 'Apr' , 'May' , 'Jun' , 'Jul' , 'Aug' , 'Sep' , 'Oct' , 'Nov' , 'Dec' )
+( 'Jan' , 'Feb' , 'Mar' , 'Apr' , 'May' , 'Jun' , 'Jul' , 'Aug' , 'Sep' , 'Oct' , 'Nov' , 'Dec' )
 ```
 
 
@@ -432,12 +431,12 @@ months = ( 'Jan' , 'Feb' , 'Mar' , 'Apr' , 'May' , 'Jun' , 'Jul' , 'Aug' , 'Sep'
 
 __Dictionary__
 - Dictionaries are unordered collections of key/value pairs.
-- Sets of Key/Value pairs are separated by commas 
-- A key and value are grouped with a colon
+- A dictionary is enclosed in curly braces. and sets of Key/Value pairs are separated by commas 
+- A colon is written between each key and value. Commas separate key:value pairs.
 
   ​
 ```python
-genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
+{ 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
 ```
 
 
@@ -463,21 +462,22 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 | list(s)  | Converts s to a list.                    |
 | set(s)   | Converts s to a set.                     |
 | dict(d)  | Creates a dictionary. d must be a sequence of (key,value) tuples. |
+| repr()   | Makes a string representation of an object. Useful for finding out what kind (Class) of object you are dealing with. |
 
 
 
-__Should we include these??? I think they are too complicated__   
+~~__Should we include these??? I think they are too complicated__~~   
 
-| Function              | Description                              |
-| --------------------- | ---------------------------------------- |
-| eval(str)             | Evaluates a string and returns an object. |
-| complex(real [,imag]) | Creates a complex number.                |
-| repr(x)               | Converts x to an expression string.      |
-| frozenset(s)          | Converts s to a frozen set.              |
-| unichr(x)             | Converts an integer to a Unicode character. |
-| ord(x)                | Converts a single character to its integer value. |
-| hex(x)                | Converts an integer to a hexadecimal string. |
-| oct(x)                | Converts an integer to an octal string.  |
+| ~~Function~~              | ~~Description~~                          |
+| ------------------------- | ---------------------------------------- |
+| ~~eval(str)~~             | ~~Evaluates a string and returns an object.~~ |
+| ~~complex(real [,imag])~~ | ~~Creates a complex number.~~            |
+| ~~repr(x)~~               | ~~Converts x to an expression string.~~  |
+| ~~frozenset(s)~~          | ~~Converts s to a frozen set.~~          |
+| ~~unichr(x)~~             | ~~Converts an integer to a Unicode character.~~ |
+| ~~ord(x)~~                | ~~Converts a single character to its integer value.~~ |
+| ~~hex(x)~~                | ~~Converts an integer to a hexadecimal string.~~ |
+| ~~oct(x)~~                | ~~Converts an integer to an octal string.~~ |
 
 
 <p>&nbsp;</p>
@@ -949,23 +949,68 @@ ValueError: math domain error
 
 <p>&nbsp;</p>
 
-A useful yet depricated function in Python 3 is cmp(x,y).  
-It is used to compare two numbers.  
+### Comparing two numbers
 
-- if x<y -1 is returned
-- if x>y 1 is returned
-- x == y 0 is returned
+The simple function `cmp(x,y)` is no longer available in python3. 
 
-Use this instead:  
+Use this idiom instead:  
 ```python
 cmp = (x>y)-(x<y)
 ```
 
-<p>&nbsp;</p>
+It returns three different values depending on x and y
 
-Strings
-========
+- if x<y -1 is returned
+
+- if x>y 1 is returned
+
+- x == y 0 is returned
+
+  ​
+
+# Sequences
+
+In the next section, we will learn about strings, tuples and lists. These are all examples of python sequences. A string is a sequence of characters `'ACGTGA'`, a tuple `(0.23, 9.74, -8.17, 3.24, 0.16)` and a list `['dog', 'cat', 'bird']` are sequences of any kind of data. We'll see much more detail in a bit.
+
+In python a type of object gets operations that belong to that type. Sequences have sequence operations so strings can also use sequence operations. Strings also have their own specific operations.
+
+You can ask what the length of any sequence is
+
+```python
+>>>len('ACGTGA') # length of a string
+6
+>>>len ( (0.23, 9.74, -8.17, 3.24, 0.16) )   # length of a tuple, needs two parentheses (( ))
+5
+>>>len(['dog', 'cat', 'bird'])  # length of a list
+3
+```
+
+You can also use string-specific functions on strings, but not on lists and vice versa. We'll learn a lot more about this later on. `rstrip()` is a string method or function. You get an error if you try to use it on a list.
+
+```python
+>>> 'ACGTGA'.rstrip('A')
+'ACGTG'
+>>> ['dog', 'cat', 'bird'].rstrip()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'rstrip'
+```
+
+## What goes with what?
+
+How do you find out what functions work with an object? There's a handy function `dir()`. As an example what functions can you call on our string `'ACGTGA'`?
+
+```python
+>>> dir('ACGTGA')
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+```
+
+You can call `dir()` on any object.
+
+# Strings
+
 @sep
+
 > .format()  
 > strip()
 
@@ -1046,7 +1091,7 @@ ATGGGTCTAC
 > We get the two strings printed to the screen without being separated by a space.  
 > You can also use this
 ```python
->>> print("ATG","GGTCTAC",sep='')
+>>> print('ATG','GGTCTAC',sep='')
 ATGGGTCTAC
 ```
 
@@ -1054,7 +1099,7 @@ Now, lets print a variable and a literal string.
 ```python
 >>>dna = 'ATG'
 ATG
->>> print(dna,"GGTCTAC")
+>>> print(dna,'GGTCTAC')
 ATG GGTCTAC
 ```
 > We get the value of the variable and the literal string printed to the screen separated by a space
@@ -1063,7 +1108,7 @@ How would we print the two without a space?
 ```python
 >>>dna = 'ATG'
 ATG
->>> print(dna + "GGTCTAC")
+>>> print(dna + 'GGTCTAC')
 ATGGGTCTAC
 ```
 
@@ -1180,9 +1225,21 @@ To concatenate strings use the concatenation operator '+'
 >>> print(dna)
 TAGCTATATAAAATCATAAT
 ```
-> The concatenation operator can be used to combine strings. The newly combined string can be stored in a variable.
+> The concatenation operator can be used to combine strings. The newly combined string can be stored in a variable. What happens if you use `+` with numbers (these are integers or ints)?
 
-<p>&nbsp;</p>  
+```python
+>>> 4+3
+7
+```
+
+For strings, `+` concatenates; for integers, `+` adds.
+
+You need to convert the numbers to strings before you can concatenate them
+
+```python
+>>> str(4) + str(3)
+'43'
+```
 
 
 
@@ -1190,9 +1247,7 @@ TAGCTATATAAAATCATAAT
 
 __Determine the length of a string__: 
 
-Use the 
-'len()'
-function to calculate the length of a string. This function takes a string as an argument and returns an int
+Use the `len()`function to calculate the length of a string. This function takes a sequence as an argument and returns an int
 
 
 ```python
@@ -1203,42 +1258,14 @@ TAGCTATATAAAATCATAAT
 ```
 > The length of the string, including spaces, is calculated and returned.
 
-The returned value of 
-`len()`
-can be stored in a variable.  
+The value`len()` returns can be stored in a variable.  
 ```python
 >>> dna_length = len(dna)
 >>> print(dna_length)
 20
 ```
-<p>&nbsp;</p>
+You can mix strings and ints in print(), but not in concatenation.
 
-Something to note about the 
-`len()`
-function is that it takes a string as an argument but returns an int.  
-
-This is in contrast to the concatenation operator. It takes strings as arguments and returns a string.  
-
-Let's try to concatenate an int.  
-```python
->>> dna_length = len(dna)
->>> details = "The lenth of the DNA sequence: " + dna + " is " + dna_length
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: Can't convert 'int' object to str implicitly
-```
-> We get a TypeError. Because an int is stored in dna_length and concatenation only works with strings, this value cannot be concatenated to the rest of the strings.
-
-To use an int with the concatenation operator we need to covert the int to a string.  
-```python
->>> details = "The lenth of the DNA sequence: " + dna + " is " + str(dna_length)
->>> print(details)
-The lenth of the DNA sequence: TAGCTATATAAAATCATAAT is 20
-```
-
-Another solution to this issue is to skip the concatenation and just print. The 
-`print()`
-fuction takes both strings and ints as arguments.  
 ```python
 >>> print("The lenth of the DNA sequence:" , dna , "is" , dna_length)
 The lenth of the DNA sequence: TAGCTATATAAAATCATAAT is 20
@@ -1277,8 +1304,6 @@ ATGCTTG
 >>> print(dna_lowercase)
 atgcttg
 ```
-> Now the contents of the variable 'dna_lowercase' is the lowercased DNA sequence and can be used later
-
 The string method can be nested inside of other functions.
 ```python
 >>> dna = "ATGCTTG"
@@ -1289,8 +1314,7 @@ atgcttg
 
 If you try to use a string method on a object that is not a string you will get an error.
 ```python
->>> dna = "ATGCTTG"
->>> nt_count = len(dna)
+>>> nt_count = 6
 >>> dna_lc = nt_count.lower()
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -1306,13 +1330,11 @@ Now let's uppercase a string.
 >>> print(dna)
 attgct
 ```
-> The contents of the variable 'dna', 'attgct' was returned and uppercased. The actual contents of 'dna' were not altered.
+> The contents of the variable 'dna', 'attgct' was returned in upper case. The actual contents of 'dna' were not altered.
 
 __Find and Count__
 
-Exact matches to a given string will be found and the count of occurances will be returned when using the string method
-`count`
-This method takes the search string as an argument and returns an int.
+`count(str)` returns the number of exact matches of `str` it found (as an int)
 
 ```python
 >>> dna = 'ATGCTGCATT'
@@ -1324,8 +1346,7 @@ This method takes the search string as an argument and returns an int.
 
 __Find and Replace__
 
-Exact matches to the given string will be found and replaced with the given replacement value with another string method, 
-`replace()`
+`replace(str1,str2)` returns a new string with all matches of `str1` in a string replaced with `str2`. 
 
 
 ```python
@@ -1338,19 +1359,21 @@ ATGCTGCATT
 >>> print(rna)
 AUGCUGCAUU
 ```
-> All occurances of T are replaced by U. The new string is returned. The orginal string has not actually been altered. If you want to reuse the new string, store it in a variable.
+> All occurrences of T are replaced by U. The new string is returned. The orginal string has not actually been altered. If you want to reuse the new string, store it in a variable.
 
 
 
 __Extracting a Substring, or Slicing__
 
-Parts of a string can be located based on position and returned. This is accomplised by appending the start and ending position in square brackets to the string variable name.  
+Parts of a string can be located based on position and returned. This is because a string is a sequence. Coordinates start at 0. You add the coordinate in square brackets after the string's name. 
 <p>&nbsp</p>
-This string 'TTTAAAGGGCCC' has the following positional information:
+This string 'ATTAAAGGGCCC' is made up of the following sequence of characters, and positions (starting at zero).
+
+`
 
 | Position/Index | Character |
 | -------------- | --------- |
-| 0              | T         |
+| 0              | A         |
 | 1              | T         |
 | 2              | T         |
 | 3              | A         |
@@ -1366,7 +1389,7 @@ This string 'TTTAAAGGGCCC' has the following positional information:
 Let's return the 4th, 5th, and 6th nucleotides. To do this, we need to count like a computer and start our string at 0 and return the 3rd, 4th, and 5th characters. This will be everything from 3 to 6.
 
 ```python
->>> dna = 'TTTAAAGGGCCC'
+>>> dna = 'ATTAAAGGGCCC'
 >>> sub_dna = dna[3:6]
 >>> print(sub_dna)
 AAA
@@ -1375,16 +1398,16 @@ AAA
 
 Let's return the first 6 characters.
 ```python
->>> dna = 'TTTAAAGGGCCC'
+>>> dna = 'ATTAAAGGGCCC'
 >>> sub_dna = dna[0:6]
 >>> print(sub_dna)
-TTTAAA
+ATTAAA
 ```
 > Every character starting at index 0 and up to but not including index 6 are returned. This is the same as dna[:6]
 
 Let's return every character from index 6 to the end of the string.
 ```python
->>> dna = 'TTTAAAGGGCCC'
+>>> dna = 'ATTAAAGGGCCC'
 >>> sub_dna = dna[6:]
 >>> print(sub_dna)
 GGGCCC
@@ -1403,16 +1426,16 @@ __Locate and Report__
 
 The positional index of an exact string in a larger string can be found and returned with the string method 
 `find`
-. A exact string is given as an argument and the index of its first occurance is returned. -1 is returned if it is not found.
+. A exact string is given as an argument and the index of its first occurrence is returned. -1 is returned if it is not found.
 
 ```python
->>> dna = 'TTTAAAGGGCCC'
->>> dna.find('A')
-3
+>>> dna = 'ATTAAAGGGCCC'
+>>> dna.find('T')
+1
 >>> dna.find('N')
 -1
 ```
-> The substring 'A' is found for the first time at index 3 in the string 'dna' so 3 is returned. The substring 'N' is not found, so -1 is returned.
+> The substring 'T' is found for the first time at index 1 in the string 'dna' so 1 is returned. The substring 'N' is not found, so -1 is returned.
 
 
 __Other String Methods__
@@ -1570,6 +1593,10 @@ The available presentation types are:
 | 'n'        | Number. This is the same as 'g', except that it uses the current locale setting to insert the appropriate number separator characters. |
 | '%'        | Percentage. Multiplies the number by 100 and displays in fixed ('f') format, followed by a percent sign. |
 | None       | Similar to 'g', except that fixed-point notation, when used, has at least one digit past the decimal point. The default precision is as high as needed to represent the particular value. The overall effect is to match the output of str() as altered by the other format modifiers. |
+
+
+
+
 
 <p>&nbsp;</p>
 
@@ -1747,18 +1774,20 @@ For these examples use: list = [1,2,3] and codons = [ 'atg' , 'aaa' , 'agg' ]
 Be careful how you make a copy of your list
 ```python
 >>> list=['a', 'one', 'two']
->>> l=list
->>> l.append('1')
+>>> l2=list
+>>> l2.append('1')
 >>> print(list)
 ['a', 'one', 'two', '1']
+>>> print(l2)
+['a', 'one', 'two', '1']
 ```
-> Not what you expected?! The orginal list has changed when a value is added to the copy of list
+> Not what you expected?! Boht lists have changed because we only copied a pointer to the original list when we wrote `l2=list`. 
 
 Let's copy the list using the copy() method.
 ```python
 >>> list=['a', 'one', 'two']
->>> l=list.copy()
->>> l.append('1')
+>>> l2=list.copy()
+>>> l2.append('1')
 >>> print(list)
 ['a', 'one', 'two']
 ```
@@ -1783,16 +1812,36 @@ Now that you have seen the append() function we can go over how to build a list 
 ```
 > We start with a an empty list called 'words'. We use append() to add the value 'one' then to add the value 'two'. We end up with a list with two values.
 
-__Tuples__
-- Tuples are similar to lists and contain ordered, *indexed* collection of data.
-- Items are separated by commas
-- **Items are enclosed in parenthesis '()'**
-- **Tupels cannot change in size**
-- **Values are immutable**
 
-The main reason why tuples exist is to get data to and from function calls.
-<p>&nbsp;</p>
-Everything you can do with lists you can do with tupels, EXCEPT change them. 
+
+# More complex data structures
+
+You can nest any data type inside any other type. This lets you build multidimensional data tables easily.
+
+There are also specific data table and frame handling libraries like Pandas.
+
+Here's a way to make a 3 x 3 table of values. 
+
+```python
+>>> M = [[1,2,3], [4,5,6],[7,8,9]]
+>>> M[1] # second row (starts with index 0)
+[4,5,6]
+>>>M[1][2] # second row, third element
+6
+```
+
+
+
+__~~~~Tuples~~__~~
+- ~~Tuples are similar to lists and contain ordered, *indexed* collection of data.~~
+- ~~Items are separated by commas~~
+- ~~**Items are enclosed in parenthesis '()'**~~
+- ~~**Tupels cannot change in size**~~
+- ~~**Values are immutable**~~
+
+~~The main reason why tuples exist is to get data to and from function calls.~~
+~~<p>&nbsp;</p>~~
+~~Everything you can do with lists you can do with tupels, EXCEPT change them.~~ 
 
 <p>&nbsp;</p>
 
