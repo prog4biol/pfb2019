@@ -1,7 +1,9 @@
 PFB 2017 Tentative Schedule
 ==========================
 
-# see excel spreadsheet  
+# ##############################################################
+# moved to [gdocs](https://docs.google.com/spreadsheets/d/1fF3N18YhKvGD9DXCrUSuxMt7dkzUZWldW4WGc7-wiak/edit?usp=sharing)
+# ###############################################################
 
 
 
