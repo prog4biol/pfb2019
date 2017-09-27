@@ -205,9 +205,7 @@ Some programs will take a long time to run. After you issue their command names,
 (~) 54% long_running_application &
 (~) 55%
 ```
-
-
-The command will now run in the background until it is finished. If it has any output, the output will be printed to the terminal window. You may wish to redirect the output as described later.
+> The command will now run in the background until it is finished. If it has any output, the output will be printed to the terminal window. You may wish to redirect the output as described later.
 
 __Command-Line Editing__
 
@@ -236,8 +234,7 @@ There are also some useful shell commands you can issue:
 fd2ps    fdesign  fdformat fdlist   fdmount  fdmountd fdrawcmd fdumount
 (~) 51%
 ```
-
-If you hit tab after typing a command, but before pressing \<Enter\>, **bash** will prompt you with a list of file names. This is because many commands operate on files.
+> If you hit tab after typing a command, but before pressing \<Enter\>, **bash** will prompt you with a list of file names. This is because many commands operate on files.
 
 __Wildcards__
 
@@ -288,8 +285,7 @@ In addition to the files and directories shown with _ls -F_, there may be one or
 .bash_profile     .less             .xsession-errors
 .bashrc           .lessrc           INBOX
 ```
-
-Whoa!  There's a lot of hidden stuff there.  But don't go deleting dot files willy-nilly.  Many of them are essential configuration files for commands and other programs.  For example, the _.profile_ file contains configuration information for the **bash** shell.  You can peek into it and see all of **bash**'s many options.  You can edit it (when you know what you're doing) in order to change things like the command prompt and command search path.
+> Whoa!  There's a lot of hidden stuff there.  But don't go deleting dot files willy-nilly.  Many of them are essential configuration files for commands and other programs.  For example, the _.profile_ file contains configuration information for the **bash** shell.  You can peek into it and see all of **bash**'s many options.  You can edit it (when you know what you're doing) in order to change things like the command prompt and command search path.
 
 
 __Getting Around__
@@ -327,8 +323,7 @@ bass-1.30a/                zhmapper.tar.gz
 bass-1.30a.tar.gz
 (~/projects) 64%
 ```
-
-Each directory contains two special hidden directories named "." and
+> Each directory contains two special hidden directories named "." and
 "..".  "." refers always to the directory in which it is located.
 ".." refers always to the parent of the directory.  This lets you move
 upward in the directory hierarchy like this:
@@ -337,14 +332,12 @@ upward in the directory hierarchy like this:
 (~/docs) 64% cd ..
 ```
 
-
 and to do arbitrarily weird things like this:
 
 ```
 (~/docs) 65% cd ../../lstein/docs
 ```
-
-The latter command moves upward two levels, and then into a directory
+> The latter command moves upward two levels, and then into a directory
 named "docs".
 
 
@@ -434,7 +427,6 @@ characters and lines in the text file `/var/log/messages`:
      23     941 /var/log/messages
 ```
 
-
 You can cluster short switches by concatenating them together, as
 shown in this example:
 
@@ -455,8 +447,7 @@ an argument, put single quotes around it.  For example:
 ```
 mail -s 'An important message' 'Bob Ghost <bob@ghost.org>'
 ```
-
-This will send an e-mail to the fictitious person Bob Ghost.  The **-s** switch takes an
+> This will send an e-mail to the fictitious person Bob Ghost.  The **-s** switch takes an
 argument, which is the subject line for the e-mail.  Because the
 desired subject contains spaces, it has to have quotes around it.
 Likewise, my e-mail address, which contains embedded spaces, must also
@@ -515,30 +506,261 @@ emacs   | Run the Emacs text editor (good for experts).
 vi      | Run the vi text editor (better for experts).
 
 
-Working With Files 
-===================
- - ls  
- - cd  
- - cp  
- - rm  
- - cat  
- - less/more  
- - grep  
- - wc
+__Networking__
 
- Working with Servers
- ====================
- - ssh
- - scp 
+Command | Description
+--------|------------
+ssh | A secure (encrypted) way to log into machines.
+scp | A secure way to copy (cp) files to and from remote machines.
+ping |  See if a remote host is up.
+ftp/sftp (secure) | transfer files using the File Transfer Protocol.
+who | See who else is logged in.
+lp | Send a file or set of files to a printer.
+
+__Standard I/O and Command Redirection__
 
 
+Unix commands communicate via the command-line interface.  They can
+print information out to the terminal for you to see, and accept input
+from the keyboard (that is, from _you_!)
+
+
+Every Unix program starts out with three connections to the outside
+world.  These connections are called "streams", because they act like a
+stream of information (metaphorically speaking):
+
+
+Stream Type | Description
+------------|------------
+standard input | This is a communications stream initially attached to the keyboard.  When the program reads from standard input, it reads whatever text you type in.
+standard output | This stream is initially attached to the command window. Anything the program prints to this channel appears in your terminal window.
+standard error | This stream is also initially attached to the command window. It is a separate channel intended for printing error messages.
+
+The word "initially" might lead you to think that standard input,
+output and error can somehow be detached from their starting places
+and reattached somewhere else.  And you'd be right.  You can attach
+one or more of these three streams to a file, a device, or even to
+another program.  This sounds esoteric, but it is actually very
+useful.
+
+__A Simple Example__
+
+
+The **wc** program counts lines, characters and words in data sent
+to its standard input.  You can use it interactively like this:
+
+```
+(~) 62% wc
+Mary had a little lamb,
+little lamb,
+little lamb.
+
+Mary had a little lamb,
+whose fleece was white as snow.
+^D
+      6      20     107
+```
+> In this example, I ran the **wc** program.  It waited for me to
+type in a little poem.  When I was done, I typed the END-OF-FILE
+character, control-D (^D for short).  **wc** then printed out three
+numbers indicating the number of lines, words and characters in the
+input.
 
 
 
-Getting things done
+More often, you'll want to count the number of lines in a big file;
+say a file filled with DNA sequences.  You can do this by
+_redirecting_ **wc**'s standard input from a file.  This uses
+the **<** metacharacter:
+
+```
+(~) 63% wc < big_file.fasta
+      2943    2998     419272
+```
+
+If you wanted to record these counts for posterity, you could redirect
+standard output as well using the **>** metacharacter:
+
+```
+(~) 64% wc < big_file.fasta > count.txt
+```
+
+
+Now if you **cat** the file _count.txt_, you'll see that the
+data has been recorded.  **cat** works by taking its standard
+input and copying it to standard output.  We redirect standard input
+from the _count.txt_ file, and leave standard output at its
+default, attached to the terminal:
+
+```
+(~) 65% cat < count.txt
+      2943    2998     419272
+```
+
+__Redirection Meta-Characters__
+
+Here's the complete list of redirection commands for **bash**:
+
+Redirect command | Description
+-----------------|-------------
+\< _filename_ | Redirect standard input to file
+\> _filename_ | Redirect standard output to file
+1\> _filename_ | Redirect just standard output to file (same as above)
+2\> _filename_ | Redirect just standard error to file
+> _filename_ 2>&1 | Redirect both stdout and stderr to file
+
+
+These can be combined.  For example, this command redirects standard
+input from the file named _/etc/passwd_, writes its results into
+the file _search.out_, and writes its error messages (if any)
+into a file named _search.err_.  What does it do?  It searches
+the password file for a user named "root" and returns all lines that
+refer to that user.
+
+```
+(~) 66% grep root < /etc/passwd > search.out 2> search.err
+```
+
+__Filters, Filenames and Standard Input__
+
+Many Unix commands act as filters, taking data from a file or standard
+input, transforming the data, and writing the results to standard
+output.  Most filters are designed so that if they are called with one
+or more filenames on the command-line, they will use those files as
+input.  Otherwise they will act on standard input.  For example, these
+two commands are equivalent:
+
+```
+(~) 66% grep 'gatttgc' < big_file.fasta
+(~) 67% grep 'gatttgc' big_file.fasta
+```
+> Both commands use the **grep** command to search for the string
+"gatttgc" in the file _big_file.fasta_.  The first one searches
+standard input, which happens to be redirected from the file.  The
+second command is explicitly given the name of the file on the command
+line.
+
+
+Sometimes you want a filter to act on a series of files, one of which
+happens to be standard input.  Many filters let you use "-" on the
+command-line as an alias for standard input.  Example:
+
+```
+(~) 68% grep 'gatttgc' big_file.fasta bigger_file.fasta -
+```
+> This example searches for "gatttgc" in three places.  First it looks
+in _big_file.fasta_, then in _bigger_file.fasta_, and lastly
+in standard input (which, since it isn't redirected, will come from
+the keyboard).
+
+
+__Standard I/O and Pipes__
+
+
+The coolest thing about the Unix shell is its ability to chain
+commands together into pipelines.  Here's an example:
+
+```
+(~) 65% grep gatttgc big_file.fasta | wc -l
+22
+```
+> There are two commands here. **grep** searches a file or standard
+input for lines containing a particular string.  Lines which contain
+the string are printed to standard output.  **wc -l** is the
+familiar word count program, which counts words, lines and characters
+in a file or standard input.  The **-l** command-line option
+instructs **wc** to print out just the line count.  The **|**
+character, which is known as the "pipe" character, connects the two
+commands together so that the standard output of **grep** becomes
+the standard input of **wc**.
+
+
+What does this pipe do?  It prints out the number of lines in which
+the string "gatttgc" appears in the file _big_file.fasta_.
+
+__More Pipe Idioms__
+
+Pipes are very powerful.  Here are some common command-line idioms.
+
+Count the Number of Times a Pattern does NOT Appear in a File
+
+The example at the top of this section showed you how to count the
+number of lines in which a particular string pattern appears in a
+file.  What if you want to count the number of lines in which a
+pattern does **not** appear?
+
+Simple.  Reverse the test with the **grep** **-v** switch:
+
+```
+(~) 65% grep -v gatttgc big_file.fasta | wc -l
+2921
+```
+
+__Uniquify Lines in a File__
+
+
+If you have a long list of names in a text file, and you are concerned
+that there might be some duplicates, this will weed out the duplicates:
+
+```
+(~) 66% sort long_file.txt | uniq > unique.out
+```
+> This works by sorting all the lines alphabetically and piping the
+result to the **uniq** program, which removes duplicate lines that
+occur together.  The output is placed in a file named
+_unique.out_.
+
+__Concatenate Several Lists and Remove Duplicates__
+
+
+If you have several lists that might contain repeated entries among
+them, you can combine them into a single unique list by **cat**ing
+them together, then uniquifying them as before:
+
+```
+(~) 67% cat file1 file2 file3 file4 | sort | uniq
+```
+
+__Count Unique Lines in a File__
+
+
+If you just want to know how many unique lines there are in the file,
+add a **wc** to the end of the pipe:
+
+```
+(~) 68% sort long_file.txt | uniq | wc -l
+```
+
+__Page Through a Really Long Directory Listing__
+
+
+Pipe the output of **ls** to the **more** program, which shows a
+page at a time.  If you have it, the **less** program is even
+better:
+
+```
+(~) 69% ls -l | more
+```
+
+__Monitor a Rapidly Growing File for a Pattern__
+
+
+Pipe the output of **tail -f** (which monitors a growing file and
+prints out the new lines) to **grep**.  For example, this will
+monitor the _/var/log/syslog_ file for the appearance of e-mails
+addressed to _mzhang_:
+
+```
+(~) 70% tail -f /var/log/syslog | grep mzhang
+```
+
+
+
+
+
+
+Advanced Unix
 ==================
- - sort
- - uniq
  - awk
  - sed
  - perl
@@ -549,6 +771,18 @@ Getting things done
 
 Text Editors
 ============
+
+It is often necessary to create and write to a file while using the terminal. This makes it essential to use a terminal text editor. There are many text editors out there. Some of our favorite are Emacs and vim. We are going to start you out with a simple text editor call __nano__
+
+The way you use nano to create a file is simply by typing the command _nano_ followed by the name of the file you wish to create.
+
+```
+(~) 71% nano firstFile.txt
+```
+
+This is what you will see:
+
+![First Nano](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/nano_new.png)
 
 
 Git for Beginners
