@@ -228,6 +228,291 @@ There are also some useful shell commands you can issue:
 - _!!_: Reissue the immediate previous command.
 - _!\<partial command string\>_: Reissue the previous command that began with the indicated letters.  For example, _!l_ would reissue the _ls -F_ command from the earlier example.
 
+**bash** offers automatic command completion and spelling correction.  If you type part of a command and then the tab key, it will prompt you with all the possible completions of the command.  For example:
+
+```
+(~) 51% <b>fd<tab></b>
+(~) 51% fd
+fd2ps    fdesign  fdformat fdlist   fdmount  fdmountd fdrawcmd fdumount
+(~) 51%
+```
+
+If you hit tab after typing a command, but before pressing \<Enter\>, **bash** will prompt you with a list of file names. This is because many commands operate on files.
+
+__Wildcards__
+
+You can use wildcards when referring to files.  "*" refers to zero or more characters.  "?" refers to any single character.  For example, to list all files with the extension ".txt", run **ls** with the pattern "*.txt":
+
+```
+(~) 56% ls -F *.txt
+final_exam_questions.txt  genomics_problem.txt
+genebridge.txt            mapping_run.txt
+```
+
+There are several more advanced types of wildcard patterns that you can read about in the **tcsh** manual page.  For example, you can refer to files beginning with the characters "f" or "g" and ending with ".txt" this way:
+
+```
+(~) 57% ls -F [f-g]*.txt
+final_exam_questions.txt  genebridge.txt            genomics_problem.txt
+```
+
+__Home Sweet Home__
+
+
+When you first log in, you'll be placed in a part of the system that is your personal domain, called the _home directory_.  You are free to do with this area what you will: in particular you can create and delete files and other directories.  In general, you cannot create files elsewhere in the system.
+
+
+
+Your home directory lives somewhere way down deep in the bowels of the system.  On our iMacs, it is a directory with the same name as your login name, located in <b>/Users</b>.  The full directory path is therefore **/Users/username**.  Since this is a pain to write, the shell allows you to abbreviate it as _~username_ (where "username" is your user name), or simply as _~_.  The weird character (technically called the "tilde" or "twiddle") is usually hidden at the upper left corner of your keyboard.
+
+
+
+To see what is in your home directory, issue the command _ls -F_:
+
+```
+(~) % ls -F
+INBOX         Mail/         News/         nsmail/       public_html/
+```
+
+This shows one file "INBOX" and four directories ("Mail", "News") and so on.  (The "-F" in the command turns on fancy mode, which appends special characters to directory listings to tell you more about what you're seeing.  "/" means directory.)
+
+
+In addition to the files and directories shown with _ls -F_, there may be one or more hidden files.  These are files and directories whose names start with a "." (technically called the "dot" character).  To see these hidden files, add an "a" to the options sent to the _ls_ command:
+
+```
+(~) % ls -aF
+./                .cshrc            .login            Mail/
+../               .fetchhost        .netscape/        News/
+.Xauthority       .fvwmrc           .xinitrc*         nsmail/
+.Xdefaults        .history          .xsession@        public_html/
+.bash_profile     .less             .xsession-errors
+.bashrc           .lessrc           INBOX
+```
+
+Whoa!  There's a lot of hidden stuff there.  But don't go deleting dot files willy-nilly.  Many of them are essential configuration files for commands and other programs.  For example, the _.profile_ file contains configuration information for the **bash** shell.  You can peek into it and see all of **bash**'s many options.  You can edit it (when you know what you're doing) in order to change things like the command prompt and command search path.
+
+
+__Getting Around__
+
+
+You can move around from directory to directory using the _cd_ command.  Give the name of the directory you want to move to, or give no name to move back to your home directory.  Use the _pwd_ command to see where you are (or rely on the prompt, if configured):
+
+```
+(~/docs/grad_course/i) 56% cd
+(~) 57% cd /
+(/) 58% ls -F
+bin/         dosc/        gmon.out     mnt/         sbin/
+boot/        etc/         home@        net/         tmp/
+cdrom/       fastboot     lib/         proc/        usr/
+dev/         floppy/      lost+found/  root/        var/
+(/) 59% <b>cd ~/docs/</b>
+(~/docs) 60% <b>pwd</b>
+/usr/home/lstein/docs
+(~/docs) 62% cd ../projects/
+(~/projects) 63% ls
+Ace-browser/               bass.patch
+Ace-perl/                  cgi/
+Foo/                       cgi3/
+Interface/                 computertalk/
+Net-Interface-0.02/        crypt-cbc.patch
+Net-Interface-0.02.tar.gz  fixer/
+Pts/                       fixer.tcsh
+Pts.bak/                   introspect.pl*
+PubMed/                    introspection.pm
+SNPdb/                     rhmap/
+Tie-DBI/                   sbox/
+ace/                       sbox-1.00/
+atir/                      sbox-1.00.tgz
+bass-1.30a/                zhmapper.tar.gz
+bass-1.30a.tar.gz
+(~/projects) 64%
+```
+
+Each directory contains two special hidden directories named "." and
+"..".  "." refers always to the directory in which it is located.
+".." refers always to the parent of the directory.  This lets you move
+upward in the directory hierarchy like this:
+
+```
+(~/docs) 64% cd ..
+```
+
+
+and to do arbitrarily weird things like this:
+
+```
+(~/docs) 65% cd ../../lstein/docs
+```
+
+The latter command moves upward two levels, and then into a directory
+named "docs".
+
+
+If you get lost, the _pwd_ command prints out the full path to
+the current directory:
+
+```
+(~) 56% pwd
+/Users/lstein
+```
+
+__Essential Unix Commands__
+
+
+With the exception of a few commands that are built directly into the
+shell, all Unix commands are standalone executable programs.  When you
+type the name of a command, the shell will search through all the
+directories listed in the PATH environment variable for an executable
+of the same name.  If found, the shell will execute the command.
+Otherwise, it will give a "command not found" error.
+
+
+Most commands live in `/bin`, `/usr/bin`, or
+`/usr/local/bin`.
+
+__Getting Information About Commands__
+
+
+The **man** command will give a brief synopsis of the command:
+
+```
+(~) 76% man wc
+Formatting page, please wait...
+WC(1)                                                       WC(1)
+
+NAME
+       wc - print the number of bytes, words, and lines in files
+
+SYNOPSIS
+       wc [-clw] [--bytes] [--chars] [--lines] [--words] [--help]
+       [--version] [file...]
+
+DESCRIPTION
+       This manual page documents the  GNU  version  of  wc.   wc
+       counts  the  number  of bytes, whitespace-separated words,
+...
+```
+
+
+__Finding Out What Commands are on Your Computer__
+
+The **apropos** command will search for commands matching a keyword
+or phrase:
+
+```
+(~) 100% apropos column
+showtable (1)        - Show data in nicely formatted columns
+colrm (1)            - remove columns from a file
+column (1)           - columnate lists
+fix132x43 (1)        - fix problems with certain (132 column) graphics
+modes
+```
+
+__Arguments and Command Switches__
+
+
+Many commands take arguments.  Arguments are often (but not
+inevitably) the names of one or more files to operate on.  Most
+commands also take command-line "switches" or "options", which
+fine-tune what the command does.  Some commands recognize "short
+switches" that consist of a single character, while others recognize
+"long switches" consisting of whole words.
+
+
+The **wc** (word count) program is an example of a command that
+recognizes both long and short options.  You can pass it the
+**-c**, **-w** and/or **-l** options to count the characters,
+words and lines in a text file, respectively.  Or you can use the
+longer but more readable, **--chars**, **--words** or
+**--lines** options.  Both these examples count the number of
+characters and lines in the text file `/var/log/messages`:
+
+```
+(~) 102% wc -c -l /var/log/messages
+     23     941 /var/log/messages
+(~) 103% wc --chars --lines /var/log/messages
+     23     941 /var/log/messages
+```
+
+
+You can cluster short switches by concatenating them together, as
+shown in this example:
+
+```
+(~) 104% wc -cl /var/log/messages
+     23     941 /var/log/messages
+```
+
+Many commands will give a brief usage summary when you call them with
+the **-h** or **--help** switch.
+
+__Spaces and Funny Characters__
+
+The shell uses whitespace (spaces, tabs and other nonprinting
+characters) to separate arguments.  If you want to embed whitespace in
+an argument, put single quotes around it.  For example:
+
+```
+mail -s 'An important message' 'Bob Ghost <bob@ghost.org>'
+```
+
+This will send an e-mail to the fictitious person Bob Ghost.  The **-s** switch takes an
+argument, which is the subject line for the e-mail.  Because the
+desired subject contains spaces, it has to have quotes around it.
+Likewise, my e-mail address, which contains embedded spaces, must also
+be quoted in this way.
+
+
+Certain special non-printing characters have _escape codes_ associated with them:
+
+
+Escape Code | Description  
+------------|--------------
+\n          | new line character  
+\t          | tab character
+\r          | carriage return character  
+\a          | bell character (ding! ding!)
+\nnn        | the character whose ASCII code is **nnn**
+
+
+__Useful Commands__
+
+Here are some commands that are used extremely frequently.  Use
+**man** to learn more about them.  Some of these commands may be
+useful for solving the problem set ;-)
+
+__Manipulating Directories__
+
+Command | Description
+--------|------------
+ls      | Directory listing.  Most frequently used as **ls -F** (decorated listing) and **ls -l** (long listing).
+mv      | Rename or move a file or directory.
+cp      | Copy a file.
+rm      | Remove (delete) a file.
+mkdir   | Make a directory
+rmdir   | Remove a directory
+ln      | Create a symbolic or hard link.
+chmod   | Change the permissions of a file or directory.
+
+
+Command | Description
+--------|------------
+cat     | Concatenate program.  Can be used to concatenate multiple files together into a single file, or, much more frequently, to send the contents of a file to the terminal for viewing.
+more    | Scroll through a file page by page.  Very useful when viewing large files.  Works even with files that are too big to be opened by a text editor.
+less    | A version of **more** with more features.
+head    | View the head (top) of a file.  You can control how many lines to view.
+tail    | View the tail (bottom) of a file.  You can control how many lines to view.  You can also use **tail** to view a growing file.
+wc      | Count words, lines and/or characters in one or more files.
+tr      | Substitute one character for another.  Also useful for deleting characters.
+sort    | Sort the lines in a file alphabetically or numerically.
+uniq    | Remove duplicated lines in a file.
+cut     | Remove sections from each line of a file or files.
+fold    | Wrap each input line to fit in a specified width.
+grep    | Filter a file for lines matching a specified pattern.  Can also be reversed to print out lines that don't match the specified pattern.
+gzip (gunzi) | Compress (uncompress) a file.
+tar     | Archive or unarchive an entire directory into a single file.
+emacs   | Run the Emacs text editor (good for experts).
+vi      | Run the vi text editor (better for experts).
 
 
 Working With Files 
