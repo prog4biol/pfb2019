@@ -783,6 +783,36 @@ The way you use nano to create a file is simply by typing the command _nano_ fol
 This is what you will see:
 
 ![First Nano](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/nano_new.png)
+New file with nano.
+
+![Modified Nano](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/nano-modifided.png)
+Modified and not saved file.
+
+Things to notice:
+- At the top
+  - the name of the program (nano) and it's version number
+  - the name of the file you’re editing
+  - and whether the file has been modified since it was last saved.
+- In the middle
+  - you will see either a blank area or text you have typed
+- At the bottom
+  - A listing of keyboard commands
+  
+Keyboard commands are the only way to interact with the editor. You cannot use your mouse or trackpad.
+
+Find more commands by using `control g`: 
+![Modified Nano](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/nano-modifided.png)
+
+The Meta key is \<esc\>. To use the Meta+key, hit \<esc\>, release, then hit the following key
+
+Helpful commands:
+-  Jump to a specific line:
+  - control + _ then line number 
+- Copy a block of highlighted text
+  - control + ^ then move your cursor to start to highlight a block for copying 
+  - Meta ^ to end your highlight block
+- Paste 
+  - control + u
 
 
 Git for Beginners
