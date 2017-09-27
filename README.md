@@ -5,8 +5,7 @@ Programming For Biology 2017
 Instructors
 ============
 Simon Prochnik  
-Sofia Robb  
-​    
+Sofia Robb     
 ***
 
 Table of Contents
@@ -81,9 +80,153 @@ What are our tips for being successful in your efforts to learn to program?
 Unix Overview
 =============
 
+__What is the Command-Line?__
+
+Underlying the pretty Mac OSX GUI is a powerful command-line operating
+system. The command-line gives you access to the internals of the OS,
+and is also a convenient way to write custom software and scripts.
 
 
+Many bioinformatics tools are written to run on the command-line and
+have no graphical interface. In many cases, a command-line tool is
+more versatile than a graphical tool, because you can easily combine
+command-line tools into automated scripts that accomplish tasks
+without human intervention.
 
+
+In this course, we will be writing Pyton scripts that are completely
+command-line based.
+
+__Logging into Your Workstation__
+
+Your workstation is an iMac. To log into it, provide the following
+information:
+
+_Your username:_ the initial of your first name, followed by your full last name.  
+
+For example, if your username is **srobb** for **s**ofia **robb**  
+
+_Your password:_ **changeme**
+
+
+__Bringing up the Command-Line__ 
+
+
+To bring up the command-line, use the Finder to navigate to
+_Applications->Utilities_ and double-click on the _Terminal_
+application. This will bring up a window like the following:
+
+![image of terminal screenshot](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/terminal_screenshot.png)
+OSX Terminal
+
+
+You can open several Terminal windows at once. This is often helpful.
+
+
+You will be using this application a lot, so I suggest that you drag
+the Terminal icon into the shortcuts bar at the bottom of your screen.
+
+
+__OK. I've Logged in.  What Now?__
+
+
+The terminal window is running **shell** called "bash." The shell is a loop that:
+1. Prints a prompt
+2. Reads a line of input from the keyboard
+3. Parses the line into one or more commands
+4. Executes the commands (which usually print some output to the terminal)
+5. Go back 1.
+
+
+There are many different shells with bizarre names like **bash**, **sh**, **csh**, **tcsh**, **ksh**, and **zsh**.  The "sh" part means shell.  Each shell was designed for the purpose of confusing you and tripping you up.  We have set up your accounts to use **bash**.  Stay with **bash** and you'll get used to it, eventually.
+
+
+__Command-Line Prompt__
+
+
+Most of bioinformatics is done with command-line software, so you
+should take some time to learn to use the shell effectively.
+
+
+This is a command-line prompt:
+
+```
+bush202>
+```
+
+
+This is another:
+
+```
+(~) 51%
+```
+
+This is another:
+
+```
+srobb@bush202 1:12PM>
+```
+
+What you get depends on how the system administrator has customized
+your login.  You can customize it yourself when you know how.
+
+
+The prompt tells you the shell is ready to accept a command.  When
+a long-running command is going, the prompt will not reappear until
+the system is ready to deal with your next request.
+
+__Issuing Commands__
+
+
+Type in a command and press the &lt;Enter&gt; key.  If the command has
+output, it will appear on the screen.  Example:
+
+```
+(~) 53% ls -F
+GNUstep/                 cool_elegans.movies.txt  man/
+INBOX                    docs/                    mtv/
+INBOX~                   etc/                     nsmail/
+Mail@                    games/                   pcod/
+News/                    get_this_book.txt        projects/
+axhome/                  jcod/                    public_html/
+bin/                     lib/                     src/
+build/                   linux/                   tmp/
+ccod/
+(~) 54%
+```
+
+The command here is _ls -F_ which produces a listing of files and directories in the current directory (more on which later).  After
+its output, the command prompt appears again.
+
+
+Some programs will take a long time to run. After you issue their command names, you won't recover the shell prompt until they're done. You can either launch a new shell (from Terminal's File menu), or run the command in the background using the ampersand:
+
+```
+(~) 54% long_running_application &
+(~) 55%
+```
+
+
+The command will now run in the background until it is finished. If it has any output, the output will be printed to the terminal window. You may wish to redirect the output as described later.
+
+__Command-Line Editing__
+
+Most shells offer command-line entering.  Up until the comment you press <Enter>, you can go back over the command-line and edit it using the keyboard.  Here are the most useful keystrokes:
+ 
+- _Backspace_: Delete the previous character and back up one.
+- _Left arrow_, right arrow: Move the text insertion point (cursor) one character to the left or right.
+- _control-a (^a)_: Move the cursor to the beginning of the line. (Mnemonic: A is first letter of alphabet)
+- _control-e (^e)_: Move the cursor to the end of the line. Mnemonic: E for the End (^Z was already taken for something else).
+- _control-d (^d)_: Delete the character currently under the cursor. D=Delete.
+- _control-k (^k)_: Delete the entire line from the cursor to the end. k=kill.  The line isn't actually deleted, but put into a temporary holding place called the "kill buffer".
+- _control-y (^y)_: Paste the contents of the kill buffer onto the command-line starting at the cursor.  y=yank.
+- _Up arrow, down arrow_: Move up and down in the command history.  This lets you reissue previous commands, possibly after modifying them.
+
+There are also some useful shell commands you can issue:
+- _history_: Show all the commands that you have issued recently, nicely numbered.
+- _!\<number\>_: Reissue an old command, based on its number (which you can get from _history_).
+- _!!_: Reissue the immediate previous command.
+- _!\<partial command string\>_: Reissue the previous command that began with the indicated letters.  For example, _!l_ would reissue the _ls -F_ command from the earlier example.
 
 
 
