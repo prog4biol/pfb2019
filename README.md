@@ -11,14 +11,17 @@ Sofia Robb
 
 Table of Contents
  * [Big Picture](#big-picture)  
+
  * [Unix](#unix)  
      * [Unix Overview](#unix-overview)  
      * [Getting Around](#getting-around)    
      * [Getting things done](#getting-things-done)  
      * [Text Editors](#text-editors)  
      * [Git for Beginners](#git-for-beginners)  
+
   * [AWS](#aws)  
      * [AWS Overview](#aws-overview)  
+
   * [Python](#python)  
      * [Python Overview](#python-overview)  
      * [Running Python](#running-python)  
@@ -31,9 +34,11 @@ Table of Contents
      * [Sequences](#sequences)
      * [Strings](#strings)   
      * [Lists and Tuples](#lists-and-tuples)  
+     * [More Complex Data Structures](#morecomplex)
      * [Loops](#loops)  
      * [Dictionaries](#dictionaries)  
      * [Sets](#sets)  
+     * [Iterables](#iterables)  
      * [I/O and Files](#io-and-files)  
      * [Regular Expressions](#regular-expressions)  
      * [Functions](#functions)  
@@ -41,11 +46,17 @@ Table of Contents
      * [Exceptions](#exceptions)  
      * [Classes](#classes)   
      * [Datastructures](#datastructures)  
+
  * [BioPython](#biopython)  
+
+    @sep seqio, genbank files, 
+
     * [BioPython Overview](#biopython-overview)  
     * [BioPython Subtopic 1](#biopython-subtopic-1)  
     * [BioPython Subtopic 2](#biopython-subtopic-2)  
+
  * [My Questions](#my-questions)  
+
  * [Bioinformatic Analysis and Tools](#bioinformatic-analysis-and-tools)  
    * [Bioinformatic Analysis and Tools Overview](#bioinformatics-analysis-and-tools-overview)  
    * [Sequence Search and Alignments](#sequence-search-and-alignments)  
@@ -89,8 +100,7 @@ Unix Overview
 
 Working With Files 
 ===================
- - ls  
- - cd  
+ - ]]-cd  
  - cp  
  - rm  
  - cat  
@@ -143,7 +153,7 @@ Basic:
 
 
 ***
-# AWS
+# Amazon Web Services (AWS)
 ***
 
 
@@ -261,9 +271,9 @@ Python does not allow punctuation characters such as @, $, and % within identifi
 
 __Naming conventions for Python Identifiers__: 
  * The first character is lowercase, unless it is a name of a Class. Classes should begin with an uppercase characters. (ex. Seq)
- * Private identifiers begin with an underscore. (ex. \_private)
- * Strong private identifiers begin with two underscores. (ex. \_\_private)
- * Language-defined special names begin and end with two underscores. (ex.\_\_special\_\_)
+ * Private identifiers begin with an underscore. (ex. `_private`)
+ * Strong private identifiers begin with two underscores. (ex. `__private`)
+ * Language-defined special names begin and end with two underscores. (ex. `__special__`)
 
 __Reserved Words__: 
 The following is a list of Python keywords. These are special words that already have a purpose in python and therefore cannot be used in indentifier names.
@@ -401,7 +411,7 @@ print(a+b) # + is a sum operator on integers
 ```
 
 
-  <p>&nbsp;</p>
+
 
 __Tuple__
 - Tuples are similar to lists and contain ordered, *indexed* collection of data.
@@ -427,11 +437,16 @@ __Tuple__
 | 10    | Nov   |
 | 11    | Dec   |
 
-<p>&nbsp;</p>
+
 
 __Dictionary__
-- Dictionaries are unordered collections of key/value pairs.
+
+- Dictionaries are good for storing data that can be represented as a two-column table.
+
+- They store unordered collections of key/value pairs.
+
 - A dictionary is enclosed in curly braces. and sets of Key/Value pairs are separated by commas 
+
 - A colon is written between each key and value. Commas separate key:value pairs.
 
   ​
@@ -446,7 +461,7 @@ __Dictionary__
 | BRCA1 | GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA |
 
 
-   <p>&nbsp;</p>
+
 
 __Type Conversion__
 Sometimes you may need to convert data into a specific type. Here are some examples of functions that will help you to do this.
@@ -466,22 +481,6 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 
 
 
-~~__Should we include these??? I think they are too complicated__~~   
-
-| ~~Function~~              | ~~Description~~                          |
-| ------------------------- | ---------------------------------------- |
-| ~~eval(str)~~             | ~~Evaluates a string and returns an object.~~ |
-| ~~complex(real [,imag])~~ | ~~Creates a complex number.~~            |
-| ~~repr(x)~~               | ~~Converts x to an expression string.~~  |
-| ~~frozenset(s)~~          | ~~Converts s to a frozen set.~~          |
-| ~~unichr(x)~~             | ~~Converts an integer to a Unicode character.~~ |
-| ~~ord(x)~~                | ~~Converts a single character to its integer value.~~ |
-| ~~hex(x)~~                | ~~Converts an integer to a hexadecimal string.~~ |
-| ~~oct(x)~~                | ~~Converts an integer to an octal string.~~ |
-
-
-<p>&nbsp;</p>
-
 
 Operators
 ==========
@@ -489,7 +488,7 @@ Operators
 include // floor division and % modulus
 
 
-<p>&nbsp;</p>  
+
 
 __Arthmetic Operators__  
 
@@ -499,18 +498,18 @@ __Arthmetic Operators__
 | \+       | Addition                                 | 3+2            | 5      |
 | \-       | Subtraction                              | 3-2            | 1      |
 | \*       | Multiplication                           | 3\*2           | 6      |
-| \/       | Division                                 | 3/2            | 1.5    |
-| \%       | Modulus (divides left operand by right operand and returns the remainder) | 3%2            | 1      |
+| /        | Division                                 | 3/2            | 1.5    |
+| %        | Modulus (divides left operand by right operand and returns the remainder) | 3%2            | 1      |
 | \*\*     | Exponent                                 | 3\*\*2         | 9      |
-| \//      | Floor Division (result is the quotient with digits after the decimal point removed. If one of the operands is negative, the result is floored, i.e., rounded away from zero | 3//2  ; -11//3 | 1 ; -4 |
+| //       | Floor Division (result is the quotient with digits after the decimal point removed. If one of the operands is negative, the result is floored, i.e., rounded away from zero | 3//2  ; -11//3 | 1 ; -4 |
 
-<p>&nbsp;</p>  
+
 
 __Assignment Operators__  
 
 | Operator | Equivalent to          | Example                     | result evaluates to |
 | -------- | ---------------------- | --------------------------- | ------------------- |
-| \=       | a = 3                  | result = 3                  | 3                   |
+| =        | a = 3                  | result = 3                  | 3                   |
 | \+=      | result = result + 2    | result = 3 ; result += 2    | 5                   |
 | \-=      | result = result - 2    | result = 3 ; result -= 2    | 1                   |
 | \*=      | result = result * 2    | result = 3  ; result \*= 2  | 6                   |
@@ -519,7 +518,7 @@ __Assignment Operators__
 | \*\*=    | result = result \*\* 2 | result = 3 ; result \*\*= 2 | 9                   |
 | //=      | result = result // 2   | result = 3 ; result //= 3   | 1                   |
 
-<p>&nbsp;</p>  
+
 
 
 
@@ -537,7 +536,7 @@ These operators compare two values and returns true or false.
 | \>=      | greater than or equal | 3 \>= 2 | True   |
 | \<=      | less than or equal    | 3 \<= 2 | False  |
 
-<p>&nbsp;</p>  
+
 
 __Logical Operators__
 
@@ -547,7 +546,7 @@ __Logical Operators__
 | or       | TRUE if left operand is Treu or right operand is True | bool(3==2 or 2<3)  | True   |
 | not      | Reverses the logical status              | bool(not False)    | True   |
 
-<p>&nbsp;</p>  
+
 
 __Membership Operators__  
 
@@ -574,52 +573,54 @@ False
 ```
 
 
-<p>&nbsp;</p> 
+
 
 __Operator Precedence__
 
 Operators are listed in order of precedence. Highest listed first. Not all the operators listed here are mentioned above. 
 
-| Operator                     | Description                              |
-| ---------------------------- | ---------------------------------------- |
-| \*\*                         | Exponentiation (raise to the power)      |
-| \~ \+ \-                     | Complement, unary plus and minus (method names for the last two are +@ and -@) |
-| \* / % //                    | Multiply, divide, modulo and floor division |
-| \+ \-                        | Addition and subtraction                 |
-| \>> \<<                      | Right and left bitwise shift             |
-| \&                           | Bitwise 'AND'                            |
-| \^ \|                        | Bitwise exclusive 'OR' and regular 'OR'  |
-| \<= < > >=                   | Comparison operators                     |
-| \<> == !=                    | Equality operators                       |
-| \= %= /= //= -= += \*= \*\*= | Assignment operators                     |
-| is is not                    | Identity operators                       |
-| in not in                    | Membership operators                     |
-| not or and                   | Logical operators                        |
+| Operator                    | Description                              |
+| --------------------------- | ---------------------------------------- |
+| \*\*                        | Exponentiation (raise to the power)      |
+| \~ \+ \-                    | Complement, unary plus and minus (method names for the last two are +@ and -@) |
+| \* / % //                   | Multiply, divide, modulo and floor division |
+| \+ \-                       | Addition and subtraction                 |
+| \>> \<<                     | Right and left bitwise shift             |
+| &                           | Bitwise 'AND'                            |
+| ^ \|                        | Bitwise exclusive 'OR' and regular 'OR'  |
+| \<= < > >=                  | Comparison operators                     |
+| \<> == !=                   | Equality operators                       |
+| = %= /= //= -= += \*= \*\*= | Assignment operators                     |
+| is                          | Identity operator                        |
+| is not                      | Non-identity operator                    |
+| in                          | Membership operator                      |
+| not in                      | Negative membership operator             |
+| not, or, and                | logical operators                        |
 
 
-<p>&nbsp;</p>
+
 
 Truth
 ======
 Lets take a step back, What is truth?  
 
 Everything is true, except for:  
-- 0
-- None
-- False
-- '' (empty string)
-- [] (empty list)
-- () (empty tuple)
-- {} (empty dictionary)
+- `0`
+- `None`
+- `False`
+- `''` (empty string)
+- `[]` (empty list)
+- `()` (empty tuple)
+- `{}` (empty dictionary)
 
 Which means that these are True
-- '0'
-- 'None'
-- 'False'
-- 'True'
-- ' ' (string of one blank space)
+- `'0'`
+- `'None'`
+- `'False'`
+- `'True'`
+- `' '` (string of one blank space)
 
-<p>&nbsp;</p>  
+
 
 __Use bool() to test for truth__  
 
@@ -656,7 +657,7 @@ False
 False
 ```
 
-<p>&nbsp;</p>
+
 
 
 
@@ -692,8 +693,8 @@ found AGC in your dna sequence
 
 __If/Else Statement__
 - The If portion of the if/else statement behave as before. 
-- When the if statement is true the if nested statement block will be executed. 
-- When the if statement is false the else nested statement block will be executed.
+- The first indented block is executed if the condition is true.
+- If the condition is false, the second indented else block is executed.
 
 ```python
 dna = 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'
@@ -709,15 +710,9 @@ did not find ATG in your dna sequence
 
 
 __if/elif__
-- The If portion of the if/else statement behave as before. 
-- When the if statement is true the if nested statement block will be executed.
-- When the if statement is false, the first elif expression will be tested. 
-- When the first elif statement is true, the first elif statement block will be executed. 
-- When the if and all the elif statements are false, the nested else statement block will be executed.
-- The if and every elif statement are tested in order. 
-- The first if/elif statement found to be true is the last statement tested. 
-- All subsequent elif statements will not be tested. 
-- When the if and every elif statements are false the else nested statement block will be executed  
+- The if condition is tested as before and the indented block is executed if the condition is true.
+- If it's false, the indented block following the elif is executed if the first elif condition is true. 
+- Any remaining elif conditions will be tested in order until one is found to be true. If none is true, the else indented block is executed.
 
 ```python
 count = 60
@@ -739,7 +734,7 @@ Returns:
 60 is greater than 50
 ```
 
-Let's change count to 20, what statement block gets executed?  
+Let's change count to 20, which statement block gets executed?  
 
 ```python
 count = 20
@@ -783,7 +778,7 @@ Returns:
 50 must be 50
 ```
 
-<p>&nbsp;</p>
+
 
 
 Numbers
@@ -791,14 +786,14 @@ Numbers
 Python recognizes 3 types of numbers: integers, float point numbers, and complex numbers. 
 
 __integer__
-- konwn as an int
+- known as an int
 - an int can be positve or negative
-- and **does not** contain a decimal.
+- and **does not** contain a decimal point.
 
 __floating point number__
 - known as a float
 - a floating point number can be positve or negative
-- and **does** contain a decimal
+- and **does** contain a decimal point
 
 __complex number__
 - known as complex
@@ -859,12 +854,12 @@ __Numeric Functions__
 -5
 ```
 
-<p>&nbsp;</p>
+
 Many numeric functions are not built into the Python core and need to be included in our script if we want to use them. To include them at the tip of the script type: 
 `import math`
-<p>&nbsp;</p>
-These next functions are found in the math module and need to be imported. To use these function, prepend the function with the moudule name, i.e, math.ceil(15.5)  
-<p>&nbsp;</p>
+
+These next functions are found in the math module and need to be imported. To use these function, prepend the function with the module name, i.e, `math.ceil(15.5)`  
+
 
 | math.function | Description                              |
 | ------------- | ---------------------------------------- |
@@ -873,7 +868,7 @@ These next functions are found in the math module and need to be imported. To us
 | exp(x)        | The exponential of x: e<sup>x</sup> is returned |
 | log(x)        | the natural logarithm of x, for x > 0 is returned |
 | log10(x)      | The base-10 logarithm of x for x > 0 is returned |
-| modf(x)       | The fractional and integer parts of x in a two-item tuple are returned. |
+| modf(x)       | The fractional and integer parts of x are returned in a two-item tuple. |
 | pow(x, y)     | The value of x\*\*y is returned          |
 | sqrt(x)       | The square root of x for x > 0 is returned |
 
@@ -886,24 +881,19 @@ These next functions are found in the math module and need to be imported. To us
 >>> math.ceil(2.9)
 3
 >>> math.ceil(-2.9)
--2
->>>
->>>
+-
 >>> math.floor(2.3)
 2
 >>> math.floor(2.9)
 2
 >>> math.floor(-2.9)
 -3
->>>
->>>
 >>> math.exp(2.3)
 9.974182454814718
 >>> math.exp(2.9)
 18.17414536944306
 >>> math.exp(-2.9)
 0.05502322005640723
->>>
 >>>
 >>> math.log(2.3)
 0.8329091229351039
@@ -914,20 +904,13 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 ValueError: math domain error
 >>>
->>>
 >>> math.log10(2.3)
 0.36172783601759284
 >>> math.log10(2.9)
 0.4623979978989561
 >>>
->>>
 >>> math.modf(2.3)
 (0.2999999999999998, 2.0)
->>> math.modf(2.9)
-(0.8999999999999999, 2.0)
->>> math.modf(-2.9)
-(-0.8999999999999999, -2.0)
->>>
 >>>
 >>> math.pow(2.3,1)
 2.3
@@ -938,7 +921,6 @@ ValueError: math domain error
 >>> math.pow(2.3,-2)
 0.18903591682419663
 >>>
->>>
 >>> math.sqrt(25)
 5.0
 >>> math.sqrt(2.3)
@@ -946,8 +928,6 @@ ValueError: math domain error
 >>> math.sqrt(2.9)
 1.70293863659264
 ```
-
-<p>&nbsp;</p>
 
 ### Comparing two numbers
 
@@ -996,7 +976,7 @@ Traceback (most recent call last):
 AttributeError: 'list' object has no attribute 'rstrip'
 ```
 
-## What goes with what?
+## What functions go with my object?
 
 How do you find out what functions work with an object? There's a handy function `dir()`. As an example what functions can you call on our string `'ACGTGA'`?
 
@@ -1452,13 +1432,11 @@ Since these are methods, be sure to use in this format string.method().
 | s.split('delim')             | splits the string on the given exact delimiter. Returns a list of substrings. If no argument is supplied, the string will be split on whitespace. |
 | s.join(list)                 | opposite of split(). The elements of a list will be concatenated together using the string stored in 's' as a delimiter. |
 
-<p>&nbsp;</p>   
 
-__String Formatting__
 
-Strings can be formated using the  
-`format()`
-function. Pretty intuitive! For example, if you want to include literal stings and variables in your print statement and do not want to concatenate or use multiple arguments in the print() function you can use string formatting.  
+### String Formatting
+
+Strings can be formated using the  `format()` function. Pretty intuitive! For example, if you want to include literal stings and variables in your print statement and do not want to concatenate or use multiple arguments in the print() function you can use string formatting.  
 
 ```python
 >>> string = "This sequence: {} is {} nucleotides long and is found in {}."
@@ -1470,24 +1448,41 @@ This sequence: {} is {} nucleotides long and is found in {}.
 >>> print(new_string)
 This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.
 ```
-> We put together the three variables and literal strings in one clean line using string format(). The {} are placeholders for the values in the argument list. The original string is not altered, a new string is returned that incorporates the arguments. You can save the returned value in a new variable.
+We put together the three variables and literal strings into a single string using the function `format()`. The original string is not altered, a new string is returned that incorporates the arguments. You can save the returned value in a new variable. Each `{}` is a placeholder for the strings that need to be inserted. 
 
-You can also directly format and print.
+> Something nice about `format()` is that you can print int and string variable types without converting first.
+
+You can also directly call the format function on a string inside a print function. Here are two examples
+
 ```python
 >>> string = "This sequence: {} is {} nucleotides long and is found in {}."
 >>> print(string.format(dna,dna_len,gene_name))
 This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.
 ```
-> Something nice about format() is that you can have mixed variable types and there are no TypeErrors.
-
-You can create a string on the fly and use the format() function.
+Or you can create a string on the fly and use the format() function.
 ```python
 >>> print( "This sequence: {} is {} nucleotides long and is found in {}.".format(dna,dna_len,gene_name))
 This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.
 ```
-> No need to store the string in a variable.
+> There is no need to store the string in a variable.
+
+### The `format()` mini-language
+
+So far, we have just used `{}` to show where to insert the value of a variable in a string. You can add special characters inside the `{}` to change the way the variable is formatted when it's inserted into the string. 
+
+> You can number these, not necessarily in order.
+
+```python
+>>> '{0}, {1}, {2}'.format('a', 'b', 'c')
+'a, b, c'
+>>> '{2}, {1}, {0}'.format('a', 'b', 'c')
+'c, b, a'
+```
+
+To change the spacing of strings and the way numbers are formatted, you add `:` and other special characters like this `{:>5}` to right-justify a string in a five-character field.
 
 Lets right justify some numbers.  
+
 ```python
 >>> print( "{:>5}".format(2) )
     2
@@ -1495,40 +1490,33 @@ Lets right justify some numbers.
    20
 >>> print( "{:>5}".format(200) )
   200
->>> print( "{:>5}".format(2000) )
- 2000
 ```
- > The arguments: 2, 20, 200, 2000 have all been right justified by a width of 5 columns by using '{:>5}'
+ > The arguments: 2, 20, 200 have all been right justified in a field that is 5 characters wide by using '{:>5}'
 
 
-How about padding with a 0?
+How about padding with zeroes? This means the five-character field will be filled as needed with zeroes to the left of any numbers you want to display
 ```python
 >>> print( "{:>05}".format(2) )
 00002
 >>> print( "{:>05}".format(20) )
 00020
->>> print( "{:>05}".format(200) )
-00200
->>> print( "{:>05}".format(2000) )
-02000
+
 ```
-> Now all of the arguments: 2 ,20, 200, 2000 are right justified to a witdh of 5 and any empty space is filled with a zero. 
+> Now all of the arguments: 2 ,20 are right justified to a witdh of 5 and any empty space is filled with a zero. 
 
 
-Left Justify.
+Use a `<` to indicate left-justification.
 ```python
->>> print( "{:<5} next".format(2) )
-2     next
->>> print( "{:<5} next".format(20) )
-20    next
->>> print( "{:<5} next".format(200) )
-200   next
->>> print( "{:<5} next".format(2000) )
-2000  next
+>>> print( "{:<5} genes".format(2) )
+2     genes
+>>> print( "{:<5} genes".format(20) )
+20    genes
+>>> print( "{:<5} genes".format(200) )
+200   genes
 ```
- > The arguments: 2, 20, 200, 2000 have all been left justified by a width of 5 columns by using '{:<5}'
+ > The arguments: 2, 20, 200 have all been left justified by a width of 5 columns by using '{:<5}'
 
-Left Justify with padding.
+If you want to pad with a non-zero character, you can add this too. Between `:` and the symbol for the justification. Let's try padding with `_`, an underscore.
 ```python
 >>> print( "{:_<5} next".format(2) )
 2____ next
@@ -1536,12 +1524,11 @@ Left Justify with padding.
 20___ next
 >>> print( "{:_<5} next".format(200) )
 200__ next
->>> print( "{:_<5} next".format(2000) )
-2000_ next
-```
- > The arguments: 2, 20, 200, 2000 have all been left justified by a width of 5 columns and any empty space is filled with a '-'
 
-Center Align.
+```
+ > The arguments: 2, 20, 200 have all been left justified in a field that is 5 characters wide and any empty space is filled with a `_`
+
+Center aligning is done with `^`
 ```python
 >>> print( "{:_^10}".format(2) )
 ____2_____
@@ -1549,56 +1536,64 @@ ____2_____
 ____20____
 >>> print( "{:_^10}".format(200) )
 ___200____
->>> print( "{:_^10}".format(2000) )
-___2000___
+
 ```
 > Text can be center aligned by using ':^10'. 10 of course is your column width. The '^' indicates center justification. In our example an underscore is used to illustrate the empty spaces. 
 
-So much can be done with the format() function. Here is one last example, but not the last functionality of this function.  Let truncate a long floating point number.  
+### Summary of special formatting symbols so far
+
+Here are some of the options
+
+```
+format_spec     ::=  [[fill]align][0][width][.precision][type]
+fill            ::=  <any character>
+align           ::=  “<” | “>” | “^”
+width           ::=  integer
+precision       ::=  integer
+type            ::=  “b” | “d” | “e” | “E” | “f” | “g” | “G” | “s” | “x” | “%”
+```
+
+The format spec goes after the colon inside the curly braces `{:  <here>  }`
+
+Here's an example 
+
+{  :    x  <  10   s}
+
+fill with `x` 
+
+left justify `<`
+
+`10` a field of ten characters 
+
+`s` a string
+
+#### The most common types
+
+| type | description                              |
+| ---- | ---------------------------------------- |
+| b    | convert to binary                        |
+| d    | decimal integer                          |
+| e    | exponent, default precision is 6, uses `e` |
+| E    | exponent, uses `E`                       |
+| f    | floating point, default precision 6 (also F) |
+| g    | general number, float for values close to 0, exponent for others; also G |
+| s    | string, default type                     |
+| x    | convert to hexidecimal, also X           |
+| %    | converts to % by multiplying by 100      |
+
+
+
+So much can be done with the format() function. Here is one last example, but not the last functionality of this function.  Let truncate a long floating point number.  The default is 6 decimal places. Note that the function rounds to the nearest decimal place.
+
 ```python
 '{:f}'.format(3.141592653589793)
 '3.141593'
->>> '{:.2f}'.format(3.141592653589793)
-'3.14'
+>>> '{:.4f}'.format(3.141592653589793)
+'3.1416'
 ```
-> We have truncated pi. By default format() truncates floats to 6 places by using '{:f}'. 'f' is a presenation type that indicates a floating point, fixed number out to 6 places.  Truncation can be customized by adding a '.' and the decimal places to display '{.2f}'. Find more examples at [docs.python.org](https://docs.python.org/3/library/string.html#format-examples) 
 
 
 
-The available presentation types are:
-| String Type | Description                              |
-| ----------- | ---------------------------------------- |
-| 's'         | String format. This is the default type for strings and may be omitted. |
-| None        | The same as 's'.                         |
-
-| Integer Type | Description                              |
-| ------------ | ---------------------------------------- |
-| 'b'          | Binary format. Outputs the number in base 2. |
-| 'c'          | Character. Converts the integer to the corresponding unicode character before printing. |
-| 'd'          | Decimal Integer. Outputs the number in base 10. |
-| 'o'          | Octal format. Outputs the number in base 8. |
-| 'x'          | Hex format. Outputs the number in base 16, using lower- case letters for the digits above 9. |
-| 'X'          | Hex format. Outputs the number in base 16, using upper- case letters for the digits above 9. |
-| 'n'          | Number. This is the same as 'd', except that it uses the current locale setting to insert the appropriate number separator characters. |
-| None         | The same as 'd'.                         |
-
-| Float Type | Description                              |
-| ---------- | ---------------------------------------- |
-| 'e'        | Exponent notation. Prints the number in scientific notation using the letter ‘e’ to indicate the exponent. The default precision is 6. |
-| 'E'        | Exponent notation. Same as 'e' except it uses an upper case ‘E’ as the separator character. |
-| 'f'        | Fixed point. Displays the number as a fixed-point number. The default precision is 6. |
-| 'F'        | Fixed point. Same as 'f', but converts nan to NAN and inf to INF. |
-| 'g'        | General format. For a given precision p >= 1, this rounds the number to p significant digits and then formats the result in either fixed-point format or in scientific notation, depending on its magnitude. |
-| 'G'        | General format. Same as 'g' except switches to 'E' if the number gets too large. The representations of infinity and NaN are uppercased, too. |
-| 'n'        | Number. This is the same as 'g', except that it uses the current locale setting to insert the appropriate number separator characters. |
-| '%'        | Percentage. Multiplies the number by 100 and displays in fixed ('f') format, followed by a percent sign. |
-| None       | Similar to 'g', except that fixed-point notation, when used, has at least one digit past the decimal point. The default precision is as high as needed to represent the particular value. The overall effect is to match the output of str() as altered by the other format modifiers. |
-
-
-
-
-
-<p>&nbsp;</p>
 
 
 Lists and Tuples
@@ -1795,8 +1790,6 @@ Let's copy the list using the copy() method.
 
 
 
-
-
 __Building a List one Value at a Time__
 
 Now that you have seen the append() function we can go over how to build a list one value at a time.
@@ -1811,6 +1804,14 @@ Now that you have seen the append() function we can go over how to build a list 
 ['one', 'two']
 ```
 > We start with a an empty list called 'words'. We use append() to add the value 'one' then to add the value 'two'. We end up with a list with two values.
+
+
+
+## List Comprehensions ##
+
+
+
+
 
 
 
@@ -2180,9 +2181,9 @@ Dictionaries
 
 Dictionaries are another iterable, like a string and list. Unlike strings and lists, dictionaries are not a sequence, or in other words, the position is not important. 
 
-Dictionaries are a collection of key value pairs. In python, each key is separated from its value by a colon (:), the items are separated by commas, and the whole thing is enclosed in curly braces. An empty dictionary without any items is written with just two curly braces, like this: {}.
+Dictionaries are a collection of key/value pairs. In python, each key is separated from its value by a colon (:), the items are separated by commas, and the whole thing is enclosed in curly braces. An empty dictionary without any items is written with just two curly braces, like this: `{}`
 
-Keys are unique within a dictionary while values may not be. The values of a dictionary can be of any type, but the keys must be of an immutable data type such as strings, numbers, or tuples.
+Each key in a dictionary is unique, while values may not be. The values of a dictionary can be of any type, but the keys must be of an immutable data type such as strings, numbers, or tuples.
 
 Data that is appropriate for dictionaries are two pieces of information that naturally go together, like gene name and sequence. 
 
@@ -2270,7 +2271,7 @@ Normally you won't do this. We'll talk about ways to build a dictionary from a f
 
    <p>&nbsp;</p>
 
-__Dictionary Key Operators__
+__Checking That Dictionary Keys Exist__
 
 Python generates an error (NameError) if you try to access a key that does not exist.  
 
@@ -2302,6 +2303,17 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 >>> 
 ```
 
+__Sorting Dictionary Keys__
+
+If you want to print the contents of a dictionary, you probably want to sort the keys then iterate over the keys with a for loop. Why do you want to sort the keys?
+
+```python
+for key in sorted(genes):
+  print(key, '=>' , genes[key])
+```
+
+This will print the same order of keys every time you run your script. This is good for finding bugs and means you don't have to check whether the key exists explicitly because `in sorted(genes)` returns a list of all the keys. It also sorts it.
+
 __Dictionary Functions__
 
 | Function       | Description                              |
@@ -2332,7 +2344,7 @@ A set is another Python data type. It is essentially a dictionary with keys but 
 
 - A set is unordered 
 - A set is a collection of data with no duplicate elements. 
-- Common uses include membership testing and eliminating duplicate entries. 
+- Common uses include looking for differences and eliminating duplicates in data sets. 
 
 Curly braces or the set() function can be used to create sets. Note: to create an empty set you have to use set(), not {}; the latter creates an empty dictionary.
 
@@ -2428,8 +2440,13 @@ __Set Methods__
 | set.union(sets)                       | returns the union of set and the other provided sets |
 | set.update(set2)                      | update set with the union of set and set2 |
 
-
 <p>&nbsp;</p>
+
+# Iterables
+
+@sep some theory and general ideas to solidify previous section
+
+@sep comparision between iterables and sequences, dir()
 
 I/O and Files
 =============
@@ -2454,7 +2471,7 @@ Hello, PFB2017!
 ```
 > Remember this example from one of our first lessons?
 
-__Reading from Keyboard Input__
+__Reading input from the keyboard__
 
 This is something new. There is a function which prints a message to the screen and waits for input from the keyboard. This input can be stored in a variable.
 
@@ -2470,7 +2487,7 @@ __Reading from a File__
 
 Most of the data we will be dealing with will be contained in files. 
 
-The first thing to do with a file is open it. We can do this with the open() function. The open() function takes the file name, access mode as arguments and returns a file object.
+The first thing to do with a file is open it. We can do this with the `open()` function. The `open()` function takes the file name, access mode as arguments and returns a file object.
 
 The most common access modes are reading (r) and writing (w).
 
@@ -2480,9 +2497,11 @@ __Open a File__
 ```
 > 'file_object' is a name of a variable. This can be anything. 
 
+__Reading the contents of a file__
+
 Now that we have opened a file and created a file object we can do things with it, like read it. Lets read all the contents at once.  
 
-Let't cat the contents on the _command line_ to see what's in it before we open it in python
+Let's cat the contents on the _command line_ to see what's in it before we open it in python
 
 ```bash
 $ cat seq.nt.fa
@@ -2503,11 +2522,11 @@ ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 
 >>> file_object.close()
 ```
-> The complete contents can be retrieved with teh read() method. Another attribure of file_object that can be accessed is the file name. Notice the blank line following the last line of text when the contents are printed to the screen.
+> The complete contents can be retrieved with the read() method. Another attribure of file_object that can be accessed is the file name. Notice the formatting including newlines are maintained when `contents` is printed to the screen. print() adds another new line when it is finished printing.
 > It is good practice to close your file. Use the close() method. 
 
 
-A for loop can be used to go through the file_object one line at a time.
+A for loop can be used to iterate through the file_object one line at a time.
 ```python
 #!/usr/bin/python3
 
@@ -2528,7 +2547,7 @@ ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 
 Let's use rstrip() method to remove the newline from our file input.
 ```python
-mp02gtfh05:PFB2017 smr$ cat file_for_rstrip.py
+$ cat file_for_rstrip.py
 #!/usr/bin/python3
 
 file_object = open("seq.nt.fa","r")
@@ -2536,7 +2555,7 @@ for line in file_object:
   line = line.rstrip()
   print(line)
 ```
-> rstrip() method removes the newline from the end of the line by default.
+> rstrip() without any parameters returns a string with whitespace removed from the end.
 
 Output:
 ```
