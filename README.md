@@ -796,7 +796,7 @@ Things to notice:
 - In the middle
   - you will see either a blank area or text you have typed
 - At the bottom
-  - A listing of keyboard commands
+  - A listing of keyboard commands such as Save (control + o) and Exit (contorl + x)
   
 Keyboard commands are the only way to interact with the editor. You cannot use your mouse or trackpad.
 
@@ -813,6 +813,9 @@ Helpful commands:
   - Meta ^ to end your highlight block
 - Paste 
   - control + u
+  
+ 
+Nano is a beginners text exitor. vi and Emacs are better choices once you become a bit more comfortable using the terminal. These editors do cool stuff like syntax highlighting.
 
 
 Git for Beginners
