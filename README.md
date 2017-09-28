@@ -866,7 +866,12 @@ __The Basics__
 
 _Creating a new repository_ 
 
-A repository is a project that contains all of the project files, and stores each file's revision history. Repositories can have multiple collaborators.
+A repository is a project that contains all of the project files, and stores each file's revision history. Repositories can have multiple collaborators. Repositories usually have two components, one remote and one local.
+
+
+Let's Do It!
+
+Follow Steps 1 and 2 to create the remote repository. Follow Step 3 to create your local repository and link it to the remote.
 
 1. Navigate to GitHub --> Create Account / Log In --> Go To Repositories --> Click New
 ![Create New Repository](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoButton.png)
@@ -887,20 +892,48 @@ git remote add origin https://github.com/srobb1/PFB2017_problemsets.git
 git push -u origin master
 ```
 
+
 You now have a repository!
 
-_Using your repository_
+Let's back up a bit and talk more about git and about these commands. For basic git use, these are almost all the command you will need to know.
+
+Every git repository has three main elements called _trees_:
+1. _The Working Directory_ contains your files
+2. _The Index_ is the staging area
+3. _The HEAD_ points to the last commit you made.
+> There are a few new words here, we will explain them as we go
+
+command | description
+--------|------------
+`git init` | Creates your new local repository with the three trees on (local machine) 
+`git remote add remote-name URL` | Links your local repository to a remote repository that is often named _origin_ and is found at the given URL.
+`git add filename`  | Propose changes and add file(s) with changes to the index or staging area (local machine)
+`git commit -m 'message'` | Confirm or commit that you really want to add your changes to the HEAD (local machine)
+`git push -u remote-name remote-branch` | Upload your commited changes in the HEAD to the specified remote repository to the specified branch
 
 
-1. Mark 
+Let's Do it!
 
-Basic:
-- Repository
-- git clone
-- git pull
-- git add
-- git commit 
-- git push
+1. Make sure you are in your local repository
+2. Create a new file with nano: `nano git_exercises.txt`
+3. Add a line of text to the new file.
+4. Save (control + o) and Exit (control + x)
+5. (Add) Stage your changes. `git add git_exercises.txt`
+6. (Commit) Become sure you want your changes your changes. `git commit -m 'added a line of text'`
+7. (Push) Sync/Upload your changes to the remote repository. `git push origin master`
+
+That is all there is to it! There are more complicated things you can do but we won't get into those. You will know when you are ready to learn more about git when you figure out there is something you want to do but don't konw how. There are thousands of online tutorials for you to search and follow.
+
+_Cloning a Repository_
+
+Sometimes you want to download and use someone else's repository. 
+
+Let's clone the course material.
+
+Let's do it!
+
+
+
 
 
 
