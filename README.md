@@ -932,8 +932,17 @@ Let's clone the course material.
 
 Let's do it!
 
+1. Go to our [PFB2017 GitHub Repository](https://github.com/srobb1/pfb2017)
+2. Click the 'Clone or Download' Button
+3. Copy the URL
+~[Clone PFB2017](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-clone.png)
+4. _Clone_ the repository to your local machine
+   `git clone https://github.com/srobb1/pfb2017.git`
 
+Now you have a copy of the course material on your computer!
 
+If we make changes to any of these files and you want to update your copy you can _pull_ the changes.
+`git pull`  
 
 
 
