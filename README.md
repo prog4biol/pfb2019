@@ -18,9 +18,6 @@ Table of Contents
      * [Text Editors](#text-editors)  
      * [Git for Beginners](#git-for-beginners)  
 
-  * [AWS](#aws)  
-     * [AWS Overview](#aws-overview)  
-
   * [Python](#python)  
      * [Python Overview](#python-overview)  
      * [Running Python](#running-python)  
@@ -107,16 +104,6 @@ without human intervention.
 
 In this course, we will be writing Pyton scripts that are completely
 command-line based.
-
-Working With Files 
-===================
- - ]]-cd  
- - cp  
- - rm  
- - cat  
- - less/more  
- - grep  
- - wc
 
 
 __Logging into Your Workstation__
@@ -843,11 +830,69 @@ Nano is a beginners text exitor. vi and Emacs are better choices once you become
 
 Git for Beginners
 =================
-Git is a tool for managing files. It allows you to keep track of changes. You are going to be using Git to store your course work and keep your copy of the lecture notes and files up to date. Git can help you do very complex task with files. We are going to keep it simple.
+Git is a tool for managing files and versions of files. It is a _Version Control System_. It allows you to keep track of changes. You are going to be using Git to manage your course work and keep your copy of the lecture notes and files up to date. Git can help you do very complex task with files. We are going to keep it simple.
 
 
+The Big Picture.
 
-GitHub is an online repository for code. They offer free accounts. You will sign up if you already don't have an account.  
+A Version Control System is good for Collaborations, Storing Versions, Restoring Previous Versions, and Managing Backups.
+
+__Collaboration__
+
+Using a Version Control System makes it possible to edit a document with others without the fear of overwritting someone's changes, even if more than one person is working on the same part of the document. All the changes can be merged into one document. These documents are all stored one place. 
+
+
+__Storing Versions__
+
+A Version Control System allows you to save versions of your files and to attach notes to each version. Each save will contain information about the lines that were added or alted.
+
+__Restoring Previous Versions__
+
+Since you are keeping track of versions, it is possible to revert all the files in a project or just one file to a previous version.
+
+
+__Backup__
+
+A Version Control System makes it so that you work locally and sync your work remotely. This means you will have a copy of your project on your computer and the Version Control System Server you are using.
+
+__The Details__
+
+git is the Version Control System we will be using for tracking changes in our files.
+
+[GitHub](https://github.com/) is the Version Control System Server we will be using. They provide free account for all public projects.
+
+
+__The Basics__
+
+_Creating a new repository_ 
+
+A repository is a project that contains all of the project files, and stores each file's revision history. Repositories can have multiple collaborators.
+
+1. Navigate to GitHub --> Create Account / Log In --> Go To Repositories --> Click New
+![Create New Repository](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoButton.png)
+2. Add a name (i.e., PFB2017_problemsets) and a description (i.e., Solutions for PFB2017 Problem Sets) and click "Create Repository"
+![Create New Repository Form](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoForm.png)
+3. Create a directory on your computer and follow the instructions provided.
+![Create New Repository Instructions](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoInstructions.png)
+    - Open your terminal and navigate to the location you want to put a directory for your problem sets
+    - Create a new directory directory (i.e., PFB2017_problemsets)
+    - Follow the instructions provided when you created your repository. These are my instructions, yours will be differnt.
+
+```
+echo "# PFB2017_problemsets" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/srobb1/PFB2017_problemsets.git
+git push -u origin master
+```
+
+You now have a repository!
+
+_Using your repository_
+
+
+1. Mark 
 
 Basic:
 - Repository
@@ -860,21 +905,7 @@ Basic:
 
 
 
-***
-# Amazon Web Services (AWS)
-***
 
-
-
-AWS Overview
-============
-
-Note: I think it would work nicely if we can get prepaid visa credit cards for each student, $50 maybe. Then we can have each of them 
-
-- create an account
-- log in
-- create and launch an instance
-- ssh into instance
 
 
 ***
