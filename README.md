@@ -13,8 +13,8 @@ Table of Contents
 
  * [Unix](#unix)  
      * [Unix Overview](#unix-overview)  
-     * [Getting Around](#getting-around)    
-     * [Getting things done](#getting-things-done)  
+     * [The Basics](#the-basics)    
+     * [Advanced Unix](#advanced-unix)
      * [Text Editors](#text-editors)  
      * [Git for Beginners](#git-for-beginners)  
 
@@ -104,6 +104,9 @@ without human intervention.
 
 In this course, we will be writing Pyton scripts that are completely
 command-line based.
+
+The Basics
+==========
 
 
 __Logging into Your Workstation__
@@ -771,6 +774,9 @@ addressed to _mzhang_:
 
 Advanced Unix
 ==================
+
+Here are a few more advanced Unix topics that are super useful and when you have time you should investigate further. 
+
  - awk
  - sed
  - perl
