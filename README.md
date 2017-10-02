@@ -38,6 +38,7 @@ Table of Contents
      * [I/O and Files](#io-and-files)  
      * [Regular Expressions](#regular-expressions)  
      * [Functions](#functions)  
+     * Scope
      * [Modules](#modules)  
      * [Exceptions](#exceptions)  
      * [Classes](#classes)   
@@ -220,7 +221,7 @@ Some programs will take a long time to run. After you issue their command names,
 __Command-Line Editing__
 
 Most shells offer command-line entering.  Up until the comment you press <Enter>, you can go back over the command-line and edit it using the keyboard.  Here are the most useful keystrokes:
- 
+
 - _Backspace_: Delete the previous character and back up one.
 - _Left arrow_, right arrow: Move the text insertion point (cursor) one character to the left or right.
 - _control-a (^a)_: Move the cursor to the beginning of the line. (Mnemonic: A is first letter of alphabet)
@@ -334,9 +335,9 @@ bass-1.30a.tar.gz
 (~/projects) 64%
 ```
 > Each directory contains two special hidden directories named "." and
-"..".  "." refers always to the directory in which it is located.
-".." refers always to the parent of the directory.  This lets you move
-upward in the directory hierarchy like this:
+> "..".  "." refers always to the directory in which it is located.
+> ".." refers always to the parent of the directory.  This lets you move
+> upward in the directory hierarchy like this:
 
 ```
 (~/docs) 64% cd ..
@@ -348,7 +349,7 @@ and to do arbitrarily weird things like this:
 (~/docs) 65% cd ../../lstein/docs
 ```
 > The latter command moves upward two levels, and then into a directory
-named "docs".
+> named "docs".
 
 
 If you get lost, the _pwd_ command prints out the full path to
@@ -458,22 +459,22 @@ an argument, put single quotes around it.  For example:
 mail -s 'An important message' 'Bob Ghost <bob@ghost.org>'
 ```
 > This will send an e-mail to the fictitious person Bob Ghost.  The **-s** switch takes an
-argument, which is the subject line for the e-mail.  Because the
-desired subject contains spaces, it has to have quotes around it.
-Likewise, my e-mail address, which contains embedded spaces, must also
-be quoted in this way.
+> argument, which is the subject line for the e-mail.  Because the
+> desired subject contains spaces, it has to have quotes around it.
+> Likewise, my e-mail address, which contains embedded spaces, must also
+> be quoted in this way.
 
 
 Certain special non-printing characters have _escape codes_ associated with them:
 
 
-Escape Code | Description  
-------------|--------------
-\n          | new line character  
-\t          | tab character
-\r          | carriage return character  
-\a          | bell character (ding! ding!)
-\nnn        | the character whose ASCII code is **nnn**
+| Escape Code | Description                              |
+| ----------- | ---------------------------------------- |
+| \n          | new line character                       |
+| \t          | tab character                            |
+| \r          | carriage return character                |
+| \a          | bell character (ding! ding!)             |
+| \nnn        | the character whose ASCII code is **nnn** |
 
 
 __Useful Commands__
@@ -484,48 +485,48 @@ useful for solving the problem set ;-)
 
 __Manipulating Directories__
 
-Command | Description
---------|------------
-ls      | Directory listing.  Most frequently used as **ls -F** (decorated listing) and **ls -l** (long listing).
-mv      | Rename or move a file or directory.
-cp      | Copy a file.
-rm      | Remove (delete) a file.
-mkdir   | Make a directory
-rmdir   | Remove a directory
-ln      | Create a symbolic or hard link.
-chmod   | Change the permissions of a file or directory.
+| Command | Description                              |
+| ------- | ---------------------------------------- |
+| ls      | Directory listing.  Most frequently used as **ls -F** (decorated listing) and **ls -l** (long listing). |
+| mv      | Rename or move a file or directory.      |
+| cp      | Copy a file.                             |
+| rm      | Remove (delete) a file.                  |
+| mkdir   | Make a directory                         |
+| rmdir   | Remove a directory                       |
+| ln      | Create a symbolic or hard link.          |
+| chmod   | Change the permissions of a file or directory. |
 
 
-Command | Description
---------|------------
-cat     | Concatenate program.  Can be used to concatenate multiple files together into a single file, or, much more frequently, to send the contents of a file to the terminal for viewing.
-more    | Scroll through a file page by page.  Very useful when viewing large files.  Works even with files that are too big to be opened by a text editor.
-less    | A version of **more** with more features.
-head    | View the head (top) of a file.  You can control how many lines to view.
-tail    | View the tail (bottom) of a file.  You can control how many lines to view.  You can also use **tail** to view a growing file.
-wc      | Count words, lines and/or characters in one or more files.
-tr      | Substitute one character for another.  Also useful for deleting characters.
-sort    | Sort the lines in a file alphabetically or numerically.
-uniq    | Remove duplicated lines in a file.
-cut     | Remove sections from each line of a file or files.
-fold    | Wrap each input line to fit in a specified width.
-grep    | Filter a file for lines matching a specified pattern.  Can also be reversed to print out lines that don't match the specified pattern.
-gzip (gunzi) | Compress (uncompress) a file.
-tar     | Archive or unarchive an entire directory into a single file.
-emacs   | Run the Emacs text editor (good for experts).
-vi      | Run the vi text editor (better for experts).
+| Command      | Description                              |
+| ------------ | ---------------------------------------- |
+| cat          | Concatenate program.  Can be used to concatenate multiple files together into a single file, or, much more frequently, to send the contents of a file to the terminal for viewing. |
+| more         | Scroll through a file page by page.  Very useful when viewing large files.  Works even with files that are too big to be opened by a text editor. |
+| less         | A version of **more** with more features. |
+| head         | View the head (top) of a file.  You can control how many lines to view. |
+| tail         | View the tail (bottom) of a file.  You can control how many lines to view.  You can also use **tail** to view a growing file. |
+| wc           | Count words, lines and/or characters in one or more files. |
+| tr           | Substitute one character for another.  Also useful for deleting characters. |
+| sort         | Sort the lines in a file alphabetically or numerically. |
+| uniq         | Remove duplicated lines in a file.       |
+| cut          | Remove sections from each line of a file or files. |
+| fold         | Wrap each input line to fit in a specified width. |
+| grep         | Filter a file for lines matching a specified pattern.  Can also be reversed to print out lines that don't match the specified pattern. |
+| gzip (gunzi) | Compress (uncompress) a file.            |
+| tar          | Archive or unarchive an entire directory into a single file. |
+| emacs        | Run the Emacs text editor (good for experts). |
+| vi           | Run the vi text editor (better for experts). |
 
 
 __Networking__
 
-Command | Description
---------|------------
-ssh | A secure (encrypted) way to log into machines.
-scp | A secure way to copy (cp) files to and from remote machines.
-ping |  See if a remote host is up.
-ftp/sftp (secure) | transfer files using the File Transfer Protocol.
-who | See who else is logged in.
-lp | Send a file or set of files to a printer.
+| Command           | Description                              |
+| ----------------- | ---------------------------------------- |
+| ssh               | A secure (encrypted) way to log into machines. |
+| scp               | A secure way to copy (cp) files to and from remote machines. |
+| ping              | See if a remote host is up.              |
+| ftp/sftp (secure) | transfer files using the File Transfer Protocol. |
+| who               | See who else is logged in.               |
+| lp                | Send a file or set of files to a printer. |
 
 __Standard I/O and Command Redirection__
 
@@ -540,11 +541,11 @@ world.  These connections are called "streams", because they act like a
 stream of information (metaphorically speaking):
 
 
-Stream Type | Description
-------------|------------
-standard input | This is a communications stream initially attached to the keyboard.  When the program reads from standard input, it reads whatever text you type in.
-standard output | This stream is initially attached to the command window. Anything the program prints to this channel appears in your terminal window.
-standard error | This stream is also initially attached to the command window. It is a separate channel intended for printing error messages.
+| Stream Type     | Description                              |
+| --------------- | ---------------------------------------- |
+| standard input  | This is a communications stream initially attached to the keyboard.  When the program reads from standard input, it reads whatever text you type in. |
+| standard output | This stream is initially attached to the command window. Anything the program prints to this channel appears in your terminal window. |
+| standard error  | This stream is also initially attached to the command window. It is a separate channel intended for printing error messages. |
 
 The word "initially" might lead you to think that standard input,
 output and error can somehow be detached from their starting places
@@ -571,10 +572,10 @@ whose fleece was white as snow.
       6      20     107
 ```
 > In this example, I ran the **wc** program.  It waited for me to
-type in a little poem.  When I was done, I typed the END-OF-FILE
-character, control-D (^D for short).  **wc** then printed out three
-numbers indicating the number of lines, words and characters in the
-input.
+> type in a little poem.  When I was done, I typed the END-OF-FILE
+> character, control-D (^D for short).  **wc** then printed out three
+> numbers indicating the number of lines, words and characters in the
+> input.
 
 
 
@@ -611,13 +612,13 @@ __Redirection Meta-Characters__
 
 Here's the complete list of redirection commands for **bash**:
 
-Redirect command | Description
------------------|-------------
-\< _filename_ | Redirect standard input to file
-\> _filename_ | Redirect standard output to file
-1\> _filename_ | Redirect just standard output to file (same as above)
-2\> _filename_ | Redirect just standard error to file
-> _filename_ 2>&1 | Redirect both stdout and stderr to file
+| Redirect command  | Description                              |
+| ----------------- | ---------------------------------------- |
+| \< _filename_     | Redirect standard input to file          |
+| \> _filename_     | Redirect standard output to file         |
+| 1\> _filename_    | Redirect just standard output to file (same as above) |
+| 2\> _filename_    | Redirect just standard error to file     |
+| > _filename_ 2>&1 | Redirect both stdout and stderr to file  |
 
 
 These can be combined.  For example, this command redirects standard
@@ -645,10 +646,10 @@ two commands are equivalent:
 (~) 67% grep 'gatttgc' big_file.fasta
 ```
 > Both commands use the **grep** command to search for the string
-"gatttgc" in the file _big_file.fasta_.  The first one searches
-standard input, which happens to be redirected from the file.  The
-second command is explicitly given the name of the file on the command
-line.
+> "gatttgc" in the file _big_file.fasta_.  The first one searches
+> standard input, which happens to be redirected from the file.  The
+> second command is explicitly given the name of the file on the command
+> line.
 
 
 Sometimes you want a filter to act on a series of files, one of which
@@ -659,9 +660,9 @@ command-line as an alias for standard input.  Example:
 (~) 68% grep 'gatttgc' big_file.fasta bigger_file.fasta -
 ```
 > This example searches for "gatttgc" in three places.  First it looks
-in _big_file.fasta_, then in _bigger_file.fasta_, and lastly
-in standard input (which, since it isn't redirected, will come from
-the keyboard).
+> in _big_file.fasta_, then in _bigger_file.fasta_, and lastly
+> in standard input (which, since it isn't redirected, will come from
+> the keyboard).
 
 
 __Standard I/O and Pipes__
@@ -675,14 +676,14 @@ commands together into pipelines.  Here's an example:
 22
 ```
 > There are two commands here. **grep** searches a file or standard
-input for lines containing a particular string.  Lines which contain
-the string are printed to standard output.  **wc -l** is the
-familiar word count program, which counts words, lines and characters
-in a file or standard input.  The **-l** command-line option
-instructs **wc** to print out just the line count.  The **|**
-character, which is known as the "pipe" character, connects the two
-commands together so that the standard output of **grep** becomes
-the standard input of **wc**.
+> input for lines containing a particular string.  Lines which contain
+> the string are printed to standard output.  **wc -l** is the
+> familiar word count program, which counts words, lines and characters
+> in a file or standard input.  The **-l** command-line option
+> instructs **wc** to print out just the line count.  The **|**
+> character, which is known as the "pipe" character, connects the two
+> commands together so that the standard output of **grep** becomes
+> the standard input of **wc**.
 
 
 What does this pipe do?  It prints out the number of lines in which
@@ -716,9 +717,9 @@ that there might be some duplicates, this will weed out the duplicates:
 (~) 66% sort long_file.txt | uniq > unique.out
 ```
 > This works by sorting all the lines alphabetically and piping the
-result to the **uniq** program, which removes duplicate lines that
-occur together.  The output is placed in a file named
-_unique.out_.
+> result to the **uniq** program, which removes duplicate lines that
+> occur together.  The output is placed in a file named
+> _unique.out_.
 
 __Concatenate Several Lists and Remove Duplicates__
 
@@ -807,7 +808,7 @@ Things to notice:
   - you will see either a blank area or text you have typed
 - At the bottom
   - A listing of keyboard commands such as Save (control + o) and Exit (contorl + x)
-  
+
 Keyboard commands are the only way to interact with the editor. You cannot use your mouse or trackpad.
 
 Find more commands by using `control g`: 
@@ -818,13 +819,13 @@ The Meta key is \<esc\>. To use the Meta+key, hit \<esc\>, release, then hit the
 Helpful commands:
 -  Jump to a specific line:
   - control + _ then line number 
-- Copy a block of highlighted text
+-  Copy a block of highlighted text
   - control + ^ then move your cursor to start to highlight a block for copying 
   - Meta ^ to end your highlight block
-- Paste 
+-  Paste 
   - control + u
-  
- 
+
+
 Nano is a beginners text exitor. vi and Emacs are better choices once you become a bit more comfortable using the terminal. These editors do cool stuff like syntax highlighting.
 
 
@@ -874,11 +875,11 @@ Let's Do It!
 Follow Steps 1 and 2 to create the remote repository. Follow Step 3 to create your local repository and link it to the remote.
 
 1. Navigate to GitHub --> Create Account / Log In --> Go To Repositories --> Click New
-![Create New Repository](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoButton.png)
+  ![Create New Repository](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoButton.png)
 2. Add a name (i.e., PFB2017_problemsets) and a description (i.e., Solutions for PFB2017 Problem Sets) and click "Create Repository"
-![Create New Repository Form](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoForm.png)
+  ![Create New Repository Form](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoForm.png)
 3. Create a directory on your computer and follow the instructions provided.
-![Create New Repository Instructions](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoInstructions.png)
+  ![Create New Repository Instructions](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoInstructions.png)
     - Open your terminal and navigate to the location you want to put a directory for your problem sets
     - Create a new directory directory (i.e., PFB2017_problemsets)
     - Follow the instructions provided when you created your repository. These are my instructions, yours will be differnt.
@@ -903,13 +904,13 @@ Every git repository has three main elements called _trees_:
 3. _The HEAD_ points to the last commit you made.
 > There are a few new words here, we will explain them as we go
 
-command | description
---------|------------
-`git init` | Creates your new local repository with the three trees on (local machine) 
-`git remote add remote-name URL` | Links your local repository to a remote repository that is often named _origin_ and is found at the given URL.
-`git add filename`  | Propose changes and add file(s) with changes to the index or staging area (local machine)
-`git commit -m 'message'` | Confirm or commit that you really want to add your changes to the HEAD (local machine)
-`git push -u remote-name remote-branch` | Upload your commited changes in the HEAD to the specified remote repository to the specified branch
+| command                                 | description                              |
+| --------------------------------------- | ---------------------------------------- |
+| `git init`                              | Creates your new local repository with the three trees on (local machine) |
+| `git remote add remote-name URL`        | Links your local repository to a remote repository that is often named _origin_ and is found at the given URL. |
+| `git add filename`                      | Propose changes and add file(s) with changes to the index or staging area (local machine) |
+| `git commit -m 'message'`               | Confirm or commit that you really want to add your changes to the HEAD (local machine) |
+| `git push -u remote-name remote-branch` | Upload your commited changes in the HEAD to the specified remote repository to the specified branch |
 
 
 Let's Do it!
@@ -935,7 +936,7 @@ Let's do it!
 1. Go to our [PFB2017 GitHub Repository](https://github.com/srobb1/pfb2017)
 2. Click the 'Clone or Download' Button
 3. Copy the URL
-~[Clone PFB2017](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-clone.png)
+  ~[Clone PFB2017](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-clone.png)
 4. _Clone_ the repository to your local machine
    `git clone https://github.com/srobb1/pfb2017.git`
 
@@ -3971,8 +3972,33 @@ Functions
 
 <p>&nbsp;</p>
 
+Scope
+=======
+
+Python treats variables as local unless defined not to be. It's usually better to pass a parameter to a function than to have a global variable. Where can you use a variable? This is its scope. It is inside the block it's defined in. That's how you declare variables in python.
+
+```python
+def show():
+  print(n)
+n = 5
+show()
+```
+
+The output looks like this
+
+```5```
+
+You can make a variable global with the function`global`
+
+
+
+## Namespaces
+
+
+
 Modules
 =======
+
 @sep
 > dir()
 > import
