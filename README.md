@@ -1,5 +1,4 @@
 Programming For Biology 2017
-===========================
 
 
 Instructors
@@ -4010,7 +4009,7 @@ Modules
 
 
 
-## os
+## os.path
 
 `os.path` has common utilities for working file paths (filenames and directories). A path is either a relative or absolute list of directories (often ending with a filename) that tells you where to find a file or directory.
 
@@ -4022,6 +4021,89 @@ Modules
 | os.path.getsize(path)  | returns path (file) size in bytes or error |
 | os.path.isfile(path)   | does the path point to a file?           |
 | os.path.isdir(path)    | does the path point to a directory?      |
+
+
+
+## os.system
+
+Run a system command from python. Replaced by subprocess
+
+```python
+import os
+os.system("ls -l")
+```
+
+
+
+## subprocess
+
+```python
+import subprocess
+run(["ls","-l"])  # same as running ls -l on the command line
+```
+
+more complex than `os.system()`. You need to specify where input and output go
+
+```rtn = 
+
+```
+
+### Capturing output from a shell pipeline
+
+`ls -l | grep amanda`
+
+becomes this 'shortcut' which will capture the output of the two unix commands in the variable `output`
+
+```python
+import subprocess
+output = subprocess.check_output('ls -l | grep amanda', shell = True)
+```
+
+This is better than alternatives with subprocess.run().
+
+`output` contains a bytes object (more or less a string of ASCII character encodings)
+
+```python
+b'-rw-r--r--  1 amanda  staff       161952 Oct  2 18:03 test.subreads.fa\n-rw-r--r--  1 amanda  staff          126 Oct  2 13:23 test.txt\n'
+```
+
+You can covert by decoding the bytes object into a string 
+
+```python3
+>>>output.decode('utf-8')
+'-rw-r--r--  1 amanda  staff       161952 Oct  2 18:03 test.subreads.fa\n-rw-r--r--  1 amanda  staff          126 Oct  2 13:23 test.txt\n'
+```
+
+### Capturing output the long way (for a single command)
+
+Let's assume that `ls -l` generates some output something like this
+
+```
+total 112
+-rw-r--r--  1 amanda  staff           69 Jun 14 17:41 data.cfg
+-rw-r--r--  1 amanda  staff       161952 Oct  2 18:03 test.subreads.fa
+-rw-r--r--  1 amanda  staff          126 Oct  2 13:23 test.txt
+```
+
+How do we run `ls -l` in python and capture the output (stdout)?
+
+```python3
+import subprocess
+rtn = subprocess.run(['ls','-l'], stdout=subprocess.PIPE )
+bytes = rtn.stdout
+stdout = bytes.decode('utf-8')
+# something like
+lines = stdout.splitlines()
+```
+
+`lines` now contains elements from every line of the `ls -l` output, including the header line, which is not a file
+
+```python3
+>>> lines[0]
+'total 112'
+>>> lines[1]
+'-rw-r--r--  1 amanda  staff     69 Jun 14 17:41 data.cfg'
+```
 
 
 
