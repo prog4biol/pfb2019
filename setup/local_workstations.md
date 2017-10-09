@@ -8,6 +8,7 @@ __INSTALL__
 3. iTerm
 4. Chrome
 5. python3
+6. emacs
 
 
 __Config__
