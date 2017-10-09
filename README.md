@@ -2,7 +2,7 @@ Programming For Biology 2017
 ============================
 
 
-__Instructors__
+__Instructors__  
 Simon Prochnik  
 Sofia Robb     
 ***
