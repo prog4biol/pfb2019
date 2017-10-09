@@ -1,3 +1,5 @@
+<style> @import url("style.css"); </style>
+
 Programming For Biology 2017
 
 
@@ -790,7 +792,8 @@ Here are a few more advanced Unix topics that are super useful and when you have
  - for
 
 
-<div style="page-break-after: always;"></div>
+<div></div>
+
 
 Text Editors
 ============
