@@ -1,5 +1,3 @@
-<style> @import url("style.css"); </style>
-
 Programming For Biology 2017
 
 
