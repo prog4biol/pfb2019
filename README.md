@@ -67,9 +67,14 @@ Table of Contents
 
 Big Picture
 =======================
-Why is it important for Biologists to learn to program?
+__Why is it important for **Biologists** to learn to program?__
 
-What are our tips for being successful in your efforts to learn to program?
+You probably already know the answer to this question since you are here.   
+
+We firmly believe that knowing how to program is just as essential as knowing how to run a gel or set up a PCR reaction. The data we can now get from a single experiment can be overwhelming. This data often needs to be reformatted, filtered, and analyzed in unqiue ways. Programming allows you to perform these tasks in a **reproducible**, **timely**, **efficient**, and **thoughtful** way.
+
+
+__What are our tips for being successful in your efforts to learn to program?__
 1. Practice, practice, practice. Please, spend as much time possible actually coding.
 2. Write only a line or two of code, then test it. If you write too many lines, it becomes more difficult to debug if there is an error.
 3. Errors are not failures. Every error you get is a learning opportunity. Every single error you debug is a major success. Fixing errors is how you will cement what you have learned.
