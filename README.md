@@ -1744,6 +1744,10 @@ It returns three different values depending on x and y
 
   ​
 
+
+
+<div style="page-break-after: always;"></div>
+
 # Sequences
 
 In the next section, we will learn about strings, tuples and lists. These are all examples of python sequences. A string is a sequence of characters `'ACGTGA'`, a tuple `(0.23, 9.74, -8.17, 3.24, 0.16)` and a list `['dog', 'cat', 'bird']` are sequences of any kind of data. We'll see much more detail in a bit.
@@ -2644,6 +2648,9 @@ __~~~~Tuples~~__~~
 
 <p>&nbsp;</p>
 
+
+<div style="page-break-after: always;"></div>
+
 Loops
 =====
 @sep
@@ -2947,6 +2954,10 @@ line after our continue
 Done
 ```
 > When the count is equal to 3 the continue is executed. This causes all the lines within the loop block to be skipped. "line after our continue" is not printed when count is equal to 3. The next loop is executed normally.
+
+
+
+<div style="page-break-after: always;"></div>
 
 __Iterators__
 
@@ -3462,6 +3473,10 @@ Output:
 
 
 <p>&nbsp;</p>
+
+
+
+<div style="page-break-after: always;"></div>
 
 Regular Expressions
 ====================
@@ -3979,6 +3994,9 @@ How would you use regular expressions to find all occurances of 'ATG' and replac
 
 <p>&nbsp;</p>
 
+
+<div style="page-break-after: always;"></div>
+
 Functions
 =========
 @sep: good place for list comprehensions
@@ -4211,6 +4229,10 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 
 
 <p>&nbsp;</p>
+
+
+
+<div style="page-break-after: always;"></div>
 
 Exceptions
 ==========
