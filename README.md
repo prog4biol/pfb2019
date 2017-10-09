@@ -780,6 +780,8 @@ addressed to _mzhang_:
 Advanced Unix
 ==================
 
+@sep: leave out details for now maybe later in the course
+
 Here are a few more advanced Unix topics that are super useful and when you have time you should investigate further. 
 
  - awk
@@ -963,10 +965,8 @@ If we make changes to any of these files and you want to update your copy you ca
 
 ***
 # Python
-***
 
 
-<p>&nbsp;</p>
 
 Python Overview
 ===============
@@ -1024,6 +1024,8 @@ Hello, PFB2017!
 > Note: `print` is a function. Function names are followed by (), so formally, the function is `print()`
 
 
+
+@sep writing python scripts: nano or Pycharm
 
 Running Python Scripts
 -----------------------
@@ -2601,13 +2603,15 @@ Now that you have seen the append() function we can go over how to build a list 
 
 ## List Comprehensions ##
 
-
+@sep add material to cover these
 
 
 
 
 
 # More complex data structures
+
+@sep see data structures section later
 
 You can nest any data type inside any other type. This lets you build multidimensional data tables easily.
 
@@ -3975,7 +3979,7 @@ How would you use regular expressions to find all occurances of 'ATG' and replac
 
 Functions
 =========
-@sep
+@sep: good place for list comprehensions
 > `def, return, positional arguments, keyword arguments, *arguments **keywords`
 > lambda e.g.
 > `squares = list(map(lambda x: x**2, range(10)))`
@@ -4216,12 +4220,12 @@ Exceptions
 
 <p>&nbsp;</p>
 
-Classes 
+~~Classes~~ 
 =======
-@sep
-> `class`
+~~@sep are we going to cover this? Let's try to skip~~
+> ~~`class`~~
 > scope & namespace, 
-> `global, nonlocal`
+> ~~`global, nonlocal`~~
 
 
 
@@ -4230,7 +4234,7 @@ Classes
 
 Datastructures
 ==============
-@sep
+@sep: how you initialize from a file
 > import json
 
 
