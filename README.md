@@ -794,6 +794,9 @@ Here are a few more advanced Unix topics that are super useful and when you have
 <div style="page-break-after: always;"></div>
 
 
+__[Unix 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Unix_01_problemset.md)__
+
+
 Text Editors
 ============
 
@@ -961,6 +964,7 @@ If we make changes to any of these files and you want to update your copy you ca
 
 
 
+__[Unix 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Unix_02_problemset.md)__
 
 
 
