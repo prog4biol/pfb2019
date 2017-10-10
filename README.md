@@ -3747,7 +3747,7 @@ __Using Subpatterns Inside the Regular Expression Match__
 
 This is helpful when you want to find a subpattern and then match the contents again
 
-Once a subpattern matches, you can refer to it within the same regular expression.  The first subpattern becomes \1, the second \2, the third \3, and so on.
+Once a subpattern matches, you can refer to it within the same regular expression.  The first subpattern becomes \\1, the second \\2, the third \\3, and so on.
 
 ```
 Who's afraid of the big bad w(.)\1f
