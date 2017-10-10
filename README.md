@@ -2349,27 +2349,24 @@ ___200____
 Here are some of the options
 
 ```
-format_spec     ::=  [[fill]align][0][width][.precision][type]
+format_spec     ::=  \[\[fill\]align\]\[0\]\[width\]\[.precision\]\[type\]
 fill            ::=  <any character>
-align           ::=  “<” | “>” | “^”
+align           ::=  "<" | ">" | "^"
 width           ::=  integer
 precision       ::=  integer
-type            ::=  “b” | “d” | “e” | “E” | “f” | “g” | “G” | “s” | “x” | “%”
+type            ::=  "b" | "d" | "e" | "E" | "f" | "g" | "G" | "s" | "x" | "%"
 ```
 
 The format spec goes after the colon inside the curly braces `{:  <here>  }`
 
 Here's an example 
 
-{  :    x  <  10   s}
+`{  :    x  <  10   s}`
 
-fill with `x` 
-
-left justify `<`
-
-`10` a field of ten characters 
-
-`s` a string
+> fill with `x`   
+> left justify `<`  
+> `10` a field of ten characters 
+> `s` a string
 
 #### The most common types
 
