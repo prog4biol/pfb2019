@@ -1222,13 +1222,15 @@ You need to import the sys module at the beginning of your script like this
 import sys
 ```
 
-if you write this on the command line
+If you write this on the command line:
 ```bash
 $ calculate_sum.py 5 7
 ```
-
-inside the script, the script name, and the numbers 5 and 7 appear in a list called `sys.argv`. These are the command line parameters, or arguments you want to pass to your script. `sys.argv[0]` is the script name. 
-You can access values of the other parameters by their indices, starting with 1, so `sys.argv[1]` is 5 and `sys.argv[2]` is 7.
+This happens inside the script:
+> the script name, and the numbers 5 and 7 are contained in a list called `sys.argv`.  
+These are the command line parameters, or arguments you want to pass to your script.  
+`sys.argv[0]` is the script name.  
+You can access values of the other parameters by their indices, starting with 1, so `sys.argv[1]` is 5 and `sys.argv[2]` is 7.  
 If you wanted to calculate the sum in your script, you would add these two variables and print the result. Maybe your code would look something like this
 
 ```python
