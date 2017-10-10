@@ -23,40 +23,45 @@ __Table of Contents__
      * [Git for Beginners](#git-for-beginners)  
 
   * [Python](#python)  
-     * [Python Overview](#python-overview)  
-     * [Running Python](#running-python)  
-     * [Syntax](#syntax)  
-     * [Data Types and Variables](#data-types-and-variables)  
-     * [Operators](#operators)  
-     * [Truth](#truth)  
-     * [Logic: Control Statements](#logic-control-statements)  
-     * [Numbers](#numbers)  
-     * [Sequences](#sequences)
-     * [Strings](#strings)   
-     * [Lists and Tuples](#lists-and-tuples)  
-     * [More Complex Data Structures](#morecomplex)
-     * [Loops](#loops)  
-     * [Dictionaries](#dictionaries)  
-     * [Sets](#sets)  
-     * [Iterables](#iterables)  
-     * [I/O and Files](#io-and-files)  
-     * [Regular Expressions](#regular-expressions)  
-     * [Functions](#functions)  
-     * Scope
-     * [Modules](#modules)  
-     * [Exceptions](#exceptions)  
-     * [Classes](#classes)   
-     * [Datastructures](#datastructures)  
-
- * [BioPython](#biopython)  
+    * [Python 1](#python-1)
+      * [Python Overview](#python-overview)  
+      * [Running Python](#running-python)  
+      * [Syntax](#syntax)  
+      * [Data Types and Variables](#data-types-and-variables)  
+    * [Python 2](#python-2) 
+      * [Operators](#operators)  
+      * [Truth](#truth)  
+      * [Logic: Control Statements](#logic-control-statements)  
+      * [Numbers](#numbers)  
+    * [Python 3](#python-3) 
+      * [Sequences](#sequences)
+      * [Strings](#strings)   
+      * [Lists and Tuples](#lists-and-tuples)  
+      * [More Complex Data Structures](#morecomplex)
+    * [Python 4](#python-4) 
+      * [Loops](#loops)  
+      * [Dictionaries](#dictionaries)  
+      * [Sets](#sets)
+    * [Python 5](#python-5)
+      * [Iterables](#iterables)  
+      * [I/O and Files](#io-and-files)
+    * [Python 6](#python-6)
+      * [Regular Expressions](#regular-expressions)  
+    * [Python 7](#python-7)
+      * [Functions](#functions)  
+      * Scope
+      * [Modules](#modules)
+    * [Python 8](#python-8)
+      * [Exceptions](#exceptions)   
+      * [Datastructures](#datastructures)  
+    * [Python 9](#python-9)
+      * [BioPython](#biopython)  
 
     @sep seqio, genbank files, 
 
     * [BioPython Overview](#biopython-overview)  
     * [BioPython Subtopic 1](#biopython-subtopic-1)  
     * [BioPython Subtopic 2](#biopython-subtopic-2)  
-
- * [My Questions](#my-questions)  
 
  * [Bioinformatic Analysis and Tools](#bioinformatic-analysis-and-tools)  
    * [Bioinformatic Analysis and Tools Overview](#bioinformatics-analysis-and-tools-overview)  
@@ -90,11 +95,10 @@ __What are our tips for being successful in your efforts to learn to program?__
 7. It is essential that we help you to learn how to find solutions on your own.
 
 
-
-
-Unix
-======
-
+---
+---
+# Unix
+---
 ---
 
 # Unix 1
@@ -122,8 +126,9 @@ without human intervention.
 In this course, we will be writing Pyton scripts that are completely
 command-line based.
 
-The Basics
-==========
+
+## The Basics
+
 
 
 __Logging into Your Workstation__
