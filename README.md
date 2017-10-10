@@ -790,7 +790,7 @@ Here are a few more advanced Unix topics that are super useful and when you have
  - for
 
 
-<div style="page-break-after: always;"></div>
+\pagebreak
 
 
 __[Unix 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Unix_01_problemset.md)__
@@ -3601,7 +3601,7 @@ A pattern can be anhcored to a region in the string
 | ---- | ---------------------------------------- |
 | ^    | Matches the beginning of the string      |
 | $    | Matches the end of the string            |
-| \b   | Matches a word boundry. This is between a \w and a \W |
+| \\b   | Matches a word boundry. This is between a \\w and a \\W |
 
 
 Examples:
