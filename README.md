@@ -1441,7 +1441,7 @@ Which means that these are True
 
 
 
-__Use bool() to test for truth__  
+__Use `bool()` to test for truth__  
 
 ```python
 >>> bool(True)
@@ -1826,7 +1826,8 @@ __Quotation Marks__
 - Double (")   
 - Triple (''' or """)   
 
-Notes about quotes:
+Notes about quotes:  
+
 - Single and double quotes are the same.  
 - A variable will not be replaced with its value (sometimes called 'interpolation') if placed inside of quotes.  
 - Triple quotes are used before and after a string that spans multiple lines.  
@@ -1841,14 +1842,14 @@ made up of multiple lines and sentences.
 """
 ```
 
-__Strings and the print() function__
+__Strings and the `print()` function__
 We saw examples of 
 `print()`
 earlier. Lets talk about it a bit more.  
 
 `print()` is a function that takes one or more comma-separated arguments. 
 
-Let's use the print() function to print a string.  
+Let's use the `print()` function to print a string.  
 ```python
 >>>print("ATG")  
 ATG
@@ -1875,14 +1876,14 @@ dna
 ```
 > The literal value of 'dna' is printed to the screen. The variable called 'dna' is not interpolated when it is inside of quotes.
 
-Let's see what happens when we give print() two literal strings as arguments.  
+Let's see what happens when we give `print()` two literal strings as arguments.  
 ```python
 >>> print("ATG","GGTCTAC")
 ATG GGTCTAC
 ```
 > We get the two literal strings printed to the screen separated by a space
 
-What if you do not want your strings separated by a space? Use the concatenation operator to concatenate the two strings before or within the print() function. 
+What if you do not want your strings separated by a space? Use the concatenation operator to concatenate the two strings before or within the `print()` function. 
 ```python
 >>> print("ATG"+"GGTCTAC")
 ATGGGTCTAC
@@ -1926,11 +1927,11 @@ TTT
 >>> print(dna)
 TTT
 ```
-> The new value of the variable 'dna' is printed to the screen when 'dna' is an agrument for the print() function.
+> The new value of the variable 'dna' is printed to the screen when 'dna' is an agrument for the `print()` function.
 
 __Errors and Printing__
 
-Let's look at the typical errors you will encouter when you use the print() function.
+Let's look at the typical errors you will encouter when you use the `print()` function.
 
 What will happen if you forget to close your quotes?
 ```python
@@ -1978,7 +1979,7 @@ this is the second line
 ```
 > We printed a new line to the screen
 
-Generally, you don't have to worry about adding whitespace between arguments because print() adds space between arguments and a new line at the end for you.
+Generally, you don't have to worry about adding whitespace between arguments because `print()` adds space between arguments and a new line at the end for you.
 You can change these with sep= and end=
 `print('one line', 'second line' , 'third line', sep='\n', end = '')`
 
@@ -2067,7 +2068,7 @@ The value`len()` returns can be stored in a variable.
 >>> print(dna_length)
 20
 ```
-You can mix strings and ints in print(), but not in concatenation.
+You can mix strings and ints in `print()`, but not in concatenation.
 
 ```python
 >>> print("The lenth of the DNA sequence:" , dna , "is" , dna_length)
@@ -2113,8 +2114,7 @@ The string method can be nested inside of other functions.
 >>> print(dna.lower())
 atgcttg
 ```
-> The value of 'dna' is lowercased and returned. The print() function takes the returned value from the lower() method and prints it.
-
+> The value of 'dna' is lowercased and returned. The `print()` function takes the returned value from the `lower()` method and prints it.
 If you try to use a string method on a object that is not a string you will get an error.
 ```python
 >>> nt_count = 6
@@ -2123,7 +2123,7 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 AttributeError: 'int' object has no attribute 'lower'
 ```
-> You get an AttributeError when you use a method on the an incorrect object type. We are told that the int object (an int is returned by len()) does not have a function called lower.
+> You get an AttributeError when you use a method on the an incorrect object type. We are told that the int object (an int is returned by `len()`) does not have a function called lower.
 
 Now let's uppercase a string.
 ```python
@@ -2259,7 +2259,7 @@ Since these are methods, be sure to use in this format string.method().
 
 ### String Formatting
 
-Strings can be formated using the  `format()` function. Pretty intuitive! For example, if you want to include literal stings and variables in your print statement and do not want to concatenate or use multiple arguments in the print() function you can use string formatting.  
+Strings can be formated using the  `format()` function. Pretty intuitive! For example, if you want to include literal stings and variables in your print statement and do not want to concatenate or use multiple arguments in the `print()` function you can use string formatting.  
 
 ```python
 >>> string = "This sequence: {} is {} nucleotides long and is found in {}."
@@ -2282,7 +2282,7 @@ You can also directly call the format function on a string inside a print functi
 >>> print(string.format(dna,dna_len,gene_name))
 This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.
 ```
-Or you can create a string on the fly and use the format() function.
+Or you can create a string on the fly and use the `format()` function.
 ```python
 >>> print( "This sequence: {} is {} nucleotides long and is found in {}.".format(dna,dna_len,gene_name))
 This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.
@@ -2403,7 +2403,7 @@ Here's an example
 
 
 
-So much can be done with the format() function. Here is one last example, but not the last functionality of this function.  Let truncate a long floating point number.  The default is 6 decimal places. Note that the function rounds to the nearest decimal place.
+So much can be done with the `format()` function. Here is one last example, but not the last functionality of this function.  Let truncate a long floating point number.  The default is 6 decimal places. Note that the function rounds to the nearest decimal place.
 
 ```python
 '{:f}'.format(3.141592653589793)
@@ -2418,12 +2418,6 @@ So much can be done with the format() function. Here is one last example, but no
 
 Lists and Tuples
 ===============
-@sep
-> append(x), .extend(iter) pop() insert() sort() reverse()
-> list comprehension 
-> `squares = [x**2 for x in range(10)]`
-> zip() -- loop over two lists at the same time
-> iterators: next(), generators
 
 __Lists__
 
@@ -2598,7 +2592,7 @@ Be careful how you make a copy of your list
 ```
 > Not what you expected?! Boht lists have changed because we only copied a pointer to the original list when we wrote `l2=list`. 
 
-Let's copy the list using the copy() method.
+Let's copy the list using the `copy()` method.
 ```python
 >>> list=['a', 'one', 'two']
 >>> l2=list.copy()
@@ -2612,7 +2606,7 @@ Let's copy the list using the copy() method.
 
 __Building a List one Value at a Time__
 
-Now that you have seen the append() function we can go over how to build a list one value at a time.
+Now that you have seen the `append()` function we can go over how to build a list one value at a time.
 
 ```python
 >>> words = []
@@ -2623,7 +2617,7 @@ Now that you have seen the append() function we can go over how to build a list 
 >>> print(words)
 ['one', 'two']
 ```
-> We start with a an empty list called 'words'. We use append() to add the value 'one' then to add the value 'two'. We end up with a list with two values.
+> We start with a an empty list called 'words'. We use `append()` to add the value 'one' then to add the value 'two'. We end up with a list with two values.
 
 
 
@@ -2653,18 +2647,6 @@ Here's a way to make a 3 x 3 table of values.
 6
 ```
 
-
-
-__~~~~Tuples~~__~~
-- ~~Tuples are similar to lists and contain ordered, *indexed* collection of data.~~
-- ~~Items are separated by commas~~
-- ~~**Items are enclosed in parenthesis '()'**~~
-- ~~**Tupels cannot change in size**~~
-- ~~**Values are immutable**~~
-
-~~The main reason why tuples exist is to get data to and from function calls.~~
-~~<p>&nbsp;</p>~~
-~~Everything you can do with lists you can do with tupels, EXCEPT change them.~~ 
 
 <p>&nbsp;</p>
 
@@ -2871,7 +2853,7 @@ $ python3 list_numbers.py
 4
 ```
 
-Python has a function called range() that will return numbers that can be converted to a list. 
+Python has a function called `range()` that will return numbers that can be converted to a list. 
 ```python
 >>> range(5)
 range(0, 5)
@@ -2979,7 +2961,7 @@ Done
 
 __Iterators__
 
-An iterable is any data type that is iterable, or can be used in iteration. An iterable can be made into an iterator with the iter() function. This means you can use the next() function.
+An iterable is any data type that is iterable, or can be used in iteration. An iterable can be made into an iterator with the `iter()` function. This means you can use the `next()` function.
 
 ```python
 >>> codons = [ 'atg' , 'aaa' , 'agg' ]
@@ -3001,9 +2983,6 @@ StopIteration
 
 Dictionaries
 ============
-@sep
-> for k, v in knights.items():
-> keys()
 
 
 Dictionaries are another iterable, like a string and list. Unlike strings and lists, dictionaries are not a sequence, or in other words, the position is not important. 
@@ -3173,7 +3152,9 @@ A set is another Python data type. It is essentially a dictionary with keys but 
 - A set is a collection of data with no duplicate elements. 
 - Common uses include looking for differences and eliminating duplicates in data sets. 
 
-Curly braces or the set() function can be used to create sets. Note: to create an empty set you have to use set(), not {}; the latter creates an empty dictionary.
+Curly braces or the `set()` function can be used to create sets. 
+
+> Note: to create an empty set you have to use `set()`, not `{}` the latter creates an empty dictionary.
 
 ```python
 >>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
@@ -3277,19 +3258,13 @@ __Set Methods__
 
 I/O and Files
 =============
-@sep
-NOT SURE WE'RE GOING TO USE THIS: I DON'T UNDERSTAND THE MECHANICS OF WITH... AS... YET > with open() as f:
-> open()
-> read() readline()
-> write()
-> close()
 
 I/O stands for input/output. The in and out refer to getting data into and out of your script. It might be a little surprising at first, but writing to the screen, reading from the keyboard, reading from a file, and writing to a file are all examples of I/O.
 
 
 __Writing to the Screen__
 
-You should be well versed in writing to the screen. We have been using the print() function to do this.  
+You should be well versed in writing to the screen. We have been using the `print()` function to do this.  
 
 
 ```python
@@ -3349,8 +3324,8 @@ ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 
 >>> file_object.close()
 ```
-> The complete contents can be retrieved with the read() method. Another attribure of file_object that can be accessed is the file name. Notice the formatting including newlines are maintained when `contents` is printed to the screen. print() adds another new line when it is finished printing.
-> It is good practice to close your file. Use the close() method. 
+> The complete contents can be retrieved with the `read()` method. Another attribure of file_object that can be accessed is the file name. Notice the formatting including newlines are maintained when `contents` is printed to the screen. `print()` adds another new line when it is finished printing.
+> It is good practice to close your file. Use the `close()` method. 
 
 
 A for loop can be used to iterate through the file_object one line at a time.
@@ -3370,9 +3345,9 @@ ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
 ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 
 ```
-> Notice the blank line at after each line we print. print() automatically adds a newline and we have a newline at the end of each line in our file. Use rstrip() method to remove the newline from each line.
+> Notice the blank line at after each line we print. `print()` automatically adds a newline and we have a newline at the end of each line in our file. Use `rstrip()` method to remove the newline from each line.
 
-Let's use rstrip() method to remove the newline from our file input.
+Let's use `rstrip()` method to remove the newline from our file input.
 ```python
 $ cat file_for_rstrip.py
 #!/usr/bin/python3
@@ -3382,7 +3357,7 @@ for line in file_object:
   line = line.rstrip()
   print(line)
 ```
-> rstrip() without any parameters returns a string with whitespace removed from the end.
+> `rstrip()` without any parameters returns a string with whitespace removed from the end.
 
 Output:
 ```
@@ -3393,9 +3368,9 @@ ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 
 __Writing to a File__
 
-Writing to a file is nothing more than opening a file for writing then using the write() method.  
+Writing to a file is nothing more than opening a file for writing then using the `write()` method.  
 
-The write() method is like the print() function. The biggest difference is that it writes to your file object instead of the screen. write() can only take one string type argument. 
+The `write()` method is like the `print()` function. The biggest difference is that it writes to your file object instead of the screen. `write()` can only take one string type argument. 
 
 Let's write a few lines to a file named "writing.txt".  
 ```python
@@ -3419,7 +3394,7 @@ One line.
 3rd line has extra text
 4th line has 5 words
 ```
-> As you can see, literal strings, return values from operators, return values from functions and variables can be written to a file with the write() method.
+> As you can see, literal strings, return values from operators, return values from functions and variables can be written to a file with the `write()` method.
 
 Now, lets get crazy! Lets read from one file a line at a time. Do something to each line and write the results to a new file.
 ```python
@@ -3527,10 +3502,10 @@ Found an EcoRI site!
 > `r`
 >  when defining patterns.
 
-> Here we used the search() function with two arguments, 1) our pattern and 2) the string we want to search. 
+> Here we used the `search()` function with two arguments, 1) our pattern and 2) the string we want to search. 
 
 
-Let's find out what is returned by the search() function. 
+Let's find out what is returned by the `search()` function. 
 ```python
 >>> dna = 'ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG'
 >>> found=re.search(r"GAATTC",dna)
@@ -3567,14 +3542,14 @@ We could test for each of these, or use regular expressions. This is exactly wha
 ```
 > Here you can see in the returned infomratin that ACG starts at string postion 7 (nt 8). The first postion not in the match is at string postion 10 (nt 11).
 
-What about other potential matches in our DNA string? We can use findall() function to find all matches.
+What about other potential matches in our DNA string? We can use `findall()` function to find all matches.
 ```python
 >>> dna = 'ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG'
 >>> found=re.findall(r"[GA]C.?G",dna)
 >>> print(found)
 ['ACG', 'GCTG', 'ACTG', 'ACCG', 'ACAG', 'ACCG', 'ACAG']
 ```
-> findall() returns a list of all the pieces of the string that match the regex.
+> `findall()` returns a list of all the pieces of the string that match the regex.
 
 A quick count of all the matching sites can be done by counting the length of the returned list.
 ```python
@@ -3582,7 +3557,7 @@ A quick count of all the matching sites can be done by counting the length of th
 7
 ```
 > There are 7 methylation sites.
-> Here we have another example of nesting. We call the findall() function, searching for all the matches of a methylation site. This function returns a list, the list is past to the len() function, which in turn returns the number of elements in the list.
+> Here we have another example of nesting. We call the `findall()` function, searching for all the matches of a methylation site. This function returns a list, the list is past to the `len()` function, which in turn returns the number of elements in the list.
 
 Let's talk a bit more about all the new characters we see in the pattern.
 
@@ -3843,7 +3818,7 @@ __Using Subpatterns Outside the Regular Expression Match__
 
 Using the captured subpattern in code that follows the regular expression.
 
-Outside the regular expression match statement, the matched subpatterns can be access with the group() method.
+Outside the regular expression match statement, the matched subpatterns can be access with the `group()` method.
 
 Example:
 ```
@@ -3861,7 +3836,7 @@ CCGGTTTCCAAAGACAGTCTTCTAA
 > 3) And the 25 base pairs downstream of the site
 
 
-If you want to find the upstream and downstream sequence of ALL 'TATTAT' sites, use the findall() function.
+If you want to find the upstream and downstream sequence of ALL 'TATTAT' sites, use the `findall()` function.
 ```python
 >>> dna="ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG"
 >>> found = re.findall( r"(.{50})TATTAT(.{25})"  , dna )
@@ -3870,7 +3845,7 @@ If you want to find the upstream and downstream sequence of ALL 'TATTAT' sites, 
 ```
 > The subpatterns are stored in tuples within a list. More about this type of datastructure later.
 
-Another option for retrieving the upstream and downstream subpatters is to put the findall() in a for loop
+Another option for retrieving the upstream and downstream subpatters is to put the `findall()` in a for loop
 
 ```python
 >>> dna="ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG"
@@ -3883,18 +3858,18 @@ downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 upstream: TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA
 downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 ```
-> 1) This code executes the findall() function once  
+> 1) This code executes the `findall()` function once  
 > 2) The subpatterns are returned   
 > 3) The subpatterns are stored in the variables upstream and downstream  
 > 4) The for block of code is executed  
-> 5) The findall() searches again  
+> 5) The `findall()` searches again  
 > 6) A match is found  
 > 7) New subpatterns are returned  
 > 8) The for block of code gets executed again  
-> 9) The findall() searches again, but no match is found  
+> 9) The `findall()` searches again, but no match is found  
 > 10) The for loop ends  
 
-One other way to get this done is with the finditer() function in a for loop
+One other way to get this done is with the `finditer()` function in a for loop
 ```python
 >>> dna="ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG"
 >>> for match in re.finditer(r"(.{50})TATTAT(.{25})"  , dna):
@@ -3906,21 +3881,21 @@ downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 upstream: TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA
 downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 ```
-> 1) This code executes finditer() function once.  
+> 1) This code executes `finditer()` function once.  
 > 2) The match object is returned. A match object will have all the information about the match  
-> 3) In the for block we call the group() method on the first match object returned  
-> 4) We print out the first and second subpattern using the group() method  
-> 5) The finditer() function is executed a second time and a match is found  
+> 3) In the for block we call the `group()` method on the first match object returned  
+> 4) We print out the first and second subpattern using the `group()` method  
+> 5) The `finditer()` function is executed a second time and a match is found  
 > 6) The second match object is returned  
-> 7) The second subpatterns are retrieved from the match object using the group() method  
-> 8) The finditer() functin is executed again, but no matches found, so the loop ends  
+> 7) The second subpatterns are retrieved from the match object using the `group()` method  
+> 8) The `finditer()` functin is executed again, but no matches found, so the loop ends  
 
-FYI: match() function is another regular expression function that looks for patterns. It is similar to search but it only looks at the begining of the string for the pattern while search() looks in the entire string. Usually search() and findall() will be more useful.
+FYI: `match()` function is another regular expression function that looks for patterns. It is similar to search but it only looks at the begining of the string for the pattern while `search()` looks in the entire string. Usually `search()` and `findall()` will be more useful.
 
 
 __Practical Example: Codons__
 
-Extracting codons from a string of DNA can be accomplished by using a subpattern in a findall() function. Remember the findall() function will return a list of the matches.  
+Extracting codons from a string of DNA can be accomplished by using a subpattern in a `findall()` function. Remember the `findall()` function will return a list of the matches.  
 
 ```python
 >>> dna = 'GTTGCCTGAAATGGCGGAACCTTGAA'
@@ -3944,13 +3919,13 @@ ACC
 TTG
 >>>
 ```
-> finditer() would also work in this for loop. Each codon can be accessed by using the group() method.
+> `finditer()` would also work in this for loop. Each codon can be accessed by using the `group()` method.
 
   
 
 __Truth and Regular Expression Matches__
 
-The search(), match(), findall(), and finditer() can be used in conditional tests. If a match is not found an empty list or 'None' is returned. These both are False.
+The `search()`, `match()`, `findall()`, and `finditer()` can be used in conditional tests. If a match is not found an empty list or 'None' is returned. These both are False.
 
 ```python
 >>> found=re.search( r"(.{50})TATTATZ(.{25})"  , dna )
@@ -3968,7 +3943,7 @@ None
 
 __Using Regular expressions in substitutions__
 
-Earlier we went over how to find an exact pattern and replace it using the replace() method. To find a pattern and make a replacement the regular expression sub() function is used. This function takes the pattern, the replacement, the string to be searched, the number of times to do the replacement, and flags.
+Earlier we went over how to find an exact pattern and replace it using the `replace()` method. To find a pattern and make a replacement the regular expression `sub()` function is used. This function takes the pattern, the replacement, the string to be searched, the number of times to do the replacement, and flags.
 
 ```python
 >>> str = "Who's afraid of the big bad wolf?"
@@ -3977,7 +3952,7 @@ Earlier we went over how to find an exact pattern and replace it using the repla
 >>> print(str)
 Who's afraid of the big bad wolf?
 ```
-> The sub() function returns "Who's afraid of the big bad goat?"  
+> The `sub()` function returns "Who's afraid of the big bad goat?"  
 > The value of variable str has not been altered  
 > The new string can be stored in a new variable for later use.
 
@@ -4111,7 +4086,7 @@ import subprocess
 output = subprocess.check_output('ls -l | grep amanda', shell = True)
 ```
 
-This is better than alternatives with subprocess.run().
+This is better than alternatives with subprocess.`run()`.
 
 `output` contains a bytes object (more or less a string of ASCII character encodings)
 
