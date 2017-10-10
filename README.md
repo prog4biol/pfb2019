@@ -3588,10 +3588,10 @@ A group of characters to that are allowed to be matched one time. There are a fe
 | [ ]  | A bracketed list of characters, like [GA]. This indicates a single character can match any charcater in the bracketed list. |
 | \\d   | __Digits__. Also can be written [0-9]    |
 | \\w   | __Word character__. Also can be written [A-Za-z_0-9] |
-| \\s   | __White Space character__. Also can be written [ \t\n\r] |
+| \\s   | __White Space character__. Also can be written [ \\t\\n\\r] |
 | \\D   | __A Non-Digit character__. Also can be written [^0-9] |
 | \\W   | __A Non-word charcter__. Also can be written [^A-Za-z_0-9] |
-| \\S   | __A Non-White Space Character__. Also can be written [^ \t\n\r] |
+| \\S   | __A Non-White Space Character__. Also can be written [^ \\t\\n\\r] |
 
 __Anchors__
 
