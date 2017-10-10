@@ -1816,7 +1816,7 @@ It returns three different values depending on x and y
 
 - x == y 0 is returned
 
-__[Link to Python 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Python_03_problemset.md)__
+__[Link to Python 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Python_02_problemset.md)__
 
 \pagebreak
 
