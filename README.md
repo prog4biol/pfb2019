@@ -1057,6 +1057,7 @@ Running Python Scripts
 Typing the python command followed by the name of a script makes python execute the script. Recall that we just saw you can run an interactive interpreter by just typing `python` on the command line
 
 __Python Script__
+
 * The same code from above is typed into a text file. 
 * Python scripts are always saved in files whose names have the extension '.py' (i.e. the filename ends with '.py').
 
@@ -1084,17 +1085,20 @@ Syntax
 @sep example code, statements, functions(), tab spacing, interactive interpreter, debugger
 
 __Python Identifiers__: 
+
 A Python identifier is a name used to identify a variable, function, class, module or other object. An identifier starts with a letter A to Z or a to z or an underscore (_) followed by zero or more letters, underscores and digits (0 to 9).
 
 Python does not allow punctuation characters such as @, $, and % within identifiers. Python is a case sensitive programming language. Thus, seq_id and seq_ID are two different identifiers in Python.
 
 __Naming conventions for Python Identifiers__: 
+
  * The first character is lowercase, unless it is a name of a Class. Classes should begin with an uppercase characters. (ex. Seq)
  * Private identifiers begin with an underscore. (ex. `_private`)
  * Strong private identifiers begin with two underscores. (ex. `__private`)
  * Language-defined special names begin and end with two underscores. (ex. `__special__`)
 
 __Reserved Words__: 
+
 The following is a list of Python keywords. These are special words that already have a purpose in python and therefore cannot be used in indentifier names.
 
 ```
@@ -1112,15 +1116,18 @@ except
 ```
 
 __Lines and Indentation__: 
+
 Python denotes blocks of code by line indentation. Incorrect line spacing and/or indention will cause an error to be reported or could make your code run in a way you don't expect. You can get help with indentation from good text editors or IDEs.
 
 The number of spaces in the indentation need to be consistent but a specific number is not required. All lines of code, or statements, within a single block must be indented in the same way. For example:
 
 
 __Comments__: 
+
 Comments are an essential programming practice. Making a note of what a line or block of code is doing will help the writer and readers of the code. This includes you!
 
-__#__
+__#__: 
+
 Comments start after a pound or hash symbol. All characters after the #, up to the end of the line are part of the comment and are ignored by python. 
 
 The first line of a script starting with `#!` is a special example of a comment that also has the special function in unix of telling the unix shell how to run the script.
@@ -1134,10 +1141,12 @@ print ("Hello, PFB2017!") # this line prints
 
 
 __Blank Lines__: 
+
 Blank lines are also important for increasing the readability of the code. Blank lines are ignored by the python interpreptor
 
 
 __Python Options__: 
+
 ```bash
 $ python -h
 usage: python [option] ... [-c cmd | -m mod | file | -] [arg] ...
@@ -1152,6 +1161,7 @@ Options and arguments (and corresponding environment variables):
 
 Data Types and Variables
 ========================
+
 sep note:  overview of all types: start with constants: numbers, strings '' "" ''' ''' r'' = raw strings, + for concat, * for repeat
 iterable, string, int, float, tuple, list, dictionary, set  
 
@@ -1184,10 +1194,9 @@ Collections of data can also be stored in special data types, i.e., tuples, list
  <p>&nbsp;</p>
 
 __Lists__  
+
 - Lists are used to store an ordered, *indexed* collection of data.
-
 - Lists are mutable: the number of elements in the list and what's stored in each element can change
-
 - Lists are enclosed in square brackets and items are separated by commas
 
 
@@ -1233,6 +1242,7 @@ print(a+b) # + is a sum operator on integers
 
 
 __Tuple__
+
 - Tuples are similar to lists and contain ordered, *indexed* collection of data.
 - **Tuples are immutable: you can't change the values or the number of values**
 - A tuple is enclosed in parenteses and items are separated by commas.
@@ -1283,6 +1293,7 @@ __Dictionary__
 
 
 __Type Conversion__
+
 Sometimes you may need to convert data into a specific type. Here are some examples of functions that will help you to do this.
 
 
@@ -1303,6 +1314,7 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 
 Operators
 ==========
+
 @sep These depend on the type of variable, so revisit the most relevant ones in subsequent sections
 include // floor division and % modulus
 
@@ -1421,6 +1433,7 @@ Operators are listed in order of precedence. Highest listed first. Not all the o
 
 Truth
 ======
+
 Lets take a step back, What is truth?  
 
 Everything is true, except for:  
@@ -1482,6 +1495,7 @@ False
 
 Logic: Control Statements
 =========================
+
 @sep while, if, elif, else, break, continue, 
 @sep ugh: else in while loop
 
@@ -1511,6 +1525,7 @@ found AGC in your dna sequence
 
 
 __If/Else Statement__
+
 - The If portion of the if/else statement behave as before. 
 - The first indented block is executed if the condition is true.
 - If the condition is false, the second indented else block is executed.
@@ -1529,6 +1544,7 @@ did not find ATG in your dna sequence
 
 
 __if/elif__
+
 - The if condition is tested as before and the indented block is executed if the condition is true.
 - If it's false, the indented block following the elif is executed if the first elif condition is true. 
 - Any remaining elif conditions will be tested in order until one is found to be true. If none is true, the else indented block is executed.
@@ -1602,6 +1618,7 @@ Returns:
 
 Numbers
 ========
+
 Python recognizes 3 types of numbers: integers, float point numbers, and complex numbers. 
 
 __integer__  
@@ -1822,6 +1839,7 @@ You can call `dir()` on any object.
 - Strings are an example of a Python Sequence. A sequence is defined as a positionally ordered set. This means each element in the set has a position, starting with zero, i.e. 0,1,2,3 and so on until you get to the end of the string. If this is confusing, think about a string as being made up of individual characters: character 0, character 1, character 2 and so on.
 
 __Quotation Marks__  
+
 - Single (')  
 - Double (")   
 - Triple (''' or """)   
@@ -1843,6 +1861,7 @@ made up of multiple lines and sentences.
 ```
 
 __Strings and the `print()` function__
+
 We saw examples of 
 `print()`
 earlier. Lets talk about it a bit more.  
@@ -1962,6 +1981,7 @@ SyntaxError: Missing parentheses in call to 'print'
 In python2, the command was `print`, but this changed in python3 to `print()`, so don't forget the parentheses!
 
 __Special/Escape Characters__
+
 How would you include a new line, carrage return, or tab in your string?  
 
 | Escape Character | Description    |
