@@ -14,9 +14,11 @@ __Table of Contents__
  * [Big Picture](#big-picture)  
 
  * [Unix](#unix)  
+   * [Unix 1](#unix-1)
      * [Unix Overview](#unix-overview)  
      * [The Basics](#the-basics)    
      * [Advanced Unix](#advanced-unix)
+   * [Unix 2](#unix-2)
      * [Text Editors](#text-editors)  
      * [Git for Beginners](#git-for-beginners)  
 
@@ -95,13 +97,13 @@ Unix
 
 ---
 
-Unix 1
+# Unix 1
 
 ---
 
 
-Unix Overview
-=============
+## Unix Overview
+
 
 __What is the Command-Line?__
 
@@ -785,8 +787,8 @@ addressed to _mzhang_:
 
 
 
-Advanced Unix
-==================
+## Advanced Unix
+
 
 @sep: leave out details for now maybe later in the course
 
@@ -797,18 +799,22 @@ Here are a few more advanced Unix topics that are super useful and when you have
  - perl
  - for
 
+---
+
+
 __[Link to Unix 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Unix_01_problemset.md)__
 
 \pagebreak
 
+---
 
-Unix 2
+# Unix 2
 
 ---
 
 
-Text Editors
-============
+## Text Editors
+
 
 It is often necessary to create and write to a file while using the terminal. This makes it essential to use a terminal text editor. There are many text editors out there. Some of our favorite are Emacs and vim. We are going to start you out with a simple text editor call __nano__
 
@@ -986,6 +992,7 @@ _Keeping track of differences between local and remote repositories_
 
 If you are ever wondering what do you need to add to your remote repository use the `git status` command. This will provide you a list of file that have been modified, deleted, and those that are untracked. Untracked files are those that have never been added to the staging area with `git add`
 
+---
 
 __[Link To Unix 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Unix_02_problemset.md)__
 
@@ -995,18 +1002,17 @@ __[Link To Unix 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/pro
 
 
 
-Python
-======
+# Python
 
 -----
 
-Python 1
+# Python 1
 
 -------
 
 
-Python Overview
-===============
+## Python Overview
+
  * We are teaching the simplest form of the language, no 'clever' stuff.
  * We can expand on this in subsequent years
 
