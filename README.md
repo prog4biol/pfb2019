@@ -1174,7 +1174,7 @@ __Lists__
 
 - Lists are enclosed in square brackets and items are separated by commas
 
-  ​
+
 ```python
 [ 'atg' , 'aaa' , 'agg' ]
 ```
@@ -1252,7 +1252,7 @@ __Dictionary__
 
 - A colon is written between each key and value. Commas separate key:value pairs.
 
-  ​
+
 ```python
 { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
 ```
