@@ -78,6 +78,7 @@ We firmly believe that knowing how to program is just as essential as knowing ho
 
 
 __What are our tips for being successful in your efforts to learn to program?__
+
 1. Practice, practice, practice. Please, spend as much time possible actually coding.
 2. Write only a line or two of code, then test it. If you write too many lines, it becomes more difficult to debug if there is an error.
 3. Errors are not failures. Every error you get is a learning opportunity. Every single error you debug is a major success. Fixing errors is how you will cement what you have learned.
