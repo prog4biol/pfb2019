@@ -241,7 +241,7 @@ Most shells offer command-line entering.  Up until the comment you press <Enter>
 - _control-y (^y)_: Paste the contents of the kill buffer onto the command-line starting at the cursor.  y=yank.
 - _Up arrow, down arrow_: Move up and down in the command history.  This lets you reissue previous commands, possibly after modifying them.
 
-There are also some useful shell commands you can issue:
+There are also some useful shell commands you can issue:  
 - _history_: Show all the commands that you have issued recently, nicely numbered.
 - _!\<number\>_: Reissue an old command, based on its number (which you can get from _history_).
 - _!!_: Reissue the immediate previous command.
