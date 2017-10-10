@@ -1604,21 +1604,25 @@ Numbers
 ========
 Python recognizes 3 types of numbers: integers, float point numbers, and complex numbers. 
 
-__integer__
+__integer__  
+
 - known as an int
 - an int can be positve or negative
 - and **does not** contain a decimal point.
 
-__floating point number__
+__floating point number__  
+
 - known as a float
 - a floating point number can be positve or negative
 - and **does** contain a decimal point
 
-__complex number__
+__complex number__  
+
 - known as complex
 - is in the form of a+bi where i is the imaginary part.
 
-__Conversion functions__
+__Conversion functions__  
+
 
 | function      | Description                              |
 | ------------- | ---------------------------------------- |
