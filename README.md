@@ -1749,7 +1749,7 @@ These next functions are found in the math module and need to be imported. To us
 >>> math.ceil(2.9)
 3
 >>> math.ceil(-2.9)
--
+-2
 >>> math.floor(2.3)
 2
 >>> math.floor(2.9)
