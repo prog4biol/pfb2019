@@ -2,12 +2,15 @@ Programming For Biology 2017
 ============================
 
 
-__Instructors__  
+__Instructors:__  
 Simon Prochnik  
 Sofia Robb     
+  
+    
+    
 
+Table of Contents  
 
-Table of Contents
  * [Big Picture](#big-picture)  
 
  * [Unix](#unix)  
@@ -1750,7 +1753,7 @@ It returns three different values depending on x and y
 - x == y 0 is returned
 
 
-<div style="page-break-after: always;"></div>
+\pagebreak
 
 # Sequences
 
@@ -2649,8 +2652,7 @@ __~~~~Tuples~~__~~
 
 <p>&nbsp;</p>
 
-
-<div style="page-break-after: always;"></div>
+\pagebreak
 
 Loops
 =====
@@ -2957,8 +2959,7 @@ Done
 > When the count is equal to 3 the continue is executed. This causes all the lines within the loop block to be skipped. "line after our continue" is not printed when count is equal to 3. The next loop is executed normally.
 
 
-
-<div style="page-break-after: always;"></div>
+\pagebreak
 
 __Iterators__
 
@@ -3477,7 +3478,7 @@ Output:
 
 
 
-<div style="page-break-after: always;"></div>
+\pagebreak
 
 Regular Expressions
 ====================
@@ -3995,8 +3996,7 @@ How would you use regular expressions to find all occurances of 'ATG' and replac
 
 <p>&nbsp;</p>
 
-
-<div style="page-break-after: always;"></div>
+\pagebreak
 
 Functions
 =========
@@ -4233,7 +4233,7 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 
 
 
-<div style="page-break-after: always;"></div>
+\pagebreak
 
 Exceptions
 ==========
