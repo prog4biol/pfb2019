@@ -1749,9 +1749,6 @@ It returns three different values depending on x and y
 
 - x == y 0 is returned
 
-  ​
-
-
 
 <div style="page-break-after: always;"></div>
 
