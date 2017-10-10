@@ -795,7 +795,7 @@ Here are a few more advanced Unix topics that are super useful and when you have
  - perl
  - for
 
-__[Link to Unix 1 Problem Set](problemsets/Unix_01_problemset.md)__
+__[Link to Unix 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Unix_01_problemset.md)__
 
 \pagebreak
 
@@ -992,6 +992,11 @@ Python
 ======
 
 -----
+
+Python 1
+========
+
+-------
 
 
 Python Overview
@@ -1313,7 +1318,14 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 | repr()   | Makes a string representation of an object. Useful for finding out what kind (Class) of object you are dealing with. |
 
 
+__[Link to Python 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Python_01_problemset.md)__
+
 \pagebreak
+
+Python 2
+========
+
+-------
 
 Operators
 ==========
