@@ -1,0 +1,27 @@
+Python 2 Problem Set
+===================
+
+1. Use the Interactive Interpretor to test to see if you can find an 'ATG' in the following DNA string:
+
+```
+GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
+```
+
+2. How about 'TTT'?
+
+3. Save the DNA string to a valiable and do 1 and 2 again.
+
+4. In the interpretor use `bool` to test a variety of values like '', 0, 0.0, FALSE, false, True, true, 'True', 'False' to see if they evalue to True or False.
+
+5. Using a text editor, write a script that 
+    - Assigns a value to a variable
+    - Has a if/else statment in which:
+       - It prints out a confirmation of truth if the value is true
+       - It prints out "Not True" if the value is not true. 
+
+6. Write a new script that does the same as the last question, but gets the value from the command line.
+7. Create a script that has a if/elif/else statement that
+    - Tests to see if a number is positive or negative
+    - if it is positive, is it bigger or smaller than 50
+    - if it is smaller, is it an even number
+    - if it is larger, is it divisible by 3.  
