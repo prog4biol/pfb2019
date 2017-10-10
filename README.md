@@ -97,7 +97,9 @@ __What are our tips for being successful in your efforts to learn to program?__
 
 ---
 ---
+
 # Unix
+
 ---
 ---
 
@@ -1007,11 +1009,14 @@ __[Link To Unix 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/pro
 
 ---
 ---
+
 # Python
+
 ---
 ---
 
 # Python 1
+
 -----
 
 
@@ -4360,12 +4365,16 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 
 ---
 ---
+
 # Bioinformatic Analysis and Tools
+
 ---
 ---
 
 ---
+
 # Bioinformatic Analysis and Tools Overview
+
 ---
 
   * What you want to do:
