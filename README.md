@@ -477,11 +477,11 @@ Certain special non-printing characters have _escape codes_ associated with them
 
 | Escape Code | Description                              |
 | ----------- | ---------------------------------------- |
-| \n          | new line character                       |
-| \t          | tab character                            |
-| \r          | carriage return character                |
-| \a          | bell character (ding! ding!)             |
-| \nnn        | the character whose ASCII code is **nnn** |
+| \\n          | new line character                       |
+| \\t          | tab character                            |
+| \\r          | carriage return character                |
+| \\a          | bell character (ding! ding!)             |
+| \\nnn        | the character whose ASCII code is **nnn** |
 
 
 __Useful Commands__
