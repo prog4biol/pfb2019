@@ -95,6 +95,11 @@ Unix
 
 ---
 
+Unix 1
+
+---
+
+
 Unix Overview
 =============
 
@@ -780,9 +785,6 @@ addressed to _mzhang_:
 
 
 
-
-
-
 Advanced Unix
 ==================
 
@@ -798,6 +800,11 @@ Here are a few more advanced Unix topics that are super useful and when you have
 __[Link to Unix 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Unix_01_problemset.md)__
 
 \pagebreak
+
+
+Unix 2
+
+---
 
 
 Text Editors
@@ -994,7 +1001,6 @@ Python
 -----
 
 Python 1
-========
 
 -------
 
@@ -1323,7 +1329,6 @@ __[Link to Python 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/p
 \pagebreak
 
 Python 2
-========
 
 -------
 
