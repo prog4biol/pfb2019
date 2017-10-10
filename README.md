@@ -1005,15 +1005,14 @@ __[Link To Unix 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/pro
 
 \pagebreak
 
-
-
+---
+---
 # Python
-
------
+---
+---
 
 # Python 1
-
--------
+-----
 
 
 ## Python Overview
@@ -1046,12 +1045,12 @@ __Methods__ are just functions that belong to a Class. Objects that belong to th
 
 <p>&nbsp;</p>
 
-Running Python
-==============  
+## Running Python
 
 
-Interactive Interpreter
------------------------
+### Interactive Interpreter
+
+
 Python can be run one line at a time in an interactive interpreter.  
 To lauch the interpreter type the following into your terminal window:  
 
@@ -1075,8 +1074,8 @@ Hello, PFB2017!
 
 @sep writing python scripts: nano or Pycharm
 
-Running Python Scripts
------------------------
+### Running Python Scripts
+
 Typing the python command followed by the name of a script makes python execute the script. Recall that we just saw you can run an interactive interpreter by just typing `python` on the command line
 
 __Python Script__
@@ -1102,8 +1101,8 @@ Hello, PFB2017!
 
 <p>&nbsp;</p>
 
-Syntax
-=======
+## Syntax
+
 
 @sep example code, statements, functions(), tab spacing, interactive interpreter, debugger
 
@@ -1182,8 +1181,8 @@ Options and arguments (and corresponding environment variables):
 
 <p>&nbsp;</p>
 
-Data Types and Variables
-========================
+## Data Types and Variables
+
 
 sep note:  overview of all types: start with constants: numbers, strings '' "" ''' ''' r'' = raw strings, + for concat, * for repeat
 iterable, string, int, float, tuple, list, dictionary, set  
@@ -1341,12 +1340,12 @@ __[Link to Python 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/p
 
 -------
 
-Python 2
+# Python 2
 
 -------
 
-Operators
-==========
+## Operators
+
 
 @sep These depend on the type of variable, so revisit the most relevant ones in subsequent sections
 include // floor division and % modulus
@@ -1464,8 +1463,8 @@ Operators are listed in order of precedence. Highest listed first. Not all the o
 
 
 
-Truth
-======
+## Truth
+
 
 Lets take a step back, What is truth?  
 
@@ -1534,8 +1533,8 @@ False
 
 
 
-Logic: Control Statements
-=========================
+## Logic: Control Statements
+
 
 @sep while, if, elif, else, break, continue, 
 @sep ugh: else in while loop
@@ -1657,8 +1656,8 @@ Returns:
 
 
 
-Numbers
-========
+## Numbers
+
 
 Python recognizes 3 types of numbers: integers, float point numbers, and complex numbers. 
 
@@ -1833,11 +1832,11 @@ __[Link to Python 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/p
 
 ----
 
-Python 3
+# Python 3
 
 -----
 
-# Sequences
+## Sequences
 
 In the next section, we will learn about strings, tuples and lists. These are all examples of python sequences. A string is a sequence of characters `'ACGTGA'`, a tuple `(0.23, 9.74, -8.17, 3.24, 0.16)` and a list `['dog', 'cat', 'bird']` are sequences of any kind of data. We'll see much more detail in a bit.
 
@@ -1876,7 +1875,7 @@ How do you find out what functions work with an object? There's a handy function
 
 You can call `dir()` on any object.
 
-# Strings
+## Strings
 
 @sep
 
@@ -2485,8 +2484,8 @@ So much can be done with the `format()` function. Here is one last example, but 
 
 
 
-Lists and Tuples
-===============
+## Lists and Tuples
+
 
 __Lists__
 
@@ -2690,7 +2689,7 @@ Now that you have seen the `append()` function we can go over how to build a lis
 
 
 
-## List Comprehensions ##
+__List Comprehensions__
 
 @sep add material to cover these
 
@@ -2698,7 +2697,7 @@ Now that you have seen the `append()` function we can go over how to build a lis
 
 
 
-# More complex data structures
+## More complex data structures
 
 @sep see data structures section later
 
@@ -2721,8 +2720,12 @@ Here's a way to make a 3 x 3 table of values.
 
 \pagebreak
 
-Loops
-=====
+---
+# Python 4
+---
+
+## Loops
+
 @sep
 > for i in list: 
 > (ugh: else in for loop)
@@ -3026,7 +3029,6 @@ Done
 > When the count is equal to 3 the continue is executed. This causes all the lines within the loop block to be skipped. "line after our continue" is not printed when count is equal to 3. The next loop is executed normally.
 
 
-\pagebreak
 
 __Iterators__
 
@@ -3050,8 +3052,7 @@ StopIteration
 
 <p>&nbsp;</p>
 
-Dictionaries
-============
+## Dictionaries
 
 
 Dictionaries are another iterable, like a string and list. Unlike strings and lists, dictionaries are not a sequence, or in other words, the position is not important. 
@@ -3212,8 +3213,8 @@ __Dictionary Methods__
 
 <p>&nbsp;</p>
 
-Sets
-=====
+## Sets
+
 
 A set is another Python data type. It is essentially a dictionary with keys but no values.
 
@@ -3319,14 +3320,22 @@ __Set Methods__
 
 <p>&nbsp;</p>
 
-# Iterables
+
+\pagebreak
+
+---
+# Python 5
+---
+
+## Iterables
 
 @sep some theory and general ideas to solidify previous section
 
 @sep comparision between iterables and sequences, dir()
 
-I/O and Files
-=============
+
+## I/O and Files
+
 
 I/O stands for input/output. The in and out refer to getting data into and out of your script. It might be a little surprising at first, but writing to the screen, reading from the keyboard, reading from a file, and writing to a file are all examples of I/O.
 
@@ -3540,8 +3549,12 @@ Output:
 
 \pagebreak
 
-Regular Expressions
-====================
+---
+# Python 6
+---
+
+## Regular Expressions
+
 Regular Expressions is a language for pattern matching. Many different computer languages incorporate regular expressions as well as some unix commands like grep and sed. So far we have seen a few functions for finding exact matches in strings, but this is not always sufficient.  
 
 Functions that utilize regular expressions allow for non-exact pattern matching.  
@@ -4058,8 +4071,12 @@ How would you use regular expressions to find all occurances of 'ATG' and replac
 
 \pagebreak
 
-Functions
-=========
+---
+# Python 7
+---
+
+## Functions
+
 @sep: good place for list comprehensions
 > `def, return, positional arguments, keyword arguments, *arguments **keywords`
 > lambda e.g.
@@ -4067,8 +4084,7 @@ Functions
 
 <p>&nbsp;</p>
 
-Scope
-=======
+## Scope
 
 Python treats variables as local unless defined not to be. It's usually better to pass a parameter to a function than to have a global variable. Where can you use a variable? This is its scope. It is inside the block it's defined in. That's how you declare variables in python.
 
@@ -4085,14 +4101,12 @@ The output looks like this
 
 You can make a variable global with the function`global`
 
-
-
 ## Namespaces
 
 
 
-Modules
-=======
+## Modules
+
 
 @sep
 > dir()
@@ -4105,7 +4119,7 @@ Modules
 
 
 
-## os.path
+__os.path__
 
 `os.path` has common utilities for working file paths (filenames and directories). A path is either a relative or absolute list of directories (often ending with a filename) that tells you where to find a file or directory.
 
@@ -4120,7 +4134,7 @@ Modules
 
 
 
-## os.system
+__os.system__
 
 Run a system command from python. Replaced by subprocess
 
@@ -4131,7 +4145,7 @@ os.system("ls -l")
 
 
 
-## subprocess
+__subprocess__
 
 ```python
 import subprocess
@@ -4144,7 +4158,7 @@ more complex than `os.system()`. You need to specify where input and output go
 
 ```
 
-### Capturing output from a shell pipeline
+__Capturing output from a shell pipeline__
 
 `ls -l | grep amanda`
 
@@ -4170,7 +4184,7 @@ You can covert by decoding the bytes object into a string
 '-rw-r--r--  1 amanda  staff       161952 Oct  2 18:03 test.subreads.fa\n-rw-r--r--  1 amanda  staff          126 Oct  2 13:23 test.txt\n'
 ```
 
-### Capturing output the long way (for a single command)
+__Capturing output the long way (for a single command)__
 
 Let's assume that `ls -l` generates some output something like this
 
@@ -4203,7 +4217,7 @@ lines = stdout.splitlines()
 
 
 
-## sys
+__sys__
 
 A couple of useful variables for beginners. Many more advanced system parameters and settings that we are not covering here.
 
@@ -4214,15 +4228,15 @@ A couple of useful variables for beginners. Many more advanced system parameters
 
 
 
-## re
+__re__
 
 see notes on regular expressions
 
-## collections
+__collections__
 
 `from collections import deque`
 
-# copy
+__copy__
 
 `copy.copy()`
 
@@ -4230,7 +4244,7 @@ and
 
 `copy.deepcopy()`
 
-## math
+__math__
 
 | function            | description |
 | ------------------- | ----------- |
@@ -4246,17 +4260,17 @@ and
 
 see also numpy
 
-## random
+__random__
 
 
 
-## statistics
+__statistics__
 
 
 
-## glob
+__glob__
 
-## argparse
+__argparse__
 
 Great (and overly-complicated) tool for parsing command line arguments and automatically generating help messages for scripts (very handy!). Here's a simple script that explains a little of what it does.
 
@@ -4281,8 +4295,7 @@ if args.out:
 
 
 
-
-## Many more modules in many areas
+__Many more modules in many areas__
 
 time, HTML, XML, email, CGI, sockets, audio, GUIs with Tk, debugging, testing, unix utils
 
@@ -4295,8 +4308,12 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 
 \pagebreak
 
-Exceptions
-==========
+---
+# Python 8
+---
+
+## Exceptions
+
 @sep
 > try/except/finally (see with/as)
 
@@ -4305,8 +4322,8 @@ Exceptions
 
 <p>&nbsp;</p>
 
-Scope
-=====
+## Scope
+
 > scope & namespace, 
 
 
@@ -4315,8 +4332,8 @@ Scope
 
 <p>&nbsp;</p>
 
-Datastructures
-==============
+## Datastructures
+
 @sep: how you initialize from a file
 > import json
 
@@ -4324,66 +4341,60 @@ Datastructures
 
 
 <p>&nbsp;</p>
-***
-# BioPython
-***
 
+\pagebreak
 
-BioPython Overview
-==================
+---
+# Python 8
+---
 
+## BioPython
 
-BioPython Subtopic 1
---------------------
+### BioPython Overview
 
+### BioPython Subtopic 1
 
-BioPython Subtopic 2
---------------------
+### BioPython Subtopic 2
 
+\pagebreak
 
-My Questions
-============
-
-***
+---
+---
 # Bioinformatic Analysis and Tools
-***
+---
+---
 
+---
+# Bioinformatic Analysis and Tools Overview
+---
 
-Bioinformatic Analysis and Tools Overview
-========================================
   * What you want to do:
       * tools to do it
 
+\pagebreak
 
+---
+# Sequence Search and Alignments
+---
 
-Sequence Search and Alignments
-==============================
+\pagebreak
 
+---
+# Assembly
+---
 
+## DNA
+## RNA
 
-Assembly
-========
+\pagebreak
 
-DNA
-----
-
-RNA
-----
-
-
-
-NGS
-===
-
-
-
-
-Variant Calling
-===============
+---
+# NGS
+---
 
 
 
-
-Ontology
-========
+---
+# Ontology
+---
 
