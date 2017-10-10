@@ -1437,20 +1437,28 @@ Truth
 Lets take a step back, What is truth?  
 
 Everything is true, except for:  
-- `0`
-- `None`
-- `False`
-- `''` (empty string)
-- `[]` (empty list)
-- `()` (empty tuple)
-- `{}` (empty dictionary)
 
-Which means that these are True
-- `'0'`
-- `'None'`
-- `'False'`
-- `'True'`
-- `' '` (string of one blank space)
+
+expression | TRUE/FALSE |
+----------|-------------|
+`0`  | FALSE
+`None` | FALSE
+`False` | FALSE
+`''` (empty string) | FALSE
+`[]` (empty list) | FALSE
+`()` (empty tuple) | FALSE
+`{}` (empty dictionary) | FALSE
+
+Which means that these are True:
+
+
+expression | TRUE/FALSE |
+----------|-------------|
+`'0'` | TRUE 
+`'None'` | TRUE
+`'False'` | TRUE 
+`'True'` | TRUE 
+`' '` (string of one blank space) | TRUE
 
 
 
