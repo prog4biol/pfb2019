@@ -2,14 +2,14 @@ Programming For Biology 2017
 ============================
 
 
-__Instructors:__  
+__Instructors__  
 Simon Prochnik  
 Sofia Robb     
   
     
-    
+---    
 
-Table of Contents  
+__Table of Contents__  
 
  * [Big Picture](#big-picture)  
 
@@ -137,8 +137,8 @@ To bring up the command-line, use the Finder to navigate to
 _Applications->Utilities_ and double-click on the _Terminal_
 application. This will bring up a window like the following:
 
-![image of terminal screenshot](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/terminal_screenshot.png)
-OSX Terminal
+![OSX Terminal](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/terminal_screenshot.png)
+
 
 
 You can open several Terminal windows at once. This is often helpful.
@@ -796,7 +796,7 @@ Here are a few more advanced Unix topics that are super useful and when you have
 \pagebreak
 
 
-__[Unix 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Unix_01_problemset.md)__
+__[Link to Unix 1 Problem Set](problemsets/Unix_01_problemset.md)__
 
 
 Text Editors
@@ -812,13 +812,13 @@ The way you use nano to create a file is simply by typing the command _nano_ fol
 
 This is what you will see:
 
-![First Nano](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/nano_new.png)  
+![Create a new file with nano.](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/nano_new.png)  
 
-New file with nano.
 
-![Modified Nano](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/nano-modifided.png)  
 
-Modified and not saved file.
+![Modified and not saced. In the top right corner it says "Modified"](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/nano-modifided.png)  
+
+
 
 Things to notice:
 - At the top
@@ -834,7 +834,7 @@ Keyboard commands are the only way to interact with the editor. You cannot use y
 
 Find more commands by using `control g`:  
 
-![Modified Nano](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/nano-modifided.png)  
+![The help menu displays a listing of useful commands.](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/nano-help.png)  
 
 The Meta key is \<esc\>. To use the Meta+key, hit \<esc\>, release, then hit the following key
 
@@ -896,20 +896,21 @@ Let's Do It!
 
 Follow Steps 1 and 2 to create the remote repository. Follow Step 3 to create your local repository and link it to the remote.
 
-1. Navigate to GitHub --> Create Account / Log In --> Go To Repositories --> Click New  
+1. Navigate to GitHub --> Create Account / Log In --> Go To Repositories --> Click 'New'  
 
-  ![Create New Repository](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoButton.png)  
+  ![To create a new repository click the 'New' Button in the top right cornor.](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoButton.png)  
   
 2. Add a name (i.e., PFB2017_problemsets) and a description (i.e., Solutions for PFB2017 Problem Sets) and click "Create Repository"  
 
-  ![Create New Repository Form](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoForm.png)  
+  ![Fill in the form and click the 'Create Repository Button'](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoForm.png)  
   
 3. Create a directory on your computer and follow the instructions provided.  
 
-  ![Create New Repository Instructions](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoInstructions.png)  
-    - Open your terminal and navigate to the location you want to put a directory for your problem sets
-    - Create a new directory directory (i.e., PFB2017_problemsets)
-    - Follow the instructions provided when you created your repository. These are my instructions, yours will be differnt.
+  ![Create a directory on your computer and follow these instructions.](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoInstructions.png)  
+  
+   - Open your terminal and navigate to the location you want to put a directory for your problem sets
+   - Create a new directory directory (i.e., PFB2017_problemsets)
+   - Follow the instructions provided when you created your repository. These are my instructions, yours will be differnt.
 
 ```
 echo "# PFB2017_problemsets" >> README.md
@@ -978,7 +979,7 @@ _Keeping track of differences between local and remote repositories_
 If you are ever wondering what do you need to add to your remote repository use the `git status` command. This will provide you a list of file that have been modified, deleted, and those that are untracked. Untracked files are those that have never been added to the staging area with `git add`
 
 
-__[Unix 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Unix_02_problemset.md)__
+__[Link To Unix 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Unix_02_problemset.md)__
 
 
 
