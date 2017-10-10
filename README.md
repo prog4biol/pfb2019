@@ -812,10 +812,12 @@ The way you use nano to create a file is simply by typing the command _nano_ fol
 
 This is what you will see:
 
-![First Nano](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/nano_new.png)
+![First Nano](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/nano_new.png)  
+
 New file with nano.
 
-![Modified Nano](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/nano-modifided.png)
+![Modified Nano](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/nano-modifided.png)  
+
 Modified and not saved file.
 
 Things to notice:
@@ -893,12 +895,17 @@ Let's Do It!
 
 Follow Steps 1 and 2 to create the remote repository. Follow Step 3 to create your local repository and link it to the remote.
 
-1. Navigate to GitHub --> Create Account / Log In --> Go To Repositories --> Click New
-  ![Create New Repository](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoButton.png)
-2. Add a name (i.e., PFB2017_problemsets) and a description (i.e., Solutions for PFB2017 Problem Sets) and click "Create Repository"
-  ![Create New Repository Form](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoForm.png)
-3. Create a directory on your computer and follow the instructions provided.
-  ![Create New Repository Instructions](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoInstructions.png)
+1. Navigate to GitHub --> Create Account / Log In --> Go To Repositories --> Click New  
+
+  ![Create New Repository](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoButton.png)  
+  
+2. Add a name (i.e., PFB2017_problemsets) and a description (i.e., Solutions for PFB2017 Problem Sets) and click "Create Repository"  
+
+  ![Create New Repository Form](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoForm.png)  
+  
+3. Create a directory on your computer and follow the instructions provided.  
+
+  ![Create New Repository Instructions](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoInstructions.png)  
     - Open your terminal and navigate to the location you want to put a directory for your problem sets
     - Create a new directory directory (i.e., PFB2017_problemsets)
     - Follow the instructions provided when you created your repository. These are my instructions, yours will be differnt.
