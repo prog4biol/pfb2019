@@ -1,0 +1,52 @@
+% Contents of listings-setup.tex
+\usepackage{xcolor}
+\usepackage[letterpaper, portrait, margin=1in]{geometry}
+
+
+\usepackage[most]{tcolorbox}
+\usepackage{caption}
+\usepackage{xcolor}
+
+\definecolor{shadecolor}{gray}{0.95}
+\definecolor{captionbox}{cmyk}{0.43, 0.35, 0.35,0.01}
+
+\tcbset{colback=captionbox!5!white,colframe=captionbox!75!black}
+
+\BeforeBeginEnvironment{lstlisting}{\begin{tcolorbox}[toprule=3mm]\vskip-.5\baselineskip}
+\AfterEndEnvironment{lstlisting}{\end{tcolorbox}}
+
+\DeclareCaptionFormat{listing}{\parbox{\textwidth}{#1#2#3}}
+
+\captionsetup[lstlisting]{format=listing,skip=10pt}
+
+
+
+\let\OldRule\rule
+\renewcommand{\rule}[2]{\OldRule{\linewidth}{#2}}
+
+\usepackage{framed}
+\usepackage{xcolor}
+\let\oldquote=\quote
+\let\endoldquote=\endquote
+\colorlet{shadecolor}{orange!15}
+\renewenvironment{quote}{\begin{shaded*}\begin{oldquote}}{\end{oldquote}\end{shaded*}}
+
+
+
+\lstset{
+    basicstyle=\ttfamily,
+    numbers=left,
+    numberstyle=\footnotesize,
+    stepnumber=1,
+    numbersep=5pt,
+    backgroundcolor=\color{black!10},
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    captionpos=b,
+    breaklines=true,
+    breakatwhitespace=true,
+    breakautoindent=true,
+    linewidth=\textwidth
+}
