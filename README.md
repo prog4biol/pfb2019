@@ -832,8 +832,9 @@ Things to notice:
 
 Keyboard commands are the only way to interact with the editor. You cannot use your mouse or trackpad.
 
-Find more commands by using `control g`: 
-![Modified Nano](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/nano-modifided.png)
+Find more commands by using `control g`:  
+
+![Modified Nano](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/nano-modifided.png)  
 
 The Meta key is \<esc\>. To use the Meta+key, hit \<esc\>, release, then hit the following key
 
