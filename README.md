@@ -4245,12 +4245,10 @@ Exceptions
 
 <p>&nbsp;</p>
 
-~~Classes~~ 
-=======
-~~@sep are we going to cover this? Let's try to skip~~
-> ~~`class`~~
+Scope
+=====
 > scope & namespace, 
-> ~~`global, nonlocal`~~
+
 
 
 
