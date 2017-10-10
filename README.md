@@ -1313,7 +1313,7 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 | repr()   | Makes a string representation of an object. Useful for finding out what kind (Class) of object you are dealing with. |
 
 
-
+\pagebreak
 
 Operators
 ==========
