@@ -1946,9 +1946,9 @@ How would you include a new line, carrage return, or tab in your string?
 
 | Escape Character | Description    |
 | ---------------- | -------------- |
-| \n               | New line       |
-| \r               | Carrage Return |
-| \t               | Tab            |
+| \\n               | New line       |
+| \\r               | Carrage Return |
+| \\t               | Tab            |
 
 Let's include some escape charcters in our strings and print() functions.
 ```python
