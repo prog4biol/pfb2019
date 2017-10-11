@@ -2632,8 +2632,8 @@ __List Functions__
 | max(list)                             | returns the value with the largest ascii value | max(['a','A','z']) returns 'z'           |
 | min(list)                             | returns the value with the smallest ascii value | min(['a','A','z']) returns 'A'           |
 | list(seq)                             | converts a tuple into a list             | list(('a','A','z')) returns ['a', 'A', 'z'] |
-| sorted(list, key=None, reverse=False) | returns a sorted list based on the key provided | sorted(['a','A','z']) returns ['A', 'a', 'z'] |
-;  sorted(['a','A','z'],key=str.lower) returns ['a', 'A', 'z']
+| sorted(list, key=None, reverse=False) | returns a sorted list based on the key provided | sorted(['a','A','z']) returns ['A', 'a', 'z'] 
+| | | sorted(['a','A','z'],key=str.lower) returns ['a', 'A', 'z']
 
 
 __List Methods__
