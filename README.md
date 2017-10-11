@@ -3264,6 +3264,9 @@ Union, intersection, difference and symmetric difference can be done with sets
 __Set Operators__
 
 Difference:
+
+![Set Difference](images/set_difference.png)
+
 ```python
 >>> a - b                             
 {'r', 'd', 'b'}
@@ -3271,6 +3274,9 @@ Difference:
 > This returns the letters that are in a but not in b
 
 Union:
+
+![Set Union](images/set_union.png)
+
 ```python
 >>> a | b                          
 {'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}
@@ -3278,13 +3284,20 @@ Union:
 > This returns letters that are in a or b both
 
 Intersection:
+
+![Set Intersection](images/set_intersection.png)
+
 ```python
 >>> a & b                            
 {'a', 'c'}
 ```
 > This returns letters that are in both a and b
 
+
 Symmetric Difference:
+
+![Set Symmetric Difference](images/set_symmetric_difference.png)
+
 ```python
 >>> a ^ b                             
 {'r', 'd', 'b', 'm', 'z', 'l'}
