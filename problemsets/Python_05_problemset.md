@@ -20,13 +20,12 @@ Python 5 Problem Set
          c. average line length   
 
 
-5. You are going to generate a couple of gene list in files and add their contents to three different sets. 
+5. You are going to generate a couple of gene list that are saved in files, add their contents to sets, and compare them. 
 
-Generate Gene Lists:
+__Generate Gene Lists:__
 
-Generate some gene lists:
 
-__Get all genes:__
+_Get all genes:_
 
 1. Go to Ensembl Biomart.
 2. In dropdown box, select "Ensembl Genes 90"
@@ -38,7 +37,7 @@ __Get all genes:__
 8. Export all results to "File" "TSV" --> GO
 9. Rename the file to "alpaca_all_genes.tsv"
 
-__Get genes that have been labeled with Gene Ontology term [stem cell proliferation](http://purl.obolibrary.org/obo/GO_0072089)__
+_Get genes that have been labeled with Gene Ontology term [stem cell proliferation](http://purl.obolibrary.org/obo/GO_0072089)_
 
 10. Click "Filters"
 11. Under "Gene Ontology", check "Go term name" and enter "stem cell proliferation"
@@ -46,7 +45,7 @@ __Get genes that have been labeled with Gene Ontology term [stem cell proliferat
 13. Export all results to "File" "TSV" --> GO
 14. Rename the file to "alpaca_stemcellproliferation_genes.tsv"
 
-__Get genes that have been labeled with Gene Ontology term [pigmentation](http://purl.obolibrary.org/obo/GO_0043473)__
+_Get genes that have been labeled with Gene Ontology term [pigmentation](http://purl.obolibrary.org/obo/GO_0043473)_
 
 
 15. Click "Filters"
@@ -56,7 +55,7 @@ __Get genes that have been labeled with Gene Ontology term [pigmentation](http:/
 19. Rename the file to "alpaca_stemcellproliferation_genes.tsv"
 
 
-__Open each of the three files and add the geneIDs to a Set. One Set per file.__
+_Open each of the three files and add the geneIDs to a Set. One Set per file._
 
 A. Find all the genes that are not cell proliferation genes.
 B. Find all genes that are both stem cell proliferation genes and pigment genes.
@@ -73,7 +72,7 @@ Now, let do it again with transciption factors.
 6. Export all results to "File" "TSV" --> GO
 7. Rename the file to "alpaca_transcriptionFactors.tsv"
 
-__Open these two files: 1) the transcription factor gene list file and 2) the cell proliferation gene list file. Add each to a Set, One Set per file__
+_Open these two files: 1) the transcription factor gene list file and 2) the cell proliferation gene list file. Add each to a Set, One Set per file_
 
 A. Find all the genes that are transcription factors for cell proliferation
 
