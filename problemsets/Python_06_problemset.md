@@ -51,12 +51,13 @@ ACTATTTTTGAATACATCATTAACGCAATATATATATATATATATTTAT
 
 8. Now that you've done your restriction digest, determine the lengths of your fragments and sort them by length (in the same order they would separate on an electrophoresis gel).
 
-    Hint: Convert this string:
+Hint: Convert this string:
 
 ```
 AAAAAAAAGACGT^CTTTTTTTAAAAAAAAGACGT^CTTTTTTT
 ```
-    into this list:
+
+Into this list:
 
 ```
 ["AAAAAAAAGACGT","CTTTTTTTAAAAAAAAGACGT","CTTTTTTT"]
