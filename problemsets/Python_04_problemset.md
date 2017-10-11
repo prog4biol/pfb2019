@@ -38,7 +38,7 @@ Python 4 Problem Set
 8. Now only print the number if it is odd.
 
 
-6. Use a `for loop`, with the variable containing the list as the _sequence_, to iterate through each element of this list ['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']. i.e, `for var in list:`
+6. Use a `for loop`, with the variable containing the list as the _sequence_, to iterate through each element of this list `['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']`. i.e, `for var in list:`
 
    - Print out each element
    - Print out the length along with the sequence i.e., "4\\tATGC\\n"
