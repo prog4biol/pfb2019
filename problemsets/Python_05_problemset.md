@@ -61,7 +61,7 @@ B. Find all genes that are both stem cell proliferation genes and pigment genes.
 
 __Now, let do it again with transciption factors.__
  
-1. Go back to your Ensembl Biomart windo
+1. Go back to your Ensembl Biomart window
 2. Deselect the "GO Term Name"
 3. Select "GO Term Accession"
 4. Enter these two accessions IDs which in most organisms will be all the transcription factors
