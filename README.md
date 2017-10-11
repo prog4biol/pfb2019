@@ -2786,16 +2786,16 @@ count: 4
 Done
 ```
 > The while condition was true 5 times and the while block of code was executed 5 times.
-
-- count is equal to 0 when we begin
-- 0 is less than 5 so we execute the while block 1 time
-- count is printed
-- count is incremented (count = count + 1)
-- count is now equal to 1.
-- 1 is less than 5 so we execute the while block for the 2nd time.
-- this continues until count is 5. 
-- 5 is not less than 5 so the while block is not executed.
-- The first line following the while statement is executed, "Done" is printed
+>
+> - count is equal to 0 when we begin
+> - 0 is less than 5 so we execute the while block 1 time
+> - count is printed
+> - count is incremented (count = count + 1)
+> - count is now equal to 1.
+> - 1 is less than 5 so we execute the while block for the 2nd time.
+> - this continues until count is 5. 
+> - 5 is not less than 5 so the while block is not executed.
+> - The first line following the while statement is executed, "Done" is printed
 
 
 An infiite loop is when a while condition is always true. Here is an example of an infinit loop.  
