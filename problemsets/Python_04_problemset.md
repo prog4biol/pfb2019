@@ -24,10 +24,10 @@ Python 4 Problem Set
  
    -  __`remove()`__
 
-     - Print your list before you start.
-     - Store the value returned by `remove()`.
-     - Print the value and the list.
-     - What happened to the orginal list?
+      - Print your list before you start.
+      - Store the value returned by `remove()`.
+      - Print the value and the list.
+      - What happened to the orginal list?
 
 6. Write a script that uses `range()` in a `for loop` to print out every number between 0 and 99  
 
