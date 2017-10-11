@@ -811,7 +811,7 @@ Here are a few more advanced Unix topics that are super useful and when you have
 
 __[Link to Unix 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Unix_01_problemset.md)__
 
-<div style="visibility:hidden;">\pagebreak</div>
+<span style="visibility:hidden;">\pagebreak</span>
 
 ---
 
