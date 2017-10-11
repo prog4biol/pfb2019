@@ -79,7 +79,7 @@ tree | [Cedar](https://sciencing.com/cedar-trees-5432718.html)
    
 
 
-9. Write a script that iterates through each nucleotide of a DNA string:
+13. Write a script that iterates through each nucleotide of a DNA string:
    -  Print out each nucleotide
    -  Create a counter for each nucleotide. Count each nucleotide without using `count()`. 
    -  Print out the final count of each nucleotide. 
@@ -93,7 +93,7 @@ C = C_total
    - Alter your counter in the last script use a dictionary for counting each nucleotide.
 
 
-10. Write a script to find the intersection, difference, union, and symetrical difference between these two sets.
+14. Write a script to find the intersection, difference, union, and symetrical difference between these two sets.
 
 ```
 Set A = 3 14 15 9 26 5 35 9
@@ -101,4 +101,4 @@ Set B = 60 22 14 0 9
 
 ```
 
-11. Have you been commiting you work?
+15. Have you been commiting you work?
