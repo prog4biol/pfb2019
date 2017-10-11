@@ -1,7 +1,8 @@
 Unix Basics Quick Review and Problem Set
 ======================================
 
-Table of Contents
+__Table of Contents__
+
  * [Quick Review](#quick-review)
  * [Problem Set](#problem-set)
 
