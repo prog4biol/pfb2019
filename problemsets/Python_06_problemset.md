@@ -57,7 +57,7 @@ ACTATTTTTGAATACATCATTAACGCAATATATATATATATATATTTAT
 
     into this list:
 
-    ("AAAAAAAAGACGT","CTTTTTTTAAAAAAAAGACGT","CTTTTTTT")
+       ("AAAAAAAAGACGT","CTTTTTTTAAAAAAAAGACGT","CTTTTTTT")
 
 
 9. Download this [file](http://rebase.neb.com/rebase/link_proto) of enzymes and their cut sites to fill a dictionary of enzymes paired with their recognition patterns. Be aware of the header lines, and be aware of how the columns are delimited.
