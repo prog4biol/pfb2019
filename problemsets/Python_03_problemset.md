@@ -27,4 +27,26 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACC
 Fragment\tPostion\tLength  
 ```
 
+8. Create a list and add each fragemnt to it. 
+
+9. Sort the list. 
+
+10. Sort the list by fragment length. Check out documentation of the key argument.
+
+11. Interogate the difference between these two ways to copy a list. Both are not correct. 
+     - alter the lists after the "copy" by adding a new element to the list
+     - print the lists before and after you alter the "copy"
+
+Assign a list to a new variable:
+```python
+        list = ['a', 'bb', 'ccc']
+        list_copy = list
+```
+
+Use the copy() method:
+```python
+        list = ['a', 'bb', 'ccc']
+        list_copy = list.copy()
+```
+
 10. ADD/COMMIT/PUSH
