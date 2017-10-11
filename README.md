@@ -2250,7 +2250,7 @@ Parts of a string can be located based on position and returned. This is because
 <p>&nbsp</p>
 This string 'ATTAAAGGGCCC' is made up of the following sequence of characters, and positions (starting at zero).
 
-`
+
 
 | Position/Index | Character |
 | -------------- | --------- |
