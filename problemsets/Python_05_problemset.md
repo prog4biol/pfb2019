@@ -14,9 +14,9 @@ Python 5 Problem Set
 
 4. Open the [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) file [Python_05.fastq](https://github.com/srobb1/pfb2017/blob/master/files/Python_05.fastq) and go through each line of the file. Count the number of lines and the number of characters per line.
  
-    Have your program report the:
-         a. total number of lines
-         b. total number of characters
-         c. average line length 
+    Have your program report the:  
+         a. total number of lines  
+         b. total number of characters  
+         c. average line length   
 
 
