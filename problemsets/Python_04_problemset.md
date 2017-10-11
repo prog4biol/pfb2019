@@ -5,7 +5,7 @@ Python 4 Problem Set
 
 2. Write a script that uses a `while loop` to calculate the [factorial](https://en.wikipedia.org/wiki/Factorial) of 1000.  
 
-1. Iterate through each element of this list using a for loop: [101,2,15,22,95,33,2,27,72,15,52];
+1. Iterate through each element of this list using a for loop: [101,2,15,22,95,33,2,27,72,15,52]
    - Print out only the values that are even (use modulus operator).
 
 2. Iterate through each of the elements of the above list, but make sure to sort them numerically.
