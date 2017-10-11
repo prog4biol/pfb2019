@@ -1892,11 +1892,6 @@ You can call `dir()` on any object.
 
 ## Strings
 
-@sep
-
-> .format()  
-> strip()
-
 
 - A string is a series of characters starting and ending with a quotation mark.
 - Strings are an example of a Python Sequence. A sequence is defined as a positionally ordered set. This means each element in the set has a position, starting with zero, i.e. 0,1,2,3 and so on until you get to the end of the string. If this is confusing, think about a string as being made up of individual characters: character 0, character 1, character 2 and so on.
@@ -2448,29 +2443,26 @@ ___200____
 
 ### Summary of special formatting symbols so far
 
-Here are some of the options
+__Here are some of the ALIGNMENT options:__
 
-```
-format_spec     ::=  \[\[fill\]align\]\[0\]\[width\]\[.precision\]\[type\]
-fill            ::=  <any character>
-align           ::=  "<" | ">" | "^"
-width           ::=  integer
-precision       ::=  integer
-type            ::=  "b" | "d" | "e" | "E" | "f" | "g" | "G" | "s" | "x" | "%"
-```
+Option |	Meaning |
+-------|----------|
+'<'	 | Forces the field to be left-aligned within the available space (this is the default for most objects).
+'>'	 | Forces the field to be right-aligned within the available space (this is the default for numbers).
+'='	 | Forces the padding to be placed after the sign (if any) but before the digits. This is used for printing fields in the form ‘+000000120’. This alignment option is only valid for numeric types.
+'^'	 | Forces the field to be centered within the available space.
 
-The format spec goes after the colon inside the curly braces `{:  <here>  }`
-
-Here's an example 
-
-`{  :    x  <  10   s}`
-
+>Here's an example 
+>
+>`{  :    x  <  10   s}`
+>
 > fill with `x`   
 > left justify `<`  
 > `10` a field of ten characters 
 > `s` a string
 
-#### The most common types
+
+__Common Types__
 
 | type | description                              |
 | ---- | ---------------------------------------- |
@@ -2484,6 +2476,8 @@ Here's an example
 | x    | convert to hexidecimal, also X           |
 | %    | converts to % by multiplying by 100      |
 
+
+__What's the point?__
 
 
 So much can be done with the `format()` function. Here is one last example, but not the last functionality of this function.  Let truncate a long floating point number.  The default is 6 decimal places. Note that the function rounds to the nearest decimal place.
