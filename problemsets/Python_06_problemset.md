@@ -36,16 +36,15 @@ ACTATTTTTGAATACATCATTAACGCAATATATATATATATATATTTAT
 
 7. Determine the site(s) of the physical cut(s) by ApoI in the above sequence. Print out the sequence with "^" at the cut site.
 
-    Hints:  
-      Use `sub()`  
-      Use subpatterns (parentheses and `group()` ) to find the cut site within the pattern.
-        
-      Example: if the pattern is GACGT^CT the following sequence
+  Hints:  
+   - Use `sub()`  
+   - Use subpatterns (parentheses and `group()` ) to find the cut site within the pattern.
+   - Example: if the pattern is GACGT^CT the following sequence
 
 ```
 AAAAAAAAGACGTCTTTTTTTAAAAAAAAGACGTCTTTTTTT
 ```
-    would be cut like this:
+would be cut like this:
 
 ```
 AAAAAAAAGACGT^CTTTTTTTAAAAAAAAGACGT^CTTTTTTT
