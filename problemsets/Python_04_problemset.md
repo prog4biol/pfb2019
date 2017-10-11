@@ -88,3 +88,14 @@ C = C_total
 ```
  
    - Alter your counter in the last script use a dictionary for counting each nucleotide.
+
+
+10. Write a script to find the intersection, difference, union, and symetrical difference between these two sets.
+
+```
+Set A = 3 14 15 9 26 5 35 9
+Set B = 60 22 14 0 9
+
+```
+
+11. Have you been commiting you work?
