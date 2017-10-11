@@ -811,7 +811,8 @@ Here are a few more advanced Unix topics that are super useful and when you have
 
 __[Link to Unix 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Unix_01_problemset.md)__
 
-<span style="visibility:hidden;">\pagebreak</span>
+
+\pagebreak
 
 ---
 
@@ -998,6 +999,15 @@ If we make changes to any of these files and you want to update your copy you ca
 _Keeping track of differences between local and remote repositories_
 
 If you are ever wondering what do you need to add to your remote repository use the `git status` command. This will provide you a list of file that have been modified, deleted, and those that are untracked. Untracked files are those that have never been added to the staging area with `git add`
+
+__Links to *Slightly* less basic topics__
+
+You will KNOW if you need to use these features of git.
+
+1. [View Commmit History](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)
+2. [Resolving Merge Conflicts](https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/)
+3. [Undoing Previous Commits](https://github.com/blog/2019-how-to-undo-almost-anything-with-git)
+
 
 ---
 
