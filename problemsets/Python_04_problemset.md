@@ -24,10 +24,10 @@ Python 4 Problem Set
  
    -  __`remove()`__
 
-    - Print your list before you start.
-    - Store the value returned by `remove()`.
-    - Print the value and the list.
-    - What happened to the orginal list?
+     - Print your list before you start.
+     - Store the value returned by `remove()`.
+     - Print the value and the list.
+     - What happened to the orginal list?
 
 6. Write a script that uses `range()` in a `for loop` to print out every number between 0 and 99  
 
@@ -45,8 +45,8 @@ Python 4 Problem Set
 
 7. Use a `for loop` with `range()` instead of using the list variable to iterate through each element the list from the last Question. i.e, `for var in range(x):`
 
-  - Print out each element
-  - Print out the length along with the sequence  i.e., "4\\tATGC\\n" 
+   - Print out each element
+   - Print out the length along with the sequence  i.e., "4\\tATGC\\n" 
 
 
 
@@ -61,13 +61,13 @@ Python 4 Problem Set
 Remember to test your code with test data. 
  
 11. Start with 2 very similar DNA sequences. Use your favorites or use [Python_04.fasta](https://github.com/srobb1/pfb2017/blob/master/files/Python_04.fasta)
-  - Align with ClustalW, TCoffee, or some other web alignment application. 
-  - Output should be in FASTA format.
-  - Store (copy and paste) each aligned sequence, including dashes, as two separate string variables. 
-  - Be aware of the newlines (if any)
-  - Use a `for loop` with `range()` to compare each index for nucleotide differences.
-  - Report the nucleotide position of each difference.
- 
+   - Align with ClustalW, TCoffee, or some other web alignment application. 
+   - Output should be in FASTA format.
+   - Store (copy and paste) each aligned sequence, including dashes, as two separate string variables. 
+   - Be aware of the newlines (if any)
+   - Use a `for loop` with `range()` to compare each index for nucleotide differences.
+   - Report the nucleotide position of each difference.
+  
 12. Write a script in which you construct a dictionary of your favorite things.
 
 > Some of my favorites:
