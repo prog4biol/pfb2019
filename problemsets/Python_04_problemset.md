@@ -37,12 +37,12 @@ Python 4 Problem Set
 6. Use a `for loop`, with the variable containing the list as the _sequence_, to iterate through each element of this list ['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']. i.e, `for var in list:`
 
    - Print out each element
-   - Print out the length along with the sequence i.e., "4\\tATGC\n"
+   - Print out the length along with the sequence i.e., "4\\tATGC\\n"
 
 7. Use a `for loop` with `range()` instead of using the list variable to iterate through each element the list from the last Question. i.e, `for var in range(x):`
 
   - Print out each element
-  - Print out the length along with the sequence  i.e., "4\\tATGC\n" 
+  - Print out the length along with the sequence  i.e., "4\\tATGC\\n" 
 
 
 

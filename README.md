@@ -3265,7 +3265,7 @@ __Set Operators__
 
 Difference:
 
-![Set Difference](images/set_difference.png)
+![Set Difference](https://raw.githubusercontent.com/srobb1/pfb2017/master/images//set_difference.png)
 
 ```python
 >>> a - b                             
@@ -3275,7 +3275,7 @@ Difference:
 
 Union:
 
-![Set Union](images/set_union.png)
+![Set Union](https://raw.githubusercontent.com/srobb1/pfb2017/master/images//set_union.png)
 
 ```python
 >>> a | b                          
@@ -3285,7 +3285,7 @@ Union:
 
 Intersection:
 
-![Set Intersection](images/set_intersection.png)
+![Set Intersection](https://raw.githubusercontent.com/srobb1/pfb2017/master/images//set_intersection.png)
 
 ```python
 >>> a & b                            
@@ -3296,7 +3296,7 @@ Intersection:
 
 Symmetric Difference:
 
-![Set Symmetric Difference](images/set_symmetric_difference.png)
+![Set Symmetric Difference](https://raw.githubusercontent.com/srobb1/pfb2017/master/images//set_symmetric_difference.png)
 
 ```python
 >>> a ^ b                             
