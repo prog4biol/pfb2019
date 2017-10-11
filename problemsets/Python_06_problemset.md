@@ -40,15 +40,16 @@ ACTATTTTTGAATACATCATTAACGCAATATATATATATATATATTTAT
         Use `sub()`
         Use subpatterns (parentheses and `group()` ) to find the cut site within the pattern.
         
+        Example: if the pattern is GACGT^CT the following sequence
 
-    Example: if the pattern is GACGT^CT the following sequence
-
-    AAAAAAAAGACGTCTTTTTTTAAAAAAAAGACGTCTTTTTTT
-
+```
+AAAAAAAAGACGTCTTTTTTTAAAAAAAAGACGTCTTTTTTT
+```
     would be cut like this:
 
-    AAAAAAAAGACGT^CTTTTTTTAAAAAAAAGACGT^CTTTTTTT
-
+```
+AAAAAAAAGACGT^CTTTTTTTAAAAAAAAGACGT^CTTTTTTT
+```
 
 8. Now that you've done your restriction digest, determine the lengths of your fragments and sort them by length (in the same order they would separate on an electrophoresis gel).
 
