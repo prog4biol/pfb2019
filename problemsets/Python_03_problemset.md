@@ -11,9 +11,13 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACC
 
 3. Write a new script that prints out the reverse complement of the above DNA string. 
 	
-> Original Sequence  5'ATGCAGGGGAAACATGATTCAGGAC 3'  
-> Complement         3'TACGTCCCCTTTGTACTAAGTCCTG 5'  
-> Reverse Complement 5'GTCCTGAATCATGTTTCCCCTGCAT 3'  
+>
+> ```
+>  Original Sequence  5'ATGCAGGGGAAACATGATTCAGGAC 3'  
+>  Complement         3'TACGTCCCCTTTGTACTAAGTCCTG 5'  
+>  Reverse Complement 5'GTCCTGAATCATGTTTCCCCTGCAT 3'  
+> ```
+
 
 4. Make sure to commit your changes along the way. You can wait until the end to push them to your remote repo, if you like, or you can do it now. It is probably smart to commit after each problem set question. 
 
