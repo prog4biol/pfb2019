@@ -66,7 +66,7 @@ Into this list:
 9. Download this [file](http://rebase.neb.com/rebase/link_proto) of enzymes and their cut sites to fill a dictionary of enzymes paired with their recognition patterns. Be aware of the header lines, and be aware of how the columns are delimited.
 
 10. Write a script which takes two command line arguments: the name of an enzyme and a fasta file with a sequence to be cut. 
-   If the provided enzyme is present in the hash, and will act successfully on the provided sequence, print out:
+   If the provided enzyme is present in the dictionary, and will act successfully on the provided sequence, print out:
      - the provided sequence, annotated with cut sites
      - the number of fragments
      - the fragments in their natural order (unsorted)
