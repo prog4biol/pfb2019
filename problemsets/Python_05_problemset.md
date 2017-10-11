@@ -12,12 +12,10 @@ Python 5 Problem Set
 
 3. Open and print the reverse complement of each sequence in [Python_05.fasta](https://github.com/srobb1/pfb2017/blob/master/files/Python_05.fasta). Make sure to print the output in fasta format including the sequence name and a note in the description that this is the reverse complement. Print to STDOUT and capture the output into a file with a command line redirect '>'.
 
-4. Open the [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) file [Python_05.fastq](https://github.com/srobb1/pfb2017/blob/master/files/Python_05.fastq) and go through each line of the file. Count the number of lines and the number of characters per line.
- 
-    Have your program report the:  
-         a. total number of lines  
-         b. total number of characters  
-         c. average line length   
+4. Open the [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) file [Python_05.fastq](https://github.com/srobb1/pfb2017/blob/master/files/Python_05.fastq) and go through each line of the file. Count the number of lines and the number of characters per line. Have your program report the:  
+    - total number of lines  
+    - total number of characters  
+    - average line length   
 
 
 5. You are going to generate a couple of gene list that are saved in files, add their contents to sets, and compare them. 
@@ -55,13 +53,14 @@ _Get genes that have been labeled with Gene Ontology term [pigmentation](http://
 19. Rename the file to "alpaca_stemcellproliferation_genes.tsv"
 
 
-_Open each of the three files and add the geneIDs to a Set. One Set per file._
+__Open each of the three files and add the geneIDs to a Set. One Set per file.__
 
 A. Find all the genes that are not cell proliferation genes.  
 B. Find all genes that are both stem cell proliferation genes and pigment genes.  
 *Note* Make sure to NOT add the header to your set.  
 
-Now, let do it again with transciption factors. 
+__Now, let do it again with transciption factors.__
+ 
 1. Go back to your Ensembl Biomart windo
 2. Deselect the "GO Term Name"
 3. Select "GO Term Accession"
@@ -72,9 +71,9 @@ Now, let do it again with transciption factors.
 6. Export all results to "File" "TSV" --> GO
 7. Rename the file to "alpaca_transcriptionFactors.tsv"
 
-_Open these two files: 1) the transcription factor gene list file and 2) the cell proliferation gene list file. Add each to a Set, One Set per file_
+__Open these two files: 1) the transcription factor gene list file and 2) the cell proliferation gene list file. Add each to a Set, One Set per file__
 
 A. Find all the genes that are transcription factors for cell proliferation
 
 
-Now do the same on the command line with `comm` command. You might need to `sort` each file first.
+__Now do the same on the command line with `comm` command. You might need to `sort` each file first.__
