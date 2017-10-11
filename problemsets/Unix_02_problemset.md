@@ -2,7 +2,7 @@ Unix 2 Problem Set
 ==================
 
 1. If you have not already done so, follow [Steps 1-3 in Unix: GIT for Beginners](https://github.com/srobb1/pfb2017#git-for-beginners). Here is a summary of those steps:
-   - Create a GitHub Account and Click New: Create a New Remote Repository
+   - Create a GitHub Account and Click "New"
    - Add info about your repository
    - Create a local (your machine) directory (`mkdir`) and repository (`git init`) and link it to your remote repository (`git remote add`).
 
@@ -47,4 +47,4 @@ ATGGCGTCTTGGCCTTAAAAGCTC
 14. Read the man page for rm and cp to find out how to remove and copy a directory.
 15. Print out your history and redirect it to a file called unixBasics.history.txt
 16. Open this file with your text editor and delete any lines you do not want to keep. See this [google search](https://www.google.com/search?rlz=1C5CHFA_enUS596US596&q=nano+delete+entire+line&oq=nano+delete+entire+line&gs_l=psy-ab.3..0j0i5i30k1.28765.29854.0.30351.7.6.0.0.0.0.186.526.0j3.3.0....0...1.1.64.psy-ab..5.2.362...0i13k1j0i7i5i30k1.0.Ub2zfH_lp_o) for info on delete entire lines in nano.
-
+17. Make sure all your files are synced with your remote repository.
