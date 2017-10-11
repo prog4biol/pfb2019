@@ -3539,10 +3539,10 @@ This is a very common task. It will use a loop, file I/O and a dictionary.
 
 Assume we have a file called "sequence_data.txt" that contains tab-delimited gene names and sequences that looks something like this
 
-`
+```
 TP53    GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 BRCA1   GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
-`
+```
 
 How can we read this whole file in to a dictionary? 
 
@@ -3560,9 +3560,9 @@ print(genes)
 ```
 
 Output:
-`
+```
 {'TP53': 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC', 'BRCA1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'}
-`
+```
 
 
 <p>&nbsp;</p>

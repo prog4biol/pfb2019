@@ -53,4 +53,4 @@ Use the copy() method:
         list_copy = list.copy()
 ```
 
-10. ADD/COMMIT/PUSH
+12. ADD/COMMIT/PUSH
