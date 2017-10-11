@@ -6,5 +6,3 @@
 
 
 pandoc ../README.md --listings -H listing-setup.tex -o pfb2017.lectures.pdf
-
-for i in ../problemsets/*md  ; do BASE=`basename $i .md` ; pandoc $i --listings -H listing-setup.tex -o $BASE.pdf ; done
