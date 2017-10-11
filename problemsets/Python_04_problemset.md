@@ -51,14 +51,12 @@ Python 4 Problem Set
 
 
 10. Create a shuffled sequence
-```
-  Use a for loop to perform the following procedure N times (N = length of seq)
-    Select a random position A with randrange()
-    Select a random position B with randrange()
-    Exchange the letters at list indices A and B
-  Print the final shuffled sequence
-```
-Remember to test your code with test data. 
+    - Use a for loop to perform the following procedure N times (N = length of seq)
+    -   Select a random position A with randrange()
+    -   Select a random position B with randrange()
+    -   Exchange the letters at list indices A and B
+    - Print the final shuffled sequence
+    - Remember to test your code with test data. 
  
 11. Start with 2 very similar DNA sequences. Use your favorites or use [Python_04.fasta](https://github.com/srobb1/pfb2017/blob/master/files/Python_04.fasta)
    - Align with ClustalW, TCoffee, or some other web alignment application. 
@@ -69,7 +67,6 @@ Remember to test your code with test data.
    - Report the nucleotide position of each difference.
   
 12. Write a script in which you construct a dictionary of your favorite things.
-
 > Some of my favorites:
 >
 > Type  |  Favorite |
