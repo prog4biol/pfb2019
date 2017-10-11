@@ -77,10 +77,10 @@ Python 4 Problem Set
 > tree | [Cedar](https://sciencing.com/cedar-trees-5432718.html) 
    
 
-14. Write a script that iterates through each nucleotide of a DNA string:
-   -  Print out each nucleotide
-   -  Create a counter for each nucleotide. Count each nucleotide without using `count()`. 
-   -  Print out the final count of each nucleotide. 
+15. Write a script that iterates through each nucleotide of a DNA string:
+    -  Print out each nucleotide
+    -  Create a counter for each nucleotide. Count each nucleotide without using `count()`. 
+    -  Print out the final count of each nucleotide. 
 
 ```
 A = A_total
@@ -89,15 +89,14 @@ G = G_total
 C = C_total
 ```
  
-15.  Alter your counter in the last script use a dictionary for counting each nucleotide.
+16.  Alter your counter in the last script use a dictionary for counting each nucleotide.
 
 
-16. Write a script to find the intersection, difference, union, and symetrical difference between these two sets.
+17. Write a script to find the intersection, difference, union, and symetrical difference between these two sets.
 
 ```
 Set A = 3 14 15 9 26 5 35 9
 Set B = 60 22 14 0 9
-
 ```
 
-17. Have you been commiting you work?
+18. Have you been commiting you work?
