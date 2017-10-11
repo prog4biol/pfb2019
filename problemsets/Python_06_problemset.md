@@ -1,4 +1,4 @@
-Python 5 Problem Set
+Python 6 Problem Set
 ===================
 
 1. In the file [Python_06_nobody.txt](https://github.com/srobb1/pfb2017/blob/master/files/Python_06_nobody.txt) find every occurrence of 'Nobody' and print out the position.
