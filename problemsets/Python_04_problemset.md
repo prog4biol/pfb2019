@@ -90,10 +90,10 @@ G = G_total
 C = C_total
 ```
  
-   - Alter your counter in the last script use a dictionary for counting each nucleotide.
+14.  Alter your counter in the last script use a dictionary for counting each nucleotide.
 
 
-14. Write a script to find the intersection, difference, union, and symetrical difference between these two sets.
+15. Write a script to find the intersection, difference, union, and symetrical difference between these two sets.
 
 ```
 Set A = 3 14 15 9 26 5 35 9
@@ -101,4 +101,4 @@ Set B = 60 22 14 0 9
 
 ```
 
-15. Have you been commiting you work?
+16. Have you been commiting you work?
