@@ -35,22 +35,21 @@ Python 4 Problem Set
 
 7. Rewrite the script to take to values from the command line
 
-8. Now only print the number if it is odd.
+9. Now only print the number if it is odd.
 
 
-6. Use a `for loop`, with the variable containing the list as the _sequence_, to iterate through each element of this list `['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']`. i.e, `for var in list:`
+10. Use a `for loop`, with the variable containing the list as the _sequence_, to iterate through each element of this list `['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']`. i.e, `for var in list:`
+    - Print out each element
+    - Print out the length along with the sequence i.e., "4\\tATGC\\n"
 
-   - Print out each element
-   - Print out the length along with the sequence i.e., "4\\tATGC\\n"
-
-7. Use a `for loop` with `range()` instead of using the list variable to iterate through each element the list from the last Question. i.e, `for var in range(x):`
+11. Use a `for loop` with `range()` instead of using the list variable to iterate through each element the list from the last Question. i.e, `for var in range(x):`
 
    - Print out each element
    - Print out the length along with the sequence  i.e., "4\\tATGC\\n" 
 
 
 
-10. Create a shuffled sequence
+12. Create a shuffled sequence
     - Use a for loop to perform the following procedure N times (N = length of seq)
     -   Select a random position A with randrange()
     -   Select a random position B with randrange()
@@ -58,7 +57,7 @@ Python 4 Problem Set
     - Print the final shuffled sequence
     - Remember to test your code with test data. 
  
-11. Start with 2 very similar DNA sequences. Use your favorites or use [Python_04.fasta](https://github.com/srobb1/pfb2017/blob/master/files/Python_04.fasta)
+13. Start with 2 very similar DNA sequences. Use your favorites or use [Python_04.fasta](https://github.com/srobb1/pfb2017/blob/master/files/Python_04.fasta)
     - Align with ClustalW, TCoffee, or some other web alignment application. 
     - Output should be in FASTA format.
     - Store (copy and paste) each aligned sequence, including dashes, as two separate string variables. 
@@ -66,7 +65,7 @@ Python 4 Problem Set
     - Use a `for loop` with `range()` to compare each index for nucleotide differences.
     - Report the nucleotide position of each difference.
   
-13. Write a script in which you construct a dictionary of your favorite things.
+14. Write a script in which you construct a dictionary of your favorite things.
 
 > Some of my favorites:
 >
