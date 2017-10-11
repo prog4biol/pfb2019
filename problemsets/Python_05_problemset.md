@@ -57,9 +57,9 @@ _Get genes that have been labeled with Gene Ontology term [pigmentation](http://
 
 _Open each of the three files and add the geneIDs to a Set. One Set per file._
 
-A. Find all the genes that are not cell proliferation genes.
-B. Find all genes that are both stem cell proliferation genes and pigment genes.
-*Note* Make sure to NOT add the header to your set.
+A. Find all the genes that are not cell proliferation genes.  
+B. Find all genes that are both stem cell proliferation genes and pigment genes.  
+*Note* Make sure to NOT add the header to your set.  
 
 Now, let do it again with transciption factors. 
 1. Go back to your Ensembl Biomart windo
