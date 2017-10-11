@@ -21,7 +21,7 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACC
 
 6. What is the location in the DNA string of the EcoR1 cut site? Calculate the first and last nucleotides of each restriction fragment.
 
-7. Extract the the restricion fragments. Print each fragment along with its postion in the whole DNA sequence and its length.
+7. Extract the the restricion fragments. Print each fragment along with its postion in the whole DNA sequence and its length. Use string formating to format your print statemnt.
 
 ```
 Fragment\tPostion\tLength  
