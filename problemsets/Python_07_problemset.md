@@ -63,3 +63,8 @@ CCAGAGGCTGCTCCCCCCGTGGCCCCTGCACCAGCAGCTCCTACACCGGCGGCCCCTGCACCAGCCCCCTCCTGGCCCCT
 GTCATCTTCT
 ```
 
+4. Modify your script so that it can take two commandline arguments:
+     1) FASTA file name
+     2) Max length of each line
+
+   The script should reformat every sequence in the file to the specified max line length.
