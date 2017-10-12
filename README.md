@@ -4139,7 +4139,7 @@ __The details__
 	- We do this with the keyword `def`. 
 2. The function must have a name.
 	- "calculate_at_content" is our name
-3. Functions have information about the variables required in the function body. These are paceholders for the arguments that get passed into our function. Functions don't need to have argumetns but they always need '()'
+3. Functions define the variables required in the function body. These are paceholders for the arguments that get passed into our function. Functions don't need to have argumetns but they always need '()'
 	- We do this there "(dna)". 
 	- Our function needs one variable, and we can refer to it in the function body as 'dna'. 
         - The variable 'dna' and it's contents are only visible within the body of the function
