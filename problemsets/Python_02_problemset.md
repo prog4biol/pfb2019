@@ -9,7 +9,7 @@ GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
 
 2. How about 'TTT'?
 
-3. Save the DNA string to a valiable and do 1 and 2 again.
+3. Save the DNA string to a variable and do 1 and 2 again.
 
 4. Make sure to commit your changes along the way. You can wait until the end to push them to your remote repo, if you like, or you can do it now. 
 
