@@ -4560,11 +4560,76 @@ __[Link to Python 7 Problem Set](https://github.com/srobb1/pfb2017/blob/master/p
 @sep
 > try/except/finally (see with/as)
 
+There are a few different types of errors when coding. Syntax errors, logic errors, and exceptions. You have probably encountered all three. Sytax and logic errors are issues you need to deal with while coding. An exception is a special type of error that can be informative and used to write code to respond to this type of error. This is especially relevent when dealing with user input. What if they don't give you any, or it is the wrong kind of input. We want our code to be able to detect these types of errors and respond accordingly.
+
+```python
+#!/usr/bin/python3
+
+import sys
+file = sys.argv[1]
+
+print("User provided file:" , file)
+```
+> This code takes user provided input and prints it
+
+Run it.
+```
+$ python scripts/exceptions.py test.txt
+User provided file: test.txt
+```
+
+What happens if the user does not provide any input and we try to print it? 
+```
+$ python scripts/exceptions.py
+Traceback (most recent call last):
+  File "scripts/exceptions.py", line 4, in <module>
+    file = sys.argv[1]
+IndexError: list index out of range 
+```
+> We get an IndexError exception
 
 
+We have already seen quite a few Exceptions, here are some:   
+  - ValueError: math domain error
+  - AttributeError: 'list' object has no attribute 'rstrip'
+  - SyntaxError: EOL while scanning string literal
+  - NameError: name 'GGTCTAC' is not defined
+  - SyntaxError: Missing parentheses in call to 'print'
+  - AttributeError: 'int' object has no attribute 'lower'
+  - IndexError: list assignment index out of range
+  - NameError: name 'HDAC' is not defined
+
+We can use the exception to our advantage to help out our users. We can use a try/except condition to look for exceptions and to do something if we do not have an exception and do something different if we do have an exception.
+
+```python
+#!/usr/bin/python3
+import sys
+
+file = ''
+try:
+  file = sys.argv[1]
+  print("User provided file:" , file)
+except:
+  print("Please provide a file name")
+```
+> We need to "try" to get a user provided argument. If we are successful then we can print it out. If we try and fail, we execute the code in the except portion of our try/except and print that we need a file name. 
+
+Let's run it WITH iser input
+```
+$ python3 scripts/exceptions_try.py test.txt
+User provided file: test.txt
+```
+> It runs as expected
+
+Let's run it WITHOUT user input
+```
+$ python scripts/exceptions_try.py
+Please provide a file name
+```
+> Yeah, the user is informed that they need to provide a file name to the script
 
 
-
+What if the user provides input but it is not a valid file or the path is incorrect?
 
 
 <p>&nbsp;</p>
