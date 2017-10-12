@@ -4194,7 +4194,7 @@ def calculate_at_content(dna='ATGC'):
 > If you call the function with no arguments, the default will be used. In this case a default is pretty useless, and the fucntion will return '0.5' if called without providing a DNA sequence.
 
 
-_lambda_
+__lambda__
 
 Lambda expressions can be used when your function only contains one line. It is a special kind of custom function that you don't have to give a name. Lambda expressions are useful because some functions can take a lambda as an argument.
 
