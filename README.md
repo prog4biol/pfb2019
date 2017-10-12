@@ -1348,6 +1348,7 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 | dict(d)  | Creates a dictionary. d must be a sequence of (key,value) tuples. |
 | repr()   | Makes a string representation of an object. Useful for finding out what kind (Class) of object you are dealing with. |
 
+---
 
 __[Link to Python 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Python_01_problemset.md)__
 
@@ -1840,6 +1841,8 @@ It returns three different values depending on x and y
 - if x>y 1 is returned
 
 - x == y 0 is returned
+
+---
 
 __[Link to Python 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_02_problemset.md)__
 
@@ -2727,6 +2730,10 @@ Here's a way to make a 3 x 3 table of values.
 
 <p>&nbsp;</p>
 
+---
+
+__[Link to Python 3 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_03_problemset.md)__
+
 \pagebreak
 
 ---
@@ -3342,6 +3349,9 @@ __Set Methods__
 
 <p>&nbsp;</p>
 
+---
+
+__[Link to Python 4 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_04_problemset.md)__
 
 \pagebreak
 
@@ -3568,6 +3578,11 @@ Output:
 <p>&nbsp;</p>
 
 
+---
+
+
+
+__[Link to Python 5 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_05_problemset.md)__
 
 \pagebreak
 
@@ -4091,6 +4106,10 @@ How would you use regular expressions to find all occurances of 'ATG' and replac
 
 <p>&nbsp;</p>
 
+---
+
+__[Link to Python 6 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_06_problemset.md)__
+
 \pagebreak
 
 ---
@@ -4316,7 +4335,6 @@ if args.out:
 ```
 
 
-
 __Many more modules in many areas__
 
 time, HTML, XML, email, CGI, sockets, audio, GUIs with Tk, debugging, testing, unix utils
@@ -4326,7 +4344,7 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 
 <p>&nbsp;</p>
 
-
+__[Link to Python 7 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_07_problemset.md)__
 
 \pagebreak
 
@@ -4364,10 +4382,14 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 
 <p>&nbsp;</p>
 
+---
+
+__[Link to Python 8 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_08_problemset.md)__
+
 \pagebreak
 
 ---
-# Python 8
+# Python 9
 ---
 
 ## BioPython
