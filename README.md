@@ -2699,37 +2699,6 @@ Now that you have seen the `append()` function we can go over how to build a lis
 ```
 > We start with a an empty list called 'words'. We use `append()` to add the value 'one' then to add the value 'two'. We end up with a list with two values.
 
-
-
-__List Comprehensions__
-
-@sep add material to cover these
-
-
-
-
-
-## More complex data structures
-
-@sep see data structures section later
-
-You can nest any data type inside any other type. This lets you build multidimensional data tables easily.
-
-There are also specific data table and frame handling libraries like Pandas.
-
-Here's a way to make a 3 x 3 table of values. 
-
-```python
->>> M = [[1,2,3], [4,5,6],[7,8,9]]
->>> M[1] # second row (starts with index 0)
-[4,5,6]
->>>M[1][2] # second row, third element
-6
-```
-
-
-<p>&nbsp;</p>
-
 ---
 
 __[Link to Python 3 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_03_problemset.md)__
@@ -3365,6 +3334,8 @@ __[Link to Python 4 Problem Set](https://github.com/srobb1/pfb2017/blob/master/p
 
 @sep comparision between iterables and sequences, dir()
 
+@smr I mentioned Iterators at the end of loops, just before dictionaries.
+@smr [is an iterator really any method that has a next() method](http://nvie.com/posts/iterators-vs-generators/)
 
 ## I/O and Files
 
@@ -4123,27 +4094,258 @@ __[Link to Python 6 Problem Set](https://github.com/srobb1/pfb2017/blob/master/p
 > lambda e.g.
 > `squares = list(map(lambda x: x**2, range(10)))`
 
+Writing your own functions is a way to group lines of code together. Why would you want to group lines of code together? 
+
+ 1. Let's say that you have a few lines of code that are required to produce some functionality that you reuse in your code. You can group these all together and have that functionailty become one line. You can then just use one line of code where ever you need this functionality.
+ 2. You can simplify the main body of your code if you have one human readable and informative line to represent many lines of code.
+
+Let's see some examples:
+
+Code to find AT content:
+```python
+dna = 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'
+a_count = dna.count('A')
+t_count = dna.count('T')
+dna_len = len(dna)
+at_content = (a_count + t_count) / dna_len
+print(at_content)
+```   
+> Here are 5 lines of code to do one thing, calculate AT content in a DNA string.
+
+__Creating/Defining a Funtion to Find AT Content:__
+
+```python
+def calculate_at_content(dna):
+   a_count = dna.count('A')
+   t_count = dna.count('T')
+   dna_len = len(dna)
+   at_content = (a_count + t_count) / dna_len
+   return at_content
+```
+> Here is a custom function that you can use like a built in python function
+
+
+__Using/Running/Calling Your function:__
+
+```python
+dna_string = "GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA"
+print(calculate_at_content(dna_string))
+```
+> This code will print "0.4857142857142857" to the screen. You can save this returned value in a variable to use later in your code. As you can see we now have one line, that is very explicit in the functionality, replace 5 lines of code. 
+
+__The details__
+
+1. All functions must be defined. 
+	- We do this with the keyword `def`. 
+2. The function must have a name.
+	- "calculate_at_content" is our name
+3. Functions have information about the variables required in the function body. These are paceholders for the arguments that get passed into our function. Functions don't need to have argumetns but they always need '()'
+	- We do this there "(dna)". 
+	- Our function needs one variable, and we can refer to it in the function body as 'dna'. 
+        - The variable 'dna' and it's contents are only visible within the body of the function
+4. The first line of the function must end with a ':'
+5. The function body needs to be indented.
+6. Do your work.
+7. You can return a value 
+
+
+__Naming Arguments__
+
+You can name your argument variables anything you want, you just have to use the same term within the function body. Let's use 'string' instead of 'dna'
+
+```python
+def caculate_at_content(string):
+   a_count = string.count('A')
+   t_count = string.count('T')
+   dna_len = len(string)
+   at_content = (a_count + t_count) / dna_len
+   return at_content
+```
+> Now everywhere we had previously used 'dna' we need to use 'string'
+
+
+
+__Keyword Arguments__
+
+Arguments can be named and these names can be used when the function is called. This name is called a 'keyword' 
+
+```python
+dna_string = "GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA"
+print(calculate_at_content(dna_string))
+print(calculate_at_content("GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA"))
+print(calculate_at_content(dna="GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA"))
+print(calculate_at_content(dna=dna_string))
+```
+> This code will print "0.4857142857142857" (4x) to the screen. As you can see, we supplied the function arguments in a few different ways: 1) a variable, 2) a literal, 3) a literal with a keyword, and 4) a variable with a keyword. The keyword must be the same as the defined function argument. If a function has multiple arguments, using the keyword allows for calling the function with the arguments in any order.
+
+__Default Values for Arguments__
+
+When you define your function you can also define default values for arguments
+
+```python
+def calculate_at_content(dna='ATGC'):
+   a_count = dna.count('A')
+   t_count = dna.count('T')
+   dna_len = len(dna)
+   at_content = (a_count + t_count) / dna_len
+   return at_content
+```
+> If you call the function with no arguments, the default will be used. In this case a default is pretty useless, and the fucntion will return '0.5' if called without providing a DNA sequence.
+
+
+_lambda_
+
+Lambda expressions can be used when your function only contains one line. It is a special kind of custom function that you don't have to give a name. Lambda expressions are useful because some functions can take a lambda as an argument.
+
+Here is a one line custom function, like the functions we have already talked about:
+```python
+def get_first_codon(dna):
+  return dna[0:3]
+
+print(get_first_codon('ATGTTT'))
+```
+> This will return 'ATG'
+
+Here is the same function written as a lambda
+```python
+get_first_codon = lambda dna : dna[0:3]
+print(get_first_codon('ATGTTT'))
+```
+> This also returns 'ATG'. lambdas need to have only one line. They do not require the usage of 'return' to have the result returned.
+
+
+Lambda expressions can be used as arguments in functions:
+```python
+print((lambda dna : dna[0:3])('ATGTTT'))
+```
+> This prints 'ATG'. In this example, the code works, but might not be the best way to get this job done since it ofuscates the code, or in other words, makes the code harder to understand. There are cases where using a lambda is the only way to get a task done.
+
 <p>&nbsp;</p>
 
 ## Scope
 
-Python treats variables as local unless defined not to be. It's usually better to pass a parameter to a function than to have a global variable. Where can you use a variable? This is its scope. It is inside the block it's defined in. That's how you declare variables in python.
+Most all variables can be seen, retrieved, and used anywhere in your code. This is called global. One of the only non-global or local variables are those used as function arguments.
 
 ```python
-def show():
-  print(n)
-n = 5
-show()
+#!/usr/bin/python3
+x = 100
+y = 20;
+if x > y:
+  z = 10
+  x = 30
+  print("x (inside if block):", x)
+  print("y (inside if block):", y)
+  print("z (inside if block):", z)
+
+print("x (outside if block):)", x)
+print("y (outside if block):", y)
+print("z (outside if block):", z)
 ```
 
-The output looks like this
+Let's Run it:
+```bash
+$ python scripts/scope.py
+x (inside if block): 30
+y (inside if block): 20
+z (inside if block): 10
+x (outside if block):) 30
+y (outside if block): 20
+z (outside if block): 10
+```
 
-```5```
+__Local Variables__
 
-You can make a variable global with the function`global`
+Function argument variables are local and therefore can only been accessed from within the function block.
+
+```python
+#!/usr/bin/python3
+
+def scope_function(x):
+  print("x (inside function block):", x)
+  x = 5
+  print("x (inside function block):", x)
+  print("y (inside function block):", y)
+  print("z (inside function block):", z)
+
+x = 100
+y = 20;
+if x > y:
+  z = 10
+  x = 30
+  print("x (inside if block):", x)
+  print("y (inside if block):", y)
+  print("z (inside if block):", z)
+
+print("x (outside if block):)", x)
+print("y (outside if block):", y)
+print("z (outside if block):", z)
+
+scope_function(500)
+
+print("x (outside if block after function call):)", x)
+```
+> Here we have added a function with an argument named 'x'. This variable exists only within the function. It does not matter that there is a varible of the same name outside the function block.
+
+Let's run it:
+```bash
+$ python3 scripts/scope_w_function.py
+x (inside if block): 30
+y (inside if block): 20
+z (inside if block): 10
+x (outside if block):) 30
+y (outside if block): 20
+z (outside if block): 10
+x (inside function block): 1 
+x (inside function block): 5
+y (inside function block): 20
+z (inside function block): 10
+x (outside if block after function call):) 30
+```
+> As you can see, x is 30 inside and outside the if block, but inside the function x is 1, then x is 5. Once we have completed the function call x is 30 again. Variables within a function block are local to that block. 
+
+__Global__
+
+You can make a local variable global with the function `global()`. Now a variable defined in a function can be visible to the rest of the code.  It is best not to define any variables as global until you know you need it. Most of the time the default scope is what you want.
+
+
+
+Here is an example use of `global()`. This can be a bit mind bending, just knowing this exists is probably good enough for right now.
+
+```python
+#!/usr/bin/python3
+
+def scope_function():
+  global var_1
+  var_1 = "I say hello"
+  var_2 = "You say good-bye"
+  print("var_1 (inside function block):", var_1)
+  print("var_2 (inside function block):", var_2)
+
+var_1 = "Hello, hello"
+var_2 = "Good-Bye"
+print("var_1 (outside function block before function call):", var_1)
+print("var_2 (outside function block before function call):", var_2)
+scope_function()
+print("var_1 (outside function block after function call):", var_1)
+print("var_2 (outside function block after function call):", var_2)
+```
+> By default all variables are global, except for those within functions. Here we mess with the default behavior by defining 'var_1' as global. We the value of 'var_1' within the function will the value outside the function block.
+
+
+```bash
+$ python3 scripts/scope_global.py
+var_1 (outside function block before function call): Hello, hello
+var_2 (outside function block before function call): Good-Bye
+var_1 (inside function block): I say hello
+var_2 (inside function block): You say good-bye
+var_1 (outside function block after function call): I say hello
+var_2 (outside function block after function call): Good-Bye
+```
+> If we did not make 'var_1' global the value of 'var_' outside the function block would have been "Hello, hello"
+
 
 ## Namespaces
-
+@smr I don't think we need this
 
 
 ## Modules
@@ -4377,6 +4579,37 @@ __[Link to Python 7 Problem Set](https://github.com/srobb1/pfb2017/blob/master/p
 @sep: how you initialize from a file
 > import json
 
+
+
+
+__List Comprehensions__
+
+@sep add material to cover these
+
+
+
+
+
+## More complex data structures
+
+@sep see data structures section later
+
+You can nest any data type inside any other type. This lets you build multidimensional data tables easily.
+
+There are also specific data table and frame handling libraries like Pandas.
+
+Here's a way to make a 3 x 3 table of values. 
+
+```python
+>>> M = [[1,2,3], [4,5,6],[7,8,9]]
+>>> M[1] # second row (starts with index 0)
+[4,5,6]
+>>>M[1][2] # second row, third element
+6
+```
+
+
+<p>&nbsp;</p>
 
 
 
