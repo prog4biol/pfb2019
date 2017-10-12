@@ -4136,7 +4136,7 @@ print(calculate_at_content(dna_string))
 __The details__
 
 1. All functions must be defined. 
-	- We do this with the keyword `def`. 
+	- We do this with the word `def`. 
 2. The function must have a name.
 	- "calculate_at_content" is our name
 3. Functions define the variables required in the function body. These are paceholders for the arguments that get passed into our function. Functions don't need to have argumetns but they always need '()'
