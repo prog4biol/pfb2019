@@ -2,8 +2,8 @@ Python 7 Problem Set
 ===================
 
 1. Create a custom function to format a string of DNA to be a series of lines with a max length of 60.
-	- INPUT: a string of DNA 
-        - RETURNS: a string of DNA with lines no more than 60 nucleoties long
+	- INPUT: a string of DNA   
+	- RETURNS: a string of DNA with lines no more than 60 nucleoties long
 
 ```
 INPUT:
