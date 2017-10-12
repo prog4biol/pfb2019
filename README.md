@@ -4146,7 +4146,8 @@ __The details__
 4. The first line of the function must end with a ':'
 5. The function body needs to be indented.
 6. Do your work.
-7. You can return a value 
+7. You can return a value, but this is not required
+	- We return the value of 'at_content'  
 
 
 __Naming Arguments__
