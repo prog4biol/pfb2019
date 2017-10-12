@@ -67,4 +67,4 @@ GTCATCTTCT
      1) FASTA file name
      2) Max length of each line
 
-   The script should reformat every sequence in the file to the specified max line length.
+   The script should reformat every sequence in the file to the specified max line length. Make sure your output is in proper FASTA format.
