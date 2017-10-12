@@ -49,10 +49,10 @@ __Table of Contents__
       * [Regular Expressions](#regular-expressions)  
     * [Python 7](#python-7)
       * [Functions](#functions)  
-      * Scope
+      * [Scope](#scope)
       * [Modules](#modules)
     * [Python 8](#python-8)
-      * [Exceptions](#exceptions)   
+      * [Exception Handling](#exception-handling)   
       * [Datastructures](#datastructures)  
     * [Python 9](#python-9)
       * [BioPython](#biopython)  
@@ -4555,19 +4555,13 @@ __[Link to Python 7 Problem Set](https://github.com/srobb1/pfb2017/blob/master/p
 # Python 8
 ---
 
-## Exceptions
+## Exception Handling
 
 @sep
 > try/except/finally (see with/as)
 
 
 
-
-<p>&nbsp;</p>
-
-## Scope
-
-> scope & namespace, 
 
 
 
