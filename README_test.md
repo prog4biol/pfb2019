@@ -2,14 +2,14 @@ Programming For Biology 2017
 ============================
 
 
-### Instructors ###  
+### Instructors  
 Simon Prochnik  
 Sofia Robb     
   
     
 ---    
 
-### Table of Contents ###  
+### Table of Contents  
 
  * [Big Picture](#big-picture)  
 
@@ -37,7 +37,6 @@ Sofia Robb
       * [Sequences](#sequences)
       * [Strings](#strings)   
       * [Lists and Tuples](#lists-and-tuples)  
-      * [More Complex Data Structures](#morecomplex)
     * [Python 4](#python-4) 
       * [Loops](#loops)  
       * [Dictionaries](#dictionaries)  
@@ -77,14 +76,14 @@ Sofia Robb
 
 Big Picture
 =======================
-### Why is it important for **Biologists** to learn to program? ###
+### Why is it important for **Biologists** to learn to program?
 
 You probably already know the answer to this question since you are here.   
 
 We firmly believe that knowing how to program is just as essential as knowing how to run a gel or set up a PCR reaction. The data we can now get from a single experiment can be overwhelming. This data often needs to be reformatted, filtered, and analyzed in unqiue ways. Programming allows you to perform these tasks in a **reproducible**, **timely**, **efficient**, and **thoughtful** way.
 
 
-### What are our tips for being successful in your efforts to learn to program? ###
+### What are our tips for being successful in your efforts to learn to program?
 
 1. Practice, practice, practice. Please, spend as much time possible actually coding.
 2. Write only a line or two of code, then test it. If you write too many lines, it becomes more difficult to debug if there is an error.
@@ -111,7 +110,7 @@ We firmly believe that knowing how to program is just as essential as knowing ho
 ## Unix Overview
 
 
-### What is the Command-Line? ###
+### What is the Command-Line?
 
 Underlying the pretty Mac OSX GUI is a powerful command-line operating
 system. The command-line gives you access to the internals of the OS,
@@ -133,7 +132,7 @@ command-line based.
 
 
 
-### Logging into Your Workstation ###
+### Logging into Your Workstation
 
 
 Your workstation is an iMac. To log into it, provide the following
@@ -146,7 +145,7 @@ For example, if your username is **srobb** for **s**ofia **robb**
 _Your password:_ **changeme**
 
 
-### Bringing up the Command-Line ### 
+### Bringing up the Command-Line 
 
 
 To bring up the command-line, use the Finder to navigate to
@@ -164,7 +163,7 @@ You will be using this application a lot, so I suggest that you drag
 the Terminal icon into the shortcuts bar at the bottom of your screen.
 
 
-### OK. I've Logged in.  What Now? ###
+### OK. I've Logged in.  What Now?
 
 
 The terminal window is running **shell** called "bash." The shell is a loop that:
@@ -178,7 +177,7 @@ The terminal window is running **shell** called "bash." The shell is a loop that
 There are many different shells with bizarre names like **bash**, **sh**, **csh**, **tcsh**, **ksh**, and **zsh**.  The "sh" part means shell.  Each shell was designed for the purpose of confusing you and tripping you up.  We have set up your accounts to use **bash**.  Stay with **bash** and you'll get used to it, eventually.
 
 
-### Command-Line Prompt ###
+### Command-Line Prompt
 
 
 Most of bioinformatics is done with command-line software, so you
@@ -212,7 +211,7 @@ The prompt tells you the shell is ready to accept a command.  When
 a long-running command is going, the prompt will not reappear until
 the system is ready to deal with your next request.
 
-### Issuing Commands ###
+### Issuing Commands
 
 
 Type in a command and press the &lt;Enter&gt; key.  If the command has
@@ -244,7 +243,7 @@ Some programs will take a long time to run. After you issue their command names,
 ```
 > The command will now run in the background until it is finished. If it has any output, the output will be printed to the terminal window. You may wish to redirect the output as described later.
 
-### Command-Line Editing ###
+### Command-Line Editing
 
 Most shells offer command-line entering.  Up until the comment you press <Enter>, you can go back over the command-line and edit it using the keyboard.  Here are the most useful keystrokes:
 
@@ -274,7 +273,7 @@ fd2ps    fdesign  fdformat fdlist   fdmount  fdmountd fdrawcmd fdumount
 ```
 > If you hit tab after typing a command, but before pressing \<Enter\>, **bash** will prompt you with a list of file names. This is because many commands operate on files.
 
-### Wildcards ###
+### Wildcards
 
 You can use wildcards when referring to files.  "*" refers to zero or more characters.  "?" refers to any single character.  For example, to list all files with the extension ".txt", run **ls** with the pattern "*.txt":
 
@@ -291,7 +290,7 @@ There are several more advanced types of wildcard patterns that you can read abo
 final_exam_questions.txt  genebridge.txt            genomics_problem.txt
 ```
 
-### Home Sweet Home ###
+### Home Sweet Home
 
 
 When you first log in, you'll be placed in a part of the system that is your personal domain, called the _home directory_.  You are free to do with this area what you will: in particular you can create and delete files and other directories.  In general, you cannot create files elsewhere in the system.
@@ -326,7 +325,7 @@ In addition to the files and directories shown with _ls -F_, there may be one or
 > Whoa!  There's a lot of hidden stuff there.  But don't go deleting dot files willy-nilly.  Many of them are essential configuration files for commands and other programs.  For example, the _.profile_ file contains configuration information for the **bash** shell.  You can peek into it and see all of **bash**'s many options.  You can edit it (when you know what you're doing) in order to change things like the command prompt and command search path.
 
 
-### Getting Around ###
+### Getting Around
 
 
 You can move around from directory to directory using the _cd_ command.  Give the name of the directory you want to move to, or give no name to move back to your home directory.  Use the _pwd_ command to see where you are (or rely on the prompt, if configured):
@@ -387,7 +386,7 @@ the current directory:
 /Users/lstein
 ```
 
-### Essential Unix Commands ###
+### Essential Unix Commands
 
 
 With the exception of a few commands that are built directly into the
@@ -401,7 +400,7 @@ Otherwise, it will give a "command not found" error.
 Most commands live in `/bin`, `/usr/bin`, or
 `/usr/local/bin`.
 
-### Getting Information About Commands ###
+### Getting Information About Commands
 
 
 The **man** command will give a brief synopsis of the command:
@@ -425,7 +424,7 @@ DESCRIPTION
 ```
 
 
-### Finding Out What Commands are on Your Computer ###
+### Finding Out What Commands are on Your Computer
 
 The **apropos** command will search for commands matching a keyword
 or phrase:
@@ -439,7 +438,7 @@ fix132x43 (1)        - fix problems with certain (132 column) graphics
 modes
 ```
 
-### Arguments and Command Switches ###
+### Arguments and Command Switches
 
 
 Many commands take arguments.  Arguments are often (but not
@@ -476,7 +475,7 @@ shown in this example:
 Many commands will give a brief usage summary when you call them with
 the **-h** or **--help** switch.
 
-### Spaces and Funny Characters ###
+### Spaces and Funny Characters
 
 The shell uses whitespace (spaces, tabs and other nonprinting
 characters) to separate arguments.  If you want to embed whitespace in
@@ -504,13 +503,13 @@ Certain special non-printing characters have _escape codes_ associated with them
 | \\nnn        | the character whose ASCII code is **nnn** |
 
 
-### Useful Commands ###
+### Useful Commands
 
 Here are some commands that are used extremely frequently.  Use
 **man** to learn more about them.  Some of these commands may be
 useful for solving the problem set ;-)
 
-### Manipulating Directories ###
+### Manipulating Directories
 
 | Command | Description                              |
 | ------- | ---------------------------------------- |
@@ -544,7 +543,7 @@ useful for solving the problem set ;-)
 | vi           | Run the vi text editor (better for experts). |
 
 
-### Networking ###
+### Networking
 
 | Command           | Description                              |
 | ----------------- | ---------------------------------------- |
@@ -555,7 +554,7 @@ useful for solving the problem set ;-)
 | who               | See who else is logged in.               |
 | lp                | Send a file or set of files to a printer. |
 
-### Standard I/O and Command Redirection ###
+### Standard I/O and Command Redirection
 
 
 Unix commands communicate via the command-line interface.  They can
@@ -581,7 +580,7 @@ one or more of these three streams to a file, a device, or even to
 another program.  This sounds esoteric, but it is actually very
 useful.
 
-### A Simple Example ###
+### A Simple Example
 
 
 The **wc** program counts lines, characters and words in data sent
@@ -635,7 +634,7 @@ default, attached to the terminal:
       2943    2998     419272
 ```
 
-### Redirection Meta-Characters ###
+### Redirection Meta-Characters
 
 Here's the complete list of redirection commands for **bash**:
 
@@ -659,7 +658,7 @@ refer to that user.
 (~) 66% grep root < /etc/passwd > search.out 2> search.err
 ```
 
-### Filters, Filenames and Standard Input ###
+### Filters, Filenames and Standard Input
 
 Many Unix commands act as filters, taking data from a file or standard
 input, transforming the data, and writing the results to standard
@@ -692,7 +691,7 @@ command-line as an alias for standard input.  Example:
 > the keyboard).
 
 
-### Standard I/O and Pipes ###
+### Standard I/O and Pipes
 
 
 The coolest thing about the Unix shell is its ability to chain
@@ -716,7 +715,7 @@ commands together into pipelines.  Here's an example:
 What does this pipe do?  It prints out the number of lines in which
 the string "gatttgc" appears in the file _big_file.fasta_.
 
-### More Pipe Idioms ###
+### More Pipe Idioms
 
 Pipes are very powerful.  Here are some common command-line idioms.
 
@@ -734,7 +733,7 @@ Simple.  Reverse the test with the **grep** **-v** switch:
 2921
 ```
 
-### Uniquify Lines in a File ###
+### Uniquify Lines in a File
 
 
 If you have a long list of names in a text file, and you are concerned
@@ -748,7 +747,7 @@ that there might be some duplicates, this will weed out the duplicates:
 > occur together.  The output is placed in a file named
 > _unique.out_.
 
-### Concatenate Several Lists and Remove Duplicates ###
+### Concatenate Several Lists and Remove Duplicates
 
 
 If you have several lists that might contain repeated entries among
@@ -759,7 +758,7 @@ them together, then uniquifying them as before:
 (~) 67% cat file1 file2 file3 file4 | sort | uniq
 ```
 
-### Count Unique Lines in a File ###
+### Count Unique Lines in a File
 
 
 If you just want to know how many unique lines there are in the file,
@@ -769,7 +768,7 @@ add a **wc** to the end of the pipe:
 (~) 68% sort long_file.txt | uniq | wc -l
 ```
 
-### Page Through a Really Long Directory Listing ###
+### Page Through a Really Long Directory Listing
 
 
 Pipe the output of **ls** to the **more** program, which shows a
@@ -780,7 +779,7 @@ better:
 (~) 69% ls -l | more
 ```
 
-### Monitor a Rapidly Growing File for a Pattern ###
+### Monitor a Rapidly Growing File for a Pattern
 
 
 Pipe the output of **tail -f** (which monitors a growing file and
@@ -809,7 +808,7 @@ Here are a few more advanced Unix topics that are super useful and when you have
 ---
 
 
-### [Link to Unix 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Unix_01_problemset.md) ###
+### [Link to Unix 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Unix_01_problemset.md)
 
 
 \pagebreak
@@ -882,32 +881,32 @@ The Big Picture.
 
 A Version Control System is good for Collaborations, Storing Versions, Restoring Previous Versions, and Managing Backups.
 
-### Collaboration ###
+### Collaboration
 
 Using a Version Control System makes it possible to edit a document with others without the fear of overwritting someone's changes, even if more than one person is working on the same part of the document. All the changes can be merged into one document. These documents are all stored one place. 
 
 
-### Storing Versions ###
+### Storing Versions
 
 A Version Control System allows you to save versions of your files and to attach notes to each version. Each save will contain information about the lines that were added or alted.
 
-### Restoring Previous Versions ###
+### Restoring Previous Versions
 
 Since you are keeping track of versions, it is possible to revert all the files in a project or just one file to a previous version.
 
 
-### Backup ###
+### Backup
 
 A Version Control System makes it so that you work locally and sync your work remotely. This means you will have a copy of your project on your computer and the Version Control System Server you are using.
 
-### The Details ###
+### The Details
 
 git is the Version Control System we will be using for tracking changes in our files.
 
 [GitHub](https://github.com/) is the Version Control System Server we will be using. They provide free account for all public projects.
 
 
-### The Basics ###
+### The Basics
 
 _Creating a new repository_ 
 
@@ -1000,7 +999,7 @@ _Keeping track of differences between local and remote repositories_
 
 If you are ever wondering what do you need to add to your remote repository use the `git status` command. This will provide you a list of file that have been modified, deleted, and those that are untracked. Untracked files are those that have never been added to the staging area with `git add`
 
-### Links to *Slightly* less basic topics ###
+### Links to *Slightly* less basic topics
 
 You will KNOW if you need to use these features of git.
 
@@ -1011,7 +1010,7 @@ You will KNOW if you need to use these features of git.
 
 ---
 
-### [Link To Unix 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Unix_02_problemset.md) ###
+### [Link To Unix 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Unix_02_problemset.md)
 
 
 
@@ -1048,15 +1047,15 @@ Python has
 - classes
 - methods
 
-### Data types ### are just different types of data which are discussed in more detail later. Examples of data types are integer numbers and strings of letters and numbers (text). These can be stored in variables.
+### Data types are just different types of data which are discussed in more detail later. Examples of data types are integer numbers and strings of letters and numbers (text). These can be stored in variables.
 
-### Funtions ### do something with data, such as a calculation. Some functions are already built into Python. You can create your own functions as well. 
+### Funtions do something with data, such as a calculation. Some functions are already built into Python. You can create your own functions as well. 
 
-### Objects ### are a way of grouping a set of data and functions (methods) that act on that data
+### Objects are a way of grouping a set of data and functions (methods) that act on that data
 
-### Classes ### are a way to encapulate (organize) variables and functions. Objects get their variables and methods from the class they belong to. 
+### Classes are a way to encapulate (organize) variables and functions. Objects get their variables and methods from the class they belong to. 
 
-### Methods ### are just functions that belong to a Class. Objects that belong to the a Class can use Methods from that Class.
+### Methods are just functions that belong to a Class. Objects that belong to the a Class can use Methods from that Class.
 
 <p>&nbsp;</p>
 
@@ -1093,7 +1092,7 @@ Hello, PFB2017!
 
 Typing the python command followed by the name of a script makes python execute the script. Recall that we just saw you can run an interactive interpreter by just typing `python` on the command line
 
-### Python Script ###
+### Python Script
 
 * The same code from above is typed into a text file. 
 * Python scripts are always saved in files whose names have the extension '.py' (i.e. the filename ends with '.py').
@@ -1121,20 +1120,20 @@ Hello, PFB2017!
 
 @sep example code, statements, functions(), tab spacing, interactive interpreter, debugger
 
-### Python Identifiers ###: 
+### Python Identifiers: 
 
 A Python identifier is a name used to identify a variable, function, class, module or other object. An identifier starts with a letter A to Z or a to z or an underscore (_) followed by zero or more letters, underscores and digits (0 to 9).
 
 Python does not allow punctuation characters such as @, $, and % within identifiers. Python is a case sensitive programming language. Thus, seq_id and seq_ID are two different identifiers in Python.
 
-### Naming conventions for Python Identifiers ###: 
+### Naming conventions for Python Identifiers: 
 
  * The first character is lowercase, unless it is a name of a Class. Classes should begin with an uppercase characters. (ex. Seq)
  * Private identifiers begin with an underscore. (ex. `_private`)
  * Strong private identifiers begin with two underscores. (ex. `__private`)
  * Language-defined special names begin and end with two underscores. (ex. `__special__`)
 
-### Reserved Words ###: 
+### Reserved Words: 
 
 The following is a list of Python keywords. These are special words that already have a purpose in python and therefore cannot be used in indentifier names.
 
@@ -1152,18 +1151,18 @@ else        lambda      yield
 except
 ```
 
-### Lines and Indentation ###: 
+### Lines and Indentation: 
 
 Python denotes blocks of code by line indentation. Incorrect line spacing and/or indention will cause an error to be reported or could make your code run in a way you don't expect. You can get help with indentation from good text editors or IDEs.
 
 The number of spaces in the indentation need to be consistent but a specific number is not required. All lines of code, or statements, within a single block must be indented in the same way. For example:
 
 
-### Comments ###: 
+### Comments: 
 
 Comments are an essential programming practice. Making a note of what a line or block of code is doing will help the writer and readers of the code. This includes you!
 
-### # ###: 
+### #: 
 
 Comments start after a pound or hash symbol. All characters after the #, up to the end of the line are part of the comment and are ignored by python. 
 
@@ -1177,12 +1176,12 @@ print ("Hello, PFB2017!") # this line prints
 ```
 
 
-### Blank Lines ###: 
+### Blank Lines: 
 
 Blank lines are also important for increasing the readability of the code. Blank lines are ignored by the python interpreptor
 
 
-### Python Options ###: 
+### Python Options: 
 
 ```bash
 $ python -h
@@ -1206,7 +1205,7 @@ This is our first look at variables and data types. Each data type will be discu
 
 The first concept to consider is that python data types are either immutable (unchangeable) or not. Literal numbers, strings and tuples cannot be changed. Lists, dictionaries and sets can be changed. So can individual (scalar) variables. You can store data in memory by putting it in different kinds variables. You use the = sign to assign a value to a variable.
 
-### Numbers and Strings ###
+### Numbers and Strings
 
 Numbers and strings are two data types. Literal numbers and strings like this `5` or `'my name is'`  are immutable. However, their values can be stored in variables and then changed.
 
@@ -1230,7 +1229,7 @@ Collections of data can also be stored in special data types, i.e., tuples, list
 
  <p>&nbsp;</p>
 
-### Lists ###  
+### Lists  
 
 - Lists are used to store an ordered, *indexed* collection of data.
 - Lists are mutable: the number of elements in the list and what's stored in each element can change
@@ -1248,7 +1247,7 @@ Collections of data can also be stored in special data types, i.e., tuples, list
 | 1     | aaa   |
 | 2     | agg   |
 
-### Command line parameters: A Special Built-in List ###
+### Command line parameters: A Special Built-in List
 
 Command line parameters follow the name of a script or program and have spaces between them. They allow a user to pass information to a script on the command line when that script is being run. Python stores all the pieces of the command line in a special list called sys.argv. 
 
@@ -1280,7 +1279,7 @@ print(a+b) # + is a sum operator on integers
 
 
 
-### Tuple ###
+### Tuple
 
 - Tuples are similar to lists and contain ordered, *indexed* collection of data.
 - **Tuples are immutable: you can't change the values or the number of values**
@@ -1307,7 +1306,7 @@ print(a+b) # + is a sum operator on integers
 
 
 
-### Dictionary ###
+### Dictionary
 
 - Dictionaries are good for storing data that can be represented as a two-column table.
 
@@ -1331,7 +1330,7 @@ print(a+b) # + is a sum operator on integers
 
 
 
-### Type Conversion ###
+### Type Conversion
 
 Sometimes you may need to convert data into a specific type. Here are some examples of functions that will help you to do this.
 
@@ -1350,7 +1349,7 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 
 ---
 
-### [Link to Python 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Python_01_problemset.md) ###
+### [Link to Python 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Python_01_problemset.md)
 
 \pagebreak
 
@@ -1369,7 +1368,7 @@ include // floor division and % modulus
 
 
 
-### Arthmetic Operators ###  
+### Arthmetic Operators  
 
 
 | Operator | Description                              | Example        | Result |
@@ -1384,7 +1383,7 @@ include // floor division and % modulus
 
 
 
-### Assignment Operators ###  
+### Assignment Operators  
 
 | Operator | Equivalent to          | Example                     | result evaluates to |
 | -------- | ---------------------- | --------------------------- | ------------------- |
@@ -1401,7 +1400,7 @@ include // floor division and % modulus
 
 
 
-### Comparison Operators ###  
+### Comparison Operators  
 
 These operators compare two values and returns true or false.  
 
@@ -1417,7 +1416,7 @@ These operators compare two values and returns true or false.
 
 
 
-### Logical Operators ###
+### Logical Operators
 
 | Operator | Description                              | Example            | Result |
 | -------- | ---------------------------------------- | ------------------ | ------ |
@@ -1427,7 +1426,7 @@ These operators compare two values and returns true or false.
 
 
 
-### Membership Operators ###  
+### Membership Operators  
 
 | Operator | Description                              |
 | -------- | ---------------------------------------- |
@@ -1454,7 +1453,7 @@ False
 
 
 
-### Operator Precedence ###
+### Operator Precedence
 
 Operators are listed in order of precedence. Highest listed first. Not all the operators listed here are mentioned above. 
 
@@ -1510,7 +1509,7 @@ expression | TRUE/FALSE |
 
 
 
-### Use `bool()` to test for truth ###  
+### Use `bool()` to test for truth  
 
 ```python
 >>> bool(True)
@@ -1557,7 +1556,7 @@ False
 
 Control Statements are used to direct the flow of your code and create the oportunity for decision making. Control statements foundation is build on truth.
 
-### If Statement ###
+### If Statement
 - Use the If Statement to test for truth and to execute lines of code if true.  
 - When the expression evaluates to true each of the statements indented below the if statment, also known as the nested statement block, will be executed.
 
@@ -1580,7 +1579,7 @@ found AGC in your dna sequence
 ```
 
 
-### If/Else Statement ###
+### If/Else Statement
 
 - The If portion of the if/else statement behave as before. 
 - The first indented block is executed if the condition is true.
@@ -1599,7 +1598,7 @@ did not find ATG in your dna sequence
 ```
 
 
-### if/elif ###
+### if/elif
 
 - The if condition is tested as before and the indented block is executed if the condition is true.
 - If it's false, the indented block following the elif is executed if the first elif condition is true. 
@@ -1677,24 +1676,24 @@ Returns:
 
 Python recognizes 3 types of numbers: integers, float point numbers, and complex numbers. 
 
-### integer ###  
+### integer  
 
 - known as an int
 - an int can be positve or negative
 - and **does not** contain a decimal point.
 
-### floating point number ###  
+### floating point number  
 
 - known as a float
 - a floating point number can be positve or negative
 - and **does** contain a decimal point
 
-### complex number ###  
+### complex number  
 
 - known as complex
 - is in the form of a+bi where i is the imaginary part.
 
-### Conversion functions ###  
+### Conversion functions  
 
 
 | function      | Description                              |
@@ -1716,7 +1715,7 @@ Python recognizes 3 types of numbers: integers, float point numbers, and complex
 ```
 
 
-### Numeric Functions ###
+### Numeric Functions
 
 
 
@@ -1844,7 +1843,7 @@ It returns three different values depending on x and y
 
 ---
 
-### [Link to Python 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_02_problemset.md) ###
+### [Link to Python 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_02_problemset.md)
 
 \pagebreak
 
@@ -1899,7 +1898,7 @@ You can call `dir()` on any object.
 - A string is a series of characters starting and ending with a quotation mark.
 - Strings are an example of a Python Sequence. A sequence is defined as a positionally ordered set. This means each element in the set has a position, starting with zero, i.e. 0,1,2,3 and so on until you get to the end of the string. If this is confusing, think about a string as being made up of individual characters: character 0, character 1, character 2 and so on.
 
-### Quotation Marks ###  
+### Quotation Marks  
 
 - Single (')  
 - Double (")   
@@ -1921,7 +1920,7 @@ made up of multiple lines and sentences.
 """
 ```
 
-### Strings and the `print()` function ###
+### Strings and the `print()` function
 
 We saw examples of 
 `print()`
@@ -2009,7 +2008,7 @@ TTT
 ```
 > The new value of the variable 'dna' is printed to the screen when 'dna' is an agrument for the `print()` function.
 
-### Errors and Printing ###
+### Errors and Printing
 
 Let's look at the typical errors you will encouter when you use the `print()` function.
 
@@ -2041,7 +2040,7 @@ SyntaxError: Missing parentheses in call to 'print'
 ```
 In python2, the command was `print`, but this changed in python3 to `print()`, so don't forget the parentheses!
 
-### Special/Escape Characters ###
+### Special/Escape Characters
 
 How would you include a new line, carrage return, or tab in your string?  
 
@@ -2098,7 +2097,7 @@ value1\tvalue2\tvalue3
 ```
 > Our escape characters '\t' remain as we typed them, they are not converted to actual tab characters.
 
-### Concatenation ###
+### Concatenation
 
 To concatenate strings use the concatenation operator '+'  
 
@@ -2130,7 +2129,7 @@ You need to convert the numbers to strings before you can concatenate them
 
 
 
-### Determine the length of a string ###: 
+### Determine the length of a string: 
 
 Use the `len()`function to calculate the length of a string. This function takes a sequence as an argument and returns an int
 
@@ -2159,7 +2158,7 @@ The lenth of the DNA sequence: TAGCTATATAAAATCATAAT is 20
 
 <p>&nbsp;</p>  
 
-### Changing String Case ###
+### Changing String Case
 
 Changing the case of a string is a bit different that you might first expect. For example, to lowercase a string we need to use a method. A method is a function that is specific to a object. When we assign a string to a variable we are creating an instance of a string object. This object has a series of methods that will work on the data that is stored in the object. 
 `lower()`
@@ -2216,7 +2215,7 @@ attgct
 ```
 > The contents of the variable 'dna', 'attgct' was returned in upper case. The actual contents of 'dna' were not altered.
 
-### Find and Count ###
+### Find and Count
 
 `count(str)` returns the number of exact matches of `str` it found (as an int)
 
@@ -2228,7 +2227,7 @@ attgct
 > The number of times 'T' is found is returned. The string stored in 'dna' is not altered.
 
 
-### Find and Replace ###
+### Find and Replace
 
 `replace(str1,str2)` returns a new string with all matches of `str1` in a string replaced with `str2`. 
 
@@ -2247,7 +2246,7 @@ AUGCUGCAUU
 
 
 
-### Extracting a Substring, or Slicing ###
+### Extracting a Substring, or Slicing
 
 Parts of a string can be located based on position and returned. This is because a string is a sequence. Coordinates start at 0. You add the coordinate in square brackets after the string's name. 
 <p>&nbsp</p>
@@ -2306,7 +2305,7 @@ CCC
 ```
 > When the second argument is left blank and the first argument is negative (-X), X characters from the end of the string are returned.
 
-### Locate and Report ###
+### Locate and Report
 
 The positional index of an exact string in a larger string can be found and returned with the string method 
 `find`
@@ -2322,7 +2321,7 @@ The positional index of an exact string in a larger string can be found and retu
 > The substring 'T' is found for the first time at index 1 in the string 'dna' so 1 is returned. The substring 'N' is not found, so -1 is returned.
 
 
-### Other String Methods ###
+### Other String Methods
 
 Since these are methods, be sure to use in this format string.method().
 
@@ -2435,18 +2434,18 @@ If you want to pad with a non-zero character, you can add this too. Between `:` 
 Center aligning is done with `^`
 ```python
 >>> print( "{:_^10}".format(2) )
-### __2___ ###
+### __2___
 >>> print( "{:_^10}".format(20) )
-### __20__ ###
+### __20__
 >>> print( "{:_^10}".format(200) )
-### _200__ ###
+### _200__
 
 ```
 > Text can be center aligned by using ':^10'. 10 of course is your column width. The '^' indicates center justification. In our example an underscore is used to illustrate the empty spaces. 
 
 ### Summary of special formatting symbols so far
 
-### Here are some of the ALIGNMENT options: ###
+### Here are some of the ALIGNMENT options:
 
 Option |	Meaning |
 -------|----------|
@@ -2465,7 +2464,7 @@ Option |	Meaning |
 > `s` a string
 
 
-### Common Types ###
+### Common Types
 
 | type | description                              |
 | ---- | ---------------------------------------- |
@@ -2480,7 +2479,7 @@ Option |	Meaning |
 | %    | converts to % by multiplying by 100      |
 
 
-### What's the point? ###
+### What's the point?
 
 
 So much can be done with the `format()` function. Here is one last example, but not the last functionality of this function.  Let truncate a long floating point number.  The default is 6 decimal places. Note that the function rounds to the nearest decimal place.
@@ -2499,7 +2498,7 @@ So much can be done with the `format()` function. Here is one last example, but 
 ## Lists and Tuples
 
 
-### Lists ###
+### Lists
 
 Lists are valuable data types that can store a collection of data in a single variable.
 
@@ -2511,7 +2510,7 @@ Lists are valuable data types that can store a collection of data in a single va
 - Values are mutatable
 
 
-### Accessing Values in Lists ###
+### Accessing Values in Lists
 
 To retrieve a single value in a list use the value's index in this format list[index]. This will return the value at the specified index. 
 
@@ -2567,7 +2566,7 @@ aaa
 ```
 > Using a negative index will return the values from the end of the list. For example, -1 is the index of the last value 'agg'. This value also has an index of 2.
 
-### Changing Values in a List ###
+### Changing Values in a List
 
 Indivudual values can be changed using the value's index and the assignment operator.
 
@@ -2589,7 +2588,7 @@ IndexError: list assignment index out of range
 ```
 > codon[5] does not exist, and when we try to assign a value to this index we get an IndexError.
 
-### Exracting a Subset of a List, or Slicing ###
+### Exracting a Subset of a List, or Slicing
 
 This works in exactly the same way with lists as it does with strings. This is because both are Sequences, or ordered collections of data with positional information.
 
@@ -2619,7 +2618,7 @@ This works in exactly the same way with lists as it does with strings. This is b
 > codons[0:3] is the same as codons[:3]
 
 
-### List Operators ###
+### List Operators
 
 | Operator | Description   | Example                                  |
 | -------- | ------------- | ---------------------------------------- |
@@ -2627,7 +2626,7 @@ This works in exactly the same way with lists as it does with strings. This is b
 | \*       | Repetition    | ['atg'] * 4 returns ['atg','atg','atg','atg'] |
 | in       | Membership    | 20 in [10, 20, 30]  returns True         |
 
-### List Functions ###
+### List Functions
 
 | Functions                             | Description                              | Example                                  |
 | ------------------------------------- | ---------------------------------------- | ---------------------------------------- |
@@ -2639,7 +2638,7 @@ This works in exactly the same way with lists as it does with strings. This is b
 | | | sorted(['a','A','z'],key=str.lower) returns ['a', 'A', 'z']
 
 
-### List Methods ###
+### List Methods
 
 Remember methods are apart of the object and are used in the following format list.method().   
 
@@ -2684,7 +2683,7 @@ Let's copy the list using the `copy()` method.
 
 
 
-### Building a List one Value at a Time ###
+### Building a List one Value at a Time
 
 Now that you have seen the `append()` function we can go over how to build a list one value at a time.
 
@@ -2701,7 +2700,7 @@ Now that you have seen the `append()` function we can go over how to build a lis
 
 ---
 
-### [Link to Python 3 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_03_problemset.md) ###
+### [Link to Python 3 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_03_problemset.md)
 
 \pagebreak
 
@@ -2725,11 +2724,11 @@ There are two loop types:
 2. for loop
 
 
-### while loop ### 
+### while loop 
 
 The while loop will continue to execute the while loop block as long as a given condition returns True. 
 
-### While Loop Syntax ###
+### While Loop Syntax
 
 ```
 while expression:
@@ -2801,7 +2800,7 @@ count: 0
 > What caused this code to never be true? 
 > The statement that increments the count is missing. To stop the code from forever printing use Cntl+C.
 
-### While/Else ###
+### While/Else
 
 An Else statment can be used with a while statement. It behaves in the same way as with an If statement. When the while statement is false, the else block is excuted ONE TIME.
 
@@ -2830,11 +2829,11 @@ Done
 ```
 > The while loop was executed five times like before. Now when count is equal to 5 and therefore not less than 5, the else block is executed. Finally the lines of code outside the while/else are executed.
 
-### For Loops ###
+### For Loops
 
 A for loop is a loop that executes the for block of code for every iteration of a sequence. Remember a sequence is an ordered collection of data.
 
-### For Loop Syntax ###
+### For Loop Syntax
 
 ```python
 for iterating_variable in sequence:
@@ -2940,13 +2939,13 @@ $ python list_range.py
 > And this has the same functionality as a while loop with a condition of count = 0 ; count < 5.
 
 
-### For/Else ###
+### For/Else
 
 An else statement can be used with a for loop as well. The else block of code will be executed when the for loop exits normally.
 
 > Can we just skip this. it seems pretty stupid
 
-### Loop Control ###
+### Loop Control
 
 Loops control statements allow for altering the normal flow of execution. 
 
@@ -2956,7 +2955,7 @@ Loops control statements allow for altering the normal flow of execution.
 | continue          | A single iteration of a loop is terminated when a continue statement is executed. The next iteration will proceed normally. |
 
 
-### Loop Conrol: Break ###  
+### Loop Conrol: Break  
 
 Code:
 ```python
@@ -2981,7 +2980,7 @@ Done
 ```
 > when the count is equal to 3, all iterations of the while loop are terminated
 
-### Loop Control: Continue ###
+### Loop Control: Continue
 
 Code:
 ```python
@@ -3015,7 +3014,7 @@ Done
 
 
 
-### Iterators ###
+### Iterators
 
 An iterable is any data type that is iterable, or can be used in iteration. An iterable can be made into an iterator with the `iter()` function. This means you can use the `next()` function.
 
@@ -3053,7 +3052,7 @@ Data that is appropriate for dictionaries are two pieces of information that nat
 | TP53  | GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC |
 | BRCA1 | GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA |
 
-### Creating a Dictionary ###
+### Creating a Dictionary
 
 ```python
 genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
@@ -3067,7 +3066,7 @@ genes = {
          }
 ```
 
-### Accessing Values in Dictionaries ###
+### Accessing Values in Dictionaries
 To retrieve a single value in a dictionary use the value's key in this format `dict[key]`. This will return the value at the specified key. 
 
 ```python
@@ -3090,7 +3089,7 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 ```
 
 
-### Changing Values in a Dictionary ###
+### Changing Values in a Dictionary
 
 Individual values can be changed via the key and the assignment operator.
 
@@ -3113,7 +3112,7 @@ Other assignment operators can also be used to change a value of a dictionary ke
 ```
 > Here we have used the '+=' concatenation assignemt operator. This is equivalent to  genes['TP53'] = genes['TP53'] + 'TAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTG'.
 
-### Building a Dictionary one Key/Value at a Time ###
+### Building a Dictionary one Key/Value at a Time
 
 Building a dictionary one key/value at a time is akin to what we just saw when we change a key's value.
 Normally you won't do this. We'll talk about ways to build a dictionary from a file in a later lecture.
@@ -3132,7 +3131,7 @@ Normally you won't do this. We'll talk about ways to build a dictionary from a f
 
    <p>&nbsp;</p>
 
-### Checking That Dictionary Keys Exist ###
+### Checking That Dictionary Keys Exist
 
 Python generates an error (NameError) if you try to access a key that does not exist.  
 
@@ -3164,7 +3163,7 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 >>> 
 ```
 
-### Sorting Dictionary Keys ###
+### Sorting Dictionary Keys
 
 If you want to print the contents of a dictionary, you probably want to sort the keys then iterate over the keys with a for loop. Why do you want to sort the keys?
 
@@ -3175,7 +3174,7 @@ for key in sorted(genes):
 
 This will print the same order of keys every time you run your script. This is good for finding bugs and means you don't have to check whether the key exists explicitly because `in sorted(genes)` returns a list of all the keys. It also sorts it.
 
-### Dictionary Functions ###
+### Dictionary Functions
 
 | Function       | Description                              |
 | -------------- | ---------------------------------------- |
@@ -3183,7 +3182,7 @@ This will print the same order of keys every time you run your script. This is g
 | str(dict)      | returns a string representation of the dictionary |
 | type(variable) | Returns the type or class of the variable passed to the function. If the variable is dictionary, then it would return a dictionary type. |
 
-### Dictionary Methods ###
+### Dictionary Methods
 
 | Method                               | Description                              |
 | ------------------------------------ | ---------------------------------------- |
@@ -3237,7 +3236,7 @@ Union, intersection, difference and symmetric difference can be done with sets
 ```
 > Sets contain unique elements, therefore, even if duplicate elements are provided they will be removed.
 
-### Set Operators ###
+### Set Operators
 
 Difference:
 
@@ -3280,7 +3279,7 @@ Symmetric Difference:
 ```
 > This returns the letters that are in a or b but not in both
 
-### Set Functions ###
+### Set Functions
 
 | Function    | Description                              |
 | ----------- | ---------------------------------------- |
@@ -3294,7 +3293,7 @@ Symmetric Difference:
 | sum()       | retrune the sum of all elements in the set. |
 
 
-### Set Methods ###
+### Set Methods
 
 | Method                                | Description                              |
 | ------------------------------------- | ---------------------------------------- |
@@ -3320,7 +3319,7 @@ Symmetric Difference:
 
 ---
 
-### [Link to Python 4 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_04_problemset.md) ###
+### [Link to Python 4 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_04_problemset.md)
 
 \pagebreak
 
@@ -3343,7 +3342,7 @@ Symmetric Difference:
 I/O stands for input/output. The in and out refer to getting data into and out of your script. It might be a little surprising at first, but writing to the screen, reading from the keyboard, reading from a file, and writing to a file are all examples of I/O.
 
 
-### Writing to the Screen ###
+### Writing to the Screen
 
 You should be well versed in writing to the screen. We have been using the `print()` function to do this.  
 
@@ -3354,7 +3353,7 @@ Hello, PFB2017!
 ```
 > Remember this example from one of our first lessons?
 
-### Reading input from the keyboard ###
+### Reading input from the keyboard
 
 This is something new. There is a function which prints a message to the screen and waits for input from the keyboard. This input can be stored in a variable.
 
@@ -3366,7 +3365,7 @@ Hi
 ```
 > All inputed text will be treated as a string. If you are to do math with the input, convert to an int or float first.
 
-### Reading from a File ###
+### Reading from a File
 
 Most of the data we will be dealing with will be contained in files. 
 
@@ -3374,13 +3373,13 @@ The first thing to do with a file is open it. We can do this with the `open()` f
 
 The most common access modes are reading (r) and writing (w).
 
-### Open a File ###
+### Open a File
 ```python
 >>> file_object = open("seq.nt.fa","r")
 ```
 > 'file_object' is a name of a variable. This can be anything. 
 
-### Reading the contents of a file ###
+### Reading the contents of a file
 
 Now that we have opened a file and created a file object we can do things with it, like read it. Lets read all the contents at once.  
 
@@ -3447,7 +3446,7 @@ ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
 ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 ```
 
-### Writing to a File ###
+### Writing to a File
 
 Writing to a file is nothing more than opening a file for writing then using the `write()` method.  
 
@@ -3514,7 +3513,7 @@ Total: 142
 
 
 
-### Building a Dictionary from a File ###
+### Building a Dictionary from a File
 
 This is a very common task. It will use a loop, file I/O and a dictionary.
 
@@ -3553,7 +3552,7 @@ Output:
 
 
 
-### [Link to Python 5 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_05_problemset.md) ###
+### [Link to Python 5 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_05_problemset.md)
 
 \pagebreak
 
@@ -3653,7 +3652,7 @@ Let's talk a bit more about all the new characters we see in the pattern.
 
 The pattern in made up of atoms.  
 
-### Individual Characters ###
+### Individual Characters
 
 | Atom                              | Description                              |
 | --------------------------------- | ---------------------------------------- |
@@ -3661,7 +3660,7 @@ The pattern in made up of atoms.
 | "."                               | The dot, or period. This matches any single character execpt for the newline. |
 
 
-### Character Classes ###
+### Character Classes
 
 A group of characters to that are allowed to be matched one time. There are a few predefined classes, symbol that means a series of characters.
 
@@ -3675,7 +3674,7 @@ A group of characters to that are allowed to be matched one time. There are a fe
 | \\W   | __A Non-word charcter__. Also can be written [^A-Za-z_0-9] |
 | \\S   | __A Non-White Space Character__. Also can be written [^ \\t\\n\\r] |
 
-### Anchors ###
+### Anchors
 
 A pattern can be anhcored to a region in the string
 
@@ -3727,7 +3726,7 @@ g[gatc][gatc]t
 ```
 > only text containing the word "cat".
 
-### Quantifiers ###
+### Quantifiers
 
 Quantifiers quantify how many atoms are to be found. By default an atom matches only once. This behaviour can be modified following an atom with a quantifier.
 
@@ -3768,7 +3767,7 @@ Something to think about.
 2) What would be a pattern to recogize the ID portion of a sequence record in a FASTA file?
 
 
-### Variables and Patterns ###
+### Variables and Patterns
 
 Variables can be used to store patterns.  
 
@@ -3780,7 +3779,7 @@ Variables can be used to store patterns.
 > In this example we stored our methylation pattern in the variable named 'pattern' and used it as the first argument to findall.
 
 
-### Either Or ###
+### Either Or
 
 A pipe '|' can be used to indicated that either the pattern before or after the '|' can match. Enclose the the two options in parenthesis.
 
@@ -3794,7 +3793,7 @@ big bad (wolf|sheep)
 Something to think about.
 1) What would a pattern to match 'ATG' followed by a C or a T look like?
 
-### Subpatterns ###
+### Subpatterns
 
 Subpatterns, or parts of the pattern enclosed in parenthesis can be extracted and stored for later use.
 
@@ -3825,7 +3824,7 @@ SEQUENCE
 ```
 
 
-### Using Subpatterns Inside the Regular Expression Match ###
+### Using Subpatterns Inside the Regular Expression Match
 
 This is helpful when you want to find a subpattern and then match the contents again
 
@@ -3880,7 +3879,7 @@ Not Found
 >  -  but not "dogs love monkey food" 
 
 
-### Subpatterns and Greediness ###
+### Subpatterns and Greediness
 
 By default, regular expressions are "greedy".  They try to match as much as they can. Use the quantifier '?' to make the match not greedy. The not greedy match is called 'lazy' 
 
@@ -3904,7 +3903,7 @@ fox
 
 
 
-### Using Subpatterns Outside the Regular Expression Match ###
+### Using Subpatterns Outside the Regular Expression Match
 
 Using the captured subpattern in code that follows the regular expression.
 
@@ -3983,7 +3982,7 @@ downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 FYI: `match()` function is another regular expression function that looks for patterns. It is similar to search but it only looks at the begining of the string for the pattern while `search()` looks in the entire string. Usually `search()` and `findall()` will be more useful.
 
 
-### Practical Example: Codons ###
+### Practical Example: Codons
 
 Extracting codons from a string of DNA can be accomplished by using a subpattern in a `findall()` function. Remember the `findall()` function will return a list of the matches.  
 
@@ -4013,7 +4012,7 @@ TTG
 
   
 
-### Truth and Regular Expression Matches ###
+### Truth and Regular Expression Matches
 
 The `search()`, `match()`, `findall()`, and `finditer()` can be used in conditional tests. If a match is not found an empty list or 'None' is returned. These both are False.
 
@@ -4031,7 +4030,7 @@ None
 > None is False so the else block is executed and "not found" is printed
 
 
-### Using Regular expressions in substitutions ###
+### Using Regular expressions in substitutions
 
 Earlier we went over how to find an exact pattern and replace it using the `replace()` method. To find a pattern and make a replacement the regular expression `sub()` function is used. This function takes the pattern, the replacement, the string to be searched, the number of times to do the replacement, and flags.
 
@@ -4058,7 +4057,7 @@ He had a wife.
 > The characters between 'w' and 'f' have been replaced with 'goat'.  
 > The new string is saved in new_str
 
-### Using subpatterns in the replacement ###
+### Using subpatterns in the replacement
 
 Sometimes you want to find a pattern and use it in the replacement. 
 ```python
@@ -4079,7 +4078,7 @@ How would you use regular expressions to find all occurances of 'ATG' and replac
 
 ---
 
-### [Link to Python 6 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_06_problemset.md) ###
+### [Link to Python 6 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_06_problemset.md)
 
 \pagebreak
 
@@ -4112,7 +4111,7 @@ print(at_content)
 ```   
 > Here are 5 lines of code to do one thing, calculate AT content in a DNA string.
 
-### Creating/Defining a Funtion to Find AT Content: ###
+### Creating/Defining a Funtion to Find AT Content:
 
 ```python
 def calculate_at_content(dna):
@@ -4125,7 +4124,7 @@ def calculate_at_content(dna):
 > Here is a custom function that you can use like a built in python function
 
 
-### Using/Running/Calling Your function: ###
+### Using/Running/Calling Your function:
 
 ```python
 dna_string = "GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA"
@@ -4133,7 +4132,7 @@ print(calculate_at_content(dna_string))
 ```
 > This code will print "0.4857142857142857" to the screen. You can save this returned value in a variable to use later in your code. As you can see we now have one line, that is very explicit in the functionality, replace 5 lines of code. 
 
-### The details ###
+### The details
 
 1. All functions must be defined. 
 	- We do this with the word `def`. 
@@ -4150,7 +4149,7 @@ print(calculate_at_content(dna_string))
 	- We return the value of 'at_content'  
 
 
-### Naming Arguments ###
+### Naming Arguments
 
 You can name your argument variables anything you want, you just have to use the same term within the function body. Let's use 'string' instead of 'dna'
 
@@ -4166,7 +4165,7 @@ def caculate_at_content(string):
 
 
 
-### Keyword Arguments ###
+### Keyword Arguments
 
 Arguments can be named and these names can be used when the function is called. This name is called a 'keyword' 
 
@@ -4179,7 +4178,7 @@ print(calculate_at_content(dna=dna_string))
 ```
 > This code will print "0.4857142857142857" (4x) to the screen. As you can see, we supplied the function arguments in a few different ways: 1) a variable, 2) a literal, 3) a literal with a keyword, and 4) a variable with a keyword. The keyword must be the same as the defined function argument. If a function has multiple arguments, using the keyword allows for calling the function with the arguments in any order.
 
-### Default Values for Arguments ###
+### Default Values for Arguments
 
 When you define your function you can also define default values for arguments
 
@@ -4194,7 +4193,7 @@ def calculate_at_content(dna='ATGC'):
 > If you call the function with no arguments, the default will be used. In this case a default is pretty useless, and the fucntion will return '0.5' if called without providing a DNA sequence.
 
 
-### lambda ###
+### lambda
 
 Lambda expressions can be used when your function only contains one line. It is a special kind of custom function that you don't have to give a name. Lambda expressions are useful because some functions can take a lambda as an argument.
 
@@ -4254,7 +4253,7 @@ y (outside if block): 20
 z (outside if block): 10
 ```
 
-### Local Variables ###
+### Local Variables
 
 Function argument variables are local and therefore can only been accessed from within the function block.
 
@@ -4304,7 +4303,7 @@ x (outside if block after function call):) 30
 ```
 > As you can see, x is 30 inside and outside the if block, but inside the function x is 1, then x is 5. Once we have completed the function call x is 30 again. Variables within a function block are local to that block. 
 
-### Global ###
+### Global
 
 You can make a local variable global with the function `global()`. Now a variable defined in a function can be visible to the rest of the code.  It is best not to define any variables as global until you know you need it. Most of the time the default scope is what you want.
 
@@ -4363,7 +4362,7 @@ var_2 (outside function block after function call): Good-Bye
 
 
 
-### os.path ###
+### os.path
 
 `os.path` has common utilities for working file paths (filenames and directories). A path is either a relative or absolute list of directories (often ending with a filename) that tells you where to find a file or directory.
 
@@ -4378,7 +4377,7 @@ var_2 (outside function block after function call): Good-Bye
 
 
 
-### os.system ###
+### os.system
 
 Run a system command from python. Replaced by subprocess
 
@@ -4389,7 +4388,7 @@ os.system("ls -l")
 
 
 
-### subprocess ###
+### subprocess
 
 ```python
 import subprocess
@@ -4402,7 +4401,7 @@ more complex than `os.system()`. You need to specify where input and output go
 
 ```
 
-### Capturing output from a shell pipeline ###
+### Capturing output from a shell pipeline
 
 `ls -l | grep amanda`
 
@@ -4428,7 +4427,7 @@ You can covert by decoding the bytes object into a string
 '-rw-r--r--  1 amanda  staff       161952 Oct  2 18:03 test.subreads.fa\n-rw-r--r--  1 amanda  staff          126 Oct  2 13:23 test.txt\n'
 ```
 
-### Capturing output the long way (for a single command) ###
+### Capturing output the long way (for a single command)
 
 Let's assume that `ls -l` generates some output something like this
 
@@ -4461,7 +4460,7 @@ lines = stdout.splitlines()
 
 
 
-### sys ###
+### sys
 
 A couple of useful variables for beginners. Many more advanced system parameters and settings that we are not covering here.
 
@@ -4472,15 +4471,15 @@ A couple of useful variables for beginners. Many more advanced system parameters
 
 
 
-### re ###
+### re
 
 see notes on regular expressions
 
-### collections ###
+### collections
 
 `from collections import deque`
 
-### copy ###
+### copy
 
 `copy.copy()`
 
@@ -4488,7 +4487,7 @@ and
 
 `copy.deepcopy()`
 
-### math ###
+### math
 
 | function            | description |
 | ------------------- | ----------- |
@@ -4504,17 +4503,17 @@ and
 
 see also numpy
 
-### random ###
+### random
 
 
 
-### statistics ###
+### statistics
 
 
 
-### glob ###
+### glob
 
-### argparse ###
+### argparse
 
 Great (and overly-complicated) tool for parsing command line arguments and automatically generating help messages for scripts (very handy!). Here's a simple script that explains a little of what it does.
 
@@ -4538,7 +4537,7 @@ if args.out:
 ```
 
 
-### Many more modules in many areas ###
+### Many more modules in many areas
 
 time, HTML, XML, email, CGI, sockets, audio, GUIs with Tk, debugging, testing, unix utils
 
@@ -4547,7 +4546,7 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 
 <p>&nbsp;</p>
 
-### [Link to Python 7 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_07_problemset.md) ###
+### [Link to Python 7 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_07_problemset.md)
 
 \pagebreak
 
@@ -4666,7 +4665,7 @@ Please provide a file name
 ```
 > This informs the user that they need to provide a file.
 
-### try/except/else/finally ###
+### try/except/else/finally
 
 Lets summarize what we have covered and add on `else` and `finally`.
 
@@ -4684,7 +4683,7 @@ finally:
   # the finally block is executed no mater if there are exceptions or not.
 ```
 
-### Getting more information about an exception ###
+### Getting more information about an exception
 
 Some exceptions can be thrown for multiple reasons, for example, ErrorIO will occur if the file does not exist as well you don't have permissions to read it. We can get more information by viewing the contents of our Exception Object. Yes, an exception is an object too! To access the object use `as` and supply a variable name, like 'ex'
 
@@ -4713,7 +4712,7 @@ Can't find file: test.txt :  No such file or directory
 > Now we know that this file name or path is not valid
 
 
-### Raising an Exception ###
+### Raising an Exception
 
 We can call or raise exceptions too!! This is accomplished by using a `raise` statement. 
 
@@ -4824,10 +4823,15 @@ File needs to be a FASTA file and end with .fa
 @sep: how you initialize from a file
 > import json
 
+### Two-demensional lists
 
+### Lists of dictionaries
 
+### Dictionaries of lists
 
-### List Comprehensions ###
+### Dictionaries of dictionaries
+
+### List Comprehensions
 
 @sep add material to cover these
 
@@ -4862,7 +4866,7 @@ Here's a way to make a 3 x 3 table of values.
 
 ---
 
-### [Link to Python 8 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_08_problemset.md) ###
+### [Link to Python 8 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_08_problemset.md)
 
 \pagebreak
 
