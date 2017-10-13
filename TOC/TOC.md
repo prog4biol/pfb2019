@@ -137,6 +137,7 @@
             * [Loop Conrol: Break](#loop-conrol-break)
             * [Loop Control: Continue](#loop-control-continue)
             * [Iterators](#iterators)
+            * [List Comprehension](#list-comprehension)
          * [Dictionaries](#dictionaries)
             * [Creating a Dictionary](#creating-a-dictionary)
             * [Accessing Values in Dictionaries](#accessing-values-in-dictionaries)
