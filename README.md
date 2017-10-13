@@ -62,7 +62,7 @@ __Table of Contents__
             * [Creating a new repository](#creating-a-new-repository)
             * [Cloning a Repository](#cloning-a-repository)
             * [Links to <em>Slightly</em> less basic topics](#links-to-slightly-less-basic-topics)
-            * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Unix_02_problemset.md">Link To Unix 2 Problem Set</a>](#link-to-unix-2-problem-set)
+         * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Unix_02_problemset.md">Link To Unix 2 Problem Set</a>](#link-to-unix-2-problem-set)
    * [Python](#python)
       * [Python 1](#python-1)
          * [Python Overview](#python-overview)
@@ -248,7 +248,6 @@ __Table of Contents__
          * [RNA](#rna)
       * [NGS](#ngs)
       * [Ontology](#ontology)
-
 ***
 
 
@@ -1191,7 +1190,7 @@ You will KNOW if you need to use these features of git.
 
 ---
 
-#### [Link To Unix 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Unix_02_problemset.md)
+### [Link To Unix 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Unix_02_problemset.md)
 
 
 
