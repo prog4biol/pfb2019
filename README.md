@@ -3199,6 +3199,42 @@ StopIteration
 ```
 > An iterator allows you to get the next element in the iterator until there are no more elements. If you want to go through each element again, you will need to redefine the iterator.
 
+#### List Comprehension
+
+List comprehension is a way to make a list without typing out each element. There are many many ways to use list comprehension to generate lists. Some are quite complex, yet useful. 
+
+Here is an simple example:
+```python
+dna_list = ['TAGC', 'ACGTATGC', 'ATG', 'ACGGCTAG']
+lengths = [len(dna) for dna in dna_list]
+```
+> This will produce this list [4, 8, 3, 8]
+
+Using conditions:
+```python
+dna_list = ['TAGC', 'ACGTATGC', 'ATG', 'ACGGCTAG']
+lengths = [len(dna) for dna in dna_list if dna.startswith('A')]
+```
+> This generates the following list: [8, 3, 8]
+
+
+Using conditions:
+```python
+dna_list = ['TAGC', 'ACGTATGC', 'ATG', 'ACGGCTAG']
+lengths = [len(dna) for dna in dna_list if dna.startswith('A')]
+```
+> This generates the following list: [8, 3, 8]
+
+Here is an example of using mathatical operators to generate a list:
+```python
+l = [2 ** x for x in range(100000)]
+```
+> This creates a list of list of the first one hundred
+thousand powers of two
+
+
+
+
 <p>&nbsp;</p>
 
 ### Dictionaries
