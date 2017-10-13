@@ -993,8 +993,6 @@ Here are a few more advanced Unix topics that are super useful and when you have
 
 ## Unix 2
 
----
-
 
 ### Text Editors
 
@@ -1528,8 +1526,6 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 
 ## Python 2
 
--------
-
 ### Operators
 
 
@@ -2022,7 +2018,6 @@ It returns three different values depending on x and y
 
 ## Python 3
 
------
 
 ### Sequences
 
@@ -2877,7 +2872,6 @@ Now that you have seen the `append()` function we can go over how to build a lis
 
 ---
 ## Python 4
----
 
 ### Loops
 
@@ -3496,7 +3490,6 @@ Symmetric Difference:
 
 ---
 ## Python 5
----
 
 ### Iterables
 
@@ -3729,7 +3722,6 @@ Output:
 
 ---
 ## Python 6
----
 
 ### Regular Expressions
 
@@ -4255,7 +4247,6 @@ How would you use regular expressions to find all occurances of 'ATG' and replac
 
 ---
 ## Python 7
----
 
 ### Functions
 
@@ -4723,7 +4714,6 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 
 ---
 ## Python 8
----
 
 ### Exception Handling
 
@@ -5043,7 +5033,6 @@ Here's a way to make a 3 x 3 table of values.
 
 ---
 ## Python 9
----
 
 ### BioPython
 
