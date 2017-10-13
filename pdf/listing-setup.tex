@@ -1,8 +1,11 @@
 % Contents of listings-setup.tex
+
 \usepackage{xcolor}
+
+% FOR MARGINS
 \usepackage[letterpaper, portrait, margin=1in]{geometry}
 
-
+% FOR CODE BLOCKS FRAME
 \usepackage[most]{tcolorbox}
 \usepackage{caption}
 \usepackage{xcolor}
@@ -20,10 +23,11 @@
 \captionsetup[lstlisting]{format=listing,skip=10pt}
 
 
-
+% FOR HORIZONTAL RULS
 \let\OldRule\rule
 \renewcommand{\rule}[2]{\OldRule{\linewidth}{#2}}
 
+% FOR BLOCK QUOTES
 \usepackage{framed}
 \usepackage{xcolor}
 \let\oldquote=\quote
@@ -32,6 +36,16 @@
 \renewenvironment{quote}{\begin{shaded*}\begin{oldquote}}{\end{oldquote}\end{shaded*}}
 
 
+% FOR IMAGES
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
 \lstset{
     basicstyle=\ttfamily,
