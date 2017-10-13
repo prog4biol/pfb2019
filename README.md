@@ -5140,6 +5140,39 @@ You can also use the dictionary `get()` method to retrieve records.
 Dictionaries of dictionaries is my favarite!! You can do so many useful things with this datastructure.
 
 
+```python
+>>> genes = {
+... 'gene1' : {
+...     'seq' : "TATGCC",
+...    'desc' : 'something',
+...     'len' : 6,
+... 'nt_comp' : {
+...             'A' : 1,
+...             'T' : 2,
+...             'G' : 1,
+...             'C' : 2,
+...            }
+...   },
+...
+... 'gene2' : {
+...     'seq' : "CAAATG",
+...    'desc' : 'something',
+...     'len' : 6,
+... 'nt_comp' : {
+...           'A' : 3,
+...           'T' : 1,
+...           'G' : 1,
+...           'C' : 1,
+...           }
+...       }
+... }
+>>> genes
+{'gene1': {'nt_comp': {'C': 2, 'G': 1, 'A': 1, 'T': 2}, 'desc': 'something', 'len': 6, 'seq': 'TATGCC'}, 'gene2': {'nt_comp': {'C': 1, 'G': 1, 'A': 3, 'T': 1}, 'desc': 'something', 'len': 6, 'seq': 'CAAATG'}}
+>>> genes['gene2']['nt_comp']
+{'C': 1, 'G': 1, 'A': 3, 'T': 1}
+```
+> Here we store a gene name as the outter most key, with a second level of keys for qualities of the gene, like sequence, length, nucleotide composition. We can retrieve a quality by using the gene name and quality in conjuction.
+
 
 
 
