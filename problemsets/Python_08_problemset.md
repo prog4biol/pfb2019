@@ -21,7 +21,7 @@ seqs['geneB']['G'] = 2
 seqs['geneB']['C'] = 2
 ``` 
 
-2. Write a script that takes a multi-FASTA file [Python_08.fasta](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/Python_08.fasta) from user input and break each sequence into codons (every three nucleotides is a codon) in just the first frame. Print out a multi-FASTA of codons for each sequence called 'Python_08.codons-frame-1.nt'
+2. Write a script that takes a multi-FASTA file [Python_08.fasta](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/Python_08.fasta) from user input and breaks each sequence into codons (every three nucleotides is a codon) in just the first frame. Print out a multi-FASTA of codons for each sequence called 'Python_08.codons-frame-1.nt'
 
 3. Add in exception handling. Throw and handle (try/except) the exception
    - if no input is provided  
