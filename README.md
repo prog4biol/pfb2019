@@ -5021,29 +5021,14 @@ File needs to be a FASTA file and end with .fa
 @sep: how you initialize from a file
 > import json
 
+
+Sometimes a _simple_ list or dictionary just doesn't do what you want. Sometimes you need to organize data in a more _complex_ way.  You can nest any data type inside any other type. This lets you build multidimensional data tables easily.
+
+
 #### Two-demensional lists
 
-#### Lists of dictionaries
+Often times a list of lists, often called a matrix are important for organizing and accessing data
 
-#### Dictionaries of lists
-
-#### Dictionaries of dictionaries
-
-#### List Comprehensions
-
-@sep add material to cover these
-
-
-
-
-
-#### More complex data structures
-
-@sep see data structures section later
-
-You can nest any data type inside any other type. This lets you build multidimensional data tables easily.
-
-There are also specific data table and frame handling libraries like Pandas.
 
 Here's a way to make a 3 x 3 table of values. 
 
@@ -5054,6 +5039,65 @@ Here's a way to make a 3 x 3 table of values.
 >>>M[1][2] # second row, third element
 6
 ```
+
+Here's a way to store sequence alignment data:
+
+Four sequences aligned:
+```
+AT-TG
+AATAG
+T-TTG
+AA-TA
+```
+
+The alignment in a list of lists.
+```python
+aln = [['A', 'T', '-', 'T', 'G'],
+['A', 'A', 'T', 'A', 'G'],
+['T', '-', 'T', 'T', 'G'],
+['A', 'A', '-', 'T', 'A']]
+```
+
+Get an the full length of one sequence:
+```python
+>>> seq = aln[2]
+>>> seq
+['T', '-', 'T', 'T', 'G']
+```
+> Use the outer most index to access each sequence
+
+Retrieve the nucleotide at a particular position in a sequence.
+```python
+>>> nt = aln[2][3]
+>>> nt
+'T'
+```
+> Use the outer most index to access the sequence of interest and the inner most index to access the position
+
+
+Get every nucleotide in a single column:  an entire column by retrieving a particular position for each inner
+```python
+>>> col = [seq[3] for seq in aln]
+>>> col
+['T', 'A', 'T', 'T']
+```
+> Here we can access a set position (3) for each list (here called 'seq') in our 'aln list.
+
+
+#### Lists of dictionaries
+
+#### Dictionaries of lists
+
+#### Dictionaries of dictionaries
+
+
+
+
+There are also specific data table and frame handling libraries like Pandas.
+
+
+
+
 
 
 <p>&nbsp;</p>
