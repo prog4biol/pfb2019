@@ -5086,9 +5086,54 @@ Get every nucleotide in a single column:  an entire column by retrieving a parti
 
 #### Lists of dictionaries
 
+You can nest dictionaries in lists as well:
+
+```python
+>>> records = [
+... {'name' : 'actgctagt', 'accession' : 'ABC123', 'genetic_code' : 1},
+... {'name' : 'ttaggttta', 'accession' : 'XYZ456', 'genetic_code' : 1},
+... {'name' : 'cgcgatcgt', 'accession' : 'HIJ789', 'genetic_code' : 5}
+... ]
+>>> records[0]['name']
+'actgctagt'
+>>> records[0]['accession']
+'ABC123'
+>>> records[0]['genetic_code']
+1
+```
+> Here you can retrieve the accession of one record at a time by using a combination of the outer index and the key 'accession'
+
 #### Dictionaries of lists
 
+And, if you haven't guessed, you can nest lists in dictionaries
+
+Here is a dictionary of kmers. The key is the kmer and its values is a list of postions
+```python
+>>> kmers = {'ggaa': [4, 10], 'aatt': [0, 6, 12], 'gaat': [5, 11], 'tgga':
+... [3, 9], 'attg': [1, 7, 13], 'ttgg': [2, 8]}
+>>> kmers
+{'tgga': [3, 9], 'ttgg': [2, 8], 'aatt': [0, 6, 12], 'attg': [1, 7, 13], 'ggaa': [4, 10], 'gaat': [5, 11]}
+>>>
+>>> kmers['ggaa']
+[4, 10]
+>>> len(kmers['ggaa'])
+2
+```
+> Here we can get a list of the positions of a kmer by using the kmer as the key. We can also do things to the returned list, like determing it's length. The length will be the total count of this kmers.
+
+You can also use the dictionary `get()` method to retrieve records.
+```python
+>>> kmers['ggaa']
+[4, 10]
+>>> kmers.get('ggaa')
+[4, 10]
+```
+> These two statements returns the same results
+
 #### Dictionaries of dictionaries
+
+Dictionaries of dictionaries is my favarite!! You can do so many useful things with this datastructure.
+
 
 
 
