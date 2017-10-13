@@ -76,6 +76,7 @@ Sofia Robb
 
 Big Picture
 =======================
+
 ### Why is it important for **Biologists** to learn to program?
 
 You probably already know the answer to this question since you are here.   
@@ -1047,15 +1048,14 @@ Python has
 - classes
 - methods
 
-### Data types are just different types of data which are discussed in more detail later. Examples of data types are integer numbers and strings of letters and numbers (text). These can be stored in variables.
+**Data types** are just different types of data which are discussed in more detail later. Examples of data types are integer numbers and strings of letters and numbers (text). These can be stored in variables.
 
-### Funtions do something with data, such as a calculation. Some functions are already built into Python. You can create your own functions as well. 
+**Funtions** do something with data, such as a calculation. Some functions are already built into Python. You can create your own functions as well. 
 
-### Objects are a way of grouping a set of data and functions (methods) that act on that data
+**Objects* are a way of grouping a set of data and functions (methods) that act on that data
 
-### Classes are a way to encapulate (organize) variables and functions. Objects get their variables and methods from the class they belong to. 
-
-### Methods are just functions that belong to a Class. Objects that belong to the a Class can use Methods from that Class.
+**Classes** are a way to encapulate (organize) variables and functions. Objects get their variables and methods from the class they belong to. 
+**Methods** are just functions that belong to a Class. Objects that belong to the a Class can use Methods from that Class.
 
 <p>&nbsp;</p>
 
