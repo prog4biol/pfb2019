@@ -1,10 +1,3 @@
-
-Table of Contents
-=================
-
-   * [Programming For Biology 2017](#programming-for-biology-2017)
-         * [Instructors](#instructors)
-         * [Table of Contents](#table-of-contents)
    * [Big Picture](#big-picture)
          * [Why is it important for <strong>Biologists</strong> to learn to program?](#why-is-it-important-for-biologists-to-learn-to-program)
          * [What are our tips for being successful in your efforts to learn to program?](#what-are-our-tips-for-being-successful-in-your-efforts-to-learn-to-program)
@@ -241,5 +234,3 @@ Table of Contents
       * [RNA](#rna)
    * [NGS](#ngs)
    * [Ontology](#ontology)
-
-Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
