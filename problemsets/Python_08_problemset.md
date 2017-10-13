@@ -1,7 +1,7 @@
 Python 8 Problem Set
 ===================
 
-** Don't forget to use a small test data set when you are testing your code. Make sure you know what the correct answer should be**
+__Don't forget to use a small test data set when you are testing your code. Make sure you know what the correct answer should be__
 
 1. Take a mulit-FASTA [Python_08.fasta](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/Python_08.fasta) file from user input and calculate the nucleotide composition for each sequence. Use a datastructure to keep count. Print out each sequence name and its compostion in this format `seqName\tA_count\tT_count\tG_count\C_count`
 
