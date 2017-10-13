@@ -4629,7 +4629,192 @@ Please provide a file name
 > Yeah, the user is informed that they need to provide a file name to the script
 
 
-What if the user provides input but it is not a valid file or the path is incorrect?
+What if the user provides input but it is not a valid file or the path is incorrect? Or if you want to check to see if the user provided input as well as if it can open the input.  
+
+
+We can add multiple exception tests as well as specify what kind of exception for which the exception block should be executed.
+```python
+import sys
+
+file = ''
+try:
+  file = sys.argv[1]
+  print("User provided file name:" , file)
+  FASTA = open(file, "r")
+  for line in FASTA:
+    line = line.rstrip()
+    print(line)
+except IndexError:
+  print("Please provide a file name")
+except IOError:
+  print("Can't find file:" , file)
+```
+> Here we test for an IndexError and a IOError. The IndexError occures when we try to access a list element that does not exsits. The IOError happens when we try to access a file that does not exist.
+
+Let's run it with no input.
+```
+$ python scripts/exceptions_try_files.py test.txt
+User provided file name: test.txt
+Can't find file: test.txt
+```
+> This informs the user that they did provide input but that the file listed can not be found.
+
+Let's run it with no input
+```
+$ python scripts/exceptions_try_files.py
+Please provide a file name
+```
+> This informs the user that they need to provide a file.
+
+__try/except/else/finally__
+
+Lets summarize what we have covered and add on `else` and `finally`.
+
+```
+try:
+  # try block is executed until an exception is raised
+except _ExceptionType_:
+  # if there is an exception of "ExceptionType" this block will be executed
+  # there can be more than one except block, just like an elif
+except:
+  # if there are any exceptions that are not of _ExceptionType_ this except block will be executed
+else: 
+  # the else block is executed after the try block has been completed
+finally:
+  # the finally block is executed no mater if there are exceptions or not.
+```
+
+__Getting more information about an exception__
+
+Some exceptions can be thrown for multiple reasons, for example, ErrorIO will occur if the file does not exist as well you don't have permissions to read it. We can get more information by viewing the contents of our Exception Object. Yes, an exception is an object too! To access the object use `as` and supply a variable name, like 'ex'
+
+```python
+file = ''
+try:
+  file = sys.argv[1]
+  print("User provided file name:" , file)
+  FASTA = open(file, "r")
+  for line in FASTA:
+    line = line.rstrip()
+    print(line)
+except IndexError:
+  print("Please provide a file name")
+except IOError as ex:
+  print("Can't find file:" , file , ': ' , ex.strerror  ) 
+```
+> Here we added `except IOError as ex` and now we can get the 'strerror' message from ex.
+
+Run it.
+```bash
+$ python scripts/exceptions_try_files_as.py  test.txt
+User provided file name: test.txt
+Can't find file: test.txt :  No such file or directory
+```
+> Now we know that this file name or path is not valid
+
+
+__Raising an Exception__
+
+We can call or raise exceptions too!! This is accomplished by using a `raise` statement. 
+
+1. First, create a new Exception Object, i.e., `ValueError()`
+2. Use the Exception Object in a Raise statment `raise ValueError('your message')`
+
+
+Let's raise an exception if the file name does not end in 'fa'
+```python
+import sys
+
+file = ''
+try:
+  file = sys.argv[1]
+  print("User provided file name:" , file)
+  if not file.endswith('.fa'):
+    raise ValueError("Not a FASTA file")
+  FASTA = open(file, "r")
+  for line in FASTA:
+    print(line)
+except IndexError:
+  print("Please provide a file name")
+except IOError as ex:
+  print("Can't find file:" , file , ': ' , ex.strerror  )
+```
+> Here we raise a known exception, 'ValueError', if the file does not end with (uses `endswith()` method). 
+
+Let's run it.
+``` 
+$ python scripts/exceptions_try_files_raise.py test.txt
+User provided file name: test.txt
+Traceback (most recent call last):
+  File "scripts/exceptions_try_files_raise.py", line 10, in <module>
+    raise ValueError("Not a FASTA file")
+ValueError: Not a FASTA file
+```
+> Our exception get's raised, now lets do something with it.
+
+```
+import sys
+
+file = ''
+try:
+  file = sys.argv[1]
+  print("User provided file name:" , file)
+  if not file.endswith('.fa'):
+    raise ValueError("Not a FASTA file")
+  FASTA = open(file, "r")
+  for line in FASTA:
+    print(line)
+except IndexError:
+  print("Please provide a file name")
+except ValueError:
+  print("File needs to be a FASTA file and end with .fa")
+except IOError as ex:
+  print("Can't find file:" , file , ': ' , ex.strerror  )
+```
+> Here we created an except to catch any ValueError
+
+Let's Run it.
+```
+$ python scripts/exceptions_try_files_raise_value.py test.txt
+User provided file name: test.txt
+File needs to be a FASTA file and end with .fa
+```
+> We get a great error message now.
+
+But what if there is another ValueError, how can we tell if it is do to the FASTA file extension or not. We can create our own custom exceptoin. We will need to create a new class of exception. Below is the sytax to do this.
+
+```
+import sys
+
+class NotFASTAError(Exception):
+  pass
+
+
+file = ''
+try:
+  file = sys.argv[1]
+  print("User provided file name:" , file)
+  if not file.endswith('.fa'):
+    raise NotFASTAError("Not a FASTA file")
+  FASTA = open(file, "r")
+  for line in FASTA:
+    print(line)
+except IndexError:
+  print("Please provide a file name")
+except NotFASTAError:
+  print("File needs to be a FASTA file and end with .fa")
+except IOError as ex:
+  print("Can't find file:" , file , ': ' , ex.strerror  )
+```
+> Here we created a new class of exception called 'NotFASTAError'. Then we raised this new exception.
+
+Let's Run it.
+```
+$ python scripts/exceptions_try_files_raise_try.py test.txt
+User provided file name: test.txt
+File needs to be a FASTA file and end with .fa
+```
+> Our new class of exception, NotFASTAError, works just like the built in exceptions.
 
 
 <p>&nbsp;</p>
