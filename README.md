@@ -275,16 +275,12 @@ _What are our tips for being successful in your efforts to learn to program?_
 
 
 ---
----
 
 # Unix
 
----
----
 
 ## Unix 1
 
----
 
 
 ### Unix Overview
@@ -1197,16 +1193,12 @@ You will KNOW if you need to use these features of git.
 \pagebreak
 
 ---
----
 
 # Python
 
----
----
 
 ## Python 1
 
------
 
 
 ### Python Overview
@@ -5064,18 +5056,12 @@ Here's a way to make a 3 x 3 table of values.
 \pagebreak
 
 ---
----
 
 # Bioinformatic Analysis and Tools
 
----
----
-
----
 
 ## Bioinformatic Analysis and Tools Overview
 
----
 
   * What you want to do:
       * tools to do it
