@@ -2872,6 +2872,7 @@ Now that you have seen the `append()` function we can go over how to build a lis
 \pagebreak
 
 ---
+
 ## Python 4
 
 ### Loops
@@ -3526,6 +3527,7 @@ Symmetric Difference:
 \pagebreak
 
 ---
+
 ## Python 5
 
 ### Iterables
@@ -3758,6 +3760,7 @@ Output:
 \pagebreak
 
 ---
+
 ## Python 6
 
 ### Regular Expressions
@@ -4283,6 +4286,7 @@ How would you use regular expressions to find all occurances of 'ATG' and replac
 \pagebreak
 
 ---
+
 ## Python 7
 
 ### Functions
@@ -4750,6 +4754,7 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 \pagebreak
 
 ---
+
 ## Python 8
 
 ### Exception Handling
@@ -5113,6 +5118,7 @@ There are also specific data table and frame handling libraries like Pandas.
 \pagebreak
 
 ---
+
 ## Python 9
 
 ### BioPython
