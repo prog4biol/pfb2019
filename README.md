@@ -37,7 +37,6 @@ __Table of Contents__
       * [Sequences](#sequences)
       * [Strings](#strings)   
       * [Lists and Tuples](#lists-and-tuples)  
-      * [More Complex Data Structures](#morecomplex)
     * [Python 4](#python-4) 
       * [Loops](#loops)  
       * [Dictionaries](#dictionaries)  
@@ -77,14 +76,18 @@ __Table of Contents__
 
 Big Picture
 =======================
-__Why is it important for **Biologists** to learn to program?__
+
+## Why?
+
+__Why is it important for **Biologists** to learn to program?__  
 
 You probably already know the answer to this question since you are here.   
 
 We firmly believe that knowing how to program is just as essential as knowing how to run a gel or set up a PCR reaction. The data we can now get from a single experiment can be overwhelming. This data often needs to be reformatted, filtered, and analyzed in unqiue ways. Programming allows you to perform these tasks in a **reproducible**, **timely**, **efficient**, and **thoughtful** way.
 
+## Helpful Tips
 
-__What are our tips for being successful in your efforts to learn to program?__
+__What are our tips for being successful in your efforts to learn to program?__  
 
 1. Practice, practice, practice. Please, spend as much time possible actually coding.
 2. Write only a line or two of code, then test it. If you write too many lines, it becomes more difficult to debug if there is an error.
@@ -875,41 +878,42 @@ Nano is a beginners text exitor. vi and Emacs are better choices once you become
 
 Git for Beginners
 =================
+
 Git is a tool for managing files and versions of files. It is a _Version Control System_. It allows you to keep track of changes. You are going to be using Git to manage your course work and keep your copy of the lecture notes and files up to date. Git can help you do very complex task with files. We are going to keep it simple.
 
 
-The Big Picture.
+## The Big Picture.
 
 A Version Control System is good for Collaborations, Storing Versions, Restoring Previous Versions, and Managing Backups.
 
-__Collaboration__
+__Collaboration__   
 
 Using a Version Control System makes it possible to edit a document with others without the fear of overwritting someone's changes, even if more than one person is working on the same part of the document. All the changes can be merged into one document. These documents are all stored one place. 
 
 
-__Storing Versions__
+__Storing Versions__     
 
 A Version Control System allows you to save versions of your files and to attach notes to each version. Each save will contain information about the lines that were added or alted.
 
-__Restoring Previous Versions__
+__Restoring Previous Versions__  
 
 Since you are keeping track of versions, it is possible to revert all the files in a project or just one file to a previous version.
 
 
-__Backup__
+__Backup__  
 
 A Version Control System makes it so that you work locally and sync your work remotely. This means you will have a copy of your project on your computer and the Version Control System Server you are using.
 
-__The Details__
+__The Details__  
 
 git is the Version Control System we will be using for tracking changes in our files.
 
 [GitHub](https://github.com/) is the Version Control System Server we will be using. They provide free account for all public projects.
 
 
-__The Basics__
+## The Basics
 
-_Creating a new repository_ 
+### Creating a new repository 
 
 A repository is a project that contains all of the project files, and stores each file's revision history. Repositories can have multiple collaborators. Repositories usually have two components, one remote and one local.
 
@@ -975,7 +979,7 @@ Let's Do it!
 
 That is all there is to it! There are more complicated things you can do but we won't get into those. You will know when you are ready to learn more about git when you figure out there is something you want to do but don't konw how. There are thousands of online tutorials for you to search and follow.
 
-_Cloning a Repository_
+### Cloning a Repository
 
 Sometimes you want to download and use someone else's repository. 
 
@@ -1000,7 +1004,7 @@ _Keeping track of differences between local and remote repositories_
 
 If you are ever wondering what do you need to add to your remote repository use the `git status` command. This will provide you a list of file that have been modified, deleted, and those that are untracked. Untracked files are those that have never been added to the staging area with `git add`
 
-__Links to *Slightly* less basic topics__
+__Links to *Slightly* less basic topics__  
 
 You will KNOW if you need to use these features of git.
 
@@ -1048,15 +1052,14 @@ Python has
 - classes
 - methods
 
-__Data types__ are just different types of data which are discussed in more detail later. Examples of data types are integer numbers and strings of letters and numbers (text). These can be stored in variables.
+**Data types** are just different types of data which are discussed in more detail later. Examples of data types are integer numbers and strings of letters and numbers (text). These can be stored in variables.
 
-__Funtions__ do something with data, such as a calculation. Some functions are already built into Python. You can create your own functions as well. 
+**Funtions** do something with data, such as a calculation. Some functions are already built into Python. You can create your own functions as well. 
 
-__Objects__ are a way of grouping a set of data and functions (methods) that act on that data
+**Objects* are a way of grouping a set of data and functions (methods) that act on that data
 
-__Classes__ are a way to encapulate (organize) variables and functions. Objects get their variables and methods from the class they belong to. 
-
-__Methods__ are just functions that belong to a Class. Objects that belong to the a Class can use Methods from that Class.
+**Classes** are a way to encapulate (organize) variables and functions. Objects get their variables and methods from the class they belong to. 
+**Methods** are just functions that belong to a Class. Objects that belong to the a Class can use Methods from that Class.
 
 <p>&nbsp;</p>
 
@@ -4824,8 +4827,13 @@ File needs to be a FASTA file and end with .fa
 @sep: how you initialize from a file
 > import json
 
+### Two-demensional lists
 
+### Lists of dictionaries
 
+### Dictionaries of lists
+
+### Dictionaries of dictionaries
 
 __List Comprehensions__
 
