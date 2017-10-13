@@ -11,7 +11,6 @@ Sofia Robb
 
 __Table of Contents__
 
-
    * [Big Picture](#big-picture)
       * [Why?](#why)
       * [Helpful Tips](#helpful-tips)
@@ -49,7 +48,7 @@ __Table of Contents__
             * [Page Through a Really Long Directory Listing](#page-through-a-really-long-directory-listing)
             * [Monitor a Rapidly Growing File for a Pattern](#monitor-a-rapidly-growing-file-for-a-pattern)
          * [Advanced Unix](#advanced-unix)
-            * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Unix_01_problemset.md">Link to Unix 1 Problem Set</a>](#link-to-unix-1-problem-set)
+         * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Unix_01_problemset.md">Link to Unix 1 Problem Set</a>](#link-to-unix-1-problem-set)
       * [Unix 2](#unix-2)
          * [Text Editors](#text-editors)
       * [Git for Beginners](#git-for-beginners)
@@ -86,7 +85,7 @@ __Table of Contents__
             * [Tuple](#tuple)
             * [Dictionary](#dictionary)
             * [Type Conversion](#type-conversion)
-            * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Python_01_problemset.md">Link to Python 1 Problem Set</a>](#link-to-python-1-problem-set)
+         * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Python_01_problemset.md">Link to Python 1 Problem Set</a>](#link-to-python-1-problem-set)
       * [Python 2](#python-2)
          * [Operators](#operators)
             * [Arthmetic Operators](#arthmetic-operators)
@@ -108,10 +107,10 @@ __Table of Contents__
             * [Conversion functions](#conversion-functions)
             * [Numeric Functions](#numeric-functions)
          * [Comparing two numbers](#comparing-two-numbers)
-            * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_02_problemset.md">Link to Python 2 Problem Set</a>](#link-to-python-2-problem-set)
+         * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_02_problemset.md">Link to Python 2 Problem Set</a>](#link-to-python-2-problem-set)
       * [Python 3](#python-3)
          * [Sequences](#sequences)
-      * [What functions go with my object?](#what-functions-go-with-my-object)
+         * [What functions go with my object?](#what-functions-go-with-my-object)
          * [Strings](#strings)
             * [Quotation Marks](#quotation-marks)
             * [Strings and the print() function](#strings-and-the-print-function)
@@ -126,10 +125,8 @@ __Table of Contents__
             * [Locate and Report](#locate-and-report)
             * [Other String Methods](#other-string-methods)
          * [String Formatting](#string-formatting)
-         * [The format() mini-language](#the-format-mini-language)
-         * [Summary of special formatting symbols so far](#summary-of-special-formatting-symbols-so-far)
-            * [Here are some of the ALIGNMENT options:](#here-are-some-of-the-alignment-options)
-            * [Common Types](#common-types)
+            * [The format() mini-language](#the-format-mini-language)
+            * [Summary of special formatting symbols so far](#summary-of-special-formatting-symbols-so-far)
             * [What's the point?](#whats-the-point)
          * [Lists and Tuples](#lists-and-tuples)
             * [Lists](#lists-1)
@@ -140,7 +137,7 @@ __Table of Contents__
             * [List Functions](#list-functions)
             * [List Methods](#list-methods)
             * [Building a List one Value at a Time](#building-a-list-one-value-at-a-time)
-            * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_03_problemset.md">Link to Python 3 Problem Set</a>](#link-to-python-3-problem-set)
+         * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_03_problemset.md">Link to Python 3 Problem Set</a>](#link-to-python-3-problem-set)
       * [Python 4](#python-4)
          * [Loops](#loops)
             * [while loop](#while-loop)
@@ -166,7 +163,7 @@ __Table of Contents__
             * [Set Operators](#set-operators)
             * [Set Functions](#set-functions)
             * [Set Methods](#set-methods)
-            * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_04_problemset.md">Link to Python 4 Problem Set</a>](#link-to-python-4-problem-set)
+         * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_04_problemset.md">Link to Python 4 Problem Set</a>](#link-to-python-4-problem-set)
       * [Python 5](#python-5)
          * [Iterables](#iterables)
          * [I/O and Files](#io-and-files)
@@ -177,7 +174,7 @@ __Table of Contents__
             * [Reading the contents of a file](#reading-the-contents-of-a-file)
             * [Writing to a File](#writing-to-a-file)
             * [Building a Dictionary from a File](#building-a-dictionary-from-a-file)
-            * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_05_problemset.md">Link to Python 5 Problem Set</a>](#link-to-python-5-problem-set)
+         * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_05_problemset.md">Link to Python 5 Problem Set</a>](#link-to-python-5-problem-set)
       * [Python 6](#python-6)
          * [Regular Expressions](#regular-expressions)
             * [Individual Characters](#individual-characters)
@@ -194,7 +191,7 @@ __Table of Contents__
             * [Truth and Regular Expression Matches](#truth-and-regular-expression-matches)
             * [Using Regular expressions in substitutions](#using-regular-expressions-in-substitutions)
             * [Using subpatterns in the replacement](#using-subpatterns-in-the-replacement)
-            * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_06_problemset.md">Link to Python 6 Problem Set</a>](#link-to-python-6-problem-set)
+         * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_06_problemset.md">Link to Python 6 Problem Set</a>](#link-to-python-6-problem-set)
       * [Python 7](#python-7)
          * [Functions](#functions)
             * [Creating/Defining a Funtion to Find AT Content:](#creatingdefining-a-funtion-to-find-at-content)
@@ -224,7 +221,7 @@ __Table of Contents__
             * [glob](#glob)
             * [argparse](#argparse)
             * [Many more modules in many areas](#many-more-modules-in-many-areas)
-            * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_07_problemset.md">Link to Python 7 Problem Set</a>](#link-to-python-7-problem-set)
+         * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_07_problemset.md">Link to Python 7 Problem Set</a>](#link-to-python-7-problem-set)
       * [Python 8](#python-8)
          * [Exception Handling](#exception-handling)
             * [try/except/else/finally](#tryexceptelsefinally)
@@ -237,7 +234,7 @@ __Table of Contents__
             * [Dictionaries of dictionaries](#dictionaries-of-dictionaries)
             * [List Comprehensions](#list-comprehensions)
             * [More complex data structures](#more-complex-data-structures)
-            * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_08_problemset.md">Link to Python 8 Problem Set</a>](#link-to-python-8-problem-set)
+         * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_08_problemset.md">Link to Python 8 Problem Set</a>](#link-to-python-8-problem-set)
       * [Python 9](#python-9)
          * [BioPython](#biopython)
             * [BioPython Overview](#biopython-overview)
@@ -251,7 +248,6 @@ __Table of Contents__
          * [RNA](#rna)
       * [NGS](#ngs)
       * [Ontology](#ontology)
-
 
 ***
 
@@ -993,7 +989,7 @@ Here are a few more advanced Unix topics that are super useful and when you have
 ---
 
 
-#### [Link to Unix 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Unix_01_problemset.md)
+### [Link to Unix 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Unix_01_problemset.md)
 
 
 \pagebreak
@@ -1533,7 +1529,7 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 
 ---
 
-#### [Link to Python 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Python_01_problemset.md)
+### [Link to Python 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Python_01_problemset.md)
 
 \pagebreak
 
@@ -2027,7 +2023,7 @@ It returns three different values depending on x and y
 
 ---
 
-#### [Link to Python 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_02_problemset.md)
+### [Link to Python 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_02_problemset.md)
 
 \pagebreak
 
@@ -2065,7 +2061,7 @@ Traceback (most recent call last):
 AttributeError: 'list' object has no attribute 'rstrip'
 ```
 
-## What functions go with my object?
+### What functions go with my object?
 
 How do you find out what functions work with an object? There's a handy function `dir()`. As an example what functions can you call on our string `'ACGTGA'`?
 
@@ -2553,7 +2549,7 @@ This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Br
 ```
 > There is no need to store the string in a variable.
 
-### The `format()` mini-language
+#### The `format()` mini-language
 
 So far, we have just used `{}` to show where to insert the value of a variable in a string. You can add special characters inside the `{}` to change the way the variable is formatted when it's inserted into the string. 
 
@@ -2627,9 +2623,9 @@ Center aligning is done with `^`
 ```
 > Text can be center aligned by using ':^10'. 10 of course is your column width. The '^' indicates center justification. In our example an underscore is used to illustrate the empty spaces. 
 
-### Summary of special formatting symbols so far
+#### Summary of special formatting symbols so far
 
-#### Here are some of the ALIGNMENT options:
+__Here are some of the ALIGNMENT options:__
 
 Option |	Meaning |
 -------|----------|
@@ -2648,7 +2644,7 @@ Option |	Meaning |
 > `s` a string
 
 
-#### Common Types
+__Common Types__
 
 | type | description                              |
 | ---- | ---------------------------------------- |
@@ -2884,7 +2880,7 @@ Now that you have seen the `append()` function we can go over how to build a lis
 
 ---
 
-#### [Link to Python 3 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_03_problemset.md)
+### [Link to Python 3 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_03_problemset.md)
 
 \pagebreak
 
@@ -3503,7 +3499,7 @@ Symmetric Difference:
 
 ---
 
-#### [Link to Python 4 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_04_problemset.md)
+### [Link to Python 4 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_04_problemset.md)
 
 \pagebreak
 
@@ -3736,7 +3732,7 @@ Output:
 
 
 
-#### [Link to Python 5 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_05_problemset.md)
+### [Link to Python 5 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_05_problemset.md)
 
 \pagebreak
 
@@ -4262,7 +4258,7 @@ How would you use regular expressions to find all occurances of 'ATG' and replac
 
 ---
 
-#### [Link to Python 6 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_06_problemset.md)
+### [Link to Python 6 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_06_problemset.md)
 
 \pagebreak
 
@@ -4730,7 +4726,7 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 
 <p>&nbsp;</p>
 
-#### [Link to Python 7 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_07_problemset.md)
+### [Link to Python 7 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_07_problemset.md)
 
 \pagebreak
 
@@ -5050,7 +5046,7 @@ Here's a way to make a 3 x 3 table of values.
 
 ---
 
-#### [Link to Python 8 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_08_problemset.md)
+### [Link to Python 8 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_08_problemset.md)
 
 \pagebreak
 
