@@ -6,7 +6,7 @@ Unix 2 Problem Set
    - Add info about your repository
    - Create a local (your machine) directory (`mkdir`) and repository (`git init`) and link it to your remote repository (`git remote add`).
 
-2. Move any files you created in Unix_01 Problem set thos your local problemset git repository.
+2. Move any files you created in Unix_01 Problem set to your local problemset git repository.
 
 3. Add all the new files in your local repository to your remote repository
    - `git add  *`  use `git add <filename>` if you only want ot add one file.
@@ -16,7 +16,7 @@ Unix 2 Problem Set
 
 4. If you are tired of typing your github username and password create and add an ssh key to your github account. Information can be found [here](https://help.github.com/articles/connecting-to-github-with-ssh/) on github.com. Follow the instructions for these two steps in the turorial.
    - [Generating a new SSH key and adding it to the ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) 
-   -  [Adding a new SSH key to your GitHub account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account)
+   - [Adding a new SSH key to your GitHub account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account)
 
 5. Create a directory call `files` in your ProblemSets directory. 
 
@@ -34,17 +34,17 @@ This is fasta file format:
 ```
 >seqName description
 ATGGCGTCTTGGCCTTAAAAGCTC
-``` 
+```
 
 9. ADD/COMMIT/PUSH `mysequences.txt` to your remote.
 
 
 10. Create a directory called `fastas`.     (Hint: use mkdir)
-11. Copy the fasta file that you renamed to `cancer_genes.fasta` to the fasta directory. (Hint: use cp)
-12. Verify that the file is within the fasta directory.    (Hint: use ls fasta/)
-13. Delete the the original file that you used for copying.    (Hint: use rm, be careful)
+11. Copy the fasta file that you renamed to `cancer_genes.fasta` to the fasta directory.
+12. Verify that the file is within the fasta directory.  
+13. Delete the the original file that you used for copying.  
 14. Sync your remote repo with your local repo. Make sure to add each file you changed or use `git add all *`. Don't forget to commit and push.
-14. Read the man page for rm and cp to find out how to remove and copy a directory.
-15. Print out your history and redirect it to a file called unixBasics.history.txt
-16. Open this file with your text editor and delete any lines you do not want to keep. See this [google search](https://www.google.com/search?rlz=1C5CHFA_enUS596US596&q=nano+delete+entire+line&oq=nano+delete+entire+line&gs_l=psy-ab.3..0j0i5i30k1.28765.29854.0.30351.7.6.0.0.0.0.186.526.0j3.3.0....0...1.1.64.psy-ab..5.2.362...0i13k1j0i7i5i30k1.0.Ub2zfH_lp_o) for info on delete entire lines in nano.
-17. Make sure all your files are synced with your remote repository.
+15. Read the man page for `rm` and `cp` to find out how to remove and copy a directory.
+16. Print out your history and redirect it to a file called `unixBasics.history.txt`
+17. Open this file with your text editor and delete any lines you do not want to keep. See this [google search](https://www.google.com/search?rlz=1C5CHFA_enUS596US596&q=nano+delete+entire+line&oq=nano+delete+entire+line&gs_l=psy-ab.3..0j0i5i30k1.28765.29854.0.30351.7.6.0.0.0.0.186.526.0j3.3.0....0...1.1.64.psy-ab..5.2.362...0i13k1j0i7i5i30k1.0.Ub2zfH_lp_o) for info on delete entire lines in nano.
+18. Make sure all your files are synced with your remote repository.

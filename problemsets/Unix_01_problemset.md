@@ -1,5 +1,4 @@
-Unix Basics Quick Review and Problem Set
-======================================
+# Unix Basics Quick Review and Problem Set
 
 __Table of Contents__
 
@@ -9,83 +8,83 @@ __Table of Contents__
 Quick Review
 =========================
 
-command | description
--------|------------
-ls   | list contents
-cd   | change directory
-mkdir | make a directory
-rm   | use caution, it is easy to delete more that you would like
-head  | prints the top few lines to the terminal window
-tail  | prints the last few lines to the terminal window
-sort  | sorts the lines
-uniq  | prints the unique lines
-grep  | filnds the lines that contain a pattern
-wc  | counts the number of lines, characters and words
-mv | move files
-cp  | copy files
-date | returns the current date and time
-pwd  | return working directory name
-ssh  | remote login
-scp  | remote secure copy
-\~    | represents your home directory
-man [command] | manual page for the command ex. man ls
+| command         | description                              |
+| --------------- | ---------------------------------------- |
+| `ls`            | list directory contents                  |
+| `cd`            | change directory                         |
+| `mkdir`         | make a directory                         |
+| `rm`            | remove, or delete files and directories. Use caution, it is easy to delete more that you want. |
+| `head`          | prints the top few lines to the terminal window |
+| `tail`          | prints the last few lines to the terminal window |
+| `sort`          | sorts the lines                          |
+| `uniq`          | prints the unique lines                  |
+| `grep`          | filnds the lines that contain a pattern  |
+| `wc`            | counts the number of lines, characters and words |
+| `mv`            | move files                               |
+| `cp`            | copy files                               |
+| `date`          | returns the current date and time        |
+| `pwd`           | return working directory name            |
+| `ssh`           | remote login                             |
+| `scp`           | remote secure copy                       |
+| `~`             | shortcut for your home directory         |
+| `man <command>` | manual page for the command e.g. `man ls` to get the man page for `ls` |
 
 
 
 
+
+### Useful UNIX command examples to try
 
 __How do these two commands compare?__
 
-Try it!!
+Try them both!!
 ```
 ls -l
 ls -lt
 ```
-<p><br></p>
 
-__Pipes__
 
-You can string more than one command together with a pipe (|) , such that the output of the first command is received by the second command.
+__Pipes__ 
+
+You can string more than one command together with a pipe `|` , such that the standard output of the first command is 'piped' into the standard input of the second command.
 
 Try it!!
 ```
 ls -lt | head
 ```
 
-<p><br></p>
+
 
 __Semicolons__
 
-You can string more than one command together with a semi-colon (;) , such that the commands run sequentially, but that output does not get passed into the next command.
+You can string more than one command together by putting a semi-colon `;` after the each command. Here, the commands will be run sequentially, but any output does not get passed from one command to the next.
 
 Try it!!
 ```
 date ; sleep 2 ; date
 ```
-> If you want to know more about `sleep` use `man sleep`
+> If you want to know more about `sleep` type `man sleep`
 
-<p><br></p>
+
 
 __Redirect STDOUT__  
 You can redirect the output of a command into a file
 
-Try it!!
 ```
 grep Chr7 cuffdiff.txt > fav_chr_cuffdiff.txt
 ```
 
-<p><br></p>
 
-__Redirct STDOUT and Append__
+
+__Append STDOUT to the end of a file that already exists__
 
 You can append the output of a command to a file
 
-Try it!!
 ```
 grep Chr9 cuffdiff.txt >> fav_chr_cuffdiff.txt
 ```
 
-<p><br></p>
+
 
 __Redirect STDERR__  
 
@@ -99,27 +98,25 @@ cat blablabla.txt
 
 STDERR is a labeled type of output we can redirect
 
-Try it!!
 ```
 cat blablabla.txt 2> errors.txt
 ```
 > We can redirect the error messages, A.K.A. STDERR, to a new file called anything we want
 
-   
+
 What happens when you try to redirect STDOUT?
 ```
 cat blablabla.txt > errors.txt
 ```
-> `cat: blablabla.txt: No such file or directory` still gets printed to the screen because we only redirect STDOUT to our file. There is no STDOUT in this case and our file will be empty
+> `cat: blablabla.txt: No such file or directory` still gets printed to the screen because we only redirect STDOUT to our file. There is no STDOUT in this case and our file will be empty. How would you verify this?
 
 
-<p><br></p>
+
 
 __Redirect STDOUT and STDERR__
 
-You can redirect both STDOUT and STDERR to **TWO SEPARATE** files in one command.
-   
-Try it!!
+You can redirect both STDOUT and STDERR to **two separate** files in one command.
+
 ```
 # just print it to the terminal first
 cat fav_chr_cuffdiff.txt blablabla.file
@@ -129,18 +126,16 @@ cat fav_chr_cuffdiff.txt blablabla.file > out.txt 2> err.txt
 ```
 > Examine the contents of `out.txt` and `err.txt`
 
-<p><br></p>
-
-You can redirect both STDOUT and STDERR to **ONE SINGLE** file in one command.
+You can also redirect both STDOUT and STDERR to **the same** file.
 ```
-cat fav_chr_cuffdiff.txt blablabla.file &> all_out_err.txt
+cat fav_chr_cuffdiff.txt blablabla.file > all_out_err.txt 2>&1
 ```
 
 
 Problem Set
 ===========
 
-1. Log into your machine or account. 
+1. Log into your machine. 
 
 2. What is the full path to your home directory?
 
@@ -148,14 +143,14 @@ Problem Set
     - How many files does it contain?
     - How many directories?
 
-4. Make a directory called problemsets.
+4. Make a directory called `problemsets`.
 
 5. Navigate into this new directory called problemsets. Verify that you are in the correct directory by using `pwd`.
 
 6. Use `wget` to copy [sequences.nt.fa](https://github.com/srobb1/pfb2017/blob/master/files/sequences.nt.fa) from the web into your problemsets directory. 
 
 7. Without using a text editor calculate or report these qualities for the file `sequences.nt.fa`.
-This file can be found [here](https://github.com/srobb1/pfb2017/blob/master/files/sequences.nt.fa)
+  This file can be found [here](https://github.com/srobb1/pfb2017/blob/master/files/sequences.nt.fa)
       - How many lines does this file contain?   
       - How many characters?    (Hint: check out the options of wc)
       - What is the first line of this file?    (Hint: read the man page of head)
@@ -167,30 +162,30 @@ This file can be found [here](https://github.com/srobb1/pfb2017/blob/master/file
 9. Copy this remote file: [cuffdiff.txt](https://github.com/srobb1/pfb2017/blob/master/files/cuffdiff.txt) to your problemset directory.
 
 10. Do the following to cuffdiff.txt
-        - the descriptions of each column in the file are below
-	- look at the first few lines of the file
-	- sort the file by log fold change 'log2(fold_change)', from highest to lowest, and save in a new file in your directory called sorted.cuffdiff.out
-  	- sort the file (log fold change highest to lowest) then print out only the first 100 lines. Save in a file called top100.sorted.cuffdiff.out
-	- sort the file, print only first column. Get a unique list of the genes, then print only the top 100. Save in a file called differentially.expressed.genes.txt
+       - the descriptions of each column in the file are below
+  - look at the first few lines of the file
+  - sort the file by log fold change 'log2(fold_change)', from highest to lowest, and save in a new file in your directory called sorted.cuffdiff.out
+    - sort the file (log fold change highest to lowest) then print out only the first 100 lines. Save in a file called top100.sorted.cuffdiff.out
+  - sort the file, print only first column. Get a unique list of the genes, then print only the top 100. Save in a file called differentially.expressed.genes.txt
 
 
 
 __Cuffdiff file format__
 
-Column number  |  Column name   |    Example   |        Description
----------------|----------------|--------------|---------------------- 
-1              |  Tested id     | XLOC_000001  |     A unique identifier describing the transcipt, gene, primary transcript, or CDS being tested  
-2  |  Tested id  | XLOC_000001  | A unique identifier describing the transcipt, gene, primary transcript, or CDS being tested  
-3        |        gene    |          Lypla1    |        The gene_name(s) or gene_id(s) being tested
-4        |        locus   |          chr1:4797771-4835363 |   Genomic coordinates for easy browsing to the genes or transcripts being tested.
-5        |        sample 1     |     Liver   |          Label (or number if no labels provided) of the first sample being tested
-6        |       sample 2    |      Brain   |          Label (or number if no labels provided) of the second sample being tested
-7       |         Test status  |     NOTEST   |         Can be one of OK (test successful), NOTEST (not enough alignments for testing), LOWDATA (too complex or shallowly sequenced), HIDATA (too many fragments in locus), or FAIL,  when an ill-conditioned covariance matrix or other numerical exception prevents testing.
-8       |         FPKMx     |        8.01089   |        FPKM of the gene in sample x
-9       |         FPKMy     |        8.551545   |       FPKM of the gene in sample y
-10      |          log2(FPKMy/FPKMx)  | 0.06531  |         The (base 2) log of the fold change y/x    
-11      |         test stat   |      0.860902  |        The value of the test statistic used to compute significance of the observed change in FPKM
-12      |         p value      |     0.389292    |      The uncorrected p-value of the test statistic
-13      |         q value      |     0.985216    |      The FDR-adjusted p-value of the test statistic
-14      |         significant  |      no     |           Can be either "yes" or "no", depending on whether p is greater then the FDR after Benjamini-Hochberg correction for multiple-testing
+| Column number | Column name       | Example              | Description                              |
+| ------------- | ----------------- | -------------------- | ---------------------------------------- |
+| 1             | Tested id         | XLOC_000001          | A unique identifier describing the transcipt, gene, primary transcript, or CDS being tested |
+| 2             | Tested id         | XLOC_000001          | A unique identifier describing the transcipt, gene, primary transcript, or CDS being tested |
+| 3             | gene              | Lypla1               | The gene_name(s) or gene_id(s) being tested |
+| 4             | locus             | chr1:4797771-4835363 | Genomic coordinates for easy browsing to the genes or transcripts being tested. |
+| 5             | sample 1          | Liver                | Label (or number if no labels provided) of the first sample being tested |
+| 6             | sample 2          | Brain                | Label (or number if no labels provided) of the second sample being tested |
+| 7             | Test status       | NOTEST               | Can be one of OK (test successful), NOTEST (not enough alignments for testing), LOWDATA (too complex or shallowly sequenced), HIDATA (too many fragments in locus), or FAIL,  when an ill-conditioned covariance matrix or other numerical exception prevents testing. |
+| 8             | FPKMx             | 8.01089              | FPKM of the gene in sample x             |
+| 9             | FPKMy             | 8.551545             | FPKM of the gene in sample y             |
+| 10            | log2(FPKMy/FPKMx) | 0.06531              | The (base 2) log of the fold change y/x  |
+| 11            | test stat         | 0.860902             | The value of the test statistic used to compute significance of the observed change in FPKM |
+| 12            | p value           | 0.389292             | The uncorrected p-value of the test statistic |
+| 13            | q value           | 0.985216             | The FDR-adjusted p-value of the test statistic |
+| 14            | significant       | no                   | Can be either "yes" or "no", depending on whether p is greater then the FDR after Benjamini-Hochberg correction for multiple-testing |
 
