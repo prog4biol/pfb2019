@@ -1,4 +1,4 @@
-Programming For Biology 2017
+rogramming For Biology 2017
 ============================
 
 
@@ -2570,23 +2570,14 @@ __List Operators__
 
 __List Functions__
 
-<<<<<<< HEAD
 | Functions | Description                              | Example                                  |
 | --------- | ---------------------------------------- | ---------------------------------------- |
 | len(list) | returns the length or the number of values in list | len([1,2,3]) returns 3                   |
 | max(list) | returns the value with the largest ascii value | max(['a','A','z']) returns 'z'           |
 | min(list) | returns the value with the smallest ascii value | min(['a','A','z']) returns 'A'           |
 | list(seq) | converts a tuple into a list             | list(('a','A','z')) returns ['a', 'A', 'z'] |
-=======
-| Functions | Description                              | Example                                  |
-| --------- | ---------------------------------------- | ---------------------------------------- |
-| len(list) | returns the length or the number of values in list | len([1,2,3]) returns 3                   |
-| max(list) | returns the value with the largest ascii value | max(['a','A','z']) returns 'z'           |
-| min(list) | returns the value with the smallest ascii value | min(['a','A','z']) returns 'A'           |
-| list(seq) | converts a tuple into a list             | list(('a','A','z')) returns ['a', 'A', 'z'] |
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
->>>>>>> | sorted(list, key=None, reverse=False) | returns a sorted list based on the key provided | sorted(['a','A','z']) returns ['A', 'a', 'z'] 
->>>>>>> | | | sorted(['a','A','z'],key=str.lower) returns ['a', 'A', 'z']
+| sorted(list, key=None, reverse=False) | returns a sorted list based on the key provided | sorted(['a','A','z']) returns ['A', 'a', 'z'] |
+| | | sorted(['a','A','z'],key=str.lower) returns ['a', 'A', 'z'] |
 
 
 __List Methods__
@@ -3013,10 +3004,6 @@ StopIteration
 > An iterator allows you to get the next element in the iterator until there are no more elements. If you want to go through each element again, you will need to redefine the iterator.
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
 ## Dictionaries
 
 
@@ -3177,10 +3164,6 @@ __Dictionary Methods__
 | dict.values()                        | Returns list of dictionary dict's values |
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
 ## Sets
 
 
@@ -4097,11 +4080,7 @@ You can make a variable global with the function`global`
 
 
 
-<<<<<<< HEAD
 #### os.path
-=======
-__os.path__
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
 
 `os.path` has common utilities for working file paths (filenames and directories). A path is either a relative or absolute list of directories (often ending with a filename) that tells you where to find a file or directory.
 
@@ -4116,11 +4095,7 @@ __os.path__
 
 
 
-<<<<<<< HEAD
 #### os.system
-=======
-__os.system__
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
 
 Run a system command from python. Replaced by subprocess
 
@@ -4131,11 +4106,8 @@ os.system("ls -l")
 
 
 
-<<<<<<< HEAD
 #### subprocess
-=======
-__subprocess__
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
+
 
 ```python
 import subprocess
@@ -4148,11 +4120,8 @@ more complex than `os.system()`. You need to specify where input and output go
 
 ```
 
-<<<<<<< HEAD
+
 ##### Capturing output from a shell pipeline
-=======
-__Capturing output from a shell pipeline__
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
 
 `ls -l | grep amanda`
 
@@ -4178,11 +4147,8 @@ You can covert by decoding the bytes object into a string
 '-rw-r--r--  1 amanda  staff       161952 Oct  2 18:03 test.subreads.fa\n-rw-r--r--  1 amanda  staff          126 Oct  2 13:23 test.txt\n'
 ```
 
-<<<<<<< HEAD
 ##### Capturing output the long way (for a single command)
-=======
-__Capturing output the long way (for a single command)__
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
+
 
 Let's assume that `ls -l` generates some output something like this
 
@@ -4215,11 +4181,8 @@ lines = stdout.splitlines()
 
 
 
-<<<<<<< HEAD
 #### sys
-=======
-__sys__
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
+
 
 A couple of useful variables for beginners. Many more advanced system parameters and settings that we are not covering here.
 
@@ -4230,22 +4193,13 @@ A couple of useful variables for beginners. Many more advanced system parameters
 
 
 
-<<<<<<< HEAD
 #### re
-=======
-__re__
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
 
-see notes on regular expressions
+See notes on regular expressions
 
 __collections__
 
 `from collections import deque`
-
-<<<<<<< HEAD
-=======
-__copy__
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
 
 #### copy
 `copy.copy()`
@@ -4254,11 +4208,8 @@ and
 
 `copy.deepcopy()`
 
-<<<<<<< HEAD
 #### math
-=======
-__math__
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
+
 
 | function            | description |
 | ------------------- | ----------- |
@@ -4274,35 +4225,21 @@ __math__
 
 see also numpy
 
-<<<<<<< HEAD
 #### random
 
 
-=======
-__random__
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
 
 #### statistics
 
 
-<<<<<<< HEAD
-=======
-__statistics__
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
 
 #### glob
 
 
-<<<<<<< HEAD
 
 #### argparse
-=======
-__glob__
 
-__argparse__
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
-
-Great (and overly-complicated) tool for parsing command line arguments and automatically generating help messages for scripts (very handy!). Here's a simple script that explains a little of what it does.
+Great (if quite complicated) tool for parsing command line arguments and automatically generating help messages for scripts (very handy!). Here's a simple script that explains a little of what it does.
 
 ```python
 #!/usr/bin/python3
@@ -4325,11 +4262,7 @@ if args.out:
 
 
 
-<<<<<<< HEAD
-### Many more modules in many areas
-=======
-__Many more modules in many areas__
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
+### Many more modules that do many things
 
 time, HTML, XML, email, CGI, sockets, audio, GUIs with Tk, debugging, testing, unix utils
 
@@ -4337,13 +4270,7 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 
 
 
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
->>>>>>> \pagebreak
+\pagebreak
 
 ---
 # Python 8
@@ -4357,74 +4284,16 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 
 
 
-
-<<<<<<< HEAD
-
-## Scope
-
-> scope & namespace, 
-> =======
-## Scope
-
-> scope & namespace, 
-
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
-
-
-
-
-
-<<<<<<< HEAD
-=======
-## Datastructures
-
-@sep: how you initialize from a file
-> import json
-> >>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
-
-
-## Datastructures
+## Data structures
 
 @sep: how you initialize from a file
 > import json
 
 
-<<<<<<< HEAD
-=======
-<p>&nbsp;</p>
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
-
 \pagebreak
 
-<<<<<<< HEAD
-=======
----
 # Python 8
----
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
 
-## BioPython
-
-<<<<<<< HEAD
-***
-# BioPython
-=======
-### BioPython Overview
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
-
-### BioPython Subtopic 1
-
-<<<<<<< HEAD
-=======
-### BioPython Subtopic 2
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
-
-\pagebreak
-
----
-<<<<<<< HEAD
-# Python 8
----
 
 ## BioPython
 
@@ -4436,7 +4305,6 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 
 \pagebreak
 
----
 ---
 
 # Bioinformatic Analysis and Tools
