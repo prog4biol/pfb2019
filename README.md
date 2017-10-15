@@ -119,20 +119,13 @@ __What are our tips for being successful in your efforts to learn to program?__
 
 __What is the Command-Line?__
 
-Underlying the pretty Mac OSX GUI is a powerful command-line operating
-system. The command-line gives you access to the internals of the OS,
-and is also a convenient way to write custom software and scripts.
+Underlying the pretty Mac OSX GUI is a powerful command-line operating system. The command-line gives you access to the internals of the OS, and is also a convenient way to write custom software and scripts.  
 
 
-Many bioinformatics tools are written to run on the command-line and
-have no graphical interface. In many cases, a command-line tool is
-more versatile than a graphical tool, because you can easily combine
-command-line tools into automated scripts that accomplish tasks
-without human intervention.
+Many bioinformatics tools are written to run on the command-line and have no graphical interface. In many cases, a command-line tool is more versatile than a graphical tool, because you can easily combine command-line tools into automated scripts that accomplish tasks without human intervention.  
 
 
-In this course, we will be writing Pyton scripts that are completely
-command-line based.
+In this course, we will be writing Pyton scripts that are completely command-line based.
 
 
 ## The Basics
@@ -142,8 +135,7 @@ command-line based.
 __Logging into Your Workstation__
 
 
-Your workstation is an iMac. To log into it, provide the following
-information:
+Your workstation is an iMac. To log into it, provide the following information:
 
 _Your username:_ the initial of your first name, followed by your full last name.  
 
@@ -151,13 +143,10 @@ For example, if your username is **srobb** for **s**ofia **robb**
 
 _Your password:_ **changeme**
 
+__Bringing up the Command-Line__
 
-__Bringing up the Command-Line__ 
 
-
-To bring up the command-line, use the Finder to navigate to
-_Applications->Utilities_ and double-click on the _Terminal_
-application. This will bring up a window like the following:
+To bring up the command-line, use the Finder to navigate to _Applications->Utilities_ and double-click on the _Terminal_ application. This will bring up a window like the following:
 
 ![OSX Terminal](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/terminal_screenshot.png)
 
@@ -166,8 +155,7 @@ application. This will bring up a window like the following:
 You can open several Terminal windows at once. This is often helpful.
 
 
-You will be using this application a lot, so I suggest that you drag
-the Terminal icon into the shortcuts bar at the bottom of your screen.
+You will be using this application a lot, so I suggest that you drag the Terminal icon into the shortcuts bar at the bottom of your screen.
 
 
 __OK. I've Logged in.  What Now?__
@@ -181,14 +169,13 @@ The terminal window is running **shell** called "bash." The shell is a loop that
 5. Go back 1.
 
 
-There are many different shells with bizarre names like **bash**, **sh**, **csh**, **tcsh**, **ksh**, and **zsh**.  The "sh" part means shell.  Each shell has different and somewhat confusing featuers. We have set up your accounts to use **bash**.  Stay with **bash** and you'll get used to it, eventually.
+There are many different shells with bizarre names like **bash**, **sh**, **csh**, **tcsh**, **ksh**, and **zsh**.  The "sh" part means shell.  Each shell has different and somewhat confusing features. We have set up your accounts to use **bash**.  Stay with **bash** and you'll get used to it, eventually.
 
 
 __Command-Line Prompt__
 
 
-Most of bioinformatics is done with command-line software, so you
-should take some time to learn to use the shell effectively.
+Most of bioinformatics is done with command-line software, so you should take some time to learn to use the shell effectively.
 
 
 This is a command-line prompt:
@@ -210,19 +197,15 @@ This is another:
 srobb@bush202 1:12PM>
 ```
 
-What you get depends on how the system administrator has customized
-your login.  You can customize it yourself when you know how.
+What you get depends on how the system administrator has customized your login.  You can customize it yourself when you know how.
 
 
-The prompt tells you the shell is ready to accept a command.  When
-a long-running command is going, the prompt will not reappear until
-the system is ready to deal with your next request.
+The prompt tells you the shell is ready to accept a command.  When a long-running command is going, the prompt will not reappear until the system is ready to deal with your next request.
 
 __Issuing Commands__
 
 
-Type in a command and press the &lt;Enter&gt; key.  If the command has
-output, it will appear on the screen.  Example:
+Type in a command and press the &lt;Enter&gt; key.  If the command has output, it will appear on the screen.  Example:
 
 ```
 (~) 53% ls -F
@@ -238,7 +221,7 @@ ccod/
 (~) 54%
 ```
 
-The command here is `ls -F` which produces a listing of files and directories in the current directory (more on which later).  Below its output, the command prompt appears again.
+The command here is `ls -F` which produces a listing of files and directories in the current directory (more on that later).  Below its output, the command prompt appears again.
 
 
 Some programs will take a long time to run. After you issue their command names, you won't recover the shell prompt until they're done. You can either launch a new shell (from Terminal's File menu), or run the command in the background by adding an ampersand after the command
@@ -247,7 +230,7 @@ Some programs will take a long time to run. After you issue their command names,
 (~) 54% long_running_application &
 (~) 55%
 ```
-> The command will now run in the background until it is finished. If it has any output, the output will be printed to the terminal window. You may wish to redirect the output as described later.
+> The command will now run in the background until it is finished. If it has any output, the output will be printed to the terminal window. You may wish to capture the output in a file (called redirection). We'll describe this later.
 
 __Command-Line Editing__
 
@@ -362,10 +345,7 @@ bass-1.30a/                zhmapper.tar.gz
 bass-1.30a.tar.gz
 (~/projects) 64%
 ```
-> Each directory contains two special hidden directories named `.`and
-> `..`. The first, `.` refers always to the current directory.
-> `..` refers to the parent directory.  This lets you move
-> upward in the directory hierarchy like this:
+> Each directory contains two special hidden directories named `.` and `..`. The first, `.` refers always to the current directory. `..` refers to the parent directory.  This lets you move upward in the directory hierarchy like this:
 
 ```
 (~/docs) 64% cd ..
@@ -376,12 +356,10 @@ and to do arbitrarily weird things like this:
 ```
 (~/docs) 65% cd ../../lstein/docs
 ```
-> The latter command moves upward two levels, and then into a directory
-> named `docs` inside a directory called `lstein`.
+> The latter command moves upward two levels, and then into a directory named `docs` inside a directory called `lstein`.
 
 
-If you get lost, the `pwd` command prints out the full path to
-the current directory:
+If you get lost, the `pwd` command prints out the full path to the current directory:
 
 ```
 (~) 56% pwd
@@ -391,16 +369,10 @@ the current directory:
 __Essential Unix Commands__
 
 
-With the exception of a few commands that are built directly into the
-shell, all Unix commands are standalone executable programs.  When you
-type the name of a command, the shell will search through all the
-directories listed in the PATH environment variable for an executable
-of the same name.  If found, the shell will execute the command.
-Otherwise, it will give a "command not found" error.
+With the exception of a few commands that are built directly into the shell, all Unix commands are standalone executable programs.  When you type the name of a command, the shell will search through all the directories listed in the PATH environment variable for an executable of the same name.  If found, the shell will execute the command. Otherwise, it will give a "command not found" error.
 
 
-Most commands live in `/bin`, `/usr/bin`, or
-`/usr/local/bin`.
+Most commands live in `/bin`, `/usr/bin`, or `/usr/local/bin`.
 
 __Getting Information About Commands__
 
@@ -428,8 +400,7 @@ DESCRIPTION
 
 __Finding Out What Commands are on Your Computer__
 
-The `apropos` command will search for commands matching a keyword
-or phrase. Here's an example that looks for commands related to 'column'
+The `apropos` command will search for commands matching a keyword or phrase. Here's an example that looks for commands related to 'column'
 
 ```
 (~) 100% apropos column
@@ -455,31 +426,23 @@ The `wc` (word count) program is an example of a command that recognizes both lo
      23     941 /var/log/messages
 ```
 
-You can cluster short switches by concatenating them together, as
-shown in this example:
+You can cluster short switches by concatenating them together, as shown in this example:
 
 ```
 (~) 104% wc -cl /var/log/messages
      23     941 /var/log/messages
 ```
 
-Many commands will give a brief usage summary when you call them with
-the `-h` or `--help` switch.
+Many commands will give a brief usage summary when you call them with the `-h` or `--help` switch.
 
 __Spaces and Funny Characters__
 
-The shell uses whitespace (spaces, tabs and other nonprinting
-characters) to separate arguments.  If you want to embed whitespace in
-an argument, put single quotes around it.  For example:
+The shell uses whitespace (spaces, tabs and other non-printing characters) to separate arguments.  If you want to embed whitespace in an argument, put single quotes around it.  For example:
 
 ```
 mail -s 'An important message' 'Bob Ghost <bob@ghost.org>'
 ```
-> This will send an e-mail to the fictitious person Bob Ghost.  The `-s` switch takes an
-> argument, which is the subject line for the e-mail.  Because the
-> desired subject contains spaces, it has to have quotes around it.
-> Likewise, my name and e-mail address, which contains embedded spaces, must also
-> be quoted in this way.
+> This will send an e-mail to the fictitious person Bob Ghost.  The `-s` switch takes an argument, which is the subject line for the e-mail.  Because the desired subject contains spaces, it has to have quotes around it. Likewise, my name and e-mail address, which contains embedded spaces, must also be quoted in this way.
 
 
 Certain special non-printing characters have _escape codes_ associated with them:
@@ -496,9 +459,7 @@ Certain special non-printing characters have _escape codes_ associated with them
 
 __Useful Commands__
 
-Here are some commands that are used extremely frequently.  Use
-`man` to learn more about them.  Some of these commands may be
-useful for solving the problem set ;-)
+Here are some commands that are used extremely frequently.  Use `man` to learn more about them.  Some of these commands may be useful for solving the problem set ;-)
 
 __Manipulating Directories__
 
@@ -546,14 +507,10 @@ __Networking__
 __Standard I/O and Command Redirection__
 
 
-Unix commands communicate via the command-line interface.  They can
-print information out to the terminal for you to see, and accept input
-from the keyboard (that is, from _you_!)
+Unix commands communicate via the command-line interface.  They can print information out to the terminal for you to see, and accept input from the keyboard (that is, from _you_!)
 
 
-Every Unix program starts out with three connections to the outside
-world.  These connections are called "streams", because they act like a
-stream of information (metaphorically speaking):
+Every Unix program starts out with three connections to the outside world.  These connections are called "streams", because they act like a stream of information (metaphorically speaking):
 
 
 | Stream Type     | Description                              |
@@ -640,35 +597,22 @@ Sometimes you want a filter to act on a series of files, one of which happens to
 ```
 (~) 68% grep 'gatttgc' big_file.fasta bigger_file.fasta -
 ```
-This example searches for "gatttgc" in three places.  First it looks
-in file `big_file.fasta`, then in `bigger_file.fasta`, and lastly
-in standard input (which, since it isn't redirected, will come from
-the keyboard).
+This example searches for "gatttgc" in three places.  First it looks in file `big_file.fasta`, then in `bigger_file.fasta`, and lastly in standard input (which, since it isn't redirected, will come from the keyboard).
 
 
 __Standard I/O and Pipes__
 
 
-The coolest thing about the Unix shell is its ability to chain
-commands together into pipelines.  Here's an example:
+The coolest thing about the Unix shell is its ability to chain commands together into pipelines.  Here's an example:
 
 ```
 (~) 65% grep gatttgc big_file.fasta | wc -l
 22
 ```
-There are two commands here. `grep` searches a file or standard
-input for lines containing a particular string.  Lines which contain
-the string are printed to standard output.  `wc -l` is the
-familiar word count program, which counts words, lines and characters
-in a file or standard input.  The `-l` command-line option
-instructs `wc` to print out just the line count.  The `|`
-character, which is known as a "pipe", connects the two
-commands together so that the standard output of `grep` becomes
-the standard input of `wc`. Think of pipes connecting streams of data flowing.
+There are two commands here. `grep` searches a file or standard input for lines containing a particular string.  Lines which contain the string are printed to standard output.  `wc -l` is the familiar word count program, which counts words, lines and characters in a file or standard input.  The `-l` command-line option instructs `wc` to print out just the line count.  The `|` character, which is known as a "pipe", connects the two commands together so that the standard output of `grep` becomes the standard input of `wc`. Think of pipes connecting streams of data flowing. 
 
 
-What does this pipe do?  It prints out the number of lines in which
-the string "gatttgc" appears in the file `big_file.fasta`.
+What does this pipe do?  It prints out the number of lines in which the string "gatttgc" appears in the file `big_file.fasta`.
 
 __More Pipe Idioms__
 
@@ -676,10 +620,7 @@ Pipes are very powerful.  Here are some common command-line idioms.
 
 **Count the Number of Times a Pattern does NOT Appear in a File**
 
-The example at the top of this section showed you how to count the
-number of lines in which a particular string pattern appears in a
-file.  What if you want to count the number of lines in which a
-pattern does **not** appear?
+The example at the top of this section showed you how to count the number of lines in which a particular string pattern appears in a file.  What if you want to count the number of lines in which a pattern does **not** appear?
 
 Simple.  Reverse the test with the `-v` switch:
 
@@ -728,10 +669,7 @@ Pipe the output of `ls` to the `more` program, which shows a page at a time.  If
 __Monitor a Rapidly Growing File for a Pattern__
 
 
-Pipe the output of `tail -f` (which monitors a growing file and
-prints out the new lines) to `grep`.  For example, this will
-monitor the `/var/log/syslog`file for the appearance of e-mails
-addressed to 'mzhang':
+Pipe the output of `tail -f` (which monitors a growing file and prints out the new lines) to `grep`.  For example, this will monitor the `/var/log/syslog`file for the appearance of e-mails addressed to 'mzhang':
 
 ```
 (~) 70% tail -f /var/log/syslog | grep mzhang
@@ -766,7 +704,7 @@ __[Link to Unix 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/pro
 ## Text Editors
 
 
-It is often necessary to create and write to a file while using the terminal. This makes it essential to use a terminal text editor. There are many text editors out there. Some of our favorite are Emacs and vim. We are going to start you out with a simple text editor call __nano__
+It is often necessary to create and write to a file while using the terminal. This makes it essential to use a terminal text editor. There are many text editors out there. Some of our favorite are Emacs and vim. We are going to start you out with a simple text editor called  `nano`
 
 The way you use nano to create a file is simply by typing the command _nano_ followed by the name of the file you wish to create.
 
@@ -2570,14 +2508,14 @@ __List Operators__
 
 __List Functions__
 
-| Functions | Description                              | Example                                  |
-| --------- | ---------------------------------------- | ---------------------------------------- |
-| len(list) | returns the length or the number of values in list | len([1,2,3]) returns 3                   |
-| max(list) | returns the value with the largest ascii value | max(['a','A','z']) returns 'z'           |
-| min(list) | returns the value with the smallest ascii value | min(['a','A','z']) returns 'A'           |
-| list(seq) | converts a tuple into a list             | list(('a','A','z')) returns ['a', 'A', 'z'] |
+| Functions                             | Description                              | Example                                  |
+| ------------------------------------- | ---------------------------------------- | ---------------------------------------- |
+| len(list)                             | returns the length or the number of values in list | len([1,2,3]) returns 3                   |
+| max(list)                             | returns the value with the largest ascii value | max(['a','A','z']) returns 'z'           |
+| min(list)                             | returns the value with the smallest ascii value | min(['a','A','z']) returns 'A'           |
+| list(seq)                             | converts a tuple into a list             | list(('a','A','z')) returns ['a', 'A', 'z'] |
 | sorted(list, key=None, reverse=False) | returns a sorted list based on the key provided | sorted(['a','A','z']) returns ['A', 'a', 'z'] |
-| | | sorted(['a','A','z'],key=str.lower) returns ['a', 'A', 'z'] |
+|                                       |                                          | sorted(['a','A','z'],key=str.lower) returns ['a', 'A', 'z'] |
 
 
 __List Methods__
