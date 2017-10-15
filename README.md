@@ -74,11 +74,11 @@ __Table of Contents__
 
 Big Picture
 =======================
-__Why is it important for **Biologists** to learn to program?__
+__Why is it important for biologists to learn to program?__
 
 You probably already know the answer to this question since you are here.   
 
-We firmly believe that knowing how to program is just as essential as knowing how to run a gel or set up a PCR reaction. The data we can now get from a single experiment can be overwhelming. This data often needs to be reformatted, filtered, and analyzed in unqiue ways. Programming allows you to perform these tasks in a **reproducible**, **timely**, **efficient**, and **thoughtful** way.
+We firmly believe that knowing how to program is just as essential as knowing how to run a gel or set up a PCR reaction. The data we can now get from a single experiment can be overwhelming. This data often needs to be reformatted, filtered, and analyzed in unqiue ways. Programming allows you to perform these tasks in a **reproducible**, **efficient**, and **thoughtful** way.
 
 
 __What are our tips for being successful in your efforts to learn to program?__
@@ -2678,24 +2678,14 @@ Here's a way to make a 3 x 3 table of values.
 ```
 
 
-<p>&nbsp;</p>
-
-<<<<<<< HEAD
-
 \pagebreak
 
 ---
 # Python 4
 ---
 
-=======
-\pagebreak
 
----
-# Python 4
----
 
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
 ## Loops
 
 @sep
@@ -3648,39 +3638,26 @@ __Character Classes__
 
 A group of characters to that are allowed to be matched one time. There are a few predefined classes, symbol that means a series of characters.
 
-| Atom | Description                              |
-| ---- | ---------------------------------------- |
-| [ ]  | A bracketed list of characters, like [GA]. This indicates a single character can match any charcater in the bracketed list. |
-<<<<<<< HEAD
-| \\d  | __Digits__. Also can be written [0-9]    |
-| \\w  | __Word character__. Also can be written [A-Za-z_0-9] |
-| \\s  | __White Space character__. Also can be written [ \\t\\n\\r] |
-| \\D  | __A Non-Digit character__. Also can be written [^0-9] |
-| \\W  | __A Non-word charcter__. Also can be written [^A-Za-z_0-9] |
-| \\S  | __A Non-White Space Character__. Also can be written [^ \\t\\n\\r] |
-=======
-| \\d   | __Digits__. Also can be written [0-9]    |
-| \\w   | __Word character__. Also can be written [A-Za-z_0-9] |
-| \\s   | __White Space character__. Also can be written [ \\t\\n\\r] |
-| \\D   | __A Non-Digit character__. Also can be written [^0-9] |
-| \\W   | __A Non-word charcter__. Also can be written [^A-Za-z_0-9] |
-| \\S   | __A Non-White Space Character__. Also can be written [^ \\t\\n\\r] |
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
+| Atom  | Description                              |
+| ----- | ---------------------------------------- |
+| `[ ]` | A bracketed list of characters, like `[GA]`. This indicates a single character can match any character in the bracketed list. |
+| `\d`  | Digits. Also can be written `[0-9]`      |
+| `\D`  | Not digits. Also can be written`[^0-9]`  |
+| `\w`  | Word character. Also can be written `[A-Za-z0-9_]` Note underscore is part of this class |
+| `\W`  | Not a word character, or `[^A-Za-z0-9_]` |
+| `\s`  | White space character. Also can be written `[ \r\t\n]`. Note the space character after the first `[` |
+| `\S`  | Not whitespace. Also `[^ \r\\t\n]`       |
+
 
 __Anchors__
 
 A pattern can be anhcored to a region in the string
 
-| Atom | Description                         |
-| ---- | ----------------------------------- |
-| ^    | Matches the beginning of the string |
-| $    | Matches the end of the string       |
-<<<<<<< HEAD
-| \\b  | Matches a word boundry. This is between a \\w and a \\W |
-=======
-| \\b   | Matches a word boundry. This is between a \\w and a \\W |
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
-
+| Atom | Description                              |
+| ---- | ---------------------------------------- |
+| `^`  | Matches the beginning of the string      |
+| `$`  | Matches the end of the string            |
+| `\b` | Matches a word boundary between `\w` and `\W` |
 
 Examples:
 
@@ -3710,7 +3687,7 @@ g[gatc][gatc]t
 ```
 ^\d\d\d-\d\d\d\d$
 ```
-> only matches telephone numbers
+> only matches telephone numbers (without area code)
 
 ```
 \bcat
@@ -3729,12 +3706,12 @@ Quantifiers quantify how many atoms are to be found. By default an atom matches 
 
 | Quantifier | Description                              |
 | ---------- | ---------------------------------------- |
-| ?          | atom matches zero or exactly once        |
-| \*         | atom matches zero or more times          |
-| \+         | atom matches one or more times           |
-| {3}        | atom matches exactly 3 times             |
-| {2,4}      | atom matches between 2 and 4 times, inclusive |
-| {4,}       | atom matches at least 4 times            |
+| `?`        | atom matches zero or exactly once        |
+| `*`        | atom matches zero or more times          |
+| `+`        | atom matches one or more times           |
+| `{3}`      | atom matches exactly 3 times             |
+| `{2,4}`    | atom matches between 2 and 4 times, inclusive |
+| `{4,}`     | atom matches at least 4 times            |
 
 Examples:  
 
@@ -3929,7 +3906,7 @@ If you want to find the upstream and downstream sequence of ALL 'TATTAT' sites, 
 >>> print(found)
 [('TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA', 'CCGGTTTCCAAAGACAGTCTTCTAA'), ('TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA', 'CCGGTTTCCAAAGACAGTCTTCTAA')]
 ```
-> The subpatterns are stored in tuples within a list. More about this type of datastructure later.
+> The subpatterns are stored in tuples within a list. More about this type of data structure later.
 
 Another option for retrieving the upstream and downstream subpatters is to put the `findall()` in a for loop
 
@@ -4069,9 +4046,6 @@ Who's afraid of the bad big wolf?
 
 Something to think about.  
 How would you use regular expressions to find all occurances of 'ATG' and replace with '-M-' in this sequence 'GCAGAGGTGATGGACTCCGTAATGGCCAAATGACACGT'? 
-
-
-<p>&nbsp;</p>
 
 \pagebreak
 
