@@ -2,7 +2,7 @@ Unix 2 Problem Set
 ==================
 
 1. If you have not already done so, follow [Steps 1-3 in Unix: GIT for Beginners](https://github.com/srobb1/pfb2017#git-for-beginners). Here is a summary of those steps:
-   - Create a GitHub Account and Click "New"
+   - Create a GitHub Account and Click "New" to create a new repository.
    - Add info about your repository
    - Create a local (your machine) directory (`mkdir`) and repository (`git init`) and link it to your remote repository (`git remote add`).
 
