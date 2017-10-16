@@ -6,7 +6,7 @@ __Instructors__
 Simon Prochnik  
 Sofia Robb     
 
---
+---
 
 __Table of Contents__
 
@@ -70,13 +70,13 @@ __Table of Contents__
             * [Running Python Scripts](#running-python-scripts)
             * [Python Script](#python-script)
          * [Syntax](#syntax)
-            * [Python Identifiers](#python-identifiers)
-            * [Naming conventions for Python Identifiers](#naming-conventions-for-python-identifiers)
-            * [Reserved Words](#reserved-words)
-            * [Lines and Indentation](#lines-and-indentation)
-            * [Comments](#comments)
-            * [Blank Lines](#blank-lines)
-            * [Python Options](#python-options)
+            * [Python Identifiers:](#python-identifiers)
+            * [Naming conventions for Python Identifiers:](#naming-conventions-for-python-identifiers)
+            * [Reserved Words:](#reserved-words)
+            * [Lines and Indentation:](#lines-and-indentation)
+            * [Comments:](#comments)
+            * [Blank Lines:](#blank-lines)
+            * [Python Options:](#python-options)
          * [Data Types and Variables](#data-types-and-variables)
             * [Numbers and Strings](#numbers-and-strings)
             * [Lists](#lists)
@@ -97,6 +97,7 @@ __Table of Contents__
             * [Use bool() to test for truth](#use-bool-to-test-for-truth)
          * [Logic: Control Statements](#logic-control-statements)
             * [If Statement](#if-statement)
+            * [If/Else Statement](#ifelse-statement)
             * [if/elif](#ifelif)
          * [Numbers](#numbers)
             * [integer](#integer)
@@ -115,7 +116,7 @@ __Table of Contents__
             * [Errors and Printing](#errors-and-printing)
             * [Special/Escape Characters](#specialescape-characters)
             * [Concatenation](#concatenation)
-            * [Determine the length of a string](#determine-the-length-of-a-string)
+            * [Determine the length of a string:](#determine-the-length-of-a-string)
             * [Changing String Case](#changing-string-case)
             * [Find and Count](#find-and-count)
             * [Find and Replace](#find-and-replace)
@@ -145,7 +146,7 @@ __Table of Contents__
             * [For Loop Syntax](#for-loop-syntax)
             * [For/Else](#forelse)
             * [Loop Control](#loop-control)
-            * [Loop Control: Break](#loop-control-break)
+            * [Loop Conrol: Break](#loop-conrol-break)
             * [Loop Control: Continue](#loop-control-continue)
             * [Iterators](#iterators)
             * [List Comprehension](#list-comprehension)
@@ -164,6 +165,7 @@ __Table of Contents__
             * [Set Methods](#set-methods)
          * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_04_problemset.md">Link to Python 4 Problem Set</a>](#link-to-python-4-problem-set)
       * [Python 5](#python-5)
+         * [Iterables](#iterables)
          * [I/O and Files](#io-and-files)
             * [Writing to the Screen](#writing-to-the-screen)
             * [Reading input from the keyboard](#reading-input-from-the-keyboard)
@@ -202,21 +204,23 @@ __Table of Contents__
          * [Scope](#scope)
             * [Local Variables](#local-variables)
             * [Global](#global)
-      * [Modules](#modules)
+         * [Namespaces](#namespaces)
+         * [Modules](#modules)
             * [os.path](#ospath)
             * [os.system](#ossystem)
             * [subprocess](#subprocess)
-               * [Capturing output from a shell pipeline](#capturing-output-from-a-shell-pipeline)
-               * [Capturing output the long way (for a single command)](#capturing-output-the-long-way-for-a-single-command)
+            * [Capturing output from a shell pipeline](#capturing-output-from-a-shell-pipeline)
+            * [Capturing output the long way (for a single command)](#capturing-output-the-long-way-for-a-single-command)
             * [sys](#sys)
             * [re](#re)
+            * [collections](#collections)
             * [copy](#copy)
             * [math](#math)
             * [random](#random)
             * [statistics](#statistics)
             * [glob](#glob)
             * [argparse](#argparse)
-         * [Many more modules that do many things](#many-more-modules-that-do-many-things)
+            * [Many more modules in many areas](#many-more-modules-in-many-areas)
          * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_07_problemset.md">Link to Python 7 Problem Set</a>](#link-to-python-7-problem-set)
       * [Python 8](#python-8)
          * [Exception Handling](#exception-handling)
@@ -228,6 +232,8 @@ __Table of Contents__
             * [Lists of dictionaries](#lists-of-dictionaries)
             * [Dictionaries of lists](#dictionaries-of-lists)
             * [Dictionaries of dictionaries](#dictionaries-of-dictionaries)
+            * [List Comprehensions](#list-comprehensions)
+            * [More complex data structures](#more-complex-data-structures)
          * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_08_problemset.md">Link to Python 8 Problem Set</a>](#link-to-python-8-problem-set)
       * [Python 9](#python-9)
          * [BioPython](#biopython)
@@ -242,7 +248,6 @@ __Table of Contents__
          * [RNA](#rna)
       * [NGS](#ngs)
       * [Ontology](#ontology)
-
 
 ***
 
@@ -426,7 +431,7 @@ There are also some useful shell commands you can issue:
 **bash** offers automatic command completion and spelling correction.  If you type part of a command and then the tab key, it will prompt you with all the possible completions of the command.  For example:
 
 ```
-(~) 51% fd<tab><tab>
+(~) 51% fd<tab>
 (~) 51% fd
 fd2ps    fdesign  fdformat fdlist   fdmount  fdmountd fdrawcmd fdumount
 (~) 51%
