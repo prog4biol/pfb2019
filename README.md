@@ -106,7 +106,8 @@ __What are our tips for being successful in your efforts to learn to program?__
 
 # Unix
 
----
+
+
 ---
 
 # Unix 1
@@ -4256,13 +4257,14 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
   * What you want to do:
       * tools to do it
 
-=======
+
 ---
 
 # Bioinformatic Analysis and Tools
 
----
----
+
+
+
 
 ---
 
@@ -4273,8 +4275,8 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
   * What you want to do:
       * tools to do it
 
->>>>>>> 1f8a416f882e4684867fadb8c691ff9e709f9fbd
->>>>>>> \pagebreak
+
+\pagebreak
 
 ---
 # Sequence Search and Alignments
