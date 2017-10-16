@@ -35,7 +35,14 @@ Quick Review
 
 ### Useful UNIX command examples to try
 
-__How do these two commands compare?__
+Let's go to a directory with a lot of files in it and list those files
+
+```bash
+cd /bin/
+ls
+```
+
+__What's the difference between these two commands?__
 
 Try them both!!
 ```
@@ -162,11 +169,11 @@ Problem Set
 9. Copy this remote file: [cuffdiff.txt](https://github.com/srobb1/pfb2017/blob/master/files/cuffdiff.txt) to your problemset directory.
 
 10. Do the following to cuffdiff.txt
-       - the descriptions of each column in the file are below
-  - look at the first few lines of the file
-  - sort the file by log fold change 'log2(fold_change)', from highest to lowest, and save in a new file in your directory called sorted.cuffdiff.out
-    - sort the file (log fold change highest to lowest) then print out only the first 100 lines. Save in a file called top100.sorted.cuffdiff.out
-  - sort the file, print only first column. Get a unique list of the genes, then print only the top 100. Save in a file called differentially.expressed.genes.txt
+      - the descriptions of each column in the file are below
+ - look at the first few lines of the file
+ - sort the file by log fold change 'log2(fold_change)', from highest to lowest, and save in a new file in your directory called sorted.cuffdiff.out
+   - sort the file (log fold change highest to lowest) then print out only the first 100 lines. Save in a file called top100.sorted.cuffdiff.out
+ - sort the file, print only first column. Get a unique list of the genes, then print only the top 100. Save in a file called differentially.expressed.genes.txt
 
 
 
