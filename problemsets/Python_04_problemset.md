@@ -57,7 +57,7 @@ Python 4 Problem Set
     - Print the final shuffled sequence
     - Remember to test your code with test data. 
  
-13. Start with 2 very similar DNA sequences. Use your favorites or use [Python_04.fasta](https://github.com/srobb1/pfb2017/blob/master/files/Python_04.fasta)
+13. Start with 2 very similar DNA sequences. Use your favorites or use [Python_04.fasta](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/Python_04.fasta)
     - Align with ClustalW, TCoffee, or some other web alignment application. 
     - Output should be in FASTA format.
     - Store (copy and paste) each aligned sequence, including dashes, as two separate string variables. 
