@@ -494,8 +494,8 @@ bin/         dosc/        gmon.out     mnt/         sbin/
 boot/        etc/         home@        net/         tmp/
 cdrom/       fastboot     lib/         proc/        usr/
 dev/         floppy/      lost+found/  root/        var/
-(/) 59% <b>cd ~/docs/</b>
-(~/docs) 60% <b>pwd</b>
+(/) 59% cd ~/docs/
+(~/docs) 60% pwd
 /usr/home/lstein/docs
 (~/docs) 62% cd ../projects/
 (~/projects) 63% ls
@@ -613,7 +613,7 @@ The shell uses whitespace (spaces, tabs and other non-printing characters) to se
 ```
 mail -s 'An important message' 'Bob Ghost <bob@ghost.org>'
 ```
-> This will send an e-mail to the fictitious person Bob Ghost.  The `-s` switch takes an argument, which is the subject line for the e-mail.  Because the desired subject contains spaces, it has to have quotes around it. Likewise, my name and e-mail address, which contains embedded spaces, must also be quoted in this way.
+This will send an e-mail to the fictitious person Bob Ghost.  The `-s` switch takes an argument, which is the subject line for the e-mail.  Because the desired subject contains spaces, it has to have quotes around it. Likewise, my name and e-mail address, which contains embedded spaces, must also be quoted in this way.
 
 
 Certain special non-printing characters have _escape codes_ associated with them:
@@ -649,6 +649,7 @@ Here are some commands that are used extremely frequently.  Use `man` to learn m
 | Command           | Description                              |
 | ----------------- | ---------------------------------------- |
 | `cat`             | Concatenate program.  Can be used to concatenate multiple files together into a single file, or, much more frequently, to view the contents of a file or files in the terminal. |
+| `echo`            | print a copy of some text to the screen. E.g. `echo 'Hello World!'`   |
 | `more`            | Scroll through a file page by page.  Very useful when viewing large files.  Works even with files that are too big to be opened by a text editor. |
 | `less`            | A version of `more` with more features.  |
 | `head`            | View the first few lines of a file.  You can control how many lines to view. |
@@ -657,7 +658,7 @@ Here are some commands that are used extremely frequently.  Use `man` to learn m
 | `tr`              | Substitute one character for another.  Also useful for deleting characters. |
 | `sort`            | Sort the lines in a file alphabetically or numerically. |
 | `uniq`            | Remove duplicated lines in a file.       |
-| `cut`             | Remove sections from each line of a file or files. |
+| `cut`             | Remove columns from each line of a file or files. |
 | `fold`            | Wrap each input line to fit in a specified width. |
 | `grep`            | Filter a file for lines matching a specified pattern.  Can also be reversed to print out lines that don't match the specified pattern. |
 | `gzip` (`gunzip`) | Compress (uncompress) a file.            |
@@ -675,7 +676,7 @@ Here are some commands that are used extremely frequently.  Use `man` to learn m
 | `ping`                 | See if a remote host is up.              |
 | `ftp`/ `sftp` (secure) | transfer files using the File Transfer Protocol. |
 
-#### Standard I/O and Command Redirection
+#### Standard I/O and Redirection
 
 
 Unix commands communicate via the command-line interface.  They can print information out to the terminal for you to see, and accept input from the keyboard (that is, from _you_!)
@@ -687,8 +688,8 @@ Every Unix program starts out with three connections to the outside world.  Thes
 | Stream Type     | Description                              |
 | --------------- | ---------------------------------------- |
 | standard input  | This is a communications stream initially attached to the keyboard.  When the program reads from standard input, it reads whatever text you type in. |
-| standard output | This stream is initially attached to the command window. Anything the program prints to this channel appears in your terminal window. |
-| standard error  | This stream is also initially attached to the command window. It is a separate channel intended for printing error messages. |
+| standard output | This stream is initially attached to the terminal. Anything the program prints to this channel appears in your terminal window. |
+| standard error  | This stream is also initially attached to the terminal. It is a separate channel intended for printing error messages. |
 
 The word "initially" might lead you to think that standard input, output and error can somehow be detached from their starting places and reattached somewhere else.  And you'd be right.  You can attach
 one or more of these three streams to a file, a device, or even to another program.  This sounds esoteric, but it is actually very useful.
@@ -739,8 +740,9 @@ Here's the complete list of redirection commands for `bash`:
 
 | Redirect command    | Description                              |
 | ------------------- | ---------------------------------------- |
-| `< myfile.txt`      | Redirect standard input to file          |
+| `< myfile.txt`      | Redirect the contents of the file to standard input |
 | `> myfile.txt`      | Redirect standard output to file         |
+| `>> logfile.txt`    | Append standard output to the end of the file |
 | `1 > myfile.txt`    | Redirect just standard output to file (same as above) |
 | `2 > myfile.txt`    | Redirect just standard error to file     |
 | `> myfile.txt 2>&1` | Redirect both stdout and stderr to file  |
