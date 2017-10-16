@@ -6,7 +6,7 @@ __Instructors__
 Simon Prochnik  
 Sofia Robb     
 
---
+---
 
 __Table of Contents__
 
