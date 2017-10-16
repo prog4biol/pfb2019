@@ -1121,9 +1121,6 @@ Hello, PFB2017!
 
 
 
-@sep writing python scripts: nano or Pycharm
-
-
 #### Running Python Scripts
 
 Typing the python command followed by the name of a script makes python execute the script. Recall that we just saw you can run an interactive interpreter by just typing `python` on the command line
@@ -1578,9 +1575,6 @@ False
 
 ### Logic: Control Statements
 
-
-@sep while, if, elif, else, break, continue, 
-@sep ugh: else in while loop
 
 Control Statements are used to direct the flow of your code and create the oportunity for decision making. Control statements foundation is build on truth.
 
@@ -4417,11 +4411,6 @@ var_2 (outside function block after function call): Good-Bye
 ## Modules
 
 
-@sep
-> dir()
-> import
-> from bla import boo
-
 
 >The standard library:
 >os, sys, glob, shutil, math, random, statistics (scipy), zlib, sqlite3 (DB access)? urllib.request 
@@ -4889,9 +4878,6 @@ File needs to be a FASTA file and end with .fa
 
 
 ### Datastructures
-
-@sep: how you initialize from a file
-> import json
 
 
 Sometimes a _simple_ list or dictionary just doesn't do what you want. Sometimes you need to organize data in a more _complex_ way.  You can nest any data type inside any other type. This lets you build multidimensional data tables easily.
