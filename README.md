@@ -893,7 +893,7 @@ Things to notice:
 - In the middle
   - you will see either a blank area or text you have typed
 - At the bottom
-  - A listing of keyboard commands such as Save (control + o) and Exit (contorl + x)
+  - A listing of keyboard commands such as Save (control + o) and Exit (control + x)
 
 Keyboard commands are the only way to interact with the editor. You cannot use your mouse or trackpad.
 
@@ -905,12 +905,12 @@ The Meta key is \<esc\>. To use the Meta+key, hit \<esc\>, release, then hit the
 
 Helpful commands:
 -  Jump to a specific line:
-  - control + _ then line number 
+    - control + _ then line number 
 -  Copy a block of highlighted text
-  - control + ^ then move your cursor to start to highlight a block for copying 
-  - Meta + ^ to end your highlight block
+    - control + ^ then move your cursor to start to highlight a block for copying 
+    - Meta + ^ to end your highlight block
 -  Paste 
-  - control + u
+    - control + u
 
 
 Nano is a beginners text exitor. vi and Emacs are better choices once you become a bit more comfortable using the terminal. These editors do cool stuff like syntax highlighting.
