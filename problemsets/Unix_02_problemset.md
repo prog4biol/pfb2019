@@ -1,10 +1,10 @@
 # Unix 2 Problem Set
 
 
-1. If you have not already done so, follow [Steps 1-3 in Unix: GIT for Beginners](https://github.com/srobb1/pfb2017#git-for-beginners). Here is a summary of those steps:
+1. If you have not already done so, follow [Steps 1-3 in Unix: GIT for Beginners](https://github.com/srobb1/pfb2017#git-for-beginners). Here is a **summary** of those steps, Please go to lecture for detailed steps:
    - Create a GitHub Account and Click "New" to create a new repository.
    - Add info about your repository
-   - Create a local (your machine) directory with `mkdir <dirname>` and set it up as a repository with `git init <dirname>`. Now link it to your remote repository with `git remote add`.
+   - Create a local (your machine) directory with `mkdir <dirname>` and set it up as a repository with `git init`. Now link it to your remote repository with `git remote add`.
 
 2. Move any files you created in Unix_01 Problem set to your local problemset git repository.
 
