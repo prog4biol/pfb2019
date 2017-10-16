@@ -7,7 +7,7 @@ Simon Prochnik
 Sofia Robb  
 
 
----
+--
 
 __Table of Contents__
 
@@ -442,7 +442,7 @@ There are also some useful shell commands you can issue:
 **bash** offers automatic command completion and spelling correction.  If you type part of a command and then the tab key, it will prompt you with all the possible completions of the command.  For example:
 
 ```
-(~) 51% <b>fd<tab></b>
+(~) 51% fd<tab><tab>
 (~) 51% fd
 fd2ps    fdesign  fdformat fdlist   fdmount  fdmountd fdrawcmd fdumount
 (~) 51%
