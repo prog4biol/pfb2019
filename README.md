@@ -29,23 +29,16 @@ __Table of Contents__
             * [Getting Around](#getting-around)
             * [Essential Unix Commands](#essential-unix-commands)
             * [Getting Information About Commands](#getting-information-about-commands)
-            * [Finding Out What Commands are on Your Computer](#finding-out-what-commands-are-on-your-computer)
             * [Arguments and Command Switches](#arguments-and-command-switches)
             * [Spaces and Funny Characters](#spaces-and-funny-characters)
             * [Useful Commands](#useful-commands)
             * [Manipulating Directories](#manipulating-directories)
             * [Networking](#networking)
             * [Standard I/O and Command Redirection](#standard-io-and-command-redirection)
-            * [A Simple Example](#a-simple-example)
             * [Redirection Meta-Characters](#redirection-meta-characters)
             * [Filters, Filenames and Standard Input](#filters-filenames-and-standard-input)
             * [Standard I/O and Pipes](#standard-io-and-pipes)
             * [More Pipe Idioms](#more-pipe-idioms)
-            * [Uniquify Lines in a File](#uniquify-lines-in-a-file)
-            * [Concatenate Several Lists and Remove Duplicates](#concatenate-several-lists-and-remove-duplicates)
-            * [Count Unique Lines in a File](#count-unique-lines-in-a-file)
-            * [Page Through a Really Long Directory Listing](#page-through-a-really-long-directory-listing)
-            * [Monitor a Rapidly Growing File for a Pattern](#monitor-a-rapidly-growing-file-for-a-pattern)
          * [Advanced Unix](#advanced-unix)
          * [Link to Unix 1 Problem Set](#link-to-unix-1-problem-set)
       * [Unix 2](#unix-2)
@@ -647,7 +640,7 @@ Here are some commands that are used extremely frequently.  Use `man` to learn m
 | Command           | Description                              |
 | ----------------- | ---------------------------------------- |
 | `cat`             | Concatenate program.  Can be used to concatenate multiple files together into a single file, or, much more frequently, to view the contents of a file or files in the terminal. |
-| `echo`            | print a copy of some text to the screen. E.g. `echo 'Hello World!'`   |
+| `echo`            | print a copy of some text to the screen. E.g. `echo 'Hello World!'` |
 | `more`            | Scroll through a file page by page.  Very useful when viewing large files.  Works even with files that are too big to be opened by a text editor. |
 | `less`            | A version of `more` with more features.  |
 | `head`            | View the first few lines of a file.  You can control how many lines to view. |
@@ -4130,8 +4123,8 @@ How would you use regular expressions to find all occurances of 'ATG' and replac
 
 Writing your own functions is a way to group lines of code together. Why would you want to group lines of code together? 
 
-  1. Let's say that you have a few lines of code that are required to produce some functionality that you reuse in your code. You can group these all together and have that functionailty become one line. You can then just use one line of code where ever you need this functionality.
-  2. You can simplify the main body of your code if you have one human readable and informative line to represent many lines of code.
+    1. Let's say that you have a few lines of code that are required to produce some functionality that you reuse in your code. You can group these all together and have that functionailty become one line. You can then just use one line of code where ever you need this functionality.
+    2. You can simplify the main body of your code if you have one human readable and informative line to represent many lines of code.
 
 Let's see some examples:
 
