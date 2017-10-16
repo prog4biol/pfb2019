@@ -285,8 +285,7 @@ _What are our tips for being successful in your efforts to learn to program?_
 
 # Unix
 
-## Unix 1
-
+# Unix 1
 
 ### Unix Overview
 
@@ -299,7 +298,6 @@ Many bioinformatics tools are written to run on the command-line and have no gra
 
 
 In this course, we will be writing Pyton scripts that are completely command-line based.
-
 
 ### The Basics
 
@@ -800,7 +798,7 @@ Simple.  Reverse the test with the `-v` switch:
 2921
 ```
 
-#### Uniquify Lines in a File
+**Uniquify Lines in a File**
 
 
 If you have a long list of names in a text file, and you want to weed out the duplicates:
@@ -810,7 +808,7 @@ If you have a long list of names in a text file, and you want to weed out the du
 ```
 This works by sorting all the lines alphabetically and piping the result to the `uniq` program, which removes duplicate lines that occur one after another.  That's why you need to sort first. The output is placed in a file named `unique.out`.
 
-#### Concatenate Several Lists and Remove Duplicates
+**Concatenate Several Lists and Remove Duplicates**
 
 
 If you have several lists that might contain repeated entries among them, you can combine them into a single unique list by concatenating them together, then sorting and uniquifying them as before:
@@ -819,7 +817,7 @@ If you have several lists that might contain repeated entries among them, you ca
 (~) 67% cat file1 file2 file3 file4 | sort | uniq
 ```
 
-#### Count Unique Lines in a File
+**Count Unique Lines in a File**
 
 
 If you just want to know how many unique lines there are in the file, add a `wc` to the end of the pipe:
@@ -828,7 +826,7 @@ If you just want to know how many unique lines there are in the file, add a `wc`
 (~) 68% sort long_file.txt | uniq | wc -l
 ```
 
-#### Page Through a Really Long Directory Listing
+**Page Through a Really Long Directory Listing**
 
 
 Pipe the output of `ls` to the `more` program, which shows a page at a time.  If you have it, the `less` program is even better:
@@ -837,7 +835,7 @@ Pipe the output of `ls` to the `more` program, which shows a page at a time.  If
 (~) 69% ls -l | more
 ```
 
-#### Monitor a Rapidly Growing File for a Pattern
+**Monitor a Growing File for a Pattern**
 
 
 Pipe the output of `tail -f` (which monitors a growing file and prints out the new lines) to `grep`.  For example, this will monitor the `/var/log/syslog`file for the appearance of e-mails addressed to 'mzhang':
@@ -860,9 +858,8 @@ Here are a few more advanced Unix commands that are very useful and when you hav
 
 ### [Link to Unix 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Unix_01_problemset.md)
 
-
 ---
-## Unix 2
+# Unix 2
 
 
 ### Text Editors
@@ -1058,7 +1055,6 @@ You will KNOW if you need to use these features of git.
 ---
 
 ### [Link To Unix 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Unix_02_problemset.md)
-
 
 ---
 
@@ -1376,11 +1372,9 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 | dict(d)  | Creates a dictionary. d must be a sequence of (key,value) tuples. |
 | repr()   | Makes a string representation of an object. Useful for finding out what kind (Class) of object you are dealing with. |
 
-
 ---
 
 ### [Link to Python 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Python_01_problemset.md)
-
 
 -------
 
@@ -1863,7 +1857,6 @@ It returns three different values depending on x and y
 ---
 
 ### [Link to Python 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_02_problemset.md)
-
 
 ----
 
@@ -2711,7 +2704,6 @@ Now that you have seen the `append()` function we can go over how to build a lis
 ```
 > We start with a an empty list called 'words'. We use `append()` to add the value 'one' then to add the value 'two'. We end up with a list with two values.
 
-
 ---
 
 ### [Link to Python 3 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_03_problemset.md)
@@ -3072,7 +3064,7 @@ Here is an example of using mathatical operators to generate a list:
 l = [2 ** x for x in range(100000)]
 ```
 > This creates a list of list of the first one hundred
-thousand powers of two
+> thousand powers of two
 
 
 ### Dictionaries
@@ -3358,7 +3350,6 @@ Union, intersection, difference and symmetric difference can be done with sets
 | set.update(set2)                      | update set with the union of set and set2 |
 
 <p>&nbsp;</p>
-
 
 ---
 
@@ -4130,7 +4121,6 @@ How would you use regular expressions to find all occurances of 'ATG' and replac
 
 ### [Link to Python 6 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_06_problemset.md)
 
-
 ---
 ## Python 7
 
@@ -4138,8 +4128,8 @@ How would you use regular expressions to find all occurances of 'ATG' and replac
 
 Writing your own functions is a way to group lines of code together. Why would you want to group lines of code together? 
 
- 1. Let's say that you have a few lines of code that are required to produce some functionality that you reuse in your code. You can group these all together and have that functionailty become one line. You can then just use one line of code where ever you need this functionality.
- 2. You can simplify the main body of your code if you have one human readable and informative line to represent many lines of code.
+  1. Let's say that you have a few lines of code that are required to produce some functionality that you reuse in your code. You can group these all together and have that functionailty become one line. You can then just use one line of code where ever you need this functionality.
+  2. You can simplify the main body of your code if you have one human readable and informative line to represent many lines of code.
 
 Let's see some examples:
 
@@ -4151,7 +4141,7 @@ t_count = dna.count('T')
 dna_len = len(dna)
 at_content = (a_count + t_count) / dna_len
 print(at_content)
-```   
+```
 > Here are 5 lines of code to do one thing, calculate AT content in a DNA string.
 
 #### Creating/Defining a Funtion to Find AT Content:
@@ -4178,18 +4168,18 @@ print(calculate_at_content(dna_string))
 #### The details
 
 1. All functions must be defined. 
-	- We do this with the word `def`. 
+  - We do this with the word `def`. 
 2. The function must have a name.
-	- "calculate_at_content" is our name
+  - "calculate_at_content" is our name
 3. Functions define the variables required in the function body. These are paceholders for the arguments that get passed into our function. Functions don't need to have argumetns but they always need '()'
-	- We do this there "(dna)". 
-	- Our function needs one variable, and we can refer to it in the function body as 'dna'. 
+  - We do this there "(dna)". 
+  - Our function needs one variable, and we can refer to it in the function body as 'dna'. 
         - The variable 'dna' and it's contents are only visible within the body of the function
 4. The first line of the function must end with a ':'
 5. The function body needs to be indented.
 6. Do your work.
 7. You can return a value, but this is not required
-	- We return the value of 'at_content'  
+  - We return the value of 'at_content'  
 
 
 #### Naming Arguments
@@ -4600,11 +4590,9 @@ time, HTML, XML, email, CGI, sockets, audio, GUIs with Tk, debugging, testing, u
 
 Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 
-
 ---
 
 ### [Link to Python 7 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_07_problemset.md)
-
 
 ---
 ## Python 8
