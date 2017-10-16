@@ -290,7 +290,7 @@ Underlying the pretty Mac OSX GUI is a powerful command-line operating system. T
 Many bioinformatics tools are written to run on the command-line and have no graphical interface. In many cases, a command-line tool is more versatile than a graphical tool, because you can easily combine command-line tools into automated scripts that accomplish tasks without human intervention.  
 
 
-In this course, we will be writing Pyton scripts that are completely command-line based.
+In this course, we will be writing Python scripts that are completely command-line based.
 
 ### The Basics
 
@@ -1235,10 +1235,6 @@ Options and arguments (and corresponding environment variables):
 
 ### Data Types and Variables
 
-
-sep note:  overview of all types: start with constants: numbers, strings '' "" ''' ''' r'' = raw strings, + for concat, * for repeat
-iterable, string, int, float, tuple, list, dictionary, set  
-
 This is our first look at variables and data types. Each data type will be discussed in more detail in subsequent sections. 
 
 The first concept to consider is that python data types are either immutable (unchangeable) or not. Literal numbers, strings and tuples cannot be changed. Lists, dictionaries and sets can be changed. So can individual (scalar) variables. You can store data in memory by putting it in different kinds variables. You use the = sign to assign a value to a variable.
@@ -1375,15 +1371,15 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 
 | Function | Description                              |
 | -------- | ---------------------------------------- |
-| int(x)   | Converts x to an integer.                |
-| float(x) | Converts x to a floating-point number.   |
-| str(x)   | Converts x to a string.                  |
-| chr(x)   | Converts an integer to a character.      |
-| tuple(s) | Converts s to a tuple.                   |
-| list(s)  | Converts s to a list.                    |
-| set(s)   | Converts s to a set.                     |
-| dict(d)  | Creates a dictionary. d must be a sequence of (key,value) tuples. |
-| repr()   | Makes a string representation of an object. Useful for finding out what kind (Class) of object you are dealing with. |
+| `int(x)`   | Converts x to an integer.                |
+| `float(x)` | Converts x to a floating-point number.   |
+| `str(x)`   | Converts x to a string.                  |
+| `chr(x)`   | Converts an integer to a character.      |
+| `tuple(s)` | Converts s to a tuple.                   |
+| `list(s)`  | Converts s to a list.                    |
+| `set(s)`   | Converts s to a set.                     |
+| `dict(d)`  | Creates a dictionary. d must be a sequence of (key,value) tuples. |
+| `repr()`   | Makes a string representation of an object. Useful for finding out what kind (Class) of object you are dealing with. |
 
 ---
 
