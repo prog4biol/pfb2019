@@ -1108,14 +1108,10 @@ Hello, PFB2017!
 
 
 
-#### Running Python Scripts
 
-Typing the python command followed by the name of a script makes python execute the script. Recall that we just saw you can run an interactive interpreter by just typing `python` on the command line
+#### Python Scripts
 
-
-#### Python Script
-
-* The same code from above is typed into a text file. 
+* The same code from above is typed into a text file using a text editor.
 * Python scripts are always saved in files whose names have the extension '.py' (i.e. the filename ends with '.py').
 
 File Contents:  
@@ -1124,7 +1120,10 @@ File Contents:
 print ("Hello, PFB2017!")
 ```
 
-Execute the Python script:
+#### Running Python Scripts
+
+Typing the python command followed by the name of a script makes python execute the script. Recall that we just saw you can run an interactive interpreter by just typing `python` on the command lineExecute the Python script:
+
 ```bash
 $ python3 test.py 
 ```
@@ -1133,6 +1132,28 @@ This produces the following result:
 ```bash
 Hello, PFB2017!
 ```
+
+#### A quicker/better way to run python scripts
+
+If you make your script exectuable, you can run it without typing `python` first. Use `chmod` to change the permissions on the script like this
+
+`chmod +x test.py`
+
+You can look at the permissions with 
+
+```
+% ls -l test.py 
+-rwxr-xr-x  1 sprochnik  staff  60 Oct 16 14:29 test.py
+```
+
+The first field of -, r, w and x characters define the permissions of the file. The three 'x' characters means anyone can execute or run this script. Now you can simply type the name of the script to run it. Like this
+
+```
+% test.py
+Hello, PFB2017!
+```
+
+
 
 <p>&nbsp;</p>
 
@@ -1173,7 +1194,7 @@ except
 
 #### Lines and Indentation
 
-Python denotes blocks of code by line indentation. Incorrect line spacing and/or indention will cause an error to be reported or could make your code run in a way you don't expect. You can get help with indentation from good text editors or IDEs.
+Python denotes blocks of code by line indentation. Incorrect line spacing and/or indention will cause an error to be reported or could make your code run in a way you don't expect. You can get help with indentation from good text editors or Interactive Development Environments (IDEs).
 
 The number of spaces in the indentation need to be consistent but a specific number is not required. All lines of code, or statements, within a single block must be indented in the same way. For example:
 
