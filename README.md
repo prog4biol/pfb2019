@@ -279,7 +279,6 @@ _What are our tips for being successful in your efforts to learn to program?_
 
 # Unix
 
-
 ## Unix 1
 
 
@@ -972,10 +971,7 @@ addressed to _mzhang_:
 
 ### Advanced Unix
 
-
-@sep: leave out details for now maybe later in the course
-
-Here are a few more advanced Unix topics that are super useful and when you have time you should investigate further. 
+Here are a few more advanced Unix commands that are very useful and when you have time you should investigate further. 
 
  - awk
  - sed
@@ -5098,9 +5094,6 @@ There are also specific data table and frame handling libraries like Pandas.
 
 
 
-
-
-<p>&nbsp;</p>
 
 
 
