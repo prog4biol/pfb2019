@@ -1080,8 +1080,9 @@ Python has
 
 <p>&nbsp;</p>
 
-
 ### Running Python
+
+There are two versions of python: python 2 and python 3. We will be using 3. This version fixes some of the problems with python 2 and breaks some other things. A lot of code has already been written for python 2 (it's older), but going forwards, more and more new code development will use python 3.
 
 
 #### Interactive Interpreter
@@ -1089,7 +1090,7 @@ Python has
 Python can be run one line at a time in an interactive interpreter.  
 To lauch the interpreter type the following into your terminal window:  
 
-`$ python`    
+`$ python3`    
 Note: '$' indicates the command line prompt  
 
 First Python Commands:
@@ -1125,7 +1126,7 @@ print ("Hello, PFB2017!")
 
 Execute the Python script:
 ```bash
-$ python test.py 
+$ python3 test.py 
 ```
 
 This produces the following result:
@@ -1181,9 +1182,7 @@ The number of spaces in the indentation need to be consistent but a specific num
 
 Comments are an essential programming practice. Making a note of what a line or block of code is doing will help the writer and readers of the code. This includes you!
 
-__#__
-
-Comments start after a pound or hash symbol. All characters after the #, up to the end of the line are part of the comment and are ignored by python. 
+Comments start with a pound or hash symbol `#`. All characters after this symbol, up to the end of the line are part of the comment and are ignored by python. 
 
 The first line of a script starting with `#!` is a special example of a comment that also has the special function in unix of telling the unix shell how to run the script.
 
@@ -1198,8 +1197,6 @@ print ("Hello, PFB2017!") # this line prints
 #### Blank Lines
 
 Blank lines are also important for increasing the readability of the code. Blank lines are ignored by the python interpreptor
-
-
 
 #### Python Options
 
@@ -1247,7 +1244,7 @@ message = "Welcome to python" # this is a string
 
 Collections of data can also be stored in special data types, i.e., tuples, lists, sets, and dictionaries.  
 
- <p>&nbsp;</p>
+ 
 
 #### Lists 
 
