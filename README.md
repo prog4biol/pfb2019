@@ -29,25 +29,18 @@ __Table of Contents__
             * [Getting Around](#getting-around)
             * [Essential Unix Commands](#essential-unix-commands)
             * [Getting Information About Commands](#getting-information-about-commands)
-            * [Finding Out What Commands are on Your Computer](#finding-out-what-commands-are-on-your-computer)
             * [Arguments and Command Switches](#arguments-and-command-switches)
             * [Spaces and Funny Characters](#spaces-and-funny-characters)
             * [Useful Commands](#useful-commands)
             * [Manipulating Directories](#manipulating-directories)
             * [Networking](#networking)
             * [Standard I/O and Command Redirection](#standard-io-and-command-redirection)
-            * [A Simple Example](#a-simple-example)
             * [Redirection Meta-Characters](#redirection-meta-characters)
             * [Filters, Filenames and Standard Input](#filters-filenames-and-standard-input)
             * [Standard I/O and Pipes](#standard-io-and-pipes)
             * [More Pipe Idioms](#more-pipe-idioms)
-            * [Uniquify Lines in a File](#uniquify-lines-in-a-file)
-            * [Concatenate Several Lists and Remove Duplicates](#concatenate-several-lists-and-remove-duplicates)
-            * [Count Unique Lines in a File](#count-unique-lines-in-a-file)
-            * [Page Through a Really Long Directory Listing](#page-through-a-really-long-directory-listing)
-            * [Monitor a Rapidly Growing File for a Pattern](#monitor-a-rapidly-growing-file-for-a-pattern)
          * [Advanced Unix](#advanced-unix)
-         * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Unix_01_problemset.md">Link to Unix 1 Problem Set</a>](#link-to-unix-1-problem-set)
+         * [Link to Unix 1 Problem Set](#link-to-unix-1-problem-set)
       * [Unix 2](#unix-2)
          * [Text Editors](#text-editors)
       * [Git for Beginners](#git-for-beginners)
@@ -61,7 +54,7 @@ __Table of Contents__
             * [Creating a new repository](#creating-a-new-repository)
             * [Cloning a Repository](#cloning-a-repository)
             * [Links to <em>Slightly</em> less basic topics](#links-to-slightly-less-basic-topics)
-         * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Unix_02_problemset.md">Link To Unix 2 Problem Set</a>](#link-to-unix-2-problem-set)
+         * [Link To Unix 2 Problem Set](#link-to-unix-2-problem-set)
    * [Python](#python)
       * [Python 1](#python-1)
          * [Python Overview](#python-overview)
@@ -84,7 +77,7 @@ __Table of Contents__
             * [Tuple](#tuple)
             * [Dictionary](#dictionary)
             * [Type Conversion](#type-conversion)
-         * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Python_01_problemset.md">Link to Python 1 Problem Set</a>](#link-to-python-1-problem-set)
+         * [Link to Python 1 Problem Set](#link-to-python-1-problem-set)
       * [Python 2](#python-2)
          * [Operators](#operators)
             * [Arthmetic Operators](#arthmetic-operators)
@@ -105,7 +98,7 @@ __Table of Contents__
             * [Conversion functions](#conversion-functions)
             * [Numeric Functions](#numeric-functions)
          * [Comparing two numbers](#comparing-two-numbers)
-         * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_02_problemset.md">Link to Python 2 Problem Set</a>](#link-to-python-2-problem-set)
+         * [Link to Python 2 Problem Set](#link-to-python-2-problem-set)
       * [Python 3](#python-3)
          * [Sequences](#sequences)
          * [What functions go with my object?](#what-functions-go-with-my-object)
@@ -135,7 +128,7 @@ __Table of Contents__
             * [List Functions](#list-functions)
             * [List Methods](#list-methods)
             * [Building a List one Value at a Time](#building-a-list-one-value-at-a-time)
-         * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_03_problemset.md">Link to Python 3 Problem Set</a>](#link-to-python-3-problem-set)
+         * [Link to Python 3 Problem Set](#link-to-python-3-problem-set)
       * [Python 4](#python-4)
          * [Loops](#loops)
             * [while loop](#while-loop)
@@ -162,7 +155,7 @@ __Table of Contents__
             * [Set Operators](#set-operators)
             * [Set Functions](#set-functions)
             * [Set Methods](#set-methods)
-         * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_04_problemset.md">Link to Python 4 Problem Set</a>](#link-to-python-4-problem-set)
+         * [Link to Python 4 Problem Set](#link-to-python-4-problem-set)
       * [Python 5](#python-5)
          * [I/O and Files](#io-and-files)
             * [Writing to the Screen](#writing-to-the-screen)
@@ -172,7 +165,7 @@ __Table of Contents__
             * [Reading the contents of a file](#reading-the-contents-of-a-file)
             * [Writing to a File](#writing-to-a-file)
             * [Building a Dictionary from a File](#building-a-dictionary-from-a-file)
-         * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_05_problemset.md">Link to Python 5 Problem Set</a>](#link-to-python-5-problem-set)
+         * [Link to Python 5 Problem Set](#link-to-python-5-problem-set)
       * [Python 6](#python-6)
          * [Regular Expressions](#regular-expressions)
             * [Individual Characters](#individual-characters)
@@ -202,22 +195,22 @@ __Table of Contents__
          * [Scope](#scope)
             * [Local Variables](#local-variables)
             * [Global](#global)
-      * [Modules](#modules)
-            * [os.path](#ospath)
-            * [os.system](#ossystem)
-            * [subprocess](#subprocess)
-               * [Capturing output from a shell pipeline](#capturing-output-from-a-shell-pipeline)
-               * [Capturing output the long way (for a single command)](#capturing-output-the-long-way-for-a-single-command)
-            * [sys](#sys)
-            * [re](#re)
-            * [copy](#copy)
-            * [math](#math)
-            * [random](#random)
-            * [statistics](#statistics)
-            * [glob](#glob)
-            * [argparse](#argparse)
-         * [Many more modules that do many things](#many-more-modules-that-do-many-things)
-         * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_07_problemset.md">Link to Python 7 Problem Set</a>](#link-to-python-7-problem-set)
+         * [Modules](#modules)  
+            * [os.path](#ospath)  
+            * [os.system](#ossystem)  
+            * [subprocess](#subprocess)  
+               * [Capturing output from a shell pipeline](#capturing-output-from-a-shell-pipeline)  
+               * [Capturing output the long way (for a single command)](#capturing-output-the-long-way-for-a-single-command)  
+            * [sys](#sys)  
+            * [re](#re)  
+            * [copy](#copy)  
+            * [math](#math)  
+            * [random](#random)  
+            * [statistics](#statistics)  
+            * [glob](#glob)  
+            * [argparse](#argparse)  
+            * [Many more modules that do many things](#many-more-modules-that-do-many-things)  
+          * [Link to Python 7 Problem Set](#link-to-python-7-problem-set)
       * [Python 8](#python-8)
          * [Exception Handling](#exception-handling)
             * [try/except/else/finally](#tryexceptelsefinally)
@@ -228,7 +221,7 @@ __Table of Contents__
             * [Lists of dictionaries](#lists-of-dictionaries)
             * [Dictionaries of lists](#dictionaries-of-lists)
             * [Dictionaries of dictionaries](#dictionaries-of-dictionaries)
-         * [<a href="https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_08_problemset.md">Link to Python 8 Problem Set</a>](#link-to-python-8-problem-set)
+         * [Link to Python 8 Problem Set](#link-to-python-8-problem-set)
       * [Python 9](#python-9)
          * [BioPython](#biopython)
             * [BioPython Overview](#biopython-overview)
@@ -285,8 +278,7 @@ _What are our tips for being successful in your efforts to learn to program?_
 
 # Unix
 
-## Unix 1
-
+# Unix 1
 
 ### Unix Overview
 
@@ -299,7 +291,6 @@ Many bioinformatics tools are written to run on the command-line and have no gra
 
 
 In this course, we will be writing Pyton scripts that are completely command-line based.
-
 
 ### The Basics
 
@@ -494,8 +485,8 @@ bin/         dosc/        gmon.out     mnt/         sbin/
 boot/        etc/         home@        net/         tmp/
 cdrom/       fastboot     lib/         proc/        usr/
 dev/         floppy/      lost+found/  root/        var/
-(/) 59% <b>cd ~/docs/</b>
-(~/docs) 60% <b>pwd</b>
+(/) 59% cd ~/docs/
+(~/docs) 60% pwd
 /usr/home/lstein/docs
 (~/docs) 62% cd ../projects/
 (~/projects) 63% ls
@@ -613,7 +604,7 @@ The shell uses whitespace (spaces, tabs and other non-printing characters) to se
 ```
 mail -s 'An important message' 'Bob Ghost <bob@ghost.org>'
 ```
-> This will send an e-mail to the fictitious person Bob Ghost.  The `-s` switch takes an argument, which is the subject line for the e-mail.  Because the desired subject contains spaces, it has to have quotes around it. Likewise, my name and e-mail address, which contains embedded spaces, must also be quoted in this way.
+This will send an e-mail to the fictitious person Bob Ghost.  The `-s` switch takes an argument, which is the subject line for the e-mail.  Because the desired subject contains spaces, it has to have quotes around it. Likewise, my name and e-mail address, which contains embedded spaces, must also be quoted in this way.
 
 
 Certain special non-printing characters have _escape codes_ associated with them:
@@ -649,6 +640,7 @@ Here are some commands that are used extremely frequently.  Use `man` to learn m
 | Command           | Description                              |
 | ----------------- | ---------------------------------------- |
 | `cat`             | Concatenate program.  Can be used to concatenate multiple files together into a single file, or, much more frequently, to view the contents of a file or files in the terminal. |
+| `echo`            | print a copy of some text to the screen. E.g. `echo 'Hello World!'` |
 | `more`            | Scroll through a file page by page.  Very useful when viewing large files.  Works even with files that are too big to be opened by a text editor. |
 | `less`            | A version of `more` with more features.  |
 | `head`            | View the first few lines of a file.  You can control how many lines to view. |
@@ -657,7 +649,7 @@ Here are some commands that are used extremely frequently.  Use `man` to learn m
 | `tr`              | Substitute one character for another.  Also useful for deleting characters. |
 | `sort`            | Sort the lines in a file alphabetically or numerically. |
 | `uniq`            | Remove duplicated lines in a file.       |
-| `cut`             | Remove sections from each line of a file or files. |
+| `cut`             | Remove columns from each line of a file or files. |
 | `fold`            | Wrap each input line to fit in a specified width. |
 | `grep`            | Filter a file for lines matching a specified pattern.  Can also be reversed to print out lines that don't match the specified pattern. |
 | `gzip` (`gunzip`) | Compress (uncompress) a file.            |
@@ -675,7 +667,7 @@ Here are some commands that are used extremely frequently.  Use `man` to learn m
 | `ping`                 | See if a remote host is up.              |
 | `ftp`/ `sftp` (secure) | transfer files using the File Transfer Protocol. |
 
-#### Standard I/O and Command Redirection
+#### Standard I/O and Redirection
 
 
 Unix commands communicate via the command-line interface.  They can print information out to the terminal for you to see, and accept input from the keyboard (that is, from _you_!)
@@ -687,8 +679,8 @@ Every Unix program starts out with three connections to the outside world.  Thes
 | Stream Type     | Description                              |
 | --------------- | ---------------------------------------- |
 | standard input  | This is a communications stream initially attached to the keyboard.  When the program reads from standard input, it reads whatever text you type in. |
-| standard output | This stream is initially attached to the command window. Anything the program prints to this channel appears in your terminal window. |
-| standard error  | This stream is also initially attached to the command window. It is a separate channel intended for printing error messages. |
+| standard output | This stream is initially attached to the terminal. Anything the program prints to this channel appears in your terminal window. |
+| standard error  | This stream is also initially attached to the terminal. It is a separate channel intended for printing error messages. |
 
 The word "initially" might lead you to think that standard input, output and error can somehow be detached from their starting places and reattached somewhere else.  And you'd be right.  You can attach
 one or more of these three streams to a file, a device, or even to another program.  This sounds esoteric, but it is actually very useful.
@@ -739,8 +731,9 @@ Here's the complete list of redirection commands for `bash`:
 
 | Redirect command    | Description                              |
 | ------------------- | ---------------------------------------- |
-| `< myfile.txt`      | Redirect standard input to file          |
+| `< myfile.txt`      | Redirect the contents of the file to standard input |
 | `> myfile.txt`      | Redirect standard output to file         |
+| `>> logfile.txt`    | Append standard output to the end of the file |
 | `1 > myfile.txt`    | Redirect just standard output to file (same as above) |
 | `2 > myfile.txt`    | Redirect just standard error to file     |
 | `> myfile.txt 2>&1` | Redirect both stdout and stderr to file  |
@@ -800,7 +793,7 @@ Simple.  Reverse the test with the `-v` switch:
 2921
 ```
 
-#### Uniquify Lines in a File
+**Uniquify Lines in a File**
 
 
 If you have a long list of names in a text file, and you want to weed out the duplicates:
@@ -810,7 +803,7 @@ If you have a long list of names in a text file, and you want to weed out the du
 ```
 This works by sorting all the lines alphabetically and piping the result to the `uniq` program, which removes duplicate lines that occur one after another.  That's why you need to sort first. The output is placed in a file named `unique.out`.
 
-#### Concatenate Several Lists and Remove Duplicates
+**Concatenate Several Lists and Remove Duplicates**
 
 
 If you have several lists that might contain repeated entries among them, you can combine them into a single unique list by concatenating them together, then sorting and uniquifying them as before:
@@ -819,7 +812,7 @@ If you have several lists that might contain repeated entries among them, you ca
 (~) 67% cat file1 file2 file3 file4 | sort | uniq
 ```
 
-#### Count Unique Lines in a File
+**Count Unique Lines in a File**
 
 
 If you just want to know how many unique lines there are in the file, add a `wc` to the end of the pipe:
@@ -828,7 +821,7 @@ If you just want to know how many unique lines there are in the file, add a `wc`
 (~) 68% sort long_file.txt | uniq | wc -l
 ```
 
-#### Page Through a Really Long Directory Listing
+**Page Through a Really Long Directory Listing**
 
 
 Pipe the output of `ls` to the `more` program, which shows a page at a time.  If you have it, the `less` program is even better:
@@ -837,7 +830,7 @@ Pipe the output of `ls` to the `more` program, which shows a page at a time.  If
 (~) 69% ls -l | more
 ```
 
-#### Monitor a Rapidly Growing File for a Pattern
+**Monitor a Growing File for a Pattern**
 
 
 Pipe the output of `tail -f` (which monitors a growing file and prints out the new lines) to `grep`.  For example, this will monitor the `/var/log/syslog`file for the appearance of e-mails addressed to 'mzhang':
@@ -860,9 +853,8 @@ Here are a few more advanced Unix commands that are very useful and when you hav
 
 ### [Link to Unix 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Unix_01_problemset.md)
 
-
 ---
-## Unix 2
+# Unix 2
 
 
 ### Text Editors
@@ -894,7 +886,7 @@ Things to notice:
 - In the middle
   - you will see either a blank area or text you have typed
 - At the bottom
-  - A listing of keyboard commands such as Save (control + o) and Exit (contorl + x)
+  - A listing of keyboard commands such as Save (control + o) and Exit (control + x)
 
 Keyboard commands are the only way to interact with the editor. You cannot use your mouse or trackpad.
 
@@ -906,12 +898,12 @@ The Meta key is \<esc\>. To use the Meta+key, hit \<esc\>, release, then hit the
 
 Helpful commands:
 -  Jump to a specific line:
-  - control + _ then line number 
+    - control + _ then line number 
 -  Copy a block of highlighted text
-  - control + ^ then move your cursor to start to highlight a block for copying 
-  - Meta + ^ to end your highlight block
+    - control + ^ then move your cursor to start to highlight a block for copying 
+    - Meta + ^ to end your highlight block
 -  Paste 
-  - control + u
+    - control + u
 
 
 Nano is a beginners text exitor. vi and Emacs are better choices once you become a bit more comfortable using the terminal. These editors do cool stuff like syntax highlighting.
@@ -1059,7 +1051,6 @@ You will KNOW if you need to use these features of git.
 
 ### [Link To Unix 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Unix_02_problemset.md)
 
-
 ---
 
 # Python
@@ -1089,8 +1080,9 @@ Python has
 
 <p>&nbsp;</p>
 
-
 ### Running Python
+
+There are two versions of python: python 2 and python 3. We will be using 3. This version fixes some of the problems with python 2 and breaks some other things. A lot of code has already been written for python 2 (it's older), but going forwards, more and more new code development will use python 3.
 
 
 #### Interactive Interpreter
@@ -1098,7 +1090,7 @@ Python has
 Python can be run one line at a time in an interactive interpreter.  
 To lauch the interpreter type the following into your terminal window:  
 
-`$ python`    
+`$ python3`    
 Note: '$' indicates the command line prompt  
 
 First Python Commands:
@@ -1116,14 +1108,10 @@ Hello, PFB2017!
 
 
 
-#### Running Python Scripts
 
-Typing the python command followed by the name of a script makes python execute the script. Recall that we just saw you can run an interactive interpreter by just typing `python` on the command line
+#### Python Scripts
 
-
-#### Python Script
-
-* The same code from above is typed into a text file. 
+* The same code from above is typed into a text file using a text editor.
 * Python scripts are always saved in files whose names have the extension '.py' (i.e. the filename ends with '.py').
 
 File Contents:  
@@ -1132,15 +1120,40 @@ File Contents:
 print ("Hello, PFB2017!")
 ```
 
-Execute the Python script:
+#### Running Python Scripts
+
+Typing the python command followed by the name of a script makes python execute the script. Recall that we just saw you can run an interactive interpreter by just typing `python` on the command lineExecute the Python script:
+
 ```bash
-$ python test.py 
+$ python3 test.py 
 ```
 
 This produces the following result:
 ```bash
 Hello, PFB2017!
 ```
+
+#### A quicker/better way to run python scripts
+
+If you make your script exectuable, you can run it without typing `python` first. Use `chmod` to change the permissions on the script like this
+
+`chmod +x test.py`
+
+You can look at the permissions with 
+
+```
+% ls -l test.py 
+-rwxr-xr-x  1 sprochnik  staff  60 Oct 16 14:29 test.py
+```
+
+The first field of -, r, w and x characters define the permissions of the file. The three 'x' characters means anyone can execute or run this script. Now you can simply type the name of the script to run it. Like this
+
+```
+% test.py
+Hello, PFB2017!
+```
+
+
 
 <p>&nbsp;</p>
 
@@ -1181,7 +1194,7 @@ except
 
 #### Lines and Indentation
 
-Python denotes blocks of code by line indentation. Incorrect line spacing and/or indention will cause an error to be reported or could make your code run in a way you don't expect. You can get help with indentation from good text editors or IDEs.
+Python denotes blocks of code by line indentation. Incorrect line spacing and/or indention will cause an error to be reported or could make your code run in a way you don't expect. You can get help with indentation from good text editors or Interactive Development Environments (IDEs).
 
 The number of spaces in the indentation need to be consistent but a specific number is not required. All lines of code, or statements, within a single block must be indented in the same way. For example:
 
@@ -1190,9 +1203,7 @@ The number of spaces in the indentation need to be consistent but a specific num
 
 Comments are an essential programming practice. Making a note of what a line or block of code is doing will help the writer and readers of the code. This includes you!
 
-__#__
-
-Comments start after a pound or hash symbol. All characters after the #, up to the end of the line are part of the comment and are ignored by python. 
+Comments start with a pound or hash symbol `#`. All characters after this symbol, up to the end of the line are part of the comment and are ignored by python. 
 
 The first line of a script starting with `#!` is a special example of a comment that also has the special function in unix of telling the unix shell how to run the script.
 
@@ -1207,8 +1218,6 @@ print ("Hello, PFB2017!") # this line prints
 #### Blank Lines
 
 Blank lines are also important for increasing the readability of the code. Blank lines are ignored by the python interpreptor
-
-
 
 #### Python Options
 
@@ -1256,7 +1265,7 @@ message = "Welcome to python" # this is a string
 
 Collections of data can also be stored in special data types, i.e., tuples, lists, sets, and dictionaries.  
 
- <p>&nbsp;</p>
+ 
 
 #### Lists 
 
@@ -1376,11 +1385,9 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 | dict(d)  | Creates a dictionary. d must be a sequence of (key,value) tuples. |
 | repr()   | Makes a string representation of an object. Useful for finding out what kind (Class) of object you are dealing with. |
 
-
 ---
 
 ### [Link to Python 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Python_01_problemset.md)
-
 
 -------
 
@@ -1863,7 +1870,6 @@ It returns three different values depending on x and y
 ---
 
 ### [Link to Python 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_02_problemset.md)
-
 
 ----
 
@@ -2711,7 +2717,6 @@ Now that you have seen the `append()` function we can go over how to build a lis
 ```
 > We start with a an empty list called 'words'. We use `append()` to add the value 'one' then to add the value 'two'. We end up with a list with two values.
 
-
 ---
 
 ### [Link to Python 3 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_03_problemset.md)
@@ -3072,7 +3077,7 @@ Here is an example of using mathatical operators to generate a list:
 l = [2 ** x for x in range(100000)]
 ```
 > This creates a list of list of the first one hundred
-thousand powers of two
+> thousand powers of two
 
 
 ### Dictionaries
@@ -3358,7 +3363,6 @@ Union, intersection, difference and symmetric difference can be done with sets
 | set.update(set2)                      | update set with the union of set and set2 |
 
 <p>&nbsp;</p>
-
 
 ---
 
@@ -4130,7 +4134,6 @@ How would you use regular expressions to find all occurances of 'ATG' and replac
 
 ### [Link to Python 6 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_06_problemset.md)
 
-
 ---
 ## Python 7
 
@@ -4138,8 +4141,8 @@ How would you use regular expressions to find all occurances of 'ATG' and replac
 
 Writing your own functions is a way to group lines of code together. Why would you want to group lines of code together? 
 
- 1. Let's say that you have a few lines of code that are required to produce some functionality that you reuse in your code. You can group these all together and have that functionailty become one line. You can then just use one line of code where ever you need this functionality.
- 2. You can simplify the main body of your code if you have one human readable and informative line to represent many lines of code.
+    1. Let's say that you have a few lines of code that are required to produce some functionality that you reuse in your code. You can group these all together and have that functionailty become one line. You can then just use one line of code where ever you need this functionality.
+    2. You can simplify the main body of your code if you have one human readable and informative line to represent many lines of code.
 
 Let's see some examples:
 
@@ -4151,7 +4154,7 @@ t_count = dna.count('T')
 dna_len = len(dna)
 at_content = (a_count + t_count) / dna_len
 print(at_content)
-```   
+```
 > Here are 5 lines of code to do one thing, calculate AT content in a DNA string.
 
 #### Creating/Defining a Funtion to Find AT Content:
@@ -4178,18 +4181,18 @@ print(calculate_at_content(dna_string))
 #### The details
 
 1. All functions must be defined. 
-	- We do this with the word `def`. 
+  - We do this with the word `def`. 
 2. The function must have a name.
-	- "calculate_at_content" is our name
+  - "calculate_at_content" is our name
 3. Functions define the variables required in the function body. These are paceholders for the arguments that get passed into our function. Functions don't need to have argumetns but they always need '()'
-	- We do this there "(dna)". 
-	- Our function needs one variable, and we can refer to it in the function body as 'dna'. 
+  - We do this there "(dna)". 
+  - Our function needs one variable, and we can refer to it in the function body as 'dna'. 
         - The variable 'dna' and it's contents are only visible within the body of the function
 4. The first line of the function must end with a ':'
 5. The function body needs to be indented.
 6. Do your work.
 7. You can return a value, but this is not required
-	- We return the value of 'at_content'  
+  - We return the value of 'at_content'  
 
 
 #### Naming Arguments
@@ -4600,11 +4603,9 @@ time, HTML, XML, email, CGI, sockets, audio, GUIs with Tk, debugging, testing, u
 
 Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 
-
 ---
 
 ### [Link to Python 7 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_07_problemset.md)
-
 
 ---
 ## Python 8
