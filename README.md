@@ -1,4 +1,4 @@
-rogramming For Biology 2017
+Programming For Biology 2017
 ============================
 
 
@@ -677,10 +677,7 @@ Pipe the output of `tail -f` (which monitors a growing file and prints out the n
 
 ## Advanced Unix
 
-
-@sep: leave out details for now maybe later in the course
-
-Here are a few more advanced Unix topics that are super useful and when you have time you should investigate further. 
+Here are a few more advanced Unix commands that are very useful and when you have time you should investigate further. 
 
  - awk
  - sed
@@ -754,7 +751,7 @@ Nano is a beginners text exitor. vi and Emacs are better choices once you become
 
 
 Git for Beginners
-=================
+-----------------
 Git is a tool for managing files and versions of files. It is a _Version Control System_. It allows you to keep track of changes. You are going to be using Git to manage your course work and keep your copy of the lecture notes and files up to date. Git can help you do very complex task with files. We are going to keep it simple.
 
 
