@@ -162,7 +162,7 @@ You will be using this application a lot, so I suggest that you drag the Termina
 __OK. I've Logged in.  What Now?__
 
 
-The terminal window is running **shell** called "bash." The shell is a loop that:
+The terminal window is running a **shell** called "bash." The shell is a loop that:
 1. Prints a prompt
 2. Reads a line of input from the keyboard
 3. Parses the line into one or more commands
@@ -324,8 +324,8 @@ bin/         dosc/        gmon.out     mnt/         sbin/
 boot/        etc/         home@        net/         tmp/
 cdrom/       fastboot     lib/         proc/        usr/
 dev/         floppy/      lost+found/  root/        var/
-(/) 59% <b>cd ~/docs/</b>
-(~/docs) 60% <b>pwd</b>
+(/) 59% cd ~/docs/
+(~/docs) 60% pwd
 /usr/home/lstein/docs
 (~/docs) 62% cd ../projects/
 (~/projects) 63% ls
