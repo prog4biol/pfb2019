@@ -1400,13 +1400,13 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 
 | Operator | Description                              | Example        | Result |
 | -------- | ---------------------------------------- | -------------- | ------ |
-| \+       | Addition                                 | 3+2            | 5      |
-| \-       | Subtraction                              | 3-2            | 1      |
-| \*       | Multiplication                           | 3\*2           | 6      |
-| /        | Division                                 | 3/2            | 1.5    |
-| %        | Modulus (divides left operand by right operand and returns the remainder) | 3%2            | 1      |
-| \*\*     | Exponent                                 | 3\*\*2         | 9      |
-| //       | Floor Division (result is the quotient with digits after the decimal point removed. If one of the operands is negative, the result is floored, i.e., rounded away from zero | 3//2  ; -11//3 | 1 ; -4 |
+| `+`       | Addition                                 | `3+2`            | 5      |
+| `-`       | Subtraction                              | `3-2`            | 1      |
+| `*`       | Multiplication                           | `3*2`           | 6      |
+| `/`        | Division                                 | `3/2`            | 1.5    |
+| `%`        | Modulus (divides left operand by right operand and returns the remainder) | `3%2`            | 1      |
+| `**`     | Exponent                                 | `3*\2`         | 9      |
+| `//`       | Floor Division (result is the quotient with digits after the decimal point removed. If one of the operands is negative, the result is floored, i.e., rounded away from zero | `3//2`  ; `-11//3` | 1 ; -4 |
 
 
 
@@ -1414,14 +1414,14 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 
 | Operator | Equivalent to          | Example                     | result evaluates to |
 | -------- | ---------------------- | --------------------------- | ------------------- |
-| =        | a = 3                  | result = 3                  | 3                   |
-| \+=      | result = result + 2    | result = 3 ; result += 2    | 5                   |
-| \-=      | result = result - 2    | result = 3 ; result -= 2    | 1                   |
-| \*=      | result = result * 2    | result = 3  ; result \*= 2  | 6                   |
-| /=       | result = result / 2    | result = 3 ; result /= 2    | 1.5                 |
-| %=       | result = result % 2    | result = 3 ; result %= 2    | 1                   |
-| \*\*=    | result = result \*\* 2 | result = 3 ; result \*\*= 2 | 9                   |
-| //=      | result = result // 2   | result = 3 ; result //= 3   | 1                   |
+| `=`        | `a = 3`                  | `result = 3`                  | 3                   |
+| `+=`      | `result = result + 2`    | `result = 3 ; result += 2`    | 5                   |
+| `-=`      | `result = result - 2`    | `result = 3 ; result -= 2`    | 1                   |
+| `*=`      | `result = result * 2`    | `result = 3  ; result \*= 2`  | 6                   |
+| `=`       | `result = result / 2`    | `result = 3 ; result /= 2`    | 1.5                 |
+| `%=`       | `result = result % 2`    | `result = 3 ; result %= 2`    | 1                   |
+| `**=`    | `result = result ** 2` | `result = 3 ; result **= 2` | 9                   |
+| `//=`      | `result = result // 2`   | `result = 3 ; result //= 3`   | 1                   |
 
 
 
@@ -1434,12 +1434,12 @@ These operators compare two values and returns true or false.
 
 | Operator | Description           | Example | Result |
 | -------- | --------------------- | ------- | ------ |
-| ==       | equal to              | 3 == 2  | False  |
-| !=       | not equal             | 3 != 2  | True   |
-| \>       | greater than          | 3 \> 2  | True   |
-| \<       | less than             | 3 \< 2  | False  |
-| \>=      | greater than or equal | 3 \>= 2 | True   |
-| \<=      | less than or equal    | 3 \<= 2 | False  |
+| `==`       | equal to              | `3 == 2`  | False  |
+| `!=`       | not equal             | `3 != 2`  | True   |
+| `>`       | greater than          | `3 > 2`  | True   |
+| `<`       | less than             | `3 < 2`  | False  |
+| `>=`      | greater than or equal | `3 >= 2` | True   |
+| `<=`      | less than or equal    | `3 <= 2` | False  |
 
 
 
@@ -1447,9 +1447,9 @@ These operators compare two values and returns true or false.
 
 | Operator | Description                              | Example            | Result |
 | -------- | ---------------------------------------- | ------------------ | ------ |
-| and      | True if left operand is True and right operand is True | bool(3>=2 and 2<3) | True   |
-| or       | TRUE if left operand is Treu or right operand is True | bool(3==2 or 2<3)  | True   |
-| not      | Reverses the logical status              | bool(not False)    | True   |
+| `and`      | True if left operand is True and right operand is True | `bool(3>=2 and 2<3)` | True   |
+| `or`       | TRUE if left operand is Treu or right operand is True | `bool(3==2 or 2<3)`  | True   |
+| `not`      | Reverses the logical status              | `bool(not False)`    | True   |
 
 
 
@@ -1457,8 +1457,8 @@ These operators compare two values and returns true or false.
 
 | Operator | Description                              |
 | -------- | ---------------------------------------- |
-| in       | True if a value is included in a list, tuple, or string |
-| not in   | True if a value is absent in a list, tuple, or string |
+| `in`       | True if a value is included in a list, tuple, or string |
+| `not in`   | True if a value is absent in a list, tuple, or string |
 
 For Example:  
 ```python
@@ -1486,21 +1486,21 @@ Operators are listed in order of precedence. Highest listed first. Not all the o
 
 | Operator                    | Description                              |
 | --------------------------- | ---------------------------------------- |
-| \*\*                        | Exponentiation (raise to the power)      |
-| \~ \+ \-                    | Complement, unary plus and minus (method names for the last two are +@ and -@) |
-| \* / % //                   | Multiply, divide, modulo and floor division |
-| \+ \-                       | Addition and subtraction                 |
-| \>> \<<                     | Right and left bitwise shift             |
-| &                           | Bitwise 'AND'                            |
-| ^ \|                        | Bitwise exclusive 'OR' and regular 'OR'  |
-| \<= < > >=                  | Comparison operators                     |
-| \<> == !=                   | Equality operators                       |
-| = %= /= //= -= += \*= \*\*= | Assignment operators                     |
-| is                          | Identity operator                        |
-| is not                      | Non-identity operator                    |
-| in                          | Membership operator                      |
-| not in                      | Negative membership operator             |
-| not, or, and                | logical operators                        |
+| `**`                        | Exponentiation (raise to the power)      |
+| `~` `+` `-`                    | Complement, unary plus and minus (method names for the last two are +@ and -@) |
+| `*` `/` `%` `//`                   | Multiply, divide, modulo and floor division |
+| `+` `-`                       | Addition and subtraction                 |
+| `>>` `<<`                     | Right and left bitwise shift             |
+| `&`                           | Bitwise 'AND'                            |
+| `^` `|`                        | Bitwise exclusive 'OR' and regular 'OR'  |
+| `<=` `<` `>` `>=`                  | Comparison operators                     |
+| `<>` `==` `!=`                   | Equality operators                       |
+| `=` `%=` `/=` `//=` `-=` `+=` `*=` `**=` | Assignment operators                     |
+| `is`                          | Identity operator                        |
+| `is not`                      | Non-identity operator                    |
+| `in`                          | Membership operator                      |
+| `not in`                      | Negative membership operator             |
+| `not` `or` `and`                | logical operators                        |
 
 
 
@@ -1724,10 +1724,10 @@ Python recognizes 3 types of numbers: integers, float point numbers, and complex
 
 | function      | Description                              |
 | ------------- | ---------------------------------------- |
-| int(x)        | to convert x to a plain integer          |
-| float(x)      | to convert x to a floating-point number  |
-| complex(x)    | to convert x to a complex number with real part x and imaginary part zero |
-| complex(x, y) | to convert x and y to a complex number with real part x and imaginary part y |
+| `int(x)`        | to convert x to a plain integer          |
+| `float(x)`      | to convert x to a floating-point number  |
+| `complex(x)`    | to convert x to a complex number with real part x and imaginary part zero |
+| `complex(x, y)` | to convert x and y to a complex number with real part x and imaginary part y |
 
 ```python
 >>> int(2.3)
@@ -1747,10 +1747,10 @@ Python recognizes 3 types of numbers: integers, float point numbers, and complex
 
 | function        | Description                              |
 | --------------- | ---------------------------------------- |
-| abs(x)          | The absolute value of x: the (positive) distance between x and zero. |
-| round(x [,n])   | x rounded to n digits from the decimal point. round(0.5) is 1.0 and round(-0.5) is -1.0. |
-| max(x1, x2,...) | The largest positive argument is returned |
-| min(x1, x2,...) | The smallest argument is returned        |
+| `abs(x)`          | The absolute value of x: the (positive) distance between x and zero. |
+| `round(x [,n])`   | x rounded to n digits from the decimal point. round(0.5) is 1.0 and round(-0.5) is -1.0. |
+| `max(x1, x2,...)` | The largest positive argument is returned |
+| `min(x1, x2,...)` | The smallest argument is returned        |
 
 ```python
 >>> abs(2.3)
@@ -1784,14 +1784,14 @@ These next functions are found in the math module and need to be imported. To us
 
 | math.function | Description                              |
 | ------------- | ---------------------------------------- |
-| ceil(x)       | The smallest integer not greater than x is returned |
-| floor(x)      | the largest integer not greater than x is returned. |
-| exp(x)        | The exponential of x: e<sup>x</sup> is returned |
-| log(x)        | the natural logarithm of x, for x > 0 is returned |
-| log10(x)      | The base-10 logarithm of x for x > 0 is returned |
-| modf(x)       | The fractional and integer parts of x are returned in a two-item tuple. |
-| pow(x, y)     | The value of x\*\*y is returned          |
-| sqrt(x)       | The square root of x for x > 0 is returned |
+| `ceil(x)`       | The smallest integer not greater than x is returned |
+| `floor(x)`      | the largest integer not greater than x is returned. |
+| `exp(x)`        | The exponential of x: e<sup>x</sup> is returned |
+| `log(x)`        | the natural logarithm of x, for x > 0 is returned |
+| `log10(x)`      | The base-10 logarithm of x for x > 0 is returned |
+| `modf(x)`       | The fractional and integer parts of x are returned in a two-item tuple. |
+| `pow(x, y)`     | The value of x\*\*y is returned          |
+| `sqrt(x)`       | The square root of x for x > 0 is returned |
 
 
 ```python
