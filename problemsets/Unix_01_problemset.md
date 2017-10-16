@@ -156,10 +156,10 @@ Problem Set
 
 5. Navigate into this new directory called problemsets. Verify that you are in the correct directory by using `pwd`.
 
-6. Use `wget` to copy [sequences.nt.fa](https://github.com/srobb1/pfb2017/blob/master/files/sequences.nt.fa) from the web into your problemsets directory. 
+6. Use `wget` to copy [sequences.nt.fa](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/sequences.nt.fa) from the web into your problemsets directory. 
 
 7. Without using a text editor calculate or report these qualities for the file `sequences.nt.fa`.
-  This file can be found [here](https://github.com/srobb1/pfb2017/blob/master/files/sequences.nt.fa)
+  This file can be found [here](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/sequences.nt.fa)
       - How many lines does this file contain?   
       - How many characters?    (Hint: check out the options of wc)
       - What is the first line of this file?    (Hint: read the man page of head)
@@ -168,7 +168,7 @@ Problem Set
 
 8. Rename `sequences.nt.fa` to `cancer_genes.fasta`. (Hint: read the man page for mv)
 
-9. Copy this remote file: [cuffdiff.txt](https://github.com/srobb1/pfb2017/blob/master/files/cuffdiff.txt) to your problemset directory.
+9. Copy this remote file: [cuffdiff.txt](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/cuffdiff.txt) to your problemset directory.
 
 10. Do the following to cuffdiff.txt
       - the descriptions of each column in the file are below
