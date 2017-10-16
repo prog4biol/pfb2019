@@ -80,6 +80,7 @@ __Redirect STDOUT__
 You can redirect the output of a command into a file
 
 ```
+cd ~
 grep Chr7 cuffdiff.txt > fav_chr_cuffdiff.txt
 ```
 
