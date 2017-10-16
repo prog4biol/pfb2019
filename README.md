@@ -1030,11 +1030,13 @@ Let's do it!
 
 Now you have a copy of the course material on your computer!
 
+#### Bringing Changes in Remote to your Local Repository
+
 If we make changes to any of these files and you want to update your copy you can _pull_ the changes.
 `git pull`  
 
 
-_Keeping track of differences between local and remote repositories_
+#### Keeping track of differences between local and remote repositories
 
 If you are ever wondering what do you need to add to your remote repository use the `git status` command. This will provide you a list of file that have been modified, deleted, and those that are untracked. Untracked files are those that have never been added to the staging area with `git add`
 
