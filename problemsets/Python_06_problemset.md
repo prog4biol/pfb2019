@@ -1,18 +1,18 @@
 Python 6 Problem Set
 ===================
 
-1. In the file [Python_06_nobody.txt](https://github.com/srobb1/pfb2017/blob/master/files/Python_06_nobody.txt) find every occurrence of 'Nobody' and print out the position.
+1. In the file [Python_06_nobody.txt](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/Python_06_nobody.txt) find every occurrence of 'Nobody' and print out the position.
 
-2. In the file [Python_06_nobody.txt](https://github.com/srobb1/pfb2017/blob/master/files/Python_06_nobody.txt) substitute every occurrence of 'Nobody' with your favorite person's name and save the file as YourFavoritePersonName.txt (ex. Michael.txt).
+2. In the file [Python_06_nobody.txt](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/Python_06_nobody.txt) substitute every occurrence of 'Nobody' with your favorite person's name and save the file as YourFavoritePersonName.txt (ex. Michael.txt).
 
-3. Find all the lines in a [Python_06.fasta](https://github.com/srobb1/pfb2017/blob/master/files/Python_06.fasta) that are the header (>seqName desc) using pattern matching.
+3. Find all the lines in a [Python_06.fasta](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/Python_06.fasta) that are the header (>seqName desc) using pattern matching.
 
 4. If a line matches the format of a FASTA header, extract the sequence name and description using sub patterns. 
 	- Print id:"extracted seq name" desc:"extracted description"
 
 5. Create or modify your FASTA parser to use regular expressions. Also make sure your parser can deal with a sequence that is split over many lines.
 
-6. The enzyme ApoI has a restriction site: R^AATTY where R and Y are degenerate nucleotideides. See the IUPAC table to identify the nucleotide possibilities for the R and Y. Write a regular expression to find and print all occurrences of the site in the following sequence [Python_06_ApoI.fasta](https://github.com/srobb1/pfb2017/blob/master/files/Python_06_ApoI.fasta). 
+6. The enzyme ApoI has a restriction site: R^AATTY where R and Y are degenerate nucleotideides. See the IUPAC table to identify the nucleotide possibilities for the R and Y. Write a regular expression to find and print all occurrences of the site in the following sequence [Python_06_ApoI.fasta](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/Python_06_ApoI.fasta). 
 
 ```
 >seq1
