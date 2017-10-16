@@ -35,6 +35,8 @@ Quick Review
 
 ### Useful UNIX command examples to try
 
+**The files you need later in this review are in a folder on your Desktop!**
+
 Let's go to a directory with a lot of files in it and list those files
 
 ```bash
