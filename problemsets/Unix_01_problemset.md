@@ -157,26 +157,25 @@ Problem Set
 
 5. Navigate into this new directory called problemsets. Verify that you are in the correct directory by using `pwd`.
 
-6. Use `wget` to copy [sequences.nt.fa](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/sequences.nt.fa) from the web into your problemsets directory. 
+6. Use `wget` to copy <https://raw.githubusercontent.com/srobb1/pfb2017/master/files/sequences.nt.fa> from the web into your problemsets directory. If `wget` is not available on your system, use `curl -O` as an alternative.
 
 7. Without using a text editor calculate or report these qualities for the file `sequences.nt.fa`.
-  This file can be found [here](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/sequences.nt.fa)
+  This file can be found here <https://raw.githubusercontent.com/srobb1/pfb2017/master/files/sequences.nt.fa>
       - How many lines does this file contain?   
       - How many characters?    (Hint: check out the options of wc)
       - What is the first line of this file?    (Hint: read the man page of head)
       - What are the last 3 lines?    (Hint: read the man page of tail)
-      - How many sequences are in the file?    (Hint: use grep)    
+      - How many sequences are in the file?    (Hint: use grep) (Note: The start of a sequence is indicated by a `>` character.)    
 
 8. Rename `sequences.nt.fa` to `cancer_genes.fasta`. (Hint: read the man page for mv)
 
-9. Copy this remote file: [cuffdiff.txt](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/cuffdiff.txt) to your problemset directory.
+9. Copy this remote file: <https://raw.githubusercontent.com/srobb1/pfb2017/master/files/cuffdiff.txt> to your problemset directory.
 
-10. Do the following to cuffdiff.txt
-      - the descriptions of each column in the file are below
- - look at the first few lines of the file
- - sort the file by log fold change 'log2(fold_change)', from highest to lowest, and save in a new file in your directory called sorted.cuffdiff.out
-   - sort the file (log fold change highest to lowest) then print out only the first 100 lines. Save in a file called top100.sorted.cuffdiff.out
- - sort the file, print only first column. Get a unique list of the genes, then print only the top 100. Save in a file called differentially.expressed.genes.txt
+10. Do the following to `cuffdiff.txt`. The descriptions of each column in the file are in the table below.
+    - Look at the first few lines of the file
+    - Sort the file by log fold change 'log2(fold_change)', from highest to lowest, and save in a new file in your directory called sorted.cuffdiff.out
+    - Sort the file (log fold change highest to lowest) then print out only the first 100 lines. Save in a file called `top100.sorted.cuffdiff.out`.
+    - Sort the file, print only first column. Get a unique list of the genes, then print only the top 100. Save in a file called `differentially.expressed.genes.txt`.
 
 
 
