@@ -1096,7 +1096,7 @@ Python can be run one line at a time in an interactive interpreter. You can thin
 
 `$ python3`    
 
-Note: '$' indicates the command line prompt  
+Note: '$' indicates the command line prompt. Recall from Unix 1 that every computer can have a different prompt!
 
 First Python Commands:
 
@@ -1162,7 +1162,7 @@ print ("Hello, PFB2017!")
 Now you can simply type the name of the script to run it. Like this
 
 ```
-% test.py
+% ./test.py
 Hello, PFB2017!
 ```
 
@@ -1409,7 +1409,7 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 | `dir(x)`   | tells you which methods are available for your object |
 
 ---
-                                   
+
 ### [Link to Python 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_01_problemset.md)
 
 -------
