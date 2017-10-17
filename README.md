@@ -1058,12 +1058,15 @@ You will KNOW if you need to use these features of git.
 # Python
 
 
-## Python 1
+# Python 1
 
 
 ### Python Overview
 
+Python is a scripting language. It is useful for writing medium-sized scientific coding projects. When you run a python script, the python program will generate byte code and interpret the byte code. This happens automatically and you don't have to worry about it. Compiled languages like C, C++ will run much faster, but are much much more complicated to program. Languages like java (which also gets compiled into byte code) are well suited to very large collaborative programming projects, but don't run as fast as C and are more complex that python.
+
 Python has 
+
 - data types
 - functions
 - objects
@@ -1089,17 +1092,13 @@ There are two versions of python: python 2 and python 3. We will be using 3. Thi
 
 #### Interactive Interpreter
 
-Python can be run one line at a time in an interactive interpreter.  
-To lauch the interpreter type the following into your terminal window:  
+Python can be run one line at a time in an interactive interpreter. You can think of this as a python shell. To lauch the interpreter type the following into your terminal window:  
 
 `$ python3`    
+
 Note: '$' indicates the command line prompt  
 
 First Python Commands:
-```bash
-$ python
-```
-
 
 ```python
 >>> print("Hello, PFB2017!")
@@ -1118,16 +1117,17 @@ Hello, PFB2017!
 
 File Contents:  
 ```python
-#!/usr/bin/python3
 print ("Hello, PFB2017!")
 ```
 
 #### Running Python Scripts
 
-Typing the python command followed by the name of a script makes python execute the script. Recall that we just saw you can run an interactive interpreter by just typing `python` on the command lineExecute the Python script:
+Typing the python command followed by the name of a script makes python execute the script. Recall that we just saw you can run an interactive interpreter by just typing `python` on the command line
+
+Execute the Python script like this (% represents the prompt)
 
 ```bash
-$ python3 test.py 
+% python3 test.py 
 ```
 
 This produces the following result:
@@ -1137,7 +1137,7 @@ Hello, PFB2017!
 
 #### A quicker/better way to run python scripts
 
-If you make your script exectuable, you can run it without typing `python` first. Use `chmod` to change the permissions on the script like this
+If you make your script exectuable, you can run it without typing `python3` first. Use `chmod` to change the permissions on the script like this
 
 `chmod +x test.py`
 
@@ -1148,14 +1148,23 @@ You can look at the permissions with
 -rwxr-xr-x  1 sprochnik  staff  60 Oct 16 14:29 test.py
 ```
 
-The first field of -, r, w and x characters define the permissions of the file. The three 'x' characters means anyone can execute or run this script. Now you can simply type the name of the script to run it. Like this
+The first field of -, r, w and x characters define the permissions of the file. The three 'x' characters means anyone can execute or run this script. 
+
+We also need to add a line at the beginning of the script that tells the shell to run python3 to interpret the script. This line starts with #, so it looks like a comment to python. The '!' is important as is the space between env and python3. The program /usr/bin/env looks for where python3 is installed and runs the script with python3. The details may seem a bit complex, but you can just copy and paste this 'magic' line.
+
+The file test.py now looks like this
+
+```python
+#!/usr/bin/env python3
+print ("Hello, PFB2017!")
+```
+
+Now you can simply type the name of the script to run it. Like this
 
 ```
 % test.py
 Hello, PFB2017!
 ```
-
-
 
 <p>&nbsp;</p>
 
@@ -1178,7 +1187,7 @@ Python does not allow punctuation characters such as @, $, and % within identifi
 
 #### Reserved Words
 
-The following is a list of Python keywords. These are special words that already have a purpose in python and therefore cannot be used in indentifier names.
+The following is a list of Python keywords. These are special words that already have a purpose in python and therefore cannot be used as indentifier names.
 
 ```
 and         exec        not
@@ -1196,9 +1205,20 @@ except
 
 #### Lines and Indentation
 
-Python denotes blocks of code by line indentation. Incorrect line spacing and/or indention will cause an error to be reported or could make your code run in a way you don't expect. You can get help with indentation from good text editors or Interactive Development Environments (IDEs).
+Python denotes blocks of code by line indentation. Incorrect line spacing and/or indention will cause an error or could make your code run in a way you don't expect. You can get help with indentation from good text editors or Interactive Development Environments (IDEs).
 
 The number of spaces in the indentation need to be consistent but a specific number is not required. All lines of code, or statements, within a single block must be indented in the same way. For example:
+
+```python
+#!/usr/bin/env python3
+for x in (1,2,3,4,5):
+    if x > 4:
+        print("Hello")
+    else: 
+        print(x)
+```
+
+
 
 
 #### Comments
@@ -1210,16 +1230,16 @@ Comments start with a pound or hash symbol `#`. All characters after this symbol
 The first line of a script starting with `#!` is a special example of a comment that also has the special function in unix of telling the unix shell how to run the script.
 
 ```python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 # this is my first script
-print ("Hello, PFB2017!") # this line prints
+print ("Hello, PFB2017!") # this line prints output to the screen
 ```
 
 
 #### Blank Lines
 
-Blank lines are also important for increasing the readability of the code. Blank lines are ignored by the python interpreptor
+Blank lines are also important for increasing the readability of the code. You should separate pieces of code that go together with a blank line to make 'paragraphs' of code. Blank lines are ignored by the python interpreptor
 
 #### Python Options
 
@@ -1239,15 +1259,16 @@ Options and arguments (and corresponding environment variables):
 
 This is our first look at variables and data types. Each data type will be discussed in more detail in subsequent sections. 
 
-The first concept to consider is that python data types are either immutable (unchangeable) or not. Literal numbers, strings and tuples cannot be changed. Lists, dictionaries and sets can be changed. So can individual (scalar) variables. You can store data in memory by putting it in different kinds variables. You use the = sign to assign a value to a variable.
+The first concept to consider is that python data types are either immutable (unchangeable) or not. Literal numbers, strings and tuples cannot be changed. Lists, dictionaries and sets can be changed. So can individual (scalar) variables. You can store data in memory by putting it in different kinds variables. You use the `=` sign to assign a value to a variable.
 
 #### Numbers and Strings
 
-Numbers and strings are two data types. Literal numbers and strings like this `5` or `'my name is'`  are immutable. However, their values can be stored in variables and then changed.
+Numbers and strings are two common data types. Literal numbers and strings like this `5` or `'my name is'`  are immutable. However, their values can be stored in variables and then changed.
 
 For Example:  
 ```python
 first_variable = 5
+first_variable = 10
 ```
 
 Different types of data can be assigned to variables, i.e., integers (1,2,3), floats (floating point numbers, 3.1415), and strings (text).
@@ -1283,8 +1304,9 @@ Collections of data can also be stored in special data types, i.e., tuples, list
 | 1     | aaa   |
 | 2     | agg   |
 
+> The list index starts at 0
 
-#### Command line parameters: A Special Built-in List
+####Command line parameters: A Special Built-in List
 
 Command line parameters follow the name of a script or program and have spaces between them. They allow a user to pass information to a script on the command line when that script is being run. Python stores all the pieces of the command line in a special list called sys.argv. 
 
@@ -1371,8 +1393,8 @@ print(a+b) # + is a sum operator on integers
 Sometimes you may need to convert data into a specific type. Here are some examples of functions that will help you to do this.
 
 
-| Function | Description                              |
-| -------- | ---------------------------------------- |
+| Function   | Description                              |
+| ---------- | ---------------------------------------- |
 | `int(x)`   | Converts x to an integer.                |
 | `float(x)` | Converts x to a floating-point number.   |
 | `str(x)`   | Converts x to a string.                  |
@@ -1389,37 +1411,37 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 
 -------
 
-## Python 2
+# Python 2
 
 ### Operators
 
 #### Arthmetic Operators  
 
 
-| Operator | Description                              | Example        | Result |
-| -------- | ---------------------------------------- | -------------- | ------ |
-| `+`       | Addition                                 | `3+2`            | 5      |
-| `-`       | Subtraction                              | `3-2`            | 1      |
-| `*`       | Multiplication                           | `3*2`           | 6      |
-| `/`        | Division                                 | `3/2`            | 1.5    |
-| `%`        | Modulus (divides left operand by right operand and returns the remainder) | `3%2`            | 1      |
-| `**`     | Exponent                                 | `3*\2`         | 9      |
-| `//`       | Floor Division (result is the quotient with digits after the decimal point removed. If one of the operands is negative, the result is floored, i.e., rounded away from zero | `3//2`  ; `-11//3` | 1 ; -4 |
+| Operator | Description                              | Example            | Result |
+| -------- | ---------------------------------------- | ------------------ | ------ |
+| `+`      | Addition                                 | `3+2`              | 5      |
+| `-`      | Subtraction                              | `3-2`              | 1      |
+| `*`      | Multiplication                           | `3*2`              | 6      |
+| `/`      | Division                                 | `3/2`              | 1.5    |
+| `%`      | Modulus (divides left operand by right operand and returns the remainder) | `3%2`              | 1      |
+| `**`     | Exponent                                 | `3*\2`             | 9      |
+| `//`     | Floor Division (result is the quotient with digits after the decimal point removed. If one of the operands is negative, the result is floored, i.e., rounded away from zero | `3//2`  ; `-11//3` | 1 ; -4 |
 
 
 
 #### Assignment Operators  
 
-| Operator | Equivalent to          | Example                     | result evaluates to |
-| -------- | ---------------------- | --------------------------- | ------------------- |
-| `=`        | `a = 3`                  | `result = 3`                  | 3                   |
-| `+=`      | `result = result + 2`    | `result = 3 ; result += 2`    | 5                   |
-| `-=`      | `result = result - 2`    | `result = 3 ; result -= 2`    | 1                   |
-| `*=`      | `result = result * 2`    | `result = 3  ; result \*= 2`  | 6                   |
-| `=`       | `result = result / 2`    | `result = 3 ; result /= 2`    | 1.5                 |
-| `%=`       | `result = result % 2`    | `result = 3 ; result %= 2`    | 1                   |
-| `**=`    | `result = result ** 2` | `result = 3 ; result **= 2` | 9                   |
-| `//=`      | `result = result // 2`   | `result = 3 ; result //= 3`   | 1                   |
+| Operator | Equivalent to          | Example                      | result evaluates to |
+| -------- | ---------------------- | ---------------------------- | ------------------- |
+| `=`      | `a = 3`                | `result = 3`                 | 3                   |
+| `+=`     | `result = result + 2`  | `result = 3 ; result += 2`   | 5                   |
+| `-=`     | `result = result - 2`  | `result = 3 ; result -= 2`   | 1                   |
+| `*=`     | `result = result * 2`  | `result = 3  ; result \*= 2` | 6                   |
+| `=`      | `result = result / 2`  | `result = 3 ; result /= 2`   | 1.5                 |
+| `%=`     | `result = result % 2`  | `result = 3 ; result %= 2`   | 1                   |
+| `**=`    | `result = result ** 2` | `result = 3 ; result **= 2`  | 9                   |
+| `//=`    | `result = result // 2` | `result = 3 ; result //= 3`  | 1                   |
 
 
 
@@ -1430,24 +1452,24 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 These operators compare two values and returns true or false.  
 
 
-| Operator | Description           | Example | Result |
-| -------- | --------------------- | ------- | ------ |
-| `==`       | equal to              | `3 == 2`  | False  |
-| `!=`       | not equal             | `3 != 2`  | True   |
-| `>`       | greater than          | `3 > 2`  | True   |
-| `<`       | less than             | `3 < 2`  | False  |
-| `>=`      | greater than or equal | `3 >= 2` | True   |
-| `<=`      | less than or equal    | `3 <= 2` | False  |
+| Operator | Description           | Example  | Result |
+| -------- | --------------------- | -------- | ------ |
+| `==`     | equal to              | `3 == 2` | False  |
+| `!=`     | not equal             | `3 != 2` | True   |
+| `>`      | greater than          | `3 > 2`  | True   |
+| `<`      | less than             | `3 < 2`  | False  |
+| `>=`     | greater than or equal | `3 >= 2` | True   |
+| `<=`     | less than or equal    | `3 <= 2` | False  |
 
 
 
 #### Logical Operators
 
-| Operator | Description                              | Example            | Result |
-| -------- | ---------------------------------------- | ------------------ | ------ |
-| `and`      | True if left operand is True and right operand is True | `bool(3>=2 and 2<3)` | True   |
-| `or`       | TRUE if left operand is Treu or right operand is True | `bool(3==2 or 2<3)`  | True   |
-| `not`      | Reverses the logical status              | `bool(not False)`    | True   |
+| Operator | Description                              | Example              | Result |
+| -------- | ---------------------------------------- | -------------------- | ------ |
+| `and`    | True if left operand is True and right operand is True | `bool(3>=2 and 2<3)` | True   |
+| `or`     | TRUE if left operand is Treu or right operand is True | `bool(3==2 or 2<3)`  | True   |
+| `not`    | Reverses the logical status              | `bool(not False)`    | True   |
 
 
 
@@ -1455,8 +1477,8 @@ These operators compare two values and returns true or false.
 
 | Operator | Description                              |
 | -------- | ---------------------------------------- |
-| `in`       | True if a value is included in a list, tuple, or string |
-| `not in`   | True if a value is absent in a list, tuple, or string |
+| `in`     | True if a value is included in a list, tuple, or string |
+| `not in` | True if a value is absent in a list, tuple, or string |
 
 For Example:  
 ```python
@@ -1482,23 +1504,23 @@ False
 
 Operators are listed in order of precedence. Highest listed first. Not all the operators listed here are mentioned above. 
 
-| Operator                    | Description                              |
-| --------------------------- | ---------------------------------------- |
-| `**`                        | Exponentiation (raise to the power)      |
-| `~` `+` `-`                    | Complement, unary plus and minus (method names for the last two are +@ and -@) |
-| `*` `/` `%` `//`                   | Multiply, divide, modulo and floor division |
-| `+` `-`                       | Addition and subtraction                 |
-| `>>` `<<`                     | Right and left bitwise shift             |
-| `&`                           | Bitwise 'AND'                            |
-| `^` `|`                        | Bitwise exclusive 'OR' and regular 'OR'  |
-| `<=` `<` `>` `>=`                  | Comparison operators                     |
-| `<>` `==` `!=`                   | Equality operators                       |
+| Operator                                 | Description                              |
+| ---------------------------------------- | ---------------------------------------- |
+| `**`                                     | Exponentiation (raise to the power)      |
+| `~` `+` `-`                              | Complement, unary plus and minus (method names for the last two are +@ and -@) |
+| `*` `/` `%` `//`                         | Multiply, divide, modulo and floor division |
+| `+` `-`                                  | Addition and subtraction                 |
+| `>>` `<<`                                | Right and left bitwise shift             |
+| `&`                                      | Bitwise 'AND'                            |
+| `^` `|`                                  | Bitwise exclusive 'OR' and regular 'OR'  |
+| `<=` `<` `>` `>=`                        | Comparison operators                     |
+| `<>` `==` `!=`                           | Equality operators                       |
 | `=` `%=` `/=` `//=` `-=` `+=` `*=` `**=` | Assignment operators                     |
-| `is`                          | Identity operator                        |
-| `is not`                      | Non-identity operator                    |
-| `in`                          | Membership operator                      |
-| `not in`                      | Negative membership operator             |
-| `not` `or` `and`                | logical operators                        |
+| `is`                                     | Identity operator                        |
+| `is not`                                 | Non-identity operator                    |
+| `in`                                     | Membership operator                      |
+| `not in`                                 | Negative membership operator             |
+| `not` `or` `and`                         | logical operators                        |
 
 
 
@@ -1511,10 +1533,10 @@ Lets take a step back, What is truth?
 Everything is true, except for:  
 
 
-| expression              | TRUE/FALSE | 
+| expression              | TRUE/FALSE |
 | ----------------------- | ---------- |
-| `0`                     | FALSE      | 
-| `None`                  | FALSE      | 
+| `0`                     | FALSE      |
+| `None`                  | FALSE      |
 | `False`                 | FALSE      |
 | `''` (empty string)     | FALSE      |
 | `[]` (empty list)       | FALSE      |
@@ -1720,8 +1742,8 @@ Python recognizes 3 types of numbers: integers, float point numbers, and complex
 #### Conversion functions    
 
 
-| function      | Description                              |
-| ------------- | ---------------------------------------- |
+| function        | Description                              |
+| --------------- | ---------------------------------------- |
 | `int(x)`        | to convert x to a plain integer          |
 | `float(x)`      | to convert x to a floating-point number  |
 | `complex(x)`    | to convert x to a complex number with real part x and imaginary part zero |
@@ -1743,8 +1765,8 @@ Python recognizes 3 types of numbers: integers, float point numbers, and complex
 
 
 
-| function        | Description                              |
-| --------------- | ---------------------------------------- |
+| function          | Description                              |
+| ----------------- | ---------------------------------------- |
 | `abs(x)`          | The absolute value of x: the (positive) distance between x and zero. |
 | `round(x [,n])`   | x rounded to n digits from the decimal point. round(0.5) is 1.0 and round(-0.5) is -1.0. |
 | `max(x1, x2,...)` | The largest positive argument is returned |
@@ -1782,14 +1804,14 @@ These next functions are found in the math module and need to be imported. To us
 
 | math.function | Description                              |
 | ------------- | ---------------------------------------- |
-| `ceil(x)`       | The smallest integer not greater than x is returned |
-| `floor(x)`      | the largest integer not greater than x is returned. |
-| `exp(x)`        | The exponential of x: e<sup>x</sup> is returned |
-| `log(x)`        | the natural logarithm of x, for x > 0 is returned |
-| `log10(x)`      | The base-10 logarithm of x for x > 0 is returned |
-| `modf(x)`       | The fractional and integer parts of x are returned in a two-item tuple. |
-| `pow(x, y)`     | The value of x\*\*y is returned          |
-| `sqrt(x)`       | The square root of x for x > 0 is returned |
+| `ceil(x)`     | The smallest integer not greater than x is returned |
+| `floor(x)`    | the largest integer not greater than x is returned. |
+| `exp(x)`      | The exponential of x: e<sup>x</sup> is returned |
+| `log(x)`      | the natural logarithm of x, for x > 0 is returned |
+| `log10(x)`    | The base-10 logarithm of x for x > 0 is returned |
+| `modf(x)`     | The fractional and integer parts of x are returned in a two-item tuple. |
+| `pow(x, y)`   | The value of x\*\*y is returned          |
+| `sqrt(x)`     | The square root of x for x > 0 is returned |
 
 
 ```python
@@ -1871,8 +1893,7 @@ It returns three different values depending on x and y
 
 ----
 
-## Python 3
-
+#  Python 3
 
 ### Sequences
 
@@ -2722,7 +2743,7 @@ Now that you have seen the `append()` function we can go over how to build a lis
 \pagebreak
 
 ---
-## Python 4
+# Python 4
 
 ### Loops
 
@@ -3369,7 +3390,7 @@ Union, intersection, difference and symmetric difference can be done with sets
 \pagebreak
 
 ---
-## Python 5
+# Python 5
 
 
 ### I/O and Files
@@ -3594,7 +3615,7 @@ Output:
 \pagebreak
 
 ---
-## Python 6
+# Python 6
 
 ### Regular Expressions
 
@@ -4133,7 +4154,7 @@ How would you use regular expressions to find all occurances of 'ATG' and replac
 ### [Link to Python 6 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_06_problemset.md)
 
 ---
-## Python 7
+# Python 7
 
 ### Functions
 
@@ -4606,7 +4627,7 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 ### [Link to Python 7 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_07_problemset.md)
 
 ---
-## Python 8
+# Python 8
 
 ### Exception Handling
 
@@ -5033,7 +5054,7 @@ There are also specific data table and frame handling libraries like Pandas.
 ### [Link to Python 8 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_08_problemset.md)
 
 
-## Python 9
+# Python 9
 
 ### BioPython
 
