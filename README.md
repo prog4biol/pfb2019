@@ -1480,9 +1480,9 @@ Logical operators allow you to combine two or more sets of comparisons. You can 
 
 | Operator | Description                              | Example              | Result |
 | -------- | ---------------------------------------- | -------------------- | ------ |
-| `and`    | True if left operand is True and right operand is True | `bool(3>=2 and 2<3)` | True   |
-| `or`     | True if left operand is True or right operand is True | `bool(3==2 or 2<3)`  | True   |
-| `not`    | Reverses the logical status              | `bool(not False)`    | True   |
+| `and`    | True if left operand is True and right operand is True | `3>=2 and 2<3` | True   |
+| `or`     | True if left operand is True or right operand is True | `3==2 or 2<3`  | True   |
+| `not`    | Reverses the logical status              | `not False`    | True   |
 
 
 
