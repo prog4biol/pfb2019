@@ -105,3 +105,24 @@ my favorite animal is a corn
 ```
 
 "snake" ended up in sys.argv[5], which we didn't do anything with in the script.
+
+5. **Make sure to keep your remote repository synced with your local repo. (ADD/COMMIT/PUSH)**
+
+```sh
+jabberwocky:answers mcampbel$ git add about_me.p
+
+jabberwocky:answers mcampbel$ git commit -m "adding a script for python 1 problems"
+[master 54b9249] adding a script for python1 problems
+ 1 file changed, 14 insertions(+)
+ create mode 100755 problemsets/answers/about_me.py
+
+jabberwocky:answers mcampbel$ git push origin maser
+Counting objects: 5, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 562 bytes | 0 bytes/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/mscampbell/pfb2017.git
+   1460df9..54b9249  master -> master
+```
