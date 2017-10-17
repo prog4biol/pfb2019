@@ -1243,17 +1243,6 @@ print ("Hello, PFB2017!") # this line prints output to the screen
 
 Blank lines are also important for increasing the readability of the code. You should separate pieces of code that go together with a blank line to make 'paragraphs' of code. Blank lines are ignored by the python interpreptor
 
-#### ~~Python Options~~
-@sep: delete this section: not helpful
-
-~~$ python -h
-usage: python [option] ... [-c cmd | -m mod | file | -] [arg] ...
-Options and arguments (and corresponding environment variables):
--c cmd : program passed in as string (terminates option list)
--d     : debug output from parser (also PYTHONDEBUG=x)
-~~-E     : ignore environment variables (such as PYTHONPATH)
-~~-h     : print this help message and exit~~
-
 
 
 ### Data Types and Variables
