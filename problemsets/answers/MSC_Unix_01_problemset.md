@@ -3,7 +3,6 @@ Problem Set Answers from Mike
 
 1. **Log into your machine.** 
 This is easy on a mac. For a remote server you would have to use ssh. On a mac you open a terminal window and you are ready to go
-
      ```sh
      jabberwocky:scratch mcampbel$
      ```
