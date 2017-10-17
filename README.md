@@ -1341,7 +1341,7 @@ print(a+b) # + is a sum operator on integers
 
 - Tuples are similar to lists and contain ordered, *indexed* collection of data.
 - **Tuples are immutable: you can't change the values or the number of values**
-- A tuple is enclosed in parenteses and items are separated by commas.
+- A tuple is enclosed in parentheses and items are separated by commas.
 ```python
 ( 'Jan' , 'Feb' , 'Mar' , 'Apr' , 'May' , 'Jun' , 'Jul' , 'Aug' , 'Sep' , 'Oct' , 'Nov' , 'Dec' )
 ```
