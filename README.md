@@ -1619,7 +1619,7 @@ Control Statements are used to direct the flow of your code and create the oport
 - When the expression evaluates to true each of the statements indented below the if statment, also known as the nested statement block, will be executed.
 
 
-**IF**
+**if**
 
 ```python
 if expression :
@@ -1638,7 +1638,7 @@ Returns:
 found AGC in your dna sequence
 ```
 
-**ELSE**
+**else**
 
 - The If portion of the if/else statement behave as before. 
 - The first indented block is executed if the condition is true.
@@ -1739,18 +1739,18 @@ Python recognizes 3 types of numbers: integers, floating point numbers, and comp
 
 - known as an int
 - an int can be positve or negative
-- and **does not** contain a decimal point.
+- and **does not** contain a decimal point or exponent.
 
 #### floating point number  
 
 - known as a float
 - a floating point number can be positve or negative
-- and **does** contain a decimal point
+- and **does** contain a decimal point (`4.875`) or exponent (`4.2e-12`)
 
 #### complex number  
 
 - known as complex
-- is in the form of a+bi where i is the imaginary part.
+- is in the form of a+bi where bi is the imaginary part.
 
 #### Conversion functions    
 
@@ -1784,7 +1784,7 @@ Here are a list of fuctions that take numbers as arguments. These use useful thi
 | function          | Description                              |
 | ----------------- | ---------------------------------------- |
 | `abs(x)`          | The absolute value of x: the (positive) distance between x and zero. |
-| `round(x [,n])`   | x rounded to n digits from the decimal point. round(0.5) is 1.0 and round(-0.5) is -1.0. |
+| `round(x [,n])`   | x rounded to n digits from the decimal point. round() rounds to an even integer if the value is exactly between two integers, so round(0.5) is 0 and round(-0.5) is 0. round(1.5) is 2. **Rounding to a fixed number of decimal places can give unpredictable results.** |
 | `max(x1, x2,...)` | The largest positive argument is returned |
 | `min(x1, x2,...)` | The smallest argument is returned        |
 
@@ -1805,6 +1805,8 @@ Here are a list of fuctions that take numbers as arguments. These use useful thi
 -2
 >>> round(-2.009,2)
 -2.01
+>>> round(2.675, 2)  # note this rounds down
+2.67
 >>> max(4,-5,5,1,11)
 11
 >>> min(4,-5,5,1,11)
@@ -1815,19 +1817,19 @@ Here are a list of fuctions that take numbers as arguments. These use useful thi
 Many numeric functions are not built into the Python core and need to be included in our script if we want to use them. To include them at the tip of the script type: 
 `import math`
 
-These next functions are found in the math module and need to be imported. To use these function, prepend the function with the module name, i.e, `math.ceil(15.5)`  
+These next functions are found in the math module and need to be imported. To use these functions, prepend the function with the module name, i.e, `math.ceil(15.5)`  
 
 
 | math.function | Description                              |
 | ------------- | ---------------------------------------- |
-| `ceil(x)`     | The smallest integer not greater than x is returned |
-| `floor(x)`    | the largest integer not greater than x is returned. |
-| `exp(x)`      | The exponential of x: e<sup>x</sup> is returned |
-| `log(x)`      | the natural logarithm of x, for x > 0 is returned |
-| `log10(x)`    | The base-10 logarithm of x for x > 0 is returned |
-| `modf(x)`     | The fractional and integer parts of x are returned in a two-item tuple. |
-| `pow(x, y)`   | The value of x\*\*y is returned          |
-| `sqrt(x)`     | The square root of x for x > 0 is returned |
+| `math.ceil(x)`     | return the smallest integer greater than or equal to x is returned |
+| `math.floor(x)`    | return the largest integer less than or equal to x. |
+| `math.exp(x)`      | The exponential of x: e<sup>x</sup> is returned |
+| `math.log(x)`      | the natural logarithm of x, for x > 0 is returned |
+| `math.log10(x)`    | The base-10 logarithm of x for x > 0 is returned |
+| `math.modf(x)`     | The fractional and integer parts of x are returned in a two-item tuple. |
+| `math.pow(x, y)`   | The value of x raised to the power y is returned          |
+| `math.sqrt(x)`     | Return the square root of x for x >= 0 |
 
 
 ```python
