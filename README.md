@@ -1167,7 +1167,7 @@ Now you can simply type the name of the script to run it. Like this
 Hello, PFB2017!
 ```
 
-<p>&nbsp;</p>
+
 
 ### Syntax
 
@@ -1243,17 +1243,16 @@ print ("Hello, PFB2017!") # this line prints output to the screen
 
 Blank lines are also important for increasing the readability of the code. You should separate pieces of code that go together with a blank line to make 'paragraphs' of code. Blank lines are ignored by the python interpreptor
 
-#### Python Options
+#### ~~Python Options~~
+@sep: delete this section: not helpful
 
-```bash
-$ python3 -h
-usage: python3 [option] ... [-c cmd | -m mod | file | -] [arg] ...
+~~$ python -h
+usage: python [option] ... [-c cmd | -m mod | file | -] [arg] ...
 Options and arguments (and corresponding environment variables):
 -c cmd : program passed in as string (terminates option list)
 -d     : debug output from parser (also PYTHONDEBUG=x)
--E     : ignore environment variables (such as PYTHONPATH)
--h     : print this help message and exit
-```
+~~-E     : ignore environment variables (such as PYTHONPATH)
+~~-h     : print this help message and exit~~
 
 
 
@@ -1269,9 +1268,10 @@ Numbers and strings are two common data types. Literal numbers and strings like 
 
 For Example:  
 ```python
-first_variable = 5
-first_variable = 10
+gene_count = 5
+gene_count = 10
 ```
+>You should give your variables names that help you understand what they store. gene_count, expression, sequences are all good identifiers or variable names. k, x, data, var1, var2 are bad because you can't tell what they store. This means it's harder to understand the script and to  spot errors or bugs in your script.  
 
 Different types of data can be assigned to variables, i.e., integers (1,2,3), floats (floating point numbers, 3.1415), and strings (text).
 
@@ -1284,62 +1284,11 @@ message = "Welcome to python" # this is a string
 
 10, 2.5, and "Welcome to python" are singular pieces of data being stored in an indivudual variables.  
 
-Collections of data can also be stored in special data types, i.e., tuples, lists, sets, and dictionaries.  
+Collections of data can also be stored in special data types, i.e., tuples, lists, sets, and dictionaries. Generally, you should try to store like with like, so each element in the data type should be the same kind of data, like an expression value from RNA-seq or a count of how many exons are in a gene or a read sequence.  
 
  
 
-#### Lists 
-
-- Lists are used to store an ordered, *indexed* collection of data.
-- Lists are mutable: the number of elements in the list and what's stored in each element can change
-- Lists are enclosed in square brackets and items are separated by commas
-
-
-```python
-[ 'atg' , 'aaa' , 'agg' ]
-```
-
-
-| Index | Value |
-| ----- | ----- |
-| 0     | atg   |
-| 1     | aaa   |
-| 2     | agg   |
-
-> The list index starts at 0
-
-#### Command line parameters: A Special Built-in List
-
-Command line parameters follow the name of a script or program and have spaces between them. They allow a user to pass information to a script on the command line when that script is being run. Python stores all the pieces of the command line in a special list called sys.argv. 
-
-You need to import the sys module at the beginning of your script like this
-
-```
-import sys
-```
-
-If you write this on the command line:
-```bash
-$ calculate_sum.py 5 7
-```
-This happens inside the script:
-> the script name, and the numbers 5 and 7 are contained in a list called `sys.argv`.  
-
-> These are the command line parameters, or arguments you want to pass to your script.  
-> `sys.argv[0]` is the script name.  
-> You can access values of the other parameters by their indices, starting with 1, so `sys.argv[1]` is 5 and `sys.argv[2]` is 7.  
-> If you wanted to calculate the sum in your script, you would add these two variables and print the result. Maybe your code would look something like this
-
-
-```python
-#!/usr/bin/env python3
-import sys
-a = float(sys.argv[1]) # convert string from command line to float
-b = float(sys.argv[2]) # convert string from command line to float
-print(a+b) # + is a sum operator on integers
-```
-
-#### Tuple
+#### Tuples
 
 - Tuples are similar to lists and contain ordered, *indexed* collection of data.
 - **Tuples are immutable: you can't change the values or the number of values**
@@ -1387,8 +1336,61 @@ print(a+b) # + is a sum operator on integers
 | TP53  | GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC |
 | BRCA1 | GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA |
 
+#### Lists 
+
+- Lists are used to store an ordered, *indexed* collection of data.
+- Lists are mutable: the number of elements in the list and what's stored in each element can change
+- Lists are enclosed in square brackets and items are separated by commas
 
 
+```python
+[ 'atg' , 'aaa' , 'agg' ]
+```
+
+
+| Index | Value |
+| ----- | ----- |
+| 0     | atg   |
+| 1     | aaa   |
+| 2     | agg   |
+
+> The list index starts at 0
+
+#### Command line parameters: A Special Built-in List
+
+Command line parameters follow the name of a script or program and have spaces between them. They allow a user to pass information to a script on the command line when that script is being run. Python stores all the pieces of the command line in a special list called `sys.argv`. 
+
+You need to import the sys module at the beginning of your script like this
+
+```python
+#!/usr/bin/env python3
+import sys
+```
+
+Let's imagine we have a script called friends.py. If you write this on the command line:
+```bash
+$ friends.py Joe Anita
+```
+This happens inside the script:
+> the script name 'friends.py', and the strings 'Joe' and 'Anita'  appear in a list called `sys.argv`.  
+
+> These are the command line parameters, or arguments you want to pass to your script.  
+> `sys.argv[0]` is the script name.  
+> You can access values of the other parameters by their indices, starting with 1, so `sys.argv[1]` contains 'Joe'  and `sys.argv[2]` contains 'Anita'. You access elements in a list by adding square brackets and the numerical index after the name of the list. 
+> If you wanted to print a message saying these two people are friends, you might write some code like this
+
+
+```python
+#!/usr/bin/env python3
+import sys
+friend1 = sys.argv[1] # get first command line parameter
+friend2 = sys.argv[2] # get second command line parameter
+# now print a message to the screen
+print(friend1,'and',friend2,'are friends')
+```
+
+The advantage of getting input from the user from the command line is that you can write a script that is general. It can print a message with any input the user provides. This makes it flexible. 
+The user also supplies all the data the script needs on the command line so the script doesn't have to ask the user to input a name and wait til the user does this. The script can run on its own with no further interaction from the user. This frees the user to work on something else. Very handy!
 
 #### What kind of object am I working with?
 
@@ -1479,8 +1481,8 @@ These operators compare two values and returns true or false.
 
 Logical operators allow you to combine two or more sets of comparisons. You can combine the results in different ways. For example you can 1) demand that all the statements are true, 2) that only one statement needs to be true, or 3) that the statement needs to be false.
 
-| Operator | Description                              | Example              | Result |
-| -------- | ---------------------------------------- | -------------------- | ------ |
+| Operator | Description                              | Example        | Result |
+| -------- | ---------------------------------------- | -------------- | ------ |
 | `and`    | True if left operand is True and right operand is True | `3>=2 and 2<3` | True   |
 | `or`     | True if left operand is True or right operand is True | `3==2 or 2<3`  | True   |
 | `not`    | Reverses the logical status              | `not False`    | True   |
