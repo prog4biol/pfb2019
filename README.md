@@ -1385,7 +1385,8 @@ The user also supplies all the data the script needs on the command line so the 
 
 You have an identifier in your code called `data`. Does it represent a string or a list or a dictionary? Python has a couple of functions that help you figure this out.
 
-| Function    | Description |
+| Function     | Description                              |
+| ------------ | ---------------------------------------- |
 | `type(data)` | tells you which class your object belongs to |
 | `dir(data)`  | tells you which methods are available for your object |
 
@@ -1917,7 +1918,7 @@ You can ask what the length of any sequence is
 ```python
 >>>len('ACGTGA') # length of a string
 6
->>>len ( (0.23, 9.74, -8.17, 3.24, 0.16) )   # length of a tuple, needs two parentheses (( ))
+>>>len( (0.23, 9.74, -8.17, 3.24, 0.16) )   # length of a tuple, needs two parentheses (( ))
 5
 >>>len(['dog', 'cat', 'bird'])  # length of a list
 3
@@ -1943,13 +1944,13 @@ How do you find out what functions work with an object? There's a handy function
 ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
 ```
 
-You can call `dir()` on any object.
+You can call `dir()` on any object, most often, you'll use it in the interactive python shell.
 
 ### Strings
 
 
-- A string is a series of characters starting and ending with a quotation mark.
-- Strings are an example of a Python Sequence. A sequence is defined as a positionally ordered set. This means each element in the set has a position, starting with zero, i.e. 0,1,2,3 and so on until you get to the end of the string. If this is confusing, think about a string as being made up of individual characters: character 0, character 1, character 2 and so on.
+- A string is a series of characters starting and ending with single or double quotation marks.
+- Strings are an example of a python sequence. A sequence is defined as a positionally ordered set. This means each element in the set has a position, starting with zero, i.e. 0,1,2,3 and so on until you get to the end of the string.
 
 #### Quotation Marks  
 
@@ -1959,8 +1960,8 @@ You can call `dir()` on any object.
 
 Notes about quotes:  
 
-- Single and double quotes are the same.  
-- A variable will not be replaced with its value (sometimes called 'interpolation') if placed inside of quotes.  
+- Single and double quotes are equivalent.  
+- A variable name inside quotes is just the string identifier, not the value stored inside the variable.
 - Triple quotes are used before and after a string that spans multiple lines.  
 
 Use of quotation examples:  
@@ -1969,25 +1970,20 @@ Use of quotation examples:
 word = 'word'
 sentence = "This is a sentence."
 paragraph = """This is a paragraph. It is
-made up of multiple lines and sentences.
+made up of multiple lines and sentences. And goes
+on and on.
 """
 ```
 
 #### Strings and the `print()` function
 
-We saw examples of 
-`print()`
-earlier. Lets talk about it a bit more.  
-
-`print()` is a function that takes one or more comma-separated arguments. 
+We saw examples of `print()` earlier. Lets talk about it a bit more.  `print()` is a function that takes one or more comma-separated arguments. 
 
 Let's use the `print()` function to print a string.  
 ```python
 >>>print("ATG")  
 ATG
 ```
-> We get ATG printed to the screen like we expect.
-
 
 Let's assign a string to a variable and print the variable.
 ```python
@@ -1996,8 +1992,6 @@ ATG
 >>> print(dna)
 ATG
 ```
-> We get ATG printed to the screen
-
 
 What happens if we put the variable in quotes?  
 ```python
@@ -2006,7 +2000,7 @@ ATG
 >>> print("dna")
 dna
 ```
-> The literal value of 'dna' is printed to the screen. The variable called 'dna' is not interpolated when it is inside of quotes.
+> The literal string 'dna' is printed to the screen, not the contents 'ATG'
 
 Let's see what happens when we give `print()` two literal strings as arguments.  
 ```python
@@ -2059,7 +2053,7 @@ TTT
 >>> print(dna)
 TTT
 ```
-> The new value of the variable 'dna' is printed to the screen when 'dna' is an agrument for the `print()` function.
+> The new value of the variable 'dna' is printed to the screen when `dna` is an agrument for the `print()` function.
 
 #### Errors and Printing
 
@@ -2075,14 +2069,17 @@ SyntaxError: EOL while scanning string literal
 ```
 > We get a 'SyntaxError' if the closing quote is not used
 
-What will happen if you forget to enclose your literal string in quotes in a print statement?
+What will happen if you forget to enclose a string you want to print in quotes?
 ```python
-print(GGTCTAC)
+>>> print(GGTCTAC)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 NameError: name 'GGTCTAC' is not defined
+>>> GGTCTAC = 5  # define a variable
+>>> print(GGTCTAC)
+5
 ```
-> We get a 'NameError' when the literal string is not enclosed in quotes. 
+> We get a 'NameError' when the literal string is not enclosed in quotes because python is looking for a variable with the name GGTCTAC
 
 ```python
 >>> print "boo"
@@ -2091,7 +2088,7 @@ NameError: name 'GGTCTAC' is not defined
               ^
 SyntaxError: Missing parentheses in call to 'print'
 ```
-In python2, the command was `print`, but this changed in python3 to `print()`, so don't forget the parentheses!
+In python2, the command was `print`, but this changed to `print()` in python3, so don't forget the parentheses!
 
 #### Special/Escape Characters
 
@@ -2104,7 +2101,7 @@ How would you include a new line, carrage return, or tab in your string?
 | \\t              | Tab            |
 
 
-Let's include some escape charcters in our strings and print() functions.
+Let's include some escape charcters in our strings and `print()` functions.
 ```python
 >>> string_with_newline = 'this sting has a new line\nthis is the second line'
 >>> print(string_with_newline)
@@ -2113,15 +2110,14 @@ this is the second line
 ```
 > We printed a new line to the screen
 
-Generally, you don't have to worry about adding whitespace between arguments because `print()` adds space between arguments and a new line at the end for you.
-You can change these with sep= and end=
+`print()` adds spaces between arguments and a new line at the end for you. You can change these with `sep=` and `end=`. Here's an example:
 `print('one line', 'second line' , 'third line', sep='\n', end = '')`
 
 A neater way to do this is to express a multi-line string enclosed in triple quotes (""").
 ```python
->>> print("""this sting has a new line
+>>> print("""this string has a new line
 ... this is the second line""")
-this sting has a new line
+this string has a new line
 this is the second line
 ```
 
@@ -2131,17 +2127,17 @@ Let's print a tab character (\t).
 >>> print(line)
 value1	value2	value3
 ```
-> We get the three words separated by tab characters. A common format for data is tab separated.
+> We get the three words separated by tab characters. A common format for data is to separate columns with tabs like this.
 
 You can add a backslash before any chacter to force it to be printed as a literal. This is called 'escaping'. This is only really useful for printing literal quotes ' and " 
 
 ```python
->>> print("this is a \'word\'")
+>>> print('this is a \'word\'')  # if you want to print a ' inside '...'
 this is a 'word'
->>> print("this is a 'word'")
+>>> print("this is a 'word'") # maybe clearer to print a ' inside "..."
 this is a 'word'
 ```
-> In both cases the single quote is printed to the screen as a quote.
+> In both cases actual single quote character are printed to the screen
 
 If you want every character in your string to remain exactly as it is, declare your string a raw string literal with 'r' before the first quote. This looks ugly, but it works.
 ```python
@@ -2163,11 +2159,16 @@ To concatenate strings use the concatenation operator '+'
 >>> print(dna)
 TAGCTATATAAAATCATAAT
 ```
-> The concatenation operator can be used to combine strings. The newly combined string can be stored in a variable. What happens if you use `+` with numbers (these are integers or ints)?
+> The concatenation operator can be used to combine strings. The newly combined string can be stored in a variable. 
+
+#### The difference between string + and integer +
+
+What happens if you use `+` with numbers (these are integers or ints)?
 
 ```python
 >>> 4+3
 7
+
 ```
 
 For strings, `+` concatenates; for integers, `+` adds.
@@ -2192,7 +2193,7 @@ TAGCTATATAAAATCATAAT
 ```
 > The length of the string, including spaces, is calculated and returned.
 
-The value`len()` returns can be stored in a variable.  
+The value that `len()` returns can be stored in a variable.  
 ```python
 >>> dna_length = len(dna)
 >>> print(dna_length)
@@ -2206,21 +2207,19 @@ The lenth of the DNA sequence: TAGCTATATAAAATCATAAT is 20
 ```
 
 
-<p>&nbsp;</p>  
+
 
 #### Changing String Case
 
-Changing the case of a string is a bit different that you might first expect. For example, to lowercase a string we need to use a method. A method is a function that is specific to a object. When we assign a string to a variable we are creating an instance of a string object. This object has a series of methods that will work on the data that is stored in the object. 
-`lower()`
-function is one of these object methods. 
+Changing the case of a string is a bit different that you might first expect. For example, to lowercase a string we need to use a method. A method is a function that is specific to an object. When we assign a string to a variable we are creating an instance of a string object. This object has a series of methods that will work on the data that is stored in the object. Recall that `dir()` will tell you all the methods that are available for an object. The `lower()` function is a string method. 
 
-Let's do create a new string object.    
+Let's create a new string object.    
 ```python
 dna = "ATGCTTG"
 ```
-> Look familiar? It should. Creating a string object is what we have been doing all along.
+> Look familiar? It should!!! Creating a string object is what we have been doing all along!!! Jeez!!!
 
-Now that we have a string object we can use string methods. The way you use a method is to append the method with a '.' to the variable name.  
+Now that we have a string object we can use string methods. The way you use a method is to put a '.' between the object and the method name.
 ```python
 >>> dna = "ATGCTTG"
 >>> dna.lower()
@@ -2228,7 +2227,7 @@ Now that we have a string object we can use string methods. The way you use a me
 ```
 > the lower() method returns the contents stored in the 'dna' variable in lowercase.
 
-The contents of the 'dna' variable have not been changed. If you want to reuse the returned lowercased value, store it in a new variable.
+The contents of the 'dna' variable have not been changed. Strings are immutable. If you want to keep the lowercased version of the string, store it in a new variable.
 ```python
 >>> print(dna)
 ATGCTTG
@@ -2244,9 +2243,9 @@ The string method can be nested inside of other functions.
 >>> print(dna.lower())
 atgcttg
 ```
-> The value of 'dna' is lowercased and returned. The `print()` function takes the returned value from the `lower()` method and prints it.
+> The contents of 'dna' are lowercased and passed to the `print()` function.
 
-> If you try to use a string method on a object that is not a string you will get an error.
+If you try to use a string method on a object that is not a string you will get an error.
 
 ```python
 >>> nt_count = 6
