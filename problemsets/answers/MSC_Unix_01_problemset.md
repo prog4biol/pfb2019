@@ -14,7 +14,7 @@ Use pwd for this
 	/Users/mcampbel/foo/scratch
 	```
 3a. **Go up one directory?**
-Use cd and ls for this
+    Use cd and ls for this
 	```sh
 	jabberwocky:scratch mcampbel$ cd ..
 	jabberwocky:foo mcampbel$
