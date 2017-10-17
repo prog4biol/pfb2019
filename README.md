@@ -1750,6 +1750,7 @@ Python recognizes 3 types of numbers: integers, float point numbers, and complex
 
 #### Conversion functions    
 
+Sometimes one type of number needs to be changed to another for a function to be able to do work on it. Here are a list of functions for converting number types:
 
 | function        | Description                              |
 | --------------- | ---------------------------------------- |
@@ -1771,6 +1772,8 @@ Python recognizes 3 types of numbers: integers, float point numbers, and complex
 
 
 #### Numeric Functions
+
+Here are a list of fuctions that take numbers as arguments. These use useful things like rounding.
 
 
 
@@ -1880,6 +1883,8 @@ ValueError: math domain error
 ```
 
 ### Comparing two numbers
+
+Often times it is necessary to compare two numbers and find out if the first number is less than, equal to, or greater than the second.
 
 The simple function `cmp(x,y)` is no longer available in python3. 
 
