@@ -245,22 +245,23 @@ __Instructors__
 Simon Prochnik  
 Sofia Robb     
 
-# Big Picture
+## Big Picture
 
 ## Why?
 
-_Why is it important for **Biologists** to learn to program?_
+Why is it important for **biologists** to learn to program?
+
 You probably already know the answer to this question since you are here.   
 
-We firmly believe that knowing how to program is just as essential as knowing how to run a gel or set up a PCR reaction. The data we can now get from a single experiment can be overwhelming. This data often needs to be reformatted, filtered, and analyzed in unqiue ways. Programming allows you to perform these tasks in a **reproducible**, **efficient**, and **thoughtful** way.
+We firmly believe that knowing how to program is just as essential as knowing how to run a gel or set up a PCR reaction. The data we now get from a single experiment can be overwhelming. This data often needs to be reformatted, filtered, and analyzed in unique ways. Programming allows you to perform these tasks in an **efficient** and **reproducible** way.
 
 
 ## Helpful Tips
 
-_What are our tips for being successful in your efforts to learn to program?_
+What are our tips for having a successful programming course?
 
 
-1. Practice, practice, practice. Please, spend as much time possible actually coding.
+1. Practice, practice, practice. Please spend as much time as possible actually coding.
 
 2. Write only a line or two of code, then test it. If you write too many lines, it becomes more difficult to debug if there is an error.
 
@@ -272,13 +273,13 @@ _What are our tips for being successful in your efforts to learn to program?_
 
 6. Review sessions are important, but practice is more important.
 
-7. It is essential that we help you to learn how to find solutions on your own.
+7. Our key goal is to slowly, but surely, teach you how to solve problems on your own.
 
 ---
 
 # Unix
 
-# Unix 1
+## Unix 1
 
 ### Unix Overview
 
