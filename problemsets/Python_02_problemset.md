@@ -11,16 +11,15 @@ GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
 
 3. Save the DNA string to a variable and do 1 and 2 again.
 
-4. Make sure to commit your changes along the way. You can wait until the end to push them to your remote repo, if you like, or you can do it now. 
+4. In the interpretor use `bool` to test a variety of values like '', 0, 0.0, FALSE, false, True, true, 'True', 'False' to see if they evalue to True or False.
 
-5. In the interpretor use `bool` to test a variety of values like '', 0, 0.0, FALSE, false, True, true, 'True', 'False' to see if they evalue to True or False.
-
-
-6. Using a text editor, write a script that 
+5. Using a text editor, write a script that 
     - Assigns a value to a variable
     - Has a if/else statment in which:
        - It prints out a confirmation of truth if the value is true
        - It prints out "Not True" if the value is not true. 
+
+6. Make sure to commit your changes along the way. You can wait until the end to push them to your remote repo, if you like, or you can do it now. 
 
 7. Write a new script that does the same as the last question, but gets the value from the command line.
 
