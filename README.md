@@ -3489,7 +3489,7 @@ A for loop can be used to iterate through the file_object one line at a time.
 #!/usr/bin/env python3
 
 file_object = open("seq.nt.fa","r")
-for line in file_object:
+for line in file_object: # python magic: reads in a line from file
   print(line)
 ```
 
@@ -3506,7 +3506,7 @@ ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 Let's use `rstrip()` method to remove the newline from our file input.
 ```python
 $ cat file_for_rstrip.py
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 file_object = open("seq.nt.fa","r")
 for line in file_object:
@@ -3521,6 +3521,14 @@ $ python3 file_for_rstrip.py
 ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
 ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 ```
+
+#### Opening a file with `with open() as fh`
+
+@sep Better, because ???
+
+`with open(f) as fh: # open for reading default`
+
+
 
 #### Writing to a File
 
