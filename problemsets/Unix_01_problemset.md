@@ -175,7 +175,7 @@ Problem Set
     - Look at the first few lines of the file
     - Sort the file by log fold change 'log2(fold_change)', from highest to lowest, and save in a new file in your directory called sorted.cuffdiff.out
     - Sort the file (log fold change highest to lowest) then print out only the first 100 lines. Save in a file called `top100.sorted.cuffdiff.out`.
-    - Sort the file, print only first column. Get a unique list of the genes, then print only the top 100. Save in a file called `differentially.expressed.genes.txt`.
+    - Sort the file by log fold change, print out the top 100, print only first column. This will be a list of the genes with the largest change in expression. Make sure your list is sorted by gene name and is unique. Save this curated list in a file called `differentially.expressed.genes.txt`.
 
 
 
