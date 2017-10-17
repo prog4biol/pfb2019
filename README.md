@@ -1415,7 +1415,11 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 
 ### Operators
 
+An operator in a programming language is a symbol that tells the compiler or interpreter to perform specific mathematical, relational or logical operation and produce a result. Here we explain the concept of operators.
+
 #### Arthmetic Operators  
+
+In Python we can write statements that perform mathmatical calculations. To do this we need to use operators that are specific for this purpose. Here are arthemtic operators:
 
 
 | Operator | Description                              | Example            | Result |
@@ -1431,6 +1435,8 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 
 
 #### Assignment Operators  
+
+We use assignment operators to assign values to variables. You have been using the `=` assignment opertator. Here are others:
 
 | Operator | Equivalent to          | Example                      | result evaluates to |
 | -------- | ---------------------- | ---------------------------- | ------------------- |
