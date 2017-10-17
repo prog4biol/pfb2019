@@ -573,7 +573,7 @@ modes
 ```
 
 
-#### Arguments and Command Switches
+#### Arguments and Command Line Switches 
 
 
 Many commands take arguments.  Arguments are often the names of one or more files to operate on.  Most commands also take command-line "switches" or "options", which fine-tune what the command does.  Some commands recognize "short switches" that consist of a minus sign `-` followed by a single character, while others recognize "long switches" consisting of two minus signs `--` followed by a whole word.
@@ -1216,6 +1216,7 @@ for x in (1,2,3,4,5):
         print("Hello")
     else: 
         print(x)
+print('All Done!')
 ```
 
 
@@ -1244,8 +1245,8 @@ Blank lines are also important for increasing the readability of the code. You s
 #### Python Options
 
 ```bash
-$ python -h
-usage: python [option] ... [-c cmd | -m mod | file | -] [arg] ...
+$ python3 -h
+usage: python3 [option] ... [-c cmd | -m mod | file | -] [arg] ...
 Options and arguments (and corresponding environment variables):
 -c cmd : program passed in as string (terminates option list)
 -d     : debug output from parser (also PYTHONDEBUG=x)
@@ -1330,10 +1331,10 @@ This happens inside the script:
 
 
 ```python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 import sys
-a = sys.argv[1]
-b = sys.argv[2]
+a = float(sys.argv[1]) # convert string from command line to float
+b = float(sys.argv[2]) # convert string from command line to float
 print(a+b) # + is a sum operator on integers
 ```
 
@@ -1403,7 +1404,9 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 | `list(s)`  | Converts s to a list.                    |
 | `set(s)`   | Converts s to a set.                     |
 | `dict(d)`  | Creates a dictionary. d must be a sequence of (key,value) tuples. |
-| `repr()`   | Makes a string representation of an object. Useful for finding out what kind (Class) of object you are dealing with. |
+| `repr(x)`  | Makes a string representation of an object. |
+| `type(x)`  | tells you which class your object belongs to |
+| `dir(x)`   | tells you which methods are available for your object |
 
 ---
 
