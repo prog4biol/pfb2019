@@ -11,7 +11,7 @@ __Mon, Oct 16__
   7:30AM -  9:00AM  | Breakfast | All | Blackford
   9:00AM -  9:45AM  | Lecture: Unix 1 | Simon | Hereshy
   9:45AM -  9:55AM  | Break |  | Hereshy
-  9:55AM - 10:30AM  | Lecture: Unix 1 continued | Simin | Hereshy
+  9:55AM - 10:30AM  | Lecture: Unix 1 continued | Simon | Hereshy
  10:30AM - 12:00PM  | Practical: Morning Problem Sets | TAs | Hereshy
  12:30PM -  2:00PM  | Lunch | All | Blackford
   2:00PM -  3:30 | Lecture: Unix 2 | Sofia | Hereshy
