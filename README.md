@@ -1307,7 +1307,7 @@ Collections of data can also be stored in special data types, i.e., tuples, list
 
 > The list index starts at 0
 
-####Command line parameters: A Special Built-in List
+#### Command line parameters: A Special Built-in List
 
 Command line parameters follow the name of a script or program and have spaces between them. They allow a user to pass information to a script on the command line when that script is being run. Python stores all the pieces of the command line in a special list called sys.argv. 
 
@@ -1420,9 +1420,9 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 
 An operator in a programming language is a symbol that tells the compiler or interpreter to perform specific mathematical, relational or logical operation and produce a result. Here we explain the concept of operators.
 
-#### Arthmetic Operators  
+#### Arithmetic Operators  
 
-In Python we can write statements that perform mathmatical calculations. To do this we need to use operators that are specific for this purpose. Here are arthemtic operators:
+In Python we can write statements that perform mathmatical calculations. To do this we need to use operators that are specific for this purpose. Here are arithemtic operators:
 
 
 | Operator | Description                              | Example            | Result |
@@ -1446,8 +1446,8 @@ We use assignment operators to assign values to variables. You have been using t
 | `=`      | `a = 3`                | `result = 3`                 | 3                   |
 | `+=`     | `result = result + 2`  | `result = 3 ; result += 2`   | 5                   |
 | `-=`     | `result = result - 2`  | `result = 3 ; result -= 2`   | 1                   |
-| `*=`     | `result = result * 2`  | `result = 3  ; result \*= 2` | 6                   |
-| `=`      | `result = result / 2`  | `result = 3 ; result /= 2`   | 1.5                 |
+| `*=`     | `result = result * 2`  | `result = 3  ; result *= 2`  | 6                   |
+| `/=`     | `result = result / 2`  | `result = 3 ; result /= 2`   | 1.5                 |
 | `%=`     | `result = result % 2`  | `result = 3 ; result %= 2`   | 1                   |
 | `**=`    | `result = result ** 2` | `result = 3 ; result **= 2`  | 9                   |
 | `//=`    | `result = result // 2` | `result = 3 ; result //= 3`  | 1                   |
@@ -1479,7 +1479,7 @@ Logical operators allow you to combine two or more sets of comparisons. You can 
 | Operator | Description                              | Example              | Result |
 | -------- | ---------------------------------------- | -------------------- | ------ |
 | `and`    | True if left operand is True and right operand is True | `bool(3>=2 and 2<3)` | True   |
-| `or`     | TRUE if left operand is Treu or right operand is True | `bool(3==2 or 2<3)`  | True   |
+| `or`     | True if left operand is True or right operand is True | `bool(3==2 or 2<3)`  | True   |
 | `not`    | Reverses the logical status              | `bool(not False)`    | True   |
 
 
@@ -1512,7 +1512,6 @@ False
 
 
 
-
 #### Operator Precedence
 
 Operators are listed in order of precedence. Highest listed first. Not all the operators listed here are mentioned above. 
@@ -1525,7 +1524,7 @@ Operators are listed in order of precedence. Highest listed first. Not all the o
 | `+` `-`                                  | Addition and subtraction                 |
 | `>>` `<<`                                | Right and left bitwise shift             |
 | `&`                                      | Bitwise 'AND'                            |
-| `^` `|`                                  | Bitwise exclusive 'OR' and regular 'OR'  |
+| `^` `\|`                                  | Bitwise exclusive 'OR' and regular 'OR'  |
 | `<=` `<` `>` `>=`                        | Comparison operators                     |
 | `<>` `==` `!=`                           | Equality operators                       |
 | `=` `%=` `/=` `//=` `-=` `+=` `*=` `**=` | Assignment operators                     |
@@ -1535,8 +1534,7 @@ Operators are listed in order of precedence. Highest listed first. Not all the o
 | `not in`                                 | Negative membership operator             |
 | `not` `or` `and`                         | logical operators                        |
 
-
-
+Note: Find out more about [bitwise operators](https://www.tutorialspoint.com/python/bitwise_operators_example.htm). We will see these operators used in the section on [Sets](https://github.com/srobb1/pfb2017#set-operators).
 
 ### Truth
 
@@ -1732,7 +1730,7 @@ Returns:
 ### Numbers
 
 
-Python recognizes 3 types of numbers: integers, float point numbers, and complex numbers. 
+Python recognizes 3 types of numbers: integers, floating point numbers, and complex numbers. 
 
 #### integer  
 
