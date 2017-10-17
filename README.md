@@ -1389,24 +1389,27 @@ print(a+b) # + is a sum operator on integers
 
 
 
-#### Type Conversion
+#### What kind of object am I working with?
 
-Sometimes you may need to convert data into a specific type. Here are some examples of functions that will help you to do this.
+You have an identifier in your code called `data`. Does it represent a string or a list or a dictionary? Python has a couple of functions that help you figure this out.
+
+| Function    | Description |
+| `type(data)` | tells you which class your object belongs to |
+| `dir(data)`  | tells you which methods are available for your object |
+
+We'll cover `dir()` in more detail later
+
+```python
+>>> data = [2,4,6]
+>>> type(data)
+<class 'list'>
+>>> data = 5
+>>> type(data)
+<class 'int'>
+```
 
 
-| Function   | Description                              |
-| ---------- | ---------------------------------------- |
-| `int(x)`   | Converts x to an integer.                |
-| `float(x)` | Converts x to a floating-point number.   |
-| `str(x)`   | Converts x to a string.                  |
-| `chr(x)`   | Converts an integer to a character.      |
-| `tuple(s)` | Converts s to a tuple.                   |
-| `list(s)`  | Converts s to a list.                    |
-| `set(s)`   | Converts s to a set.                     |
-| `dict(d)`  | Creates a dictionary. d must be a sequence of (key,value) tuples. |
-| `repr(x)`  | Makes a string representation of an object. |
-| `type(x)`  | tells you which class your object belongs to |
-| `dir(x)`   | tells you which methods are available for your object |
+
 
 ---
 
@@ -1441,16 +1444,16 @@ In Python we can write statements that perform mathmatical calculations. To do t
 
 We use assignment operators to assign values to variables. You have been using the `=` assignment opertator. Here are others:
 
-| Operator | Equivalent to          | Example                      | result evaluates to |
-| -------- | ---------------------- | ---------------------------- | ------------------- |
-| `=`      | `a = 3`                | `result = 3`                 | 3                   |
-| `+=`     | `result = result + 2`  | `result = 3 ; result += 2`   | 5                   |
-| `-=`     | `result = result - 2`  | `result = 3 ; result -= 2`   | 1                   |
-| `*=`     | `result = result * 2`  | `result = 3  ; result *= 2`  | 6                   |
-| `/=`     | `result = result / 2`  | `result = 3 ; result /= 2`   | 1.5                 |
-| `%=`     | `result = result % 2`  | `result = 3 ; result %= 2`   | 1                   |
-| `**=`    | `result = result ** 2` | `result = 3 ; result **= 2`  | 9                   |
-| `//=`    | `result = result // 2` | `result = 3 ; result //= 3`  | 1                   |
+| Operator | Equivalent to          | Example                     | result evaluates to |
+| -------- | ---------------------- | --------------------------- | ------------------- |
+| `=`      | `a = 3`                | `result = 3`                | 3                   |
+| `+=`     | `result = result + 2`  | `result = 3 ; result += 2`  | 5                   |
+| `-=`     | `result = result - 2`  | `result = 3 ; result -= 2`  | 1                   |
+| `*=`     | `result = result * 2`  | `result = 3  ; result *= 2` | 6                   |
+| `/=`     | `result = result / 2`  | `result = 3 ; result /= 2`  | 1.5                 |
+| `%=`     | `result = result % 2`  | `result = 3 ; result %= 2`  | 1                   |
+| `**=`    | `result = result ** 2` | `result = 3 ; result **= 2` | 9                   |
+| `//=`    | `result = result // 2` | `result = 3 ; result //= 3` | 1                   |
 
 
 
@@ -1524,7 +1527,7 @@ Operators are listed in order of precedence. Highest listed first. Not all the o
 | `+` `-`                                  | Addition and subtraction                 |
 | `>>` `<<`                                | Right and left bitwise shift             |
 | `&`                                      | Bitwise 'AND'                            |
-| `^` `\|`                                  | Bitwise exclusive 'OR' and regular 'OR'  |
+| `^` `\|`                                 | Bitwise exclusive 'OR' and regular 'OR'  |
 | `<=` `<` `>` `>=`                        | Comparison operators                     |
 | `<>` `==` `!=`                           | Equality operators                       |
 | `=` `%=` `/=` `//=` `-=` `+=` `*=` `**=` | Assignment operators                     |
@@ -3533,12 +3536,6 @@ with open("seq.nt.fa","r") as file_object: #cleans up after exiting with block
   	print(line)
 #file gets closed for you here.
 ```
-
-
-
-`with open(f) as fh: # open for reading default`
-
-
 
 #### Writing to a File
 
