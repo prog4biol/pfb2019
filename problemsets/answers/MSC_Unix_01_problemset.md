@@ -77,24 +77,24 @@ but wget would work too
 	
 	2017-10-16 19:30:37 (59.0 MB/s) - 'sequences.nt.fa.1' saved [10267/10267]
 	```
-7a. **This is a 5 part question** 
-    * **How many lines does this file contain?**
+7. **This is a 5 part question** 
+ * **How many lines does this file contain?**
 	```sh
 	jabberwocky:problemsets mcampbel$ wc -l sequences.nt.fa 
 	     148 sequences.nt.fa
 	```
-    * **How many characters? (Hint: check out the options of wc)**
+ * **How many characters? (Hint: check out the options of wc)**
 	```sh
 	jabberwocky:problemsets mcampbel$ wc -c sequences.nt.fa 
 	   10267 sequences.nt.fa
 	```
 
-    * **What is the first line of this file? (Hint: read the man page of head)**
+ * **What is the first line of this file? (Hint: read the man page of head)**
 	```sh
 	jabberwocky:problemsets mcampbel$ head -n 1 sequences.nt.fa 
 	>NM_001126114.2 Homo sapiens tumor protein p53 (TP53), transcript variant 3, mRNA
 	```
-    * **What are the last 3 lines? (Hint: read the man page of tail)***
+ * **What are the last 3 lines? (Hint: read the man page of tail)***
 	```sh
 	jabberwocky:problemsets mcampbel$ tail -n 3 sequences.nt.fa 
 	TTTATAGCTGTTGGAAGGACTAGGTCTTCCCTAGCCCCCCCAGTGTGCAAGGGCAGTGAAGACTTGATTG
@@ -102,7 +102,7 @@ but wget would work too
 	AAAAAAAAAAAAAA
 	```
 
-    * **How many sequences are in the file? (Hint: use grep) (Note: The start of a sequence is indicated by a > character.)**
+ * **How many sequences are in the file? (Hint: use grep) (Note: The start of a sequence is indicated by a > character.)**
 	```sh
 	jabberwocky:problemsets mcampbel$ grep '>' sequences.nt.fa | wc -l
 	       2
