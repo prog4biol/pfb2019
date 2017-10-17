@@ -13,13 +13,15 @@ Use pwd for this
 	jabberwocky:scratch mcampbel$ pwd
 	/Users/mcampbel/foo/scratch
 	```
-3a. **Go up one directory?**
+3. **Go up one directory?**
+   * **a**
     Use cd and ls for this
 	```sh
 	jabberwocky:scratch mcampbel$ cd ..
 	jabberwocky:foo mcampbel$
 	```
-3b. **How many directories?**
+3. **How many directories?**
+   * **b**
 	```sh
 	jabberwocky:foo mcampbel$ ls -1 -F
 	all_betas_no_missing_data.txt
