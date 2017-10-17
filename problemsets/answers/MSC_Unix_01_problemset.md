@@ -77,23 +77,24 @@ but wget would work too
 	
 	2017-10-16 19:30:37 (59.0 MB/s) - 'sequences.nt.fa.1' saved [10267/10267]
 	```
-7a. **How many lines does this file contain?**
+7a. **This is a 5 part question** 
+    * **How many lines does this file contain?**
 	```sh
 	jabberwocky:problemsets mcampbel$ wc -l sequences.nt.fa 
 	     148 sequences.nt.fa
 	```
-7b. **How many characters? (Hint: check out the options of wc)**
+    * **How many characters? (Hint: check out the options of wc)**
 	```sh
 	jabberwocky:problemsets mcampbel$ wc -c sequences.nt.fa 
 	   10267 sequences.nt.fa
 	```
 
-7c. **What is the first line of this file? (Hint: read the man page of head)**
+    * **What is the first line of this file? (Hint: read the man page of head)**
 	```sh
 	jabberwocky:problemsets mcampbel$ head -n 1 sequences.nt.fa 
 	>NM_001126114.2 Homo sapiens tumor protein p53 (TP53), transcript variant 3, mRNA
 	```
-7d. **What are the last 3 lines? (Hint: read the man page of tail)***
+    * **What are the last 3 lines? (Hint: read the man page of tail)***
 	```sh
 	jabberwocky:problemsets mcampbel$ tail -n 3 sequences.nt.fa 
 	TTTATAGCTGTTGGAAGGACTAGGTCTTCCCTAGCCCCCCCAGTGTGCAAGGGCAGTGAAGACTTGATTG
@@ -101,7 +102,7 @@ but wget would work too
 	AAAAAAAAAAAAAA
 	```
 
-7e. **How many sequences are in the file? (Hint: use grep) (Note: The start of a sequence is indicated by a > character.)**
+    * **How many sequences are in the file? (Hint: use grep) (Note: The start of a sequence is indicated by a > character.)**
 	```sh
 	jabberwocky:problemsets mcampbel$ grep '>' sequences.nt.fa | wc -l
 	       2
@@ -133,21 +134,22 @@ Use wget again
 	2017-10-16 19:37:45 (12.9 MB/s) - 'cuffdiff.txt' saved [1113672/1113672]
 	```
 
-10a. **Look at the first few lines of the file**
+10. **This one is five parts** 
+  * **Look at the first few lines of the file**
 	```sh
 	jabberwocky:problemsets mcampbel$ head -n 2 cuffdiff.txt 
 	AC148152.3_FG006	AC148152.3_FG006  AC148152.3_FG006	Chr2:231237971-231241387	B73.s	Mo17.s	NOTEST	0.0125804 0 -1.79769e+308 -1.79769e+308 0.32736 1 no
 	AC148152.3_FG008	AC148152.3_FG008  AC148152.3_FG008	Chr2:231209190-231213723	B73.s	Mo17.s	OK	5.83386	  0.0236324	  -5.50882	4.61463.93829e-06 0.000124139 yes
 	```
-10b. **Sort the file by log fold change 'log2(fold_change)', from highest to lowest, and save in a new file in your directory called sorted.cuffdiff.out**
+   * **Sort the file by log fold change 'log2(fold_change)', from highest to lowest, and save in a new file in your directory called sorted.cuffdiff.out**
 	```sh
 	jabberwocky:problemsets mcampbel$ sort -k 10 -g -r cuffdiff.txt > sorted.cuffdiff.out
 	```
-10c. **Sort the file (log fold change highest to lowest) then print out only the first 100 lines. Save in a file called top100.sorted.cuffdiff.out.**
+   * **Sort the file (log fold change highest to lowest) then print out only the first 100 lines. Save in a file called top100.sorted.cuffdiff.out.**
 	```sh
 	jabberwocky:problemsets mcampbel$ head -n 100 sorted.cuffdiff.out > top100.sorted.cuffdiff.out
 	```
-10d. **Sort the file, print only first column. Get a unique list of the genes, then print only the top 100. Save in a file called differentially.expressed.genes.txt.**
+   * **Sort the file, print only first column. Get a unique list of the genes, then print only the top 100. Save in a file called differentially.expressed.genes.txt.**
 we need cut and uniq for this
 	```sh
 	jabberwocky:problemsets mcampbel$ cut -f 1 sorted.cuffdiff.out | sort | uniq | head -n 100 > differentially.expressed.genes.txt
