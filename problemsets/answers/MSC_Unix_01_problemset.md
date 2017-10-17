@@ -13,7 +13,7 @@ Use pwd for this
 	jabberwocky:scratch mcampbel$ pwd
 	/Users/mcampbel/foo/scratch
 	```
-3. 
+3. **Go up one directory and How many directories?**
    * **Go up one directory?**
        Use cd and ls for this
 	```sh
