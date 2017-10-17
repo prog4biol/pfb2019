@@ -12,5 +12,5 @@ __INSTALL__
 
 
 __Config__
-1. set .bashprofile to source .bashrc
+1. set .bash_profile to source .bashrc
 2. set up alias in .bashrc for python=python3
