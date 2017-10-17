@@ -3522,9 +3522,21 @@ ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
 ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 ```
 
-#### Opening a file with `with open() as fh`
+#### Opening a file with `with open() as fh:`
 
-@sep Better, because ???
+This is a good extra to add in because it closes the file for you automatically. Good programming practice. Your code will clean up as it runs. For more advanced coding, this saves limited resources like filehandles and database connections. For now, we just need to know that the `with ... as ...:` does the same as `fh = open(...) ... fh.close()`. So here's what the adapted code looks like
+
+```python
+#!/usr/bin/env python3
+
+with open("seq.nt.fa","r") as file_object: #cleans up after exiting with block
+  for line in file_object:
+    line = line.rstrip()
+  	print(line)
+#file gets closed for you here.
+```
+
+
 
 `with open(f) as fh: # open for reading default`
 
