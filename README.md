@@ -1330,7 +1330,7 @@ This happens inside the script:
 
 
 ```python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 import sys
 a = sys.argv[1]
 b = sys.argv[2]
@@ -1406,8 +1406,8 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 | `repr()`   | Makes a string representation of an object. Useful for finding out what kind (Class) of object you are dealing with. |
 
 ---
-
-### [Link to Python 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Python_01_problemset.md)
+                                   
+### [Link to Python 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_01_problemset.md)
 
 -------
 
@@ -1415,7 +1415,11 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 
 ### Operators
 
+An operator in a programming language is a symbol that tells the compiler or interpreter to perform specific mathematical, relational or logical operation and produce a result. Here we explain the concept of operators.
+
 #### Arthmetic Operators  
+
+In Python we can write statements that perform mathmatical calculations. To do this we need to use operators that are specific for this purpose. Here are arthemtic operators:
 
 
 | Operator | Description                              | Example            | Result |
@@ -1431,6 +1435,8 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 
 
 #### Assignment Operators  
+
+We use assignment operators to assign values to variables. You have been using the `=` assignment opertator. Here are others:
 
 | Operator | Equivalent to          | Example                      | result evaluates to |
 | -------- | ---------------------- | ---------------------------- | ------------------- |
@@ -2772,7 +2778,7 @@ This example is not using the python interpretor. It is a python script that wil
 
 Code: 
 ```python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 count = 0
 while count < 5:
@@ -2807,7 +2813,7 @@ Done
 
 An infiite loop is when a while condition is always true. Here is an example of an infinit loop.  
 ```python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 count = 0
 while count < 5:
@@ -2837,7 +2843,7 @@ count: 0
 An Else statment can be used with a while statement. It behaves in the same way as with an If statement. When the while statement is false, the else block is excuted ONE TIME.
 
 ```python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 count = 0
 while count < 5:
@@ -2876,7 +2882,7 @@ An example of a sequence is a list. Let's use a for loop list of words.
 
 Code:
 ```python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 words = ['zero','one','two','three','four']
 for word in words:
@@ -2897,7 +2903,7 @@ This is an example of iterating over a string. Remember a string is a sequence l
 
 Code:
 ```python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 dna = 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'
 for nt in dna:
@@ -2924,7 +2930,7 @@ Another example of iterating over a list of variables, this time numbers.
 
 Code:
 ```python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 numbers = [0,1,2,3,4]
 for num in numbers:
@@ -2952,7 +2958,7 @@ range(0, 5)
 This can be used in conjunction with a for loop to iterate over a range of numbers
 Code:
 ```python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 for num in range(5):
   print(num)
@@ -2991,7 +2997,7 @@ Loops control statements allow for altering the normal flow of execution.
 
 Code:
 ```python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 count = 0
 while count < 5:
@@ -3016,7 +3022,7 @@ Done
 
 Code:
 ```python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 count = 0
 while count < 5:
@@ -3469,7 +3475,7 @@ ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 
 A for loop can be used to iterate through the file_object one line at a time.
 ```python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 file_object = open("seq.nt.fa","r")
 for line in file_object:
@@ -3513,7 +3519,7 @@ The `write()` method is like the `print()` function. The biggest difference is t
 
 Let's write a few lines to a file named "writing.txt".  
 ```python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 fo = open("writing.txt" , "w")
 fo.write("One line.\n")
@@ -3537,7 +3543,7 @@ One line.
 
 Now, lets get crazy! Lets read from one file a line at a time. Do something to each line and write the results to a new file.
 ```python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 seq_read  = open("seq.nt.fa","r")
 seq_write = open("nt.counts.txt","w")
@@ -3586,7 +3592,7 @@ BRCA1   GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
 How can we read this whole file in to a dictionary? 
 
 ```python
-#!/usr/bin/python3                                                                                    
+#!/usr/bin/env python3                                                                                    
 
 seq_read  = open("sequence_data.txt","r")
 genes = {}
@@ -3628,7 +3634,7 @@ These specialized functions are not included in the core of Python. We need to i
 at the top of your script
 
 ```python 
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 import re
 ```
@@ -4292,7 +4298,7 @@ print((lambda dna : dna[0:3])('ATGTTT'))
 Most all variables can be seen, retrieved, and used anywhere in your code. This is called global. One of the only non-global or local variables are those used as function arguments.
 
 ```python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 x = 100
 y = 20;
 if x > y:
@@ -4337,7 +4343,7 @@ The output looks like this
 
 
 ```python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 def scope_function(x):
   print("x (inside function block):", x)
@@ -4391,7 +4397,7 @@ You can make a local variable global with the function `global()`. Now a variabl
 Here is an example use of `global()`. This can be a bit mind bending, just knowing this exists is probably good enough for right now.
 
 ```python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 def scope_function():
   global var_1
@@ -4596,7 +4602,7 @@ see also numpy
 Great (if quite complicated) tool for parsing command line arguments and automatically generating help messages for scripts (very handy!). Here's a simple script that explains a little of what it does.
 
 ```python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 import argparse
 parser = argparse.ArgumentParser(description="A test program that reads in some number of lines from an input file. The output can be screen or an output file")
 # we want the first argument to be the filename
@@ -4635,7 +4641,7 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 There are a few different types of errors when coding. Syntax errors, logic errors, and exceptions. You have probably encountered all three. Sytax and logic errors are issues you need to deal with while coding. An exception is a special type of error that can be informative and used to write code to respond to this type of error. This is especially relevent when dealing with user input. What if they don't give you any, or it is the wrong kind of input. We want our code to be able to detect these types of errors and respond accordingly.
 
 ```python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 import sys
 file = sys.argv[1]
@@ -4674,7 +4680,7 @@ We have already seen quite a few Exceptions, here are some:
 We can use the exception to our advantage to help out our users. We can use a try/except condition to look for exceptions and to do something if we do not have an exception and do something different if we do have an exception.
 
 ```python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 import sys
 
 file = ''
