@@ -1732,7 +1732,7 @@ Returns:
 ### Numbers
 
 
-Python recognizes 3 types of numbers: integers, float point numbers, and complex numbers. 
+Python recognizes 3 types of numbers: integers, floating point numbers, and complex numbers. 
 
 #### integer  
 
