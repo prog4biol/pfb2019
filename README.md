@@ -1406,8 +1406,8 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 | `repr()`   | Makes a string representation of an object. Useful for finding out what kind (Class) of object you are dealing with. |
 
 ---
-
-### [Link to Python 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Python_01_problemset.md)
+                                   
+### [Link to Python 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_01_problemset.md)
 
 -------
 
