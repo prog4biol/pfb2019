@@ -9,6 +9,7 @@ __INSTALL__
 4. Chrome
 5. [Python 3.6 Anaconda Distribution](https://www.anaconda.com/download/#macos)
 6. emacs
+7. Xcode CLT
 
 
 __Config__
