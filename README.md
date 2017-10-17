@@ -1471,6 +1471,8 @@ These operators compare two values and returns true or false.
 
 #### Logical Operators
 
+Logical operators allow you to combine two or more sets of comparisons. You can combine the results in different ways. For example you can 1) demand that all the statements are true, 2) that only one statement needs to be true, or 3) that the statement needs to be false.
+
 | Operator | Description                              | Example              | Result |
 | -------- | ---------------------------------------- | -------------------- | ------ |
 | `and`    | True if left operand is True and right operand is True | `bool(3>=2 and 2<3)` | True   |
@@ -1480,6 +1482,8 @@ These operators compare two values and returns true or false.
 
 
 #### Membership Operators   
+
+You can test to see if a value is included in a string, tuple, or list. You can also test that the value is not included in the string, tuple, or list.
 
 | Operator | Description                              |
 | -------- | ---------------------------------------- |
@@ -1564,6 +1568,8 @@ Which means that these are True:
 
 #### Use `bool()` to test for truth   
 
+`bool()` is a function that will test if a value is true.
+
 ```python
 >>> bool(True)
 True
@@ -1596,9 +1602,6 @@ False
 >>> bool({})
 False
 ```
-
-
-
 
 
 ### Logic: Control Statements
