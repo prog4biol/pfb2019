@@ -1081,18 +1081,18 @@ Python has
 
 **Classes** are a way to encapulate (organize) variables and functions. Objects get their variables and methods from the class they belong to. 
 
-**Methods** are just functions that belong to a Class. Objects that belong to the a Class can use Methods from that Class.
+**Methods** are just functions that belong to a class. Objects that belong to the a class can use methods from that class.
 
 <p>&nbsp;</p>
 
 ### Running Python
 
-There are two versions of python: python 2 and python 3. We will be using 3. This version fixes some of the problems with python 2 and breaks some other things. A lot of code has already been written for python 2 (it's older), but going forwards, more and more new code development will use python 3.
+There are two versions of Python: Python 2 and Python 3. We will be using 3. This version fixes some of the problems with Python 2 and breaks some other things. A lot of code has already been written for Python 2 (it's older), but going forwards, more and more new code development will use Python 3.
 
 
 #### Interactive Interpreter
 
-Python can be run one line at a time in an interactive interpreter. You can think of this as a python shell. To lauch the interpreter type the following into your terminal window:  
+Python can be run one line at a time in an interactive interpreter. You can think of this as a Python shell. To lauch the interpreter type the following into your terminal window:  
 
 `$ python3`    
 
@@ -1122,7 +1122,7 @@ print ("Hello, PFB2017!")
 
 #### Running Python Scripts
 
-Typing the python command followed by the name of a script makes python execute the script. Recall that we just saw you can run an interactive interpreter by just typing `python` on the command line
+Typing the Python command followed by the name of a script makes Python execute the script. Recall that we just saw you can run an interactive interpreter by just typing `python` on the command line
 
 Execute the Python script like this (% represents the prompt)
 
@@ -1150,7 +1150,7 @@ You can look at the permissions with
 
 The first field of -, r, w and x characters define the permissions of the file. The three 'x' characters means anyone can execute or run this script. 
 
-We also need to add a line at the beginning of the script that tells the shell to run python3 to interpret the script. This line starts with #, so it looks like a comment to python. The '!' is important as is the space between env and python3. The program /usr/bin/env looks for where python3 is installed and runs the script with python3. The details may seem a bit complex, but you can just copy and paste this 'magic' line.
+We also need to add a line at the beginning of the script that tells the shell to run python3 to interpret the script. This line starts with #, so it looks like a comment to python. The '!' is important as is the space between `env` and `python3`. The program `/usr/bin/env` looks for where `python3` is installed and runs the script with `python3`. The details may seem a bit complex, but you can just copy and paste this 'magic' line.
 
 The file test.py now looks like this
 
@@ -1176,11 +1176,11 @@ Hello, PFB2017!
 
 A Python identifier is a name used to identify a variable, function, class, module or other object. An identifier starts with a letter A to Z or a to z or an underscore (_) followed by zero or more letters, underscores and digits (0 to 9).
 
-Python does not allow punctuation characters such as @, $, and % within identifiers. Python is a case sensitive programming language. Thus, seq_id and seq_ID are two different identifiers in Python.
+Python does not allow punctuation characters such as @, $, and % within identifiers. Python is a case sensitive programming language. Thus, `seq_id` and `seq_ID` are two different identifiers in Python.
 
 #### Naming conventions for Python Identifiers
 
- * The first character is lowercase, unless it is a name of a Class. Classes should begin with an uppercase characters. (ex. Seq)
+ * The first character is lowercase, unless it is a name of a class. Classes should begin with an uppercase characters. (ex. Seq)
  * Private identifiers begin with an underscore. (ex. `_private`)
  * Strong private identifiers begin with two underscores. (ex. `__private`)
  * Language-defined special names begin and end with two underscores. (ex. `__special__`)
@@ -1434,7 +1434,7 @@ In Python we can write statements that perform mathmatical calculations. To do t
 | `*`      | Multiplication                           | `3*2`              | 6      |
 | `/`      | Division                                 | `3/2`              | 1.5    |
 | `%`      | Modulus (divides left operand by right operand and returns the remainder) | `3%2`              | 1      |
-| `**`     | Exponent                                 | `3*\2`             | 9      |
+| `**`     | Exponent                                 | `3**2`             | 9      |
 | `//`     | Floor Division (result is the quotient with digits after the decimal point removed. If one of the operands is negative, the result is floored, i.e., rounded away from zero | `3//2`  ; `-11//3` | 1 ; -4 |
 
 
