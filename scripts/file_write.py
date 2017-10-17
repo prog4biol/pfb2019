@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 fo = open("../files/writing.txt" , "w")
 fo.write("One line.\n")
