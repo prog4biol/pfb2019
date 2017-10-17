@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 seq_read  = open("../files/seq.nt.fa","r")
 seq_write = open("../nt.counts.txt","w")

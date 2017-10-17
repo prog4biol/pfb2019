@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 numbers = [2,11,33,55,39,55,75,37,21,23,41,13]
 

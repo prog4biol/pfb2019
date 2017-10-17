@@ -1,28 +1,6 @@
 PFB 2017 Tentative Schedule
 ==========================
 
-# ##############################################################
-# moved to [gdocs](https://docs.google.com/spreadsheets/d/1fF3N18YhKvGD9DXCrUSuxMt7dkzUZWldW4WGc7-wiak/edit?usp=sharing)
-# ###############################################################
-
-
-
-#  
-
-
-#  
-
-#  
-
-
-
-
-
-
-
-
-
-
 
 
  Time | Description | Who | Location  
@@ -31,44 +9,46 @@ PFB 2017 Tentative Schedule
   7:00PM -  9:00PM  | Social: Meet and Greet | All | Bar 
 __Mon, Oct 16__ 
   7:30AM -  9:00AM  | Breakfast | All | Blackford
-  9:00AM  | Lecture: Morning Lecture | Instructor | Hereshy
- 10:30AM - 12:30PM  | Practical: Morning Problem Sets | Instructor | Hereshy
+  9:00AM -  9:45AM  | Lecture: Unix 1 | Simon | Hereshy
+  9:45AM -  9:55AM  | Break |  | Hereshy
+  9:55AM - 10:30AM  | Lecture: Unix 1 continued | Simon | Hereshy
+ 10:30AM - 12:00PM  | Practical: Morning Problem Sets | TAs | Hereshy
  12:30PM -  2:00PM  | Lunch | All | Blackford
-  2:00PM -  3:30 | Lecture: Afternoon| Instructor | Hereshy
-  2:45PM -  2:55PM  | Break | Instructor | Hereshy
-  2:55PM -  3:30PM  | Lecture: Afternoon Lecture Part II| Instructor | Hereshy
-  3:30PM -  5:30PM  | Practical: Afternoon Problem Sets | Instructor | Hereshy
+  2:00PM -  3:30 | Lecture: Unix 2 | Sofia | Hereshy
+  2:45PM -  2:55PM  | Break |  | Hereshy
+  2:55PM -  3:30PM  | Lecture: Unix 2 continued| Sofia | Hereshy
+  3:30PM -  5:30PM  | Practical: Afternoon Problem Sets | TAs | Hereshy
   5:30PM -  7:00PM  | Dinner | All | Blackford
-  7:00PM -  8:00PM  | Review Section | TA | Hereshy
-  8:00PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
+  7:00PM -  8:00PM  | Review Section: Command line and git | Demitri and Jessen | Hereshy
+  8:00PM - 11:00PM  | Practical: Evening Problem Sets | TAs | Hereshy
  __Tue, Oct 17__ 
   7:30AM -  9:00AM  | Breakfast | All | Blackford
-  9:00AM -  9:45AM  | Lecture: Morning Lecture Part I | Instructor | Hereshy
-  9:45AM -  9:55AM  | Break | Instructor | Hereshy
-  9:55AM - 10:30AM  | Lecture: Morning Lecture Part II| Instructor | Hereshy
- 10:30AM - 12:00PM  | Practical: Morning Problem Sets | Instructor | Hereshy
+  9:00AM -  9:45AM  | Lecture: Python 1 | Simon | Hereshy
+  9:45AM -  9:55AM  | Break |  | Hereshy
+  9:55AM - 10:30AM  | Lecture: Python 1 continued | Simon | Hereshy
+ 10:30AM - 12:00PM  | Practical: Morning Problem Sets | TAs | Hereshy
  12:00PM -  2:00PM  | Lunch | All | Blackford
-  2:00PM -  2:45PM  | Lecture: Afternoon Lecture Part I | Instructor | Hereshy
-  2:45PM -  2:55PM  | Break | Instructor | Hereshy
-  2:55PM -  3:30PM  | Lecture: Afternoon Lecture Part II| Instructor | Hereshy
-  3:30PM -  5:30PM  | Practical: Afternoon Problem Sets | Instructor | Hereshy
+  2:00PM -  2:45PM  | Lecture: Python 2 | Sofia | Hereshy
+  2:45PM -  2:55PM  | Break |  | Hereshy
+  2:55PM -  3:30PM  | Lecture: Python 2 continued | Sofia | Hereshy
+  3:30PM -  5:30PM  | Practical: Afternoon Problem Sets | TAs | Hereshy
   5:30PM -  7:00PM  | Dinner | All | Blackford
-  7:00PM -  8:00PM  | Review Section | TA | Hereshy
-  8:00PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
+  7:00PM -  8:00PM  | Review Section: vi and emacs | Deb and Demitri  | Hereshy
+  8:00PM - 11:00PM  | Practical: Evening Problem Sets | TAs | Hereshy
   __Wed, Oct 18__ 
   7:30AM -  9:00AM  | Breakfast | All | Blackford
-  9:00AM -  9:45AM  | Lecture: Morning Lecture Part I | Instructor | Hereshy
-  9:45AM -  9:55AM  | Break | Instructor | Hereshy
-  9:55AM - 10:30AM  | Lecture: Morning Lecture Part II| Instructor | Hereshy
- 10:30AM - 12:00PM  | Practical: Morning Problem Sets | Instructor | Hereshy
+  9:00AM -  9:45AM  | Lecture: Python 3 | Simon | Hereshy
+  9:45AM -  9:55AM  | Break |  | Hereshy
+  9:55AM - 10:30AM  | Lecture: Python 3 continued | Simon | Hereshy
+ 10:30AM - 12:00PM  | Practical: Morning Problem Sets | TAs | Hereshy
  12:00PM -  2:00PM  | Lunch | All | Blackford
-  2:00PM -  2:45PM  | Lecture: Afternoon Lecture Part I | Instructor | Hereshy
-  2:45PM -  2:55PM  | Break | Instructor | Hereshy
-  2:55PM -  3:30PM  | Lecture: Afternoon Lecture Part II| Instructor | Hereshy
-  3:30PM -  5:30PM  | Practical: Afternoon Problem Sets | Instructor | Hereshy
+  2:00PM -  2:45PM  | Lecture: Python 4 | Sofia | Hereshy
+  2:45PM -  2:55PM  | Break |  | Hereshy
+  2:55PM -  3:30PM  | Lecture: Python 4 continued| Sofia | Hereshy
+  3:30PM -  5:30PM  | Practical: Afternoon Problem Sets | TAs | Hereshy
   5:30PM -  7:00PM  | Dinner | All | Blackford
   7:00PM -  8:00PM  | Review Section | TA | Hereshy
-  8:00PM - 11:00PM  | Practical: Evening Problem Sets | Instructor | Hereshy
+  8:00PM - 11:00PM  | Practical: Evening Problem Sets | TAs | Hereshy
   __Thu, Oct 19__ 
   7:30AM -  9:00AM  | Breakfast | All | Blackford
   9:00AM -  9:45AM  | Lecture: Morning Lecture Part I | Instructor | Hereshy
