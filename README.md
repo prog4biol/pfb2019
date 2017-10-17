@@ -1307,7 +1307,7 @@ Collections of data can also be stored in special data types, i.e., tuples, list
 
 > The list index starts at 0
 
-####Command line parameters: A Special Built-in List
+#### Command line parameters: A Special Built-in List
 
 Command line parameters follow the name of a script or program and have spaces between them. They allow a user to pass information to a script on the command line when that script is being run. Python stores all the pieces of the command line in a special list called sys.argv. 
 
