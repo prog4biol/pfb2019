@@ -1410,7 +1410,6 @@ We'll cover `dir()` in more detail later
 
 
 
-
 ---
 
 ### [Link to Python 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_01_problemset.md)
@@ -1615,8 +1614,8 @@ Control Statements are used to direct the flow of your code and create the oport
 
 #### If Statement
 
-- Use the If Statement to test for truth and to execute lines of code if true.  
-- When the expression evaluates to true each of the statements indented below the if statment, also known as the nested statement block, will be executed.
+- Use the `if` Statement to test for truth and to execute lines of code if true.  
+- When the expression evaluates to true each of the statements indented below the `if` statment, also known as the nested statement block, will be executed.
 
 
 **if**
@@ -1640,7 +1639,7 @@ found AGC in your dna sequence
 
 **else**
 
-- The If portion of the if/else statement behave as before. 
+- The`if` portion of the if/else statement behave as before. 
 - The first indented block is executed if the condition is true.
 - If the condition is false, the second indented else block is executed.
 
@@ -1820,16 +1819,16 @@ Many numeric functions are not built into the Python core and need to be include
 These next functions are found in the math module and need to be imported. To use these functions, prepend the function with the module name, i.e, `math.ceil(15.5)`  
 
 
-| math.function | Description                              |
-| ------------- | ---------------------------------------- |
-| `math.ceil(x)`     | return the smallest integer greater than or equal to x is returned |
-| `math.floor(x)`    | return the largest integer less than or equal to x. |
-| `math.exp(x)`      | The exponential of x: e<sup>x</sup> is returned |
-| `math.log(x)`      | the natural logarithm of x, for x > 0 is returned |
-| `math.log10(x)`    | The base-10 logarithm of x for x > 0 is returned |
-| `math.modf(x)`     | The fractional and integer parts of x are returned in a two-item tuple. |
-| `math.pow(x, y)`   | The value of x raised to the power y is returned          |
-| `math.sqrt(x)`     | Return the square root of x for x >= 0 |
+| math.function    | Description                              |
+| ---------------- | ---------------------------------------- |
+| `math.ceil(x)`   | return the smallest integer greater than or equal to x is returned |
+| `math.floor(x)`  | return the largest integer less than or equal to x. |
+| `math.exp(x)`    | The exponential of x: e<sup>x</sup> is returned |
+| `math.log(x)`    | the natural logarithm of x, for x > 0 is returned |
+| `math.log10(x)`  | The base-10 logarithm of x for x > 0 is returned |
+| `math.modf(x)`   | The fractional and integer parts of x are returned in a two-item tuple. |
+| `math.pow(x, y)` | The value of x raised to the power y is returned |
+| `math.sqrt(x)`   | Return the square root of x for x >= 0   |
 
 
 ```python
