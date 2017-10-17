@@ -7,7 +7,7 @@ __INSTALL__
 2. PyCharm
 3. iTerm
 4. Chrome
-5. python3
+5. [Python 3.5 Anaconda Distribution](https://www.anaconda.com/download/#macos)
 6. emacs
 
 
