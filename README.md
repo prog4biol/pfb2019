@@ -1420,9 +1420,9 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 
 An operator in a programming language is a symbol that tells the compiler or interpreter to perform specific mathematical, relational or logical operation and produce a result. Here we explain the concept of operators.
 
-#### Arthmetic Operators  
+#### Arithmetic Operators  
 
-In Python we can write statements that perform mathmatical calculations. To do this we need to use operators that are specific for this purpose. Here are arthemtic operators:
+In Python we can write statements that perform mathmatical calculations. To do this we need to use operators that are specific for this purpose. Here are arithemtic operators:
 
 
 | Operator | Description                              | Example            | Result |
@@ -1446,8 +1446,8 @@ We use assignment operators to assign values to variables. You have been using t
 | `=`      | `a = 3`                | `result = 3`                 | 3                   |
 | `+=`     | `result = result + 2`  | `result = 3 ; result += 2`   | 5                   |
 | `-=`     | `result = result - 2`  | `result = 3 ; result -= 2`   | 1                   |
-| `*=`     | `result = result * 2`  | `result = 3  ; result \*= 2` | 6                   |
-| `=`      | `result = result / 2`  | `result = 3 ; result /= 2`   | 1.5                 |
+| `*=`     | `result = result * 2`  | `result = 3  ; result *= 2`  | 6                   |
+| `/=`     | `result = result / 2`  | `result = 3 ; result /= 2`   | 1.5                 |
 | `%=`     | `result = result % 2`  | `result = 3 ; result %= 2`   | 1                   |
 | `**=`    | `result = result ** 2` | `result = 3 ; result **= 2`  | 9                   |
 | `//=`    | `result = result // 2` | `result = 3 ; result //= 3`  | 1                   |
@@ -1479,7 +1479,7 @@ Logical operators allow you to combine two or more sets of comparisons. You can 
 | Operator | Description                              | Example              | Result |
 | -------- | ---------------------------------------- | -------------------- | ------ |
 | `and`    | True if left operand is True and right operand is True | `bool(3>=2 and 2<3)` | True   |
-| `or`     | TRUE if left operand is Treu or right operand is True | `bool(3==2 or 2<3)`  | True   |
+| `or`     | True if left operand is True or right operand is True | `bool(3==2 or 2<3)`  | True   |
 | `not`    | Reverses the logical status              | `bool(not False)`    | True   |
 
 
@@ -1525,7 +1525,7 @@ Operators are listed in order of precedence. Highest listed first. Not all the o
 | `+` `-`                                  | Addition and subtraction                 |
 | `>>` `<<`                                | Right and left bitwise shift             |
 | `&`                                      | Bitwise 'AND'                            |
-| `^` `|`                                  | Bitwise exclusive 'OR' and regular 'OR'  |
+| `^` `\|`                                  | Bitwise exclusive 'OR' and regular 'OR'  |
 | `<=` `<` `>` `>=`                        | Comparison operators                     |
 | `<>` `==` `!=`                           | Equality operators                       |
 | `=` `%=` `/=` `//=` `-=` `+=` `*=` `**=` | Assignment operators                     |
