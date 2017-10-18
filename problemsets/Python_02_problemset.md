@@ -26,7 +26,7 @@ GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
 8. Create a script that has a if/elif/else statement that
     - Tests to see if a number is positive or negative
     - if it is positive, is it bigger or smaller than 50
-    - if it is smaller, is it an even number
-    - if it is larger, is it divisible by 3.  
+      - if it is smaller, is it an even number
+      - if it is larger, is it divisible by 3.  
 
 9. ADD/COMMIT/PUSH
