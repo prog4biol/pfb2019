@@ -2556,7 +2556,7 @@ Here is a list:
 | 1     | aaa   |
 | 2     | agg   |
 
-Let's access the 0th value. 
+Let's access the 0th value, this is the element in the list with index 0. You'll need an index number (`0`) inside square brackets like this `[0]` . This goes after the name of the list (`codons`)
 ```python
 >>> codons = [ 'atg' , 'aaa' , 'agg' ]
 >>> codons[0]
@@ -2638,30 +2638,30 @@ This works in exactly the same way with lists as it does with strings. This is b
 >>> print (codons[0:3])
 ['atg', 'aaa', 'agg']
 ```
-> codons[1:3] returns every value starting with the value of codons[1] up to but not including codons[3]
-> codons[3:] returns every value starting with the value of codons[3] and every value after.
-> codons[:3] returns every value up to but not including codons[3]
-> codons[0:3] is the same as codons[:3]
+> `codons[1:3]` returns every value starting with the value of codons[1] up to but not including codons[3]
+> `codons[3:]` returns every value starting with the value of codons[3] and every value after.
+> `codons[:3]` returns every value up to but not including codons[3]
+> `codons[0:3]` is the same as `codons[:3]`
 
 
 #### List Operators
 
 | Operator | Description   | Example                                  |
 | -------- | ------------- | ---------------------------------------- |
-| `+`      | Concatenation | [10, 20, 30] + [40, 50, 60] returns [10, 20, 30, 40, 50, 60] |
-| `*`      | Repetition    | ['atg'] * 4 returns ['atg','atg','atg','atg'] |
-| `in`     | Membership    | 20 in [10, 20, 30]  returns True         |
+| `+`      | Concatenation | `[10, 20, 30] + [40, 50, 60]` returns `[10, 20, 30, 40, 50, 60]` |
+| `*`      | Repetition    | `['atg'] * 4` returns `['atg','atg','atg','atg']` |
+| `in`     | Membership    | `20 in [10, 20, 30]`  returns `True`     |
 
 #### List Functions
 
 | Functions                               | Description                              | Example                                  |
 | --------------------------------------- | ---------------------------------------- | ---------------------------------------- |
-| `len(list)`                             | returns the length or the number of values in list | len([1,2,3]) returns 3                   |
-| `max(list)`                             | returns the value with the largest ascii value | max(['a','A','z']) returns 'z'           |
-| `min(list)`                             | returns the value with the smallest ascii value | min(['a','A','z']) returns 'A'           |
-| `list(seq)`                             | converts a tuple into a list             | list(('a','A','z')) returns ['a', 'A', 'z'] |
-| `sorted(list, key=None, reverse=False)` | returns a sorted list based on the key provided | sorted(['a','A','z']) returns ['A', 'a', 'z'] |
-|                                         |                                          | sorted(['a','A','z'],key=str.lower) returns ['a', 'A', 'z'] |
+| `len(list)`                             | returns the length or the number of values in list | `len([1,2,3])` returns `3`               |
+| `max(list)`                             | returns the value with the highest ASCII value (=latest in ASCII alphabet) | `max(['a','A','z'])` returns `'z'`       |
+| `min(list)`                             | returns the value with the lowest ASCII value (=earliest in ASCII alphabet) | `min(['a','A','z'])` returns `'A'`       |
+| `list(seq)`                             | converts a tuple into a list             | `list(('a','A','z'))` returns `['a', 'A', 'z']` |
+| `sorted(list, key=None, reverse=False)` | returns a sorted list based on the key provided | `sorted(['a','A','z'])` returns `['A', 'a', 'z']` |
+|                                         | `str.lower()` makes all the elements lowercase before sorting | `sorted(['a','A','z'],key=str.lower)` returns `['a', 'A', 'z']` |
 
 
 #### List Methods
@@ -2673,13 +2673,13 @@ For these examples use: `list = [1,2,3]` and `codons = [ 'atg' , 'aaa' , 'agg' ]
 | Method                    | Description                              | Example                                  |
 | ------------------------- | ---------------------------------------- | ---------------------------------------- |
 | `list.append(obj)`        | appends an object to the end of a list   | list.append(9) ; print(list) ; returns [1,2,3,9] |
-| `list.count(obj)`         | counts the occurence of an object in a list | list.count(2) returns 1                  |
+| `list.count(obj)`         | counts the occurences of an object in a list | list.count(2) returns 1                  |
 | `list.index(obj)`         | returns the lowest index where the given object is found | list.index(2) returns 1                  |
-| `list.pop()`              | removes and returns the last value in the list. The list is now 1 value shorter | list.pop() returns 3                     |
-| `list.insert(index, obj)` | inserts a value at the given index       | list.insert(0,100) ; print(list) returns [100, 1, 2, 3] |
-| `list.extend(new_list)`   | adds the provided list to the end of list | list.extend(['a', 'z']) ; print(list) returns [1, 2, 3, 'a', 'z'] |
+| `list.pop()`              | removes and returns the last value in the list. The list is now one element shorter | list.pop() returns 3                     |
+| `list.insert(index, obj)` | inserts a value at the given index. Remember to think about the divisions between the elements | list.insert(0,100) ; print(list) returns [100, 1, 2, 3] |
+| `list.extend(new_list)`   | appends `new_list` to the end of `list`  | list.extend([7, 8]) ; print(list) returns [1, 2, 3, 7,8] |
 | `list.pop(index)`         | removes and returns the value of the index argument. The list is now 1 value shorter | list.pop(0) returns 1                    |
-| `list.remove(obj)`        | finds the lowest index of the given object and removes the value. The list is now 1 value shorter | codons.remove('aaa') ; print(codons) returns  [ 'atg' , 'agg' ] |
+| `list.remove(obj)`        | finds the lowest index of the given object and removes it from the list. The list is now one element shorter | codons.remove('aaa') ; print(codons) returns  [ 'atg' , 'agg' ] |
 | `list.reverse()`          | reverses the order of the list           | list.reverse() ; print(list) returns [3,2,1] |
 | `list.copy()`             | Returns a shallow copy of list. Shallow vs Deep only matters in multidementional datastructures. |                                          |
 | `list.sort([func])`       | sorts a list using the provided function. Does not return a list. The list has been changed. Advanced list sort will be covered once writting your own functions has been disccussed. | codons.sort() ; print(codons) returns ['aaa', 'agg', 'atg'] |
@@ -3011,8 +3011,8 @@ Loops control statements allow for altering the normal flow of execution.
 
 | Control Statement | Description                              |
 | ----------------- | ---------------------------------------- |
-| `break`             | A loop is terminated when a break statement is executed. All the lines of code after the break, but within the loop block are not executed. No more iteration of the loop are preformed |
-| `continue`          | A single iteration of a loop is terminated when a continue statement is executed. The next iteration will proceed normally. |
+| `break`           | A loop is terminated when a break statement is executed. All the lines of code after the break, but within the loop block are not executed. No more iteration of the loop are preformed |
+| `continue`        | A single iteration of a loop is terminated when a continue statement is executed. The next iteration will proceed normally. |
 
 
 #### Loop Control: Break  
@@ -3274,10 +3274,10 @@ NameError: name 'HDAC' is not defined
 
 Dictionary Operators:
 
-| Operator | Description                             |
+| Operator | Description                              |
 | -------- | ---------------------------------------- |
-| `in`       | `key in dict` returns True if the key exists in the dictionary |
-| `not in`   | `key not in dict` returns True if the key does not exist in the dictionary |
+| `in`     | `key in dict` returns True if the key exists in the dictionary |
+| `not in` | `key not in dict` returns True if the key does not exist in the dictionary |
 
 Because python generates a NameError if you try to use a key that doesn't exist in the dictionary, you probably need to check whether a key exists before trying to use it.
 
@@ -3310,8 +3310,8 @@ for key in sorted(genes):
 
 #### Dictionary Functions
 
-| Function       | Description                              |
-| -------------- | ---------------------------------------- |
+| Function         | Description                              |
+| ---------------- | ---------------------------------------- |
 | `len(dict)`      | returns the total number of key/value pairs |
 | `str(dict)`      | returns a string representation of the dictionary |
 | `type(variable)` | Returns the type or class of the variable passed to the function. If the variable is dictionary, then it would return a dictionary type. |
@@ -3320,8 +3320,8 @@ These functions work on several other dataypes too!
 
 #### Dictionary Methods
 
-| Method                               | Description                              |
-| ------------------------------------ | ---------------------------------------- |
+| Method                                 | Description                              |
+| -------------------------------------- | ---------------------------------------- |
 | `dict.clear()`                         | Removes all elements of dictionary dict  |
 | `dict.copy()`                          | Returns a shallow copy of dictionary dict. Shallow vs Deep only matters in multidementional datastructures. |
 | `dict.fromkeys(seq,value)`             | Create a new dictionary with keys from seq (python sequence type) and values set to value. |
@@ -3432,14 +3432,14 @@ The symetric difference are the elements that are only in the first set plus the
 
 #### Set Functions
 
-| Function    | Description                              |
-| ----------- | ---------------------------------------- |
+| Function      | Description                              |
+| ------------- | ---------------------------------------- |
 | `all()`       | returns True if all elements of the set are true (or if the set is empty). |
 | `any()`       | returns True if any element of the set is true. If the set is empty, return False. |
 | `enumerate()` | returns an enumerate object. It contains the index and value of all the items of set as a pair. |
-| `len()`       | returns the number of items in the set.   |
-| `max()`       | returns the largest item in the set.      |
-| `min()`       | returns the smallest item in the set.     |
+| `len()`       | returns the number of items in the set.  |
+| `max()`       | returns the largest item in the set.     |
+| `min()`       | returns the smallest item in the set.    |
 | `sorted()`    | returns a new sorted list from elements in the set (does not alter the original set). |
 | `sum()`       | returns the sum of all elements in the set. |
 
@@ -3447,14 +3447,14 @@ The symetric difference are the elements that are only in the first set plus the
 
 #### Set Methods
 
-| Method                                | Description                              |
-| ------------------------------------- | ---------------------------------------- |
+| Method                                  | Description                              |
+| --------------------------------------- | ---------------------------------------- |
 | `set.add(new)`                          | adds a new element                       |
 | `set.clear()`                           | remove all elements                      |
 | `set.copy()`                            | returns a shallow copy of a set          |
 | `set.difference(set2)`                  | returns the difference of set and set2   |
 | `set.difference_update(set2)`           | removes all elements of another set from this set |
-| `set.discard(element)`                 | removes an element from set if it is found in set. (Do nothing if the element is not in set) |
+| `set.discard(element)`                  | removes an element from set if it is found in set. (Do nothing if the element is not in set) |
 | `set.intersection(sets)`                | return the intersection of set and the other provided sets |
 | `set.intersection_update(sets)`         | updates set with the intersection of set and the other provided sets |
 | `set.isdisjoint(set2)`                  | returns True if set and set2 have no intersection |
