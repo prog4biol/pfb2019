@@ -2782,13 +2782,13 @@ Done
 > The while condition was true 5 times and the while block of code was executed 5 times.
 >
 > - count is equal to 0 when we begin
-> - 0 is less than 5 so we execute the while block 1 time
+> - 0 is less than 5 so we execute the while block
 > - count is printed
 > - count is incremented (count = count + 1)
 > - count is now equal to 1.
 > - 1 is less than 5 so we execute the while block for the 2nd time.
 > - this continues until count is 5. 
-> - 5 is not less than 5 so the while block is not executed.
+> - 5 is not less than 5 so we exit the while block
 > - The first line following the while statement is executed, "Done" is printed
 
 
@@ -2937,7 +2937,7 @@ range(0, 5)
 [0, 1, 2, 3, 4]
 ```
 
-The function `range()` can be used in conjunction with a for loop to iterate over a list of incremental numbers
+The function `range()` can be used in conjunction with a for loop to iterate over a range of numbers. Range also starts at 0 and thinks about the gaps between the numbers.
 Code:
 ```python
 #!/usr/bin/env python3
