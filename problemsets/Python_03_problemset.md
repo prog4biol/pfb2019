@@ -9,7 +9,7 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACC
 
 2. Now add in lines of code to calculate GC content of the above DNA string. Run with test data first!!
 
-3. Write a new script that prints out the reverse complement of the above DNA string. 
+3. Write a new script that prints out the reverse complement of the above DNA string. [Hint for reverse](http://bfy.tw/EXap)
 	
 >
 > ```
@@ -31,7 +31,7 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACC
 Fragment\tPostion\tLength  
 ```
 
-8. Create a list and add each fragemnt to it. 
+8. Create a list and add each fragment to it. 
 
 9. Sort the list. 
 
