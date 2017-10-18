@@ -245,22 +245,23 @@ __Instructors__
 Simon Prochnik  
 Sofia Robb     
 
-# Big Picture
+## Big Picture
 
 ## Why?
 
-_Why is it important for **Biologists** to learn to program?_
+Why is it important for **biologists** to learn to program?
+
 You probably already know the answer to this question since you are here.   
 
-We firmly believe that knowing how to program is just as essential as knowing how to run a gel or set up a PCR reaction. The data we can now get from a single experiment can be overwhelming. This data often needs to be reformatted, filtered, and analyzed in unqiue ways. Programming allows you to perform these tasks in a **reproducible**, **efficient**, and **thoughtful** way.
+We firmly believe that knowing how to program is just as essential as knowing how to run a gel or set up a PCR reaction. The data we now get from a single experiment can be overwhelming. This data often needs to be reformatted, filtered, and analyzed in unique ways. Programming allows you to perform these tasks in an **efficient** and **reproducible** way.
 
 
 ## Helpful Tips
 
-_What are our tips for being successful in your efforts to learn to program?_
+What are our tips for having a successful programming course?
 
 
-1. Practice, practice, practice. Please, spend as much time possible actually coding.
+1. Practice, practice, practice. Please spend as much time as possible actually coding.
 
 2. Write only a line or two of code, then test it. If you write too many lines, it becomes more difficult to debug if there is an error.
 
@@ -272,13 +273,13 @@ _What are our tips for being successful in your efforts to learn to program?_
 
 6. Review sessions are important, but practice is more important.
 
-7. It is essential that we help you to learn how to find solutions on your own.
+7. Our key goal is to slowly, but surely, teach you how to solve problems on your own.
 
 ---
 
 # Unix
 
-# Unix 1
+## Unix 1
 
 ### Unix Overview
 
@@ -573,7 +574,7 @@ modes
 ```
 
 
-#### Arguments and Command Switches
+#### Arguments and Command Line Switches 
 
 
 Many commands take arguments.  Arguments are often the names of one or more files to operate on.  Most commands also take command-line "switches" or "options", which fine-tune what the command does.  Some commands recognize "short switches" that consist of a minus sign `-` followed by a single character, while others recognize "long switches" consisting of two minus signs `--` followed by a whole word.
@@ -1081,22 +1082,22 @@ Python has
 
 **Classes** are a way to encapulate (organize) variables and functions. Objects get their variables and methods from the class they belong to. 
 
-**Methods** are just functions that belong to a Class. Objects that belong to the a Class can use Methods from that Class.
+**Methods** are just functions that belong to a class. Objects that belong to the a class can use methods from that class.
 
 <p>&nbsp;</p>
 
 ### Running Python
 
-There are two versions of python: python 2 and python 3. We will be using 3. This version fixes some of the problems with python 2 and breaks some other things. A lot of code has already been written for python 2 (it's older), but going forwards, more and more new code development will use python 3.
+There are two versions of Python: Python 2 and Python 3. We will be using 3. This version fixes some of the problems with Python 2 and breaks some other things. A lot of code has already been written for Python 2 (it's older), but going forwards, more and more new code development will use Python 3.
 
 
 #### Interactive Interpreter
 
-Python can be run one line at a time in an interactive interpreter. You can think of this as a python shell. To lauch the interpreter type the following into your terminal window:  
+Python can be run one line at a time in an interactive interpreter. You can think of this as a Python shell. To lauch the interpreter type the following into your terminal window:  
 
 `$ python3`    
 
-Note: '$' indicates the command line prompt  
+Note: '$' indicates the command line prompt. Recall from Unix 1 that every computer can have a different prompt!
 
 First Python Commands:
 
@@ -1122,7 +1123,7 @@ print ("Hello, PFB2017!")
 
 #### Running Python Scripts
 
-Typing the python command followed by the name of a script makes python execute the script. Recall that we just saw you can run an interactive interpreter by just typing `python` on the command line
+Typing the Python command followed by the name of a script makes Python execute the script. Recall that we just saw you can run an interactive interpreter by just typing `python` on the command line
 
 Execute the Python script like this (% represents the prompt)
 
@@ -1150,7 +1151,7 @@ You can look at the permissions with
 
 The first field of -, r, w and x characters define the permissions of the file. The three 'x' characters means anyone can execute or run this script. 
 
-We also need to add a line at the beginning of the script that tells the shell to run python3 to interpret the script. This line starts with #, so it looks like a comment to python. The '!' is important as is the space between env and python3. The program /usr/bin/env looks for where python3 is installed and runs the script with python3. The details may seem a bit complex, but you can just copy and paste this 'magic' line.
+We also need to add a line at the beginning of the script that tells the shell to run python3 to interpret the script. This line starts with #, so it looks like a comment to python. The '!' is important as is the space between `env` and `python3`. The program `/usr/bin/env` looks for where `python3` is installed and runs the script with `python3`. The details may seem a bit complex, but you can just copy and paste this 'magic' line.
 
 The file test.py now looks like this
 
@@ -1162,11 +1163,11 @@ print ("Hello, PFB2017!")
 Now you can simply type the name of the script to run it. Like this
 
 ```
-% test.py
+% ./test.py
 Hello, PFB2017!
 ```
 
-<p>&nbsp;</p>
+
 
 ### Syntax
 
@@ -1176,11 +1177,11 @@ Hello, PFB2017!
 
 A Python identifier is a name used to identify a variable, function, class, module or other object. An identifier starts with a letter A to Z or a to z or an underscore (_) followed by zero or more letters, underscores and digits (0 to 9).
 
-Python does not allow punctuation characters such as @, $, and % within identifiers. Python is a case sensitive programming language. Thus, seq_id and seq_ID are two different identifiers in Python.
+Python does not allow punctuation characters such as @, $, and % within identifiers. Python is a case sensitive programming language. Thus, `seq_id` and `seq_ID` are two different identifiers in Python.
 
 #### Naming conventions for Python Identifiers
 
- * The first character is lowercase, unless it is a name of a Class. Classes should begin with an uppercase characters. (ex. Seq)
+ * The first character is lowercase, unless it is a name of a class. Classes should begin with an uppercase characters. (ex. Seq)
  * Private identifiers begin with an underscore. (ex. `_private`)
  * Strong private identifiers begin with two underscores. (ex. `__private`)
  * Language-defined special names begin and end with two underscores. (ex. `__special__`)
@@ -1216,6 +1217,7 @@ for x in (1,2,3,4,5):
         print("Hello")
     else: 
         print(x)
+print('All Done!')
 ```
 
 
@@ -1241,18 +1243,6 @@ print ("Hello, PFB2017!") # this line prints output to the screen
 
 Blank lines are also important for increasing the readability of the code. You should separate pieces of code that go together with a blank line to make 'paragraphs' of code. Blank lines are ignored by the python interpreptor
 
-#### Python Options
-
-```bash
-$ python -h
-usage: python [option] ... [-c cmd | -m mod | file | -] [arg] ...
-Options and arguments (and corresponding environment variables):
--c cmd : program passed in as string (terminates option list)
--d     : debug output from parser (also PYTHONDEBUG=x)
--E     : ignore environment variables (such as PYTHONPATH)
--h     : print this help message and exit
-```
-
 
 
 ### Data Types and Variables
@@ -1267,9 +1257,10 @@ Numbers and strings are two common data types. Literal numbers and strings like 
 
 For Example:  
 ```python
-first_variable = 5
-first_variable = 10
+gene_count = 5
+gene_count = 10
 ```
+>You should give your variables names that help you understand what they store. gene_count, expression, sequences are all good identifiers or variable names. k, x, data, var1, var2 are bad because you can't tell what they store. This means it's harder to understand the script and to  spot errors or bugs in your script.  
 
 Different types of data can be assigned to variables, i.e., integers (1,2,3), floats (floating point numbers, 3.1415), and strings (text).
 
@@ -1282,66 +1273,15 @@ message = "Welcome to python" # this is a string
 
 10, 2.5, and "Welcome to python" are singular pieces of data being stored in an indivudual variables.  
 
-Collections of data can also be stored in special data types, i.e., tuples, lists, sets, and dictionaries.  
+Collections of data can also be stored in special data types, i.e., tuples, lists, sets, and dictionaries. Generally, you should try to store like with like, so each element in the data type should be the same kind of data, like an expression value from RNA-seq or a count of how many exons are in a gene or a read sequence.  
 
  
 
-#### Lists 
-
-- Lists are used to store an ordered, *indexed* collection of data.
-- Lists are mutable: the number of elements in the list and what's stored in each element can change
-- Lists are enclosed in square brackets and items are separated by commas
-
-
-```python
-[ 'atg' , 'aaa' , 'agg' ]
-```
-
-
-| Index | Value |
-| ----- | ----- |
-| 0     | atg   |
-| 1     | aaa   |
-| 2     | agg   |
-
-> The list index starts at 0
-
-####Command line parameters: A Special Built-in List
-
-Command line parameters follow the name of a script or program and have spaces between them. They allow a user to pass information to a script on the command line when that script is being run. Python stores all the pieces of the command line in a special list called sys.argv. 
-
-You need to import the sys module at the beginning of your script like this
-
-```
-import sys
-```
-
-If you write this on the command line:
-```bash
-$ calculate_sum.py 5 7
-```
-This happens inside the script:
-> the script name, and the numbers 5 and 7 are contained in a list called `sys.argv`.  
-
-> These are the command line parameters, or arguments you want to pass to your script.  
-> `sys.argv[0]` is the script name.  
-> You can access values of the other parameters by their indices, starting with 1, so `sys.argv[1]` is 5 and `sys.argv[2]` is 7.  
-> If you wanted to calculate the sum in your script, you would add these two variables and print the result. Maybe your code would look something like this
-
-
-```python
-#!/usr/bin/env python3
-import sys
-a = sys.argv[1]
-b = sys.argv[2]
-print(a+b) # + is a sum operator on integers
-```
-
-#### Tuple
+#### Tuples
 
 - Tuples are similar to lists and contain ordered, *indexed* collection of data.
 - **Tuples are immutable: you can't change the values or the number of values**
-- A tuple is enclosed in parenteses and items are separated by commas.
+- A tuple is enclosed in parentheses and items are separated by commas.
 ```python
 ( 'Jan' , 'Feb' , 'Mar' , 'Apr' , 'May' , 'Jun' , 'Jul' , 'Aug' , 'Sep' , 'Oct' , 'Nov' , 'Dec' )
 ```
@@ -1385,28 +1325,86 @@ print(a+b) # + is a sum operator on integers
 | TP53  | GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC |
 | BRCA1 | GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA |
 
+#### Lists 
+
+- Lists are used to store an ordered, *indexed* collection of data.
+- Lists are mutable: the number of elements in the list and what's stored in each element can change
+- Lists are enclosed in square brackets and items are separated by commas
 
 
+```python
+[ 'atg' , 'aaa' , 'agg' ]
+```
 
-#### Type Conversion
 
-Sometimes you may need to convert data into a specific type. Here are some examples of functions that will help you to do this.
+| Index | Value |
+| ----- | ----- |
+| 0     | atg   |
+| 1     | aaa   |
+| 2     | agg   |
+
+> The list index starts at 0
+
+#### Command line parameters: A Special Built-in List
+
+Command line parameters follow the name of a script or program and have spaces between them. They allow a user to pass information to a script on the command line when that script is being run. Python stores all the pieces of the command line in a special list called `sys.argv`. 
+
+You need to import the sys module at the beginning of your script like this
+
+```python
+#!/usr/bin/env python3
+import sys
+```
+
+Let's imagine we have a script called friends.py. If you write this on the command line:
+```bash
+$ friends.py Joe Anita
+```
+This happens inside the script:
+> the script name 'friends.py', and the strings 'Joe' and 'Anita'  appear in a list called `sys.argv`.  
+
+> These are the command line parameters, or arguments you want to pass to your script.  
+> `sys.argv[0]` is the script name.  
+> You can access values of the other parameters by their indices, starting with 1, so `sys.argv[1]` contains 'Joe'  and `sys.argv[2]` contains 'Anita'. You access elements in a list by adding square brackets and the numerical index after the name of the list. 
+> If you wanted to print a message saying these two people are friends, you might write some code like this
 
 
-| Function   | Description                              |
-| ---------- | ---------------------------------------- |
-| `int(x)`   | Converts x to an integer.                |
-| `float(x)` | Converts x to a floating-point number.   |
-| `str(x)`   | Converts x to a string.                  |
-| `chr(x)`   | Converts an integer to a character.      |
-| `tuple(s)` | Converts s to a tuple.                   |
-| `list(s)`  | Converts s to a list.                    |
-| `set(s)`   | Converts s to a set.                     |
-| `dict(d)`  | Creates a dictionary. d must be a sequence of (key,value) tuples. |
-| `repr()`   | Makes a string representation of an object. Useful for finding out what kind (Class) of object you are dealing with. |
+```python
+#!/usr/bin/env python3
+import sys
+friend1 = sys.argv[1] # get first command line parameter
+friend2 = sys.argv[2] # get second command line parameter
+# now print a message to the screen
+print(friend1,'and',friend2,'are friends')
+```
+
+The advantage of getting input from the user from the command line is that you can write a script that is general. It can print a message with any input the user provides. This makes it flexible. 
+The user also supplies all the data the script needs on the command line so the script doesn't have to ask the user to input a name and wait til the user does this. The script can run on its own with no further interaction from the user. This frees the user to work on something else. Very handy!
+
+#### What kind of object am I working with?
+
+You have an identifier in your code called `data`. Does it represent a string or a list or a dictionary? Python has a couple of functions that help you figure this out.
+
+| Function     | Description                              |
+| ------------ | ---------------------------------------- |
+| `type(data)` | tells you which class your object belongs to |
+| `dir(data)`  | tells you which methods are available for your object |
+
+We'll cover `dir()` in more detail later
+
+```python
+>>> data = [2,4,6]
+>>> type(data)
+<class 'list'>
+>>> data = 5
+>>> type(data)
+<class 'int'>
+```
+
+
 
 ---
-                                   
+
 ### [Link to Python 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_01_problemset.md)
 
 -------
@@ -1417,9 +1415,9 @@ Sometimes you may need to convert data into a specific type. Here are some examp
 
 An operator in a programming language is a symbol that tells the compiler or interpreter to perform specific mathematical, relational or logical operation and produce a result. Here we explain the concept of operators.
 
-#### Arthmetic Operators  
+#### Arithmetic Operators  
 
-In Python we can write statements that perform mathmatical calculations. To do this we need to use operators that are specific for this purpose. Here are arthemtic operators:
+In Python we can write statements that perform mathmatical calculations. To do this we need to use operators that are specific for this purpose. Here are arithemtic operators:
 
 
 | Operator | Description                              | Example            | Result |
@@ -1429,7 +1427,7 @@ In Python we can write statements that perform mathmatical calculations. To do t
 | `*`      | Multiplication                           | `3*2`              | 6      |
 | `/`      | Division                                 | `3/2`              | 1.5    |
 | `%`      | Modulus (divides left operand by right operand and returns the remainder) | `3%2`              | 1      |
-| `**`     | Exponent                                 | `3*\2`             | 9      |
+| `**`     | Exponent                                 | `3**2`             | 9      |
 | `//`     | Floor Division (result is the quotient with digits after the decimal point removed. If one of the operands is negative, the result is floored, i.e., rounded away from zero | `3//2`  ; `-11//3` | 1 ; -4 |
 
 
@@ -1438,16 +1436,16 @@ In Python we can write statements that perform mathmatical calculations. To do t
 
 We use assignment operators to assign values to variables. You have been using the `=` assignment opertator. Here are others:
 
-| Operator | Equivalent to          | Example                      | result evaluates to |
-| -------- | ---------------------- | ---------------------------- | ------------------- |
-| `=`      | `a = 3`                | `result = 3`                 | 3                   |
-| `+=`     | `result = result + 2`  | `result = 3 ; result += 2`   | 5                   |
-| `-=`     | `result = result - 2`  | `result = 3 ; result -= 2`   | 1                   |
-| `*=`     | `result = result * 2`  | `result = 3  ; result \*= 2` | 6                   |
-| `=`      | `result = result / 2`  | `result = 3 ; result /= 2`   | 1.5                 |
-| `%=`     | `result = result % 2`  | `result = 3 ; result %= 2`   | 1                   |
-| `**=`    | `result = result ** 2` | `result = 3 ; result **= 2`  | 9                   |
-| `//=`    | `result = result // 2` | `result = 3 ; result //= 3`  | 1                   |
+| Operator | Equivalent to          | Example                     | result evaluates to |
+| -------- | ---------------------- | --------------------------- | ------------------- |
+| `=`      | `a = 3`                | `result = 3`                | 3                   |
+| `+=`     | `result = result + 2`  | `result = 3 ; result += 2`  | 5                   |
+| `-=`     | `result = result - 2`  | `result = 3 ; result -= 2`  | 1                   |
+| `*=`     | `result = result * 2`  | `result = 3  ; result *= 2` | 6                   |
+| `/=`     | `result = result / 2`  | `result = 3 ; result /= 2`  | 1.5                 |
+| `%=`     | `result = result % 2`  | `result = 3 ; result %= 2`  | 1                   |
+| `**=`    | `result = result ** 2` | `result = 3 ; result **= 2` | 9                   |
+| `//=`    | `result = result // 2` | `result = 3 ; result //= 3` | 1                   |
 
 
 
@@ -1473,11 +1471,11 @@ These operators compare two values and returns true or false.
 
 Logical operators allow you to combine two or more sets of comparisons. You can combine the results in different ways. For example you can 1) demand that all the statements are true, 2) that only one statement needs to be true, or 3) that the statement needs to be false.
 
-| Operator | Description                              | Example              | Result |
-| -------- | ---------------------------------------- | -------------------- | ------ |
-| `and`    | True if left operand is True and right operand is True | `bool(3>=2 and 2<3)` | True   |
-| `or`     | TRUE if left operand is Treu or right operand is True | `bool(3==2 or 2<3)`  | True   |
-| `not`    | Reverses the logical status              | `bool(not False)`    | True   |
+| Operator | Description                              | Example        | Result |
+| -------- | ---------------------------------------- | -------------- | ------ |
+| `and`    | True if left operand is True and right operand is True | `3>=2 and 2<3` | True   |
+| `or`     | True if left operand is True or right operand is True | `3==2 or 2<3`  | True   |
+| `not`    | Reverses the logical status              | `not False`    | True   |
 
 
 
@@ -1509,7 +1507,6 @@ False
 
 
 
-
 #### Operator Precedence
 
 Operators are listed in order of precedence. Highest listed first. Not all the operators listed here are mentioned above. 
@@ -1522,7 +1519,7 @@ Operators are listed in order of precedence. Highest listed first. Not all the o
 | `+` `-`                                  | Addition and subtraction                 |
 | `>>` `<<`                                | Right and left bitwise shift             |
 | `&`                                      | Bitwise 'AND'                            |
-| `^` `|`                                  | Bitwise exclusive 'OR' and regular 'OR'  |
+| `^` `\|`                                 | Bitwise exclusive 'OR' and regular 'OR'  |
 | `<=` `<` `>` `>=`                        | Comparison operators                     |
 | `<>` `==` `!=`                           | Equality operators                       |
 | `=` `%=` `/=` `//=` `-=` `+=` `*=` `**=` | Assignment operators                     |
@@ -1532,8 +1529,7 @@ Operators are listed in order of precedence. Highest listed first. Not all the o
 | `not in`                                 | Negative membership operator             |
 | `not` `or` `and`                         | logical operators                        |
 
-
-
+Note: Find out more about [bitwise operators](https://www.tutorialspoint.com/python/bitwise_operators_example.htm). We will see these operators used in the section on [Sets](https://github.com/srobb1/pfb2017#set-operators).
 
 ### Truth
 
@@ -1611,11 +1607,11 @@ Control Statements are used to direct the flow of your code and create the oport
 
 #### If Statement
 
-- Use the If Statement to test for truth and to execute lines of code if true.  
-- When the expression evaluates to true each of the statements indented below the if statment, also known as the nested statement block, will be executed.
+- Use the `if` Statement to test for truth and to execute lines of code if true.  
+- When the expression evaluates to true each of the statements indented below the `if` statment, also known as the nested statement block, will be executed.
 
 
-**IF**
+**if**
 
 ```python
 if expression :
@@ -1634,9 +1630,9 @@ Returns:
 found AGC in your dna sequence
 ```
 
-**ELSE**
+**else**
 
-- The If portion of the if/else statement behave as before. 
+- The`if` portion of the if/else statement behave as before. 
 - The first indented block is executed if the condition is true.
 - If the condition is false, the second indented else block is executed.
 
@@ -1729,24 +1725,24 @@ Returns:
 ### Numbers
 
 
-Python recognizes 3 types of numbers: integers, float point numbers, and complex numbers. 
+Python recognizes 3 types of numbers: integers, floating point numbers, and complex numbers. 
 
 #### integer  
 
 - known as an int
 - an int can be positve or negative
-- and **does not** contain a decimal point.
+- and **does not** contain a decimal point or exponent.
 
 #### floating point number  
 
 - known as a float
 - a floating point number can be positve or negative
-- and **does** contain a decimal point
+- and **does** contain a decimal point (`4.875`) or exponent (`4.2e-12`)
 
 #### complex number  
 
 - known as complex
-- is in the form of a+bi where i is the imaginary part.
+- is in the form of a+bi where bi is the imaginary part.
 
 #### Conversion functions    
 
@@ -1780,7 +1776,7 @@ Here are a list of fuctions that take numbers as arguments. These use useful thi
 | function          | Description                              |
 | ----------------- | ---------------------------------------- |
 | `abs(x)`          | The absolute value of x: the (positive) distance between x and zero. |
-| `round(x [,n])`   | x rounded to n digits from the decimal point. round(0.5) is 1.0 and round(-0.5) is -1.0. |
+| `round(x [,n])`   | x rounded to n digits from the decimal point. round() rounds to an even integer if the value is exactly between two integers, so round(0.5) is 0 and round(-0.5) is 0. round(1.5) is 2. **Rounding to a fixed number of decimal places can give unpredictable results.** |
 | `max(x1, x2,...)` | The largest positive argument is returned |
 | `min(x1, x2,...)` | The smallest argument is returned        |
 
@@ -1801,6 +1797,8 @@ Here are a list of fuctions that take numbers as arguments. These use useful thi
 -2
 >>> round(-2.009,2)
 -2.01
+>>> round(2.675, 2)  # note this rounds down
+2.67
 >>> max(4,-5,5,1,11)
 11
 >>> min(4,-5,5,1,11)
@@ -1811,19 +1809,19 @@ Here are a list of fuctions that take numbers as arguments. These use useful thi
 Many numeric functions are not built into the Python core and need to be included in our script if we want to use them. To include them at the tip of the script type: 
 `import math`
 
-These next functions are found in the math module and need to be imported. To use these function, prepend the function with the module name, i.e, `math.ceil(15.5)`  
+These next functions are found in the math module and need to be imported. To use these functions, prepend the function with the module name, i.e, `math.ceil(15.5)`  
 
 
-| math.function | Description                              |
-| ------------- | ---------------------------------------- |
-| `ceil(x)`     | The smallest integer not greater than x is returned |
-| `floor(x)`    | the largest integer not greater than x is returned. |
-| `exp(x)`      | The exponential of x: e<sup>x</sup> is returned |
-| `log(x)`      | the natural logarithm of x, for x > 0 is returned |
-| `log10(x)`    | The base-10 logarithm of x for x > 0 is returned |
-| `modf(x)`     | The fractional and integer parts of x are returned in a two-item tuple. |
-| `pow(x, y)`   | The value of x\*\*y is returned          |
-| `sqrt(x)`     | The square root of x for x > 0 is returned |
+| math.function    | Description                              |
+| ---------------- | ---------------------------------------- |
+| `math.ceil(x)`   | return the smallest integer greater than or equal to x is returned |
+| `math.floor(x)`  | return the largest integer less than or equal to x. |
+| `math.exp(x)`    | The exponential of x: e<sup>x</sup> is returned |
+| `math.log(x)`    | the natural logarithm of x, for x > 0 is returned |
+| `math.log10(x)`  | The base-10 logarithm of x for x > 0 is returned |
+| `math.modf(x)`   | The fractional and integer parts of x are returned in a two-item tuple. |
+| `math.pow(x, y)` | The value of x raised to the power y is returned |
+| `math.sqrt(x)`   | Return the square root of x for x >= 0   |
 
 
 ```python
@@ -1920,7 +1918,7 @@ You can ask what the length of any sequence is
 ```python
 >>>len('ACGTGA') # length of a string
 6
->>>len ( (0.23, 9.74, -8.17, 3.24, 0.16) )   # length of a tuple, needs two parentheses (( ))
+>>>len( (0.23, 9.74, -8.17, 3.24, 0.16) )   # length of a tuple, needs two parentheses (( ))
 5
 >>>len(['dog', 'cat', 'bird'])  # length of a list
 3
@@ -1946,13 +1944,13 @@ How do you find out what functions work with an object? There's a handy function
 ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
 ```
 
-You can call `dir()` on any object.
+You can call `dir()` on any object, most often, you'll use it in the interactive python shell.
 
 ### Strings
 
 
-- A string is a series of characters starting and ending with a quotation mark.
-- Strings are an example of a Python Sequence. A sequence is defined as a positionally ordered set. This means each element in the set has a position, starting with zero, i.e. 0,1,2,3 and so on until you get to the end of the string. If this is confusing, think about a string as being made up of individual characters: character 0, character 1, character 2 and so on.
+- A string is a series of characters starting and ending with single or double quotation marks.
+- Strings are an example of a python sequence. A sequence is defined as a positionally ordered set. This means each element in the set has a position, starting with zero, i.e. 0,1,2,3 and so on until you get to the end of the string.
 
 #### Quotation Marks  
 
@@ -1962,8 +1960,8 @@ You can call `dir()` on any object.
 
 Notes about quotes:  
 
-- Single and double quotes are the same.  
-- A variable will not be replaced with its value (sometimes called 'interpolation') if placed inside of quotes.  
+- Single and double quotes are equivalent.  
+- A variable name inside quotes is just the string identifier, not the value stored inside the variable.
 - Triple quotes are used before and after a string that spans multiple lines.  
 
 Use of quotation examples:  
@@ -1972,25 +1970,20 @@ Use of quotation examples:
 word = 'word'
 sentence = "This is a sentence."
 paragraph = """This is a paragraph. It is
-made up of multiple lines and sentences.
+made up of multiple lines and sentences. And goes
+on and on.
 """
 ```
 
 #### Strings and the `print()` function
 
-We saw examples of 
-`print()`
-earlier. Lets talk about it a bit more.  
-
-`print()` is a function that takes one or more comma-separated arguments. 
+We saw examples of `print()` earlier. Lets talk about it a bit more.  `print()` is a function that takes one or more comma-separated arguments. 
 
 Let's use the `print()` function to print a string.  
 ```python
 >>>print("ATG")  
 ATG
 ```
-> We get ATG printed to the screen like we expect.
-
 
 Let's assign a string to a variable and print the variable.
 ```python
@@ -1999,8 +1992,6 @@ ATG
 >>> print(dna)
 ATG
 ```
-> We get ATG printed to the screen
-
 
 What happens if we put the variable in quotes?  
 ```python
@@ -2009,7 +2000,7 @@ ATG
 >>> print("dna")
 dna
 ```
-> The literal value of 'dna' is printed to the screen. The variable called 'dna' is not interpolated when it is inside of quotes.
+> The literal string 'dna' is printed to the screen, not the contents 'ATG'
 
 Let's see what happens when we give `print()` two literal strings as arguments.  
 ```python
@@ -2062,7 +2053,7 @@ TTT
 >>> print(dna)
 TTT
 ```
-> The new value of the variable 'dna' is printed to the screen when 'dna' is an agrument for the `print()` function.
+> The new value of the variable 'dna' is printed to the screen when `dna` is an agrument for the `print()` function.
 
 #### Errors and Printing
 
@@ -2078,14 +2069,17 @@ SyntaxError: EOL while scanning string literal
 ```
 > We get a 'SyntaxError' if the closing quote is not used
 
-What will happen if you forget to enclose your literal string in quotes in a print statement?
+What will happen if you forget to enclose a string you want to print in quotes?
 ```python
-print(GGTCTAC)
+>>> print(GGTCTAC)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 NameError: name 'GGTCTAC' is not defined
+>>> GGTCTAC = 5  # define a variable
+>>> print(GGTCTAC)
+5
 ```
-> We get a 'NameError' when the literal string is not enclosed in quotes. 
+> We get a 'NameError' when the literal string is not enclosed in quotes because python is looking for a variable with the name GGTCTAC
 
 ```python
 >>> print "boo"
@@ -2094,7 +2088,7 @@ NameError: name 'GGTCTAC' is not defined
               ^
 SyntaxError: Missing parentheses in call to 'print'
 ```
-In python2, the command was `print`, but this changed in python3 to `print()`, so don't forget the parentheses!
+In python2, the command was `print`, but this changed to `print()` in python3, so don't forget the parentheses!
 
 #### Special/Escape Characters
 
@@ -2107,7 +2101,7 @@ How would you include a new line, carrage return, or tab in your string?
 | \\t              | Tab            |
 
 
-Let's include some escape charcters in our strings and print() functions.
+Let's include some escape charcters in our strings and `print()` functions.
 ```python
 >>> string_with_newline = 'this sting has a new line\nthis is the second line'
 >>> print(string_with_newline)
@@ -2116,15 +2110,14 @@ this is the second line
 ```
 > We printed a new line to the screen
 
-Generally, you don't have to worry about adding whitespace between arguments because `print()` adds space between arguments and a new line at the end for you.
-You can change these with sep= and end=
+`print()` adds spaces between arguments and a new line at the end for you. You can change these with `sep=` and `end=`. Here's an example:
 `print('one line', 'second line' , 'third line', sep='\n', end = '')`
 
 A neater way to do this is to express a multi-line string enclosed in triple quotes (""").
 ```python
->>> print("""this sting has a new line
+>>> print("""this string has a new line
 ... this is the second line""")
-this sting has a new line
+this string has a new line
 this is the second line
 ```
 
@@ -2134,17 +2127,17 @@ Let's print a tab character (\t).
 >>> print(line)
 value1	value2	value3
 ```
-> We get the three words separated by tab characters. A common format for data is tab separated.
+> We get the three words separated by tab characters. A common format for data is to separate columns with tabs like this.
 
 You can add a backslash before any chacter to force it to be printed as a literal. This is called 'escaping'. This is only really useful for printing literal quotes ' and " 
 
 ```python
->>> print("this is a \'word\'")
+>>> print('this is a \'word\'')  # if you want to print a ' inside '...'
 this is a 'word'
->>> print("this is a 'word'")
+>>> print("this is a 'word'") # maybe clearer to print a ' inside "..."
 this is a 'word'
 ```
-> In both cases the single quote is printed to the screen as a quote.
+> In both cases actual single quote character are printed to the screen
 
 If you want every character in your string to remain exactly as it is, declare your string a raw string literal with 'r' before the first quote. This looks ugly, but it works.
 ```python
@@ -2166,11 +2159,16 @@ To concatenate strings use the concatenation operator '+'
 >>> print(dna)
 TAGCTATATAAAATCATAAT
 ```
-> The concatenation operator can be used to combine strings. The newly combined string can be stored in a variable. What happens if you use `+` with numbers (these are integers or ints)?
+> The concatenation operator can be used to combine strings. The newly combined string can be stored in a variable. 
+
+#### The difference between string + and integer +
+
+What happens if you use `+` with numbers (these are integers or ints)?
 
 ```python
 >>> 4+3
 7
+
 ```
 
 For strings, `+` concatenates; for integers, `+` adds.
@@ -2195,7 +2193,7 @@ TAGCTATATAAAATCATAAT
 ```
 > The length of the string, including spaces, is calculated and returned.
 
-The value`len()` returns can be stored in a variable.  
+The value that `len()` returns can be stored in a variable.  
 ```python
 >>> dna_length = len(dna)
 >>> print(dna_length)
@@ -2209,21 +2207,19 @@ The lenth of the DNA sequence: TAGCTATATAAAATCATAAT is 20
 ```
 
 
-<p>&nbsp;</p>  
+
 
 #### Changing String Case
 
-Changing the case of a string is a bit different that you might first expect. For example, to lowercase a string we need to use a method. A method is a function that is specific to a object. When we assign a string to a variable we are creating an instance of a string object. This object has a series of methods that will work on the data that is stored in the object. 
-`lower()`
-function is one of these object methods. 
+Changing the case of a string is a bit different that you might first expect. For example, to lowercase a string we need to use a method. A method is a function that is specific to an object. When we assign a string to a variable we are creating an instance of a string object. This object has a series of methods that will work on the data that is stored in the object. Recall that `dir()` will tell you all the methods that are available for an object. The `lower()` function is a string method. 
 
-Let's do create a new string object.    
+Let's create a new string object.    
 ```python
 dna = "ATGCTTG"
 ```
-> Look familiar? It should. Creating a string object is what we have been doing all along.
+> Look familiar? It should!!! Creating a string object is what we have been doing all along!!! Jeez!!!
 
-Now that we have a string object we can use string methods. The way you use a method is to append the method with a '.' to the variable name.  
+Now that we have a string object we can use string methods. The way you use a method is to put a '.' between the object and the method name.
 ```python
 >>> dna = "ATGCTTG"
 >>> dna.lower()
@@ -2231,7 +2227,7 @@ Now that we have a string object we can use string methods. The way you use a me
 ```
 > the lower() method returns the contents stored in the 'dna' variable in lowercase.
 
-The contents of the 'dna' variable have not been changed. If you want to reuse the returned lowercased value, store it in a new variable.
+The contents of the 'dna' variable have not been changed. Strings are immutable. If you want to keep the lowercased version of the string, store it in a new variable.
 ```python
 >>> print(dna)
 ATGCTTG
@@ -2247,9 +2243,9 @@ The string method can be nested inside of other functions.
 >>> print(dna.lower())
 atgcttg
 ```
-> The value of 'dna' is lowercased and returned. The `print()` function takes the returned value from the `lower()` method and prints it.
+> The contents of 'dna' are lowercased and passed to the `print()` function.
 
-> If you try to use a string method on a object that is not a string you will get an error.
+If you try to use a string method on a object that is not a string you will get an error.
 
 ```python
 >>> nt_count = 6
@@ -2261,6 +2257,7 @@ AttributeError: 'int' object has no attribute 'lower'
 > You get an AttributeError when you use a method on the an incorrect object type. We are told that the int object (an int is returned by `len()`) does not have a function called lower.
 
 Now let's uppercase a string.
+
 ```python
 >>> dna = 'attgct'
 >>> dna.upper()
@@ -2268,7 +2265,7 @@ Now let's uppercase a string.
 >>> print(dna)
 attgct
 ```
-> The contents of the variable 'dna', 'attgct' was returned in upper case. The actual contents of 'dna' were not altered.
+> The contents of the variable 'dna' were returned in upper case. The contents of 'dna' were not altered.
 
 #### Find and Count
 
@@ -2304,7 +2301,8 @@ AUGCUGCAUU
 #### Extracting a Substring, or Slicing
 
 Parts of a string can be located based on position and returned. This is because a string is a sequence. Coordinates start at 0. You add the coordinate in square brackets after the string's name. 
-<p>&nbsp</p>
+
+
 This string 'ATTAAAGGGCCC' is made up of the following sequence of characters, and positions (starting at zero).
 
 
@@ -2324,7 +2322,7 @@ This string 'ATTAAAGGGCCC' is made up of the following sequence of characters, a
 | 10             | C         |
 | 11             | C         |
 
-Let's return the 4th, 5th, and 6th nucleotides. To do this, we need to count like a computer and start our string at 0 and return the 3rd, 4th, and 5th characters. This will be everything from 3 to 6.
+Let's return the 4th, 5th, and 6th nucleotides. To do this, we need to count like a computer and start our string at 0 and return the 3rd, 4th, and 5th characters. This will be everything from 3 to 6. Python counts the gaps before each character in the string, starting at 0.
 
 ```python
 >>> dna = 'ATTAAAGGGCCC'
@@ -2332,7 +2330,7 @@ Let's return the 4th, 5th, and 6th nucleotides. To do this, we need to count lik
 >>> print(sub_dna)
 AAA
 ```
-> The chacters with the positional index of 3, 4, 5 are returned. Or in other words, every chacater starting at index 3 and up to but not including, the index of 6 are returned. 
+> The chacters with indices 3, 4, 5 are returned. Or in other words, every charater starting at index 3 and up to but not including, the index of 6 are returned. 
 
 Let's return the first 6 characters.
 ```python
@@ -2363,8 +2361,7 @@ CCC
 #### Locate and Report
 
 The positional index of an exact string in a larger string can be found and returned with the string method 
-`find`
-. A exact string is given as an argument and the index of its first occurrence is returned. -1 is returned if it is not found.
+`find()`. A exact string is given as an argument and the index of its first occurrence is returned. -1 is returned if it is not found.
 
 ```python
 >>> dna = 'ATTAAAGGGCCC'
@@ -2380,27 +2377,27 @@ The positional index of an exact string in a larger string can be found and retu
 
 Since these are methods, be sure to use in this format string.method().
 
-| function                     | Description                              |
-| ---------------------------- | ---------------------------------------- |
-| s.strip()                    | returns a string with the whitespace removed from the start and end |
-| s.isalpha()                  | tests if all the characters of the string are alphabetic characters. Returns True or False. |
-| s.isdigit()                  | tests if all the characters of the string are numeric characters. Returns True or False. |
-| s.startswith('other_string') | tests if the string starts with the string provided as an argument. Returns True or False. |
-| s.endswith('other_string')   | tests if the string ends with the string provided as an argument. Returns True or False. |
-| s.split('delim')             | splits the string on the given exact delimiter. Returns a list of substrings. If no argument is supplied, the string will be split on whitespace. |
-| s.join(list)                 | opposite of split(). The elements of a list will be concatenated together using the string stored in 's' as a delimiter. |
+| function                       | Description                              |
+| ------------------------------ | ---------------------------------------- |
+| `s.strip()`                    | returns a string with the whitespace removed from the start and end |
+| `s.isalpha()`                  | tests if all the characters of the string are alphabetic characters. Returns True or False. |
+| `s.isdigit()`                  | tests if all the characters of the string are numeric characters. Returns True or False. |
+| `s.startswith('other_string')` | tests if the string starts with the string provided as an argument. Returns True or False. |
+| `s.endswith('other_string')`   | tests if the string ends with the string provided as an argument. Returns True or False. |
+| `s.split('delim')`             | splits the string on the given exact delimiter. Returns a list of substrings. If no argument is supplied, the string will be split on whitespace. |
+| `s.join(list)`                 | opposite of `split()`. The elements of a list will be concatenated together using the string stored in 's' as a delimiter. |
 
 
 
 ### String Formatting
 
-Strings can be formated using the  `format()` function. Pretty intuitive! For example, if you want to include literal stings and variables in your print statement and do not want to concatenate or use multiple arguments in the `print()` function you can use string formatting.  
+Strings can be formated using the  `format()` function. Pretty intuitive, but wait til you see the details! For example, if you want to include literal stings and variables in your print statement and do not want to concatenate or use multiple arguments in the `print()` function you can use string formatting.  
 
 ```python
 >>> string = "This sequence: {} is {} nucleotides long and is found in {}."
 >>> string.format(dna,dna_len,gene_name)
 'This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.'
->>> print(string)
+>>> print(string) # string.format() does not alter string
 This sequence: {} is {} nucleotides long and is found in {}.
 >>> new_string = string.format(dna,dna_len,gene_name)
 >>> print(new_string)
@@ -2408,7 +2405,7 @@ This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Br
 ```
 We put together the three variables and literal strings into a single string using the function `format()`. The original string is not altered, a new string is returned that incorporates the arguments. You can save the returned value in a new variable. Each `{}` is a placeholder for the strings that need to be inserted. 
 
-> Something nice about `format()` is that you can print int and string variable types without converting first.
+Something nice about `format()` is that you can print int and string variable types without converting first.
 
 You can also directly call the format function on a string inside a print function. Here are two examples
 
@@ -2417,7 +2414,7 @@ You can also directly call the format function on a string inside a print functi
 >>> print(string.format(dna,dna_len,gene_name))
 This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.
 ```
-Or you can create a string on the fly and use the `format()` function.
+Or you use the `format()` function on a literal string:
 ```python
 >>> print( "This sequence: {} is {} nucleotides long and is found in {}.".format(dna,dna_len,gene_name))
 This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.
@@ -2449,8 +2446,6 @@ Lets right justify some numbers.
 >>> print( "{:>5}".format(200) )
   200
 ```
- > The arguments: 2, 20, 200 have all been right justified in a field that is 5 characters wide by using '{:>5}'
-
 
 How about padding with zeroes? This means the five-character field will be filled as needed with zeroes to the left of any numbers you want to display
 ```python
@@ -2458,10 +2453,7 @@ How about padding with zeroes? This means the five-character field will be fille
 00002
 >>> print( "{:>05}".format(20) )
 00020
-
 ```
-> Now all of the arguments: 2 ,20 are right justified to a witdh of 5 and any empty space is filled with a zero. 
-
 
 Use a `<` to indicate left-justification.
 ```python
@@ -2472,21 +2464,7 @@ Use a `<` to indicate left-justification.
 >>> print( "{:<5} genes".format(200) )
 200   genes
 ```
- > The arguments: 2, 20, 200 have all been left justified by a width of 5 columns by using '{:<5}'
-
-If you want to pad with a non-zero character, you can add this too. Between `:` and the symbol for the justification. Let's try padding with `_`, an underscore.
-```python
->>> print( "{:_<5} next".format(2) )
-2____ next
->>> print( "{:_<5} next".format(20) )
-20___ next
->>> print( "{:_<5} next".format(200) )
-200__ next
-
-```
- > The arguments: 2, 20, 200 have all been left justified in a field that is 5 characters wide and any empty space is filled with a `_`
-
-Center aligning is done with `^`
+Center aligning is done with `^` instead of `>` or `<`. You can also pad with characters other than 0. Here let's try `_` or underscore as in `:_^`.
 ```python
 >>> print( "{:_^10}".format(2) )
 ____2_____
@@ -2496,7 +2474,7 @@ ____20____
 ___200____
 
 ```
-> Text can be center aligned by using ':^10'. 10 of course is your column width. The '^' indicates center justification. In our example an underscore is used to illustrate the empty spaces. 
+> Text can be centered by using ':^10'. 10 of course is your column width. The '^' indicates center justification. In our example an underscore is used to replace the empty spaces to make things easier to see.
 
 
 #### Summary of special formatting symbols so far
@@ -2530,7 +2508,7 @@ __Common Types__
 | E    | exponent, uses `E`                       |
 | f    | floating point, default precision 6 (also F) |
 | g    | general number, float for values close to 0, exponent for others; also G |
-| s    | string, default type                     |
+| s    | string, default type (see example above) ) |
 | x    | convert to hexidecimal, also X           |
 | %    | converts to % by multiplying by 100      |
 
@@ -2538,7 +2516,7 @@ __Common Types__
 #### What's the point?
 
 
-So much can be done with the `format()` function. Here is one last example, but not the last functionality of this function.  Let truncate a long floating point number.  The default is 6 decimal places. Note that the function rounds to the nearest decimal place.
+So much can be done with the `format()` function. Here is one last example, but not the last functionality of this function.  Let truncate a long floating point number.  The default is 6 decimal places. Note that the function rounds to the nearest decimal place, but not always exactly the way you expect because of the way computers represent decimals with 1s and 0s.
 
 ```python
 '{:f}'.format(3.141592653589793)
@@ -2552,7 +2530,7 @@ So much can be done with the `format()` function. Here is one last example, but 
 
 #### Lists
 
-Lists are valuable data types that can store a collection of data in a single variable.
+Lists are data types that store a collection of data.
 
 
 - Lists are used to store an ordered, *indexed* collection of data.
@@ -2564,9 +2542,9 @@ Lists are valuable data types that can store a collection of data in a single va
 
 #### Accessing Values in Lists
 
-To retrieve a single value in a list use the value's index in this format list[index]. This will return the value at the specified index. 
+To retrieve a single value in a list use the value's index in this format list[index]. This will return the value at the specified index, starting with 0. 
 
-Here is our list:  
+Here is a list:  
 ```python
 >>> codons = [ 'atg' , 'aaa' , 'agg' ]
 ```
@@ -2584,18 +2562,16 @@ Let's access the 0th value.
 >>> codons[0]
 'atg'
 ```
-> The the value of the 0th index is returned by using the syntax list[index]
-
-The value cana be saved for later use by storing in a variable.
+The value can be saved for later use by storing in a variable.
 ```python
 >>> codons = [ 'atg' , 'aaa' , 'agg' ]
->>> codon_0 = codons[0]
->>> print(codon_0)
+>>> first_codon = codons[0]
+>>> print(first_codon)
 atg
 ```
 > Each value can be saved in a new variable to use later.
 
-The values can be retrieved an used directly.
+The values can be retrieved and used directly.
 ```python
 >>> codons = [ 'atg' , 'aaa' , 'agg' ]
 >>> print(codons[0])
@@ -2608,7 +2584,7 @@ agg
 > The 3 values are independently accesses and immediately printed. They are not stored in a variable.
 
 
-If you want to access the values in reverse, use negative indices.
+If you want to access the values starting at the end of the list, use negative indices.
 ```python
 >>> codons = [ 'atg' , 'aaa' , 'agg' ]
 >>> print(codons[-1])
@@ -2629,8 +2605,6 @@ Indivudual values can be changed using the value's index and the assignment oper
 >>> print(codons)
 ['atg', 'aaa', 'cgc']
 ```
-> codon[2] used to contain 'agg'. We reassigned condon[2] to contain the new value 'cgc'
-
 What about trying to assign a value to an index that does not exist?
 ```python
 >>> codons[5] = 'aac'
@@ -2638,11 +2612,11 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 IndexError: list assignment index out of range
 ```
-> codon[5] does not exist, and when we try to assign a value to this index we get an IndexError.
+> codon[5] does not exist, and when we try to assign a value to this index we get an IndexError. If you want to add new elements to the end of a list use  `codons.append('taa')` or `codons.extend(list)`. See below for more details.
 
 #### Exracting a Subset of a List, or Slicing
 
-This works in exactly the same way with lists as it does with strings. This is because both are Sequences, or ordered collections of data with positional information.
+This works in exactly the same way with lists as it does with strings. This is because both are sequences, or ordered collections of data with positional information. Remember python counts the divisions between the elements, starting with 0.
 
 | Index | Value |
 | ----- | ----- |
@@ -2674,41 +2648,41 @@ This works in exactly the same way with lists as it does with strings. This is b
 
 | Operator | Description   | Example                                  |
 | -------- | ------------- | ---------------------------------------- |
-| \+       | Concatenation | [10, 20, 30] + [40, 50, 60] returns [10, 20, 30, 40, 50, 60] |
-| \*       | Repetition    | ['atg'] * 4 returns ['atg','atg','atg','atg'] |
-| in       | Membership    | 20 in [10, 20, 30]  returns True         |
+| `+`      | Concatenation | [10, 20, 30] + [40, 50, 60] returns [10, 20, 30, 40, 50, 60] |
+| `*`      | Repetition    | ['atg'] * 4 returns ['atg','atg','atg','atg'] |
+| `in`     | Membership    | 20 in [10, 20, 30]  returns True         |
 
 #### List Functions
 
-| Functions                             | Description                              | Example                                  |
-| ------------------------------------- | ---------------------------------------- | ---------------------------------------- |
-| len(list)                             | returns the length or the number of values in list | len([1,2,3]) returns 3                   |
-| max(list)                             | returns the value with the largest ascii value | max(['a','A','z']) returns 'z'           |
-| min(list)                             | returns the value with the smallest ascii value | min(['a','A','z']) returns 'A'           |
-| list(seq)                             | converts a tuple into a list             | list(('a','A','z')) returns ['a', 'A', 'z'] |
-| sorted(list, key=None, reverse=False) | returns a sorted list based on the key provided | sorted(['a','A','z']) returns ['A', 'a', 'z'] |
-|                                       |                                          | sorted(['a','A','z'],key=str.lower) returns ['a', 'A', 'z'] |
+| Functions                               | Description                              | Example                                  |
+| --------------------------------------- | ---------------------------------------- | ---------------------------------------- |
+| `len(list)`                             | returns the length or the number of values in list | len([1,2,3]) returns 3                   |
+| `max(list)`                             | returns the value with the largest ascii value | max(['a','A','z']) returns 'z'           |
+| `min(list)`                             | returns the value with the smallest ascii value | min(['a','A','z']) returns 'A'           |
+| `list(seq)`                             | converts a tuple into a list             | list(('a','A','z')) returns ['a', 'A', 'z'] |
+| `sorted(list, key=None, reverse=False)` | returns a sorted list based on the key provided | sorted(['a','A','z']) returns ['A', 'a', 'z'] |
+|                                         |                                          | sorted(['a','A','z'],key=str.lower) returns ['a', 'A', 'z'] |
 
 
 #### List Methods
 
-Remember methods are apart of the object and are used in the following format list.method().   
+Remember methods are used in the following format list.method().   
 
-For these examples use: list = [1,2,3] and codons = [ 'atg' , 'aaa' , 'agg' ]
+For these examples use: `list = [1,2,3]` and `codons = [ 'atg' , 'aaa' , 'agg' ]`
 
-| Method                  | Description                              | Example                                  |
-| ----------------------- | ---------------------------------------- | ---------------------------------------- |
-| list.append(obj)        | appends an object to the end of a list   | list.append(9) ; print(list) ; returns [1,2,3,9] |
-| list.count(obj)         | counts the occurance of an object in a list | list.count(2) returns 1                  |
-| list.index(obj)         | returns the lowest index where the given object is found | list.index(2) returns 1                  |
-| list.pop()              | removes and returns the last value in the list. The list is now 1 value shorter | list.pop() returns 3                     |
-| list.insert(index, obj) | inserts a value at the given index       | list.insert(0,100) ; print(list) returns [100, 1, 2, 3] |
-| list.extend(new_list)   | adds the provided list to the end of list | list.extend(['a', 'z']) ; print(list) returns [1, 2, 3, 'a', 'z'] |
-| list.pop(index)         | removes and returns the value of the index argument. The list is now 1 value shorter | list.pop(0) returns 1                    |
-| list.remove(obj)        | finds the lowest index of the given object and removes the value. The list is now 1 value shorter | codons.remove('aaa') ; print(codons) returns  [ 'atg' , 'agg' ] |
-| list.reverse()          | reverses the order of the list           | list.reverse() ; print(list) returns [3,2,1] |
-| list.copy()             | Returns a shallow copy of list. Shallow vs Deep only matters in multidementional datastructures. |                                          |
-| list.sort([func])       | sorts a list using the provided function. Does not return a list. The list has been changed. Advanced list sort will be covered once writting your own functions has been disccussed. | codons.sort() ; print(codons) returns ['aaa', 'agg', 'atg'] |
+| Method                    | Description                              | Example                                  |
+| ------------------------- | ---------------------------------------- | ---------------------------------------- |
+| `list.append(obj)`        | appends an object to the end of a list   | list.append(9) ; print(list) ; returns [1,2,3,9] |
+| `list.count(obj)`         | counts the occurence of an object in a list | list.count(2) returns 1                  |
+| `list.index(obj)`         | returns the lowest index where the given object is found | list.index(2) returns 1                  |
+| `list.pop()`              | removes and returns the last value in the list. The list is now 1 value shorter | list.pop() returns 3                     |
+| `list.insert(index, obj)` | inserts a value at the given index       | list.insert(0,100) ; print(list) returns [100, 1, 2, 3] |
+| `list.extend(new_list)`   | adds the provided list to the end of list | list.extend(['a', 'z']) ; print(list) returns [1, 2, 3, 'a', 'z'] |
+| `list.pop(index)`         | removes and returns the value of the index argument. The list is now 1 value shorter | list.pop(0) returns 1                    |
+| `list.remove(obj)`        | finds the lowest index of the given object and removes the value. The list is now 1 value shorter | codons.remove('aaa') ; print(codons) returns  [ 'atg' , 'agg' ] |
+| `list.reverse()`          | reverses the order of the list           | list.reverse() ; print(list) returns [3,2,1] |
+| `list.copy()`             | Returns a shallow copy of list. Shallow vs Deep only matters in multidementional datastructures. |                                          |
+| `list.sort([func])`       | sorts a list using the provided function. Does not return a list. The list has been changed. Advanced list sort will be covered once writting your own functions has been disccussed. | codons.sort() ; print(codons) returns ['aaa', 'agg', 'atg'] |
 
 
 Be careful how you make a copy of your list
@@ -2721,7 +2695,7 @@ Be careful how you make a copy of your list
 >>> print(l2)
 ['a', 'one', 'two', '1']
 ```
-> Not what you expected?! Boht lists have changed because we only copied a pointer to the original list when we wrote `l2=list`. 
+> Not what you expected?! Both lists have changed because we only copied a pointer to the original list when we wrote `l2=list`. 
 
 Let's copy the list using the `copy()` method.
 ```python
@@ -2748,13 +2722,13 @@ Now that you have seen the `append()` function we can go over how to build a lis
 >>> print(words)
 ['one', 'two']
 ```
-> We start with a an empty list called 'words'. We use `append()` to add the value 'one' then to add the value 'two'. We end up with a list with two values.
+> We start with a an empty list called 'words'. We use `append()` to add the value 'one' then to add the value 'two'. We end up with a list with two values. You can add a whole list to another list with `words.extend([]'three'.'four','five'])`
 
 ---
 
 ### [Link to Python 3 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_03_problemset.md)
 
-\pagebreak
+
 
 ---
 # Python 4
@@ -2763,7 +2737,7 @@ Now that you have seen the `append()` function we can go over how to build a lis
 
 All of the coding that we have gone over so far has been executed line by line. Sometimes there are blocks of code that we want to execute more than once. Loops let us do this.  
 
-<p>&nbsp;</p>
+
 
 There are two loop types:
 1. while loop
@@ -3486,7 +3460,7 @@ A for loop can be used to iterate through the file_object one line at a time.
 #!/usr/bin/env python3
 
 file_object = open("seq.nt.fa","r")
-for line in file_object:
+for line in file_object: # python magic: reads in a line from file
   print(line)
 ```
 
@@ -3503,7 +3477,7 @@ ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 Let's use `rstrip()` method to remove the newline from our file input.
 ```python
 $ cat file_for_rstrip.py
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 file_object = open("seq.nt.fa","r")
 for line in file_object:
@@ -3517,6 +3491,20 @@ Output:
 $ python3 file_for_rstrip.py
 ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
 ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
+```
+
+#### Opening a file with `with open() as fh:`
+
+This is a good extra to add in because it closes the file for you automatically. Good programming practice. Your code will clean up as it runs. For more advanced coding, this saves limited resources like filehandles and database connections. For now, we just need to know that the `with ... as ...:` does the same as `fh = open(...) ... fh.close()`. So here's what the adapted code looks like
+
+```python
+#!/usr/bin/env python3
+
+with open("seq.nt.fa","r") as file_object: #cleans up after exiting with block
+  for line in file_object:
+    line = line.rstrip()
+  	print(line)
+#file gets closed for you here.
 ```
 
 #### Writing to a File
