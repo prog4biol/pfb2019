@@ -2322,7 +2322,7 @@ This string 'ATTAAAGGGCCC' is made up of the following sequence of characters, a
 | 10             | C         |
 | 11             | C         |
 
-Let's return the 4th, 5th, and 6th nucleotides. To do this, we need to count like a computer and start our string at 0 and return the 3rd, 4th, and 5th characters. This will be everything from 3 to 6.
+Let's return the 4th, 5th, and 6th nucleotides. To do this, we need to count like a computer and start our string at 0 and return the 3rd, 4th, and 5th characters. This will be everything from 3 to 6. Python counts the gaps before each character in the string, starting at 0.
 
 ```python
 >>> dna = 'ATTAAAGGGCCC'
@@ -2330,7 +2330,7 @@ Let's return the 4th, 5th, and 6th nucleotides. To do this, we need to count lik
 >>> print(sub_dna)
 AAA
 ```
-> The chacters with indices 3, 4, 5 are returned. Or in other words, every chacater starting at index 3 and up to but not including, the index of 6 are returned. 
+> The chacters with indices 3, 4, 5 are returned. Or in other words, every charater starting at index 3 and up to but not including, the index of 6 are returned. 
 
 Let's return the first 6 characters.
 ```python
@@ -2361,8 +2361,7 @@ CCC
 #### Locate and Report
 
 The positional index of an exact string in a larger string can be found and returned with the string method 
-`find`
-. A exact string is given as an argument and the index of its first occurrence is returned. -1 is returned if it is not found.
+`find()`. A exact string is given as an argument and the index of its first occurrence is returned. -1 is returned if it is not found.
 
 ```python
 >>> dna = 'ATTAAAGGGCCC'
@@ -2378,27 +2377,27 @@ The positional index of an exact string in a larger string can be found and retu
 
 Since these are methods, be sure to use in this format string.method().
 
-| function                     | Description                              |
-| ---------------------------- | ---------------------------------------- |
-| s.strip()                    | returns a string with the whitespace removed from the start and end |
-| s.isalpha()                  | tests if all the characters of the string are alphabetic characters. Returns True or False. |
-| s.isdigit()                  | tests if all the characters of the string are numeric characters. Returns True or False. |
-| s.startswith('other_string') | tests if the string starts with the string provided as an argument. Returns True or False. |
-| s.endswith('other_string')   | tests if the string ends with the string provided as an argument. Returns True or False. |
-| s.split('delim')             | splits the string on the given exact delimiter. Returns a list of substrings. If no argument is supplied, the string will be split on whitespace. |
-| s.join(list)                 | opposite of split(). The elements of a list will be concatenated together using the string stored in 's' as a delimiter. |
+| function                       | Description                              |
+| ------------------------------ | ---------------------------------------- |
+| `s.strip()`                    | returns a string with the whitespace removed from the start and end |
+| `s.isalpha()`                  | tests if all the characters of the string are alphabetic characters. Returns True or False. |
+| `s.isdigit()`                  | tests if all the characters of the string are numeric characters. Returns True or False. |
+| `s.startswith('other_string')` | tests if the string starts with the string provided as an argument. Returns True or False. |
+| `s.endswith('other_string')`   | tests if the string ends with the string provided as an argument. Returns True or False. |
+| `s.split('delim')`             | splits the string on the given exact delimiter. Returns a list of substrings. If no argument is supplied, the string will be split on whitespace. |
+| `s.join(list)`                 | opposite of `split()`. The elements of a list will be concatenated together using the string stored in 's' as a delimiter. |
 
 
 
 ### String Formatting
 
-Strings can be formated using the  `format()` function. Pretty intuitive! For example, if you want to include literal stings and variables in your print statement and do not want to concatenate or use multiple arguments in the `print()` function you can use string formatting.  
+Strings can be formated using the  `format()` function. Pretty intuitive, but wait til you see the details! For example, if you want to include literal stings and variables in your print statement and do not want to concatenate or use multiple arguments in the `print()` function you can use string formatting.  
 
 ```python
 >>> string = "This sequence: {} is {} nucleotides long and is found in {}."
 >>> string.format(dna,dna_len,gene_name)
 'This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.'
->>> print(string)
+>>> print(string) # string.format() does not alter string
 This sequence: {} is {} nucleotides long and is found in {}.
 >>> new_string = string.format(dna,dna_len,gene_name)
 >>> print(new_string)
@@ -2406,7 +2405,7 @@ This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Br
 ```
 We put together the three variables and literal strings into a single string using the function `format()`. The original string is not altered, a new string is returned that incorporates the arguments. You can save the returned value in a new variable. Each `{}` is a placeholder for the strings that need to be inserted. 
 
-> Something nice about `format()` is that you can print int and string variable types without converting first.
+Something nice about `format()` is that you can print int and string variable types without converting first.
 
 You can also directly call the format function on a string inside a print function. Here are two examples
 
@@ -2415,7 +2414,7 @@ You can also directly call the format function on a string inside a print functi
 >>> print(string.format(dna,dna_len,gene_name))
 This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.
 ```
-Or you can create a string on the fly and use the `format()` function.
+Or you use the `format()` function on a literal string:
 ```python
 >>> print( "This sequence: {} is {} nucleotides long and is found in {}.".format(dna,dna_len,gene_name))
 This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.
@@ -2447,7 +2446,7 @@ Lets right justify some numbers.
 >>> print( "{:>5}".format(200) )
   200
 ```
- > The arguments: 2, 20, 200 have all been right justified in a field that is 5 characters wide by using '{:>5}'
+ > The arguments: 2, 20, 200 have all been right justified in a field that is 5 characters wide by using `{:>5}`
 
 
 How about padding with zeroes? This means the five-character field will be filled as needed with zeroes to the left of any numbers you want to display
