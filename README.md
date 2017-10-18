@@ -1943,8 +1943,8 @@ How do you find out what functions work with an object? There's a handy function
 >>> dir('ACGTGA')
 ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
 ```
-
-You can call `dir()` on any object, most often, you'll use it in the interactive python shell.
+`dir()` will return all atributes of an object, among them its functions. Technically, functions belonging to a specific object are called methods.
+You can call `dir()` on any object, most often, you'll use it in the interactive python shell. 
 
 ### Strings
 
@@ -2042,7 +2042,7 @@ ATG
 ATGGGTCTAC
 ```
 
-Something to think about: Values of variable are variable. Or in other words, they are mutable, changeable.  
+Something to think about: Values of variables are variable. Or in other words, they are mutable, changeable.  
 ```python
 >>>dna = 'ATG'
 ATG
@@ -2092,7 +2092,7 @@ In python2, the command was `print`, but this changed to `print()` in python3, s
 
 #### Special/Escape Characters
 
-How would you include a new line, carrage return, or tab in your string?  
+How would you include a new line, carriage return, or tab in your string?  
 
 | Escape Character | Description    |
 | ---------------- | -------------- |
@@ -2101,7 +2101,7 @@ How would you include a new line, carrage return, or tab in your string?
 | \\t              | Tab            |
 
 
-Let's include some escape charcters in our strings and `print()` functions.
+Let's include some escape characters in our strings and `print()` functions.
 ```python
 >>> string_with_newline = 'this sting has a new line\nthis is the second line'
 >>> print(string_with_newline)
@@ -2211,7 +2211,7 @@ The lenth of the DNA sequence: TAGCTATATAAAATCATAAT is 20
 
 #### Changing String Case
 
-Changing the case of a string is a bit different that you might first expect. For example, to lowercase a string we need to use a method. A method is a function that is specific to an object. When we assign a string to a variable we are creating an instance of a string object. This object has a series of methods that will work on the data that is stored in the object. Recall that `dir()` will tell you all the methods that are available for an object. The `lower()` function is a string method. 
+Changing the case of a string is a bit different than you might first expect. For example, to lowercase a string we need to use a method. A method is a function that is specific to an object. When we assign a string to a variable we are creating an instance of a string object. This object has a series of methods that will work on the data that is stored in the object. Recall that `dir()` will tell you all the methods that are available for an object. The `lower()` function is a string method. 
 
 Let's create a new string object.    
 ```python
@@ -2361,7 +2361,7 @@ CCC
 #### Locate and Report
 
 The positional index of an exact string in a larger string can be found and returned with the string method 
-`find()`. A exact string is given as an argument and the index of its first occurrence is returned. -1 is returned if it is not found.
+`find()`. An exact string is given as an argument and the index of its first occurrence is returned. -1 is returned if it is not found.
 
 ```python
 >>> dna = 'ATTAAAGGGCCC'
@@ -2508,8 +2508,8 @@ __Common Types__
 | E    | exponent, uses `E`                       |
 | f    | floating point, default precision 6 (also F) |
 | g    | general number, float for values close to 0, exponent for others; also G |
-| s    | string, default type (see example above) ) |
-| x    | convert to hexidecimal, also X           |
+| s    | string, default type (see example above) |
+| x    | convert to hexadecimal, also X           |
 | %    | converts to % by multiplying by 100      |
 
 
@@ -2596,7 +2596,7 @@ aaa
 
 #### Changing Values in a List
 
-Indivudual values can be changed using the value's index and the assignment operator.
+Individual values can be changed using the value's index and the assignment operator.
 
 ```python
 >>> print(codons)
@@ -2614,7 +2614,7 @@ IndexError: list assignment index out of range
 ```
 > codon[5] does not exist, and when we try to assign a value to this index we get an IndexError. If you want to add new elements to the end of a list use  `codons.append('taa')` or `codons.extend(list)`. See below for more details.
 
-#### Exracting a Subset of a List, or Slicing
+#### Extracting a Subset of a List, or Slicing
 
 This works in exactly the same way with lists as it does with strings. This is because both are sequences, or ordered collections of data with positional information. Remember python counts the divisions between the elements, starting with 0.
 
@@ -2722,7 +2722,7 @@ Now that you have seen the `append()` function we can go over how to build a lis
 >>> print(words)
 ['one', 'two']
 ```
-> We start with a an empty list called 'words'. We use `append()` to add the value 'one' then to add the value 'two'. We end up with a list with two values. You can add a whole list to another list with `words.extend([]'three'.'four','five'])`
+> We start with a an empty list called 'words'. We use `append()` to add the value 'one' then to add the value 'two'. We end up with a list with two values. You can add a whole list to another list with `words.extend(['three','four','five'])`
 
 ---
 
