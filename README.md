@@ -2728,7 +2728,7 @@ Now that you have seen the `append()` function we can go over how to build a lis
 
 ### [Link to Python 3 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_03_problemset.md)
 
-\pagebreak
+
 
 ---
 # Python 4
@@ -2737,7 +2737,7 @@ Now that you have seen the `append()` function we can go over how to build a lis
 
 All of the coding that we have gone over so far has been executed line by line. Sometimes there are blocks of code that we want to execute more than once. Loops let us do this.  
 
-<p>&nbsp;</p>
+
 
 There are two loop types:
 1. while loop
