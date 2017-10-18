@@ -2754,9 +2754,8 @@ The while loop will continue to execute the while loop block as long as a given 
 while expression:
   statement(s)
 ```
-> The condition is found in the expression. The while loop block of code is the indented statements following teh expression.
+> The condition is the expression. The while loop block of code is the collection of indented statements following the expression.
 
-This example is not using the python interpretor. It is a python script that will be executed on the command line.
 
 Code: 
 ```python
@@ -2793,7 +2792,7 @@ Done
 > - The first line following the while statement is executed, "Done" is printed
 
 
-An infiite loop is when a while condition is always true. Here is an example of an infinit loop.  
+An infinite loop occurs when a while condition is always true. Here is an example of an infinit loop.  
 ```python
 #!/usr/bin/env python3
 
@@ -2822,7 +2821,7 @@ count: 0
 
 #### While/Else
 
-An Else statment can be used with a while statement. It behaves in the same way as with an If statement. When the while statement is false, the else block is excuted ONE TIME.
+An Else statment can be used with a while statement. It behaves in the same way as and Else with an If statement. When the while statement is false, the else block is excuted ONE TIME.
 
 ```python
 #!/usr/bin/env python3
@@ -2860,7 +2859,7 @@ for iterating_variable in sequence:
   statement(s)
 ```
 
-An example of a sequence is a list. Let's use a for loop list of words. 
+An example of a sequence is a list. Let's use a for loop with a list of words. 
 
 Code:
 ```python
@@ -2870,6 +2869,7 @@ words = ['zero','one','two','three','four']
 for word in words:
   print(word)
 ```
+> Notice how I have named my variables, the list is plural and the iterating variable is singular
 
 Output: 
 ```
@@ -2881,7 +2881,7 @@ three
 four
 ```
 
-This is an example of iterating over a string. Remember a string is a sequence like a list. It is data where position is important. Look back at "Extracting a Substring, or Slicing" in the [Strings](#strings) section to see other ways of how strings can be treated like lists.
+This is next example is using a for loop to iterating over a string. Remember a string is a sequence like a list. Each character has a position. Look back at "Extracting a Substring, or Slicing" in the [Strings](#strings) section to see other ways that strings can be treated like lists.
 
 Code:
 ```python
@@ -2937,7 +2937,7 @@ range(0, 5)
 [0, 1, 2, 3, 4]
 ```
 
-This can be used in conjunction with a for loop to iterate over a range of numbers
+The function `range()` can be used in conjunction with a for loop to iterate over a list of incremental numbers
 Code:
 ```python
 #!/usr/bin/env python3
@@ -2955,15 +2955,55 @@ $ python list_range.py
 3
 4
 ```
-> As you can see this is the same output as using the list numbers = [0, 1, 2, 3, 4]
-> And this has the same functionality as a while loop with a condition of count = 0 ; count < 5.
+> As you can see this is the same output as using the list `numbers = [0, 1, 2, 3, 4]`
+> And this has the same functionality as a while loop with a condition of `count = 0` ; `count < 5`.
+
+This is the equivalent while loop
+
+Code:
+```python
+count = 0
+while count < 5:
+  print(count)
+  count+=1
+```
+
+Output:
+```
+0
+1
+2
+3
+4
+```
+
+
 
 
 #### For/Else
 
 An else statement can be used with a for loop as well. The else block of code will be executed when the for loop exits normally.
 
-> Can we just skip this. it seems pretty stupid
+Code:
+```python
+#!/usr/bin/env python3
+
+for num in range(5):
+  print(num)
+else:
+  print("Completed for loop")
+```
+
+Output:
+```
+$ python3 list_range_else.py
+0
+1
+2
+3
+4
+Completed for loop
+```
 
 #### Loop Control
 
@@ -2971,8 +3011,8 @@ Loops control statements allow for altering the normal flow of execution.
 
 | Control Statement | Description                              |
 | ----------------- | ---------------------------------------- |
-| break             | A loop is terminated when a break statement is executed. All the lines of code after the break, but within the loop block are not executed. No more iteration of the loop are preformed |
-| continue          | A single iteration of a loop is terminated when a continue statement is executed. The next iteration will proceed normally. |
+| `break`             | A loop is terminated when a break statement is executed. All the lines of code after the break, but within the loop block are not executed. No more iteration of the loop are preformed |
+| `continue`          | A single iteration of a loop is terminated when a continue statement is executed. The next iteration will proceed normally. |
 
 
 #### Loop Control: Break  
@@ -2998,7 +3038,7 @@ count: 1
 count: 2
 Done
 ```
-> when the count is equal to 3, all iterations of the while loop are terminated
+> when the count is equal to 3, all iterations of the while loop are terminated.
 
 #### Loop Control: Continue
 
@@ -3059,32 +3099,41 @@ List comprehension is a way to make a list without typing out each element. Ther
 
 Here is an simple example:
 ```python
-dna_list = ['TAGC', 'ACGTATGC', 'ATG', 'ACGGCTAG']
-lengths = [len(dna) for dna in dna_list]
+>>> dna_list = ['TAGC', 'ACGTATGC', 'ATG', 'ACGGCTAG']
+>>> lengths = [len(dna) for dna in dna_list]
+>>> lengths
+[4, 8, 3, 8]
 ```
-> This will produce this list [4, 8, 3, 8]
+
+Another example:
+```python
+>>> sentence = "This is a sentence with spaces"
+>>> words = sentence.split()
+>>> words
+['This', 'is', 'a', 'sentence', 'with', 'spaces']
+```
+
 
 Using conditions:
+
+This will only return the length of an element that starts with 'A':
 ```python
-dna_list = ['TAGC', 'ACGTATGC', 'ATG', 'ACGGCTAG']
-lengths = [len(dna) for dna in dna_list if dna.startswith('A')]
+>>> dna_list = ['TAGC', 'ACGTATGC', 'ATG', 'ACGGCTAG']
+>>> lengths = [len(dna) for dna in dna_list if dna.startswith('A')]
+>>> lengths
+[8, 3, 8]
 ```
 > This generates the following list: [8, 3, 8]
 
 
-Using conditions:
-```python
-dna_list = ['TAGC', 'ACGTATGC', 'ATG', 'ACGGCTAG']
-lengths = [len(dna) for dna in dna_list if dna.startswith('A')]
-```
-> This generates the following list: [8, 3, 8]
 
 Here is an example of using mathatical operators to generate a list:
 ```python
-l = [2 ** x for x in range(100000)]
+>>> two_power_list = [2 ** x for x in range(10)]
+>>> two_power_list
+[1, 2, 4, 8, 16, 32, 64, 128, 256, 512]
 ```
-> This creates a list of list of the first one hundred
-> thousand powers of two
+> This creates a list of the of the product of [2^0 , 2^1, 2^2, 2^3, 2^4, 2^5, 2^6, 2^7, 2^8, 2^9 ]
 
 
 ### Dictionaries
@@ -3124,7 +3173,6 @@ To retrieve a single value in a dictionary use the value's key in this format `d
 ```python
 >>> genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
 >>>
->>>
 >>> genes['TP53']
 GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 ```
@@ -3143,13 +3191,16 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 
 #### Changing Values in a Dictionary
 
-Individual values can be changed via the key and the assignment operator.
+Individual values can be changed by using the key and the assignment operator.
 
 ```python
 >>> genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
+>>>
 >>> print(genes)
 {'BRCA1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA', 'TP53': 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC'}
+>>>
 >>> genes['TP53'] = 'atg'
+>>>
 >>> print(genes)
 {'BRCA1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA', 'TP53': 'atg'}
 ```
@@ -3158,11 +3209,37 @@ Individual values can be changed via the key and the assignment operator.
 Other assignment operators can also be used to change a value of a dictionary key. 
 ```python
 >>> genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
+>>>
 >>> genes['TP53'] += 'TAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTG'
+>>>
 >>> print(genes)
 {'BRCA1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA', 'TP53': 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTG'}
 ```
 > Here we have used the '+=' concatenation assignemt operator. This is equivalent to  genes['TP53'] = genes['TP53'] + 'TAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTG'.
+
+#### Accessing Each Dictionary Key/Value
+
+Since a dictionary is a sequence we can iterate through its contents.
+
+A for loop can be used to retrieve each key of a dictionary one a time:
+```python
+>>> for gene in genes:
+...   print(gene)
+...
+TP53
+BRCA1
+```
+
+Once you have the key you can retrieve the value:
+```python
+>>> for gene in genes:
+...   seq = genes[gene]
+...   print(gene, seq[0:10])
+...
+TP53 GATGGGATTG
+BRCA1 GTACCTTGAT
+```
+
 
 
 #### Building a Dictionary one Key/Value at a Time
@@ -3182,7 +3259,7 @@ Normally you won't do this. We'll talk about ways to build a dictionary from a f
 > We start by creating an empty dictionary. Then we add each key/value pair using the same syntax as when we change a value.  
 > dict[key] = new_value  
 
-   <p>&nbsp;</p>
+
 
 #### Checking That Dictionary Keys Exist
 
@@ -3195,17 +3272,21 @@ Traceback (most recent call last):
 NameError: name 'HDAC' is not defined
 ```
 
+Dictionary Operators:
+
 | Operator | Descsription                             |
 | -------- | ---------------------------------------- |
-| in       | key in dict returns True if the key exists in the dictionary |
-| not in   | key not in dict returns True if the key does not exist in the dictionary |
+| `in`       | `key in dict` returns True if the key exists in the dictionary |
+| `not in`   | `key not in dict` returns True if the key does not exist in the dictionary |
 
 Because python generates a NameError if you try to use a key that doesn't exist in the dictionary, you probably need to check whether a key exists before trying to use it.
+
 The best way to check whether a key exists is to use `in`
 
 ```
 >>> gene = 'TP53'
->>> if gene in genes: print('found')
+>>> if gene in genes: 
+...     print('found')
 ... 
 found
 >>> 
@@ -3224,30 +3305,29 @@ If you want to print the contents of a dictionary, you probably want to sort the
 for key in sorted(genes):
   print(key, '=>' , genes[key])
 ```
-
-This will print the same order of keys every time you run your script. This is good for finding bugs and means you don't have to check whether the key exists explicitly because `in sorted(genes)` returns a list of all the keys. It also sorts it.
+> This will print the same order of keys every time you run your script. 
 
 
 #### Dictionary Functions
 
 | Function       | Description                              |
 | -------------- | ---------------------------------------- |
-| len(dict)      | returns the total number of key/value pairs |
-| str(dict)      | returns a string representation of the dictionary |
-| type(variable) | Returns the type or class of the variable passed to the function. If the variable is dictionary, then it would return a dictionary type. |
+| `len(dict)`      | returns the total number of key/value pairs |
+| `str(dict)`      | returns a string representation of the dictionary |
+| `type(variable)` | Returns the type or class of the variable passed to the function. If the variable is dictionary, then it would return a dictionary type. |
 
 #### Dictionary Methods
 
 | Method                               | Description                              |
 | ------------------------------------ | ---------------------------------------- |
-| dict.clear()                         | Removes all elements of dictionary dict  |
-| dict.copy()                          | Returns a shallow copy of dictionary dict. Shallow vs Deep only matters in multidementional datastructures. |
-| dict.fromkeys(seq,value)             | Create a new dictionary with keys from seq (python sequence type) and values set to value. |
-| dict.items()                         | Returns a list of (key, value) tuple pairs |
-| dict.keys()                          | Returns list of keys                     |
-| dict.setdefault(key, default = None) | Similar to get(), but will set dict[key] = default if key is not already in dict |
-| dict.update(dict2)                   | Adds dictionary dict2's key-values pairs to dict |
-| dict.values()                        | Returns list of dictionary dict's values |
+| `dict.clear()`                         | Removes all elements of dictionary dict  |
+| `dict.copy()`                          | Returns a shallow copy of dictionary dict. Shallow vs Deep only matters in multidementional datastructures. |
+| `dict.fromkeys(seq,value)`             | Create a new dictionary with keys from seq (python sequence type) and values set to value. |
+| `dict.items()`                         | Returns a list of (key, value) tuple pairs |
+| `dict.keys()`                          | Returns list of keys                     |
+| `dict.setdefault(key, default = None)` | Similar to get(), but will set dict[key] = default if key is not already in dict |
+| `dict.update(dict2)`                   | Adds dictionary dict2's key-values pairs to dict |
+| `dict.values()`                        | Returns list of dictionary dict's values |
 
 
 ### Sets
@@ -3259,7 +3339,7 @@ A set is another Python data type. It is essentially a dictionary with keys but 
 - A set is a collection of data with no duplicate elements. 
 - Common uses include looking for differences and eliminating duplicates in data sets. 
 
-Curly braces or the `set()` function can be used to create sets. 
+Curly braces `{}` or the `set()` function can be used to create sets. 
 
 > Note: to create an empty set you have to use `set()`, not `{}` the latter creates an empty dictionary.
 
@@ -3293,19 +3373,27 @@ Union, intersection, difference and symmetric difference can be done with sets
 
 **Difference**
 
+The difference between two sets are the elements that are unique to the set to the left of the `-` operator, with duplicates removed.
+
 ![Set Difference](https://raw.githubusercontent.com/srobb1/pfb2017/master/images//set_difference.png)
 
 ```python
+>>> a = set('abracadabra')
+>>> b = set('alacazam')
 >>> a - b                             
 {'r', 'd', 'b'}
 ```
-> This returns the letters that are in a but not in b
+> This results the letters that are in a but not in b
 
 **Union**
+
+The union between two sets is a sequence of the all the elements of the first and second sets combined, with duplicates removed.
 
 ![Set Union](https://raw.githubusercontent.com/srobb1/pfb2017/master/images//set_union.png)
 
 ```python
+>>> a = set('abracadabra')
+>>> b = set('alacazam')
 >>> a | b                          
 {'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}
 ```
@@ -3313,9 +3401,13 @@ Union, intersection, difference and symmetric difference can be done with sets
 
 **Intersection**
 
+The intersection between two sets is a sequence of the elements which are in both sets, with duplicates removed.
+
 ![Set Intersection](https://raw.githubusercontent.com/srobb1/pfb2017/master/images//set_intersection.png)
 
 ```python
+>>> a = set('abracadabra')
+>>> b = set('alacazam')
 >>> a & b                            
 {'a', 'c'}
 ```
@@ -3324,9 +3416,13 @@ Union, intersection, difference and symmetric difference can be done with sets
 
 **Symmetric Difference**
 
+The symetric difference are the elements that are only in the first set plus the elements that are only in the second set, with duplicates removed.
+
 ![Set Symmetric Difference](https://raw.githubusercontent.com/srobb1/pfb2017/master/images//set_symmetric_difference.png)
 
 ```python
+>>> a = set('abracadabra')
+>>> b = set('alacazam')
 >>> a ^ b                             
 {'r', 'd', 'b', 'm', 'z', 'l'}
 ```
@@ -3336,14 +3432,14 @@ Union, intersection, difference and symmetric difference can be done with sets
 
 | Function    | Description                              |
 | ----------- | ---------------------------------------- |
-| all()       | returns True if all elements of the set are true (or if the set is empty). |
-| any()       | returns True if any element of the set is true. If the set is empty, return False. |
-| enumerate() | return an enumerate object. It contains the index and value of all the items of set as a pair. |
-| len()       | return the number of items in the set.   |
-| max()       | return the largest item in the set.      |
-| min()       | return the smallest item in the set.     |
-| sorted()    | returns a new sorted list from elements in the set (does not alter the original set). |
-| sum()       | retrune the sum of all elements in the set. |
+| `all()`       | returns True if all elements of the set are true (or if the set is empty). |
+| `any()`       | returns True if any element of the set is true. If the set is empty, return False. |
+| `enumerate()` | return an enumerate object. It contains the index and value of all the items of set as a pair. |
+| `len()`       | return the number of items in the set.   |
+| `max()`       | return the largest item in the set.      |
+| `min()`       | return the smallest item in the set.     |
+| `sorted()`    | returns a new sorted list from elements in the set (does not alter the original set). |
+| `sum()`       | retrune the sum of all elements in the set. |
 
 
 
@@ -3351,31 +3447,31 @@ Union, intersection, difference and symmetric difference can be done with sets
 
 | Method                                | Description                              |
 | ------------------------------------- | ---------------------------------------- |
-| set.add(new)                          | adds a new element                       |
-| set.clear()                           | remove all elements                      |
-| set.copy()                            | returns a shallow copy of a set          |
-| set.difference(set2)                  | returns the difference of set and set2   |
-| set.difference_update(set2)           | removes all elements of another set from this set |
-| set.discard(element)                  | removes an element from set if it is found in set. (Do nothing if the element is not in set) |
-| set.intersection(sets)                | return the intersection of set and the other provided sets |
-| set.intersection_update(sets)         | updates set with the intersection of set and the other provided sets |
-| set.isdisjoint(set2)                  | returns True if set and set2 have no intersection |
-| set.issubset(set2)                    | returns True if set2 contains set        |
-| set.issuperset(set2)                  | returns True if set contains set2        |
-| set.pop()                             | removes and returns an arbitary element of set. |
-| set.remove(element)                   | removes element from a set.              |
-| set.symmetric_difference(set2)        | returns the symmetric difference of set and set2 |
-| set.symmetric_difference_update(set2) | updates set with the symmetric difference of set and set2 |
-| set.union(sets)                       | returns the union of set and the other provided sets |
-| set.update(set2)                      | update set with the union of set and set2 |
+| `set.add(new)`                          | adds a new element                       |
+| `set.clear()`                           | remove all elements                      |
+| `set.copy()`                            | returns a shallow copy of a set          |
+| `set.difference(set2)`                  | returns the difference of set and set2   |
+| `set.difference_update(set2)`           | removes all elements of another set from this set |
+| `set.discard(element)`                 | removes an element from set if it is found in set. (Do nothing if the element is not in set) |
+| `set.intersection(sets)`                | return the intersection of set and the other provided sets |
+| `set.intersection_update(sets)`         | updates set with the intersection of set and the other provided sets |
+| `set.isdisjoint(set2)`                  | returns True if set and set2 have no intersection |
+| `set.issubset(set2)`                    | returns True if set2 contains set        |
+| `set.issuperset(set2)`                  | returns True if set contains set2        |
+| `set.pop()`                             | removes and returns an arbitary element of set. |
+| `set.remove(element)`                   | removes element from a set.              |
+| `set.symmetric_difference(set2)`        | returns the symmetric difference of set and set2 |
+| `set.symmetric_difference_update(set2)` | updates set with the symmetric difference of set and set2 |
+| `set.union(sets)`                       | returns the union of set and the other provided sets |
+| `set.update(set2)`                      | update set with the union of set and set2 |
 
-<p>&nbsp;</p>
+
 
 ---
 
 ### [Link to Python 4 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_04_problemset.md)
 
-\pagebreak
+
 
 ---
 # Python 5
