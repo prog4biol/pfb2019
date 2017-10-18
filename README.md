@@ -2819,7 +2819,7 @@ count: 0
 ...
 ```
 > What caused this code to always be true? 
-> The statement that increments the count is missing, so it will always be smaller than 5. To stop the code from forever printing use Cntl+C.
+> The statement that increments the count is missing, so it will always be smaller than 5. To stop the code from forever printing use Ctrl-c.
 
 #### While/Else
 
