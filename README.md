@@ -2446,8 +2446,6 @@ Lets right justify some numbers.
 >>> print( "{:>5}".format(200) )
   200
 ```
- > The arguments: 2, 20, 200 have all been right justified in a field that is 5 characters wide by using `{:>5}`
-
 
 How about padding with zeroes? This means the five-character field will be filled as needed with zeroes to the left of any numbers you want to display
 ```python
@@ -2455,10 +2453,7 @@ How about padding with zeroes? This means the five-character field will be fille
 00002
 >>> print( "{:>05}".format(20) )
 00020
-
 ```
-> Now all of the arguments: 2 ,20 are right justified to a witdh of 5 and any empty space is filled with a zero. 
-
 
 Use a `<` to indicate left-justification.
 ```python
@@ -2469,21 +2464,7 @@ Use a `<` to indicate left-justification.
 >>> print( "{:<5} genes".format(200) )
 200   genes
 ```
- > The arguments: 2, 20, 200 have all been left justified by a width of 5 columns by using '{:<5}'
-
-If you want to pad with a non-zero character, you can add this too. Between `:` and the symbol for the justification. Let's try padding with `_`, an underscore.
-```python
->>> print( "{:_<5} next".format(2) )
-2____ next
->>> print( "{:_<5} next".format(20) )
-20___ next
->>> print( "{:_<5} next".format(200) )
-200__ next
-
-```
- > The arguments: 2, 20, 200 have all been left justified in a field that is 5 characters wide and any empty space is filled with a `_`
-
-Center aligning is done with `^`
+Center aligning is done with `^` instead of `>` or `<`. You can also pad with characters other than 0. Here let's try `_` or underscore as in `:_^`.
 ```python
 >>> print( "{:_^10}".format(2) )
 ____2_____
@@ -2493,7 +2474,7 @@ ____20____
 ___200____
 
 ```
-> Text can be center aligned by using ':^10'. 10 of course is your column width. The '^' indicates center justification. In our example an underscore is used to illustrate the empty spaces. 
+> Text can be centered by using ':^10'. 10 of course is your column width. The '^' indicates center justification. In our example an underscore is used to replace the empty spaces to make things easier to see.
 
 
 #### Summary of special formatting symbols so far
