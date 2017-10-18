@@ -2508,7 +2508,7 @@ __Common Types__
 | E    | exponent, uses `E`                       |
 | f    | floating point, default precision 6 (also F) |
 | g    | general number, float for values close to 0, exponent for others; also G |
-| s    | string, default type                     |
+| s    | string, default type (see example above) ) |
 | x    | convert to hexidecimal, also X           |
 | %    | converts to % by multiplying by 100      |
 
@@ -2516,7 +2516,7 @@ __Common Types__
 #### What's the point?
 
 
-So much can be done with the `format()` function. Here is one last example, but not the last functionality of this function.  Let truncate a long floating point number.  The default is 6 decimal places. Note that the function rounds to the nearest decimal place.
+So much can be done with the `format()` function. Here is one last example, but not the last functionality of this function.  Let truncate a long floating point number.  The default is 6 decimal places. Note that the function rounds to the nearest decimal place, but not always exactly the way you expect because of the way computers represent decimals with 1s and 0s.
 
 ```python
 '{:f}'.format(3.141592653589793)
@@ -2530,7 +2530,7 @@ So much can be done with the `format()` function. Here is one last example, but 
 
 #### Lists
 
-Lists are valuable data types that can store a collection of data in a single variable.
+Lists are data types that store a collection of data.
 
 
 - Lists are used to store an ordered, *indexed* collection of data.
@@ -2542,9 +2542,9 @@ Lists are valuable data types that can store a collection of data in a single va
 
 #### Accessing Values in Lists
 
-To retrieve a single value in a list use the value's index in this format list[index]. This will return the value at the specified index. 
+To retrieve a single value in a list use the value's index in this format list[index]. This will return the value at the specified index, starting with 0. 
 
-Here is our list:  
+Here is a list:  
 ```python
 >>> codons = [ 'atg' , 'aaa' , 'agg' ]
 ```
@@ -2562,13 +2562,11 @@ Let's access the 0th value.
 >>> codons[0]
 'atg'
 ```
-> The the value of the 0th index is returned by using the syntax list[index]
-
-The value cana be saved for later use by storing in a variable.
+The value can be saved for later use by storing in a variable.
 ```python
 >>> codons = [ 'atg' , 'aaa' , 'agg' ]
->>> codon_0 = codons[0]
->>> print(codon_0)
+>>> first_codon = codons[0]
+>>> print(first_codon)
 atg
 ```
 > Each value can be saved in a new variable to use later.
