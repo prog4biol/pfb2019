@@ -3274,7 +3274,7 @@ NameError: name 'HDAC' is not defined
 
 Dictionary Operators:
 
-| Operator | Descsription                             |
+| Operator | Description                             |
 | -------- | ---------------------------------------- |
 | `in`       | `key in dict` returns True if the key exists in the dictionary |
 | `not in`   | `key not in dict` returns True if the key does not exist in the dictionary |
