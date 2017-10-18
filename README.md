@@ -2793,7 +2793,7 @@ Done
 > - The first line following the while statement is executed, "Done" is printed
 
 
-An infiite loop is when a while condition is always true. Here is an example of an infinit loop.  
+An infinite loop is when a while condition is always true. Here is an example of an infinit loop.  
 ```python
 #!/usr/bin/env python3
 
