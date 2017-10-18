@@ -31,7 +31,7 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACC
 Fragment\tPostion\tLength  
 ```
 
-8. Create a list and add each fragemnt to it. 
+8. Create a list and add each fragment to it. 
 
 9. Sort the list. 
 
