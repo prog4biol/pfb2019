@@ -2571,7 +2571,7 @@ atg
 ```
 > Each value can be saved in a new variable to use later.
 
-The values can be retrieved an used directly.
+The values can be retrieved and used directly.
 ```python
 >>> codons = [ 'atg' , 'aaa' , 'agg' ]
 >>> print(codons[0])
@@ -2584,7 +2584,7 @@ agg
 > The 3 values are independently accesses and immediately printed. They are not stored in a variable.
 
 
-If you want to access the values in reverse, use negative indices.
+If you want to access the values starting at the end of the list, use negative indices.
 ```python
 >>> codons = [ 'atg' , 'aaa' , 'agg' ]
 >>> print(codons[-1])
@@ -2605,8 +2605,6 @@ Indivudual values can be changed using the value's index and the assignment oper
 >>> print(codons)
 ['atg', 'aaa', 'cgc']
 ```
-> codon[2] used to contain 'agg'. We reassigned condon[2] to contain the new value 'cgc'
-
 What about trying to assign a value to an index that does not exist?
 ```python
 >>> codons[5] = 'aac'
@@ -2614,11 +2612,11 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 IndexError: list assignment index out of range
 ```
-> codon[5] does not exist, and when we try to assign a value to this index we get an IndexError.
+> codon[5] does not exist, and when we try to assign a value to this index we get an IndexError. If you want to add new elements to the end of a list use  `codons.append('taa')` or `codons.extend(list)`. See below for more details.
 
 #### Exracting a Subset of a List, or Slicing
 
-This works in exactly the same way with lists as it does with strings. This is because both are Sequences, or ordered collections of data with positional information.
+This works in exactly the same way with lists as it does with strings. This is because both are sequences, or ordered collections of data with positional information. Remember python counts the divisions between the elements, starting with 0.
 
 | Index | Value |
 | ----- | ----- |
@@ -2650,41 +2648,41 @@ This works in exactly the same way with lists as it does with strings. This is b
 
 | Operator | Description   | Example                                  |
 | -------- | ------------- | ---------------------------------------- |
-| \+       | Concatenation | [10, 20, 30] + [40, 50, 60] returns [10, 20, 30, 40, 50, 60] |
-| \*       | Repetition    | ['atg'] * 4 returns ['atg','atg','atg','atg'] |
-| in       | Membership    | 20 in [10, 20, 30]  returns True         |
+| `+`      | Concatenation | [10, 20, 30] + [40, 50, 60] returns [10, 20, 30, 40, 50, 60] |
+| `*`      | Repetition    | ['atg'] * 4 returns ['atg','atg','atg','atg'] |
+| `in`     | Membership    | 20 in [10, 20, 30]  returns True         |
 
 #### List Functions
 
-| Functions                             | Description                              | Example                                  |
-| ------------------------------------- | ---------------------------------------- | ---------------------------------------- |
-| len(list)                             | returns the length or the number of values in list | len([1,2,3]) returns 3                   |
-| max(list)                             | returns the value with the largest ascii value | max(['a','A','z']) returns 'z'           |
-| min(list)                             | returns the value with the smallest ascii value | min(['a','A','z']) returns 'A'           |
-| list(seq)                             | converts a tuple into a list             | list(('a','A','z')) returns ['a', 'A', 'z'] |
-| sorted(list, key=None, reverse=False) | returns a sorted list based on the key provided | sorted(['a','A','z']) returns ['A', 'a', 'z'] |
-|                                       |                                          | sorted(['a','A','z'],key=str.lower) returns ['a', 'A', 'z'] |
+| Functions                               | Description                              | Example                                  |
+| --------------------------------------- | ---------------------------------------- | ---------------------------------------- |
+| `len(list)`                             | returns the length or the number of values in list | len([1,2,3]) returns 3                   |
+| `max(list)`                             | returns the value with the largest ascii value | max(['a','A','z']) returns 'z'           |
+| `min(list)`                             | returns the value with the smallest ascii value | min(['a','A','z']) returns 'A'           |
+| `list(seq)`                             | converts a tuple into a list             | list(('a','A','z')) returns ['a', 'A', 'z'] |
+| `sorted(list, key=None, reverse=False)` | returns a sorted list based on the key provided | sorted(['a','A','z']) returns ['A', 'a', 'z'] |
+|                                         |                                          | sorted(['a','A','z'],key=str.lower) returns ['a', 'A', 'z'] |
 
 
 #### List Methods
 
-Remember methods are apart of the object and are used in the following format list.method().   
+Remember methods are used in the following format list.method().   
 
-For these examples use: list = [1,2,3] and codons = [ 'atg' , 'aaa' , 'agg' ]
+For these examples use: `list = [1,2,3]` and `codons = [ 'atg' , 'aaa' , 'agg' ]`
 
-| Method                  | Description                              | Example                                  |
-| ----------------------- | ---------------------------------------- | ---------------------------------------- |
-| list.append(obj)        | appends an object to the end of a list   | list.append(9) ; print(list) ; returns [1,2,3,9] |
-| list.count(obj)         | counts the occurance of an object in a list | list.count(2) returns 1                  |
-| list.index(obj)         | returns the lowest index where the given object is found | list.index(2) returns 1                  |
-| list.pop()              | removes and returns the last value in the list. The list is now 1 value shorter | list.pop() returns 3                     |
-| list.insert(index, obj) | inserts a value at the given index       | list.insert(0,100) ; print(list) returns [100, 1, 2, 3] |
-| list.extend(new_list)   | adds the provided list to the end of list | list.extend(['a', 'z']) ; print(list) returns [1, 2, 3, 'a', 'z'] |
-| list.pop(index)         | removes and returns the value of the index argument. The list is now 1 value shorter | list.pop(0) returns 1                    |
-| list.remove(obj)        | finds the lowest index of the given object and removes the value. The list is now 1 value shorter | codons.remove('aaa') ; print(codons) returns  [ 'atg' , 'agg' ] |
-| list.reverse()          | reverses the order of the list           | list.reverse() ; print(list) returns [3,2,1] |
-| list.copy()             | Returns a shallow copy of list. Shallow vs Deep only matters in multidementional datastructures. |                                          |
-| list.sort([func])       | sorts a list using the provided function. Does not return a list. The list has been changed. Advanced list sort will be covered once writting your own functions has been disccussed. | codons.sort() ; print(codons) returns ['aaa', 'agg', 'atg'] |
+| Method                    | Description                              | Example                                  |
+| ------------------------- | ---------------------------------------- | ---------------------------------------- |
+| `list.append(obj)`        | appends an object to the end of a list   | list.append(9) ; print(list) ; returns [1,2,3,9] |
+| `list.count(obj)`         | counts the occurence of an object in a list | list.count(2) returns 1                  |
+| `list.index(obj)`         | returns the lowest index where the given object is found | list.index(2) returns 1                  |
+| `list.pop()`              | removes and returns the last value in the list. The list is now 1 value shorter | list.pop() returns 3                     |
+| `list.insert(index, obj)` | inserts a value at the given index       | list.insert(0,100) ; print(list) returns [100, 1, 2, 3] |
+| `list.extend(new_list)`   | adds the provided list to the end of list | list.extend(['a', 'z']) ; print(list) returns [1, 2, 3, 'a', 'z'] |
+| `list.pop(index)`         | removes and returns the value of the index argument. The list is now 1 value shorter | list.pop(0) returns 1                    |
+| `list.remove(obj)`        | finds the lowest index of the given object and removes the value. The list is now 1 value shorter | codons.remove('aaa') ; print(codons) returns  [ 'atg' , 'agg' ] |
+| `list.reverse()`          | reverses the order of the list           | list.reverse() ; print(list) returns [3,2,1] |
+| `list.copy()`             | Returns a shallow copy of list. Shallow vs Deep only matters in multidementional datastructures. |                                          |
+| `list.sort([func])`       | sorts a list using the provided function. Does not return a list. The list has been changed. Advanced list sort will be covered once writting your own functions has been disccussed. | codons.sort() ; print(codons) returns ['aaa', 'agg', 'atg'] |
 
 
 Be careful how you make a copy of your list
@@ -2697,7 +2695,7 @@ Be careful how you make a copy of your list
 >>> print(l2)
 ['a', 'one', 'two', '1']
 ```
-> Not what you expected?! Boht lists have changed because we only copied a pointer to the original list when we wrote `l2=list`. 
+> Not what you expected?! Both lists have changed because we only copied a pointer to the original list when we wrote `l2=list`. 
 
 Let's copy the list using the `copy()` method.
 ```python
@@ -2724,7 +2722,7 @@ Now that you have seen the `append()` function we can go over how to build a lis
 >>> print(words)
 ['one', 'two']
 ```
-> We start with a an empty list called 'words'. We use `append()` to add the value 'one' then to add the value 'two'. We end up with a list with two values.
+> We start with a an empty list called 'words'. We use `append()` to add the value 'one' then to add the value 'two'. We end up with a list with two values. You can add a whole list to another list with `words.extend([]'three'.'four','five'])`
 
 ---
 
