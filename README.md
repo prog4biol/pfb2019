@@ -2792,7 +2792,7 @@ Done
 > - The first line following the while statement is executed, "Done" is printed
 
 
-An infinite loop occurs when a while condition is always true. Here is an example of an infinit loop.  
+An infinite loop occurs when a while condition is always true. Here is an example of an infinite loop.  
 ```python
 #!/usr/bin/env python3
 
@@ -2804,7 +2804,7 @@ print("Done")
 
 Output:
 ```
-$ python infinit.py
+$ python infinite.py
 count: 0
 count: 0
 count: 0
@@ -2816,8 +2816,8 @@ count: 0
 ...
 ...
 ```
-> What caused this code to never be true? 
-> The statement that increments the count is missing. To stop the code from forever printing use Cntl+C.
+> What caused this code to always be true? 
+> The statement that increments the count is missing, so it will always be smaller than 5. To stop the code from forever printing use Cntl+C.
 
 #### While/Else
 
@@ -2850,7 +2850,7 @@ Done
 
 #### For Loops
 
-A for loop is a loop that executes the for block of code for every iteration of a sequence. Remember a sequence is an ordered collection of data.
+A for loop is a loop that executes the for block of code for every member of a sequence, for example the elements of a list or the letters in a string.
 
 #### For Loop Syntax
 
@@ -2905,7 +2905,7 @@ T
 ...
 ...
 ```
-> This is a easy way to access each character in a string. It is especially nice for DNA sequences.
+> This is an easy way to access each character in a string. It is especially nice for DNA sequences.
 
 
 Another example of iterating over a list of variables, this time numbers.
@@ -3038,7 +3038,7 @@ count: 1
 count: 2
 Done
 ```
-> when the count is equal to 3, all iterations of the while loop are terminated.
+> when the count is equal to 3, the execution of the while loop is terminated, even though the inital condition (count < 5) is still True.
 
 #### Loop Control: Continue
 
@@ -3139,7 +3139,7 @@ Here is an example of using mathatical operators to generate a list:
 ### Dictionaries
 
 
-Dictionaries are another iterable, like a string and list. Unlike strings and lists, dictionaries are not a sequence, or in other words, the position is not important. 
+Dictionaries are another iterable, like a string and list. Unlike strings and lists, dictionaries are not a sequence, or in other words, they are unordered and the position is not important. 
 
 Dictionaries are a collection of key/value pairs. In python, each key is separated from its value by a colon (:), the items are separated by commas, and the whole thing is enclosed in curly braces. An empty dictionary without any items is written with just two curly braces, like this: `{}`
 
@@ -3316,6 +3316,8 @@ for key in sorted(genes):
 | `str(dict)`      | returns a string representation of the dictionary |
 | `type(variable)` | Returns the type or class of the variable passed to the function. If the variable is dictionary, then it would return a dictionary type. |
 
+These functions work on several other dataypes too!
+
 #### Dictionary Methods
 
 | Method                               | Description                              |
@@ -3434,12 +3436,12 @@ The symetric difference are the elements that are only in the first set plus the
 | ----------- | ---------------------------------------- |
 | `all()`       | returns True if all elements of the set are true (or if the set is empty). |
 | `any()`       | returns True if any element of the set is true. If the set is empty, return False. |
-| `enumerate()` | return an enumerate object. It contains the index and value of all the items of set as a pair. |
-| `len()`       | return the number of items in the set.   |
-| `max()`       | return the largest item in the set.      |
-| `min()`       | return the smallest item in the set.     |
+| `enumerate()` | returns an enumerate object. It contains the index and value of all the items of set as a pair. |
+| `len()`       | returns the number of items in the set.   |
+| `max()`       | returns the largest item in the set.      |
+| `min()`       | returns the smallest item in the set.     |
 | `sorted()`    | returns a new sorted list from elements in the set (does not alter the original set). |
-| `sum()`       | retrune the sum of all elements in the set. |
+| `sum()`       | returns the sum of all elements in the set. |
 
 
 
