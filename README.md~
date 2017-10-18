@@ -2793,8 +2793,11 @@ Done
 
 #### Infinite Loops
 
+<<<<<<< HEAD
 An infinite loop occurs when a while condition is always true. Here is an example of an infinite loop.
-
+=======
+An infinite loop occurs when a while condition is always true. Here is an example of an infinite loop.  
+>>>>>>> 1d64c5b8d498e48a53683dacb6084b232ef65540
 ```python
 #!/usr/bin/env python3
 
@@ -2819,7 +2822,7 @@ count: 0
 ...
 ```
 > What caused this code to always be true? 
-> The statement that increments the count is missing, so it will always be smaller than 5. To stop the code from forever printing use Ctrl-c.
+> The statement that increments the count is missing, so it will always be smaller than 5. To stop the code from forever printing use Cntl+C.
 
 #### While/Else
 
