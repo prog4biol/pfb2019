@@ -43,14 +43,14 @@ Fragment\tPostion\tLength
 
 Assign a list to a new variable:
 ```python
-        list = ['a', 'bb', 'ccc']
-        list_copy = list
+        my_list = ['a', 'bb', 'ccc']
+        list_copy = my_list
 ```
 
 Use the copy() method:
 ```python
-        list = ['a', 'bb', 'ccc']
-        list_copy = list.copy()
+        my_list = ['a', 'bb', 'ccc']
+        list_copy = my_list.copy()
 ```
 
 12. ADD/COMMIT/PUSH
