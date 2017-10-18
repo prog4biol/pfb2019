@@ -196,18 +196,52 @@ mcampbel@jabberwocky.cshl.edu:answers$ ./manipulate_the_string.py
 Now find the end of the fragments
 
 ```python
+#!/usr/bin/env python3
+
+dna = 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTGCTTTCCACGACGGTGACACGCTTCCCTGGATTGGCAGCCAGACTGCCTTCCGGGTCACTGCCATGGAGGAGCCGCAGTCAGATCCTAGCGTCGAGCCCCCTCTGAGTCAGGAAACATTTTCAGACCTATGGAAACTACTTCCTGAAAACAACGTTCTGTCCCCCTTGCCGTCCCAAGCAATGGATGATTTGATGCTGTCCCCGGACGATATTGAACAATGGTTCACTGAAGACCCAGGTCCAGATGAAGCTCCCAGAATTCGCCAGAGGCTGCTCCCCCCGTGGCCCCTGCACCAGCAGCTCCTACACCGGCGGCCCCTGCACCAGCCCCCTCCTGGCCCCTGTCATCTTCTGTCCCTTCCCAGAAAACCTACCAGGGCAGCTACGGTTTCCGTCTGGGCTTCTTGCATTCTGGGACAGCCAAGTCTGTGACTTGCACGTACTCCCCTGCCCTCAACAAGATGTTTTGCCAACTGGCCAAGACCTGCCCTGTGCAGCTGTGGGTTGATTCCACACCCCCGCCCGGCACCCGCGTCCGCGCCATGGCCATCTACAAGCAGTCACAGCACATGACGGAGGTTGTGAGGCGCTGCCCCCACCATGAGCGCTGCTCAGATAGCGATGGTCTGGCCCCTCCTCAGCATCTTATCCGAGTGGAAGGAAATTTGCGTGTGGAGTATTTGGATGACAGAAACACTTTTCG'
+
+ecori = "GAATTC"
+
+#computers start counting at zero while humans start counting at one. This is good to remember to avoid "off by one" errors. These kinds of errors are pervasive in bioinformatics, and hard to debug because the code runs fine.
+zero_based_ecori_pos = dna.find(ecori)
+one_based_ecori_pos = zero_based_ecori_pos + 1 
+print('zero based ecori pos', zero_based_ecori_pos)
+print('one based binding pos', one_based_ecori_pos )
+
+#the cut is one base into the site G^AATTC so you add one to get the cut position
+one_based_ecori_cut_pos = one_based_ecori_pos + 1 
+zero_based_ecori_cut_pos = zero_based_ecori_pos + 1 
+print('one based cut pos', one_based_ecori_cut_pos)
+print('zero based cut pos', zero_based_ecori_cut_pos)
+
+#use the zero based coordinates to work in python. Get the nucleotides at the begining and end of the fragments
+begin_of_left_frag = dna[0]
+end_of_left_frag = dna[zero_based_ecori_cut_pos -1]
+begin_of_right_frag = dna[zero_based_ecori_cut_pos]
+end_of_right_frag = dna[-1]
+
+print ("\nthese numbers are in one based coordinates")
+print ("begin of left frag", '1' , begin_of_left_frag)
+print ("end of left frag", one_based_ecori_cut_pos -1, end_of_left_frag)
+print ("begin of right frag", one_based_ecori_cut_pos , begin_of_right_frag)
+print ("end of right frag", len(dna), end_of_right_frag,"\n")
 
 ```
 
 run it
 
 ```sh
-mcampbel@jabberwocky.cshl.edu:answers$ ./manipulate_the_string.py
-the numbers are in computer counting space starts at 0
+mcampbel@jabberwocky.cshl.edu:answers$ ./manipulate_the_string_with_prints.py 
+zero based ecori pos 395
+one based binding pos 396
+one based cut pos 397
+zero based cut pos 396
+
+these numbers are in one based coordinates
 begin of left frag 1 G
-end of left frag 395 G
-begin of right frag ecori_cut_pos A
-end of right frag 842 G
+end of left frag 396 G
+begin of right frag 397 A
+end of right frag 842 G 
 ```
 
 7. **Extract the the restricion fragments. Print each fragment along with its postion in the whole DNA sequence and its length. Use string formating to format your print statemnt.**
