@@ -3269,7 +3269,7 @@ Dictionary Operators:
 | `in`     | `key in dict` returns True if the key exists in the dictionary |
 | `not in` | `key not in dict` returns True if the key does not exist in the dictionary |
 
-Because python generates a NameError if you try to use a key that doesn't exist in the dictionary, you probably need to check whether a key exists before trying to use it.
+Because python generates a NameError if you try to use a key that doesn't exist in the dictionary, you need to check whether a key exists before trying to use it.
 
 The best way to check whether a key exists is to use `in`
 
@@ -3316,7 +3316,8 @@ These functions work on several other dataypes too!
 | `dict.copy()`                          | Returns a shallow copy of dictionary dict. Shallow vs Deep only matters in multidementional datastructures. |
 | `dict.fromkeys(seq,value)`             | Create a new dictionary with keys from seq (python sequence type) and values set to value. |
 | `dict.items()`                         | Returns a list of (key, value) tuple pairs |
-| `dict.keys()`                          | Returns list of keys                     |
+| `dict.keys()`                          | Returns list of keys     |
+| `dict.get(key, default = None)`   | get value from dict[key], use default if not not present|
 | `dict.setdefault(key, default = None)` | Similar to get(), but will set dict[key] = default if key is not already in dict |
 | `dict.update(dict2)`                   | Adds dictionary dict2's key-values pairs to dict |
 | `dict.values()`                        | Returns list of dictionary dict's values |
