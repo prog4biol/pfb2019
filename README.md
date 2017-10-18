@@ -3105,14 +3105,6 @@ Here is an simple example:
 [4, 8, 3, 8]
 ```
 
-Another example:
-```python
->>> sentence = "This is a sentence with spaces"
->>> words = sentence.split()
->>> words
-['This', 'is', 'a', 'sentence', 'with', 'spaces']
-```
-
 
 Using conditions:
 
@@ -3124,8 +3116,6 @@ This will only return the length of an element that starts with 'A':
 [8, 3, 8]
 ```
 > This generates the following list: [8, 3, 8]
-
-
 
 Here is an example of using mathatical operators to generate a list:
 ```python
