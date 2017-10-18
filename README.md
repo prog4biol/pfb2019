@@ -2265,7 +2265,7 @@ Now let's uppercase a string.
 >>> print(dna)
 attgct
 ```
-> The contents of the variable 'dna', 'attgct' was returned in upper case. The actual contents of 'dna' were not altered.
+> The contents of the variable 'dna' were returned in upper case. The contents of 'dna' were not altered.
 
 #### Find and Count
 
@@ -2301,7 +2301,8 @@ AUGCUGCAUU
 #### Extracting a Substring, or Slicing
 
 Parts of a string can be located based on position and returned. This is because a string is a sequence. Coordinates start at 0. You add the coordinate in square brackets after the string's name. 
-<p>&nbsp</p>
+
+
 This string 'ATTAAAGGGCCC' is made up of the following sequence of characters, and positions (starting at zero).
 
 
@@ -2329,7 +2330,7 @@ Let's return the 4th, 5th, and 6th nucleotides. To do this, we need to count lik
 >>> print(sub_dna)
 AAA
 ```
-> The chacters with the positional index of 3, 4, 5 are returned. Or in other words, every chacater starting at index 3 and up to but not including, the index of 6 are returned. 
+> The chacters with indices 3, 4, 5 are returned. Or in other words, every chacater starting at index 3 and up to but not including, the index of 6 are returned. 
 
 Let's return the first 6 characters.
 ```python
