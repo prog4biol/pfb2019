@@ -2832,8 +2832,13 @@ count: 0
 ...
 ...
 ```
+<<<<<<< HEAD
 > What caused the expression to always be `True`? 
 > The statement that increments the count is missing, so it will always be smaller than 5. To stop the code from forever printing use ctrl+c.
+=======
+> What caused this code to always be true? 
+> The statement that increments the count is missing, so it will always be smaller than 5. To stop the code from forever printing use Ctrl-c.
+>>>>>>> 7ec971bdbe23d5723eebb1657432928b0102e88d
 
 #### While/Else
 
