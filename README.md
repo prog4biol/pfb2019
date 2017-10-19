@@ -2668,41 +2668,41 @@ This works in exactly the same way with lists as it does with strings. This is b
 
 Remember methods are used in the following format list.method().   
 
-For these examples use: `list = [1,2,3]` and `codons = [ 'atg' , 'aaa' , 'agg' ]`
+For these examples use: `nums = [1,2,3]` and `codons = [ 'atg' , 'aaa' , 'agg' ]`
 
 | Method                    | Description                              | Example                                  |
 | ------------------------- | ---------------------------------------- | ---------------------------------------- |
-| `list.append(obj)`        | appends an object to the end of a list   | list.append(9) ; print(list) ; returns [1,2,3,9] |
-| `list.count(obj)`         | counts the occurences of an object in a list | list.count(2) returns 1                  |
-| `list.index(obj)`         | returns the lowest index where the given object is found | list.index(2) returns 1                  |
-| `list.pop()`              | removes and returns the last value in the list. The list is now one element shorter | list.pop() returns 3                     |
+| `list.append(obj)`        | appends an object to the end of a list   | nums.append(9) ; print(list) ; returns [1,2,3,9] |
+| `list.count(obj)`         | counts the occurences of an object in a list | nums.count(2) returns 1                  |
+| `list.index(obj)`         | returns the lowest index where the given object is found | nums.index(2) returns 1                  |
+| `list.pop()`              | removes and returns the last value in the list. The list is now one element shorter | nums.pop() returns 3                     |
 | `list.insert(index, obj)` | inserts a value at the given index. Remember to think about the divisions between the elements | list.insert(0,100) ; print(list) returns [100, 1, 2, 3] |
 | `list.extend(new_list)`   | appends `new_list` to the end of `list`  | list.extend([7, 8]) ; print(list) returns [1, 2, 3, 7,8] |
-| `list.pop(index)`         | removes and returns the value of the index argument. The list is now 1 value shorter | list.pop(0) returns 1                    |
+| `list.pop(index)`         | removes and returns the value of the index argument. The list is now 1 value shorter | nums.pop(0) returns 1                    |
 | `list.remove(obj)`        | finds the lowest index of the given object and removes it from the list. The list is now one element shorter | codons.remove('aaa') ; print(codons) returns  [ 'atg' , 'agg' ] |
-| `list.reverse()`          | reverses the order of the list           | list.reverse() ; print(list) returns [3,2,1] |
+| `list.reverse()`          | reverses the order of the list           | nums.reverse() ; print(nums) returns [3,2,1] |
 | `list.copy()`             | Returns a shallow copy of list. Shallow vs Deep only matters in multidementional datastructures. |                                          |
 | `list.sort([func])`       | sorts a list using the provided function. Does not return a list. The list has been changed. Advanced list sort will be covered once writting your own functions has been disccussed. | codons.sort() ; print(codons) returns ['aaa', 'agg', 'atg'] |
 
 
 Be careful how you make a copy of your list
 ```python
->>> list=['a', 'one', 'two']
->>> l2=list
->>> l2.append('1')
->>> print(list)
+>>> my_list=['a', 'one', 'two']
+>>> copy_list=my_list
+>>> copy_list.append('1')
+>>> print(my_list)
 ['a', 'one', 'two', '1']
->>> print(l2)
+>>> print(copy_list)
 ['a', 'one', 'two', '1']
 ```
-> Not what you expected?! Both lists have changed because we only copied a pointer to the original list when we wrote `l2=list`. 
+> Not what you expected?! Both lists have changed because we only copied a pointer to the original list when we wrote `copy_list=my_list`. 
 
 Let's copy the list using the `copy()` method.
 ```python
->>> list=['a', 'one', 'two']
->>> l2=list.copy()
->>> l2.append('1')
->>> print(list)
+>>> my_list=['a', 'one', 'two']
+>>> copy_list=my_list.copy()
+>>> copy_list.append('1')
+>>> print(my_list)
 ['a', 'one', 'two']
 ```
 > There we go, we get what we expect this time!
