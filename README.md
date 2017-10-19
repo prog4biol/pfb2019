@@ -3318,8 +3318,8 @@ These functions work on several other dataypes too!
 | `dict.copy()`                          | Returns a shallow copy of dictionary dict. Shallow vs Deep only matters in multidementional datastructures. |
 | `dict.fromkeys(seq,value)`             | Create a new dictionary with keys from seq (python sequence type) and values set to value. |
 | `dict.items()`                         | Returns a list of (key, value) tuple pairs |
-| `dict.keys()`                          | Returns list of keys     |
-| `dict.get(key, default = None)`   | get value from dict[key], use default if not not present|
+| `dict.keys()`                          | Returns list of keys                     |
+| `dict.get(key, default = None)`        | get value from dict[key], use default if not not present |
 | `dict.setdefault(key, default = None)` | Similar to get(), but will set dict[key] = default if key is not already in dict |
 | `dict.update(dict2)`                   | Adds dictionary dict2's key-values pairs to dict |
 | `dict.values()`                        | Returns list of dictionary dict's values |
@@ -3491,67 +3491,66 @@ Hello, PFB2017!
 
 #### Reading input from the keyboard
 
-This is something new. There is a function which prints a message to the screen and waits for input from the keyboard. This input can be stored in a variable.
+This is something new. There is a function which prints a message to the screen and waits for input from the keyboard. This input can be stored in a variable. It always starts as a string. Convert to an int or float if you want a number.
 
 ```python 
 >>> user_input = input("Type Something Now: ")
 Type Something Now: Hi
 >>> print(user_input)
 Hi
+>>> type(user_input)
+<class 'str'>
 ```
-> All inputed text will be treated as a string. If you are to do math with the input, convert to an int or float first.
-
 #### Reading from a File
 
 Most of the data we will be dealing with will be contained in files. 
 
-The first thing to do with a file is open it. We can do this with the `open()` function. The `open()` function takes the file name, access mode as arguments and returns a file object.
+The first thing to do with a file is open it. We can do this with the `open()` function. The `open()` function takes the file name and access mode as arguments and returns a file object.
 
-The most common access modes are reading (r) and writing (w).
+The most common access modes are read (r) and write (w).
 
 #### Open a File
 
 ```python
 >>> file_object = open("seq.nt.fa","r")
 ```
-> 'file_object' is a name of a variable. This can be anything. 
+> 'file_object' is a name of a variable. This can be anything, but make it a helpful name that describes what kind of file you are opening.
 
 
 #### Reading the contents of a file
 
 Now that we have opened a file and created a file object we can do things with it, like read it. Lets read all the contents at once.  
 
-Let's cat the contents on the _command line_ to see what's in it before we open it in python
+Let's go to the command line and  `cat` the contents of the file to see what's in it first
 
 ```bash
 $ cat seq.nt.fa
 ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
 ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
+$ 
 ```
 
-Now, lets print the contents to the screen with Python
+Note the new lines. Now, lets print the contents to the screen with Python. We will use `read()` to read the endtire contents of the file into a variable. 
 ```python
->>> file_object = open("seq.nt.fa","r")
->>> contents = file_object.read()
->>> file_name = file_object.name
->>> print(file_name)
+>>> file = open("seq.nt.fa","r")
+>>> contents = file.read()
 seq.nt.fa
->>> print(contents)
+>>> print(contents)  # note newline characters are part of the file!
 ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
 ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 
->>> file_object.close()
+>>> file.close()
 ```
-> The complete contents can be retrieved with the `read()` method. Another attribure of file_object that can be accessed is the file name. Notice the formatting including newlines are maintained when `contents` is printed to the screen. `print()` adds another new line when it is finished printing.
+> The complete contents can be retrieved with the `read()` method. Notice the newlines are maintained when `contents` is printed to the screen. `print()` adds another new line when it is finished printing.
 > It is good practice to close your file. Use the `close()` method. 
 
 
-A for loop can be used to iterate through the file_object one line at a time.
+Here's another way to read data in from a file. A `for` loop can be used to iterate through the file one line at a time.
 ```python
 #!/usr/bin/env python3
 
-file_object = open("seq.nt.fa","r")
-for line in file_object: # python magic: reads in a line from file
+file = open("seq.nt.fa","r")
+for line in file: # python magic: reads in a line from file
   print(line)
 ```
 
@@ -3563,7 +3562,7 @@ ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
 ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 
 ```
-> Notice the blank line at after each line we print. `print()` automatically adds a newline and we have a newline at the end of each line in our file. Use `rstrip()` method to remove the newline from each line.
+> Notice the blank line at after each line we print. `print()` adds a newline and we have a newline at the end of each line in our file. Use `rstrip()` method to remove the newline from each line.
 
 Let's use `rstrip()` method to remove the newline from our file input.
 ```python
@@ -3584,9 +3583,11 @@ ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
 ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 ```
 
-#### Opening a file with `with open() as fh:`
+> Where do the newlines in the above output come from?
 
-This is a good extra to add in because it closes the file for you automatically. Good programming practice. Your code will clean up as it runs. For more advanced coding, this saves limited resources like filehandles and database connections. For now, we just need to know that the `with ... as ...:` does the same as `fh = open(...) ... fh.close()`. So here's what the adapted code looks like
+####Opening a file with `with open() as fh:`
+
+This is a good extra to add in because it closes the file for you automatically. Good programming practice. Your code will clean up as it runs. For more advanced coding, `with ... as ...` saves limited resources like filehandles and database connections. For now, we just need to know that the `with ... as ...:` does the same as `fh = open(...) ... fh.close()`. So here's what the adapted code looks like
 
 ```python
 #!/usr/bin/env python3
@@ -3602,7 +3603,7 @@ with open("seq.nt.fa","r") as file_object: #cleans up after exiting with block
 
 Writing to a file is nothing more than opening a file for writing then using the `write()` method.  
 
-The `write()` method is like the `print()` function. The biggest difference is that it writes to your file object instead of the screen. `write()` can only take one string type argument. 
+The `write()` method is like the `print()` function. The biggest difference is that it writes to your file object instead of the screen. `write()` takes a single string argument. 
 
 Let's write a few lines to a file named "writing.txt".  
 ```python
@@ -3615,6 +3616,7 @@ fo.write("3rd line" + " has extra text\n")
 some_var = 5
 fo.write("4th line has " + str(some_var) + " words\n")
 fo.close()
+print("Wrote to file writing.txt")
 ```
 
 Output:
