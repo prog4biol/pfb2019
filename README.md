@@ -224,15 +224,15 @@ __Table of Contents__
         * [Many more modules that do many things](#many-more-modules-that-do-many-things)
         * [Link to Python 7 Problem Set](#link-to-python-7-problem-set)
    * [Python 8](#python-8)
-        * [Exception Handling](#exception-handling)
-            * [try/except/else/finally](#tryexceptelsefinally)
-            * [Getting more information about an exception](#getting-more-information-about-an-exception)
-            * [Raising an Exception](#raising-an-exception)
-        * [Datastructures](#datastructures)
-            * [Two-demensional lists](#two-demensional-lists)
+        * [Data structures](#data-structures)
+            * [Lists of lists](#lists-of-lists)
             * [Lists of dictionaries](#lists-of-dictionaries)
             * [Dictionaries of lists](#dictionaries-of-lists)
             * [Dictionaries of dictionaries](#dictionaries-of-dictionaries)
+        * [Exceptions](#exceptions)
+            * [try/except/else/finally](#tryexceptelsefinally)
+            * [Getting more information about an exception](#getting-more-information-about-an-exception)
+            * [Raising an Exception](#raising-an-exception)            
         * [Link to Python 8 Problem Set](#link-to-python-8-problem-set)
    * [Python 9](#python-9)
         * [BioPython](#biopython)
@@ -4809,7 +4809,165 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 ---
 # Python 8
 
-### Exception Handling
+
+
+
+### Data Structures
+
+
+Sometimes a _simple_ list or dictionary just doesn't do what you want. Sometimes you need to organize data in a more _complex_ way.  You can nest any data type inside any other type. This lets you build multidimensional data tables easily.
+
+
+#### List of lists
+
+Often times a list of lists, often called a matrix are important for organizing and accessing data
+
+
+Here's a way to make a 3 x 3 table of values.
+
+```python
+>>> M = [[1,2,3], [4,5,6],[7,8,9]]
+>>> M[1] # second row (starts with index 0)
+[4,5,6]
+>>>M[1][2] # second row, third element
+6
+```
+
+Here's a way to store sequence alignment data:
+
+Four sequences aligned:
+```
+AT-TG
+AATAG
+T-TTG
+AA-TA
+```
+
+The alignment in a list of lists.
+```python
+aln = [['A', 'T', '-', 'T', 'G'],
+['A', 'A', 'T', 'A', 'G'],
+['T', '-', 'T', 'T', 'G'],
+['A', 'A', '-', 'T', 'A']]
+```
+
+Get an the full length of one sequence:
+```python
+>>> seq = aln[2]
+>>> seq
+['T', '-', 'T', 'T', 'G']
+```
+> Use the outer most index to access each sequence
+
+Retrieve the nucleotide at a particular position in a sequence.
+```python
+>>> nt = aln[2][3]
+>>> nt
+'T'
+```
+> Use the outer most index to access the sequence of interest and the inner most index to access the position
+
+
+Get every nucleotide in a single column:
+```python
+>>> col = [seq[3] for seq in aln]
+>>> col
+['T', 'A', 'T', 'T']
+```
+> Retrieve each sequence from the aln list then the 3rd column for each sequence. 
+
+
+#### Lists of dictionaries
+
+You can nest dictionaries in lists as well:
+
+```python
+>>> records = [
+... {'name' : 'actgctagt', 'accession' : 'ABC123', 'genetic_code' : 1},
+... {'name' : 'ttaggttta', 'accession' : 'XYZ456', 'genetic_code' : 1},
+... {'name' : 'cgcgatcgt', 'accession' : 'HIJ789', 'genetic_code' : 5}
+... ]
+>>> records[0]['name']
+'actgctagt'
+>>> records[0]['accession']
+'ABC123'
+>>> records[0]['genetic_code']
+1
+```
+> Here you can retrieve the accession of one record at a time by using a combination of the outer index and the key 'accession'
+
+#### Dictionaries of lists
+
+And, if you haven't guessed, you can nest lists in dictionaries
+
+Here is a dictionary of kmers. The key is the kmer and its values is a list of postions
+```python
+>>> kmers = {'ggaa': [4, 10], 'aatt': [0, 6, 12], 'gaat': [5, 11], 'tgga':
+... [3, 9], 'attg': [1, 7, 13], 'ttgg': [2, 8]}
+>>> kmers
+{'tgga': [3, 9], 'ttgg': [2, 8], 'aatt': [0, 6, 12], 'attg': [1, 7, 13], 'ggaa': [4, 10], 'gaat': [5, 11]}
+>>>
+>>> kmers['ggaa']
+[4, 10]
+>>> len(kmers['ggaa'])
+2
+```
+> Here we can get a list of the positions of a kmer by using the kmer as the key. We can also do things to the returned list, like determining its length. The length will be the total count of this kmers.
+
+You can also use the dictionary `get()` method to retrieve records.
+```python
+>>> kmers['ggaa']
+[4, 10]
+>>> kmers.get('ggaa')
+[4, 10]
+```
+> These two statements returns the same results, but if the key does not exist you will get nothing and not an error.
+
+#### Dictionaries of dictionaries
+
+Dictionaries of dictionaries is my favorite!! You can do so many useful things with this data structure. Here we are storing a gene name and some different types of information about that gene, such as its, sequence, length, description, nucleotide composition and length.
+
+```python
+>>> genes = {
+... 'gene1' : {
+...     'seq' : "TATGCC",
+...    'desc' : 'something',
+...     'len' : 6,
+... 'nt_comp' : {
+...             'A' : 1,
+...             'T' : 2,
+...             'G' : 1,
+...             'C' : 2,
+...            }
+...   },
+...
+... 'gene2' : {
+...     'seq' : "CAAATG",
+...    'desc' : 'something',
+...     'len' : 6,
+... 'nt_comp' : {
+...           'A' : 3,
+...           'T' : 1,
+...           'G' : 1,
+...           'C' : 1,
+...           }
+...       }
+... }
+>>> genes
+{'gene1': {'nt_comp': {'C': 2, 'G': 1, 'A': 1, 'T': 2}, 'desc': 'something', 'len': 6, 'seq': 'TATGCC'}, 'gene2': {'nt_comp': {'C': 1, 'G': 1, 'A': 3, 'T': 1}, 'desc': 'something', 'len': 6, 'seq': 'CAAATG'}}
+>>> genes['gene2']['nt_comp']
+{'C': 1, 'G': 1, 'A': 3, 'T': 1}
+```
+> Here we store a gene name as the outermost key, with a second level of keys for qualities of the gene, like sequence, length, nucleotide composition. We can retrieve a quality by using the gene name and quality in conjunction.
+
+
+
+There are also specific data table and frame handling libraries like Pandas.
+
+
+
+
+### Exceptions
 
 
 There are a few different types of errors when coding. Syntax errors, logic errors, and exceptions. You have probably encountered all three. Sytax and logic errors are issues you need to deal with while coding. An exception is a special type of error that can be informative and used to write code to respond to this type of error. This is especially relavent when dealing with user input. What if they don't give you any, or it is the wrong kind of input. We want our code to be able to detect these types of errors and respond accordingly.
@@ -5072,162 +5230,6 @@ File needs to be a FASTA file and end with .fa
 <p>&nbsp;</p>
 
 
-### Data Structures
-
-
-Sometimes a _simple_ list or dictionary just doesn't do what you want. Sometimes you need to organize data in a more _complex_ way.  You can nest any data type inside any other type. This lets you build multidimensional data tables easily.
-
-
-#### Two-dimensional lists
-
-Often times a list of lists, often called a matrix are important for organizing and accessing data
-
-
-Here's a way to make a 3 x 3 table of values.
-
-```python
->>> M = [[1,2,3], [4,5,6],[7,8,9]]
->>> M[1] # second row (starts with index 0)
-[4,5,6]
->>>M[1][2] # second row, third element
-6
-```
-
-Here's a way to store sequence alignment data:
-
-Four sequences aligned:
-```
-AT-TG
-AATAG
-T-TTG
-AA-TA
-```
-
-The alignment in a list of lists.
-```python
-aln = [['A', 'T', '-', 'T', 'G'],
-['A', 'A', 'T', 'A', 'G'],
-['T', '-', 'T', 'T', 'G'],
-['A', 'A', '-', 'T', 'A']]
-```
-
-Get an the full length of one sequence:
-```python
->>> seq = aln[2]
->>> seq
-['T', '-', 'T', 'T', 'G']
-```
-> Use the outer most index to access each sequence
-
-Retrieve the nucleotide at a particular position in a sequence.
-```python
->>> nt = aln[2][3]
->>> nt
-'T'
-```
-> Use the outer most index to access the sequence of interest and the inner most index to access the position
-
-
-Get every nucleotide in a single column:  an entire column by retrieving a particular position for each inner
-```python
->>> col = [seq[3] for seq in aln]
->>> col
-['T', 'A', 'T', 'T']
-```
-> Here we can access a set position (3) for each list (here called 'seq') in our 'aln list.
-
-
-#### Lists of dictionaries
-
-You can nest dictionaries in lists as well:
-
-```python
->>> records = [
-... {'name' : 'actgctagt', 'accession' : 'ABC123', 'genetic_code' : 1},
-... {'name' : 'ttaggttta', 'accession' : 'XYZ456', 'genetic_code' : 1},
-... {'name' : 'cgcgatcgt', 'accession' : 'HIJ789', 'genetic_code' : 5}
-... ]
->>> records[0]['name']
-'actgctagt'
->>> records[0]['accession']
-'ABC123'
->>> records[0]['genetic_code']
-1
-```
-> Here you can retrieve the accession of one record at a time by using a combination of the outer index and the key 'accession'
-
-#### Dictionaries of lists
-
-And, if you haven't guessed, you can nest lists in dictionaries
-
-Here is a dictionary of kmers. The key is the kmer and its values is a list of postions
-```python
->>> kmers = {'ggaa': [4, 10], 'aatt': [0, 6, 12], 'gaat': [5, 11], 'tgga':
-... [3, 9], 'attg': [1, 7, 13], 'ttgg': [2, 8]}
->>> kmers
-{'tgga': [3, 9], 'ttgg': [2, 8], 'aatt': [0, 6, 12], 'attg': [1, 7, 13], 'ggaa': [4, 10], 'gaat': [5, 11]}
->>>
->>> kmers['ggaa']
-[4, 10]
->>> len(kmers['ggaa'])
-2
-```
-> Here we can get a list of the positions of a kmer by using the kmer as the key. We can also do things to the returned list, like determining its length. The length will be the total count of this kmers.
-
-You can also use the dictionary `get()` method to retrieve records.
-```python
->>> kmers['ggaa']
-[4, 10]
->>> kmers.get('ggaa')
-[4, 10]
-```
-> These two statements returns the same results
-
-#### Dictionaries of dictionaries
-
-Dictionaries of dictionaries is my favorite!! You can do so many useful things with this data structure.
-
-```python
->>> genes = {
-... 'gene1' : {
-...     'seq' : "TATGCC",
-...    'desc' : 'something',
-...     'len' : 6,
-... 'nt_comp' : {
-...             'A' : 1,
-...             'T' : 2,
-...             'G' : 1,
-...             'C' : 2,
-...            }
-...   },
-...
-... 'gene2' : {
-...     'seq' : "CAAATG",
-...    'desc' : 'something',
-...     'len' : 6,
-... 'nt_comp' : {
-...           'A' : 3,
-...           'T' : 1,
-...           'G' : 1,
-...           'C' : 1,
-...           }
-...       }
-... }
->>> genes
-{'gene1': {'nt_comp': {'C': 2, 'G': 1, 'A': 1, 'T': 2}, 'desc': 'something', 'len': 6, 'seq': 'TATGCC'}, 'gene2': {'nt_comp': {'C': 1, 'G': 1, 'A': 3, 'T': 1}, 'desc': 'something', 'len': 6, 'seq': 'CAAATG'}}
->>> genes['gene2']['nt_comp']
-{'C': 1, 'G': 1, 'A': 3, 'T': 1}
-```
-> Here we store a gene name as the outermost key, with a second level of keys for qualities of the gene, like sequence, length, nucleotide composition. We can retrieve a quality by using the gene name and quality in conjunction.
-
-
-
-There are also specific data table and frame handling libraries like Pandas.
-
-
-
-
-<p>&nbsp;</p>
 
 ---
 
