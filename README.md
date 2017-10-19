@@ -3087,7 +3087,7 @@ Done
 
 #### Iterators
 
-An iterable is any data type that is iterable, or can be used in iteration. An iterable can be made into an iterator with the `iter()` function. This means you can use the `next()` function.
+An iterable is any data type that is can be iteratored over, or can be used in iteration. An iterable can be made into an iterator with the `iter()` function. This means you can use the `next()` function.
 
 ```python
 >>> codons = [ 'atg' , 'aaa' , 'agg' ]
@@ -3104,6 +3104,19 @@ Traceback (most recent call last):
 StopIteration
 ```
 > An iterator allows you to get the next element in the iterator until there are no more elements. If you want to go through each element again, you will need to redefine the iterator.
+
+Example of using an iterator in a for loop:
+```python
+codons = [ 'atg' , 'aaa' , 'agg' ]
+>>> codons_it = iter(codons)
+>>> for codon in codons_it :
+...   print( codon )
+...
+atg
+aaa
+agg
+```
+> This is nice if you have a large large large list that you don't want to keep in memory. An interator allows you to go through each element but not keep the entire list in memory. Without iterators the entire list is in memory.
 
 
 #### List Comprehension
