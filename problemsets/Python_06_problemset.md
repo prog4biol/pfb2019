@@ -3,12 +3,12 @@ Python 6 Problem Set
 
 1. In the file [Python_06_nobody.txt](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/Python_06_nobody.txt) find every occurrence of 'Nobody' and print out the position.
 
-2. In the file [Python_06_nobody.txt](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/Python_06_nobody.txt) substitute every occurrence of 'Nobody' with your favorite person's name and save the file as YourFavoritePersonName.txt (ex. Michael.txt).
+2. In the file [Python_06_nobody.txt](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/Python_06_nobody.txt) substitute every occurrence of 'Nobody' with your favorite name and write an output file with that person's name (ex. Michael.txt).
 
-3. Find all the lines in a [Python_06.fasta](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/Python_06.fasta) that are the header (>seqName desc) using pattern matching.
+3. Using pattern matching, find all the header lines in [Python_06.fasta](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/Python_06.fasta). Note that the format for a header in a fasta file is a line that starts with a greater than symbol and is followed by some text (e.g. `>seqName description` where seqName is the sequence name or identifier. The identifier cannot have spaces in it. The description that follows it can have spaces.)
 
-4. If a line matches the format of a FASTA header, extract the sequence name and description using sub patterns. 
-	- Print id:"extracted seq name" desc:"extracted description"
+4. If a line matches the format of a FASTA header, extract the sequence name and description using sub patterns (groups). 
+	- Print lines something like this `id:"extracted seq name" desc:"extracted description"`
 
 5. Create or modify your FASTA parser to use regular expressions. Also make sure your parser can deal with a sequence that is split over many lines.
 
@@ -44,7 +44,7 @@ ACTATTTTTGAATACATCATTAACGCAATATATATATATATATATTTAT
 ```
 AAAAAAAAGACGTCTTTTTTTAAAAAAAAGACGTCTTTTTTT
 ```
-would be cut like this:
+we want to display the cut site like this:
 
 ```
 AAAAAAAAGACGT^CTTTTTTTAAAAAAAAGACGT^CTTTTTTT
@@ -64,11 +64,11 @@ Into this list:
 ["AAAAAAAAGACGT","CTTTTTTTAAAAAAAAGACGT","CTTTTTTT"]
 ```
 
-9. Download this [file](http://rebase.neb.com/rebase/link_proto) of enzymes and their cut sites to fill a dictionary of enzymes paired with their recognition patterns. Be aware of the header lines, and be aware of how the columns are delimited.
+9. Download this [file](http://rebase.neb.com/rebase/link_proto) of enzymes and their cut sites to fill a dictionary of enzymes paired with their recognition patterns. Be aware of the header lines, and be aware of how the columns are delimited. You'll modify this script in the next question.
 
 10. Write a script which takes two command line arguments: the name of an enzyme and a fasta file with a sequence to be cut. 
-   If the provided enzyme is present in the dictionary, and will act successfully on the provided sequence, print out:
-     - the provided sequence, annotated with cut sites
+   If the enzyme is present in the dictionary, and can cut the sequence, print out:
+     - the sequence, annotated with cut sites
      - the number of fragments
      - the fragments in their natural order (unsorted)
      - the fragments in sorted order (largest to smallest)
