@@ -4287,21 +4287,6 @@ He had a wife.
 > The characters between 'w' and 'f' have been replaced with 'goat'.  
 > The new string is saved in new_str  
 
-#### Using Regular expressions in substitutions
-
-Sometimes you want to find a pattern and use it in the replacement. 
-```python
->>> str = "Who's afraid of the big bad wolf?"
->>> new_str = re.sub(r"(\w+) (\w+) wolf" , r"\2 \1 wolf" , str)
->>> print(new_str)
-Who's afraid of the bad big wolf?
-```
-> We found two words before 'wolf' and swapped the order.
-> \\2 refers to the second subpattern
-> \\1 refers to the first subpattern
-
-Something to think about.  
-How would you use regular expressions to find all occurances of 'ATG' and replace with '-M-' in this sequence 'GCAGAGGTGATGGACTCCGTAATGGCCAAATGACACGT'? 
 
 
 #### Using subpatterns in the replacement
