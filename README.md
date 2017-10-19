@@ -4099,7 +4099,9 @@ downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 > 9) The `findall()` searches again, but no match is found  
 > 10) The for loop ends  
 
-One other way to get this done is with an iterator, use the `finditer()` function in a for loop. This allows you to not store all the matches in memory. But in practice, it does the same as `findall()`
+
+
+Another way to get this done is with an iterator, use the `finditer()` function in a for loop. This allows you to not store all the matches in memory. `finditer()` also allows you to retrieve the postion of the match.
 
 ```python
 >>> dna="ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG"
@@ -4122,8 +4124,41 @@ downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 > 8) The `finditer()` functin is executed again, but no matches found, so the loop ends  
 
 
+#### Get position of the subpattern with `finditer()`
 
-**FYI:** `match()` function is another regular expression function that looks for patterns. It is similar to search but it only looks at the begining of the string for the pattern while `search()` looks in the entire string. Usually `search()` and `findall()` will be more useful.
+The match object contains information about the match that can be retrieved with match methods like `start()` and `end()`
+
+```python3
+#!/usr/bin/env python3
+
+import re
+
+dna="ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG"
+
+for found in re.finditer(r"(.{50})TATTAT(.{25})"  , dna):
+  whole    = found.group(0)
+  up       = found.group(1)
+  down     = found.group(2)
+  up_start = found.start(1) + 1   # need to convert from 0 to 1 notation 
+  up_end   = found.end(1)   + 1
+  dn_start = found.start(2) + 1
+  dn_end   = found.end(2)   + 1
+
+  output = [ whole , up , str(up_start), str(up_end) , down , str(dn_start) , str(dn_end)  ]
+
+  print( "\t".join(output) )
+```
+> we can use these match object methods `group()`, `start()`, `end()` to get the string, start position, and end position of each subpattern. 
+
+```
+$ python3 re.finditer.pos.py
+TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAA	TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA	98	148	CCGGTTTCCAAAGACAGTCTTCTAA	154	179
+TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAA	TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA	320	370	CCGGTTTCCAAAGACAGTCTTCTAA	376	401
+```
+
+
+
+**FYI:** `match()` function is another regular expression function that looks for patterns. It is similar to search but it only looks at the begining of the string for the pattern while `search()` looks in the entire string. Usually `finditer()` , `search()` and `findall()` will be more useful.
 
 
 #### Subpatterns and Greediness
@@ -4215,7 +4250,7 @@ None
 
 __Using Regular expressions in substitutions__
 
-Earlier we went over how to find an exact pattern and replace it using the `replace()` method. To find a pattern and make a replacement the regular expression `sub()` function is used. This function takes the pattern, the replacement, the string to be searched, the number of times to do the replacement, and flags.
+Earlier we went over how to find an **exact pattern** and replace it using the `replace()` method. To find a pattern, or inexact match, and make a replacement the regular expression `sub()` function is used. This function takes the pattern, the replacement, the string to be searched, the number of times to do the replacement, and flags.
 
 ```python
 >>> str = "Who's afraid of the big bad wolf?"
@@ -4255,6 +4290,8 @@ Who's afraid of the bad big wolf?
 
 Something to think about.  
 How would you use regular expressions to find all occurances of 'ATG' and replace with '-M-' in this sequence 'GCAGAGGTGATGGACTCCGTAATGGCCAAATGACACGT'? 
+
+
 #### Using subpatterns in the replacement
 
 Sometimes you want to find a pattern and use it in the replacement. 
@@ -4271,10 +4308,31 @@ Who's afraid of the bad big wolf?
 Something to think about.  
 How would you use regular expressions to find all occurances of 'ATG' and replace with '-M-' in this sequence 'GCAGAGGTGATGGACTCCGTAATGGCCAAATGACACGT'? 
 
+#### Regular Expression Option Modifiers
 
-<p>&nbsp;</p>
+| Modifier | 	Description |
+|----------|---------------|
+| `re.I` `re.IGNORECASE`	 | Performs case-insensitive matching. |
+| `re.M` `re.MULTILINE` |	Makes $ match the end of a line (not just the end of the string) and makes ^ match the start of any line (not just the start of the string). | 
+| `re.S` `re.DOTALL` |	Makes a period (dot) match any character, including a newline. | 
+| `re.U` |	Interprets letters according to the Unicode character set. This flag affects the behavior of \w, \W, \b, \B. | 
+| `re.X` `VERBOSE` |	This flag allows you to write regular expressions that look nicer and are more readable by allowing you to visually separate logical sections of the pattern and add comments. Whitespace within the pattern is ignored, except when in a character class or when preceded by an unescaped backslash. When a line contains a # that is not in a character class and is not preceded by an unescaped backslash, all characters from the leftmost such # through the end of the line are ignored. |
+
+```python
+>>> dna = "atgcgtaatggc"
+>>> re.search(r"ATG",dna)
+>>>
+>>> re.search(r"ATG",dna , re.I)
+<_sre.SRE_Match object; span=(0, 3), match='atg'>
+>>>
+```
+> We can make our search case insenstive by using the `re.I` or `re.IGNORECASE` flag.
+
+
+You can use more than one flag by concatenating them with `\|`.  `re.search(r"ATG",dna , re.I|re.M)`
 
 ---
+
 
 ### [Link to Python 6 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_06_problemset.md)
 
