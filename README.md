@@ -3349,7 +3349,7 @@ These functions work on several other dataypes too!
 | Method                                 | Description                              |
 | -------------------------------------- | ---------------------------------------- |
 | `dict.clear()`                         | Removes all elements of dictionary dict  |
-| `dict.copy()`                          | Returns a shallow copy of dictionary dict. Shallow vs Deep only matters in multidementional datastructures. |
+| `dict.copy()`                          | Returns a shallow copy of dictionary dict. Shallow vs. deep copying only matters in multidimentional data structures. |
 | `dict.fromkeys(seq,value)`             | Create a new dictionary with keys from seq (python sequence type) and values set to value. |
 | `dict.items()`                         | Returns a list of (key, value) tuple pairs |
 | `dict.keys()`                          | Returns list of keys                     |
