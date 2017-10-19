@@ -3812,7 +3812,7 @@ We could test for each of these, or use regular expressions. This is exactly wha
 >>> print(found)
 <_sre.SRE_Match object; span=(7, 10), match='ACG'>
 ```
-> Here you can see in the returned infomratin that ACG starts at string postion 7 (nt 8). The first postion not in the match is at string postion 10 (nt 11).
+> Here you can see in the returned information that ACG starts at string postion 7 (nt 8). The first position following the end of the match is at string postion 10 (nt 11).
 
 What about other potential matches in our DNA string? We can use `findall()` function to find all matches.
 ```python
@@ -3833,7 +3833,7 @@ A quick count of all the matching sites can be done by counting the length of th
 
 Let's talk a bit more about all the new characters we see in the pattern.
 
-The pattern in made up of atoms.  
+The pattern in made up of atoms.  Each atom represents **ONE** character.
 
 #### Individual Characters
 
@@ -3946,8 +3946,8 @@ g.*t
 
 
 Something to think about.  
-1) What would be a pattern to recogize an email address?
-2) What would be a pattern to recogize the ID portion of a sequence record in a FASTA file?
+1) What would be a pattern to recognize an email address?
+2) What would be a pattern to recognize the ID portion of a sequence record in a FASTA file?
 
 
 #### Variables and Patterns
@@ -3964,7 +3964,7 @@ Variables can be used to store patterns.
 
 #### Either Or
 
-A pipe '|' can be used to indicated that either the pattern before or after the '|' can match. Enclose the the two options in parenthesis.
+A pipe '|' can be used to indicated that either the pattern before or after the '|' can match. Enclose the two options in parenthesis.
 
 ```
 big bad (wolf|sheep)
@@ -3978,8 +3978,7 @@ Something to think about.
 
 #### Subpatterns
 
-Subpatterns, or parts of the pattern enclosed in parenthesis can be extracted and stored for later use.
-
+Subpatterns, or parts of the pattern enclosed in parenthesis can be extracted and stored for later use. 
 ```
 Who's afraid of the big bad w(.+)f
 ```
@@ -4008,9 +4007,13 @@ SEQUENCE
 
 
 
+
+
 #### Using Subpatterns Inside the Regular Expression Match
 
-This is helpful when you want to find a subpattern and then match the contents again
+This is helpful when you want to find a subpattern and then match the contents again. They can be used within the function call and used after the function call.
+
+__Subpatterns within the function call__
 
 Once a subpattern matches, you can refer to it within the same regular expression.  The first subpattern becomes \\1, the second \\2, the third \\3, and so on.
 
@@ -4030,68 +4033,22 @@ In a similar vein,
 ```
 > This pattern will match "dogs love dog food"
 > But not "dogs love monkey food".
-
-```python
->>> str="dogs love dog food"
->>> found=re.search(r"\b(\w+)s love \1 food\b", str)
->>> if found:
-...   print(found.group(1))
-... else:
-...   print("Not Found")
-...
-dog
->>> str="cats love cat food"
->>> found=re.search(r"\b(\w+)s love \1 food\b", str)
->>> if found:
-...   print(found.group(1))
-... else:
-...   print("Not Found")
-...
-cat
->>> str="dogs love monkey food"
->>> found=re.search(r"\b(\w+)s love \1 food\b", str)
->>> if found:
-...   print(found.group(1))
-... else:
-...   print("Not Found")
-...
-Not Found
-```
-> This pattern matches:  
->  -  "dogs love dog food"
->  -  "cats love cat food"
->  -  but not "dogs love monkey food" 
-
-
-#### Subpatterns and Greediness
-
-By default, regular expressions are "greedy".  They try to match as much as they can. Use the quantifier '?' to make the match not greedy. The not greedy match is called 'lazy' 
-
-```python
->>> str = 'The fox ate my box of doughnuts'
->>> found = re.search(r"(f.+x)",str)
->>> print(found.group(1))
-fox ate my box
-```
-> The pattern f.+x does not match what you might expect, it matches past 'fox' all the way out to 'fox ate my box'.  
-> The '.+' id greedy 
-> As many characters as possible are found that are between the 'f' and the 'x'. 
-
-Let's make this match lazy by using '?'
-```python
->>> found = re.search(r"(f.+?x)",str)
->>> print(found.group(1))
-fox
-```
-> The match is now lazy and will only match 'fox'
+> We were able to use the subpattern within the regular expression by using `\1` 
+> If there were more subpatterns they would be `\2`, `\3` , `\4`, etc
 
 
 
 #### Using Subpatterns Outside the Regular Expression Match
 
-Using the captured subpattern in code that follows the regular expression.
+Subpatterns can be retrieved after the `search()` function call, or outside the regular expression, by using the `group()` method. This is a method and it belongs to the object that is returned by the `search()` function.
 
-Outside the regular expression match statement, the matched subpatterns can be access with the `group()` method.
+The subpatterns are retrieved by a number. This will be the same number that could be used within the regular expression, i.e.,
+      - `\1` within the subpattern can be used outside with `search_found_obj.group(1)`
+      - `\2` within the subpattern can be used outside with `search_found_obj.group(2)`
+      - `\3` within the subpattern can be used outside with `search_found_obj.group(3)`   
+      - and so on
+      
+
 
 Example:
 ```
@@ -4137,12 +4094,13 @@ downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 > 4) The for block of code is executed  
 > 5) The `findall()` searches again  
 > 6) A match is found  
-> 7) New subpatterns are returned  
+> 7) New subpatterns are returned and stored in the variables upstream and downstream
 > 8) The for block of code gets executed again  
 > 9) The `findall()` searches again, but no match is found  
 > 10) The for loop ends  
 
-One other way to get this done is with the `finditer()` function in a for loop
+One other way to get this done is with an iterator, use the `finditer()` function in a for loop. This allows you to not store all the matches in memory. But in practice, it does the same as `findall()`
+
 ```python
 >>> dna="ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG"
 >>> for match in re.finditer(r"(.{50})TATTAT(.{25})"  , dna):
@@ -4163,7 +4121,32 @@ downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 > 7) The second subpatterns are retrieved from the match object using the `group()` method  
 > 8) The `finditer()` functin is executed again, but no matches found, so the loop ends  
 
-FYI: `match()` function is another regular expression function that looks for patterns. It is similar to search but it only looks at the begining of the string for the pattern while `search()` looks in the entire string. Usually `search()` and `findall()` will be more useful.
+
+
+**FYI:** `match()` function is another regular expression function that looks for patterns. It is similar to search but it only looks at the begining of the string for the pattern while `search()` looks in the entire string. Usually `search()` and `findall()` will be more useful.
+
+
+#### Subpatterns and Greediness
+
+By default, regular expressions are "greedy".  They try to match as much as they can. Use the quantifier '?' to make the match not greedy. The not greedy match is called 'lazy' 
+
+```python
+>>> str = 'The fox ate my box of doughnuts'
+>>> found = re.search(r"(f.+x)",str)
+>>> print(found.group(1))
+fox ate my box
+```
+> The pattern f.+x does not match what you might expect, it matches past 'fox' all the way out to 'fox ate my box'.  
+> The '.+' id greedy 
+> As many characters as possible are found that are between the 'f' and the 'x'. 
+
+Let's make this match lazy by using '?'
+```python
+>>> found = re.search(r"(f.+?x)",str)
+>>> print(found.group(1))
+fox
+```
+> The match is now lazy and will only match 'fox'
 
 
 #### Practical Example: Codons
@@ -4192,7 +4175,8 @@ ACC
 TTG
 >>>
 ```
-> `finditer()` would also work in this for loop. Each codon can be accessed by using the `group()` method.
+> `finditer()` would also work in this for loop.  
+>  Each codon can be accessed by using the `group()` method.
 
   
 
@@ -4212,6 +4196,21 @@ not found
 None
 ```
 > None is False so the else block is executed and "not found" is printed
+
+
+Nest it!
+```python
+>>> 
+>>> if re.search( r"(.{50})TATTATZ(.{25})"  , dna ):
+...    print("found it")
+... else:
+...    print("not found")
+...
+not found
+>>> print(found)
+None
+```
+
 
 
 __Using Regular expressions in substitutions__
