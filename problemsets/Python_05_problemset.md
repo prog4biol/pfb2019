@@ -50,7 +50,7 @@ _Get genes that have been labeled with Gene Ontology term [pigmentation](http://
 16. Under "Gene Ontology", check "Go term name" and enter "pigmentation"
 17. Click Results (top left)
 18. Export all results to "File" "TSV" --> GO
-19. Rename the file to "alpaca_stemcellproliferation_genes.tsv"
+19. Rename the file to "alpaca_pigmentation_genes.tsv"
 
 
 __Open each of the three files and add the geneIDs to a Set. One Set per file.__
