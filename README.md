@@ -4044,10 +4044,10 @@ Subpatterns can be retrieved after the `search()` function call, or outside the 
 
 The subpatterns are retrieved by a number. This will be the same number that could be used within the regular expression, i.e.,
    
-      - `\1` within the subpattern can be used outside with `search_found_obj.group(1)`
-      - `\2` within the subpattern can be used outside with `search_found_obj.group(2)`
-      - `\3` within the subpattern can be used outside with `search_found_obj.group(3)`   
-      - and so on
+  - `\1` within the subpattern can be used outside with `search_found_obj.group(1)`
+  - `\2` within the subpattern can be used outside with `search_found_obj.group(2)`
+  - `\3` within the subpattern can be used outside with `search_found_obj.group(3)`  
+  - and so on
       
 
 
@@ -4129,7 +4129,7 @@ downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 
 The match object contains information about the match that can be retrieved with match methods like `start()` and `end()`
 
-```python3
+```python
 #!/usr/bin/env python3
 
 import re
@@ -4330,7 +4330,7 @@ How would you use regular expressions to find all occurances of 'ATG' and replac
 > We can make our search case insenstive by using the `re.I` or `re.IGNORECASE` flag.
 
 
-You can use more than one flag by concatenating them with `\|`.  `re.search(r"ATG",dna , re.I|re.M)`
+You can use more than one flag by concatenating them with `|`.  `re.search(r"ATG",dna , re.I|re.M)`
 
 ---
 
