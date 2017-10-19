@@ -232,7 +232,8 @@ __Table of Contents__
         * [Exceptions](#exceptions)
             * [try/except/else/finally](#tryexceptelsefinally)
             * [Getting more information about an exception](#getting-more-information-about-an-exception)
-            * [Raising an Exception](#raising-an-exception)            
+            * [Raising an Exception](#raising-an-exception)      
+            * [Creating Custom Exceptions](#creating-custom-exceptions)
         * [Link to Python 8 Problem Set](#link-to-python-8-problem-set)
    * [Python 9](#python-9)
         * [BioPython](#biopython)
@@ -4996,10 +4997,10 @@ Traceback (most recent call last):
     file = sys.argv[1]
 IndexError: list index out of range 
 ```
-> We get an IndexError exception
+> We get an **IndexError** exception
 
 
-We have already seen quite a few Exceptions, here are some:   
+We have already seen quite a few exceptions, here are some:   
   - ValueError: math domain error
   - AttributeError: 'list' object has no attribute 'rstrip'
   - SyntaxError: EOL while scanning string literal
@@ -5042,7 +5043,7 @@ Please provide a file name
 What if the user provides input but it is not a valid file or the path is incorrect? Or if you want to check to see if the user provided input as well as if it can open the input.  
 
 
-We can add multiple exception tests as well as specify what kind of exception for which the exception block should be executed.
+We can add multiple exception tests. Each except statement can specify what kind of exception it is waiting to recieve. If that kind of exception occures, that block of code will be executed.
 ```python
 import sys
 
@@ -5054,9 +5055,9 @@ try:
   for line in FASTA:
     line = line.rstrip()
     print(line)
-except IndexError:
+except IndexError:  
   print("Please provide a file name")
-except IOError:
+except IOError:    
   print("Can't find file:" , file)
 ```
 > Here we test for an IndexError and a IOError. The IndexError occurs when we try to access a list element that does not exists. The IOError happens when we try to access a file that does not exist.
@@ -5089,14 +5090,14 @@ except _ExceptionType_:
 except:
   # if there are any exceptions that are not of _ExceptionType_ this except block will be executed
 else: 
-  # the else block is executed after the try block has been completed
+  # the else block is executed after the try block has been completed, which means there were no exceptions raised
 finally:
-  # the finally block is executed no mater if there are exceptions or not.
+  # the finally block is executed if exceptions are or are not raised (no matter what happens)
 ```
 
 #### Getting more information about an exception
 
-Some exceptions can be thrown for multiple reasons, for example, ErrorIO will occur if the file does not exist as well you don't have permissions to read it. We can get more information by viewing the contents of our Exception Object. Yes, an exception is an object too! To access the object use `as` and supply a variable name, like 'ex'
+Some exceptions can be thrown for multiple reasons, for example, ErrorIO will occur if the file does not exist as well as if you don't have permissions to read it. We can get more information by viewing the contents of our Exception Object. Yes, an exception is an object too! To access the object use `as` and supply a variable name, like 'ex'
 
 ```python
 file = ''
@@ -5191,7 +5192,11 @@ File needs to be a FASTA file and end with .fa
 ```
 > We get a great error message now.
 
-But what if there is another ValueError, how can we tell if it is do to the FASTA file extension or not. We can create our own custom exception. We will need to create a new class of exception. Below is the sytax to do this.
+But what if there is another ValueError, how can we tell if it is do to the FASTA file extension or not? 
+
+#### Creating Custom Exceptions
+
+We can create our own custom exception. We will need to create a new class of exception. Below is the sytax to do this.
 
 ```
 import sys
@@ -5225,9 +5230,6 @@ User provided file name: test.txt
 File needs to be a FASTA file and end with .fa
 ```
 > Our new class of exception, NotFASTAError, works just like the built in exceptions.
-
-
-<p>&nbsp;</p>
 
 
 
