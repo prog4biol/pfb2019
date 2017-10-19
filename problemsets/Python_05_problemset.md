@@ -1,7 +1,7 @@
 Python 5 Problem Set
 ===================
 
-1. Write a script to do the following to [Python_05.txt](https://github.com/srobb1/pfb2017/blob/master/files/Python_05.txt)
+1. Write a script to do the following to [Python_05.txt](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/Python_05.txt)
    - Open and read the contents.  
    - Uppercase each line
    - Print each line to the STDOUT
