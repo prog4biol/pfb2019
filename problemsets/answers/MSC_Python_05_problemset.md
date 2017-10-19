@@ -262,6 +262,7 @@ for genes_in_both in pro_tsf:
 f_all.close()
 f_pig.close()
 f_pro.close()
+f_tsv.close()
 ```
 
 run it
