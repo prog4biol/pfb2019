@@ -4038,11 +4038,12 @@ In a similar vein,
 
 
 
-#### Using Subpatterns Outside the Regular Expression Match
+#### Using Subpatterns Outside the Regular Expression
 
 Subpatterns can be retrieved after the `search()` function call, or outside the regular expression, by using the `group()` method. This is a method and it belongs to the object that is returned by the `search()` function.
 
 The subpatterns are retrieved by a number. This will be the same number that could be used within the regular expression, i.e.,
+   
       - `\1` within the subpattern can be used outside with `search_found_obj.group(1)`
       - `\2` within the subpattern can be used outside with `search_found_obj.group(2)`
       - `\3` within the subpattern can be used outside with `search_found_obj.group(3)`   
@@ -4051,7 +4052,7 @@ The subpatterns are retrieved by a number. This will be the same number that cou
 
 
 Example:
-```
+```python
 >>> dna = 'ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG'
 >>> found=re.search( r"(.{50})TATTAT(.{25})"  , dna )
 >>> upstream = found.group(1))
