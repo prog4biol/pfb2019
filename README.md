@@ -2528,6 +2528,8 @@ So much can be done with the `format()` function. Here is one last example, but 
 ### Lists and Tuples
 
 
+
+
 #### Lists
 
 Lists are data types that store a collection of data.
@@ -2536,9 +2538,18 @@ Lists are data types that store a collection of data.
 - Lists are used to store an ordered, *indexed* collection of data.
 - Values are separated by commas
 - Values are enclosed in square brackets '[]'
-- Lists can grown and shrink
+- Lists can grow and shrink
 - Values are mutatable
 
+#### Tuples
+
+- Tuples are used to store an ordered, *indexed* collection of data.
+- Values are separated by commas
+- Values are enclosed in square brackets '()'
+- Tuples can **NOT** grow or shrink
+- Values are immutatable
+
+#### Back to Lists
 
 #### Accessing Values in Lists
 
@@ -3106,7 +3117,16 @@ Here is an simple example:
 >>> lengths
 [4, 8, 3, 8]
 ```
-
+This is how you could do the same with a for loop:
+```python
+>>> lengths = []
+>>> dna_list = ['TAGC', 'ACGTATGC', 'ATG', 'ACGGCTAG']
+>>> for dna in dna_list:
+...   lengths.append(len(dna))
+...
+>>> lengths
+[4, 8, 3, 8]
+```
 
 Using conditions:
 
@@ -3232,8 +3252,6 @@ TP53 GATGGGATTG
 BRCA1 GTACCTTGAT
 ```
 
-
-
 #### Building a Dictionary one Key/Value at a Time
 
 Building a dictionary one key/value at a time is akin to what we just saw when we change a key's value.
@@ -3264,7 +3282,7 @@ Traceback (most recent call last):
 NameError: name 'HDAC' is not defined
 ```
 
-Dictionary Operators:
+#### Dictionary Operators
 
 | Operator | Description                              |
 | -------- | ---------------------------------------- |
@@ -3294,8 +3312,8 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 If you want to print the contents of a dictionary, you probably want to sort the keys then iterate over the keys with a for loop. Why do you want to sort the keys?
 
 ```python
-for key in sorted(genes):
-  print(key, '=>' , genes[key])
+for gene_key in sorted(genes):
+  print(gene_key, '=>' , genes[gene_key])
 ```
 > This will print the same order of keys every time you run your script. 
 
@@ -3411,7 +3429,7 @@ The intersection between two sets is a sequence of the elements which are in bot
 
 **Symmetric Difference**
 
-The symetric difference are the elements that are only in the first set plus the elements that are only in the second set, with duplicates removed.
+The symetric difference is the elements that are only in the first set plus the elements that are only in the second set, with duplicates removed.
 
 ![Set Symmetric Difference](https://raw.githubusercontent.com/srobb1/pfb2017/master/images//set_symmetric_difference.png)
 
