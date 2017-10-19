@@ -3587,7 +3587,7 @@ ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 
 ####Opening a file with `with open() as fh:`
 
-This is a good extra to add in because it closes the file for you automatically. Good programming practice. Your code will clean up as it runs. For more advanced coding, `with ... as ...` saves limited resources like filehandles and database connections. For now, we just need to know that the `with ... as ...:` does the same as `fh = open(...) ... fh.close()`. So here's what the adapted code looks like
+Many people add this because it closes the file for you automatically. Good programming practice. Your code will clean up as it runs. For more advanced coding, `with ... as ...` saves limited resources like filehandles and database connections. For now, we just need to know that the `with ... as ...:` does the same as `fh = open(...) ... fh.close()`. So here's what the adapted code looks like
 
 ```python
 #!/usr/bin/env python3
@@ -3603,7 +3603,7 @@ with open("seq.nt.fa","r") as file_object: #cleans up after exiting with block
 
 Writing to a file is nothing more than opening a file for writing then using the `write()` method.  
 
-The `write()` method is like the `print()` function. The biggest difference is that it writes to your file object instead of the screen. `write()` takes a single string argument. 
+The `write()` method is like the `print()` function. The biggest difference is that it writes to your file object instead of the screen. Unlike `print()` it does not add a newline by default.  `write()` takes a single string argument. 
 
 Let's write a few lines to a file named "writing.txt".  
 ```python
@@ -3616,21 +3616,20 @@ fo.write("3rd line" + " has extra text\n")
 some_var = 5
 fo.write("4th line has " + str(some_var) + " words\n")
 fo.close()
-print("Wrote to file writing.txt")
+print("Wrote to file 'writing.txt'") # it's nice to tell the user you wrote a file
 ```
 
 Output:
 ```
 $ python3 file_write.py
+Wrote to file 'writing.txt'
 $ cat writing.txt
 One line.
 2nd line.
 3rd line has extra text
 4th line has 5 words
 ```
-> As you can see, literal strings, return values from operators, return values from functions and variables can be written to a file with the `write()` method.
-
-Now, lets get crazy! Lets read from one file a line at a time. Do something to each line and write the results to a new file.
+Now, let's get crazy! Lets read from one file a line at a time. Do something to each line and write the results to a new file.
 ```python
 #!/usr/bin/env python3
 
@@ -3644,10 +3643,11 @@ for line in seq_read:
   total_nts += nt_count
   seq_write.write(str(nt_count) + "\n")
 
-seq_write.write("Total: " + str(total_nts))
+seq_write.write("Total: " + str(total_nts) +"\n")
 
 seq_read.close()
 seq_write.close()
+print("Wrote 'nt.counts.txt'")
 ```
 
 Output:
@@ -3662,7 +3662,7 @@ Total: 142
 > The file we are writing to is named, "nt.counts.txt"  
 > We read each line, calculate the length of each line and print the length  
 > We also create a variable to keep track of the total nt count  
-> Once we go through each line of our file we are reading, we print out the total count of nts  
+> At the end, we print out the total count of nts  
 > Finally we close each of the files  
 
 
@@ -3689,7 +3689,7 @@ for line in seq_read:
     line = line.rstrip()
     id,seq = line.split() #split on whitespace                                                        
     genes[id] =	seq
-
+seq_read.close()
 print(genes)
 ```
 
@@ -3697,9 +3697,6 @@ Output:
 ```
 {'TP53': 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC', 'BRCA1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'}
 ```
-
-
-<p>&nbsp;</p>
 
 ---
 
