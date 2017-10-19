@@ -2744,15 +2744,18 @@ There are two loop types:
 2. for loop
 
 
-#### while loop 
+#### While loop 
 
-The while loop will continue to execute the while loop block as long as a given condition returns True. 
+The while loop will continue to execute a block of code as long as the test expression evaluates to `True`. 
 
 #### While Loop Syntax
 
 ```
 while expression:
-  statement(s)
+  statement1
+  statement2
+  more_statements
+rest_of_code_goes_here
 ```
 > The condition is the expression. The while loop block of code is the collection of indented statements following the expression.
 
@@ -2816,8 +2819,8 @@ count: 0
 ...
 ...
 ```
-> What caused this code to always be true? 
-> The statement that increments the count is missing, so it will always be smaller than 5. To stop the code from forever printing use Cntl+C.
+> What caused the expression to always be `True`? 
+> The statement that increments the count is missing, so it will always be smaller than 5. To stop the code from forever printing use ctrl+c.
 
 #### While/Else
 
@@ -3316,8 +3319,8 @@ These functions work on several other dataypes too!
 | `dict.copy()`                          | Returns a shallow copy of dictionary dict. Shallow vs Deep only matters in multidementional datastructures. |
 | `dict.fromkeys(seq,value)`             | Create a new dictionary with keys from seq (python sequence type) and values set to value. |
 | `dict.items()`                         | Returns a list of (key, value) tuple pairs |
-| `dict.keys()`                          | Returns list of keys     |
-| `dict.get(key, default = None)`   | get value from dict[key], use default if not not present|
+| `dict.keys()`                          | Returns list of keys                     |
+| `dict.get(key, default = None)`        | get value from dict[key], use default if not not present |
 | `dict.setdefault(key, default = None)` | Similar to get(), but will set dict[key] = default if key is not already in dict |
 | `dict.update(dict2)`                   | Adds dictionary dict2's key-values pairs to dict |
 | `dict.values()`                        | Returns list of dictionary dict's values |
