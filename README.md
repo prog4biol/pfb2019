@@ -4323,18 +4323,18 @@ print(calculate_at_content(dna_string))
 #### The details
 
 1. All functions must be defined. 
-  - We do this with the word `def`. 
+    - We do this with the word `def`. 
 2. The function must have a name.
-  - "calculate_at_content" is our name
+    - "calculate_at_content" is our name
 3. Functions define the variables required in the function body. These are paceholders for the arguments that get passed into our function. Functions don't need to have argumetns but they always need '()'
-  - We do this there "(dna)". 
-  - Our function needs one variable, and we can refer to it in the function body as 'dna'. 
+    - We do this there "(dna)". 
+    - Our function needs one variable, and we can refer to it in the function body as 'dna'. 
         - The variable 'dna' and it's contents are only visible within the body of the function
 4. The first line of the function must end with a ':'
 5. The function body needs to be indented.
 6. Do your work.
 7. You can return a value, but this is not required
-  - We return the value of 'at_content'  
+    - We return the value of 'at_content'  
 
 
 #### Naming Arguments
