@@ -2106,9 +2106,9 @@ In python2, the command was `print`, but this changed to `print()` in python3, s
 
 How would you include a new line, carriage return, or tab in your string?  
 
-| Escape Character | Description    |
-| ---------------- | -------------- |
-| \\n              | New line       |
+| Escape Character | Description     |
+| ---------------- | --------------- |
+| \\n              | New line        |
 | \\r              | Carriage Return |
 | \\t              | Tab             |
 
@@ -3849,10 +3849,10 @@ The pattern in made up of atoms.  Each atom represents **ONE** character.
 
 #### Individual Characters
 
-| Atom                              | Description                              |
-| --------------------------------- | ---------------------------------------- |
+| Atom                               | Description                              |
+| ---------------------------------- | ---------------------------------------- |
 | a-z, A-Z, 0-9 and some punctuation | These are ordinary characters that match themselves |
-| "."                               | The dot, or period. This matches any single character except for the newline. |
+| "."                                | The dot, or period. This matches any single character except for the newline. |
 
 
 #### Character Classes
@@ -4055,12 +4055,11 @@ In a similar vein,
 Subpatterns can be retrieved after the `search()` function call, or outside the regular expression, by using the `group()` method. This is a method and it belongs to the object that is returned by the `search()` function.
 
 The subpatterns are retrieved by a number. This will be the same number that could be used within the regular expression, i.e.,
-   
+
   - `\1` within the subpattern can be used outside with `search_found_obj.group(1)`
   - `\2` within the subpattern can be used outside with `search_found_obj.group(2)`
   - `\3` within the subpattern can be used outside with `search_found_obj.group(3)`  
   - and so on
-      
 
 
 Example:
@@ -4308,13 +4307,13 @@ How would you use regular expressions to find all occurrences of 'ATG' and repla
 
 #### Regular Expression Option Modifiers
 
-| Modifier | 	Description |
-|----------|---------------|
-| `re.I` `re.IGNORECASE`	 | Performs case-insensitive matching. |
-| `re.M` `re.MULTILINE` |	Makes $ match the end of a line (not just the end of the string) and makes ^ match the start of any line (not just the start of the string). | 
-| `re.S` `re.DOTALL` |	Makes a period (dot) match any character, including a newline. | 
-| `re.U` |	Interprets letters according to the Unicode character set. This flag affects the behavior of \w, \W, \b, \B. | 
-| `re.X` `VERBOSE` |	This flag allows you to write regular expressions that look nicer and are more readable by allowing you to visually separate logical sections of the pattern and add comments. Whitespace within the pattern is ignored, except when in a character class or when preceded by an unescaped backslash. When a line contains a # that is not in a character class and is not preceded by an unescaped backslash, all characters from the leftmost such # through the end of the line are ignored. |
+| Modifier               | Description                              |
+| ---------------------- | ---------------------------------------- |
+| `re.I` `re.IGNORECASE` | Performs case-insensitive matching.      |
+| `re.M` `re.MULTILINE`  | Makes $ match the end of a line (not just the end of the string) and makes ^ match the start of any line (not just the start of the string). |
+| `re.S` `re.DOTALL`     | Makes a period (dot) match any character, including a newline. |
+| `re.U`                 | Interprets letters according to the Unicode character set. This flag affects the behavior of \w, \W, \b, \B. |
+| `re.X` `VERBOSE`       | This flag allows you to write regular expressions that look nicer and are more readable by allowing you to visually separate logical sections of the pattern and add comments. Whitespace within the pattern is ignored, except when in a character class or when preceded by an unescaped backslash. When a line contains a # that is not in a character class and is not preceded by an unescaped backslash, all characters from the leftmost such # through the end of the line are ignored. |
 
 ```python
 >>> dna = "atgcgtaatggc"
@@ -4339,12 +4338,20 @@ You can use more than one flag by concatenating them with `|`.  `re.search(r"ATG
 
 ### Functions
 
-Writing your own functions is a way to group lines of code together. Why would you want to group lines of code together? 
+Functions consist of lines of code that do something useful and that you want to run more than once. You also give that function a name so you can refer to it in your code. This avoids copying and pasting the code to many places in your script and makes your code easier to read.
 
-    1. Let's say that you have a few lines of code that are required to produce some functionality that you reuse in your code. You can group these all together and have that functionailty become one line. You can then just use one line of code where ever you need this functionality.
-    2. You can simplify the main body of your code if you have one human readable and informative line to represent many lines of code.
+Let's see some examples.
 
-Let's see some examples:
+Python has built-in functions
+
+```python
+>>> print('Hello world!')
+Hello world!
+>>> len('AGGCT')
+5
+```
+
+You can also define your own functions with  `def`
 
 Code to find AT content:
 ```python
