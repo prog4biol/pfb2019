@@ -4411,7 +4411,7 @@ This sequence is 45.16% GC
 
 #### The details
 
-1. You define a function with `def`. 
+1. You define a function with `def`.  You need to define a function before you can call it.
 2. The function must have a name. This name should clearly describe what the function does. Here is our example `gc_content`
 3. You can pass variables to functions but you don't have to. In the definition line, you place variables your function needs inside parentheses like this `(dna)`. This variable only exists inside the function.
 4. The first line of the function must end with a `:` so the complete function definition line looks like this ```def gc_content(dna):```
@@ -4494,148 +4494,191 @@ List comprehensions can often be used instead of lambdas and may be easier to re
 
 ### Scope
 
-Almost all python variables are global. This means they are available everywhere in your code. The most important exception is variables thare are defined in functions which only exist inside their function. This is called 'local'.
+Almost all python variables are global. This means they are available everywhere in your code. The most important exception is variables thare are defined in functions which only exist inside their function. This is called 'local'. Remember that python blocks are defined as code at the same level of indentation.
 
 ```python
 #!/usr/bin/env python3
+print('Before if block')
 x = 100
-if True:  # this if condition will always be True - we want to make sure the block gets executed
+print('x=',x)
+if True:  # this if condition will always be True 
+  # we want to make sure the block gets executed
+  # so we can show you what happens
+  print('Inside if block')
   y = 10
   x = 30
-  print("x (inside if block):", x)
-  print("y (inside if block):", y)
+  print("x=", x)
+  print("y=", y)
 
-print("x (outside if block):)", x)
-print("y (outside if block):", y)
+print('After if block')
+print("x=", x)
+print("y=", y)
+
 
 ```
 
 Let's Run it:
 ```bash
-$ python scripts/scope.py
-x (inside if block): 30
-y (inside if block): 20
-z (inside if block): 10
-x (outside if block):) 30
-y (outside if block): 20
-z (outside if block): 10
+$ python3 scripts/scope.py
+Before if block
+x= 100
+Inside if block
+x= 30
+y= 10
+After if block
+x= 30
+y= 10
+
 ```
+
+Inside a function, global variables are visible, but it's better to pass variables to a function as arguments
+
+```python
+def show_n():
+  print(n)
+n = 5
+show_n()
+```
+
+The output is this `5` as you would expect, but this is better programming practice. Why? We'll see a little later.
+
+```python3
+def show_n(n):
+  print(n)
+n = 5
+show_n(n)
+```
+
+
 
 #### Local Variables
 
-Function argument variables are local and therefore can only been accessed from within the function block.
-
-Python treats variables **defined in functions** as local unless defined not to be. It's usually better to pass a parameter to a function than to have a global variable. Where can you use a variable? This is its scope. It is inside the block it's defined in. That's how you declare variables in Python.
-
-```python
-def show():
-  print(n)
-n = 5
-show()
-```
-
-The output looks like this
-
-```5```
+Variables inside functions are local and therefore can only been accessed from within the function block. This applies to arguments as well as variables defined inside a function.
 
 
 ```python
-#!/usr/bin/env python3
+#!/usr/bin/end python3
 
-def scope_function(x):
-  print("x (inside function block):", x)
-  x = 5
-  print("x (inside function block):", x)
-  print("y (inside function block):", y)
-  print("z (inside function block):", z)
+def set_local_x_to_five(x):
+  print('Inside def')
+  x = 5 # local to set_local_x_to_five()
+  y=5
+  print("x =",x)
+  print("y = ",y)
 
-x = 100
-y = 20;
-if x > y:
-  z = 10
-  x = 30
-  print("x (inside if block):", x)
-  print("y (inside if block):", y)
-  print("z (inside if block):", z)
+print('After def')
+x = 100 # global x
+y = 100 # global
+print('x=',x)
+print('y=',y)
 
-print("x (outside if block):)", x)
-print("y (outside if block):", y)
-print("z (outside if block):", z)
+set_local_x_to_five(500)
+print('After function call')
+print('x=',x)
+print('y=',y)
 
-scope_function(500)
-
-print("x (outside if block after function call):)", x)
 ```
-> Here we have added a function with an argument named 'x'. This variable exists only within the function. It does not matter that there is a variable of the same name outside the function block.
+> Here we have added a function `set_local_x_to_five` with an argument named 'x'. This variable exists only within the function where is replaces any variable with the same name outside the `def`. Inside the `def` we also initialize a variable `y` that also replaces any global `y` within the `def`
 
 Let's run it:
 ```bash
-$ python3 scripts/scope_w_function.py
-x (inside if block): 30
-y (inside if block): 20
-z (inside if block): 10
-x (outside if block):) 30
-y (outside if block): 20
-z (outside if block): 10
-x (inside function block): 1 
-x (inside function block): 5
-y (inside function block): 20
-z (inside function block): 10
-x (outside if block after function call):) 30
+$ python3 scope_w_function.py
+After def
+x= 100
+y= 100
+Inside def
+x = 5
+y =  5
+After function call
+x= 100
+y= 100
+
+
+
 ```
-> As you can see, x is 30 inside and outside the if block, but inside the function x is 1, then x is 5. Once we have completed the function call x is 30 again. Variables within a function block are local to that block. 
+> There is a global variable, `x` = 100, but when the function is called, it makes a new local variable, also called `x` with value = 5. This variable disappears after the function finishes and we go back to using the global variable `x` = 100. Same for `y`
 
 #### Global
 
-You can make a local variable global with the function `global()`. Now a variable defined in a function can be visible to the rest of the code.  It is best not to define any variables as global until you know you need it. Most of the time the default scope is what you want.
+You can make a local variable global with the statement `global`. Now a variable you use in a function is the same variable as in the rest of the code. It is best not to define any variables as global until you know you need to because you might modify the contents of a variable without meaning to.
 
-
-
-Here is an example use of `global()`. This can be a bit mind bending, just knowing this exists is probably good enough for right now.
+Here is an example use of `global`. 
 
 ```python
 #!/usr/bin/env python3
 
-def scope_function():
-  global var_1
-  var_1 = "I say hello"
-  var_2 = "You say good-bye"
-  print("var_1 (inside function block):", var_1)
-  print("var_2 (inside function block):", var_2)
+def set_global_variable():
+  global greeting  # make greeting global
+  greeting = "I say hello"
 
-var_1 = "Hello, hello"
-var_2 = "Good-Bye"
-print("var_1 (outside function block before function call):", var_1)
-print("var_2 (outside function block before function call):", var_2)
-scope_function()
-print("var_1 (outside function block after function call):", var_1)
-print("var_2 (outside function block after function call):", var_2)
+
+greeting = 'Good morning'
+print('Before function call')
+print('greeting =',greeting)
+
+#make call to function
+set_global_variable()
+print('After function call')
+print('greeting =',greeting)
+
 ```
-> By default all variables are global, except for those within functions. Here we mess with the default behavior by defining 'var_1' as global. We the value of 'var_1' within the function will the value outside the function block.
+Let's look at the output
 
 
 ```bash
 $ python3 scripts/scope_global.py
-var_1 (outside function block before function call): Hello, hello
-var_2 (outside function block before function call): Good-Bye
-var_1 (inside function block): I say hello
-var_2 (inside function block): You say good-bye
-var_1 (outside function block after function call): I say hello
-var_2 (outside function block after function call): Good-Bye
-```
-> If we did not make 'var_1' global the value of 'var_' outside the function block would have been "Hello, hello"
+Before function call
+greeting = Good morning
+After function call
+greeting = I say hello
 
+```
+> Note that the function has changed the value of the global variable. You might not want to do this.
 
 
 
 ## Modules
 
+Python comes with some core functions and methods. There are many useful modules that you will want to use. `import` is the statement for telling your script you want to use code in a module. As we've already seen with regular expresions, you can bring in code that handles regular expressions with `import re`
 
+### Getting information about modules with `pydoc`
 
->The standard library:
->os, sys, glob, shutil, math, random, statistics (scipy), zlib, sqlite3 (DB access)? urllib.request 
+How do you find out information about a module? Python has help pages built into the command line, like `man` we met earlier in the unix lecture. Online information may be more up to date. Search at https://docs.python.org/3.6/. But if you don't have internet access, you can always use `pydoc`.
+To find out about the `re` module, type `pydoc re` on the command line. The last line in the output tells you where the python module is actually installed.
 
+```bash
+% pydoc re
+Help on module re:
 
+NAME
+    re - Support for regular expressions (RE).
+
+MODULE REFERENCE
+    https://docs.python.org/3.6/library/re
+    
+    The following documentation is automatically generated from the Python
+    source files.  It may be incomplete, incorrect or include features that
+    are considered implementation detail and may vary between Python
+    implementations.  When in doubt, consult the module reference at the
+    location listed above.
+
+DESCRIPTION
+    This module provides regular expression matching operations similar to
+    those found in Perl.  It supports both 8-bit and Unicode strings; both
+    the pattern and the strings being processed can contain null bytes and
+    characters outside the US ASCII range.
+    
+    Regular expressions can contain both special and ordinary characters.
+    Most ordinary characters, like "A", "a", or "0", are the simplest
+    regular expressions; they simply match themselves.  You can
+    concatenate ordinary characters, so last matches the string 'last'.
+...
+FILE
+    /anaconda3/lib/python3.6/glob.py
+
+```
+
+Here are some of the most common and useful modules, along with their methods and objects. It's a lightning tour. 
 
 #### os.path
 
@@ -4654,7 +4697,7 @@ var_2 (outside function block after function call): Good-Bye
 
 #### os.system
 
-Run a system command from python. Replaced by subprocess
+Run a system command from python. This is like making a python script run something from the command line. Replaced by subprocess
 
 ```python
 import os
@@ -4665,20 +4708,19 @@ os.system("ls -l")
 
 #### subprocess
 
+updated module for running command lines from python scripts
+
 
 ```python
 import subprocess
 run(["ls","-l"])  # same as running ls -l on the command line
 ```
 
-more complex than `os.system()`. You need to specify where input and output go
-
-```rtn = 
-
-```
-
+more complex than `os.system()`. You need to specify where input and output go. Let's look at this in some more detail. 
 
 ##### Capturing output from a shell pipeline
+
+Let's say we want to find all the files that have user amanda (or in the filename)
 
 `ls -l | grep amanda`
 
@@ -4689,7 +4731,7 @@ import subprocess
 output = subprocess.check_output('ls -l | grep amanda', shell = True)
 ```
 
-This is better than alternatives with subprocess.`run()`.
+This is better than alternatives with `subprocess.run()`.
 
 `output` contains a bytes object (more or less a string of ASCII character encodings)
 
@@ -4720,7 +4762,7 @@ How do we run `ls -l` in Python and capture the output (stdout)?
 
 ```python3
 import subprocess
-rtn = subprocess.run(['ls','-l'], stdout=subprocess.PIPE )
+rtn = subprocess.run(['ls','-l'], stdout=subprocess.PIPE )  # specify you want to capture STDOUT
 bytes = rtn.stdout
 stdout = bytes.decode('utf-8')
 # something like
@@ -4754,7 +4796,9 @@ A couple of useful variables for beginners. Many more advanced system parameters
 
 See notes on regular expressions
 
-__collections__
+#### collections
+
+Better lists etc.
 
 `from collections import deque`
 
@@ -4771,27 +4815,48 @@ and
 | function            | description |
 | ------------------- | ----------- |
 | math.exp()          | e**x        |
-| math.log2()         |             |
-| math.log10()        |             |
-| math.sqrt()         |             |
-| math.sin()          |             |
+| math.log2()         | log base 2           |
+| math.log10()        | log base 10            |
+| math.sqrt()         | square root            |
+| math.sin()          | sine            |
 | math.pi(), math.e() | constants   |
-|                     |             |
-|                     |             |
 | etc                 |             |
 
 see also numpy
 
 #### random
+Random numbers generated by computers are not truly random, so python calls these pseudo-random. 
 
+|example | description |
+| --------|------|
+| random.seed(1) | set starting seed for random sequence to 1 to enable reproducibility |
+| random.randrange(9) | integer between 0 and 8 |
+| random.randint(1,5) | integer between 1 and 5 |
+| random.random() | float between 0 and 1 |
+|random.uniform(1,2) | float between 1 and 2  |
 
+To get a random index from an element of `list` use `i=random.randrange(len(list))`
 
 #### statistics
 
-
+Typical statistical quantities
+|example | description |
+| --------|------|
+|  statistics.mean([1,2,3,4,5]) | mean or average|
+|  statistics.median([ 2,3,4,5])  | median = 3.5 |
+| statistics.stdev([1,2,3,4,5]) | standard deviation of sample (square root of sample variance) |
+|  statistics.pstdev([1,2,3,4,5])q  | estimate of population standard deviation  |
 
 #### glob
 
+Does unix-like wildcard file path expansion.
+
+```python
+>>> import glob
+>>> glob.glob('pdfs/*.pdf')
+['pdfs/python1.pdf', 'pdfs/python2.pdf', 'pdfs/python3.pdf', 'pdfs/python4.pdf', 'pdfs/python6.pdf', 'pdfs/python8.pdf', 'pdfs/unix1.pdf', 'pdfs/unix2.pdf']
+>>> fasta_files = glob.glob('sequences/*.fa')
+>>> ```
 
 
 #### argparse

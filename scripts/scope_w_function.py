@@ -1,24 +1,19 @@
-#!/usr/bin/env python3
+#!/usr/bin/end python3
 
-def scope_function(x):
-  x = 5
-  print("x (inside function block):", x)
-  print("y (inside function block):", y)
-  print("z (inside function block):", z)
+def set_local_x_to_five(x):
+  print('Inside def')
+  x = 5 # local to set_local_x_to_five()
+  y=5
+  print("x =",x)
+  print("y = ",y)
 
-x = 100
-y = 20;
-if x > y: 
-  z = 10
-  x = 30
-  print("x (inside if block):", x) 
-  print("y (inside if block):", y)
-  print("z (inside if block):", z)
+print('After def')
+x = 100 # global x
+y = 100 # global
+print('x=',x)
+print('y=',y)
 
-print("x (outside if block):)", x)
-print("y (outside if block):", y)
-print("z (outside if block):", z)
-
-scope_function(500)
-
-print("x (outside if block after function call):)", x)
+set_local_x_to_five(500)
+print('After function call')
+print('x=',x)
+print('y=',y)
