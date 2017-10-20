@@ -64,7 +64,7 @@ Into this list:
 ["AAAAAAAAGACGT","CTTTTTTTAAAAAAAAGACGT","CTTTTTTT"]
 ```
 
-9. Download this [file](http://rebase.neb.com/rebase/link_proto) of enzymes and their cut sites to fill a dictionary of enzymes paired with their recognition patterns. Be aware of the header lines, and be aware of how the columns are delimited. You'll modify this script in the next question.
+9. Download this [file](ftp://ftp.neb.com/pub/rebase/bionet.txt) of enzymes and their cut sites to fill a dictionary of enzymes paired with their recognition patterns. Be aware of the header lines, and be aware of how the columns are delimited. You'll modify this script in the next question.
 
 10. Write a script which takes two command line arguments: the name of an enzyme and a fasta file with a sequence to be cut. Load a dictionary of enzyme names and cut sites from the code you developed in question 9.
    If the enzyme is present in the dictionary, and can cut the sequence, print out:
