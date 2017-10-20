@@ -4494,31 +4494,37 @@ List comprehensions can often be used instead of lambdas and may be easier to re
 
 ### Scope
 
-Almost all python variables are global. This means they are available everywhere in your code. The most important exception is variables thare are defined in functions which only exist inside their function. This is called 'local'.
+Almost all python variables are global. This means they are available everywhere in your code. The most important exception is variables thare are defined in functions which only exist inside their function. This is called 'local'. Remember that python blocks are defined as code at the same level of indentation.
 
 ```python
 #!/usr/bin/env python3
 x = 100
-if True:  # this if condition will always be True - we want to make sure the block gets executed
+if True:  # this if condition will always be True 
+  # we want to make sure the block gets executed
+  # so we can show you what happens
+  print('Inside if block')
   y = 10
   x = 30
-  print("x (inside if block):", x)
-  print("y (inside if block):", y)
+  print("x=", x)
+  print("y=", y)
 
-print("x (outside if block):)", x)
-print("y (outside if block):", y)
+print('After if block')
+print("x=", x)
+print("y=", y)
+
 
 ```
 
 Let's Run it:
 ```bash
-$ python scripts/scope.py
-x (inside if block): 30
-y (inside if block): 20
-z (inside if block): 10
-x (outside if block):) 30
-y (outside if block): 20
-z (outside if block): 10
+$ python3 scripts/scope.py
+Inside if block
+x= 30
+y= 10
+After if block
+x= 30
+y= 10
+
 ```
 
 #### Local Variables
