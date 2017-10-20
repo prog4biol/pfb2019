@@ -4378,8 +4378,9 @@ def gc_content(dna):   # give our function a name and parameter 'dna'
 ```
 > Here is a custom function that you can use like a built in Python function
 
+#### Using your function to calculate GC content
 
-#### Using/Running/Calling Your function:
+This is just like any other python function. You write the name of the function with any variables you want to pass to the function in parentheses. In the example below the contents of `dna_string` get passed into `gc_content()`. Inside the function this data is passed to the variable `dna`.
 
 ```python
 dna_string = "GTACCTTGATTTCGTATTCTGAGAGGCTGCT"
@@ -4397,75 +4398,79 @@ How could you convert the GC fraction to % GC. Use format()
 
 ```python
 dna_string = "GTACCTTGATTTCGTATTCTGAGAGGCTGCT"
-gc_fraction = gc_content(dna_string)
-pc_gc = '{:.2%}'.format(gc_fraction)
-print(pc_gc)
+dna_gc = gc_content(dna_string)
+pc_gc = '{:.2%}'.format(dna_gc)
+print('This sequence is' , pc_gc , 'GC')
 ```
 
+Here's the output
 
+```python
+This sequence is 45.16% GC
+```
 
 #### The details
 
-1. All functions must be defined. 
-    - We do this with the word `def`. 
-2. The function must have a name.
-    - "calculate_at_content" is our name
-3. Functions define the variables required in the function body. These are paceholders for the arguments that get passed into our function. Functions don't need to have arguments but they always need '()'
-    - We do this there "(dna)". 
-    - Our function needs one variable, and we can refer to it in the function body as 'dna'. 
-        - The variable 'dna' and its contents are only visible within the body of the function
-4. The first line of the function must end with a ':'
-5. The function body needs to be indented.
-6. Do your work.
-7. You can return a value, but this is not required
-    - We return the value of 'at_content'  
+1. You define a function with `def`. 
+2. The function must have a name. This name should clearly describe what the function does. Here is our example `gc_content`
+3. You can pass variables to functions but you don't have to. In the definition line, you place variables your function needs inside parentheses like this `(dna)`. This variable only exists inside the function.
+4. The first line of the function must end with a `:` so the complete function definition line looks like this ```def gc_content(dna):```
+5. The next lines of code, the function body, needs to be indented. This code comprises what the function does.
+6. You can return a value as the last line of the function, but this is not required. This line `return gc_content` at the end of our function definition passes the value of gc_content back to the code that called the function in your main script.
 
 
 #### Naming Arguments
 
-You can name your argument variables anything you want, you just have to use the same term within the function body. Let's use 'string' instead of 'dna'
+You can name your argument variables anything you want, but they should describe the data they contain. The name needs to be consistent within your function. You could change `dna` to `seqeunce` like this
 
 ```python
-def caculate_at_content(string):
-   a_count = string.count('A')
-   t_count = string.count('T')
-   dna_len = len(string)
-   at_content = (a_count + t_count) / dna_len
-   return at_content
+def gc_content(sequence):   # give our function a name and parameter 'sequence'
+   c_count = sequence.count('C')
+   g_count = sequence.count('G')
+   dna_len = len(sequence)
+   gc_content = (c_count + g_count) / dna_len
+   return gc_content # return the value of gc_content to the code that called this function
 ```
-> Now everywhere we had previously used 'dna' we need to use 'string'
-
-
-
 #### Keyword Arguments
 
 Arguments can be named and these names can be used when the function is called. This name is called a 'keyword' 
 
 ```python
-dna_string = "GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA"
-print(calculate_at_content(dna_string))
-print(calculate_at_content("GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA"))
-print(calculate_at_content(dna="GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA"))
-print(calculate_at_content(dna=dna_string))
+>>> dna_string = "GTACCTTGATTTCGTATTCTGAGAGGCTGCT"
+>>> print(gc_content(dna_string))
+0.45161290322580644
+>>> print(gc_content(dna=dna_string)
+0.45161290322580644
+
 ```
-> This code will print "0.4857142857142857" (4x) to the screen. As you can see, we supplied the function arguments in a few different ways: 1) a variable, 2) a literal, 3) a literal with a keyword, and 4) a variable with a keyword. The keyword must be the same as the defined function argument. If a function has multiple arguments, using the keyword allows for calling the function with the arguments in any order.
+> The keyword must be the same as the defined function argument. If a function has multiple arguments, using the keyword allows for calling the function with the arguments in any order.
 
 #### Default Values for Arguments
 
-When you define your function you can also define default values for arguments
+As defined above, our function is expecting an argument (`dna`) in the definition. You get an error if you call the function without any parameters.
 
 ```python
-def calculate_at_content(dna='ATGC'):
-   a_count = dna.count('A')
-   t_count = dna.count('T')
-   dna_len = len(dna)
-   at_content = (a_count + t_count) / dna_len
-   return at_content
+>>> gc_content()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: gc_content() missing 1 required positional argument: 'dna'
+
 ```
-> If you call the function with no arguments, the default will be used. In this case a default is pretty useless, and the function will return '0.5' if called without providing a DNA sequence.
 
+You can define default values for arguments when you define your function.
 
-#### lambda
+```python
+def gc_content(dna='A'):   # give our function a name and parameter 'dna'
+   c_count = dna.count('C')
+   g_count = dna.count('G')
+   dna_len = len(dna)
+   gc_content = (c_count + g_count) / dna_len
+   return gc_content # return the value to the code that called this function
+
+```
+> If you call the function with no arguments, the default will be used. In this case a default is pretty useless, and the function will return '0' if called without providing a DNA sequence.
+
+#### Lambda expressions
 
 Lambda expressions can be used when your function only contains one line. It is a special kind of custom function that you don't have to give a name. Lambda expressions are useful because some functions can take a lambda as an argument.
 
