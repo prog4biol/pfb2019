@@ -4637,10 +4637,43 @@ greeting = I say hello
 
 
 
-
 ## Modules
 
 Python comes with some core functions and methods. There are many useful modules that you will want to use. `import` is the statement for telling your script you want to use code in a module. As we've already seen with regular expresions, you can bring in code that handles regular expressions with `import re`
+
+### Getting information about modules with `pydoc`
+
+How do you find out information about a module? Python has help pages built into the command line, like `man` we met earlier in the unix lecture. To find out about the `re` module, type `pydoc re` on the command line
+
+```bash
+% pydoc re
+Help on module re:
+
+NAME
+    re - Support for regular expressions (RE).
+
+MODULE REFERENCE
+    https://docs.python.org/3.6/library/re
+    
+    The following documentation is automatically generated from the Python
+    source files.  It may be incomplete, incorrect or include features that
+    are considered implementation detail and may vary between Python
+    implementations.  When in doubt, consult the module reference at the
+    location listed above.
+
+DESCRIPTION
+    This module provides regular expression matching operations similar to
+    those found in Perl.  It supports both 8-bit and Unicode strings; both
+    the pattern and the strings being processed can contain null bytes and
+    characters outside the US ASCII range.
+    
+    Regular expressions can contain both special and ordinary characters.
+    Most ordinary characters, like "A", "a", or "0", are the simplest
+    regular expressions; they simply match themselves.  You can
+    concatenate ordinary characters, so last matches the string 'last'.
+...
+
+```
 
 Here are some of the most common and useful modules, along with their methods and objects. It's a lightning tour. 
 
@@ -4760,7 +4793,7 @@ A couple of useful variables for beginners. Many more advanced system parameters
 
 See notes on regular expressions
 
-__collections__
+####collections
 
 `from collections import deque`
 
