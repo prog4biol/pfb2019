@@ -21,7 +21,12 @@ seqs['geneB']['G'] = 2
 seqs['geneB']['C'] = 2
 ``` 
 
-2. Write a script that takes a multi-FASTA file [Python_08.fasta](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/Python_08.fasta) from user input and breaks each sequence into codons (every three nucleotides is a codon) in just the first frame. Print out a multi-FASTA of codons for each sequence called 'Python_08.codons-frame-1.nt'
+2. Write a script that takes a multi-FASTA file [Python_08.fasta](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/Python_08.fasta) from user input and breaks each sequence into codons (every three nucleotides is a codon) in just the first reading frame. Your output should look like this 
+```
+seq1-frame-1-codons
+CAT GCT TGA GTC
+``` 
+Write the output to a file called 'Python_08.codons-frame-1.nt'.
 
 3. Add in exception handling. Throw and handle (try/except) the exception
    - if no input is provided  
@@ -29,12 +34,14 @@ seqs['geneB']['C'] = 2
    - if the file does not end in '.fasta' or '.fa' or '.nt'
    - if a non ATGCN charcter is found in the sequence
 
-4. Now produce codons in the first three reading frames for each sequence and print out a FASTA sequence record for each frame and print to a file called 'Python_08.codons-3frames.nt'
+4. Now produce codons in the first three reading frames for each sequence and print out ids and sequence records for each frame and print to a file called 'Python_08.codons-3frames.nt'
 
 For example
 ```
->seq1-frame-1-codons
+seq1-frame-1-codons
 ATG TTG
+seq-frame-2-codons
+TGT TGA
 ``` 
 
 5. Now reverse complement each sequence and print out all six reading frames to a file called 'Python_08.codons-6frames.nt'
