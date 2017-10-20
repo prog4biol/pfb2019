@@ -1,14 +1,16 @@
-#!/usr/bin/env python3
-
+#!/usr/bin/end python3
+print('Before if block')
 x = 100
-y = 20;
-if x > y: 
-  z = 10
+print('x=',x)
+if True:  # this if condition will always be True 
+  # we want to make sure the block gets executed
+  # so we can show you what happens
+  print('Inside if block')
+  y = 10
   x = 30
-  print("x (inside if block):", x) 
-  print("y (inside if block):", y)
-  print("z (inside if block):", z)
+  print("x=", x)
+  print("y=", y)
 
-print("x (outside if block):)", x)
-print("y (outside if block):", y)
-print("z (outside if block):", z)
+print('After if block')
+print("x=", x)
+print("y=", y)
