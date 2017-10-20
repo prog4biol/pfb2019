@@ -4498,7 +4498,9 @@ Almost all python variables are global. This means they are available everywhere
 
 ```python
 #!/usr/bin/env python3
+print('Before if block')
 x = 100
+print('x=',x)
 if True:  # this if condition will always be True 
   # we want to make sure the block gets executed
   # so we can show you what happens
