@@ -4351,16 +4351,19 @@ Hello world!
 5
 ```
 
-You can also define your own functions with  `def`
+You can also define your own functions with  `def` Let's write a function that calculates the GC content.
 
-Code to find AT content:
+First we can look at the code that makes the calculation, then we can convert those lines of code into a function.
+
+Code to find GC content:
 ```python
-dna = 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'
-a_count = dna.count('A')
-t_count = dna.count('T')
-dna_len = len(dna)
-at_content = (a_count + t_count) / dna_len
-print(at_content)
+dna = 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCT'
+c_count = dna.count('C')  # count is a string method
+g_count = dna.count('G')
+dna_len = len(dna) # len is a function
+gc_fraction = (c_count + g_count) / dna_len
+pc_gc = '{:.2%}'.format(gc_fraction)
+print(pc_gc)
 ```
 > Here are 5 lines of code to do one thing, calculate AT content in a DNA string.
 
@@ -4380,7 +4383,7 @@ def calculate_at_content(dna):
 #### Using/Running/Calling Your function:
 
 ```python
-dna_string = "GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA"
+dna_string = "GTACCTTGATTTCGTATTCTGAGAGGCTGCT"
 print(calculate_at_content(dna_string))
 ```
 > This code will print "0.4857142857142857" to the screen. You can save this returned value in a variable to use later in your code. As you can see we now have one line, that is very explicit in the functionality, replace 5 lines of code. 
