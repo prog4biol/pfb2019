@@ -4472,7 +4472,7 @@ def gc_content(dna='A'):   # give our function a name and parameter 'dna'
 
 #### Lambda expressions
 
-Lambda expressions can be used when your function only contains one line. It is a special kind of custom function that you don't have to give a name. Lambda expressions are useful because some functions can take a lambda as an argument.
+Lambda expressions can be used to define simple (one-line) anonymous functions. There are some uses for lambda which we won't go into here. We are showing it to you because sometimes you will come across it.
 
 Here is a one line custom function, like the functions we have already talked about:
 ```python
@@ -4481,42 +4481,33 @@ def get_first_codon(dna):
 
 print(get_first_codon('ATGTTT'))
 ```
-> This will return 'ATG'
+> This will print `ATG`
 
 Here is the same function written as a lambda
 ```python
 get_first_codon = lambda dna : dna[0:3]
 print(get_first_codon('ATGTTT'))
 ```
-> This also returns 'ATG'. lambdas need to have only one line. They do not require the usage of 'return' to have the result returned.
+> This also prints `ATG`. lambdas can only contain one line and there is no `return` statement.
 
-
-Lambda expressions can be used as arguments in functions:
-```python
-print((lambda dna : dna[0:3])('ATGTTT'))
-```
-> This prints 'ATG'. In this example, the code works, but might not be the best way to get this job done since it obfuscates the code, or in other words, makes the code harder to understand. There are cases where using a lambda is the only way to get a task done.
-
-<p>&nbsp;</p>
+List comprehensions can often be used instead of lambdas and may be easier to read. You can read more about `lambda`, particularly in relation to `map` which will perform an operation on a list, but generally  a `for` loop is easier to read.
 
 ### Scope
 
-Most all variables can be seen, retrieved, and used anywhere in your code. This is called global. One of the only non-global or local variables are those used as function arguments.
+Almost all python variables are global. This means they are available everywhere in your code. The most important exception is variables thare are defined in functions which only exist inside their function. This is called 'local'.
 
 ```python
 #!/usr/bin/env python3
 x = 100
-y = 20;
-if x > y:
-  z = 10
+if True:  # this if condition will always be True - we want to make sure the block gets executed
+  y = 10
   x = 30
   print("x (inside if block):", x)
   print("y (inside if block):", y)
-  print("z (inside if block):", z)
 
 print("x (outside if block):)", x)
 print("y (outside if block):", y)
-print("z (outside if block):", z)
+
 ```
 
 Let's Run it:
