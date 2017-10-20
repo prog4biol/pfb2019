@@ -4531,22 +4531,29 @@ y= 10
 
 ```
 
-#### Local Variables
-
-Function argument variables are local and therefore can only been accessed from within the function block.
-
-Python treats variables **defined in functions** as local unless defined not to be. It's usually better to pass a parameter to a function than to have a global variable. Where can you use a variable? This is its scope. It is inside the block it's defined in. That's how you declare variables in Python.
+Inside a function, global variables are visible, but it's better to pass variables to a function as arguments
 
 ```python
-def show():
+def show_n():
   print(n)
 n = 5
-show()
+show_n()
 ```
 
-The output looks like this
+The output is this `5` as you would expect, but this is better programming practice. Why? We'll see a little later.
 
-```5```
+```python3
+def show_n(n):
+  print(n)
+n = 5
+show_n(n)
+```
+
+
+
+#### Local Variables
+
+Variables inside functions are local and therefore can only been accessed from within the function block. This applies to arguments as well as variables defined inside a function.
 
 
 ```python
@@ -4554,16 +4561,21 @@ The output looks like this
 
 def set_local_x_to_five(x):
   print('Inside def')
-  x = 5 # local to set_local_x_to_five() 
+  x = 5 # local to set_local_x_to_five()
+  y=5
   print("x =",x)
+  print("y = ",y)
 
 print('After def')
-x = 100   # global x
+x = 100 # global x
+y = 100 # global
 print('x=',x)
+print('y=',y)
 
 set_local_x_to_five(500)
 print('After function call')
 print('x=',x)
+print('y=',y)
 
 ```
 > Here we have added a function with an argument named 'x'. This variable exists only within the function. It does not matter that there is a variable of the same name outside the function block.
@@ -4580,7 +4592,7 @@ x= 100
 
 
 ```
-> As you can see, x is 30 inside and outside the if block, but inside the function x is 1, then x is 5. Once we have completed the function call x is 30 again. Variables within a function block are local to that block. 
+> There is a global variable, `x` = 100, but when the function is called, it makes a new local variable, also called `x` with value = 5. This variable disappears after the function finishes and we go back to using the global variable `x` = 100. 
 
 #### Global
 
