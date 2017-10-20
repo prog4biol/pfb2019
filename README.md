@@ -4990,7 +4990,7 @@ User provided file: test.txt
 ```
 
 What happens if the user does not provide any input and we try to print it? 
-```
+```bash
 $ python scripts/exceptions.py
 Traceback (most recent call last):
   File "scripts/exceptions.py", line 4, in <module>
@@ -5026,14 +5026,14 @@ except:
 > We need to "try" to get a user provided argument. If we are successful then we can print it out. If we try and fail, we execute the code in the except portion of our try/except and print that we need a file name. 
 
 Let's run it WITH iser input
-```
+```bash
 $ python3 scripts/exceptions_try.py test.txt
 User provided file: test.txt
 ```
 > It runs as expected
 
 Let's run it WITHOUT user input
-```
+```bash
 $ python scripts/exceptions_try.py
 Please provide a file name
 ```
@@ -5071,7 +5071,7 @@ Can't find file: test.txt
 > This informs the user that they did provide input but that the file listed can not be found.
 
 Let's run it with no input
-```
+```bash
 $ python scripts/exceptions_try_files.py
 Please provide a file name
 ```
@@ -5153,7 +5153,7 @@ except IOError as ex:
 > Here we raise a known exception, 'ValueError', if the file does not end with (uses `endswith()` method). 
 
 Let's run it.
-``` 
+``` bash
 $ python scripts/exceptions_try_files_raise.py test.txt
 User provided file name: test.txt
 Traceback (most recent call last):
@@ -5163,7 +5163,7 @@ ValueError: Not a FASTA file
 ```
 > Our exception get's raised, now lets do something with it.
 
-```
+```python
 import sys
 
 file = ''
@@ -5185,7 +5185,7 @@ except IOError as ex:
 > Here we created an except to catch any ValueError
 
 Let's Run it.
-```
+```bash
 $ python scripts/exceptions_try_files_raise_value.py test.txt
 User provided file name: test.txt
 File needs to be a FASTA file and end with .fa
@@ -5198,7 +5198,7 @@ But what if there is another ValueError, how can we tell if it is do to the FAST
 
 We can create our own custom exception. We will need to create a new class of exception. Below is the sytax to do this.
 
-```
+```python
 import sys
 
 class NotFASTAError(Exception):
@@ -5224,7 +5224,7 @@ except IOError as ex:
 > Here we created a new class of exception called 'NotFASTAError'. Then we raised this new exception.
 
 Let's Run it.
-```
+```bash
 $ python scripts/exceptions_try_files_raise_try.py test.txt
 User provided file name: test.txt
 File needs to be a FASTA file and end with .fa
