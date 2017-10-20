@@ -4411,7 +4411,7 @@ This sequence is 45.16% GC
 
 #### The details
 
-1. You define a function with `def`. 
+1. You define a function with `def`.  You need to define a function before you can call it.
 2. The function must have a name. This name should clearly describe what the function does. Here is our example `gc_content`
 3. You can pass variables to functions but you don't have to. In the definition line, you place variables your function needs inside parentheses like this `(dna)`. This variable only exists inside the function.
 4. The first line of the function must end with a `:` so the complete function definition line looks like this ```def gc_content(dna):```
@@ -4520,6 +4520,8 @@ print("y=", y)
 Let's Run it:
 ```bash
 $ python3 scripts/scope.py
+Before if block
+x= 100
 Inside if block
 x= 30
 y= 10
@@ -4548,48 +4550,35 @@ The output looks like this
 
 
 ```python
-#!/usr/bin/env python3
+#!/usr/bin/end python3
 
-def scope_function(x):
-  print("x (inside function block):", x)
-  x = 5
-  print("x (inside function block):", x)
-  print("y (inside function block):", y)
-  print("z (inside function block):", z)
+def set_local_x_to_five(x):
+  print('Inside def')
+  x = 5 # local to set_local_x_to_five() 
+  print("x =",x)
 
-x = 100
-y = 20;
-if x > y:
-  z = 10
-  x = 30
-  print("x (inside if block):", x)
-  print("y (inside if block):", y)
-  print("z (inside if block):", z)
+print('After def')
+x = 100   # global x
+print('x=',x)
 
-print("x (outside if block):)", x)
-print("y (outside if block):", y)
-print("z (outside if block):", z)
+set_local_x_to_five(500)
+print('After function call')
+print('x=',x)
 
-scope_function(500)
-
-print("x (outside if block after function call):)", x)
 ```
 > Here we have added a function with an argument named 'x'. This variable exists only within the function. It does not matter that there is a variable of the same name outside the function block.
 
 Let's run it:
 ```bash
-$ python3 scripts/scope_w_function.py
-x (inside if block): 30
-y (inside if block): 20
-z (inside if block): 10
-x (outside if block):) 30
-y (outside if block): 20
-z (outside if block): 10
-x (inside function block): 1 
-x (inside function block): 5
-y (inside function block): 20
-z (inside function block): 10
-x (outside if block after function call):) 30
+$ python3 scope_w_function.py
+After def
+x= 100
+Inside def
+x = 5
+After function call
+x= 100
+
+
 ```
 > As you can see, x is 30 inside and outside the if block, but inside the function x is 1, then x is 5. Once we have completed the function call x is 30 again. Variables within a function block are local to that block. 
 
