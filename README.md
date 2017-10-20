@@ -4963,7 +4963,7 @@ Dictionaries of dictionaries is my favorite!! You can do so many useful things w
 
 
 
-There are also specific data table and frame handling libraries like [Pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Here is a [intro](https://pandas.pydata.org/pandas-docs/stable/dsintro.html).
+There are also specific data table and frame handling libraries like [Pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Here is a [intro](https://pandas.pydata.org/pandas-docs/stable/dsintro.html) to data structures in Panda.
 
 
 
@@ -5097,7 +5097,7 @@ finally:
 
 #### Getting more information about an exception
 
-Some exceptions can be thrown for multiple reasons, for example, ErrorIO will occur if the file does not exist as well as if you don't have permissions to read it. We can get more information by viewing the contents of our Exception Object. Yes, an exception is an object too! To access the object use `as` and supply a variable name, like 'ex'
+Some exceptions can be thrown for multiple reasons, for example, ErrorIO will occur if the file does not exist as well as if you don't have permissions to read it. We can get more information by viewing the contents of our Exception Object. Yes, an exception is an object too! The system errors get stored in the exception object.  To access the object use `as` and supply a variable name, like 'ex'
 
 ```python
 file = ''
