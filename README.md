@@ -4351,7 +4351,7 @@ Hello world!
 5
 ```
 
-You can also define your own functions with  `def` Let's write a function that calculates the GC content.
+You can also define your own functions with  `def` Let's write a function that calculates the GC content. Let's define this as the fraction of nucleotides in a DNA sequence that are G or C. It can vary from 0 to 1.
 
 First we can look at the code that makes the calculation, then we can convert those lines of code into a function.
 
@@ -4361,21 +4361,20 @@ dna = 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCT'
 c_count = dna.count('C')  # count is a string method
 g_count = dna.count('G')
 dna_len = len(dna) # len is a function
-gc_fraction = (c_count + g_count) / dna_len
-pc_gc = '{:.2%}'.format(gc_fraction)
-print(pc_gc)
+gc_content = (c_count + g_count) / dna_len # fraction from 0 to 1
+print(gc_content)
 ```
-> Here are 5 lines of code to do one thing, calculate AT content in a DNA string.
+#### Defining a Function that calculates GC Content
 
-#### Creating/Defining a Function to Find AT Content:
+We use `def` do define our own function. It is followed by the name of the function (`gc_content`) and parameters it will take in parentheses. A colon is the last character on the `def` line. The parameter variables will be available for your code inside the function to use.
 
 ```python
-def calculate_at_content(dna):
-   a_count = dna.count('A')
-   t_count = dna.count('T')
+def gc_content(dna):
+   c_count = dna.count('C')
+   g_count = dna.count('G')
    dna_len = len(dna)
-   at_content = (a_count + t_count) / dna_len
-   return at_content
+   gc_content = (c_count + g_count) / dna_len
+   return gc_content
 ```
 > Here is a custom function that you can use like a built in Python function
 
@@ -4384,9 +4383,20 @@ def calculate_at_content(dna):
 
 ```python
 dna_string = "GTACCTTGATTTCGTATTCTGAGAGGCTGCT"
-print(calculate_at_content(dna_string))
+print(gc_fraction(dna_string))
 ```
 > This code will print "0.4857142857142857" to the screen. You can save this returned value in a variable to use later in your code. As you can see we now have one line, that is very explicit in the functionality, replace 5 lines of code. 
+
+How could you convert the GC fraction to % GC. Use format()
+
+```python
+dna_string = "GTACCTTGATTTCGTATTCTGAGAGGCTGCT"
+gc_fraction = calculate_gc_content(dna_string)
+pc_gc = '{:.2%}'.format(gc_fraction)
+print(pc_gc)
+```
+
+
 
 #### The details
 
