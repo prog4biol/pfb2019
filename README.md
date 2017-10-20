@@ -4821,7 +4821,7 @@ Sometimes a _simple_ list or dictionary just doesn't do what you want. Sometimes
 
 #### List of lists
 
-Often times a list of lists, often called a matrix are important for organizing and accessing data
+List of lists, often called a matrix are important for organizing and accessing data
 
 
 Here's a way to make a 3 x 3 table of values.
@@ -4915,7 +4915,7 @@ Here is a dictionary of kmers. The key is the kmer and its values is a list of p
 ```
 > Here we can get a list of the positions of a kmer by using the kmer as the key. We can also do things to the returned list, like determining its length. The length will be the total count of this kmers.
 
-You can also use the dictionary `get()` method to retrieve records.
+You can also use the `get()` method to retrieve records.
 ```python
 >>> kmers['ggaa']
 [4, 10]
@@ -4963,7 +4963,7 @@ Dictionaries of dictionaries is my favorite!! You can do so many useful things w
 
 
 
-There are also specific data table and frame handling libraries like Pandas.
+There are also specific data table and frame handling libraries like [Pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Here is a [intro](https://pandas.pydata.org/pandas-docs/stable/dsintro.html).
 
 
 
