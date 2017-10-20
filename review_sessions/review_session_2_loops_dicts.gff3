@@ -1,0 +1,8 @@
+##gff-version 3
+ctg123	est	EST_match	1050	1500	.	+	.	ID=Match1;Name=agt830.5;Target=agt830.5 1 451
+ctg123	est	EST_match	3000	3202	.	+	.	ID=Match1;Name=agt830.5;Target=agt830.5 452 654
+ctg123	est	EST_match	5410	5500	.	-	.	ID=Match2;Name=agt830.3;Target=agt830.3 505 595
+ctg123	est	EST_match	7000	7503	.	-	.	ID=Match2;Name=agt830.3;Target=agt830.3 1 504
+ctg123	est	EST_match	1050	1500	.	+	.	ID=Match3;Name=agt221.5;Target=agt221.5 1 451
+ctg123	est	EST_match	5000	5500	.	+	.	ID=Match3;Name=agt221.5;Target=agt221.5 452 952
+ctg123	est	EST_match	7000	7300	.	+	.	ID=Match3;Name=agt221.5;Target=agt221.5 953 1253
