@@ -4578,73 +4578,71 @@ print('x=',x)
 print('y=',y)
 
 ```
-> Here we have added a function with an argument named 'x'. This variable exists only within the function. It does not matter that there is a variable of the same name outside the function block.
+> Here we have added a function `set_local_x_to_five` with an argument named 'x'. This variable exists only within the function where is replaces any variable with the same name outside the `def`. Inside the `def` we also initialize a variable `y` that also replaces any global `y` within the `def`
 
 Let's run it:
 ```bash
 $ python3 scope_w_function.py
 After def
 x= 100
+y= 100
 Inside def
 x = 5
+y =  5
 After function call
 x= 100
+y= 100
+
 
 
 ```
-> There is a global variable, `x` = 100, but when the function is called, it makes a new local variable, also called `x` with value = 5. This variable disappears after the function finishes and we go back to using the global variable `x` = 100. 
+> There is a global variable, `x` = 100, but when the function is called, it makes a new local variable, also called `x` with value = 5. This variable disappears after the function finishes and we go back to using the global variable `x` = 100. Same for `y`
 
 #### Global
 
-You can make a local variable global with the function `global()`. Now a variable defined in a function can be visible to the rest of the code.  It is best not to define any variables as global until you know you need it. Most of the time the default scope is what you want.
+You can make a local variable global with the statement `global`. Now a variable you use in a function is the same variable as in the rest of the code. It is best not to define any variables as global until you know you need to because you might modify the contents of a variable without meaning to.
 
-
-
-Here is an example use of `global()`. This can be a bit mind bending, just knowing this exists is probably good enough for right now.
+Here is an example use of `global`. 
 
 ```python
 #!/usr/bin/env python3
 
-def scope_function():
-  global var_1
-  var_1 = "I say hello"
-  var_2 = "You say good-bye"
-  print("var_1 (inside function block):", var_1)
-  print("var_2 (inside function block):", var_2)
+def set_global_variable():
+  global greeting  # make greeting global
+  greeting = "I say hello"
 
-var_1 = "Hello, hello"
-var_2 = "Good-Bye"
-print("var_1 (outside function block before function call):", var_1)
-print("var_2 (outside function block before function call):", var_2)
-scope_function()
-print("var_1 (outside function block after function call):", var_1)
-print("var_2 (outside function block after function call):", var_2)
+
+greeting = 'Good morning'
+print('Before function call')
+print('greeting =',greeting)
+
+#make call to function
+set_global_variable()
+print('After function call')
+print('greeting =',greeting)
+
 ```
-> By default all variables are global, except for those within functions. Here we mess with the default behavior by defining 'var_1' as global. We the value of 'var_1' within the function will the value outside the function block.
+Let's look at the output
 
 
 ```bash
 $ python3 scripts/scope_global.py
-var_1 (outside function block before function call): Hello, hello
-var_2 (outside function block before function call): Good-Bye
-var_1 (inside function block): I say hello
-var_2 (inside function block): You say good-bye
-var_1 (outside function block after function call): I say hello
-var_2 (outside function block after function call): Good-Bye
+Before function call
+greeting = Good morning
+After function call
+greeting = I say hello
+
 ```
-> If we did not make 'var_1' global the value of 'var_' outside the function block would have been "Hello, hello"
+> Note that the function has changed the value of the global variable. You might not want to do this.
 
 
 
 
 ## Modules
 
+Python comes with some core functions and methods. There are many useful modules that you will want to use. `import` is the statement for telling your script you want to use code in a module. As we've already seen with regular expresions, you can bring in code that handles regular expressions with `import re`
 
-
->The standard library:
->os, sys, glob, shutil, math, random, statistics (scipy), zlib, sqlite3 (DB access)? urllib.request 
-
-
+Here are some of the most common and useful modules, along with their methods and objects. It's a lightning tour. 
 
 #### os.path
 
@@ -4663,7 +4661,7 @@ var_2 (outside function block after function call): Good-Bye
 
 #### os.system
 
-Run a system command from python. Replaced by subprocess
+Run a system command from python. This is like making a python script run something from the command line. Replaced by subprocess
 
 ```python
 import os
@@ -4674,20 +4672,19 @@ os.system("ls -l")
 
 #### subprocess
 
+updated module for running command lines from python scripts
+
 
 ```python
 import subprocess
 run(["ls","-l"])  # same as running ls -l on the command line
 ```
 
-more complex than `os.system()`. You need to specify where input and output go
-
-```rtn = 
-
-```
-
+more complex than `os.system()`. You need to specify where input and output go. Let's look at this in some more detail. 
 
 ##### Capturing output from a shell pipeline
+
+Let's say we want to find all the files that have user amanda (or in the filename)
 
 `ls -l | grep amanda`
 
@@ -4698,7 +4695,7 @@ import subprocess
 output = subprocess.check_output('ls -l | grep amanda', shell = True)
 ```
 
-This is better than alternatives with subprocess.`run()`.
+This is better than alternatives with `subprocess.run()`.
 
 `output` contains a bytes object (more or less a string of ASCII character encodings)
 
@@ -4729,7 +4726,7 @@ How do we run `ls -l` in Python and capture the output (stdout)?
 
 ```python3
 import subprocess
-rtn = subprocess.run(['ls','-l'], stdout=subprocess.PIPE )
+rtn = subprocess.run(['ls','-l'], stdout=subprocess.PIPE )  # specify you want to capture STDOUT
 bytes = rtn.stdout
 stdout = bytes.decode('utf-8')
 # something like
