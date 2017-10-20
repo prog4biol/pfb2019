@@ -4369,12 +4369,12 @@ print(gc_content)
 We use `def` do define our own function. It is followed by the name of the function (`gc_content`) and parameters it will take in parentheses. A colon is the last character on the `def` line. The parameter variables will be available for your code inside the function to use.
 
 ```python
-def gc_content(dna):
+def gc_content(dna):   # give our function a name and parameter 'dna'
    c_count = dna.count('C')
    g_count = dna.count('G')
    dna_len = len(dna)
    gc_content = (c_count + g_count) / dna_len
-   return gc_content
+   return gc_content # return the value to the code that called this function
 ```
 > Here is a custom function that you can use like a built in Python function
 
@@ -4383,15 +4383,21 @@ def gc_content(dna):
 
 ```python
 dna_string = "GTACCTTGATTTCGTATTCTGAGAGGCTGCT"
-print(gc_fraction(dna_string))
+print(gc_content(dna_string))
 ```
-> This code will print "0.4857142857142857" to the screen. You can save this returned value in a variable to use later in your code. As you can see we now have one line, that is very explicit in the functionality, replace 5 lines of code. 
+This code will print 0.45161290322580644 to the screen. You can save this value in a variable to use later in your code like this
+
+```python
+dna_gc = gc_content('GTACCTTGATTTCGTATTCTGAGAGGCTGCT')
+```
+
+As you can see we can write a nice clear line of python to call this function and because the function has a name that describes what it does it's easy to understand how the code works. Don't define your functions like this `def my_function(a):`!
 
 How could you convert the GC fraction to % GC. Use format()
 
 ```python
 dna_string = "GTACCTTGATTTCGTATTCTGAGAGGCTGCT"
-gc_fraction = calculate_gc_content(dna_string)
+gc_fraction = gc_content(dna_string)
 pc_gc = '{:.2%}'.format(gc_fraction)
 print(pc_gc)
 ```
