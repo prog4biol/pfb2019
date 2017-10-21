@@ -53,9 +53,10 @@ split(...)
 (END)
 
 ```
-space -> next line
-return -> next page
+space -> next page
 b -> back a page
+return -> next line
+/ -> search for a string
 q quits the pager
   
 Advanced Unix
