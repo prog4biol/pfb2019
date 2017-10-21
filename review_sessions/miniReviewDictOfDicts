@@ -1,0 +1,46 @@
+>>> genes ={}
+>>> genes['coq8']={}
+>>> genes
+{'coq8': {}}
+>>> { 'A':0       }
+{'A': 0}
+>>> { 'A':0 , 'C':0      }
+{'A': 0, 'C': 0}
+>>> { 'A':0 , 'C':0  ,'G' :0 , 'T':0    }
+{'A': 0, 'C': 0, 'G': 0, 'T': 0}
+>>> genes['coq8']={ 'A':0 , 'C':0  ,'G' :0 , 'T':0    }
+>>> genes
+{'coq8': {'A': 0, 'C': 0, 'G': 0, 'T': 0}}
+>>> genes['coq8']['T']
+0
+>>> genes['coq8']['T'] +=1
+>>> genes['coq8']['T']
+1
+>>> seq = 'AAGAGCAGCTCGCGCTAATG'
+>>> for nt in seq: print(nt)
+... 
+A
+A
+G
+A
+G
+C
+A
+G
+C
+T
+C
+G
+C
+G
+C
+T
+A
+A
+T
+G
+>>> for nt in seq:
+...     genes['coq8'][nt] += 1
+... 
+>>> genes
+{'coq8': {'A': 6, 'C': 5, 'G': 6, 'T': 4}}
