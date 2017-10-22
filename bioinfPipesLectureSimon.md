@@ -200,25 +200,75 @@ sqlite3 is the simplest.
 
 
 ### public databases
+
+NCBI 
+nr (proteins) nt (nucleotides) Lots of data, uncurated, complete
+Sequence Read Archive (SRA) 454, illumina, short reads
+
+Uniprot
+http://www.uniprot.org
+Curated, smaller, not as inclusive as nr. 
+Helpful for speeding up analysis: UniRef90 (sequences clustered at 90% identity, which is approximately genus level). Much smaller than full database. 
+
 ### write web apps
-### debug my script
+
+```python
+import cgi
+import cgitb  # gives helpful error messages
+cgitb.enable()
+
+form = cgi.FieldStorage()  # get parameters
+```
+
+
+### Debug my script
 
 Run your script with the debugger module `pdb` for python debugger. Not very sophisticated, but very useful. It starts an interactive debugger that's a bit like the python interactive shell, but you are inside your script. 
 
 We were doing this
 ```bash
-% python3 fasta_sequence.py
+% python3 while.py
 ```
 Now we add `-m pdb` so it becomes
 ```bash
-% python3 -m pdb fasta_sequence.py
+% python3 -m pdb while.py
+> /Users/simonp/git/pfb2017/scripts/while.py(3)<module>()
+-> count = 0
+(Pdb) h
+
+Documented commands (type help <topic>):
+========================================
+EOF    c          d        h         list      q        rv       undisplay
+a      cl         debug    help      ll        quit     s        unt      
+alias  clear      disable  ignore    longlist  r        source   until    
+args   commands   display  interact  n         restart  step     up       
+b      condition  down     j         next      return   tbreak   w        
+break  cont       enable   jump      p         retval   u        whatis   
+bt     continue   exit     l         pp        run      unalias  where    
+
+Miscellaneous help topics:
+==========================
+exec  pdb
+
+(Pdb) 
+
 ```
+q quits
+h gets help
 
-Good idea to make alias for this in .profile
+Good idea to make alias for python3 -m pdb  in .profile
 
-### Write bigger python coding projects? PyCharm
+### Write bigger python coding projects? 
 
+PyCharm
 
+A nice IDE. See review session soon.
 
-### tell if my code is slow
+### Tell if my code is slow
 
+Even though python is much slower than C and C++, is your script running too slowly? How can you tell? 
+Two things to think about
+* is debugging painfully slow? use the smallest test data sets you can to test and debug your script
+* Do you have time to get a cup of coffee while your script is running? If you come back to your script and it's still running, and you're bored, look into speeding it up. Look up profilers, parallelization, other peoples' experiences (seqanswers.com, stackoverflow.com
+
+Once you are a decent programmer, the speed up you'll get  (a few milliseconds) from tinkering with your script (several hours) will not be worth it.
