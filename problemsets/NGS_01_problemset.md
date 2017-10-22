@@ -14,5 +14,5 @@ NGS 1 Problem Set
    	- Calculate the GC content of the sequence in the FASTA file
 	- Calculate the GC content of the gene features
 	- Calculate the GC content of the exon features
-	- Calculate the GC contents of the introns (bonus: this feature in implied and not explicit in most GFF3 files)
+	- Calculate the GC contents of the introns (bonus: this feature is implied and not explicit in most GFF3 files)
 	
