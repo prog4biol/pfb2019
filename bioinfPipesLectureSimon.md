@@ -122,7 +122,7 @@ while_else.py 	 simonp
 
 
 
-### alias
+### Unix aliases
 
 Here's a way to save typing
 
@@ -173,7 +173,8 @@ Data consistency, corruption, sanity checks
   (un)compression
 
 ## Bioinformatics How do I ...?
-### filtering sequence data: 
+Here are some bare-bones guidelines to get you going.
+### filtering illumina sequence data: 
 
 cutadapt trimgalore trimmomatic
 
@@ -195,11 +196,17 @@ Interproscan
 
 ### Databases store large data for easy searching and retrieval
 
-sqlite3 is the simplest.
+sqlite3 is the simplest. It stores your data in a single file. Portable and simple. Gets you up and running quickly.
 
+python has a module
 
+```python
+import sqlite3
+```
 
-### public databases
+We won't talk about DBs more here, but they are useful for larger data projects. They use their own language: SQL = structured query language. 
+
+### Public databases
 
 NCBI 
 nr (proteins) nt (nucleotides) Lots of data, uncurated, complete
@@ -210,7 +217,14 @@ http://www.uniprot.org
 Curated, smaller, not as inclusive as nr. 
 Helpful for speeding up analysis: UniRef90 (sequences clustered at 90% identity, which is approximately genus level). Much smaller than full database. 
 
-### write web apps
+PDB Protein Data Bank 
+For protein structures
+
+Genomes
+Ensembl, JGI,  NCBI genome
+Organism data bases, beware data quality: some are excellent, some not so well resourced.
+
+### Write web apps
 
 ```python
 import cgi
@@ -219,7 +233,7 @@ cgitb.enable()
 
 form = cgi.FieldStorage()  # get parameters
 ```
-
+See also flask python library
 
 ### Debug my script
 
@@ -256,7 +270,7 @@ exec  pdb
 q quits
 h gets help
 
-Good idea to make alias for python3 -m pdb  in .profile
+Good idea to make alias for python3 -m pdb  in .profile. How would we do that?
 
 ### Write bigger python coding projects? 
 
