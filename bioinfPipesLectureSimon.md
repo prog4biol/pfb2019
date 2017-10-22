@@ -43,9 +43,9 @@ class str(object)
  |      interpreted as in slice notation.
 ...
 ```
-  and dir()
-  
-  
+  and `dir()`
+
+
 ```  
   >>> help(str.split)
 
@@ -63,30 +63,94 @@ split(...)
 
 ```
 
-  
+
 ## Advanced Unix
 ### awk
+
+awk is a simple unix utility for reformatting text files. An awk script would look like this
+
 ```
-BEGIN { print "File\tOwner"}
-{ print $8, "\t", $3}
-END { print " - DONE -" }
+BEGIN { print "File\tOwner"}   # block executed before main script
+{ print $9, "\t", $3}          # main script
+END { print " - DONE -" }      # block executed after main script
 ```
-  
+
+You could run it like this `awk table.awk`. Each column (whitespace-separated) in the input appears in your script as $1, $2, $3 etc. A bit like sys.argv in python.
+
+Let's ignore the BEGIN and END blocks for now.
+
+How could you take a long file listing and print out the owner of each file?
+
+```bash
+% ls -l
+-rw-r--r--  1 simonp  staff  312 Oct 20 11:05 scope_global.py
+-rw-r--r--  1 simonp  staff  201 Oct 20 11:03 scope_global.py~
+-rw-r--r--  1 simonp  staff  323 Oct 20 10:40 scope_w_function.py
+-rw-r--r--  1 simonp  staff  210 Oct 20 10:33 scope_w_function.py~
+-rw-r--r--  1 simonp  staff    5 Oct 15 14:15 test.nt.fa
+-rw-r--r--  1 simonp  staff  103 Oct 17 19:27 while.py
+-rw-r--r--  1 simonp  staff  160 Oct 17 19:27 while_else.py
+
+```
+
+Here are the column variables explicitly. This is not shell output. Just a picture.
+
+```
+$1         $2 $3      $4     $5  $6  $7 $8    $9
+-rw-r--r--  1 simonp  staff  160 Oct 17 19:27 while_else.py
+```
+
+We want to print the file and the owner. Find the variables. The order can be whatever we want. The awk part would look like this 
+
+`awk '{print $9, "\t" , $3 }'`
+
+How do we get the long listing? `ls -l`
+
+Put these together with our friend pipe `|`
+
+```
+% ls -l | awk '{print $9, "\t" , $3}'
+scope_global.py 	 simonp
+scope_global.py~ 	 simonp
+scope_w_function.py 	 simonp
+scope_w_function.py~ 	 simonp
+test.nt.fa 	 simonp
+while.py 	 simonp
+while_else.py 	 simonp
+
+```
+
+
+
 ### $PATH
+
+
+
 ### alias
+
+Here's a way to save typing
+
+`alias` is a unix comand that goes in your ~/.profile file. Make one with emacs if you don't have one already. 
+
+```bash
+alias ll='ls -l'
+alias lr='ls -ltrh'
+```
+
+To get these changes, `source ~/.profile` or open a new window in terminal. Now you can type `lr`
 
 
 
 Workflows, and approaches
   saving time: assume your data is corrupted
   saving effort: google searches
-  
+
 Data
   consistency, corruption, sanity checks
   NGS data generation: illumina, pacbio
   formats - see biopython
   (un)compression
-  
+
 ## Bioinformatics How do I ...?
 ### filtering sequence data: 
 #### QC sequence data:
@@ -118,4 +182,4 @@ Good idea to make alias for this in .profile
 
 ### write bigger python coding projects? PyCharm
 ### tell if my code is slow
-  
+
