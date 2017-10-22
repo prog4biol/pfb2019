@@ -117,6 +117,47 @@ while_else.py 	 simonp
 
 ```
 
+What if we have numbers in a data table.
+
+```bash
+% cat data.txt
+4	3	9	10
+1	2	4	17
+7	12	23	6
+17	65	8	2
+```
+
+You can check this really is tab-separated with
+
+``` bash
+% od -c data.txt
+0000000    4  \t   3  \t   9  \t   1   0  \n   1  \t   2  \t   4  \t   1
+0000020    7  \n   7  \t   1   2  \t   2   3  \t   6  \n   1   7  \t   6
+0000040    5  \t   8  \t   2  \n
+0000046
+
+```
+
+This shows us we have a '4' followed by a tab '\t' followed by a '3' and a '\t' and so on til the end of the line '\n'. All the lines have this format and are consistent.
+
+print a sum of rows
+
+```
+awk '{print $1 + $2 + $3 +$4}' data.txt
+```
+
+with a header
+
+`awk 'BEGIN {print"totals"} {print $1 + $2 + $3 +$4}' data.txt`
+
+print grand total
+
+`awk 'BEGIN {a = 0} {a += $1 + $2 + $3 +$4} END {print a}' data.txt`
+
+print column totals. You need to initialize some new variables in BEGIN and print them out after the loop exits with BEGIN
+
+`awk 'BEGIN {a = 0; b=0, c=0; d=0} {a += $1; b += $2; c+=$3; d+=$4} END {print a,b,c,d}' data.txt`
+
 
 
 ### Unix aliases
