@@ -1,10 +1,7 @@
-
 # Bioinformatics and Useful Tools
 
-> Mike is covering NGS; scott GMOD etc
-> Deb is covering genome assembly
-
 ### Getting help
+
   pydoc
   google 'python3 list comprehensions`
   https://docs.python.org/3/    -> Quick search
