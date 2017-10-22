@@ -44,11 +44,28 @@ conda-4.3.30-p 100% |#################################################| Time: 0:
 
 
 
+See if the install worked
+
+```python
+python3
+>>> import Bio
+>>> print(Bio.__version__)
+1.69
+```
+
+If we get no errors, biopython is installed correctly.
+
 ## Navigating the BioPython website
 
 
 
 ## Biopython documentation
+
+
+
+## Working with sequences
+
+This is the core of biopython. And uses the Seq object.
 
 
 
