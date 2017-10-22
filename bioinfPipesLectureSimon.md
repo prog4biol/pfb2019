@@ -4,12 +4,21 @@
 > Mike is covering NGS; scott GMOD etc
 > Deb is covering genome assembly
 
-Getting help
+### Getting help
   pydoc
   google 'python3 list comprehensions`
   https://docs.python.org/3/    -> Quick search
   inside python interactive shell
-  help()
+```python
+>>>help()
+```
+Just like for `man`, help text appears inside a pager like `more` or `less`. 
+space -> next page
+b -> back a page
+return -> next line
+/ -> search for a string
+q quits the pager
+
 ```
 >>> help(str)
 Help on class str in module builtins:
@@ -53,11 +62,7 @@ split(...)
 (END)
 
 ```
-space -> next page
-b -> back a page
-return -> next line
-/ -> search for a string
-q quits the pager
+
   
 Advanced Unix
   awk
