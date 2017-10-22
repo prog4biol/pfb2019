@@ -122,10 +122,6 @@ while_else.py 	 simonp
 
 
 
-### $PATH
-
-
-
 ### alias
 
 Here's a way to save typing
@@ -137,31 +133,72 @@ alias ll='ls -l'
 alias lr='ls -ltrh'
 ```
 
-To get these changes, `source ~/.profile` or open a new window in terminal. Now you can type `lr`
+To get these changes, `source ~/.profile` or open a new window in terminal. Now you can type `lr` instead of `ls -ltrh` 
 
 
 
-Workflows, and approaches
-  saving time: assume your data is corrupted
-  saving effort: google searches
+## Workflows, and approaches
 
-Data
-  consistency, corruption, sanity checks
+ ### Saving time and effort.
+
+Your coding day is time spent doing these things:
+
+* thinking: design
+* preparation, testing
+* writing code
+* debugging
+* running code
+* thinking: analysis
+* more writing, thinking
+* report results
+
+Where do you spend most of your time? What can you save time on? The more you plan out coding and check your data, the faster you'll get to the important second half of this list.
+
+Assume your data is corrupted. This will stress test your code before you start writing. It will mostly  even be true.
+
+Check for consistent numbers of columns in your data, files that end halfway through a line are truncated or corrupted. Is a column always numbers or mixed numbers and text? Do some fields have quotes or other unusual characters, accents? Do the values seem reasonable? Are values for gene lengths about 5-10?
+
+* thinking: design   Lots of time!
+* preparation, testing  Lots of time!
+* writing code  Quick now that you've done the first two
+* debugging  Quick now that you've done the first two
+* running code Very quick
+* thinking: analysis  Spend lots of time on this and later steps
+* more writing, thinking
+* report results
+
+Data consistency, corruption, sanity checks
   NGS data generation: illumina, pacbio
   formats - see biopython
   (un)compression
 
 ## Bioinformatics How do I ...?
 ### filtering sequence data: 
+
+cutadapt trimgalore trimmomatic
+
 #### QC sequence data:
-### genome assembly
-### sequence search: blast
-### alignment: gmap, gsnap, bwa mem,
+
+fastqc
+
 ### resequencing, variant calling
+
+GATK
+
 ### finding genes
+
+Maker (eukaryotes), prodigal (prokaryotes)
+
 ### predicting gene function
-### view genes/genomes -> GMOD coming later
-### databases store large data for easy searching and retrieval
+
+Interproscan
+
+### Databases store large data for easy searching and retrieval
+
+sqlite3 is the simplest.
+
+
+
 ### public databases
 ### write web apps
 ### debug my script
@@ -179,7 +216,9 @@ Now we add `-m pdb` so it becomes
 
 Good idea to make alias for this in .profile
 
+### Write bigger python coding projects? PyCharm
 
-### write bigger python coding projects? PyCharm
+
+
 ### tell if my code is slow
 
