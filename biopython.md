@@ -2,16 +2,25 @@
 
 ## Topics
 
-1. [Navigating BioPython WebSite](http://biopython.org/)
-2. BioPython Module Documentation
-3. Manipulating sequences in a file
-4. Querying a local FASTA
-5. Creating a sequence record
-6. File Format Conversions
-7. Parsing BLAST output
-8. Manipulation of Multiple Sequence Alignments
-9. Retrieving annotations from GenBank file
-10. Other Cool Things
+1. Installing BioPython
+2. [Navigating BioPython WebSite](http://biopython.org/)
+3. BioPython Module Documentation
+4. Manipulating sequences in a file
+5. Querying a local FASTA
+6. Creating a sequence record
+7. File Format Conversions
+8. Parsing BLAST output
+9. Manipulation of Multiple Sequence Alignments
+10. Retrieving annotations from GenBank file
+11. Other Cool Things
 
 
+
+## Installing BioPython
+
+
+
+
+
+## Navigating the BioPython website
 
