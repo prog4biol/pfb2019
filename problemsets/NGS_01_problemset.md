@@ -1,4 +1,4 @@
-NGS 1 Problem set
+NGS 1 Problem Set
 =================
 
 1. Write a script to count the number of sequences in a [FASTQ](../files/pfb.fastq) file.
