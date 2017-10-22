@@ -64,14 +64,19 @@ split(...)
 ```
 
   
-Advanced Unix
-  awk
+## Advanced Unix
+### awk
 ```
 BEGIN { print "File\tOwner"}
 { print $8, "\t", $3}
 END { print " - DONE -" }
 ```
   
+### $PATH
+### alias
+
+
+
 Workflows, and approaches
   saving time: assume your data is corrupted
   saving effort: google searches
@@ -82,18 +87,35 @@ Data
   formats - see biopython
   (un)compression
   
-Bioinformatics How do I ...?
-  filtering sequence data: 
-  QC sequence data:
-  genome assembly
-  sequence search: blast
-  alignment: gmap, gsnap, bwa mem,
-  resequencing, variant calling
-  finding genes
-  predicting gene function
-  view genes/genomes -> GMOD coming later
-  databases store large data for easy searching and retrieval
-  public databases
-  write web apps
-  tell if my code is slow
+## Bioinformatics How do I ...?
+### filtering sequence data: 
+#### QC sequence data:
+### genome assembly
+### sequence search: blast
+### alignment: gmap, gsnap, bwa mem,
+### resequencing, variant calling
+### finding genes
+### predicting gene function
+### view genes/genomes -> GMOD coming later
+### databases store large data for easy searching and retrieval
+### public databases
+### write web apps
+### debug my script
+
+Run your script with the debugger module `pdb` for python debugger. Not very sophisticated, but very useful. It starts an interactive debugger that's a bit like the python interactive shell, but you are inside your script. 
+
+We were doing this
+```bash
+% python3 fasta_sequence.py
+```
+Now we add `-m pdb` so it becomes
+```bash
+% python3 -m pdb fasta_sequence.py
+```
+
+Good idea to make alias for this in .profile
+
+
+### write bigger python coding projects? PyCharm
+### tell if my code is slow
   
