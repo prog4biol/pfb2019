@@ -1,22 +1,10 @@
 # Biopython
 
-## Topics
+## What is biopython?
 
-1. Installing BioPython
-2. [Navigating BioPython WebSite](http://biopython.org/)
-3. BioPython Module Documentation
-4. Manipulating sequences in a file
-5. Querying a local FASTA
-6. Creating a sequence record
-7. File Format Conversions
-8. Parsing BLAST output
-9. Manipulation of Multiple Sequence Alignments
-10. Retrieving annotations from GenBank file
-11. Other Cool Things
+Biopython is a collection of python modules that contain code for manipulating biological data. Many handle sequence data and common analysis and processing of the data including reading and writing all common file formats. 
 
-
-
-## Installing BioPython
+## Installing Biopython
 
 This is very straightforward once you have anaconda or minconda installed. I use miniconda because it's smaller. We are going to use `sudo` because this will give us permission to install in the 'correct' directory python is expecting to find the modules. Other users will be able to use it too. Using `sudo` can cause problems, but it's ok here. You will need the administrator password for the machine. If you don't have this, ask the person who does administration on your machine.
 
@@ -58,3 +46,34 @@ conda-4.3.30-p 100% |#################################################| Time: 0:
 
 ## Navigating the BioPython website
 
+
+
+## Biopython documentation
+
+
+
+## Querying a local FASTA
+
+
+
+## Creating a sequence record
+
+
+
+## File Format Conversions
+
+
+
+## Parsing BLAST output
+
+
+
+## Manipulation of Multiple Sequence Alignments
+
+
+
+## Retrieving annotations from GenBank file
+
+
+
+## Other Cool Things
