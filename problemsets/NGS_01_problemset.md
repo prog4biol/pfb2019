@@ -1,15 +1,15 @@
 NGS 1 Problem set
 =================
 
-1. Write a script to count the number of sequences in a [FASTQ](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/err.txt) file.
+1. Write a script to count the number of sequences in a [FASTQ](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/pfb.fastq) file.
 	- Output the mean and standard deviation of sequence lengths
    	- Calculate the mean and standard deviation of base quality scores.
 2. Write a script to trim each sequence in a FASTQ file starting from the first base in each sequence lower than Q=20 to the end of the sequence. (don't forget to trim the quality scores as well)
-3. Write a script to parse a [GFF3](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/err.txt) file.
+3. Write a script to parse a [GFF3](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/cab_sav_contig.gff) file.
 	- Print the average gene length
 	- Print the average exon length
 	- Print the average number of exons per mRNA
-4. Make your script read the [FASTA](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/err.txt) file that goes with the GFF3 file
+4. Make your script read the [FASTA](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/cab_sav_contig.fasta) file that goes with the GFF3 file
    	- Calculate the GC content of the sequence in the FASTA file
 	- Calculate the GC content of the gene features
 	- Calculate the GC content of the exon features
