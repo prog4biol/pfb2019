@@ -1,16 +1,16 @@
 # Ontology Problem set
 
-In this exercise you will generate a gene list, get the GO annotations, and search though the genes for those that have been annotated with a GO term of interest. An issue you must address is that many GO terms have children terms, and the children may have children. Often you want all the genes annotated with the parent as well as it's child terms.
+In this exercise you will generate a gene list, get the GO annotations, and search through the genes for those that have been annotated with a GO term of interest. An issue you must address is that many GO terms have children terms, and the children may have children. Often you want all the genes annotated with the parent as well as it's child terms.
 
 1. Install the necessary modules
    1. `pip install six` a required module
    2. `pip install pronto` an ontology parsing module
-2. Look over the [documentation](https://github.com/althonos/pronto) for usage of the pronoto module. It is linked [here](https://github.com/althonos/pronto)
+2. Look over the [documentation](https://github.com/althonos/pronto) for usage of the pronto module. It is linked [here](https://github.com/althonos/pronto)
 3. Write a script that does the following:
    1. Creates an object of class type 'Ontology' with the gene ontology owl file. 
-      - Download the go.owl with wget or curl at this address: <http://purl.obolibrary.org/obo/go.owl> or you can `git pull` to update your course reposititory, the go.owl will be in the files directory.
+      - Download the go.owl with wget or curl at this address: <http://purl.obolibrary.org/obo/go.owl>
        -  Create your obj: `ont = pronto.Ontology('/Users/smr/Desktop/PFB2017/pfb2017/files/go.owl')` 
-   2. Get the term name for a specific Gene onotoly accession., i.e., GO:0006355 (regulation of transcription, DNA-templated)
+   2. Get the term name for a specific Gene ontology accession., i.e., GO:0006355 (regulation of transcription, DNA-templated)
        `term_obj = ont['REF:ACCESSION']`
        `term_name = term_obj.name`
    3. Use pronto `rchildren()` to retrieve all children terms of your term and to store the ID of each term in a dictionary with the term name as the value
@@ -66,8 +66,8 @@ for child in ont[MY_GO_ID].rchildren():
 
 # open genes file 
 # look at each line
-# if the go term in present in your parent/child dictionary
-# add gene name and their annotatoted GO term ID to a dictionary
+# if the go term is present in your parent/child dictionary
+# add gene name and their annotated GO term ID to a dictionary
 # print out all the genes their GO TERM ID and the GO TERM name for all matching genes
 
 ##### YOU DO THIS PART 
