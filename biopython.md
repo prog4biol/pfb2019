@@ -392,3 +392,13 @@ QueryResult(id='gi|16080617|ref|NP_391444.1|', 3 hits)
 
 ```
 
+
+
+## There are many other uses for Biopython
+
+* reading multiple sequence alignments
+* searching on remote biological sequence databases
+* working with protein structure (requires numpy to be installed)
+* biochemical pathways (KEGG)
+* drawing pictures of genome and sequence features
+* population genetics
