@@ -82,6 +82,26 @@ produces
 ATGCGATCGAGC has 12 nucleotides
 ```
 
+### From ... import ...
+
+Another way to import modules is with `from ... import ...` . This saves typing the Class name every time. Bio.Seq is the class name. Bio is the superclass. Seq is a subclass inside Bio. It's written Bio.Seq. Seq has several different subclasses, of which one is called Seq. So we have Bio.Seq.Seq. To make the creation simpler, we call Seq() after we import with `from ... import ...` like this
+
+```python3
+#!/usr/bin/env python3
+from Bio.Seq import Seq
+seqobj=Seq('ATGCGATCGAGC')
+seq_str=str(seqobj)
+print(seq_str)
+```
+
+produces
+
+```
+ATGCGATCGAGC
+```
+
+
+
 
 
 ## Querying a local FASTA
