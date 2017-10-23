@@ -242,7 +242,7 @@ There are three ways of doing this that use up more memory if you want more flex
 
 ```
 
-
+Other methods set up a database or a way to read data as you need it.
 
 ###Seq methods
 
@@ -316,18 +316,79 @@ for seq_record in SeqIO.parse("test_genome.gb", "genbank"):
 
 ## File Format Conversions
 
+Many are straightforward, others are a little more complicated because the alphabet can't be determined from the data. It's usually easier to go from richer formats to simpler ones.
 
+```python
+#!/usr/bin/env python3
+from Bio import SeqIO
+records = SeqIO.parse("./files/Python_05.fasta", "fasta")   # give filename and format
+count = SeqIO.write(records , './files/seqs.tab' , 'tab')
+```
+
+
+
+Produces
+
+```
+% more seqs.tab
+seq1    AAGAGCAGCTCGCGCTAATGTGATAGATGGCGGTAAAGTAAATGTCCTATGGGCCACCAATTATGGTGTATGAGTGAATCTCTGGTCCGAGATTCACTGAGTAACTGCTGTACACAGTAGTAACACGTGGAGATCCCATAAGCTTCACGTGTGGTCCAATAAAACACTCCGTTGGTCAAC
+seq2    GCCACAGAGCCTAGGACCCCAACCTAACCTAACCTAACCTAACCTACAGTTTGATCTTAACCATGAGGCTGAGAAGCGATGTCCTGACCGGCCTGTCCTAACCGCCCTGACCTAACCGGCTTGACCTAACCGCCCTGACCTAACCAGGCTAACCTAACCAAACCGTGAAAAAAGGAATCT
+seq3    ATGAAAGTTACATAAAGACTATTCGATGCATAAATAGTTCAGTTTTGAAAACTTACATTTTGTTAAAGTCAGGTACTTGTGTATAATATCAACTAAAT
+seq4    ATGCTAACCAAAGTTTCAGTTCGGACGTGTCGATGAGCGACGCTCAAAAAGGAAACAACATGCCAAATAGAAACGATCAATTCGGCGATGGAAATCAGAACAACGATCAGTTTGGAAATCAAAATAGAAATAACGGGAACGATCAGTTTAATAACATGATGCAGAATAAAGGGAATAATCAATTTAATCCAGGTAATCAGAACAGAGGT
+```
+
+Even easier is the convert() method. Let's try fastq to fasta.
+
+```python
+#!/usr/bin/env python3
+from Bio import SeqIO
+count = SeqIO.convert('./files/pfb.fastq', 'fastq', './files/pfb.converted.fa', 'fasta')
+```
+
+Hmm, was that easy or what??!??!!?
 
 ## Parsing BLAST output
 
+For simple BLAST parsing, ask for output format in tab-separated columns (`-outfmt 6` or `-outfmt 7`) Both these formats are customizable! See next section. 
+
+If you want to parse the full output of blast with biopython, it's best to work with XML formatted BLAST output `-outfmt 5`. It breaks the parsing method less easily. Code is stable for working with NCBI blast.
+
+You can get biopython to run the blast for you too. See `Bio.NCBIWWW`
+
+To parse the output, you'll write something like this
+
+```python
+
+>>> from Bio.Blast import NCBIXML
+>>> result_handle = open("my_blast.xml")
+>>> blast_records = NCBIXML.parse(result_handle)
+>>> for blast_record in blast_records:
+>>>   for alignment in blast_record.alignments:
+>>>     for hsp in alignment.hsps:
+>>>        if hsp.expect < 1e-10:
+>>>           print('id', alignment.title)
+>>>           print('E = ' , hsp.expect)
+
+```
 
 
-## Manipulation of Multiple Sequence Alignments
 
+### SearchIO Class is being developed
 
+The code exists, but is likely to change over the next few versions of biopython.
 
+It will handle other sequence search tools such as FASTA, HMMER etc as well as BLAST. ReturnsQuery objects that contain one or more Hit objects that contain one or more HSP objects, like in a blast report. Can handle blast tab-separated text output. 
 
+You'll write something like this
 
+```
+>>> from Bio import SearchIO
+>>> idx = SearchIO.index('tab_2226_tblastn_001.txt', 'blast-tab')
+>>> sorted(idx.keys())
+['gi|11464971:4-101', 'gi|16080617|ref|NP_391444.1|']
+>>> idx['gi|16080617|ref|NP_391444.1|']
+QueryResult(id='gi|16080617|ref|NP_391444.1|', 3 hits)
+>>> idx.close()
 
+```
 
-## Other Cool Things
