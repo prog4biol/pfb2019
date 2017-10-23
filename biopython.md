@@ -2,7 +2,7 @@
 
 ## What is biopython?
 
-Biopython is a collection of python modules that contain code for manipulating biological data. Many handle sequence data and common analysis and processing of the data including reading and writing all common file formats. 
+Biopython is a collection of python modules that contain code for manipulating biological data. Many handle sequence data and common analysis and processing of the data including reading and writing all common file formats. Biopython will also run blast for you and parse the output into objects inside your script. This requires just a few lines of code.
 
 ## Installing Biopython
 
@@ -57,6 +57,18 @@ If we get no errors, biopython is installed correctly.
 
 ## Biopython documentation
 
+Biopython wiki page
+
+http://biopython.org/
+
+Getting started
+
+http://biopython.org/wiki/Category%3AWiki_Documentation
+
+Biopython tutorial
+
+ttp://biopython.org/DIST/docs/tutorial/Tutorial.html#chapter:Bio.SeqIO
+
 Complete tree of Biopython Classes
 
 http://biopython.org/DIST/docs/api/Bio-module.html
@@ -104,7 +116,9 @@ ATGCGATCGAGC
 
 #### Bio.Alphabets
 
-A Seq object likes to know what alphabet it uses A,C,G,T for DNAAlpabet etc. Not essential for most uses.
+A Seq object likes to know what alphabet it uses A,C,G,T for DNAAlpabet etc. Not essential for most uses, but prevents you trying to translate a protein sequence!
+
+__Specific Alphabets__
 
 ```
 >>> seqobj
@@ -126,11 +140,27 @@ from Bio.Alphabet import ProteinAlphabet
 seqobj = Seq('MGT', ProteinAlphabet())
 ```
 
+__Generic Alphabets__
+
+```
+>>> from Bio.Seq import Seq
+>>> from Bio.Alphabet import generic_dna, generic_protein
+>>> my_seq = Seq("AGTACACTGGT")
+>>> my_seq
+Seq('AGTACACTGGT', Alphabet())
+>>> my_dna = Seq("AGTACACTGGT", generic_dna)
+>>> my_dna
+Seq('AGTACACTGGT', DNAAlphabet())
+>>> my_protein = Seq("AGTACACTGGT", generic_protein)
+>>> my_protein
+Seq('AGTACACTGGT', ProteinAlphabet())
+```
+
 ### Extracting a subsequence
 
 You can use a range [0:3] to get the first codon
 
-`seqobj[0:3]
+`seqobj[0:3]`
 
 
 
@@ -201,6 +231,28 @@ for seq_record in SeqIO.parse("./files/Python_05.fasta", "fasta"):   # give file
     
 ```
 
+#### Convert fasta file to python dictionary in one line
+
+There are three ways of doing this that use up more memory if you want more flexibility. `Bio.SeqIO.to_dict()` is the most flexible but also reads the entire fasta file into memory as a python dictionary so might take a lot of time and memory.
+
+```
+>>> id_dict = SeqIO.to_dict(SeqIO.parse('files/Python_05.fasta', 'fasta'))
+>>> id_dict
+{'seq1': SeqRecord(seq=Seq('AAGAGCAGCTCGCGCTAATGTGATAGATGGCGGTAAAGTAAATGTCCTATGGGC...AAC', SingleLetterAlphabet()), id='seq1', name='seq1', description='seq1', dbxrefs=[]), 'seq2': SeqRecord(seq=Seq('GCCACAGAGCCTAGGACCCCAACCTAACCTAACCTAACCTAACCTACAGTTTGA...TCT', SingleLetterAlphabet()), id='seq2', name='seq2', description='seq2', dbxrefs=[]), 'seq3': SeqRecord(seq=Seq('ATGAAAGTTACATAAAGACTATTCGATGCATAAATAGTTCAGTTTTGAAAACTT...AAT', SingleLetterAlphabet()), id='seq3', name='seq3', description='seq3', dbxrefs=[]), 'seq4': SeqRecord(seq=Seq('ATGCTAACCAAAGTTTCAGTTCGGACGTGTCGATGAGCGACGCTCAAAAAGGAA...GGT', SingleLetterAlphabet()), id='seq4', name='seq4', description='seq4', dbxrefs=[])}
+
+```
+
+Other methods set up a database or a way to read data as you need it.
+
+###Seq methods
+
+```
+seqobj.count("A")  # counts how many As are in sequence
+seqobj.find("ATG") # find coordinate of ATG (-1 for not found)
+```
+
+
+
 ### SeqRecord objects
 
 SeqIO.Parse generates Bio.SeqRecord.SeqRecord objects. These are annotated Bio.Seq.Seq objects. 
@@ -237,6 +289,16 @@ Length 209
 
 ```
 
+SeqRecord objects have .format() to convert to a string in various formats
+
+```
+>>> seq.format('fasta')
+'>seq1\nAAGAGCAGCTCGCGCTAATGTGATAGATGGCGGTAAAGTAAATGTCCTATGGGCCACCAA\nTTATGGTGTATGAGTGAATCTCTGGTCCGAGATTCACTGAGTAACTGCTGTACACAGTAG\nTAACACGTGGAGATCCCATAAGCTTCACGTGTGGTCCAATAAAACACTCCGTTGGTCAAC\n'
+
+```
+
+
+
 ## Retrieving annotations from GenBank file
 
 To read sequences from a genbank file instead, not much changes.
@@ -254,18 +316,97 @@ for seq_record in SeqIO.parse("test_genome.gb", "genbank"):
 
 ## File Format Conversions
 
+Many are straightforward, others are a little more complicated because the alphabet can't be determined from the data. It's usually easier to go from richer formats to simpler ones.
 
+```python
+#!/usr/bin/env python3
+from Bio import SeqIO
+records = SeqIO.parse("./files/Python_05.fasta", "fasta")   # give filename and format
+count = SeqIO.write(records , './files/seqs.tab' , 'tab')
+```
+
+
+
+Produces
+
+```
+% more seqs.tab
+seq1    AAGAGCAGCTCGCGCTAATGTGATAGATGGCGGTAAAGTAAATGTCCTATGGGCCACCAATTATGGTGTATGAGTGAATCTCTGGTCCGAGATTCACTGAGTAACTGCTGTACACAGTAGTAACACGTGGAGATCCCATAAGCTTCACGTGTGGTCCAATAAAACACTCCGTTGGTCAAC
+seq2    GCCACAGAGCCTAGGACCCCAACCTAACCTAACCTAACCTAACCTACAGTTTGATCTTAACCATGAGGCTGAGAAGCGATGTCCTGACCGGCCTGTCCTAACCGCCCTGACCTAACCGGCTTGACCTAACCGCCCTGACCTAACCAGGCTAACCTAACCAAACCGTGAAAAAAGGAATCT
+seq3    ATGAAAGTTACATAAAGACTATTCGATGCATAAATAGTTCAGTTTTGAAAACTTACATTTTGTTAAAGTCAGGTACTTGTGTATAATATCAACTAAAT
+seq4    ATGCTAACCAAAGTTTCAGTTCGGACGTGTCGATGAGCGACGCTCAAAAAGGAAACAACATGCCAAATAGAAACGATCAATTCGGCGATGGAAATCAGAACAACGATCAGTTTGGAAATCAAAATAGAAATAACGGGAACGATCAGTTTAATAACATGATGCAGAATAAAGGGAATAATCAATTTAATCCAGGTAATCAGAACAGAGGT
+```
+
+Even easier is the convert() method. Let's try fastq to fasta.
+
+```python
+#!/usr/bin/env python3
+from Bio import SeqIO
+count = SeqIO.convert('./files/pfb.fastq', 'fastq', './files/pfb.converted.fa', 'fasta')
+```
+
+Hmm, was that easy or what??!??!!?
 
 ## Parsing BLAST output
 
+For simple BLAST parsing, ask for output format in tab-separated columns (`-outfmt 6` or `-outfmt 7`) Both these formats are customizable! See next section. 
+
+If you want to parse the full output of blast with biopython, it's best to work with XML formatted BLAST output `-outfmt 5`. It breaks the parsing method less easily. Code is stable for working with NCBI blast.
+
+You can get biopython to run the blast for you too. See `Bio.NCBIWWW`
+
+To parse the output, you'll write something like this
+
+```python
+
+>>> from Bio.Blast import NCBIXML
+>>> result_handle = open("my_blast.xml")
+>>> blast_records = NCBIXML.parse(result_handle)
+>>> for blast_record in blast_records:
+>>>   for alignment in blast_record.alignments:
+>>>     for hsp in alignment.hsps:
+>>>        if hsp.expect < 1e-10:
+>>>           print('id', alignment.title)
+>>>           print('E = ' , hsp.expect)
+
+```
 
 
-## Manipulation of Multiple Sequence Alignments
+
+### You can also use the more general SearchIO
+
+The code exists, but is likely to change over the next few versions of biopython.
+
+It will handle other sequence search tools such as FASTA, HMMER etc as well as BLAST. ReturnsQuery objects that contain one or more Hit objects that contain one or more HSP objects, like in a blast report. Can handle blast tab-separated text output. 
+
+You'll write something like this
+
+```
+>>> from Bio import SearchIO
+>>> idx = SearchIO.index('tab_2226_tblastn_001.txt', 'blast-tab')
+>>> sorted(idx.keys())
+['gi|11464971:4-101', 'gi|16080617|ref|NP_391444.1|']
+>>> idx['gi|16080617|ref|NP_391444.1|']
+QueryResult(id='gi|16080617|ref|NP_391444.1|', 3 hits)
+>>> idx.close()
+
+```
 
 
 
+## There are many other uses for Biopython
 
+* reading multiple sequence alignments
+* searching on remote biological sequence databases
+* working with protein structure (requires numpy to be installed)
+* biochemical pathways (KEGG)
+* drawing pictures of genome and sequence features
+* population genetics
 
+## Why use biopython
 
+Massive time saver once you know your way around the classes.
 
-## Other Cool Things
+Reuse someone else's code. Very quick parsing of many common file formats.
+
+Clean code.

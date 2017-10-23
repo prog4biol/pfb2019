@@ -9,12 +9,12 @@ Help is available inside python interactive shell
 ```python
 >>>help()
 ```
-Just like for `man`, help text appears inside a pager like `more` or `less`. 
-space -> next page
-b -> back a page
-return -> next line
-/ -> search for a string
-q quits the pager
+Just like for `man`, help text appears inside a pager like `more` or `less`.   
+space -> next page  
+b -> back a page  
+return -> next line  
+/ -> search for a string  
+q quits the pager  
 
 ```
 >>> help(str)
@@ -165,15 +165,17 @@ Check for consistent numbers of columns in your data, files that end halfway thr
 * report results
 
 Data consistency, corruption, sanity checks
-  NGS data generation: illumina, pacbio
-  formats - see biopython
-  (un)compression
+  NGS data generation: illumina, pacbio  
+  formats - see biopython  
+  (un)compression  
 
 ## Bioinformatics How do I ...?
 Here are some bare-bones guidelines to get you going.
 ### filtering illumina sequence data: 
 
-cutadapt trimgalore trimmomatic
+cutadapt  
+trimgalore   
+trimmomatic
 
 #### QC sequence data:
 
@@ -185,7 +187,8 @@ GATK
 
 ### finding genes
 
-Maker (eukaryotes), prodigal (prokaryotes)
+Maker (eukaryotes),   
+Prokka/prodigal (prokaryotes)
 
 ### predicting gene function
 
@@ -205,20 +208,22 @@ We won't talk about DBs more here, but they are useful for larger data projects.
 
 ### Public databases
 
-NCBI 
-nr (proteins) nt (nucleotides) Lots of data, uncurated, complete
+__NCBI __
+nr (proteins)  
+nt (nucleotides)  
+Lots of data, uncurated, complete
 Sequence Read Archive (SRA) 454, illumina, short reads
 
-Uniprot
+__Uniprot__
 http://www.uniprot.org
 Curated, smaller, not as inclusive as nr. 
 Helpful for speeding up analysis: UniRef90 (sequences clustered at 90% identity, which is approximately genus level). Much smaller than full database. 
 
-PDB Protein Data Bank 
+__PDB Protein Data Bank__
 For protein structures
 
-Genomes
-Ensembl, JGI,  NCBI genome
+__Genomes__
+Ensembl, JGI (plants, fungi, bacteria/metagenomes),  NCBI genome
 Organism data bases, beware data quality: some are excellent, some not so well resourced.
 
 ### Write web apps
@@ -230,7 +235,7 @@ cgitb.enable()
 
 form = cgi.FieldStorage()  # get parameters
 ```
-See also flask python library
+See also Flask python library
 
 ### Debug my script
 
@@ -264,8 +269,8 @@ exec  pdb
 (Pdb) 
 
 ```
-q quits
-h gets help
+q quits  
+h gets help  
 
 Good idea to make alias for python3 -m pdb  in .profile. How would we do that?
 
