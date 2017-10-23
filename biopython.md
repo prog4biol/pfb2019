@@ -186,17 +186,45 @@ Here's a script to read fasta records and print out some information
 
 ```python
 #!/usr/bin/env python3
+# assumes we are in the pfb2017 directory
 from Bio import SeqIO
-for seq_record in SeqIO.parse("./Python_05.fasta", "fasta"):   # give filename and format
-    print('ID',seq_record.id)
-    print('Sequence",repr(seq_record.seq))
-    print('Length',len(seq_record))
+for seq_record in SeqIO.parse("./files/Python_05.fasta", "fasta"):   # give filename and format
+  print('ID',seq_record.id)
+  print('Sequence',str(seq_record.seq))
+  print('Length',len(seq_record))
     
+```
+
+Prints this output
+
+```
+ID seq1
+Sequence AAGAGCAGCTCGCGCTAATGTGATAGATGGCGGTAAAGTAAATGTCCTATGGGCCACCAATTATGGTGTATGAGTGAATCTCTGGTCCGAGATTCACTGAGTAACTGCTGTACACAGTAGTAACACGTGGAGATCCCATAAGCTTCACGTGTGGTCCAATAAAACACTCCGTTGGTCAAC
+Length 180
+ID seq2
+Sequence GCCACAGAGCCTAGGACCCCAACCTAACCTAACCTAACCTAACCTACAGTTTGATCTTAACCATGAGGCTGAGAAGCGATGTCCTGACCGGCCTGTCCTAACCGCCCTGACCTAACCGGCTTGACCTAACCGCCCTGACCTAACCAGGCTAACCTAACCAAACCGTGAAAAAAGGAATCT
+Length 180
+ID seq3
+Sequence ATGAAAGTTACATAAAGACTATTCGATGCATAAATAGTTCAGTTTTGAAAACTTACATTTTGTTAAAGTCAGGTACTTGTGTATAATATCAACTAAAT
+Length 98
+ID seq4
+Sequence ATGCTAACCAAAGTTTCAGTTCGGACGTGTCGATGAGCGACGCTCAAAAAGGAAACAACATGCCAAATAGAAACGATCAATTCGGCGATGGAAATCAGAACAACGATCAGTTTGGAAATCAAAATAGAAATAACGGGAACGATCAGTTTAATAACATGATGCAGAATAAAGGGAATAATCAATTTAATCCAGGTAATCAGAACAGAGGT
+Length 209
+
 ```
 
 
 
+To read sequences from a genbank file instead, not much changes.
 
+```python
+#!/usr/bin/env python3
+from Bio import SeqIO
+for seq_record in SeqIO.parse("test_genome.gb", "genbank"):
+  print('ID',seq_record.id)
+  print('Sequence',str(seq_record.seq))
+  print('Length',len(seq_record))
+```
 
 
 
