@@ -91,7 +91,9 @@ Another way to import modules is with `from ... import ...` . This saves typing 
 from Bio.Seq import Seq
 seqobj=Seq('ATGCGATCGAGC')
 seq_str=str(seqobj)
-print(seq_str)
+protein = seqobj.translate()
+prot_str = str(protein)
+print('{:s} translates to {:s}'.format(seq_str,prot_str))
 ```
 
 produces
@@ -100,15 +102,101 @@ produces
 ATGCGATCGAGC
 ```
 
+#### Bio.Alphabets
+
+A Seq object likes to know what alphabet it uses A,C,G,T for DNAAlpabet etc. Not essential for most uses.
+
+```
+>>> seqobj
+Seq('ATG', Alphabet())
+>>> from Bio.Alphabet import DNAAlphabet
+>>> so=Seq('ATG',DNAAlphabet())
+>>> so
+Seq('ATG', DNAAlphabet())
+>>> so.translate()
+Seq('M', ExtendedIUPACProtein())
+
+
+```
+
+For proteins
+
+```
+from Bio.Alphabet import ProteinAlphabet
+seqobj = Seq('MGT', ProteinAlphabet())
+```
+
+
+
+## Read a FASTA file
+
+We were learning how to read a fasta file line by line. SeqIO.parse() is the main method for reading from almost any file format. We'll need a fasta file. We can use Python_05.fasta which looks like this
+
+```
+>seq1
+AAGAGCAGCTCGCGCTAATGTGATAGATGGCGGTAAAGTAAATGTCCTATGGGCCACCAATTATGGTGTATGAGTGAATCTCTGGTCCGAGATTCA
+CTGAGTAACTGCTGTACACAGTAGTAACACGTGGAGATCCCATAAGCTTCACGTGTGGTCCAATAAAACACTCCGTTGGTCAAC
+>seq2
+GCCACAGAGCCTAGGACCCCAACCTAACCTAACCTAACCTAACCTACAGTTTGATCTTAACCATGAGGCTGAGAAGCGATGTCCTGACCGGCCTGT
+CCTAACCGCCCTGACCTAACCGGCTTGACCTAACCGCCCTGACCTAACCAGGCTAACCTAACCAAACCGTGAAAAAAGGAATCT
+>seq3
+ATGAAAGTTACATAAAGACTATTCGATGCATAAATAGTTCAGTTTTGAAAACTTACATTTTGTTAAAGTCAGGTACTTGTGTATAATATCAACTAA
+AT
+>seq4
+ATGCTAACCAAAGTTTCAGTTCGGACGTGTCGATGAGCGACGCTCAAAAAGGAAACAACATGCCAAATAGAAACGATCAATTCGGCGATGGAAATC
+AGAACAACGATCAGTTTGGAAATCAAAATAGAAATAACGGGAACGATCAGTTTAATAACATGATGCAGAATAAAGGGAATAATCAATTTAATCCAG
+GTAATCAGAACAGAGGT
+```
+
+Get help on the parse() method with 
+
+```
+>>> help(SeqIO.parse)
+
+Help on function parse in module Bio.SeqIO:
+
+parse(handle, format, alphabet=None)
+    Turns a sequence file into an iterator returning SeqRecords.
+    
+        - handle   - handle to the file, or the filename as a string
+          (note older versions of Biopython only took a handle).
+        - format   - lower case string describing the file format.
+        - alphabet - optional Alphabet object, useful when the sequence type
+          cannot be automatically inferred from the file itself
+          (e.g. format="fasta" or "tab")
+    
+    Typical usage, opening a file to read in, and looping over the record(s):
+    
+    >>> from Bio import SeqIO
+    >>> filename = "Fasta/sweetpea.nu"
+    >>> for record in SeqIO.parse(filename, "fasta"):
+    ...    print("ID %s" % record.id)
+    ...    print("Sequence length %i" % len(record))
+    ...    print("Sequence alphabet %s" % record.seq.alphabet)
+    ID gi|3176602|gb|U78617.1|LOU78617
+    Sequence length 309
+    Sequence alphabet SingleLetterAlphabet()
+
+...
+```
+
+This uses the old `"..." % var` formatting syntax.
+
+Here's a script to read fasta records and print out some information
+
+```python
+#!/usr/bin/env python3
+from Bio import SeqIO
+for seq_record in SeqIO.parse("./Python_05.fasta", "fasta"):   # give filename and format
+    print('ID',seq_record.id)
+    print('Sequence",repr(seq_record.seq))
+    print('Length',len(seq_record))
+    
+```
 
 
 
 
-## Querying a local FASTA
-
-
-
-## Creating a sequence record
 
 
 
