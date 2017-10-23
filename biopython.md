@@ -55,11 +55,11 @@ python3
 
 If we get no errors, biopython is installed correctly.
 
-## Navigating the BioPython website
-
-
-
 ## Biopython documentation
+
+Complete tree of Biopython Classes
+
+http://biopython.org/DIST/docs/api/Bio-module.html
 
 
 
@@ -201,7 +201,23 @@ for seq_record in SeqIO.parse("./files/Python_05.fasta", "fasta"):   # give file
     
 ```
 
+### SeqRecord objects
+
 SeqIO.Parse generates Bio.SeqRecord.SeqRecord objects. These are annotated Bio.Seq.Seq objects. 
+
+Main attributes:
+
+- id - Identifier such as a locus tag (string)
+- seq - The sequence itself (Seq object or similar)
+
+Additional attributes:
+
+- name - Sequence name, e.g. gene name (string)
+- description - Additional text (string)
+- dbxrefs - List of database cross references (list of strings)
+- features - Any (sub)features defined (list of SeqFeature objects)
+- annotations - Further information about the whole sequence (dictionary). Most entries are strings, or lists of strings.
+- letter_annotations - Per letter/symbol annotation (restricted dictionary). This holds Python sequences (lists, strings or tuples) whose length matches that of the sequence. A typical use would be to hold a list of integers representing sequencing quality scores, or a string representing the secondary structure.
 
 Prints this output
 
