@@ -3,8 +3,8 @@
 In this exercise you will generate a gene list, get the GO annotations, and search though the genes for those that have been annotated with a GO term of interest. An issue you must address is that many GO terms have children terms, and the children may have children. Often you want all the genes annotoated with the parent as well as it's child terms.
 
 1. Install the necessary modules
-  1. `pip install six` a required module
-  2. `pip install pronto` an ontology parsing module
+   1. `pip install six` a required module
+   2. `pip install pronto` an ontology parsing module
 2. Look over the [documentation](https://github.com/althonos/pronto) for usage of the pronoto module. It is linked [here]<https://github.com/althonos/pronto>
 3. Write a script that
    1. Creates an object of class type 'Ontology' with the gene ontology owl file. 
