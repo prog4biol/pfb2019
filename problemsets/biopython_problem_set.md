@@ -56,9 +56,9 @@ __Run BLAST+__
 2. Run `blastp -help` for information about running the command and formatting output.
 3. Run `blastp -query [Your Query FASTA File] -db [BLAST FORMATED DB FASTA FILE] -out [output file name] -evalue [evalue cutoff] -outfmt [5 for XML; 6 for TAB; etc]`
       - `-query`  A FASTA formated sequence file with one or more query sequences
-      - `db` The file name of the FASTA formated file you formated with `makeblastdb`
+      - `-db` The file name of the FASTA formated file you formated with `makeblastdb`
       - `-out` A name of your choice for your output file, otherwise, the output is printed to the screen
       - `-evalue` The Expectation value (E) threshold for returning hits. 1e-5 is a common cutoff (Bill will say 1e-2, but we will be a tad more conservative)
-      - `outfmt` You can choose the output format of your BLAST report. XML(5) and TAB(6) are the most common, but there are many other very helpful formats
+      - `-outfmt` You can choose the output format of your BLAST report. XML(5) and TAB(6) are the most common, but there are many other very helpful formats
   
 
