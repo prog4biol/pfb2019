@@ -126,6 +126,12 @@ from Bio.Alphabet import ProteinAlphabet
 seqobj = Seq('MGT', ProteinAlphabet())
 ```
 
+### Extracting a subsequence
+
+You can use a range [0:3] to get the first codon
+
+`seqobj[0:3]
+
 
 
 ## Read a FASTA file
@@ -195,6 +201,8 @@ for seq_record in SeqIO.parse("./files/Python_05.fasta", "fasta"):   # give file
     
 ```
 
+SeqIO.Parse generates Bio.SeqRecord.SeqRecord objects. These are annotated Bio.Seq.Seq objects. 
+
 Prints this output
 
 ```
@@ -213,7 +221,7 @@ Length 209
 
 ```
 
-
+## Retrieving annotations from GenBank file
 
 To read sequences from a genbank file instead, not much changes.
 
@@ -240,7 +248,7 @@ for seq_record in SeqIO.parse("test_genome.gb", "genbank"):
 
 
 
-## Retrieving annotations from GenBank file
+
 
 
 
