@@ -57,6 +57,18 @@ If we get no errors, biopython is installed correctly.
 
 ## Biopython documentation
 
+Biopython wiki page
+
+http://biopython.org/
+
+Getting started
+
+http://biopython.org/wiki/Category%3AWiki_Documentation
+
+Biopython tutorial
+
+ttp://biopython.org/DIST/docs/tutorial/Tutorial.html#chapter:Bio.SeqIO
+
 Complete tree of Biopython Classes
 
 http://biopython.org/DIST/docs/api/Bio-module.html
@@ -104,7 +116,9 @@ ATGCGATCGAGC
 
 #### Bio.Alphabets
 
-A Seq object likes to know what alphabet it uses A,C,G,T for DNAAlpabet etc. Not essential for most uses.
+A Seq object likes to know what alphabet it uses A,C,G,T for DNAAlpabet etc. Not essential for most uses, but prevents you trying to translate a protein sequence!
+
+__Specific Alphabets__
 
 ```
 >>> seqobj
@@ -126,11 +140,27 @@ from Bio.Alphabet import ProteinAlphabet
 seqobj = Seq('MGT', ProteinAlphabet())
 ```
 
+__Generic Alphabets__
+
+```
+>>> from Bio.Seq import Seq
+>>> from Bio.Alphabet import generic_dna, generic_protein
+>>> my_seq = Seq("AGTACACTGGT")
+>>> my_seq
+Seq('AGTACACTGGT', Alphabet())
+>>> my_dna = Seq("AGTACACTGGT", generic_dna)
+>>> my_dna
+Seq('AGTACACTGGT', DNAAlphabet())
+>>> my_protein = Seq("AGTACACTGGT", generic_protein)
+>>> my_protein
+Seq('AGTACACTGGT', ProteinAlphabet())
+```
+
 ### Extracting a subsequence
 
 You can use a range [0:3] to get the first codon
 
-`seqobj[0:3]
+`seqobj[0:3]`
 
 
 
@@ -201,6 +231,28 @@ for seq_record in SeqIO.parse("./files/Python_05.fasta", "fasta"):   # give file
     
 ```
 
+#### Convert fasta file to python dictionary
+
+There are three ways of doing this that use up more memory if you want more flexibility. `Bio.SeqIO.to_dict()` is the most flexible but also reads the entire fasta file into memory as a python dictionary so might take a lot of time and memory.
+
+```
+>>> id_dict = SeqIO.to_dict(SeqIO.parse('files/Python_05.fasta', 'fasta'))
+>>> id_dict
+{'seq1': SeqRecord(seq=Seq('AAGAGCAGCTCGCGCTAATGTGATAGATGGCGGTAAAGTAAATGTCCTATGGGC...AAC', SingleLetterAlphabet()), id='seq1', name='seq1', description='seq1', dbxrefs=[]), 'seq2': SeqRecord(seq=Seq('GCCACAGAGCCTAGGACCCCAACCTAACCTAACCTAACCTAACCTACAGTTTGA...TCT', SingleLetterAlphabet()), id='seq2', name='seq2', description='seq2', dbxrefs=[]), 'seq3': SeqRecord(seq=Seq('ATGAAAGTTACATAAAGACTATTCGATGCATAAATAGTTCAGTTTTGAAAACTT...AAT', SingleLetterAlphabet()), id='seq3', name='seq3', description='seq3', dbxrefs=[]), 'seq4': SeqRecord(seq=Seq('ATGCTAACCAAAGTTTCAGTTCGGACGTGTCGATGAGCGACGCTCAAAAAGGAA...GGT', SingleLetterAlphabet()), id='seq4', name='seq4', description='seq4', dbxrefs=[])}
+
+```
+
+
+
+###Seq methods
+
+```
+seqobj.count("A")  # counts how many As are in sequence
+seqobj.find("ATG") # find coordinate of ATG (-1 for not found)
+```
+
+
+
 ### SeqRecord objects
 
 SeqIO.Parse generates Bio.SeqRecord.SeqRecord objects. These are annotated Bio.Seq.Seq objects. 
@@ -236,6 +288,16 @@ Sequence ATGCTAACCAAAGTTTCAGTTCGGACGTGTCGATGAGCGACGCTCAAAAAGGAAACAACATGCCAAATAGA
 Length 209
 
 ```
+
+SeqRecord objects have .format() to convert to a string in various formats
+
+```
+>>> seq.format('fasta')
+'>seq1\nAAGAGCAGCTCGCGCTAATGTGATAGATGGCGGTAAAGTAAATGTCCTATGGGCCACCAA\nTTATGGTGTATGAGTGAATCTCTGGTCCGAGATTCACTGAGTAACTGCTGTACACAGTAG\nTAACACGTGGAGATCCCATAAGCTTCACGTGTGGTCCAATAAAACACTCCGTTGGTCAAC\n'
+
+```
+
+
 
 ## Retrieving annotations from GenBank file
 
