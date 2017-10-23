@@ -402,3 +402,11 @@ QueryResult(id='gi|16080617|ref|NP_391444.1|', 3 hits)
 * biochemical pathways (KEGG)
 * drawing pictures of genome and sequence features
 * population genetics
+
+## Why use biopython
+
+Massive time saver once you know your way around the classes.
+
+Reuse someone else's code. Very quick parsing of many common file formats.
+
+Clean code.
