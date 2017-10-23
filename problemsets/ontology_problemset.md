@@ -4,14 +4,15 @@ In this exercise you will generate a gene list, get the GO annotations, and sear
 
 
 
-1. Download [go.owl](http://purl.obolibrary.org/obo/go.owl). Or `git pull` from srobb1/pfb2017. go.owl will be in the files directory
+1.
 2. `pip install six` a required module
 3. `pip install pronto` an ontology parsing module
 4. Look over the [documentation](https://github.com/althonos/pronto) for usage of the pronoto module. It is linked [here]<https://github.com/althonos/pronto>
 5. Write a script that
    1. Creates an object of class type 'Ontology' with the gene ontology owl file. You can download with wget or curl at this address: `http://purl.obolibrary.org/obo/go.owl` or you can `git pull` to update your course repositfrom the 
        `ont = pronto.Ontology('/Users/smr/Desktop/PFB2017/pfb2017/files/go.owl')`
-   2. Get the term name for a specific Gene onotoly accession., i.e., GO:0000000
+       This owl, [go.owl](http://purl.obolibrary.org/obo/go.owl), file can be downloaded from <http://purl.obolibrary.org/obo/go.owl>. Or you can do a `git pull` from srobb1/pfb2017. The go.owl will be in the files directory.
+   2. Get the term name for a specific Gene onotoly accession., i.e., GO:0006355 (regulation of transcription, DNA-templated)
        `term_obj = ont['REF:ACCESSION']`
        `term_name = term_obj.name`
    3. Use pronto `rchildren()` to retrieve all children terms of your term and to store the ID of each term in a dictionary with the term name as the value
