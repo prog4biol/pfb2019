@@ -8,8 +8,8 @@ In this exercise you will generate a gene list, get the GO annotations, and sear
 2. Look over the [documentation](https://github.com/althonos/pronto) for usage of the pronoto module. It is linked [here](https://github.com/althonos/pronto)
 3. Write a script that:
    1. Creates an object of class type 'Ontology' with the gene ontology owl file. 
-     1. Download the go.owl with wget or curl at this address: <http://purl.obolibrary.org/obo/go.owl> or you can `git pull` to update your course reposititory, the go.owl will be in the files directory.
-     2. Create your obj: `ont = pronto.Ontology('/Users/smr/Desktop/PFB2017/pfb2017/files/go.owl')` 
+     -  Create your obj: `ont = pronto.Ontology('/Users/smr/Desktop/PFB2017/pfb2017/files/go.owl')` 
+     - Download the go.owl with wget or curl at this address: <http://purl.obolibrary.org/obo/go.owl> or you can `git pull` to update your course reposititory, the go.owl will be in the files directory.
    2. Get the term name for a specific Gene onotoly accession., i.e., GO:0006355 (regulation of transcription, DNA-templated)
        `term_obj = ont['REF:ACCESSION']`
        `term_name = term_obj.name`
