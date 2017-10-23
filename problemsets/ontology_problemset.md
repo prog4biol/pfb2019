@@ -2,16 +2,14 @@
 
 In this exercise you will generate a gene list, get the GO annotations, and search though the genes for those that have been annotated with a GO term of interest. An issue you must address is that many GO terms have children terms, and the children may have children. Often you want all the genes annotoated with the parent as well as it's child terms.
 
-
-
-1.
-2. `pip install six` a required module
-3. `pip install pronto` an ontology parsing module
-4. Look over the [documentation](https://github.com/althonos/pronto) for usage of the pronoto module. It is linked [here]<https://github.com/althonos/pronto>
-5. Write a script that
-   1. Creates an object of class type 'Ontology' with the gene ontology owl file. You can download with wget or curl at this address: `http://purl.obolibrary.org/obo/go.owl` or you can `git pull` to update your course repositfrom the 
-       `ont = pronto.Ontology('/Users/smr/Desktop/PFB2017/pfb2017/files/go.owl')`
-       This owl, [go.owl](http://purl.obolibrary.org/obo/go.owl), file can be downloaded from <http://purl.obolibrary.org/obo/go.owl>. Or you can do a `git pull` from srobb1/pfb2017. The go.owl will be in the files directory.
+1. Install the necessary modules
+  1. `pip install six` a required module
+  2. `pip install pronto` an ontology parsing module
+2. Look over the [documentation](https://github.com/althonos/pronto) for usage of the pronoto module. It is linked [here]<https://github.com/althonos/pronto>
+3. Write a script that
+   1. Creates an object of class type 'Ontology' with the gene ontology owl file. 
+     1. Download the go.owl with wget or curl at this address: <http://purl.obolibrary.org/obo/go.owl> or you can `git pull` to update your course reposititory, the go.owl will be in the files directory.
+     2. Create your obj: `ont = pronto.Ontology('/Users/smr/Desktop/PFB2017/pfb2017/files/go.owl')` 
    2. Get the term name for a specific Gene onotoly accession., i.e., GO:0006355 (regulation of transcription, DNA-templated)
        `term_obj = ont['REF:ACCESSION']`
        `term_name = term_obj.name`
