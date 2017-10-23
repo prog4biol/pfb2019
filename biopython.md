@@ -373,7 +373,7 @@ To parse the output, you'll write something like this
 
 
 
-### SearchIO Class is being developed
+### You can also use the more general SearchIO
 
 The code exists, but is likely to change over the next few versions of biopython.
 
