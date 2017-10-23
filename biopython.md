@@ -55,11 +55,11 @@ python3
 
 If we get no errors, biopython is installed correctly.
 
-## Navigating the BioPython website
-
-
-
 ## Biopython documentation
+
+Complete tree of Biopython Classes
+
+http://biopython.org/DIST/docs/api/Bio-module.html
 
 
 
@@ -91,7 +91,9 @@ Another way to import modules is with `from ... import ...` . This saves typing 
 from Bio.Seq import Seq
 seqobj=Seq('ATGCGATCGAGC')
 seq_str=str(seqobj)
-print(seq_str)
+protein = seqobj.translate()
+prot_str = str(protein)
+print('{:s} translates to {:s}'.format(seq_str,prot_str))
 ```
 
 produces
@@ -100,15 +102,153 @@ produces
 ATGCGATCGAGC
 ```
 
+#### Bio.Alphabets
+
+A Seq object likes to know what alphabet it uses A,C,G,T for DNAAlpabet etc. Not essential for most uses.
+
+```
+>>> seqobj
+Seq('ATG', Alphabet())
+>>> from Bio.Alphabet import DNAAlphabet
+>>> so=Seq('ATG',DNAAlphabet())
+>>> so
+Seq('ATG', DNAAlphabet())
+>>> so.translate()
+Seq('M', ExtendedIUPACProtein())
+
+
+```
+
+For proteins
+
+```
+from Bio.Alphabet import ProteinAlphabet
+seqobj = Seq('MGT', ProteinAlphabet())
+```
+
+### Extracting a subsequence
+
+You can use a range [0:3] to get the first codon
+
+`seqobj[0:3]
 
 
 
+## Read a FASTA file
 
-## Querying a local FASTA
+We were learning how to read a fasta file line by line. SeqIO.parse() is the main method for reading from almost any file format. We'll need a fasta file. We can use Python_05.fasta which looks like this
 
+```
+>seq1
+AAGAGCAGCTCGCGCTAATGTGATAGATGGCGGTAAAGTAAATGTCCTATGGGCCACCAATTATGGTGTATGAGTGAATCTCTGGTCCGAGATTCA
+CTGAGTAACTGCTGTACACAGTAGTAACACGTGGAGATCCCATAAGCTTCACGTGTGGTCCAATAAAACACTCCGTTGGTCAAC
+>seq2
+GCCACAGAGCCTAGGACCCCAACCTAACCTAACCTAACCTAACCTACAGTTTGATCTTAACCATGAGGCTGAGAAGCGATGTCCTGACCGGCCTGT
+CCTAACCGCCCTGACCTAACCGGCTTGACCTAACCGCCCTGACCTAACCAGGCTAACCTAACCAAACCGTGAAAAAAGGAATCT
+>seq3
+ATGAAAGTTACATAAAGACTATTCGATGCATAAATAGTTCAGTTTTGAAAACTTACATTTTGTTAAAGTCAGGTACTTGTGTATAATATCAACTAA
+AT
+>seq4
+ATGCTAACCAAAGTTTCAGTTCGGACGTGTCGATGAGCGACGCTCAAAAAGGAAACAACATGCCAAATAGAAACGATCAATTCGGCGATGGAAATC
+AGAACAACGATCAGTTTGGAAATCAAAATAGAAATAACGGGAACGATCAGTTTAATAACATGATGCAGAATAAAGGGAATAATCAATTTAATCCAG
+GTAATCAGAACAGAGGT
+```
 
+Get help on the parse() method with 
 
-## Creating a sequence record
+```
+>>> help(SeqIO.parse)
+
+Help on function parse in module Bio.SeqIO:
+
+parse(handle, format, alphabet=None)
+    Turns a sequence file into an iterator returning SeqRecords.
+    
+        - handle   - handle to the file, or the filename as a string
+          (note older versions of Biopython only took a handle).
+        - format   - lower case string describing the file format.
+        - alphabet - optional Alphabet object, useful when the sequence type
+          cannot be automatically inferred from the file itself
+          (e.g. format="fasta" or "tab")
+    
+    Typical usage, opening a file to read in, and looping over the record(s):
+    
+    >>> from Bio import SeqIO
+    >>> filename = "Fasta/sweetpea.nu"
+    >>> for record in SeqIO.parse(filename, "fasta"):
+    ...    print("ID %s" % record.id)
+    ...    print("Sequence length %i" % len(record))
+    ...    print("Sequence alphabet %s" % record.seq.alphabet)
+    ID gi|3176602|gb|U78617.1|LOU78617
+    Sequence length 309
+    Sequence alphabet SingleLetterAlphabet()
+
+...
+```
+
+This uses the old `"..." % var` formatting syntax.
+
+Here's a script to read fasta records and print out some information
+
+```python
+#!/usr/bin/env python3
+# assumes we are in the pfb2017 directory
+from Bio import SeqIO
+for seq_record in SeqIO.parse("./files/Python_05.fasta", "fasta"):   # give filename and format
+  print('ID',seq_record.id)
+  print('Sequence',str(seq_record.seq))
+  print('Length',len(seq_record))
+    
+```
+
+### SeqRecord objects
+
+SeqIO.Parse generates Bio.SeqRecord.SeqRecord objects. These are annotated Bio.Seq.Seq objects. 
+
+Main attributes:
+
+- id - Identifier such as a locus tag (string)
+- seq - The sequence itself (Seq object or similar)
+
+Additional attributes:
+
+- name - Sequence name, e.g. gene name (string)
+- description - Additional text (string)
+- dbxrefs - List of database cross references (list of strings)
+- features - Any (sub)features defined (list of SeqFeature objects)
+- annotations - Further information about the whole sequence (dictionary). Most entries are strings, or lists of strings.
+- letter_annotations - Per letter/symbol annotation (restricted dictionary). This holds Python sequences (lists, strings or tuples) whose length matches that of the sequence. A typical use would be to hold a list of integers representing sequencing quality scores, or a string representing the secondary structure.
+
+Prints this output
+
+```
+ID seq1
+Sequence AAGAGCAGCTCGCGCTAATGTGATAGATGGCGGTAAAGTAAATGTCCTATGGGCCACCAATTATGGTGTATGAGTGAATCTCTGGTCCGAGATTCACTGAGTAACTGCTGTACACAGTAGTAACACGTGGAGATCCCATAAGCTTCACGTGTGGTCCAATAAAACACTCCGTTGGTCAAC
+Length 180
+ID seq2
+Sequence GCCACAGAGCCTAGGACCCCAACCTAACCTAACCTAACCTAACCTACAGTTTGATCTTAACCATGAGGCTGAGAAGCGATGTCCTGACCGGCCTGTCCTAACCGCCCTGACCTAACCGGCTTGACCTAACCGCCCTGACCTAACCAGGCTAACCTAACCAAACCGTGAAAAAAGGAATCT
+Length 180
+ID seq3
+Sequence ATGAAAGTTACATAAAGACTATTCGATGCATAAATAGTTCAGTTTTGAAAACTTACATTTTGTTAAAGTCAGGTACTTGTGTATAATATCAACTAAAT
+Length 98
+ID seq4
+Sequence ATGCTAACCAAAGTTTCAGTTCGGACGTGTCGATGAGCGACGCTCAAAAAGGAAACAACATGCCAAATAGAAACGATCAATTCGGCGATGGAAATCAGAACAACGATCAGTTTGGAAATCAAAATAGAAATAACGGGAACGATCAGTTTAATAACATGATGCAGAATAAAGGGAATAATCAATTTAATCCAGGTAATCAGAACAGAGGT
+Length 209
+
+```
+
+## Retrieving annotations from GenBank file
+
+To read sequences from a genbank file instead, not much changes.
+
+```python
+#!/usr/bin/env python3
+from Bio import SeqIO
+for seq_record in SeqIO.parse("test_genome.gb", "genbank"):
+  print('ID',seq_record.id)
+  print('Sequence',str(seq_record.seq))
+  print('Length',len(seq_record))
+```
 
 
 
@@ -124,7 +264,7 @@ ATGCGATCGAGC
 
 
 
-## Retrieving annotations from GenBank file
+
 
 
 
