@@ -231,7 +231,7 @@ for seq_record in SeqIO.parse("./files/Python_05.fasta", "fasta"):   # give file
     
 ```
 
-#### Convert fasta file to python dictionary
+#### Convert fasta file to python dictionary in one line
 
 There are three ways of doing this that use up more memory if you want more flexibility. `Bio.SeqIO.to_dict()` is the most flexible but also reads the entire fasta file into memory as a python dictionary so might take a lot of time and memory.
 
