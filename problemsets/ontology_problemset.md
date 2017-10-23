@@ -25,9 +25,9 @@ In this exercise you will generate a gene list, get the GO annotations, and sear
          all_children['REF:ACCESSION'] = term_name
          ```
    4. Opens a file generated from biomart with these columns (or use <https://github.com/srobb1/pfb2017/raw/master/files/cow_genes_umd3.1_withGO.txt> )
-     1. Gene or transcript ID
-     2. GO TERM ID
-     3. GO TERM Name
+        - Gene or transcript ID
+        - GO TERM ID
+        - GO TERM Name
    5. Checks to see if each gene's GO TERM is the provided parent GO TERM ID or one of its children.
    
    
