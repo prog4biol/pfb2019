@@ -63,9 +63,24 @@ If we get no errors, biopython is installed correctly.
 
 
 
-## Working with sequences
+## Working with DNA and protein sequences
 
-This is the core of biopython. And uses the Seq object.
+This is the core of biopython. And uses the Seq object. Seq is part of Bio. This is denoted Bio.Seq
+
+```python
+#!/usr/bin/env python3
+import Bio.Seq                           # }
+seqobj = Bio.Seq.Seq('ATGCGATCGAGC')     # } that's a lot of Seqs
+# convert to string with str(seqobj)
+seq_str = str(seqobj)
+print('{:s} has {:d} nucleotides'.format( seq_str , len(seq_str)))
+```
+
+produces 
+
+```
+ATGCGATCGAGC has 12 nucleotides
+```
 
 
 
