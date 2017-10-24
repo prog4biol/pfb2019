@@ -2,7 +2,7 @@
 # Similarity Searching Workshop - Bill Pearson.  24 October 2017
 
 ## Morning Workshop
-Exercises can be found [here](http://fasta.bioch.virginia.edu/mol_evol):
+Exercises can be found <a href="http://fasta.bioch.virginia.edu/mol_evol" target="_blank">here</a>
 
 http://fasta.bioch.virginia.edu/mol_evol
 
