@@ -1,7 +1,7 @@
 
-#Problem Set 7 pfb2017
+# Problem Set 7 pfb2017
 
-####1.Create a function to format a string of DNA so that each line is no more than 60 nt long.
+#### 1.Create a function to format a string of DNA so that each line is no more than 60 nt long.
 * INPUT: a string of DNA without newlines
 * RETURNS: a string of DNA with lines no more than 60 nucleoties long
 
@@ -28,7 +28,7 @@ print_lines(dna)
 
 I used list comprehension to create a list of codons. You could expand this into a longer for loop. I also use a shorthand to iterate through my list, \*expression. Check here for more detail https://docs.python.org/3/reference/expressions.html#calls
 
-####2. Modify your function so that it will work whether the DNA string does or does not have newlines.
+#### 2. Modify your function so that it will work whether the DNA string does or does not have newlines.
 
 
 ```python
@@ -61,7 +61,7 @@ print_lines(dna)
 
 I use string.replace() to remove newline characters to an empty string. Sometimes string.strip() doesn't work when newline chaeacters are in the middle of strings. 
 
-####3. Modify your function so that it takes two arguments, the DNA string and the max length of each line.
+#### 3. Modify your function so that it takes two arguments, the DNA string and the max length of each line.
 
 
 ```python
@@ -72,7 +72,7 @@ def print_lines(string, len_line):
     return print(*to_print, sep='\n')
 ```
 
-####4. Modify your script so that it can take two command line arguments:
+#### 4. Modify your script so that it can take two command line arguments:
 
 
 ```python
