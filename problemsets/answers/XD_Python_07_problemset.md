@@ -72,7 +72,7 @@ def print_lines(string, len_line):
     return print(*to_print, sep='\n')
 ```
 
-####4. Modify your script so that it can take two command line arguments:
+#### 4. Modify your script so that it can take two command line arguments:
 
 
 ```python
