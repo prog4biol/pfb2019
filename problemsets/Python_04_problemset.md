@@ -34,11 +34,12 @@ Python 4 Problem Set
    - Print out each element
    - Print out the length and the sequence i.e., "4\\tATGC\\n"
 11. Rewrite the script from 10. using a list comprehension to generate a list of tuples of sequences and lengths. Print out the length and the sequence i.e., "4\\tATGC\\n".
+
 12. Modify the script from 10 so that you also print out the number of each sequence i.e. "1\t4\tACGT\n"
 
 
 
-12. Create a shuffled sequence (Fisher-Yates shuffle)
+13. Create a shuffled sequence (Fisher-Yates shuffle)
     - Use a for loop to perform the following procedure N times (N = length of seq)
     - Select a random position A with randrange()
     - Select a random position B with randrange()
@@ -46,7 +47,7 @@ Python 4 Problem Set
     - Print the final shuffled sequence
     - Remember to test your code with test data. 
 
-13. Start with 2 very similar DNA sequences. Use your favorites or use [Python_04.fasta](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/Python_04.fasta)
+14. Start with 2 very similar DNA sequences. Use your favorites or use [Python_04.fasta](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/Python_04.fasta)
     - Align with ClustalW, TCoffee, or some other web alignment application. 
     - Output should be in FASTA format.
     - Store (copy and paste) each aligned sequence, including dashes, as two separate string variables. 
@@ -54,7 +55,8 @@ Python 4 Problem Set
     - Use a `for loop` with `range()` to compare each index for nucleotide differences.
     - Report percent identity of the two sequences.
 
-14. Write a script in which you construct a dictionary of your favorite things.
+
+15.  Write a script in which you construct a dictionary of your favorite things.
 
 > Some of my favorites:
 >
@@ -65,9 +67,8 @@ Python 4 Problem Set
 > | tree | [Cedar](https://sciencing.com/cedar-trees-5432718.html) |
 
 
-15. Write a script that iterates through each nucleotide of a DNA string and keeps a tally of how many times each letter is seen in the sequence. Your script should be able to handle any characters it finds like N, n, X, x and so on. 
+16.  Write a script that iterates through each nucleotide of a DNA string and keeps a tally of how many times each letter is seen in the sequence. Your script should be able to handle any characters it finds like N, n, X, x and so on. 
     -  Print out a table of all the counts of the different letters that occur in the sequence. It will look something like this
-
 ```
 A = 34
 T = 31
@@ -77,7 +78,7 @@ N = 2
 ...
 ```
 
-16.   Write a script to find the intersection, difference, union, and symetrical difference between these two sets.
+17.   Write a script to find the intersection, difference, union, and symetrical difference between these two sets.
 
 ```
 Set A = 3 14 15 9 26 5 35 9

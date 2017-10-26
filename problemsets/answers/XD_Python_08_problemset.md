@@ -1,7 +1,7 @@
 
-#Problem Set 8 pfb2017
+# Problem Set 8 pfb2017
 
-####1. Take a mulit-FASTA Python_08.fasta file from user input and calculate the nucleotide composition for each sequence. 
+#### 1. Take a mulit-FASTA Python_08.fasta file from user input and calculate the nucleotide composition for each sequence. 
 * Use a datastructure to keep count. 
 * Print out each sequence name and its compostion in this format: seqName\tA_count\tT_count\tG_count\C_count
 
@@ -69,7 +69,7 @@ for key in nested:
 
 I got lazy and didn't want to type in another key, so I only made a dictionary in a dictionary. If you want to make a dictionary in a dictionary in a dictionary like Sofia's example in the notes, do the commented out #nested line instead. 
 
-####2. Write a script that takes a multi-FASTA file Python_08.fasta from user input and breaks each sequence into codons (every three nucleotides is a codon) in just the first reading frame. Your output should look like this:
+#### 2. Write a script that takes a multi-FASTA file Python_08.fasta from user input and breaks each sequence into codons (every three nucleotides is a codon) in just the first reading frame. Your output should look like this:
 * seq1-frame-1-codons
 * CAT GCT TGA GTC
 
@@ -110,7 +110,7 @@ outfh.close()
 
 I iterated through the dictionary from Q1 using dictionary.iter() so I could set the value to v instead of having to type out dictionary[key] to get the value. 
 
-####4. Now produce codons in the first three reading frames for each sequence and print out ids and sequence records for each frame and print to a file called 'Python_08.codons-3frames.nt'
+#### 4. Now produce codons in the first three reading frames for each sequence and print out ids and sequence records for each frame and print to a file called 'Python_08.codons-3frames.nt'
 
 For example:
 ```
@@ -168,7 +168,7 @@ outfh.close()
     GAA	ACG	TTG	AAT	TGA	TTT	TAT	ATC	AAT	AAT	ATC	GAT	CAT	TTT	TAT	TCT	ATT	ATT	TGT	TTG	TTT	GCT	TGG	CTT	TCA	TCT	ATT	TCT	ACA	GAC	TAT	CTT	TCC	CTA	ATG	TCT	ATT	GCA	AAA	GGA	AAA	AAT	GCA	TTG	CTT	GTT	GCC	AGC	AGT	TAT	TAT	GGC	CCA	TTT	TAT	CCA	GAT	GGT	AAA	AAC	ACT	GGA	GTC	CAT	TTT	TCA	GAG	CTT	TTA	ATC	CCT	TAC	AAT	GTT	TTC	AAA	AAA	GCA	GGT	TTT	AAC	GTG	CAA	TTC	GTT	TCA	GAA	AAT	GGC	TCT	TAC	AAA	TTT	GAC	GAT	CAT	TCC	ATT	GAG	GAG	TCA	AAA	TTA	GGG	GAC	TTT	GAA	AGA	AAA	GTA	TTT	AAT	GAT	AAA	AAC	GAC	GAT	TTT	TGG	ACT	AAT	CTT	AAC	AAT	ATG	AAA	AAG	GCT	TCG	GAC	ATA	GTT	GGA	AAA	GAC	TAT	CAG	CTT	TTA	TTT	GTG	GCA	GGT	GGG	CAT	GCT	GCG	ATG	TTT	GAC	TTA	CCC	AAA	GCC	ACG	AAT	TTA	CAG	GCG
 
 
-####5.Now reverse complement each sequence and print out all six reading frames to a file called 'Python_08.codons-6frames.nt'
+#### 5.Now reverse complement each sequence and print out all six reading frames to a file called 'Python_08.codons-6frames.nt'
 
 
 ```python
@@ -213,7 +213,7 @@ for k, v in fw_rev_dict.items():
 outfh.close()
 ```
 
-####6. Translate each of the six reading frames into amino acids. Create one file for which you print the six reading frames (Python_08.codons-6frames.nt) and one file for which you print the translation of the six reading frames (Python_08.translated.aa).
+#### 6. Translate each of the six reading frames into amino acids. Create one file for which you print the six reading frames (Python_08.codons-6frames.nt) and one file for which you print the translation of the six reading frames (Python_08.translated.aa).
 
 
 ```python
@@ -260,7 +260,7 @@ outfh.close()
 
 ```
 
-####7. Find the longest peptide sequence (M-->Stop) of all the six translated reading frames for a single sequence. Do this for all the sequence records. For each sequence, print out in FASTA format the six frames of codons to one file (Python_08.codons-6frames.nt), the translations to a second file (Python_08.translated.aa), and the single longest translated peptide to a third file (Python_08.translated-longest.aa).
+#### 7. Find the longest peptide sequence (M-->Stop) of all the six translated reading frames for a single sequence. Do this for all the sequence records. For each sequence, print out in FASTA format the six frames of codons to one file (Python_08.codons-6frames.nt), the translations to a second file (Python_08.translated.aa), and the single longest translated peptide to a third file (Python_08.translated-longest.aa).
 
 
 ```python
@@ -291,7 +291,7 @@ outfh2.close()
 
 ```
 
-####8. Finally determine which subset of codons produced the longest peptide for each sequence record. Print this to a fourth file in FASTA format (Python_08.orf-longest.nt).
+#### 8. Finally determine which subset of codons produced the longest peptide for each sequence record. Print this to a fourth file in FASTA format (Python_08.orf-longest.nt).
 
 
 ```python
