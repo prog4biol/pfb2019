@@ -16,7 +16,7 @@ Find SNPs responsible for cancer drug resistance and reformat associated VCF fil
 
 # 
 
-#2. Annotate genes, search and display in browser
+# 2. Annotate genes, search and display in browser
 
 Annotate protein coding genes with predicted functions from GO, Pfam etc
 
