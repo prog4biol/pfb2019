@@ -170,6 +170,12 @@ seqs['geneA']['T'] = 3
 seqs['geneA']['G'] = 3
 seqs['geneA']['C'] = 1
 
+seqs['geneB']['A'] = 1
+seqs['geneB']['T'] = 5
+seqs['geneB']['G'] = 2
+seqs['geneB']['C'] = 2
+``` 
+
 for question #2 we can send the seq_dict to a function and do the nucleotide counting there. I called the function output_gc_content
 
 Main
@@ -209,11 +215,6 @@ def output_gc_content(seq_dict):
     print(gene, "\t", nucl_dict[gene]['A'],"\t", nucl_dict[gene]['T'],"\t", nucl_dict[gene]['G'],"\t", nucl_dict[gene]['C'])
 ```
 
-seqs['geneB']['A'] = 1
-seqs['geneB']['T'] = 5
-seqs['geneB']['G'] = 2
-seqs['geneB']['C'] = 2
-``` 
 
 2. **Write a script that takes a multi-FASTA file [Python_08.fasta](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/Python_08.fasta) from user input and breaks each sequence into codons (every three nucleotides is a codon) in just the first reading frame. Your output should look like this** 
 ```
