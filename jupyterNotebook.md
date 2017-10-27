@@ -38,5 +38,24 @@ Let's click on the projects folder and make a new folder in there. Click on the 
 
 If you click on the final_project directory, you'll see a new empty directory.
 
+Now we can make a new python3 notebook.
 
 
+
+![blank](images/blanknotebook.tiff)
+
+You'll see a blue-bounded box. This is called a 'cell'. If you select the cell it changes to green
+
+You can start typing python. Return lets you type in several lines of python at once. Option-return runs each box as you finish typing commands. 
+
+![lines](images/lines.tiff)
+
+You can also use the play and stop and rerun buttons.
+
+Let's change a to be a string and rerun the `print(a)` code with the play button. Note line number change and the output has changed too!
+
+![print](images/print.tiff)
+
+## Changing formatting
+
+You can add headers by changing the format of a box to Markdown
