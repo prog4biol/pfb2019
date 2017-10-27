@@ -66,6 +66,10 @@ When you have finished typing you can run the cell to convert to formatted text
 
 ![text](images/text.tiff)
 
+## Rename your notebook
+
+Don't forget to rename your notebook to something more descriptive. Click on the 'Untitled' at the top. You can save changes by clicking on the floppy disk icon.
+
 ## Edit menu
 
 There are tons of useful features here, including deleting cells, moving them up or down in the list and so on.
