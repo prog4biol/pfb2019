@@ -160,7 +160,6 @@ __Don't forget to use a small test data set when you are testing your code. Make
 
 1. **Take a mulit-FASTA [Python_08.fasta](https://raw.githubusercontent.com/srobb1/pfb2017/master/files/Python_08.fasta) file from user input and calculate the nucleotide composition for each sequence. Use a datastructure to keep count. Print out each sequence name and its compostion in this format `seqName\tA_count\tT_count\tG_count\C_count`**
 
-so I lied, This question isn't done yet.
 
 Here is a structure of a handy datastructure to store this information
 ```
@@ -171,6 +170,44 @@ seqs['geneA']['T'] = 3
 seqs['geneA']['G'] = 3
 seqs['geneA']['C'] = 1
 
+for question #2 we can send the seq_dict to a function and do the nucleotide counting there. I called the function output_gc_content
+
+Main
+```python
+output_gc_content(seq_dict)
+```
+
+Functions
+```python
+def output_gc_content(seq_dict):
+  #print a header for our output
+  print("gene_id\tA\tT\tG\tC")
+  #start a dictionary 
+  nucl_dict = {}
+  #loop through the keys in the sequence dictionary
+  for id in seq_dict:
+    #get the DNA sequence out of the dictionary
+    sequence = seq_dict[id]
+    #split the DNA string into a list
+    sequence_list = list(sequence)
+    #initialize the inner dictionary
+    nucl_counts = {}
+    #loop through all of the nucleotides
+    for nucl in sequence_list:
+      #if the nucleotide is already in the dictionary add one
+      if nucl in nucl_counts:
+        nucl_counts[nucl] += 1
+      #if the nucleotide isn't in the dictionary add the key and set it equal to 1
+      else:
+        nucl_counts[nucl] = 1
+        #make the outer key in the dictionary
+    nucl_dict[id] = {}
+    #Assign the inner dictionary to the key we just initialized
+    nucl_dict[id] = nucl_counts
+  #lopp through the genes in the dictionary and print out the nucleotide counts
+  for gene in nucl_dict:
+    print(gene, "\t", nucl_dict[gene]['A'],"\t", nucl_dict[gene]['T'],"\t", nucl_dict[gene]['G'],"\t", nucl_dict[gene]['C'])
+```
 
 seqs['geneB']['A'] = 1
 seqs['geneB']['T'] = 5
