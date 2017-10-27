@@ -26,3 +26,17 @@ You'll see a lot of messages appear in the screen and a broswer window will open
 
 
 
+![start screen](images/jupyter.start.png)
+
+
+
+You can start a new project and make other files with the New drop down menu
+
+Let's click on the projects folder and make a new folder in there. Click on the box next to the new 'Untitled Folder' and select rename above to chance the name to final_project. 
+
+![rename](images/rename.tiff)
+
+If you click on the final_project directory, you'll see a new empty directory.
+
+
+
