@@ -56,6 +56,36 @@ Let's change a to be a string and rerun the `print(a)` code with the play button
 
 ![print](images/print.tiff)
 
-## Changing formatting
+## Adding text, changing formatting
 
-You can add headers by changing the format of a box to Markdown
+You can add headers and other text, that will for example explain what you are doing, by changing the format of a box to Markdown.
+
+![markdown](images/markdown.tiff)
+
+When you have finished typing you can run the cell to convert to formatted text
+
+![text](images/text.tiff)
+
+## Edit menu
+
+There are tons of useful features here, including deleting cells, moving them up or down in the list and so on.
+
+
+
+## Cell menu
+
+Run cells or groups of cells. Change cell type
+
+
+
+## Kernel menu 
+
+Controls to start, stop suspend the kernel running your python
+
+
+
+## Git and JN
+
+You will definitely want to commit and push before you make edits to your notebook. If you make a mess, you'll be able to roll back the changes. Great for collaborating with your project team! 
+
+github know how to render .ipynb files (the format for these notebooks) so you can display the files nicely on the github website.
