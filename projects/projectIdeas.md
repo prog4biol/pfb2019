@@ -16,7 +16,7 @@ Find SNPs responsible for cancer drug resistance and reformat associated VCF fil
 
 # 
 
-#2. Annotate genes, search and display in browser
+# 2. Annotate genes, search and display in browser
 
 Annotate protein coding genes with predicted functions from GO, Pfam etc
 
@@ -70,4 +70,16 @@ Look for conserved motifs near (up/downstream of or under peaks), particularly a
 ## Students
 
 
+
+# 6. Text-based RPG
+
+Collaboratively write a classic-style, text-based role-playing game (RPG).
+
+The user will interact with the game via the game prompt to perform actions and achieve goals for points. Such games usually require decision making by enumerative options provided by the game. The outcomes of some such decisions, (*e.g.*, `A troll approaches you; do you [attack], [offer] him a drink, or [walk] away?`) may not always be deterministic.
+
+Project members will be responsible for planning the storyline and writing the enumerative context-based decision tree to navigate that storyline.
+
+## TA
+
+## Sudents
 
