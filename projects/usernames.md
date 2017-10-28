@@ -1,10 +1,20 @@
-# Log onto remote machines
+# TOC
+
+1. [Log onto remote machines](#log-onto-remote-machines)
+2. [Login user names](#log-in-user-names)
+3. [Starting jupyter-notebooks](#starting-jupyter-notebooks)
+
+## Log onto remote machines
+
+Log in using your ssh key (permission 0400). Find your usr name below. Replace 'xyz' with your group name.
 
 `ssh -i key.pem usr@xyz.programmingforbiology.org`
 
+To create a tunnel for your browser to diaplay the jupyter notebook add the `-L` switch. Use the remote port designated to you in the table below, followed by ":localhost:", and any local port on your machine. The local port can be the same as your remote port.  
+
 `ssh -L remote_port:localhost:local_port  -i key.pem usr@xyz.programmingforbiology.org`
 
-# Log in user names
+## Login user names
 
 Name | username | remote_port |
 -----|-----------|-------------|
@@ -37,6 +47,6 @@ Bryan Ngo	| bngo | 11122
  
 ## starting jupyter-notebooks
 
-`jupyter-notebooks --port=remote_port`
+`jupyter-notebook --port=remote_port`
 
 paste the url that is printed out when you run the above command into your browser
