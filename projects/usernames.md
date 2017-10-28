@@ -2,9 +2,9 @@
 
 Name | username |
 -----|-----------|
-Dr. Jessen  Bredeson	| jbres
+Mr. Jessen  Bredeson	| jbres
 Dr. Michael S Campbell |	mcamp
-Dr. Xengie  Doan |	xdoan
+Ms. Xengie  Doan |	xdoan
 Mr. Lukas  Kuderna |	lkude
 Dr. Demitri  Muna |	dmuna
 Dr. Simon E Prochnik	| sproc
