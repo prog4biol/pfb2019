@@ -17,14 +17,14 @@ sudo vi /etc/fstab
 sudo umount /data
 sudo mount /data
 
+sudo groupadd project
 
-
-mkdir /data/project
+sudo mkdir /data/project
 sudo chgrp -R project /data/project
 sudo chmod g+wrx /data/project/
 
 
-sudo groupadd project
+
 
 echo 'PASTE PUB KEY HERE' > PFB2017_Projects.pub 
 
@@ -42,3 +42,12 @@ for i in `cat users.txt`
     echo 'done'
 done
 
+
+## Install anaconda
+curl -OL https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
+sudo sh Anaconda3-5.0.1-Linux-x86_64.sh
+## /usr/local/anaconda
+
+## edit /etc/bash.bashrc
+PATH=/usr/local/anaconda/bin:$PATH
+export PATH
