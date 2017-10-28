@@ -82,17 +82,27 @@ done
 curl -OL https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
 sudo sh Anaconda3-5.0.1-Linux-x86_64.sh
 ```
-## Directory to install anaconda
+### Directory to install anaconda
 `/usr/local/anaconda`
 
-## edit /etc/bash.bashrc
+### edit /etc/bash.bashrc
 ```
 PATH=/usr/local/anaconda/bin:$PATH
 export PATH
 
 LIBRARY_PATH=/usr/local/anaconda/lib:$LIBRARY_PATH
 export LIBRARY_PATH
+
+LD_LIBRARY_PATH=/usr/local/anaconda/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH
 ```
+
+### Allow users to use conda install
+```
+sudo chgrp -R project /usr/local/anaconda
+sudo chmod -R g+w /usr/local/anaconda
+```
+
 ## install emacs
 `sudo apt-get install emacs`
 
@@ -104,4 +114,3 @@ export LIBRARY_PATH
 `sudo apt-get install apache2`
 `sudo systemctl restart apache2`
 
-## install 
