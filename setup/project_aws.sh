@@ -1,9 +1,6 @@
 
 # Format and mount drive
 
-
-
-
 ## find the device name
 ```
 lsblk
