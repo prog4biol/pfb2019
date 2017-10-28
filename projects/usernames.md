@@ -35,3 +35,8 @@ Nick | nick | 11120
 Xuan zhang | 	xzhan | 11121
 Bryan Ngo	| bngo | 11122
  
+## starting jupyter-notebooks
+
+`jupyter-notebooks --port=remote_port`
+
+paste the url that is printed out when you run the above command into your browser
