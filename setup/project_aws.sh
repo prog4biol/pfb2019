@@ -1,3 +1,6 @@
+
+# Format and mount drive
+
 lsblk
 ## find the device name
 device='/dev/xvdb'
@@ -8,7 +11,7 @@ sudo mkdir /data
 sudo mount $device /data
 sudo cp /etc/fstab /etc/fstabBAK
 
-# find the UUID for $device
+## find the UUID for $device
 sudo file -s $device
 sudo vi /etc/fstab
 
@@ -24,9 +27,11 @@ sudo chgrp -R project /data/project
 sudo chmod g+wrx /data/project/
 
 
-
+# Add users
 
 echo 'PASTE PUB KEY HERE' > PFB2017_Projects.pub 
+
+
 
 ## add user names to file called users.txt
 
@@ -43,11 +48,17 @@ for i in `cat users.txt`
 done
 
 
-## Install anaconda
+## Install anaconda from anaconda.org
+```
 curl -OL https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
 sudo sh Anaconda3-5.0.1-Linux-x86_64.sh
+```
 ## /usr/local/anaconda
 
 ## edit /etc/bash.bashrc
+```
 PATH=/usr/local/anaconda/bin:$PATH
 export PATH
+```
+## install emacs
+`sudo apt-get install emacs`
