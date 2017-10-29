@@ -107,7 +107,17 @@ sudo chmod -R g+w /usr/local/anaconda
 `sudo apt-get make`
 `sudo apt-get make-doc`
 
+## install gcc and fortran
+`sudo apt-get install gcc`
+`sudo apt-get install gfortran`
+
 ## install apache
 `sudo apt-get install apache2`
 `sudo systemctl restart apache2`
+
+## install java 8
+`sudo apt-get install default-jdk`
+
+## install R/Rscript
+`sudo apt-get install r-base`
 
