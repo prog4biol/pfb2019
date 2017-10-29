@@ -241,13 +241,16 @@ __Table of Contents__
             * [BioPython Subtopic 1](#biopython-subtopic-1)
             * [BioPython Subtopic 2](#biopython-subtopic-2)
    * [Bioinformatic Analysis and Tools](#bioinformatic-analysis-and-tools)
-        * [Bioinformatic Analysis and Tools Overview](#bioinformatic-analysis-and-tools-overview)
-        * [Sequence Search and Alignments](#sequence-search-and-alignments)
+        * [Bioinformatic Analysis and Tools Overview Part I](#bioinformatic-analysis-and-tools-overview)
+        * [Bioinformatic Analysis and Tools Overview Part II](https://github.com/srobb1/pfb2017/blob/master/pdfs/PfB%20GMOD%20lecture.pdf)
+        * [NGS](#ngs)
+        * [Sequence Similarity and Searching Part I](https://github.com/srobb1/pfb2017/blob/master/pdfs/Pearson_SimilaritySearching-1_102317.pdf)
+        * [Sequence Similarity and Searching Part II](https://github.com/srobb1/pfb2017/blob/master/pdfs/Pearson_SimilaritySearching-2_102317.pdf)
         * [Assembly](#assembly)
            * [DNA](#dna)
            * [RNA](#rna)
-        * [NGS](#ngs)
-        * [Ontology](#ontology)
+        * [Ontology](https://github.com/srobb1/pfb2017/blob/master/pdfs/Ontologies4biology.pdf)
+        * [Structural Variation](#ontology)
 
 ***
 
