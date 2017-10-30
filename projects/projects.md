@@ -33,7 +33,7 @@ The Jbrownies explored reference guided transcriptome assembly for an adorable l
 - Jimmy Miller
 - Nathalia Graf-Grachet
 
-GITHUB REPO:[scripts and notebooks](../jbrownies)  
+GITHUB REPO:[scripts and notebooks](https://github.com/mscampbell/pfb2017/tree/master/projects/Jbrownies)  
 NOTEBOOK:   
 PRESENTATION:  
 
