@@ -8,7 +8,7 @@ Find SNPs responsible for cancer drug resistance and reformat associated VCF fil
 - SNPeff
 - plot distribution of mutation effects
 
-## TA
+## TA Jessen or Lukas
 
 ## Students
 
@@ -24,7 +24,7 @@ Display genome on jbrowse and enable searching for terms
 
 
 
-## TA
+## TA Mike
 
 ## students
 
@@ -38,7 +38,7 @@ Extra: Add multiple analysis and alignment tools and steps
 
 
 
-## TA
+## TA Xengie
 
 ## Students
 
@@ -51,7 +51,7 @@ Analysis of segments of genes that are likely introgressed from a closely relate
 - whole genome alignments and SNP calling to find long segments that do not have the expected alleles of the rest of the population. Use this as a diagnostic for introgressed segments.
 - look for differences in allele frequency
 
-## TA 
+## TA Lukas or Jessen
 
 ## Students
 
@@ -65,9 +65,21 @@ Count numbers of peaks that overlap and don't
 
 Look for conserved motifs near (up/downstream of or under peaks), particularly around peaks that might have different signals in different samples (differesntial expression)
 
-## TA
+## TA Demitri
 
 ## Students
 
 
+
+# 6. Text-based RPG
+
+Collaboratively write a classic-style, text-based role-playing game (RPG).
+
+The user will interact with the game via the game prompt to perform actions and achieve goals for points. Such games usually require decision making by enumerative options provided by the game. The outcomes of some such decisions, (*e.g.*, `A troll approaches you; do you [attack], [offer] him a drink, or [walk] away?`) may not always be deterministic.
+
+Project members will be responsible for planning the storyline and writing the enumerative context-based decision tree to navigate that storyline.
+
+## TA floating TA/Sofia/Simon
+
+## Sudents
 
