@@ -243,7 +243,7 @@ __Table of Contents__
         * [NGS](https://github.com/srobb1/pfb2017/blob/master/pdfs/Campbell_NGS.pdf)
         * [Sequence Similarity and Searching Part I](https://github.com/srobb1/pfb2017/blob/master/pdfs/Pearson_SimilaritySearching-1_102317.pdf)
         * [Sequence Similarity and Searching Part II](https://github.com/srobb1/pfb2017/blob/master/pdfs/Pearson_SimilaritySearching-2_102317.pdf)
-        * [Assembly]
+        * Assembly
            * [DNA](https://github.com/srobb1/pfb2017/blob/master/pdfs/Triant_GenomeAssembly_CSHL-short_2017.pdf)
            * [RNA](https://github.com/srobb1/pfb2017/blob/master/pdfs/rnaseq_slides_PFB2017.pdf)
         * [Ontology](https://github.com/srobb1/pfb2017/blob/master/pdfs/Ontologies4biology.pdf)
