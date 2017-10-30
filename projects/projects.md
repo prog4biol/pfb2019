@@ -20,15 +20,18 @@ PRESENTATION:
 ### Description
 
 ### Group Members
--
--
--
+- Bryan Ngo
+- Xuan Zhang
 
 ### TA
+Xengie Doan
 
-GITHUB REPO:  
-NOTEBOOK:    
-PRESENTATION:  
+GITHUB REPO:  https://github.com/github.com/xdoan/rnaseq
+NOTEBOOK:    https://github.com/github.com/xdoan/rnaseq/STAR_DESeq, https://github.com/github.com/xdoan/rnaseq/kallisto_sleuth
+PRESENTATION:  https://github.com/xdoan/rnaseq/blob/master/STAR_DESeq/STAR_HTSeq_DEseq_pipeline.ipynb, https://github.com/xdoan/rnaseq/blob/master/Kallisto_Presentation.ipynb
+
+
+
 
 ## JBROWNIES
 ### Description
