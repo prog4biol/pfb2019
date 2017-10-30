@@ -18,11 +18,11 @@ PRESENTATION:
 ### Description
 
 ### Group Members
--
--
--
+- Bryan Ngo
+- Xuan Zhang
+- 
 
-GITHUB REPO:  
+GITHUB REPO:  https://github.com/github.com/xdoan/rnaseq
 NOTEBOOK:    
 PRESENTATION:  
 
