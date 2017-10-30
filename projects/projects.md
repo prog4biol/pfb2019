@@ -3,6 +3,24 @@
 
 ## BORATK
 ### Description
+A pyhton wrapper around bwa mem, samtools, picardtools and GATK HaplotypeCaller - this pipeline gets the user from raw reads to raw variants.Aditionally, the students also started to look into variant filtering and QC. The students also got to familiarize themselves with Jupyter notebooks and external libraries such as Matplotlib
+
+### Group Members
+- Mr. Agneesh  Barua
+- Dr. Chingiz  Underbayev
+- Mr. Zachary A Kemmerer
+- Dr. Guillaume J Bauchet
+- Dr. Jason M Singer
+
+### TA
+-Mr. Lukas Kuderna
+
+GITHUB REPO:  https://github.com/underbais/pfb2017_gatkteam/tree/master/e_notebook
+
+
+
+## ELEVEN
+### Description
 
 ### Group Members
 -
@@ -12,34 +30,8 @@
 ### TA
 
 GITHUB REPO:  
-NOTEBOOK:   
-PRESENTATION:  
-
-
-## ELEVEN
-### Description
-Python wrapper to run RNAseq on multiple samples using STAR & DESeq and kallisto and sleuth.
-Compare two pipelines.
-### Group Members
-- Bryan Ngo
-- Xuan Zhang
-
-### TA
-Xengie Doan
-
-GITHUB REPO:  https://github.com/github.com/xdoan/rnaseq  
-
 NOTEBOOK:    
- - https://github.com/github.com/xdoan/rnaseq/STAR_DESeq,
- - https://github.com/github.com/xdoan/rnaseq/kallisto_sleuth 
- 
- 
 PRESENTATION:  
-- https://github.com/xdoan/rnaseq/blob/master/STAR_DESeq/STAR_HTSeq_DEseq_pipeline.ipynb
-- https://github.com/xdoan/rnaseq/blob/master/Kallisto_Presentation.ipynb
-
-
-
 
 ## JBROWNIES
 ### Description
