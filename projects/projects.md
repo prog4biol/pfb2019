@@ -18,7 +18,8 @@ PRESENTATION:
 
 ## ELEVEN
 ### Description
-
+Python wrapper to run RNAseq on multiple samples using STAR & DESeq and kallisto and sleuth.
+Compare two pipelines.
 ### Group Members
 - Bryan Ngo
 - Xuan Zhang
