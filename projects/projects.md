@@ -13,7 +13,7 @@ A pyhton wrapper around bwa mem, samtools, picardtools and GATK HaplotypeCaller 
 - Dr. Jason M Singer
 
 ### TA
--Mr. Lukas Kuderna
+Mr. Lukas Kuderna
 
 GITHUB REPO:  https://github.com/underbais/pfb2017_gatkteam/tree/master/e_notebook
 
@@ -29,7 +29,7 @@ Python wrapper to run RNAseq on multiple samples using STAR & DESeq and kallisto
 - Xuan Zhang
 
 ### TA
-- Xengie Doan
+Xengie Doan
 
 GITHUB REPO: [https://github.com/github.com/xdoan/rnaseq](https://github.com/github.com/xdoan/rnaseq)
 
@@ -61,7 +61,7 @@ This project strengthened and broadened the students' Python programming skills 
 - Mr. William (Jared) Brewer
 
 ### TA
-- Mr. Jessen V Bredeson
+Mr. Jessen V Bredeson
 
 GITHUB REPO: https://github.com/bredeson/PnP
 PRESENTATION: 
