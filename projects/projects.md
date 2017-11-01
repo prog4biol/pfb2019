@@ -3,7 +3,7 @@
 
 ## BORATK
 ### Description
-A pyhton wrapper around bwa mem, samtools, picardtools and GATK HaplotypeCaller - this pipeline gets the user from raw reads to raw variants.Aditionally, the students also started to look into variant filtering and QC. The students also got to familiarize themselves with Jupyter notebooks and external libraries such as Matplotlib
+A python wrapper around bwa mem, samtools, picardtools and GATK HaplotypeCaller - this pipeline gets the user from raw reads to raw variants.Aditionally, the students also started to look into variant filtering and QC. The students also got to familiarize themselves with Jupyter notebooks and external libraries such as Matplotlib
 
 ### Group Members
 - Mr. Agneesh  Barua
