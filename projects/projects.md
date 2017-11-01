@@ -22,16 +22,16 @@ GITHUB REPO:  https://github.com/underbais/pfb2017_gatkteam/tree/master/e_notebo
 ## ELEVEN
 ### Description
 
+Python wrapper to run RNAseq on multiple samples using STAR & DESeq and kallisto and sleuth. Compare two pipelines.
+
 ### Group Members
--
--
--
+- Bryan Ngo
+- Xuan Zhang
 
 ### TA
+- Xengie Doan
 
-GITHUB REPO:  
-NOTEBOOK:    
-PRESENTATION:  
+GITHUB REPO: [https://github.com/github.com/xdoan/rnaseq](https://github.com/github.com/xdoan/rnaseq)
 
 ## JBROWNIES
 ### Description
