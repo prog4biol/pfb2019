@@ -13,7 +13,9 @@ A python wrapper around bwa mem, samtools, picardtools and GATK HaplotypeCaller 
 - Dr. Jason M Singer
 
 ### TA
+
 Mr. Lukas Kuderna
+
 
 GITHUB REPO:  https://github.com/underbais/pfb2017_gatkteam/tree/master/e_notebook
 
@@ -36,6 +38,7 @@ GITHUB REPO: [https://github.com/github.com/xdoan/rnaseq](https://github.com/git
 ## JBROWNIES
 ### Description
 The Jbrownies explored reference guided transcriptome assembly for an adorable little fungal genome. They annotated the genome with maker and loaded the results in to a Jbrowse genome browser.
+
 ### Group Members
 - Jimmy Miller
 - Nathalia Graf-Grachet
@@ -43,7 +46,10 @@ The Jbrownies explored reference guided transcriptome assembly for an adorable l
 ### TA
 Michael Campbell
 
+
 GITHUB REPO:[scripts and notebooks](https://github.com/mscampbell/pfb2017/tree/master/projects/Jbrownies)  
+
+
 
 
 ## PnP
@@ -64,7 +70,7 @@ This project strengthened and broadened the students' Python programming skills 
 Mr. Jessen V Bredeson
 
 GITHUB REPO: https://github.com/bredeson/PnP
-PRESENTATION: 
+
 
 
 ## WOMBATS
