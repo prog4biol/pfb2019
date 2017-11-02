@@ -3,7 +3,7 @@
 
 ## BORATK
 ### Description
-A pyhton wrapper around bwa mem, samtools, picardtools and GATK HaplotypeCaller - this pipeline gets the user from raw reads to raw variants.Aditionally, the students also started to look into variant filtering and QC. The students also got to familiarize themselves with Jupyter notebooks and external libraries such as Matplotlib
+A python wrapper around bwa mem, samtools, picardtools and GATK HaplotypeCaller - this pipeline gets the user from raw reads to raw variants.Aditionally, the students also started to look into variant filtering and QC. The students also got to familiarize themselves with Jupyter notebooks and external libraries such as Matplotlib
 
 ### Group Members
 - Mr. Agneesh  Barua
@@ -13,7 +13,9 @@ A pyhton wrapper around bwa mem, samtools, picardtools and GATK HaplotypeCaller 
 - Dr. Jason M Singer
 
 ### TA
-- Mr. Lukas Kuderna
+
+Mr. Lukas Kuderna
+
 
 GITHUB REPO:  https://github.com/underbais/pfb2017_gatkteam/tree/master/e_notebook
 
@@ -36,12 +38,14 @@ GITHUB REPO: [https://github.com/github.com/xdoan/rnaseq](https://github.com/git
 ## JBROWNIES
 ### Description
 The Jbrownies explored reference guided transcriptome assembly for an adorable little fungal genome. They annotated the genome with maker and loaded the results in to a Jbrowse genome browser.
+
 ### Group Members
 - Jimmy Miller
 - Nathalia Graf-Grachet
 
 ### TA
 Michael Campbell
+
 
 GITHUB REPO:[scripts and notebooks](https://github.com/mscampbell/pfb2017/tree/master/projects/Jbrownies)  
 
@@ -63,7 +67,7 @@ This project strengthened and broadened the students' Python programming skills 
 - Mr. William (Jared) Brewer
 
 ### TA
-- Mr. Jessen V Bredeson
+Mr. Jessen V Bredeson
 
 GITHUB REPO: https://github.com/bredeson/PnP
 
