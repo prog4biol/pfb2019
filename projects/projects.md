@@ -75,14 +75,16 @@ GITHUB REPO: https://github.com/bredeson/PnP
 
 ## WOMBATS
 ### Description
+For this project, several python scripts were developed to parse through peak and gene files outputted from ChIP-Seq, DAP-Seq, and DEseq analysis of RNA-Seq data. The files analyzed included bed, gff, fasta, and excel files. The python scripts created classes or utilized the pandas python package to enhance ease of use.  In addition, the scripts incorporated bedtools and the Python Bio.motifs package to refine peak and gene lists.
 
 ### Group Members
--
--
--
+- Sabriya Syed
+- Ying Sun
+- Nick Gladman
 
 ### TA
+- Dr Demitri Muna
 
-GITHUB REPO:  
-NOTEBOOK:   
+GITHUB REPO: <https://github.com/demitri/peak-parser>
+NOTEBOOK: 
 PRESENTATION:  
