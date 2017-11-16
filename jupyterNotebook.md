@@ -93,3 +93,25 @@ Controls to start, stop suspend the kernel running your python
 You will definitely want to commit and push before you make edits to your notebook. If you make a mess, you'll be able to roll back the changes. Great for collaborating with your project team! 
 
 github know how to render .ipynb files (the format for these notebooks) so you can display the files nicely on the github website.
+
+## File and command completion
+
+Tab completes filenames and commands. Useful for opening local files if you know their name. You can type this `file = open('<TAB>` and see a list of files.
+
+## magic commands
+
+%run  
+%timeit  
+
+previous output is `_`, also `__` and `___`
+output 5 is `_5`  
+ 
+
+
+## Help
+
+`len?`  
+
+more help  
+
+`len??`  
