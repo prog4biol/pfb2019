@@ -4692,6 +4692,7 @@ Here are some of the most common and useful modules, along with their methods an
 | os.path.getsize(path)  | returns path (file) size in bytes or error |
 | os.path.isfile(path)   | does the path point to a file?           |
 | os.path.isdir(path)    | does the path point to a directory?      |
+| os.path.splitext(path) | splits before and after the file extension (e.g. '.txt') |
 
 
 
@@ -4777,6 +4778,16 @@ lines = stdout.splitlines()
 >>> lines[1]
 '-rw-r--r--  1 amanda  staff     69 Jun 14 17:41 data.cfg'
 ```
+
+##### Check the exit status of a command
+
+To run a command and check the exit status (really to check the exit status was ok or zero), use 
+
+```python
+oops = subprocess.check_call(['ls', '-l'])
+```
+
+
 
 
 
