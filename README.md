@@ -4779,6 +4779,8 @@ lines = stdout.splitlines()
 '-rw-r--r--  1 amanda  staff     69 Jun 14 17:41 data.cfg'
 ```
 
+
+
 ##### Check the exit status of a command
 
 To run a command and check the exit status (really to check the exit status was ok or zero), use 
@@ -4787,7 +4789,15 @@ To run a command and check the exit status (really to check the exit status was 
 oops = subprocess.check_call(['ls', '-l'])
 ```
 
+##### Redirect stdout to a file
 
+You can't write `ls -l > listing.txt`  to redirect stdout in the subprocess method, so use this instead
+
+```python
+ tmp_file = 'listing.txt'
+ with open(tmp_file,'w') as ofh:
+     oops = subprocess.check_call(['ls', '-l'], stdout=ofh )
+```
 
 
 
