@@ -1397,10 +1397,11 @@ The user also supplies all the data the script needs on the command line so the 
 
 You have an identifier in your code called `data`. Does it represent a string or a list or a dictionary? Python has a couple of functions that help you figure this out.
 
-| Function     | Description                              |
-| ------------ | ---------------------------------------- |
-| `type(data)` | tells you which class your object belongs to |
+| Function     | Description                                           |
+| ------------ | ----------------------------------------------------- |
+| `type(data)` | tells you which class your object belongs to          |
 | `dir(data)`  | tells you which methods are available for your object |
+| `id(data)`   | tells you the unique object id                        |
 
 We'll cover `dir()` in more detail later
 
@@ -4714,7 +4715,7 @@ updated module for running command lines from python scripts
 
 ```python
 import subprocess
-run(["ls","-l"])  # same as running ls -l on the command line
+subprocess.run(["ls","-l"])  # same as running ls -l on the command line
 ```
 
 more complex than `os.system()`. You need to specify where input and output go. Let's look at this in some more detail. 
@@ -4732,7 +4733,7 @@ import subprocess
 output = subprocess.check_output('ls -l | grep amanda', shell = True)
 ```
 
-This is better than alternatives with `subprocess.run()`.
+This is better than alternatives with `subprocess.run()`. This is equivalent to the unix backtick quoted string.
 
 `output` contains a bytes object (more or less a string of ASCII character encodings)
 
@@ -4787,6 +4788,8 @@ To run a command and check the exit status (really to check the exit status was 
 
 ```python
 oops = subprocess.check_call(['ls', '-l'])
+# or, simpler...
+oops = subprocess.check_call('ls -l', shell=True)
 ```
 
 ##### Redirect stdout to a file
