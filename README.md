@@ -1,4 +1,4 @@
-Programming For Biology 2017
+Programming For Biology 2018
 ============================
 
 
@@ -236,22 +236,22 @@ __Table of Contents__
             * [Creating Custom Exceptions](#creating-custom-exceptions)
         * [Link to Python 8 Problem Set](#link-to-python-8-problem-set)
    * [Python 9](#python-9)
-        * [BioPython](https://github.com/srobb1/pfb2017/blob/master/biopython.md)
+        * [BioPython](https://github.com/prog4biol/pfb2018/blob/master/biopython.md)
    * [Bioinformatic Analysis and Tools](#bioinformatic-analysis-and-tools)
-        * [Bioinformatic Analysis and Tools Overview Part I](https://github.com/srobb1/pfb2017/blob/master/bioinfPipesLectureSimon.md)
-        * [Bioinformatic Analysis and Tools Overview Part II](https://github.com/srobb1/pfb2017/blob/master/pdfs/PfB%20GMOD%20lecture.pdf)
-        * [NGS](https://github.com/srobb1/pfb2017/blob/master/pdfs/Campbell_NGS.pdf)
-        * [Sequence Similarity and Searching Part I](https://github.com/srobb1/pfb2017/blob/master/pdfs/Pearson_SimilaritySearching-1_102317.pdf)
-        * [Sequence Similarity and Searching Part II](https://github.com/srobb1/pfb2017/blob/master/pdfs/Pearson_SimilaritySearching-2_102317.pdf)
+        * [Bioinformatic Analysis and Tools Overview Part I](https://github.com/prog4biol/pfb2018/blob/master/bioinfPipesLectureSimon.md)
+        * [Bioinformatic Analysis and Tools Overview Part II](https://github.com/prog4biol/pfb2018/blob/master/pdfs/PfB%20GMOD%20lecture.pdf)
+        * [NGS](https://github.com/prog4biol/pfb2018/blob/master/pdfs/Campbell_NGS.pdf)
+        * [Sequence Similarity and Searching Part I](https://github.com/prog4biol/pfb2018/blob/master/pdfs/Pearson_SimilaritySearching-1_102317.pdf)
+        * [Sequence Similarity and Searching Part II](https://github.com/prog4biol/pfb2018/blob/master/pdfs/Pearson_SimilaritySearching-2_102317.pdf)
         * Assembly
-           * [DNA](https://github.com/srobb1/pfb2017/blob/master/pdfs/Triant_GenomeAssembly_CSHL-short_2017.pdf)
-           * [RNA](https://github.com/srobb1/pfb2017/blob/master/pdfs/rnaseq_slides_PFB2017.pdf)
-        * [Ontology](https://github.com/srobb1/pfb2017/blob/master/pdfs/Ontologies4biology.pdf)
-        * [Structural Variation](https://github.com/srobb1/pfb2017/blob/master/pdfs/csh_sv_2017.pdf)
+           * [DNA](https://github.com/prog4biol/pfb2018/blob/master/pdfs/Triant_GenomeAssembly_CSHL-short_2017.pdf)
+           * [RNA](https://github.com/prog4biol/pfb2018/blob/master/pdfs/rnaseq_slides_PFB2017.pdf)
+        * [Ontology](https://github.com/prog4biol/pfb2018/blob/master/pdfs/Ontologies4biology.pdf)
+        * [Structural Variation](https://github.com/prog4biol/pfb2018/blob/master/pdfs/csh_sv_2017.pdf)
 
 ***
 
-# Programming For Biology 2017
+# Programming For Biology 2018
 
 __Instructors__  
 Simon Prochnik  
@@ -323,7 +323,7 @@ _Your password:_ cshl
 
 To bring up the command-line, use the Finder to navigate to _Applications->Utilities_ and double-click on the _Terminal_ application. This will bring up a window like the following:
 
-![OSX Terminal](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/terminal_screenshot.png)
+![OSX Terminal](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/terminal_screenshot.png)
 
 
 
@@ -864,7 +864,7 @@ Here are a few more advanced Unix commands that are very useful and when you hav
 ---
 
 
-### [Link to Unix 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/problemsets/Unix_01_problemset.md)
+### [Link to Unix 1 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/problemsets/Unix_01_problemset.md)
 
 ---
 # Unix 2
@@ -883,11 +883,11 @@ The way you use nano to create a file is simply by typing the command _nano_ fol
 
 This is what you will see:
 
-![Create a new file with nano.](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/nano_new.png)  
+![Create a new file with nano.](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/nano_new.png)  
 
 
 
-![Modified and not saved. In the top right corner it says "Modified"](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/nano-modifided.png)  
+![Modified and not saved. In the top right corner it says "Modified"](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/nano-modifided.png)  
 
 
 
@@ -905,7 +905,7 @@ Keyboard commands are the only way to interact with the editor. You cannot use y
 
 Find more commands by using `control g`:  
 
-![The help menu displays a listing of useful commands.](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/nano-help.png)  
+![The help menu displays a listing of useful commands.](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/nano-help.png)  
 
 The Meta key is \<esc\>. To use the Meta+key, hit \<esc\>, release, then hit the following key
 
@@ -970,27 +970,27 @@ Follow Steps 1 and 2 to create the remote repository. Follow Step 3 to create yo
 
 1. Navigate to GitHub --> Create Account / Log In --> Go To Repositories --> Click 'New'  
 
-  ![To create a new repository click the 'New' Button in the top right corner.](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoButton.png)  
+  ![To create a new repository click the 'New' Button in the top right corner.](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/github-newRepoButton.png)  
 
-2. Add a name (i.e., PFB2017_problemsets) and a description (i.e., Solutions for PFB2017 Problem Sets) and click "Create Repository"  
+2. Add a name (i.e., PFB2018_problemsets) and a description (i.e., Solutions for PFB2017 Problem Sets) and click "Create Repository"  
 
-  ![Fill in the form and click the 'Create Repository Button'](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoForm.png)  
+  ![Fill in the form and click the 'Create Repository Button'](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/github-newRepoForm.png)  
 
 3. Create a directory on your computer and follow the instructions provided.  
 
-  ![Create a directory on your computer and follow these instructions.](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-newRepoInstructions.png)  
+  ![Create a directory on your computer and follow these instructions.](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/github-newRepoInstructions.png)  
 
 
    - Open your terminal and navigate to the location you want to put a directory for your problem sets
-   - Create a new directory directory (i.e., PFB2017_problemsets)
+   - Create a new directory directory (i.e., PFB2018_problemsets)
    - Follow the instructions provided when you created your repository. These are my instructions, yours will be different.
 
 ```
-echo "# PFB2017_problemsets" >> README.md
+echo "# PFB2018_problemsets" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
-git remote add origin https://github.com/srobb1/PFB2017_problemsets.git
+git remote add origin https://github.com/prog4biol/PFB2018_problemsets.git
 git push -u origin master
 ```
 
@@ -1034,12 +1034,12 @@ Let's clone the course material.
 
 Let's do it!
 
-1. Go to our [PFB2017 GitHub Repository](https://github.com/srobb1/pfb2017)
+1. Go to our [PFB2018 GitHub Repository](https://github.com/prog4biol/pfb2017)
 2. Click the 'Clone or Download' Button
 3. Copy the URL
-  ~[Clone PFB2017](https://raw.githubusercontent.com/srobb1/pfb2017/master/images/github-clone.png)
+  ~[Clone PFB2018](https://raw.githubusercontent.com/prog4biol/pfb2017/master/images/github-clone.png)
 4. _Clone_ the repository to your local machine
-   `git clone https://github.com/srobb1/pfb2017.git`
+   `git clone https://github.com/prog4biol/pfb2018.git`
 
 Now you have a copy of the course material on your computer!
 
@@ -1064,7 +1064,7 @@ You will KNOW if you need to use these features of git.
 
 ---
 
-### [Link To Unix 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Unix_02_problemset.md)
+### [Link To Unix 2 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Unix_02_problemset.md)
 
 ---
 
@@ -1114,8 +1114,8 @@ Note: '$' indicates the command line prompt. Recall from Unix 1 that every compu
 First Python Commands:
 
 ```python
->>> print("Hello, PFB2017!")
-Hello, PFB2017!
+>>> print("Hello, PFB2018!")
+Hello, PFB2018!
 ```
 
 > Note: `print` is a function. Function names are followed by (), so formally, the function is `print()`
@@ -1130,7 +1130,7 @@ Hello, PFB2017!
 
 File Contents:  
 ```python
-print ("Hello, PFB2017!")
+print ("Hello, PFB2018!")
 ```
 
 #### Running Python Scripts
@@ -1145,7 +1145,7 @@ Execute the Python script like this (% represents the prompt)
 
 This produces the following result:
 ```bash
-Hello, PFB2017!
+Hello, PFB2018!
 ```
 
 #### A quicker/better way to run python scripts
@@ -1169,14 +1169,14 @@ The file test.py now looks like this
 
 ```python
 #!/usr/bin/env python3
-print ("Hello, PFB2017!")
+print ("Hello, PFB2018!")
 ```
 
 Now you can simply type the name of the script to run it. Like this
 
 ```
 % ./test.py
-Hello, PFB2017!
+Hello, PFB2018!
 ```
 
 
@@ -1247,7 +1247,7 @@ The first line of a script starting with `#!` is a special example of a comment 
 #!/usr/bin/env python3
 
 # this is my first script
-print ("Hello, PFB2017!") # this line prints output to the screen
+print ("Hello, PFB2018!") # this line prints output to the screen
 ```
 
 
@@ -1418,7 +1418,7 @@ We'll cover `dir()` in more detail later
 
 ---
 
-### [Link to Python 1 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_01_problemset.md)
+### [Link to Python 1 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_01_problemset.md)
 
 -------
 
@@ -1542,7 +1542,7 @@ Operators are listed in order of precedence. Highest listed first. Not all the o
 | `not in`                                 | Negative membership operator             |
 | `not` `or` `and`                         | logical operators                        |
 
-Note: Find out more about [bitwise operators](https://www.tutorialspoint.com/python/bitwise_operators_example.htm). We will see these operators used in the section on [Sets](https://github.com/srobb1/pfb2017#set-operators).
+Note: Find out more about [bitwise operators](https://www.tutorialspoint.com/python/bitwise_operators_example.htm). We will see these operators used in the section on [Sets](https://github.com/prog4biol/pfb2018#set-operators).
 
 ### Truth
 
@@ -1914,7 +1914,7 @@ It returns three different values depending on x and y
 
 ---
 
-### [Link to Python 2 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_02_problemset.md)
+### [Link to Python 2 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_02_problemset.md)
 
 ----
 
@@ -2750,7 +2750,7 @@ Now that you have seen the `append()` function we can go over how to build a lis
 
 ---
 
-### [Link to Python 3 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_03_problemset.md)
+### [Link to Python 3 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_03_problemset.md)
 
 
 
@@ -3417,7 +3417,7 @@ Union, intersection, difference and symmetric difference can be done with sets
 
 The difference between two sets are the elements that are unique to the set to the left of the `-` operator, with duplicates removed.
 
-![Set Difference](https://raw.githubusercontent.com/srobb1/pfb2017/master/images//set_difference.png)
+![Set Difference](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images//set_difference.png)
 
 ```python
 >>> a = set('abracadabra')
@@ -3431,7 +3431,7 @@ The difference between two sets are the elements that are unique to the set to t
 
 The union between two sets is a sequence of the all the elements of the first and second sets combined, with duplicates removed.
 
-![Set Union](https://raw.githubusercontent.com/srobb1/pfb2017/master/images//set_union.png)
+![Set Union](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images//set_union.png)
 
 ```python
 >>> a = set('abracadabra')
@@ -3445,7 +3445,7 @@ The union between two sets is a sequence of the all the elements of the first an
 
 The intersection between two sets is a sequence of the elements which are in both sets, with duplicates removed.
 
-![Set Intersection](https://raw.githubusercontent.com/srobb1/pfb2017/master/images//set_intersection.png)
+![Set Intersection](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images//set_intersection.png)
 
 ```python
 >>> a = set('abracadabra')
@@ -3460,7 +3460,7 @@ The intersection between two sets is a sequence of the elements which are in bot
 
 The symmetric difference is the elements that are only in the first set plus the elements that are only in the second set, with duplicates removed.
 
-![Set Symmetric Difference](https://raw.githubusercontent.com/srobb1/pfb2017/master/images//set_symmetric_difference.png)
+![Set Symmetric Difference](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images//set_symmetric_difference.png)
 
 ```python
 >>> a = set('abracadabra')
@@ -3511,7 +3511,7 @@ The symmetric difference is the elements that are only in the first set plus the
 
 ---
 
-### [Link to Python 4 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_04_problemset.md)
+### [Link to Python 4 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_04_problemset.md)
 
 
 
@@ -3531,8 +3531,8 @@ You should be well versed in writing to the screen. We have been using the `prin
 
 
 ```python
->>> print ("Hello, PFB2017!")
-Hello, PFB2017!
+>>> print ("Hello, PFB2018!")
+Hello, PFB2018!
 ```
 > Remember this example from one of our first lessons?
 
@@ -3749,7 +3749,7 @@ Output:
 
 
 
-### [Link to Python 5 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_05_problemset.md)
+### [Link to Python 5 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_05_problemset.md)
 
 \pagebreak
 
@@ -4332,7 +4332,7 @@ You can use more than one flag by concatenating them with `|`.  `re.search(r"ATG
 ---
 
 
-### [Link to Python 6 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_06_problemset.md)
+### [Link to Python 6 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_06_problemset.md)
 
 ---
 # Python 7
@@ -4916,7 +4916,7 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 
 ---
 
-### [Link to Python 7 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_07_problemset.md)
+### [Link to Python 7 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_07_problemset.md)
 
 ---
 # Python 7.5
@@ -5365,7 +5365,7 @@ File needs to be a FASTA file and end with .fa
 
 ---
 
-### [Link to Python 8 Problem Set](https://github.com/srobb1/pfb2017/blob/master/problemsets/Python_08_problemset.md)
+### [Link to Python 8 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_08_problemset.md)
 
 
 # Python 9
