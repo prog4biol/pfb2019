@@ -57,9 +57,9 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACC
    - use the copy() method:  
      - create a list, for exampale: `my_list2 = ['a', 'bb', 'ccc']`  
      - make a copy with the copy() method `list_copy2 = my_list2.copy()`  
-     - print the orginal list  
+     - print the original list  
      - alter list_copy2  
-     - print the orginal list   
+     - print the original list   
 
 
 10. ADD/COMMIT/PUSH
