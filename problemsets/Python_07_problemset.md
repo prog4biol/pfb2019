@@ -1,4 +1,4 @@
-Python 7 - RegEx - Problem Set
+Python 7 - Regular Expressions - Problem Set
 ===================
 
 1. In the file [Python_07_nobody.txt](https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/Python_07_nobody.txt) find every occurrence of 'Nobody' and print out the position.
