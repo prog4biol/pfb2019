@@ -1,4 +1,4 @@
-Python 7 Problem Set
+Python 9 - Functions - Problem Set
 ===================
 
 1. Create a function to format a string of DNA so that each line is no more than 60 nt long.
