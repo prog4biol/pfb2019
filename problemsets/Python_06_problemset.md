@@ -88,3 +88,5 @@ __Now do the same on the command line with `comm` command. You might need to `so
          - calculate and store the count of each unique nucleotide character in a dictionary
          - report the name, total of each nucleotide count, and the GC content 
  
+ ## Extra: Now that you know how to open a file and iterate over each line, you can write your first FASTA parser
+   - use file I/O, `if` statements and dictionaries to write your first FASTA parser. Some other useful functions and methods are `find`, `split`, string concatenation.
