@@ -19,14 +19,14 @@ Python 4 Problem Set
 9. Make a list with the following data  `['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']`. Use a `for` loop to iterate through each element of this list and:
    - Print out each element
    - Print out the length and the sequence i.e., "4\\tATGC\\n"
-10. Rewrite the script from 9. using a list comprehension to generate a list of tuples of sequences and lengths. Print out the length and the sequence i.e., "4\\tATGC\\n".
+10. Use list comprehension to generate a list of tuples of sequences and lengths with the list from #9. Print out the length and the sequence i.e., "4\\tATGC\\n".
 
-11. Modify the script from 10 so that you also print out the number of each sequence i.e. "1\t4\tACGT\n"
+11. Modify the script from #10 so that you also print out the number (postion in the list) of each sequence i.e. "1\\t4\\tACGT\\n"
 
 12. Have you been commiting you work?
 
 
-## No need to do all the below now, but come back to these as you have time. They are fun exercises. You have already learned all you need to know to do each.
+## Fun Challange Problems. These are real scripts you might use in real life. You have already learned all you need to know to do each. If you don't have enough time in this session to complete, come back and try later.
 
 13. Create a shuffled sequence ([Fisher-Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle))
     - Use a for loop to perform the following procedure N times (N = length of seq)
