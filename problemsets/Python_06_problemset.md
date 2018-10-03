@@ -25,8 +25,8 @@ __Generate Gene Lists:__
 
 _Get all genes:_
 
-1. Go to Ensembl Biomart.
-2. In dropdown box, select "Ensembl Genes 90"
+1. Go to [Ensembl Biomart](http://useast.ensembl.org/biomart/martview/4b8fb1941e75e7763e8c4ccf1ffcd9c5).
+2. In dropdown box, select "Ensembl Genes 94"
 3. In dropdown box, select "Alpaca Genes" 
 4. On the left, click Attributes
 5. Expand GENE:
@@ -79,7 +79,7 @@ A. Find all the genes that are transcription factors for cell proliferation
 __Now do the same on the command line with `comm` command. You might need to `sort` each file first.__
 
 
-## Extra: Expand on last problem set nucleotide composition
+## Extra: Expand on last problemset exercise on nucleotide composition
   - get the raw file [Python_05.seq.txt](https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/Python_05.seq.txt)
   - in a script, open this file
   - iterate over each line in this file (seqName\tsequence\n)
