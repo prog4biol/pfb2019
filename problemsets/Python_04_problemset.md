@@ -53,7 +53,7 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACC
    - split the new formatted sequence on the cut sites, store the resulting fragments in a list
    - iterate over each fragment and report
       - the start position in the original sequence
-      - the end posttion in the orginal sequence
+      - the end postion in the orginal sequence
       - the length of each fragemnt
    - sort the fragments by length and print out as they would appear on a agrose gel. (big to little)
 
