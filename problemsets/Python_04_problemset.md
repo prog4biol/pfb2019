@@ -9,26 +9,22 @@ Python 4 Problem Set
    - Print each element.
    - Calculate two cumulative sums, one of all the even values and one of all the odd values. 
    - Print the only the final two sums.
-
 5. Write a script that uses `range()` in a `for` loop to print out every number between 0 and 99  
-6. Add a new loop to your script that uses `range()` to print out every number bewteen 1 and 100
-7. Rewrite the script to take to start and end values from the command line. If you call your script like this `count.py 3 10` it will print the numbers from 3 to 10.
-8. Modify your script so that it will only print the number if it is odd.
-
-
-9. Make a list with the following data  `['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']`. Use a `for` loop to iterate through each element of this list and:
+      - Modify your loop to print out every number bewteen 1 and 100
+6. Write a new script that takes the start and end values from the command line. If you call your script like this `count.py 3 10` it will print the numbers from 3 to 10.
+      - Modify your script so that it will only print the number if it is odd.
+7. Make a list with the following data  `['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']`. Use a `for` loop to iterate through each element of this list and:
    - Print out each element
    - Print out the length and the sequence i.e., "4\\tATGC\\n"
-10. Use list comprehension to generate a list of tuples of sequences and lengths with the list from #9. Print out the length and the sequence i.e., "4\\tATGC\\n".
+8. Use list comprehension to generate a list of tuples of sequences and lengths with the list from #7. Print out the length and the sequence i.e., "4\\tATGC\\n".
+9. Modify the script from #8 so that you also print out the number (postion in the list) of each sequence i.e. "1\\t4\\tACGT\\n"
 
-11. Modify the script from #10 so that you also print out the number (postion in the list) of each sequence i.e. "1\\t4\\tACGT\\n"
-
-12. Have you been commiting you work?
+10. Have you been commiting you work?
 
 
 ## Fun Challange Problems. These are real scripts you might use in real life. You have already learned all you need to know to do each. If you don't have enough time in this session to complete, come back and try later.
 
-13. Create a shuffled sequence ([Fisher-Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle))
+1. Create a shuffled sequence ([Fisher-Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle))
     - Use a for loop to perform the following procedure N times (N = length of seq)
     - Select a random position A with randrange()
     - Select a random position B with randrange()
@@ -36,7 +32,7 @@ Python 4 Problem Set
     - Print the final shuffled sequence
     - Remember to test your code with test data. 
 
-14. Calculate sequence identity: Start with 2 very similar DNA sequences. Use your favorites or use [Python_04.fasta](https://raw.githubusercontent.com/srobb1/pfb2018/master/files/Python_04.fasta)
+2. Calculate sequence identity: Start with 2 very similar DNA sequences. Use your favorites or use [Python_04.fasta](https://raw.githubusercontent.com/srobb1/pfb2018/master/files/Python_04.fasta)
     - Align with ClustalW, TCoffee, or some other web alignment application. 
     - Output should be in FASTA format.
     - Store (copy and paste) each aligned sequence, including dashes, as two separate string variables. 
@@ -44,7 +40,7 @@ Python 4 Problem Set
     - Use a `for` loop with `range()` to compare each index for nucleotide differences.
     - Report percent identity of the two sequences.
 
-15. A new Restriction Fragments script:
+3. A new Restriction Fragments script:
    - Find [EcoRI](https://www.neb.com/products/r0101-ecori#Product%20Information) in this DNA sequence
    ```
 GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTGCTTTCCACGACGGTGACACGCTTCCCTGGATTGGCAGCCAGACTGCCTTCCGGGTCACTGCCATGGAGGAGCCGCAGTCAGATCCTAGCGTCGAGCCCCCTCTGAGTCAGGAAACATTTTCAGACCTATGGAAACTACTTCCTGAAAACAACGTTCTGTCCCCCTTGCCGTCCCAAGCAATGGATGATTTGATGCTGTCCCCGGACGATATTGAACAATGGTTCACTGAAGACCCAGGTCCAGATGAAGCTCCCAGAATTCGCCAGAGGCTGCTCCCCCCGTGGCCCCTGCACCAGCAGCTCCTACACCGGCGGCCCCTGCACCAGCCCCCTCCTGGCCCCTGTCATCTTCTGTCCCTTCCCAGAAAACCTACCAGGGCAGCTACGGTTTCCGTCTGGGCTTCTTGCATTCTGGGACAGCCAAGTCTGTGACTTGCACGTACTCCCCTGCCCTCAACAAGATGTTTTGCCAACTGGCCAAGACCTGCCCTGTGCAGCTGTGGGTTGATTCCACACCCCCGCCCGGCACCCGCGTCCGCGCCATGGCCATCTACAAGCAGTCACAGCACATGACGGAGGTTGTGAGGCGCTGCCCCCACCATGAGCGCTGCTCAGATAGCGATGGTCTGGCCCCTCCTCAGCATCTTATCCGAGTGGAAGGAAATTTGCGTGTGGAGTATTTGGATGACAGAAACACTTTTCGTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTGCTTTCCACGACGGTGACACGCTTCCCTGGATTGGCAGCCAGACTGCCTTCCGGGTCACTGCCATGGAGGAGCCGCAGTCAGATCCTAGCGTCGAGCCCCCTCTGAGTCAGGAAACATTTTCAGACCTATGGAAACTACTTCCTGAAAACAACGTTCTGTCCCCCTTGCCGTCCCAAGCAATGGATGATTTGATGCTGTCCCCGGACGATATTGAACAATGGTTCACTGAAGACCCAGGTCCAGATGAAGCTCCCAGAATTCGCCAGAGGCTGCTCCCCCCGTGGCCCCTGCACCAGCAGCTCCTACACCGGCGGCCCCTGCACCAGCCCCCTCCTGGCCCCTGTCATCTTCTGTCCCTTCCCAGAAAACCTACCAGGGCAGCTACGGTTTCCGTCTGGGCTTCTTGCATTCTGGGACAGCCAAGTCTGTGACTTGCACGTACTCCCCTGCCCTCAACAAGATGTTTTGCCAACTGGCCAAGACCTGCCCTGTGCAGCTGTGGGTTGATTCCACACCCCCGCCCGGCACCCGCGTCCGCGCCATGGCCATCTACAAGCAGTCACAGCACATGACGGAGGTTGTGAGGCGCTGCCCCCACCATGAGCGCTGCTCAGATAGCGATGGTCTGGCCCCTCCTCAGCATCTTATCCGAGTGGAAGGAAATTTGCGTGTGGAGTATTTGGATGAC
