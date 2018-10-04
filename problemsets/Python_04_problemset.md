@@ -11,6 +11,7 @@ Python 4 Problem Set
    - Print the only the final two sums.
 5. Write a script that uses `range()` in a `for` loop to print out every number between 0 and 99  
       - Modify your loop to print out every number bewteen 1 and 100
+      - Create a new script that uses list comprehension to do the same, uses range to print out every number bewteen 1 and 100
 6. Write a new script that takes the start and end values from the command line. If you call your script like this `count.py 3 10` it will print the numbers from 3 to 10.
       - Modify your script so that it will only print the number if it is odd.
 7. Make a list with the following data  `['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']`. Use a `for` loop to iterate through each element of this list and:
