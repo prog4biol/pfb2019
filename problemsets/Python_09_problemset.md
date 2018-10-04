@@ -68,3 +68,11 @@ GTCATCTTCT
      2) Max length of each line
 
    The script should reformat every sequence in the file to the specified max line length. Make sure your output is in proper FASTA format.
+
+5. Create a new function that calculates the GC content of a DNA sequence. 
+	- it will take a DNA sequence without spaces and no header as an argument and return the percentage of nucleotides that are a G or C.
+	- example `percentGC = gc_conent('CGTGCTTTCCACGACGGTGACACGCTTCCCTGGA')` or `percentGC = gc_content(dna)`
+	
+6. Create a new function that computes and returns the reverse complement of a sequence
+	- it will take a DNA sequence without spaces and no header as an argument and return the reverse complement, with no spaces and no header.
+	- example `revComp_sequence = get_reverse_complement(dna)`
