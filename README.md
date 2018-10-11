@@ -965,7 +965,7 @@ Follow Steps 1 and 2 to create the remote repository. Follow Step 3 to create yo
 
   ![To create a new repository click the 'New' Button in the top right corner.](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/github-newRepoButton.png)  
 
-2. Add a name (i.e., PFB2018_problemsets) and a description (i.e., Solutions for PFB2017 Problem Sets) and click "Create Repository"  
+2. Add a name (i.e., PFB_problemsets) and a description (i.e., Solutions for PFB Problem Sets) and click "Create Repository"  
 
   ![Fill in the form and click the 'Create Repository Button'](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/github-newRepoForm.png)  
 
@@ -975,15 +975,15 @@ Follow Steps 1 and 2 to create the remote repository. Follow Step 3 to create yo
 
 
    - Open your terminal and navigate to the location you want to put a directory for your problem sets
-   - Create a new directory directory (i.e., PFB2018_problemsets)
+   - Create a new directory directory (i.e., PFB_problemsets)
    - Follow the instructions provided when you created your repository. These are my instructions, yours will be different.
 
 ```
-echo "# PFB2018_problemsets" >> README.md
+echo "# PFB_problemsets" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
-git remote add origin https://github.com/prog4biol/PFB2018_problemsets.git
+git remote add origin https://github.com/srobb1/PFB_problemsets.git
 git push -u origin master
 ```
 
@@ -1027,10 +1027,10 @@ Let's clone the course material.
 
 Let's do it!
 
-1. Go to our [PFB2018 GitHub Repository](https://github.com/prog4biol/pfb2017)
+1. Go to our [PFB2018 GitHub Repository](https://github.com/prog4biol/pfb2018)
 2. Click the 'Clone or Download' Button
 3. Copy the URL
-  ~[Clone PFB2018](https://raw.githubusercontent.com/prog4biol/pfb2017/master/images/github-clone.png)
+  ~[Clone PFB2018](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/github-clone.png)
 4. _Clone_ the repository to your local machine
    `git clone https://github.com/prog4biol/pfb2018.git`
 
