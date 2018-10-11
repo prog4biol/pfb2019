@@ -1001,7 +1001,7 @@ Every git repository has three main elements called _trees_:
 | command                                 | description                              |
 | --------------------------------------- | ---------------------------------------- |
 | `git init`                              | Creates your new local repository with the three trees on (local machine) |
-| `git remote add remote-name URL`        | Links your local repository to a remote repository that is often named _origin_ and is found at the given URL. |
+| `git remote add remote-name URL`        | Links your local repository to a __remote__ repository that is often named _origin_ and is found at the given URL. |
 | `git add filename`                      | Propose changes and add file(s) with changes to the index or staging area (local machine) |
 | `git commit -m 'message'`               | Confirm or commit that you really want to add your changes to the HEAD (local machine) |
 | `git push -u remote-name remote-branch` | Upload your committed changes in the HEAD to the specified remote repository to the specified branch |
@@ -1015,7 +1015,7 @@ Let's Do it!
 4. Save (control + o) and Exit (control + x)
 5. (Add) Stage your changes. `git add git_exercises.txt`
 6. (Commit) Become sure you want your changes your changes. `git commit -m 'added a line of text'`
-7. (Push) Sync/Upload your changes to the remote repository. `git push origin master`
+7. (Push) Sync/Upload your changes to the __remote__ repository. `git push origin master`
 
 That is all there is to it! There are more complicated things you can do but we won't get into those. You will know when you are ready to learn more about git when you figure out there is something you want to do but don't know how. There are thousands of online tutorials for you to search and follow.
 
@@ -1036,15 +1036,24 @@ Let's do it!
 
 Now you have a copy of the course material on your computer!
 
-#### Bringing Changes in Remote to your Local Repository
+#### Bringing Changes in from the Remote Repository to your Local Repository
 
-If we make changes to any of these files and you want to update your copy you can _pull_ the changes.
+If changes are made to any of these files in the online, remote repository, and you want to update your copy you can _pull_ the changes.
 `git pull`  
+
+| command                                 | description                              |
+| --------------------------------------- | ---------------------------------------- |
+| `git pull` | To get changes from the remote into your local copy|
 
 
 #### Keeping track of differences between local and remote repositories
 
-If you are ever wondering what do you need to add to your remote repository use the `git status` command. This will provide you a list of file that have been modified, deleted, and those that are untracked. Untracked files are those that have never been added to the staging area with `git add`
+If you are ever wondering what do you need to add to your remote repository use the `git status` command. This will provide you a list of files that have been modified, deleted, and those that are untracked. Untracked files are those that have never been added to the staging area with `git add`
+
+| command                                 | description                              |
+| --------------------------------------- | ---------------------------------------- |
+| `git status` | To see a list of files that have been modified, deleted, and those that are untracked |
+
 
 #### Links to *Slightly* less basic topics  
 
