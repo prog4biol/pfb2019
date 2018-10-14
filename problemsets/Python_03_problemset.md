@@ -1,4 +1,4 @@
-Python 3 Problem Set
+Python 3 Problem Set -- Strings
 ===================
 1. What are considered sequences in Python?
 2. What is the length of the following DNA string? Is this DNA string a Python sequence?
