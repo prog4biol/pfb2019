@@ -2409,6 +2409,78 @@ Since these are methods, be sure to use in this format string.method().
 | `s.join(list)`                 | opposite of `split()`. The elements of a list will be concatenated together using the string stored in 's' as a delimiter. |
 
 
+__split__
+`split` is a method or a way to break up a string on a set of characters. What is returned is a list of elements with the characters that were used for breaking are removed
+
+Lets look at this string:
+```
+00000xx000xx000000000000xx0xx00
+```
+Let's split on 'xx' and get a list of the 0's  
+
+What is the 's' in `s.split('delim')` ?
+
+What is the 'delim' in `s.split('delim')` ?
+
+Let's try it:
+```python
+>>> string_to_split='00000xx000xx000000000000xx0xx00'
+>>> string_to_split.split('xx')
+['00000', '000', '000000000000', '0', '00']
+>>> list_of_zeros = string_to_split.split('xx')
+>>> print(list_of_zeros)
+['00000', '000', '000000000000', '0', '00']
+```
+> We started with a string and now have a list with all the delimeters removed
+
+Here is another example. Let's split on tabs to get a list of numbers in tab separated columns.   
+```python
+>>> input_expr = '4.73\t7.91\t3.65'
+>>> expression_values = input_expr.split('\t')
+>>> expression_values
+['4.73', '7.91', '3.65']
+```
+
+
+
+__join__
+`join` is a method or a way to take a list of elements, of things, and turn them into a string with something put in between each element.
+
+
+Let's join a list of Ns  `list_of_Ns = ['NNNNN', 'NNN', 'N', 'NNNNNNNNNNNNNNN', 'NN']` on 'xx' to get this string:
+```
+NNNNNxxNNNxxNxxNNNNNNNNNNNNNNNxxNN
+```
+
+
+What is the 's' in `s.join(list)` ?
+
+What is the 'list' in `s.join(list)` ?
+
+```python
+>>> list_of_Ns = ['NNNNN', 'NNN', 'N', 'NNNNNNNNNNNNNNN', 'NN']
+>>> list_of_Ns
+['NNNNN', 'NNN', 'N', 'NNNNNNNNNNNNNNN', 'NN']
+>>>
+>>> string_of_elements_with_xx = 'xx'.join(list_of_Ns)
+>>> string_of_elements_with_xx
+'NNNNNxxNNNxxNxxNNNNNNNNNNNNNNNxxNN'
+```
+> We started with a list now have all the elements now in one string with the delimiter added in between each element.
+
+
+Let's take a list of expression values and create a tab delimited string that will open nicely in a spreadsheet with each value in its own column:
+```python
+>>> expression_values = ['4.73', '7.91', '3.65']
+>>>expression_values
+['4.73', '7.91', '3.65']
+>>> new_list_expression_values = '\t'.join(expression_values)
+>>> new_list_expression_values
+'4.73\t7.91\t3.65'
+```
+> print this to a file and open it in Excel! It is beautiful!! 
+
+
 
 ### String Formatting
 
