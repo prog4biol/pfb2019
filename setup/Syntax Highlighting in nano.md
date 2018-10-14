@@ -1,5 +1,14 @@
 # Syntax Highlighting in nano
 
+
+Follow the instructions here:
+[https://github.com/scopatz/nanorc](https://github.com/scopatz/nanorc)
+
+
+
+
+__Another Way__
+
 The following recipe will show you how to install the `nano` text editor on your computer and enable color syntax highlighting.
 
 ### Linux
