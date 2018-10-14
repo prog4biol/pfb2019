@@ -1275,7 +1275,12 @@ For Example:
 gene_count = 5
 gene_count = 10
 ```
->You should give your variables names that help you understand what they store. gene_count, expression, sequences are all good identifiers or variable names. k, x, data, var1, var2 are bad because you can't tell what they store. This means it's harder to understand the script and to  spot errors or bugs in your script.  
+>You should give your variables names that help you understand what they store. gene_count, expression, sequences are all good identifiers or variable names. k, x, data, var1, var2 are bad because you can't tell what they store. This means it's harder to understand the script and to  spot errors or bugs in your script. 
+>  
+> Good Variable names are:
+>  1. self documenting
+>  2. easy to read
+>  3. make it easier to guess the type of data stored in a variable
 
 Different types of data can be assigned to variables, i.e., integers (1,2,3), floats (floating point numbers, 3.1415), and strings (text).
 
