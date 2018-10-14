@@ -60,7 +60,7 @@ __Table of Contents__
             * [Links to <em>Slightly</em> less basic topics](#links-to-slightly-less-basic-topics)
          * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Unix_02_problemset.md">Link To Unix 2 Problem Set</a>](#link-to-unix-2-problem-set)
    * [Python](#python)
-   * [Python 1](#python-1)
+      * [Python 1](#python-1)
          * [Python Overview](#python-overview)
          * [Running Python](#running-python)
             * [Interactive Interpreter](#interactive-interpreter)
@@ -82,7 +82,7 @@ __Table of Contents__
             * [Command line parameters: A Special Built-in List](#command-line-parameters-a-special-built-in-list)
             * [What kind of object am I working with?](#what-kind-of-object-am-i-working-with)
          * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_01_problemset.md">Link to Python 1 Problem Set</a>](#link-to-python-1-problem-set)
-   * [Python 2](#python-2)
+      * [Python 2](#python-2)
          * [Operators](#operators)
             * [Arithmetic Operators](#arithmetic-operators)
             * [Assignment Operators](#assignment-operators)
@@ -103,7 +103,7 @@ __Table of Contents__
             * [Numeric Functions](#numeric-functions)
          * [Comparing two numbers](#comparing-two-numbers)
          * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_02_problemset.md">Link to Python 2 Problem Set</a>](#link-to-python-2-problem-set)
-   * [Python 3](#python-3)
+      * [Python 3](#python-3)
          * [Sequences](#sequences)
          * [What functions go with my object?](#what-functions-go-with-my-object)
          * [Strings](#strings)
@@ -125,7 +125,7 @@ __Table of Contents__
             * [Summary of special formatting symbols so far](#summary-of-special-formatting-symbols-so-far)
             * [What's the point?](#whats-the-point)
          * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_03_problemset.md">Link to Python 3 Problem Set</a>](#link-to-python-3-problem-set)
-   * [Python 4](#python-4)
+      * [Python 4](#python-4)
          * [Lists and Tuples](#lists-and-tuples)
             * [Lists](#lists-1)
             * [Tuples](#tuples-1)
@@ -151,7 +151,7 @@ __Table of Contents__
             * [Iterators](#iterators)
             * [List Comprehension](#list-comprehension)
          * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_04_problemset.md">Link to Python 4 Problem Set</a>](#link-to-python-4-problem-set)
-   * [Python 5](#python-5)
+      * [Python 5](#python-5)
          * [Dictionaries](#dictionaries)
             * [Creating a Dictionary](#creating-a-dictionary)
             * [Accessing Values in Dictionaries](#accessing-values-in-dictionaries)
@@ -168,7 +168,7 @@ __Table of Contents__
             * [Set Functions](#set-functions)
             * [Set Methods](#set-methods)
          * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_05_problemset.md">Link to Python 5 Problem Set</a>](#link-to-python-5-problem-set)
-   * [Python 6](#python-6)
+      * [Python 6](#python-6)
          * [I/O and Files](#io-and-files)
             * [Writing to the Screen](#writing-to-the-screen)
             * [Reading input from the keyboard](#reading-input-from-the-keyboard)
@@ -178,7 +178,7 @@ __Table of Contents__
             * [Writing to a File](#writing-to-a-file)
             * [Building a Dictionary from a File](#building-a-dictionary-from-a-file)
          * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_06_problemset.md">Link to Python 6 Problem Set</a>](#link-to-python-6-problem-set)
-   * [Python 7](#python-7)
+      * [Python 7](#python-7)
          * [Regular Expressions](#regular-expressions)
             * [Individual Characters](#individual-characters)
             * [Character Classes](#character-classes)
@@ -196,7 +196,7 @@ __Table of Contents__
             * [Using subpatterns in the replacement](#using-subpatterns-in-the-replacement)
             * [Regular Expression Option Modifiers](#regular-expression-option-modifiers)
          * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_07_problemset.md">Link to Python 7 Problem Set</a>](#link-to-python-7-problem-set)
-   * [Python 8](#python-8)
+      * [Python 8](#python-8)
          * [Data Structures](#data-structures)
             * [List of lists](#list-of-lists)
             * [Lists of dictionaries](#lists-of-dictionaries)
@@ -208,7 +208,7 @@ __Table of Contents__
             * [Raising an Exception](#raising-an-exception)
             * [Creating Custom Exceptions](#creating-custom-exceptions)
          * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_08_problemset.md">Link to Python 8 Problem Set</a>](#link-to-python-8-problem-set)
-   * [Python 9](#python-9)
+      * [Python 9](#python-9)
          * [Functions](#functions)
             * [Defining a Function that calculates GC Content](#defining-a-function-that-calculates-gc-content)
             * [Using your function to calculate GC content](#using-your-function-to-calculate-gc-content)
@@ -239,11 +239,9 @@ __Table of Contents__
             * [glob](#glob)
          * [Many more modules that do many things](#many-more-modules-that-do-many-things)
          * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_0_problemset.md">Link to Python 9 Problem Set</a>](#link-to-python-9-problem-set)
-   * [Python 10](#python-10)
+      * [Python 10](#python-10)
       * [Classes](#classes)
          * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_10_problemset.md">Link to Python 10 Problem Set</a>](#link-to-python-10-problem-set)
-
-
 ***
 
 # Programming For Biology 2018
@@ -1076,7 +1074,7 @@ You will KNOW if you need to use these features of git.
 # Python
 
 
-# Python 1
+## Python 1
 
 
 ### Python Overview
@@ -1432,7 +1430,7 @@ We'll cover `dir()` in more detail later
 
 -------
 
-# Python 2
+## Python 2
 
 ### Operators
 
@@ -1928,7 +1926,7 @@ It returns three different values depending on x and y
 
 ----
 
-#  Python 3
+##  Python 3
 
 ### Sequences
 
@@ -2627,7 +2625,7 @@ So much can be done with the `format()` function. Here is one last example, but 
 
 
 ---
-# Python 4
+## Python 4
 
 ### Lists and Tuples
 
@@ -3267,7 +3265,7 @@ Here is an example of using mathematical operators to generate a list:
 
 
 ---
-# Python 5
+## Python 5
 
 
 ### Dictionaries
@@ -3609,7 +3607,7 @@ The symmetric difference is the elements that are only in the first set plus the
 
 
 ---
-# Python 6
+## Python 6
 
 
 ### I/O and Files
@@ -3847,7 +3845,7 @@ Output:
 \pagebreak
 
 ---
-# Python 7
+## Python 7
 
 ### Regular Expressions
 
@@ -4428,7 +4426,7 @@ You can use more than one flag by concatenating them with `|`.  `re.search(r"ATG
 ### [Link to Python 7 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_07_problemset.md)
 
 
-# Python 8
+## Python 8
 
 
 
@@ -4860,7 +4858,7 @@ File needs to be a FASTA file and end with .fa
 
 
 ---
-# Python 9
+## Python 9
 
 ### Functions
 
@@ -5446,7 +5444,7 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 ### [Link to Python 9 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_0_problemset.md)
 
 ---
-# Python 10
+## Python 10
 
 ## Classes
 
