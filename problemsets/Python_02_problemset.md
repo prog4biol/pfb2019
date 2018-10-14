@@ -1,4 +1,4 @@
-Python 2 Problem Set
+Python 2 Problem Set -- Operators, Truth, Logic
 ===================
 
 1. Use the Interactive Interpretor to test to see if you can find an ['ATG' in](https://github.com/prog4biol/pfb2018#membership-operators) the following DNA string:
