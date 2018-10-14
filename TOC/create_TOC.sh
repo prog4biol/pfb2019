@@ -1,7 +1,8 @@
 
 # rerun if any changes are made to the # ## ### #### in the README.md
-tail +12 ../README.md | ./gh-md-toc - > TOC.md
+START=`grep -n Instructors ../README.md | tail -1 | awk -F ':'  {'print $1'}`
+tail +$START ../README.md | ./gh-md-toc - > toc.md
 
 
 
-## copy the contents of TOX.md to README.md to create a TOC with more depth
+## copy the contents of toc.md to README.md to create a TOC with more depth

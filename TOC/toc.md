@@ -1,5 +1,4 @@
-   * [Programming For Biology 2018](#programming-for-biology-2018)
-      * [Big Picture](#big-picture)
+   * [Big Picture](#big-picture)
       * [Why?](#why)
       * [Helpful Tips](#helpful-tips)
    * [Unix](#unix)

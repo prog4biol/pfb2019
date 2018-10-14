@@ -10,8 +10,7 @@ Sofia Robb
 
 __Table of Contents__
 
-   * [Programming For Biology 2018](#programming-for-biology-2018)
-      * [Big Picture](#big-picture)
+   * [Big Picture](#big-picture)
       * [Why?](#why)
       * [Helpful Tips](#helpful-tips)
    * [Unix](#unix)
@@ -244,6 +243,7 @@ __Table of Contents__
       * [Classes](#classes)
          * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_10_problemset.md">Link to Python 10 Problem Set</a>](#link-to-python-10-problem-set)
 
+
 ***
 
 # Programming For Biology 2018
@@ -252,7 +252,7 @@ __Instructors__
 Simon Prochnik  
 Sofia Robb     
 
-## Big Picture
+# Big Picture
 
 ## Why?
 
