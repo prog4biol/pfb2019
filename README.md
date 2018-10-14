@@ -2708,7 +2708,7 @@ For these examples use: `nums = [1,2,3]` and `codons = [ 'atg' , 'aaa' , 'agg' ]
 | `list.pop(index)`         | removes and returns the value of the index argument. The list is now 1 value shorter | nums.pop(0) returns 1                    |
 | `list.remove(obj)`        | finds the lowest index of the given object and removes it from the list. The list is now one element shorter | codons.remove('aaa') ; print(codons) returns  [ 'atg' , 'agg' ] |
 | `list.reverse()`          | reverses the order of the list           | nums.reverse() ; print(nums) returns [3,2,1] |
-| `list.copy()`             | Returns a shallow copy of list. Shallow vs Deep only matters in multidimensional data structures. |                                          |
+| `list.copy()`             | Returns a shallow copy of list. Shallow vs [Deep](https://www.geeksforgeeks.org/copy-python-deep-copy-shallow-copy/) only matters in multidimensional data structures. |                                          |
 | `list.sort([func])`       | sorts a list using the provided function. Does not return a list. The list has been changed. Advanced list sort will be covered once writing your own functions has been discussed. | codons.sort() ; print(codons) returns ['aaa', 'agg', 'atg'] |
 
 
@@ -3374,7 +3374,7 @@ These functions work on several other data types too!
 | Method                                 | Description                              |
 | -------------------------------------- | ---------------------------------------- |
 | `dict.clear()`                         | Removes all elements of dictionary dict  |
-| `dict.copy()`                          | Returns a shallow copy of dictionary dict. Shallow vs. deep copying only matters in multidimensional data structures. |
+| `dict.copy()`                          | Returns a shallow copy of dictionary dict. [Shallow vs. deep](https://www.geeksforgeeks.org/copy-python-deep-copy-shallow-copy/) copying only matters in multidimensional data structures. |
 | `dict.fromkeys(seq,value)`             | Create a new dictionary with keys from seq (Python sequence type) and values set to value. |
 | `dict.items()`                         | Returns a list of (key, value) tuple pairs |
 | `dict.keys()`                          | Returns list of keys                     |
@@ -5276,6 +5276,8 @@ Better lists etc.
 and 
 
 `copy.deepcopy()`
+
+[Link to more info for more on deep vs shallow copying](https://www.geeksforgeeks.org/copy-python-deep-copy-shallow-copy/)
 
 #### math
 
