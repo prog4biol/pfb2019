@@ -43,7 +43,7 @@ __Table of Contents__
             * [More Pipe Idioms](#more-pipe-idioms)
          * [Advanced Unix](#advanced-unix)
          * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Unix_01_problemset.md">Link to Unix 1 Problem Set</a>](#link-to-unix-1-problem-set)
-   * [Unix 2](#unix-2)
+      * [Unix 2](#unix-2)
          * [Text Editors](#text-editors)
       * [Git for Beginners](#git-for-beginners)
          * [The Big Picture.](#the-big-picture)
@@ -220,8 +220,8 @@ __Table of Contents__
          * [Scope](#scope)
             * [Local Variables](#local-variables)
             * [Global](#global)
-      * [Modules](#modules)
-         * [Getting information about modules with pydoc](#getting-information-about-modules-with-pydoc)
+         * [Modules](#modules)
+            * [Getting information about modules with pydoc](#getting-information-about-modules-with-pydoc)
             * [os.path](#ospath)
             * [os.system](#ossystem)
             * [subprocess](#subprocess)
@@ -240,7 +240,7 @@ __Table of Contents__
          * [Many more modules that do many things](#many-more-modules-that-do-many-things)
          * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_0_problemset.md">Link to Python 9 Problem Set</a>](#link-to-python-9-problem-set)
       * [Python 10](#python-10)
-      * [Classes](#classes)
+         * [Classes](#classes)
          * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_10_problemset.md">Link to Python 10 Problem Set</a>](#link-to-python-10-problem-set)
 
 ***
