@@ -2410,7 +2410,7 @@ Since these are methods, be sure to use in this format string.method().
 
 
 __split__
-`split` is a method or a way to break up a string on a set of characters. What is returned is a list of elements with the characters that were used for breaking are removed
+`split` is a method or a way to break up a string on a set of characters. What is returned is a list of elements with the characters that were used for breaking are removed. We will be going over lists in more detail in the next session. Don't get too worried about this.
 
 Lets look at this string:
 ```
@@ -2444,7 +2444,7 @@ Here is another example. Let's split on tabs to get a list of numbers in tab sep
 
 
 __join__
-`join` is a method or a way to take a list of elements, of things, and turn them into a string with something put in between each element.
+`join` is a method or a way to take a list of elements, of things, and turn them into a string with something put in between each element. List will be covered in the next session in more detail.
 
 
 Let's join a list of Ns  `list_of_Ns = ['NNNNN', 'NNN', 'N', 'NNNNNNNNNNNNNNN', 'NN']` on 'xx' to get this string:
@@ -2617,6 +2617,15 @@ So much can be done with the `format()` function. Here is one last example, but 
 >>> '{:.4f}'.format(3.141592653589793)
 '3.1416'
 ```
+
+---
+
+### [Link to Python 3 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_03_problemset.md)
+
+
+
+---
+# Python 4
 
 ### Lists and Tuples
 
@@ -2828,14 +2837,7 @@ Now that you have seen the `append()` function we can go over how to build a lis
 ```
 > We start with a an empty list called 'words'. We use `append()` to add the value 'one' then to add the value 'two'. We end up with a list with two values. You can add a whole list to another list with `words.extend(['three','four','five'])`
 
----
 
-### [Link to Python 3 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_03_problemset.md)
-
-
-
----
-# Python 4
 
 ### Loops
 
