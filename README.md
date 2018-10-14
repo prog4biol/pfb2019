@@ -861,7 +861,7 @@ Here are a few more advanced Unix commands that are very useful and when you hav
 
 
 ---
-# Unix 2
+## Unix 2
 
 
 ### Text Editors
@@ -5161,11 +5161,11 @@ greeting = I say hello
 
 
 
-## Modules
+### Modules
 
 Python comes with some core functions and methods. There are many useful modules that you will want to use. `import` is the statement for telling your script you want to use code in a module. As we've already seen with regular expresions, you can bring in code that handles regular expressions with `import re`
 
-### Getting information about modules with `pydoc`
+#### Getting information about modules with `pydoc`
 
 How do you find out information about a module? Python has help pages built into the command line, like `man` we met earlier in the unix lecture. Online information may be more up to date. Search at https://docs.python.org/3.6/. But if you don't have internet access, you can always use `pydoc`.
 To find out about the `re` module, type `pydoc re` on the command line. The last line in the output tells you where the python module is actually installed.
@@ -5446,7 +5446,7 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
 ---
 ## Python 10
 
-## Classes
+### Classes
 
 Classes allow us to create our own types of objects. They work just like the other objects we've met, like strings and lists and so on. In fact everything in python. Classes inherit functionality from other classes. This is an easy way to write code that quickly gains functions by re-using existing code. Classes are essentially packages of functions. You don't need to use these constructs, but sometimes they help in larger projects where there's more time to plan.
 
