@@ -68,8 +68,8 @@ __Table of Contents__
             * [Running Python Scripts](#running-python-scripts)
             * [A quicker/better way to run python scripts](#a-quickerbetter-way-to-run-python-scripts)
          * [Syntax](#syntax)
-            * [Python Identifiers](#python-identifiers)
-            * [Naming conventions for Python Identifiers](#naming-conventions-for-python-identifiers)
+            * [Python Variable Names](#python-variable-names)
+            * [Naming conventions for Python Variable Names](#naming-conventions-for-python-variable-names)
             * [Reserved Words](#reserved-words)
             * [Lines and Indentation](#lines-and-indentation)
             * [Comments](#comments)
@@ -1185,24 +1185,24 @@ Hello, PFB2018!
 ### Syntax
 
 
-#### Python Identifiers
+#### Python Variable Names
 
-A Python identifier is a name used to identify a variable, function, class, module or other object. An identifier starts with a letter A to Z or a to z or an underscore (_) followed by zero or more letters, underscores and digits (0 to 9).
+A Python variable name is a name used to identify a variable, function, class, module or other object. An variable name starts with a letter A to Z or a to z or an underscore (_) followed by zero or more letters, underscores and digits (0 to 9).
 
-Python does not allow punctuation characters such as @, $, and % within identifiers. Python is a case sensitive programming language. Thus, `seq_id` and `seq_ID` are two different identifiers in Python.
+Python does not allow punctuation characters such as @, $, and % within variable name. Python is a case sensitive programming language. Thus, `seq_id` and `seq_ID` are two different variable names in Python.
 
-#### Naming conventions for Python Identifiers
+#### Naming conventions for Python Variable Names
 
  * The first character is lowercase, unless it is a name of a class. Classes should begin with an uppercase characters. (ex. Seq)
- * Private identifiers begin with an underscore. (ex. `_private`)
- * Strong private identifiers begin with two underscores. (ex. `__private`)
+ * Private variable names begin with an underscore. (ex. `_private`)
+ * Strong private variable names begin with two underscores. (ex. `__private`)
  * Python language-defined special names begin and end with two underscores. (ex. `__special__`)
 
-Picking good identifiers for the objects you name yourself is very important. Don't call your varaiables things like `items` or `my_list` or `data` or `var`. Except for where you have a very simple piece of code, or you are plotting a graph, don't call your objects `x` or `y` either. All these name examples are not decriptive of what kind of data you will find in the variable or object. Worse is to call a variable that contains gene identifiers `sequences`. Why is this such a bad idea? Think about what would happen if you filled your car up at a store labelled 'gas station' that sold lemonade. In computer science, names should always accurately describe the object they are attached to. This reduces possibility of bugs in your code, makes it much easier to understand if you come back to it after six months or share your code with someone and makes it faster to write code that works right. Even though it takes a bit of time and effort to think up a good name for an object, it will prevent so many problems in the future!
+Picking good variable names for the objects you name yourself is very important. Don't call your varaiables things like `items` or `my_list` or `data` or `var`. Except for where you have a very simple piece of code, or you are plotting a graph, don't call your objects `x` or `y` either. All these name examples are not decriptive of what kind of data you will find in the variable or object. Worse is to call a variable that contains gene variable names `sequences`. Why is this such a bad idea? Think about what would happen if you filled your car up at a store labelled 'gas station' that sold lemonade. In computer science, names should always accurately describe the object they are attached to. This reduces possibility of bugs in your code, makes it much easier to understand if you come back to it after six months or share your code with someone and makes it faster to write code that works right. Even though it takes a bit of time and effort to think up a good name for an object, it will prevent so many problems in the future!
 
 #### Reserved Words
 
-The following is a list of Python keywords. These are special words that already have a purpose in python and therefore cannot be used as identifier names.
+The following is a list of Python keywords. These are special words that already have a purpose in python and therefore cannot be used as variable name.
 
 ```
 and         exec        not
