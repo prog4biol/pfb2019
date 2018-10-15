@@ -77,7 +77,7 @@ date ; sleep 2 ; date
 
 
 __Redirect STDOUT__  
-You can redirect the output of a command into a file. [Get the file](https://github.com/prog4biol/pfb2018/edit/master/problemsets/Unix_01_problemset.md#get-cuffdiff)
+You can redirect the output of a command into a file. [Get the file](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Unix_01_problemset.md#get-cuffdiff)
 ```
 cd ~
 grep Chr7 cuffdiff.txt > fav_chr_cuffdiff.txt
