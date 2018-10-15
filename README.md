@@ -76,9 +76,9 @@ __Table of Contents__
             * [Blank Lines](#blank-lines)
          * [Data Types and Variables](#data-types-and-variables)
             * [Numbers and Strings](#numbers-and-strings)
+            * [Lists](#lists)
             * [Tuples](#tuples)
             * [Dictionary](#dictionary)
-            * [Lists](#lists)
             * [Command line parameters: A Special Built-in List](#command-line-parameters-a-special-built-in-list)
             * [What kind of object am I working with?](#what-kind-of-object-am-i-working-with)
          * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_01_problemset.md">Link to Python 1 Problem Set</a>](#link-to-python-1-problem-set)
@@ -1290,6 +1290,25 @@ message = "Welcome to Python" # this is a string
 
 Collections of data can also be stored in special data types, i.e., tuples, lists, sets, and dictionaries. You should always try to store like with like, so each element in the collection should be the same kind of data, like an expression value from RNA-seq or a count of how many exons are in a gene or a read sequence. Why do you think this might be?
 
+#### Lists 
+
+- Lists are used to store an ordered, *indexed* collection of data.
+- Lists are mutable: the number of elements in the list and what's stored in each element can change
+- Lists are enclosed in square brackets and items are separated by commas
+
+
+```python
+[ 'atg' , 'aaa' , 'agg' ]
+```
+
+| Index | Value |
+| ----- | ----- |
+| 0     | atg   |
+| 1     | aaa   |
+| 2     | agg   |
+
+> The list index starts at 0
+
 #### Tuples
 
 - Tuples are similar to lists and contain ordered, *indexed* collection of data.
@@ -1338,25 +1357,7 @@ Collections of data can also be stored in special data types, i.e., tuples, list
 | TP53  | GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC |
 | BRCA1 | GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA |
 
-#### Lists 
 
-- Lists are used to store an ordered, *indexed* collection of data.
-- Lists are mutable: the number of elements in the list and what's stored in each element can change
-- Lists are enclosed in square brackets and items are separated by commas
-
-
-```python
-[ 'atg' , 'aaa' , 'agg' ]
-```
-
-
-| Index | Value |
-| ----- | ----- |
-| 0     | atg   |
-| 1     | aaa   |
-| 2     | agg   |
-
-> The list index starts at 0
 
 #### Command line parameters: A Special Built-in List
 
@@ -2653,13 +2654,21 @@ Lists are data types that store a collection of data.
 - Lists can grow and shrink
 - Values are mutable
 
+```python
+[ 'atg' , 'aaa' , 'agg' ]
+```
+
 #### Tuples
 
 - Tuples are used to store an ordered, *indexed* collection of data.
 - Values are separated by commas
-- Values are enclosed in square brackets '()'
+- Values are enclosed in parentheses '()'
 - Tuples can **NOT** grow or shrink
 - Values are immutable
+
+```python
+( 'Jan' , 'Feb' , 'Mar' , 'Apr' , 'May' , 'Jun' , 'Jul' , 'Aug' , 'Sep' , 'Oct' , 'Nov' , 'Dec' )
+```
 
 #### Back to Lists
 
