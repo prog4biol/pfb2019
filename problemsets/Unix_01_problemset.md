@@ -77,8 +77,7 @@ date ; sleep 2 ; date
 
 
 __Redirect STDOUT__  
-You can redirect the output of a command into a file
-
+You can redirect the output of a command into a file. [Get the file](https://github.com/prog4biol/pfb2018/edit/master/problemsets/Unix_01_problemset.md#get-cuffdiff)
 ```
 cd ~
 grep Chr7 cuffdiff.txt > fav_chr_cuffdiff.txt
@@ -169,7 +168,7 @@ Problem Set
 
 8. Rename `sequences.nt.fa` to `cancer_genes.fasta`. (Hint: read the man page for mv)
 
-9. Copy this remote file: <https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/cuffdiff.txt> to your problemset directory.
+<div id="get-cuffdiff"></a>9. Copy this remote file: <https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/cuffdiff.txt> to your problemset directory.
 
 10. Do the following to `cuffdiff.txt`. The descriptions of each column in the file are in the table below.
     - Look at the first few lines of the file
