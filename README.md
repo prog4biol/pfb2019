@@ -2318,6 +2318,7 @@ AUGCUGCAUU
 
 Parts of a string can be located based on position and returned. This is because a string is a sequence. Coordinates start at 0. You add the coordinate in square brackets after the string's name. 
 
+You can get to any part of a string with the following syntax [start : end : step].  
 
 This string 'ATTAAAGGGCCC' is made up of the following sequence of characters, and positions (starting at zero).
 
@@ -2373,6 +2374,20 @@ Let's return the last 3 characters.
 CCC
 ```
 > When the second argument is left blank and the first argument is negative (-X), X characters from the end of the string are returned.
+
+
+Reverse a string or a list with object[::-1]. 
+
+Leave the start and end empty and just use the step as -1.
+
+For a string:
+
+```python
+>>> dna='GATGGG'
+>>> dna[::-1]
+'GGGTAG'
+```
+
 
 #### Locate and Report
 
