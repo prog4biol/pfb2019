@@ -304,11 +304,13 @@ In this course, we will be writing Python scripts and running them exclusively f
 #### Logging into Your Workstation
 
 
-Your workstation is an iMac. To log into it, provide the following information:
+Your workstation is an iMac. To log into it, provide your user name and password. Your username will be the first letter of your first name and two first letters of your last. You can check your username [here](https://github.com/prog4biol/pfb2018/blob/master/usernames.md).
 
-_Your username:_ admin
+For example, for Sofia Robb her username will be sro. The password is cshl.
 
-_Your password:_ admin
+_Your username:_ sro
+
+_Your password:_ cshl
 
 #### Bringing up the Command-Line 
 
