@@ -1,24 +1,42 @@
 | name | id |
 |------|-----|
-| Ahmed Moustafa | amo |
-|Elizabeth Miller| emi|
-|Christiane Alves | cal|
-|Scott Friedland|sfr|
-|Eric Hill|ehi|
-|Maxim Gerashchenko|mge|
-|Jannine Forst|jfo|
-|Francesca Jean|fje|
-|Mandy Wong|mwo|
-|Mustafa Jibrin|mji|
-|Miriam Feuerman|mfe|
-|Julie Chaves|jch|
-|Ragini Bhargava |rbh|
 |Ashley Chin|ach|
-|Bushra Gorsi|bgo|
-|Matthew Waas|mwa|
-|Stephanie Lam|sla|
+|Ahmed Moustafa|amo|
 |August Thies|ath|
+|Bushra Gorsi|bgo|
+|Christiane Alves|cal|
 |Christina Hodson|cho|
-|Stella Paffenholz|spa|
-|Magda Lewandowska|mle|
 |Caitlin Spaulding|csp|
+|Eric Hill|ehi|
+|Elizabeth Miller| emi|
+|Francesca Jean|fje|
+|Julie Chaves|jch|
+|Jacqueline Giovanniello|jgi|
+|Jannine Forst|jfo|
+|Jessen Bresdon|jbr|
+|Joseph Orkin|jok|
+|Kirsten Gotting|kgo|
+|Lukas Kuderna|lku|
+|Miriam Feuerman|mfe|
+|Maxim Gerashchenko|mge|
+|Mustafa Jibrin|mji|
+|Magda Lewandowska|mle|
+|Matthew Waas|mwa|
+|Mandy Wong|mwo|
+|Ragini Bhargava |rbh|
+|Scott Friedland|sfr|
+|Stephanie Lam|sla|
+|Stella Paffenholz|spa|
+|Shasta Webb|swe|
+|Zhezhen Yu|zyu|
+
+
+
+
+
+
+
+
+
+
+
