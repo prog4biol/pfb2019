@@ -257,7 +257,7 @@ Sofia Robb
 
 Why is it important for **biologists** to learn to program?
 
-You probably already know the answer to this question since you are here.   
+You might already know the answer to this question since you are here.   
 
 We firmly believe that knowing how to program is just as essential as knowing how to run a gel or set up a PCR reaction. The data we now get from a single experiment can be overwhelming. This data often needs to be reformatted, filtered, and analyzed in unique ways. Programming allows you to perform these tasks in an **efficient** and **reproducible** way.
 
@@ -291,17 +291,15 @@ What are our tips for having a successful programming course?
 
 #### What is the Command-Line?
 
-Underlying the pretty Mac OSX GUI is a powerful command-line operating system. The command-line gives you access to the internals of the OS, and is also a convenient way to write custom software and scripts.  
+Underlying the pretty Mac OSX Graphical User Interface (GUI) is a powerful command-line operating system (OS). The command-line gives you access to the internals of the OS, and is also a convenient way to write custom software and scripts.  
 
 
-Many bioinformatics tools are written to run on the command-line and have no graphical interface. In many cases, a command-line tool is more versatile than a graphical tool, because you can easily combine command-line tools into automated scripts that accomplish tasks without human intervention.  
+Many bioinformatics tools are written to run on the command-line and have no Graphical User Interface. In many cases, a command-line tool is more versatile than a graphical tool, because you can easily combine command-line tools into automated scripts that accomplish tasks without human intervention.  
 
 
-In this course, we will be writing Python scripts that are completely command-line based.
+In this course, we will be writing Python scripts and running them exclusively from the command-line based.
 
 ### The Basics
-
-
 
 #### Logging into Your Workstation
 
@@ -310,7 +308,7 @@ Your workstation is an iMac. To log into it, provide the following information:
 
 _Your username:_ admin
 
-_Your password:_ cshl
+_Your password:_ admin
 
 #### Bringing up the Command-Line 
 
@@ -324,7 +322,7 @@ To bring up the command-line, use the Finder to navigate to _Applications->Utili
 You can open several Terminal windows at once. This is often helpful.
 
 
-You will be using this application a lot, so I suggest that you drag the Terminal icon into the shortcuts bar at the bottom of your screen.
+You will be using the Terminal application a lot, so I suggest that you drag its icon into the shortcuts bar at the bottom of your screen.
 
 
 #### OK. I've Logged in.  What Now?
@@ -335,7 +333,7 @@ The terminal window is running **shell** called "bash." The shell is a loop that
 2. Reads a line of input from the keyboard
 3. Parses the line into one or more commands
 4. Executes the commands (which usually print some output to the terminal)
-5. Go back 1.
+5. Go back step 1.
 
 
 There are many different shells with bizarre names like **bash**, **sh**, **csh**, **tcsh**, **ksh**, and **zsh**.  The "sh" part means shell.  Each shell has different and somewhat confusing features. We have set up your accounts to use **bash**.  Stay with **bash** and you'll get used to it, eventually.
@@ -344,7 +342,7 @@ There are many different shells with bizarre names like **bash**, **sh**, **csh*
 #### Command-Line Prompt
 
 
-Most of bioinformatics is done with command-line software, so you should take some time to learn to use the shell effectively.
+Most of bioinformatics is done by running command-line software in a shell, so you should take some time to learn to use the shell effectively.
 
 
 This is a command-line prompt:
@@ -860,7 +858,6 @@ Here are a few more advanced Unix commands that are very useful and when you hav
 
 ### [Link to Unix 1 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Unix_01_problemset.md)
 
-
 ---
 ## Unix 2
 
@@ -1057,14 +1054,13 @@ If you are ever wondering what do you need to add to your remote repository use 
 | `git status` | To see a list of files that have been modified, deleted, and those that are untracked |
 
 
-#### Links to *Slightly* less basic topics  
+#### Links to *slightly* less basic topics  
 
 You will KNOW if you need to use these features of git.
 
 1. [View Commit History](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)
 2. [Resolving Merge Conflicts](https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/)
 3. [Undoing Previous Commits](https://github.com/blog/2019-how-to-undo-almost-anything-with-git)
-
 
 ---
 
@@ -1100,8 +1096,6 @@ Python has
 
 **Methods** are just functions that belong to a class. Objects that belong to the a class can use methods from that class.
 
-<p>&nbsp;</p>
-
 ### Running Python
 
 There are two versions of Python: Python 2 and Python 3. We will be using 3. This version fixes some of the problems with Python 2 and breaks some other things. A lot of code has already been written for Python 2 (it's older), but going forwards, more and more new code development will use Python 3.
@@ -1127,10 +1121,11 @@ Hello, PFB2018!
 
 
 
-#### Python Scripts
+#### Python Scripts are Text Files
 
 * The same code from above is typed into a text file using a text editor.
 * Python scripts are always saved in files whose names have the extension '.py' (i.e. the filename ends with '.py').
+* We could call the file `hello.py`
 
 File Contents:  
 ```python
@@ -1144,10 +1139,10 @@ Typing the Python command followed by the name of a script makes Python execute 
 Execute the Python script like this (% represents the prompt)
 
 ```bash
-% python3 test.py 
+% python3 hello.py 
 ```
 
-This produces the following result:
+This produces the following resul in the Terminal:
 ```bash
 Hello, PFB2018!
 ```
@@ -1156,30 +1151,30 @@ Hello, PFB2018!
 
 If you make your script executable, you can run it without typing `python3` first. Use `chmod` to change the permissions on the script like this
 
-`chmod +x test.py`
+`chmod +x hello.py`
 
 You can look at the permissions with 
 
 ```
-% ls -l test.py 
--rwxr-xr-x  1 sprochnik  staff  60 Oct 16 14:29 test.py
+% ls -l hello.py 
+-rwxr-xr-x  1 sprochnik  staff  60 Oct 16 14:29 hello.py
 ```
 
-The first field of -, r, w and x characters define the permissions of the file. The three 'x' characters means anyone can execute or run this script. 
+The first 10 characters you see displayed on the line have special meanings. The first character (`-`) tells you what kind of file `hello.py` is. `-` means a normal file, `d` a directory, `l` a link. The next nine characters come in three sets of three. The first set refers to the your permissions, the second set your group's permissions and the last set to everyone else. Each three character set shows in order `rwx` for read, write, execute. If someone doesn't have a permission, a `-` is displayed instead of a letter. The three 'x' characters means anyone can execute or run this script. 
 
-We also need to add a line at the beginning of the script that tells the shell to run python3 to interpret the script. This line starts with #, so it looks like a comment to python. The '!' is important as is the space between `env` and `python3`. The program `/usr/bin/env` looks for where `python3` is installed and runs the script with `python3`. The details may seem a bit complex, but you can just copy and paste this 'magic' line.
+We also need to add a line at the beginning of the script that tells the shell to run python3 to interpret the script. This line starts with `#`, so it looks like a comment to python. The `!` (exclamation mark or bang) is important as is the space between `env` and `python3`. The program `/usr/bin/env` looks for where `python3` is installed and runs the script with `python3`. The details may seem a bit complex, but you can just copy and paste this 'magic' line.
 
-The file test.py now looks like this
+The file hello.py now looks like this
 
 ```python
 #!/usr/bin/env python3
 print ("Hello, PFB2018!")
 ```
 
-Now you can simply type the name of the script to run it. Like this
+Now you can simply type the symbol for the current directory `.` follwed by a `/` and the name of the script to run it. Like this
 
 ```
-% ./test.py
+% ./hello.py
 Hello, PFB2018!
 ```
 
@@ -1190,7 +1185,6 @@ Hello, PFB2018!
 
 #### Python Identifiers
 
-
 A Python identifier is a name used to identify a variable, function, class, module or other object. An identifier starts with a letter A to Z or a to z or an underscore (_) followed by zero or more letters, underscores and digits (0 to 9).
 
 Python does not allow punctuation characters such as @, $, and % within identifiers. Python is a case sensitive programming language. Thus, `seq_id` and `seq_ID` are two different identifiers in Python.
@@ -1200,7 +1194,9 @@ Python does not allow punctuation characters such as @, $, and % within identifi
  * The first character is lowercase, unless it is a name of a class. Classes should begin with an uppercase characters. (ex. Seq)
  * Private identifiers begin with an underscore. (ex. `_private`)
  * Strong private identifiers begin with two underscores. (ex. `__private`)
- * Language-defined special names begin and end with two underscores. (ex. `__special__`)
+ * Python language-defined special names begin and end with two underscores. (ex. `__special__`)
+
+Picking good identifiers for the objects you name yourself is very important. Don't call your varaiables things like `items` or `my_list` or `data` or `var`. Except for where you have a very simple piece of code, or you are plotting a graph, don't call your objects `x` or `y` either. All these name examples are not decriptive of what kind of data you will find in the variable or object. Worse is to call a variable that contains gene identifiers `sequences`. Why is this such a bad idea? Think about what would happen if you filled your car up at a store labelled 'gas station' that sold lemonade. In computer science, names should always accurately describe the object they are attached to. This reduces possibility of bugs in your code, makes it much easier to understand if you come back to it after six months or share your code with someone and makes it faster to write code that works right. Even though it takes a bit of time and effort to think up a good name for an object, it will prevent so many problems in the future!
 
 #### Reserved Words
 
@@ -1222,26 +1218,28 @@ except
 
 #### Lines and Indentation
 
-Python denotes blocks of code by line indentation. Incorrect line spacing and/or indention will cause an error or could make your code run in a way you don't expect. You can get help with indentation from good text editors or Interactive Development Environments (IDEs).
+Python denotes a block of code by lines with the same level of indentation. This keeps lines of code that run together organized. Incorrect line spacing and/or indention will cause an error or can make your code run in a way you don't expect. You can get help with indentation from good text editors or Interactive Development Environments (IDEs).
 
-The number of spaces in the indentation need to be consistent but a specific number is not required. All lines of code, or statements, within a single block must be indented in the same way. For example:
+The number of spaces in the indentation need to be consistent but a specific number is not required. All lines of code, or statements, within a single block must be indented  the same amount. For example:
 
 ```python
 #!/usr/bin/env python3
+message = '' # make an empty variable
 for x in (1,2,3,4,5):
     if x > 4:
         print("Hello")
+        message = 'x is big'
     else: 
         print(x)
+        message = 'x is small'
+    print(message)
 print('All Done!')
 ```
 
 
-
-
 #### Comments
 
-Comments are an essential programming practice. Making a note of what a line or block of code is doing will help the writer and readers of the code. This includes you!
+Including comments in your code is an essential programming practice. Making a note of what a line or block of code is doing will help the writer and readers of the code. This includes you!
 
 Comments start with a pound or hash symbol `#`. All characters after this symbol, up to the end of the line are part of the comment and are ignored by Python. 
 
@@ -1260,7 +1258,6 @@ print ("Hello, PFB2018!") # this line prints output to the screen
 Blank lines are also important for increasing the readability of the code. You should separate pieces of code that go together with a blank line to make 'paragraphs' of code. Blank lines are ignored by the Python interpretor.
 
 
-
 ### Data Types and Variables
 
 This is our first look at variables and data types. Each data type will be discussed in more detail in subsequent sections. 
@@ -1274,29 +1271,22 @@ Numbers and strings are two common data types. Literal numbers and strings like 
 For Example:  
 ```python
 gene_count = 5
-gene_count = 10
+gene_length = 10
 ```
->You should give your variables names that help you understand what they store. gene_count, expression, sequences are all good identifiers or variable names. k, x, data, var1, var2 are bad because you can't tell what they store. This means it's harder to understand the script and to  spot errors or bugs in your script. 
->  
-> Good Variable names are:
->  1. self documenting
->  2. easy to read
->  3. make it easier to guess the type of data stored in a variable
+>Recall the section above on identifiers and naming objects (and variables are objects in python).
 
 Different types of data can be assigned to variables, i.e., integers (1,2,3), floats (floating point numbers, 3.1415), and strings (text).
 
 For Example:
 ```python
 count   = 10     # this is an integer
-average = 2.5    # this is a float
+average = 2.531    # this is a float
 message = "Welcome to Python" # this is a string
 ```
 
-10, 2.5, and "Welcome to Python" are singular pieces of data being stored in an individual variables.  
+10, 2.531, and "Welcome to Python" are singular (scalar) pieces of data and each is stored in its own variable.
 
-Collections of data can also be stored in special data types, i.e., tuples, lists, sets, and dictionaries. Generally, you should try to store like with like, so each element in the data type should be the same kind of data, like an expression value from RNA-seq or a count of how many exons are in a gene or a read sequence.  
-
- 
+Collections of data can also be stored in special data types, i.e., tuples, lists, sets, and dictionaries. You should always try to store like with like, so each element in the collection should be the same kind of data, like an expression value from RNA-seq or a count of how many exons are in a gene or a read sequence. Why do you think this might be?
 
 #### Tuples
 
@@ -1421,6 +1411,8 @@ We'll cover `dir()` in more detail later
 >>> data = 5
 >>> type(data)
 <class 'int'>
+>>> id(data)
+44990666544 
 ```
 
 
