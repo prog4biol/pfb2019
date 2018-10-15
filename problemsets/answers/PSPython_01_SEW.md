@@ -24,7 +24,7 @@ print(myName)
         ```
          My name: Sofia
         ```
-		```sh
+		```
 		$ vi aboutMe.py
 		```
 
@@ -38,13 +38,13 @@ print(myName)
  
     - Make it executable using `chmod` (only have to do this one time per script).
 
-	```sh
+	```
 	$ chmod +x aboutMe.py
 	```
 
     - Run it from the command line. 
 
-	```sh
+	```
 	$ aboutMe.py
 	```
 
@@ -69,7 +69,7 @@ print(myName)
 
   - Save it, and run it from the command line. 
 
-		```sh
+		```
 		$ aboutMe.py
 		```
 
@@ -95,7 +95,7 @@ print(myName)
 		```
    - Save it, and run it from the command line. 
 
-		```sh
+		```
 		$ aboutMe.py
 		```
 	
@@ -145,7 +145,7 @@ print(myName)
 
 5. Make sure to keep your remote repository synced with your local repo. (ADD/COMMIT/PUSH)
 
-	```sh
+	```
 	$ git add aboutMe.py
 	$ git commit -m 'adding aboutMe.py'
 	$ git push
