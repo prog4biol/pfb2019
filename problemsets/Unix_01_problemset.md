@@ -35,7 +35,7 @@ Quick Review
 
 ### Useful UNIX command examples to try
 
-**The files you need later in this review are in a folder on your Desktop!**
+**The files you need later in this review are in our [github repository](https://github.com/prog4biol/pfb2018). There will be direction on how to retrieve them**
 
 Let's go to a directory with a lot of files in it and list those files
 
@@ -153,7 +153,7 @@ Problem Set
     - How many files does it contain?
     - How many directories?
 
-4. Make a directory called `problemsets`.
+4. Make a directory called `problemsets` in your home directory.
 
 5. Navigate into this new directory called problemsets. Verify that you are in the correct directory by using `pwd`.
 
