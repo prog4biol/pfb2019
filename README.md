@@ -390,7 +390,7 @@ ccod/
 (~) 54%
 ```
 
-The command here is `ls -F` which produces a listing of files and directories in the current directory (more on that later).  Below its output, the command prompt appears again.
+The command here is `ls -F`, which produces a listing of files and directories in the current directory (more on that later).  Below its output, the command prompt appears again.
 
 
 Some programs will take a long time to run. After you issue their command names, you won't recover the shell prompt until they're done. You can either launch a new shell (from Terminal's File menu), or run the command in the background by adding an ampersand after the command
@@ -403,7 +403,7 @@ Some programs will take a long time to run. After you issue their command names,
 
 #### Command-Line Editing
 
-Most shells offer command-line editing.  Up until the comment you press <Enter>, you can go back over the command-line and edit it using the keyboard.  Here are the most useful keystrokes:
+Most shells offer command-line editing.  Up until the comment you press \<Enter\>, you can go back over the command-line and edit it using the keyboard.  Here are the most useful keystrokes:
 
 - _Backspace_: Delete the previous character and back up one.
 - _Left arrow_, right arrow: Move the text insertion point (cursor) one character to the left or right.
@@ -586,7 +586,7 @@ modes
 Many commands take arguments.  Arguments are often the names of one or more files to operate on.  Most commands also take command-line "switches" or "options", which fine-tune what the command does.  Some commands recognize "short switches" that consist of a minus sign `-` followed by a single character, while others recognize "long switches" consisting of two minus signs `--` followed by a whole word.
 
 
-The `wc` (word count) program is an example of a command that recognizes both long and short options.  You can pass it the `-c`,  `-w` and/or `-l` options to count the characters, words and lines in a text file, respectively.  Or you can use the longer but more readable, `--chars`,  `--words` or `--lines` options.  Both these examples count the number of characters and lines in the text file `/var/log/messages`:
+The `wc` (word count) program is an example of a command that recognizes both long and short options.  You can pass it the `-c`,  `-w` and/or `-l` options to count the characters, words, and lines in a text file, respectively.  Or you can use the longer but more readable `--chars`,  `--words` or `--lines` options.  Both these examples count the number of characters and lines in the text file `/var/log/messages`:
 
 ```
 (~) 102% wc -c -l /var/log/messages
@@ -606,12 +606,12 @@ Many commands will give a brief usage summary when you call them with the `-h` o
 
 #### Spaces and Funny Characters
 
-The shell uses whitespace (spaces, tabs and other non-printing characters) to separate arguments.  If you want to embed whitespace in an argument, put single quotes around it.  For example:
+The shell uses whitespace (spaces, tabs, and other non-printing characters) to separate arguments.  If you want to embed whitespace in an argument, put single quotes around it.  For example:
 
 ```
 mail -s 'An important message' 'Bob Ghost <bob@ghost.org>'
 ```
-This will send an e-mail to the fictitious person Bob Ghost.  The `-s` switch takes an argument, which is the subject line for the e-mail.  Because the desired subject contains spaces, it has to have quotes around it. Likewise, my name and e-mail address, which contains embedded spaces, must also be quoted in this way.
+This will send an e-mail to the fictitious person Bob Ghost.  The `-s` switch takes an argument, which is the subject line for the e-mail.  Because the desired subject contains spaces, it has to have quotes around it. Likewise, my name and e-mail address, which contain embedded spaces, must also be quoted in this way.
 
 
 Certain special non-printing characters have _escape codes_ associated with them:
@@ -638,8 +638,8 @@ Here are some commands that are used extremely frequently.  Use `man` to learn m
 | `mv`    | Rename or move a file or directory.      |
 | `cp`    | Copy a file.                             |
 | `rm`    | Remove (delete) a file.                  |
-| `mkdir` | Make a directory                         |
-| `rmdir` | Remove a directory                       |
+| `mkdir` | Make a directory.                         |
+| `rmdir` | Remove a directory.                       |
 | `ln`    | Create a symbolic or hard link.          |
 | `chmod` | Change the permissions of a file or directory. |
 
@@ -672,7 +672,7 @@ Here are some commands that are used extremely frequently.  Use `man` to learn m
 | `ssh`                  | A secure (encrypted) way to log into machines. |
 | `scp`                  | A secure way to copy (cp) files to and from remote machines. |
 | `ping`                 | See if a remote host is up.              |
-| `ftp`/ `sftp` (secure) | transfer files using the File Transfer Protocol. |
+| `ftp`/ `sftp` (secure) | Transfer files using the File Transfer Protocol. |
 
 #### Standard I/O and Redirection
 
@@ -689,13 +689,13 @@ Every Unix program starts out with three connections to the outside world.  Thes
 | standard output | This stream is initially attached to the terminal. Anything the program prints to this channel appears in your terminal window. |
 | standard error  | This stream is also initially attached to the terminal. It is a separate channel intended for printing error messages. |
 
-The word "initially" might lead you to think that standard input, output and error can somehow be detached from their starting places and reattached somewhere else.  And you'd be right.  You can attach
+The word "initially" might lead you to think that standard input, output, and error can somehow be detached from their starting places and reattached somewhere else.  And you'd be right.  You can attach
 one or more of these three streams to a file, a device, or even to another program.  This sounds esoteric, but it is actually very useful.
 
 #### A Simple Example
 
 
-The `wc` program counts lines, characters and words in data sent to its standard input.  You can use it interactively like this:
+The `wc` program counts lines, characters, and words in data sent to its standard input.  You can use it interactively like this:
 
 ```
 (~) 62% wc
@@ -708,7 +708,7 @@ whose fleece was white as snow.
 ^D
       6      20     107
 ```
-In this example, I ran the `wc` program.  It waited for me to type in a little poem.  When I was done, I typed the END-OF-FILE character, control-d (^d for short).  `wc` then printed out three numbers indicating the number of lines, words and characters in the input.
+In this example, I ran the `wc` program.  It waited for me to type in a little poem.  When I was done, I typed the END-OF-FILE character, control-d (^d for short).  `wc` then printed out three numbers indicating the number of lines, words, and characters in the input.
 
 More often, you'll want to count the number of lines in a big file; say a file filled with DNA sequences.  You can do this by _redirecting_ the contents of a file to the standard input of  `wc`. This uses
 the `<`  symbol:
@@ -752,7 +752,7 @@ These can be combined.  For example, this command redirects standard input from 
 (~) 66% grep root < /etc/passwd > search.out 2> search.err
 ```
 
-#### Filters, Filenames and Standard Input
+#### Filters, Filenames, and Standard Input
 
 Many Unix commands act as filters, taking data from a file or standard input, transforming the data, and writing the results to standard output.  Most filters are designed so that if they are called with one or more filenames on the command-line, they will use those files as input.  Otherwise they will act on standard input.  For example, these two commands are equivalent:
 
@@ -780,7 +780,7 @@ The coolest thing about the Unix shell is its ability to chain commands together
 (~) 65% grep gatttgc big_file.fasta | wc -l
 22
 ```
-There are two commands here. `grep` searches a file or standard input for lines containing a particular string.  Lines which contain the string are printed to standard output.  `wc -l` is the familiar word count program, which counts words, lines and characters in a file or standard input.  The `-l` command-line option instructs `wc` to print out just the line count.  The `|` character, which is known as a "pipe", connects the two commands together so that the standard output of `grep` becomes the standard input of `wc`. Think of pipes connecting streams of data flowing. 
+There are two commands here. `grep` searches a file or standard input for lines containing a particular string.  Lines which contain the string are printed to standard output.  `wc -l` is the familiar word count program, which counts words, lines, and characters in a file or standard input.  The `-l` command-line option instructs `wc` to print out just the line count.  The `|` character, which is known as a "pipe", connects the two commands together so that the standard output of `grep` becomes the standard input of `wc`. Think of pipes connecting streams of flowing data. 
 
 
 What does this pipe do?  It prints out the number of lines in which the string "gatttgc" appears in the file `big_file.fasta`.
@@ -848,7 +848,7 @@ Pipe the output of `tail -f` (which monitors a growing file and prints out the n
 
 ### Advanced Unix
 
-Here are a few more advanced Unix commands that are very useful and when you have time you should investigate further. We list the page numbers in the Internet Version (v3) of 'The Linux Command Line' by William Shotts.
+Here are a few more advanced Unix commands that are very useful, and when you have time you should investigate further. We list the page numbers in the Internet Version (v3) of 'The Linux Command Line' by William Shotts.
 
  - `awk` 
  - `sed` (p.295)
