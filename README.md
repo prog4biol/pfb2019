@@ -991,7 +991,7 @@ git push -u origin master
 
 You now have a repository!
 
-Let's back up a bit and talk more about git and about these commands. For basic git use, these are almost all the command you will need to know.
+Let's back up a bit and talk more about git and about these commands. For basic git use, these are almost all the commands you will need to know.
 
 Every git repository has three main elements called _trees_:
 1. _The Working Directory_ contains your files
@@ -1049,7 +1049,7 @@ If changes are made to any of these files in the online, remote repository, and 
 
 #### Keeping track of differences between local and remote repositories
 
-If you are ever wondering what do you need to add to your remote repository use the `git status` command. This will provide you a list of files that have been modified, deleted, and those that are untracked. Untracked files are those that have never been added to the staging area with `git add`
+If you are ever wondering what do you need to add to your remote repository use the `git status` command. This will provide you with a list of files that have been modified, deleted, and those that are untracked. Untracked files are those that have never been added to the staging area with `git add`
 
 | command                                 | description                              |
 | --------------------------------------- | ---------------------------------------- |
