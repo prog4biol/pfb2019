@@ -17,6 +17,7 @@ Python 1 Problem Set
     - On the command line make it executable using `chmod` (only have to do this one time per script).
     - Run it from the command line. 
     - Remember it is important to write only a bit, test, then write more.
+    - If it works, ADD/COMMIT. Make a good message, like "added name to print"
     - Now add some code to print out your favorite color:  
   
          ```
@@ -47,6 +48,6 @@ Python 1 Problem Set
     - try using commas to separate your print arguments. 
     - try using '+' to separate your print arguments.
 
-
-
 5. Make sure to keep your remote repository synced with your local repo. (ADD/COMMIT/PUSH)
+
+
