@@ -1078,7 +1078,7 @@ You will KNOW if you need to use these features of git.
 
 ### Python Overview
 
-Python is a scripting language. It is useful for writing medium-sized scientific coding projects. When you run a Python script, the Python program will generate byte code and interpret the byte code. This happens automatically and you don't have to worry about it. Compiled languages like C, C++ will run much faster, but are much much more complicated to program. Languages like java (which also gets compiled into byte code) are well suited to very large collaborative programming projects, but don't run as fast as C and are more complex that Python.
+Python is a scripting language. It is useful for writing medium-sized scientific coding projects. When you run a Python script, the Python program will generate byte code and interpret the byte code. This happens automatically and you don't have to worry about it. Compiled languages like C and C++ will run much faster, but are much much more complicated to program. Languages like Java (which also gets compiled into byte code) are well suited to very large collaborative programming projects, but don't run as fast as C and are more complex that Python.
 
 Python has 
 
@@ -1131,7 +1131,7 @@ Hello, PFB2018!
 
 File Contents:  
 ```python
-print ("Hello, PFB2018!")
+print("Hello, PFB2018!")
 ```
 
 #### Running Python Scripts
@@ -1170,7 +1170,7 @@ The file hello.py now looks like this
 
 ```python
 #!/usr/bin/env python3
-print ("Hello, PFB2018!")
+print("Hello, PFB2018!")
 ```
 
 Now you can simply type the symbol for the current directory `.` follwed by a `/` and the name of the script to run it. Like this
@@ -1187,22 +1187,22 @@ Hello, PFB2018!
 
 #### Python Variable Names
 
-A Python variable name is a name used to identify a variable, function, class, module or other object. An variable name starts with a letter A to Z or a to z or an underscore (_) followed by zero or more letters, underscores and digits (0 to 9).
+A Python variable name is a name used to identify a variable, function, class, module or other object. A variable name starts with a letter, `A` to `Z` or `a` to `z`, or an underscore (`_`) followed by zero or more letters, underscores, and digits (`0` to `9`).
 
-Python does not allow punctuation characters such as @, $, and % within variable name. Python is a case sensitive programming language. Thus, `seq_id` and `seq_ID` are two different variable names in Python.
+Python does not allow punctuation characters such as `@`, `$`, and `%` within a variable name. Python is a case sensitive programming language. Thus, `seq_id` and `seq_ID` are two different variable names in Python.
 
 #### Naming conventions for Python Variable Names
 
- * The first character is lowercase, unless it is a name of a class. Classes should begin with an uppercase characters. (ex. Seq)
+ * The first character is lowercase, unless it is a name of a class. Classes should begin with an uppercase characters. (ex. `Seq`)
  * Private variable names begin with an underscore. (ex. `_private`)
  * Strong private variable names begin with two underscores. (ex. `__private`)
  * Python language-defined special names begin and end with two underscores. (ex. `__special__`)
 
-Picking good variable names for the objects you name yourself is very important. Don't call your varaiables things like `items` or `my_list` or `data` or `var`. Except for where you have a very simple piece of code, or you are plotting a graph, don't call your objects `x` or `y` either. All these name examples are not decriptive of what kind of data you will find in the variable or object. Worse is to call a variable that contains gene variable names `sequences`. Why is this such a bad idea? Think about what would happen if you filled your car up at a store labelled 'gas station' that sold lemonade. In computer science, names should always accurately describe the object they are attached to. This reduces possibility of bugs in your code, makes it much easier to understand if you come back to it after six months or share your code with someone and makes it faster to write code that works right. Even though it takes a bit of time and effort to think up a good name for an object, it will prevent so many problems in the future!
+Picking good variable names for the objects you name yourself is very important. Don't call your variables things like `items` or `my_list` or `data` or `var`. Except for where you have a very simple piece of code, or you are plotting a graph, don't call your objects `x` or `y` either. All these name examples are not decriptive of what kind of data you will find in the variable or object. Worse is to call a variable that contains gene names as `sequences`. Why is this such a bad idea? Think about what would happen if you filled your car up at a store labelled 'gas station' that sold lemonade. In computer science, names should always accurately describe the object they are attached to. This reduces possibility of bugs in your code, makes it much easier to understand if you come back to it after six months or share your code with someone, and makes it faster to write code that works right. Even though it takes a bit of time and effort to think up a good name for an object, it will prevent so many problems in the future!
 
 #### Reserved Words
 
-The following is a list of Python keywords. These are special words that already have a purpose in python and therefore cannot be used as variable name.
+The following is a list of Python keywords. These are special words that already have a purpose in python and therefore cannot be used as variable names.
 
 ```
 and         exec        not
@@ -1222,7 +1222,7 @@ except
 
 Python denotes a block of code by lines with the same level of indentation. This keeps lines of code that run together organized. Incorrect line spacing and/or indention will cause an error or can make your code run in a way you don't expect. You can get help with indentation from good text editors or Interactive Development Environments (IDEs).
 
-The number of spaces in the indentation need to be consistent but a specific number is not required. All lines of code, or statements, within a single block must be indented  the same amount. For example:
+The number of spaces in the indentation need to be consistent, but a specific number is not required. All lines of code, or statements, within a single block must be indented the same amount. For example, using four spaces:
 
 ```python
 #!/usr/bin/env python3
@@ -1245,13 +1245,13 @@ Including comments in your code is an essential programming practice. Making a n
 
 Comments start with a pound or hash symbol `#`. All characters after this symbol, up to the end of the line are part of the comment and are ignored by Python. 
 
-The first line of a script starting with `#!` is a special example of a comment that also has the special function in unix of telling the unix shell how to run the script.
+The first line of a script starting with `#!` is a special example of a comment that also has the special function in Unix of telling the Unix shell how to run the script.
 
 ```python
 #!/usr/bin/env python3
 
 # this is my first script
-print ("Hello, PFB2018!") # this line prints output to the screen
+print("Hello, PFB2018!") # this line prints output to the screen
 ```
 
 
@@ -1264,20 +1264,20 @@ Blank lines are also important for increasing the readability of the code. You s
 
 This is our first look at variables and data types. Each data type will be discussed in more detail in subsequent sections. 
 
-The first concept to consider is that Python data types are either immutable (unchangeable) or not. Literal numbers, strings and tuples cannot be changed. Lists, dictionaries and sets can be changed. So can individual (scalar) variables. You can store data in memory by putting it in different kinds variables. You use the `=` sign to assign a value to a variable.
+The first concept to consider is that Python data types are either immutable (unchangeable) or not. Literal numbers, strings, and tuples cannot be changed. Lists, dictionaries, and sets can be changed. So can individual (scalar) variables. You can store data in memory by putting it in different kinds variables. You use the `=` sign to assign a value to a variable.
 
 #### Numbers and Strings
 
-Numbers and strings are two common data types. Literal numbers and strings like this `5` or `'my name is'`  are immutable. However, their values can be stored in variables and then changed.
+Numbers and strings are two common data types. Literal numbers and strings like this `5` or `'my name is'`  are immutable. However, their values can be stored in variables, which can be changed.
 
 For Example:  
 ```python
 gene_count = 5
 gene_length = 10
 ```
->Recall the section above on identifiers and naming objects (and variables are objects in python).
+>Recall the section above on variable and object names (and variables are objects in Python).
 
-Different types of data can be assigned to variables, i.e., integers (1,2,3), floats (floating point numbers, 3.1415), and strings (text).
+Different types of data can be assigned to variables, i.e., integers (`1`,`2`,`3`), floats (floating point numbers, `3.1415`), and strings (`"text"`).
 
 For Example:
 ```python
@@ -1286,7 +1286,7 @@ average = 2.531    # this is a float
 message = "Welcome to Python" # this is a string
 ```
 
-10, 2.531, and "Welcome to Python" are singular (scalar) pieces of data and each is stored in its own variable.
+`10`, `2.531`, and `"Welcome to Python"` are singular (scalar) pieces of data and each is stored in its own variable.
 
 Collections of data can also be stored in special data types, i.e., tuples, lists, sets, and dictionaries. You should always try to store like with like, so each element in the collection should be the same kind of data, like an expression value from RNA-seq or a count of how many exons are in a gene or a read sequence. Why do you think this might be?
 
@@ -1363,14 +1363,14 @@ Collections of data can also be stored in special data types, i.e., tuples, list
 
 Command line parameters follow the name of a script or program and have spaces between them. They allow a user to pass information to a script on the command line when that script is being run. Python stores all the pieces of the command line in a special list called `sys.argv`. 
 
-You need to import the sys module at the beginning of your script like this
+You need to import the `sys` module at the beginning of your script like this
 
 ```python
 #!/usr/bin/env python3
 import sys
 ```
 
-Let's imagine we have a script called friends.py. If you write this on the command line:
+Let's imagine we have a script called 'friends.py'. If you write this on the command line:
 ```bash
 $ friends.py Joe Anita
 ```
@@ -1392,8 +1392,8 @@ friend2 = sys.argv[2] # get second command line parameter
 print(friend1,'and',friend2,'are friends')
 ```
 
-The advantage of getting input from the user from the command line is that you can write a script that is general. It can print a message with any input the user provides. This makes it flexible. 
-The user also supplies all the data the script needs on the command line so the script doesn't have to ask the user to input a name and wait til the user does this. The script can run on its own with no further interaction from the user. This frees the user to work on something else. Very handy!
+The advantage of getting input from the user from the command line is that you can write a script that is general. It can print a message with any input the user provides. This makes it flexible.
+The user also supplies all the data the script needs on the command line so the script doesn't have to ask the user to input a name and wait until the user does this. The script can run on its own with no further interaction from the user. This frees the user to work on something else. Very handy!
 
 #### What kind of object am I working with?
 
