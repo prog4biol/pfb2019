@@ -64,7 +64,7 @@ Python 4 Problem Set -- Lists and Loops
       
 11. Write a new script to create a list with the following data  `['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']`. Use a `for` loop to iterate through each element of this list and:
    - Print out each element.
-   - Print out the length and the sequence. The output should look like:
+   - Print out the length and the sequence, separared by a tab. The output should look like:
    
    ```
    14	ATGCCCGGCCCGGC
