@@ -2689,6 +2689,13 @@ Lists are data types that store a collection of data.
 ( 'Jan' , 'Feb' , 'Mar' , 'Apr' , 'May' , 'Jun' , 'Jul' , 'Aug' , 'Sep' , 'Oct' , 'Nov' , 'Dec' )
 ```
 
+Many functions and methods return tuples like `math.modf(x)`.	This function returns the fractional and integer parts of `x` in a two-item tuple. Here the is no reason to change this sequence.
+
+```python
+>>> math.modf(2.6)
+(0.6000000000000001, 2.0)
+```
+
 #### Back to Lists
 
 #### Accessing Values in Lists
@@ -2777,6 +2784,8 @@ This works in exactly the same way with lists as it does with strings. This is b
 | 3     | aac   |
 | 4     | cgc   |
 | 5     | acg   |
+
+use the syntax [start : end : step] to slice and dice your python seqeunce 
 
 ```python
 >>> codons = [ 'atg' , 'aaa' , 'agg' , 'aac' , 'cgc' , 'acg']
@@ -3030,7 +3039,7 @@ three
 four
 ```
 
-This is next example is using a for loop to iterating over a string. Remember a string is a sequence like a list. Each character has a position. Look back at "Extracting a Substring, or Slicing" in the [Strings](#strings) section to see other ways that strings can be treated like lists.
+This next example is using a for loop to iterating over a string. Remember a string is a sequence like a list. Each character has a position. Look back at "Extracting a Substring, or Slicing" in the [Strings](#strings) section to see other ways that strings can be treated like lists.
 
 Code:
 ```python
@@ -3156,7 +3165,7 @@ Completed for loop
 
 #### Loop Control
 
-Loops control statements allow for altering the normal flow of execution. 
+Loop control statements allow for altering the normal flow of execution. 
 
 | Control Statement | Description                              |
 | ----------------- | ---------------------------------------- |
@@ -3309,7 +3318,7 @@ Here is an example of using mathematical operators to generate a list:
 ### Dictionaries
 
 
-Dictionaries are another iterable, like a string and list. Unlike strings and lists, dictionaries are not a sequence, or in other words, they are unordered and the position is not important. 
+Dictionaries are another iterable, like a string and list. Unlike strings and lists, dictionaries are not a sequence, or in other words, they are __unordered__ and the position is not important. 
 
 Dictionaries are a collection of key/value pairs. In Python, each key is separated from its value by a colon (:), the items are separated by commas, and the whole thing is enclosed in curly braces. An empty dictionary without any items is written with just two curly braces, like this: `{}`
 
@@ -3346,7 +3355,7 @@ To retrieve a single value in a dictionary use the value's key in this format `d
 >>> genes['TP53']
 GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 ```
-> The sequence of the gene TP53 is stored as a value of the key 'TP53'. We can assess the sequence by using the key in this format dict[key]
+> The sequence of the gene TP53 is stored as a value of the key 'TP53'. We can access the sequence by using the key in this format dict[key]
 
 The value can be accessed and passed directly to a function or stored in a variable.
 ```python
@@ -3385,7 +3394,7 @@ Other assignment operators can also be used to change a value of a dictionary ke
 >>> print(genes)
 {'BRCA1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA', 'TP53': 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTG'}
 ```
-> Here we have used the '+=' concatenation assignment operator. This is equivalent to  genes['TP53'] = genes['TP53'] + 'TAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTG'.
+> Here we have used the '+=' concatenation assignment operator. This is equivalent to  `genes['TP53'] = genes['TP53'] + 'TAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTG'`.
 
 #### Accessing Each Dictionary Key/Value
 
@@ -3546,7 +3555,7 @@ Union, intersection, difference and symmetric difference can be done with sets
 
 The difference between two sets are the elements that are unique to the set to the left of the `-` operator, with duplicates removed.
 
-![Set Difference](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images//set_difference.png)
+![Set Difference](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/set_difference.png)
 
 ```python
 >>> a = set('abracadabra')
@@ -3560,7 +3569,7 @@ The difference between two sets are the elements that are unique to the set to t
 
 The union between two sets is a sequence of the all the elements of the first and second sets combined, with duplicates removed.
 
-![Set Union](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images//set_union.png)
+![Set Union](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/set_union.png)
 
 ```python
 >>> a = set('abracadabra')
@@ -3574,7 +3583,7 @@ The union between two sets is a sequence of the all the elements of the first an
 
 The intersection between two sets is a sequence of the elements which are in both sets, with duplicates removed.
 
-![Set Intersection](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images//set_intersection.png)
+![Set Intersection](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/set_intersection.png)
 
 ```python
 >>> a = set('abracadabra')
