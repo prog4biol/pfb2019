@@ -1999,7 +1999,7 @@ You can call `dir()` on any object, most often, you'll use it in the interactive
 - Double (")   
 - Triple (''' or """)   
 
-Notes about quotes:  
+Notes about quotation marks:  
 
 - Single and double quotes are equivalent.  
 - A variable name inside quotes is just the string identifier, not the value stored inside the variable.
