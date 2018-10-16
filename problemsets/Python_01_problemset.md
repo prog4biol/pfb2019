@@ -25,7 +25,7 @@ Python 1 Problem Set
         ```
    - Save it, and run it from the command line. 
    - Now add some code to create a variable with your favorite activity. Make sure to give your variable a descriptive name.
-   - Print out the variable with your favorite activity. You will need use a comma in your print statement to print text and your variable. `print("some text" , your_variable)`
+   - Print out the variable with your favorite activity. You will need to use a comma in your print statement to print text and your variable. `print("some text" , your_variable)`
 
        ```
          My name: Sofia
@@ -43,7 +43,10 @@ Python 1 Problem Set
         ```
         >>>  Remember, write a bit, then run your code, write some more, then run again. This makes code easier to debug. 
 
-4. Use `sys.argv` (make sure to import sys!!!) to retrieve your name, favorite color, favorite activity, and favorite animal from the command line. Remember to check out the [example in the notes](https://github.com/prog4biol/pfb2018#command-line-parameters-a-special-built-in-list)
+4. Use `sys.argv` (make sure to import sys!!!) to retrieve your name, favorite color, favorite activity, and favorite animal from the command line. Remember to check out the [example in the notes](https://github.com/prog4biol/pfb2018#command-line-parameters-a-special-built-in-list). Print all the variables in one print statement.
+ - try using commas to separate your print arguments. 
+ - try using '+' to separate your print arguments.
+
 
 
 5. Make sure to keep your remote repository synced with your local repo. (ADD/COMMIT/PUSH)
