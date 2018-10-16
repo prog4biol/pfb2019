@@ -16,6 +16,7 @@ Python 1 Problem Set
         ```
     - On the command line make it executable using `chmod` (only have to do this one time per script).
     - Run it from the command line. 
+    - Remember it is important to write only a bit, test, then write more.
     - Now add some code to print out your favorite color:  
   
          ```
@@ -24,7 +25,7 @@ Python 1 Problem Set
         ```
    - Save it, and run it from the command line. 
    - Now add some code to create a variable with your favorite activity. Make sure to give your variable a descriptive name.
-   - Print out the variable with your favorite activity:
+   - Print out the variable with your favorite activity. You will need use a comma in your print statement to print text and your variable. `print("some text" , your_variable)`
 
        ```
          My name: Sofia
@@ -40,7 +41,9 @@ Python 1 Problem Set
          My favorite activity: Coding
          My favorite animal: Chicken
         ```
-        >>>  Remeber, write a bit, then run your code, write some more, then run again. This makes code easier to debug. 
+        >>>  Remember, write a bit, then run your code, write some more, then run again. This makes code easier to debug. 
 
 4. Use `sys.argv` (make sure to import sys!!!) to retrieve your name, favorite color, favorite activity, and favorite animal from the command line. Remember to check out the [example in the notes](https://github.com/prog4biol/pfb2018#command-line-parameters-a-special-built-in-list)
+
+
 5. Make sure to keep your remote repository synced with your local repo. (ADD/COMMIT/PUSH)
