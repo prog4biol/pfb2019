@@ -1454,15 +1454,21 @@ __modulus__
 
 ![3 divided by 2 is 1 with a remainder of 1. Modulus returns the remainer](https://github.com/prog4biol/pfb2018/blob/master/images/modulus.png)
 
-__floor__
+__floor examples__
 
 ```python
+>>> 3/2
+1.5
 >>> 3//2
 1
 >>> -11/3
 -3.6666666666666665
 >>> -11//3
 -4
+>>> 11/3
+3.6666666666666665
+>>> 11//3
+3
 ```
 
 
@@ -1564,7 +1570,7 @@ Operators are listed in order of precedence. Highest listed first. Not all the o
 | `not in`                                 | Negative membership operator             |
 | `not` `or` `and`                         | logical operators                        |
 
-Note: Find out more about [bitwise operators](https://www.tutorialspoint.com/python/bitwise_operators_example.htm). We will see these operators used in the section on [Sets](https://github.com/prog4biol/pfb2018#set-operators).
+Note: Find out more about [bitwise operators](https://www.tutorialspoint.com/python/bitwise_operators_example.htm). 
 
 ### Truth
 
