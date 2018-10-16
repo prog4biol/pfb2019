@@ -953,7 +953,17 @@ git is the Version Control System we will be using for tracking changes in our f
 
 ### The Basics
 
+Usually you have a local copy of your project/repository and a remote copy. The __local__ repository is stored on your computer and the __remote__ is on a online service like GitHub.
+
+![Relationship between local and remote repistories](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/git_remotes.png)
+
+You can use a webbrowser to interact with the remote and the terminal to interact with the local repository.
+
+
+
 #### Creating a new repository 
+
+##### The Remote repository
 
 A repository is a project that contains all of the project files, and stores each file's revision history. Repositories can have multiple collaborators. Repositories usually have two components, one remote and one local.
 
@@ -975,9 +985,26 @@ Follow Steps 1 and 2 to create the remote repository. Follow Step 3 to create yo
   ![Create a directory on your computer and follow these instructions.](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/github-newRepoInstructions.png)  
 
 
-   - Open your terminal and navigate to the location you want to put a directory for your problem sets
-   - Create a new directory directory (i.e., PFB_problemsets)
-   - Follow the instructions provided when you created your repository. These are my instructions, yours will be different.
+
+
+##### The Local repository
+
+To create a local repository follow the steps you get when you create the remote repository. These steps help you create a a local repository and then **how to link it to your remote**
+
+
+
+
+![Local repository has three trees](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/trees.png)
+
+Every git repository has three main elements called _trees_: 
+1. _The Working Directory_ contains your files
+2. _The Index_ is the staging area
+3. _The HEAD_ points to the last commit you made.
+
+The new local repository consists of three "trees" maintained by git. The first one is your "Working Directory" which holds the actual files. the second one is the "Index" which acts as a staging area and finally the "HEAD" which points to the last commit you've made.
+
+   - Open your terminal and navigate to and create a directory (i.e., PFB_problemsets) where you want to put your local repository.
+   - Follow the instructions provided when you created your remote repository. These are my instructions, yours will be different.
 
 ```
 echo "# PFB_problemsets" >> README.md
@@ -988,35 +1015,15 @@ git remote add origin https://github.com/srobb1/PFB_problemsets.git
 git push -u origin master
 ```
 
-
-You now have a repository!
-
-Let's back up a bit and talk more about git and about these commands. For basic git use, these are almost all the commands you will need to know.
-
-Every git repository has three main elements called _trees_:
-1. _The Working Directory_ contains your files
-2. _The Index_ is the staging area
-3. _The HEAD_ points to the last commit you made.
-> There are a few new words here, we will explain them as we go
-
 | command                                 | description                              |
 | --------------------------------------- | ---------------------------------------- |
-| `git init`                              | Creates your new local repository with the three trees on (local machine) |
+| `git init`                              | Creates your new local repository with the three trees on local machine)
 | `git remote add remote-name URL`        | Links your local repository to a __remote__ repository that is often named _origin_ and is found at the given URL. |
 | `git add filename`                      | Propose changes and add file(s) with changes to the index or staging area (local machine) |
 | `git commit -m 'message'`               | Confirm or commit that you really want to add your changes to the HEAD (local machine) |
 | `git push -u remote-name remote-branch` | Upload your committed changes in the HEAD to the specified remote repository to the specified branch |
 
-
-Let's Do it!
-
-1. Make sure you are in your local repository
-2. Create a new file with nano: `nano git_exercises.txt`
-3. Add a line of text to the new file.
-4. Save (control + o) and Exit (control + x)
-5. (Add) Stage your changes. `git add git_exercises.txt`
-6. (Commit) Become sure you want your changes your changes. `git commit -m 'added a line of text'`
-7. (Push) Sync/Upload your changes to the __remote__ repository. `git push origin master`
+You now have a **local** repository that is linked to a **remote**. `git remote add` connects your local to the remote. Before this command the local will know nothing about your remote and vice versa. 
 
 That is all there is to it! There are more complicated things you can do but we won't get into those. You will know when you are ready to learn more about git when you figure out there is something you want to do but don't know how. There are thousands of online tutorials for you to search and follow.
 
@@ -1024,7 +1031,7 @@ That is all there is to it! There are more complicated things you can do but we 
 
 Sometimes you want to download and use someone else's repository. 
 
-Let's clone the course material.
+Let's clone the course material. Make sure to not clone a repository in an existing git repository.
 
 Let's do it!
 
