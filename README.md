@@ -2794,10 +2794,10 @@ This works in exactly the same way with lists as it does with strings. This is b
 >>> print (codons[0:3])
 ['atg', 'aaa', 'agg']
 ```
-> `codons[1:3]` returns every value starting with the value of codons[1] up to but not including codons[3]
-> `codons[3:]` returns every value starting with the value of codons[3] and every value after.
-> `codons[:3]` returns every value up to but not including codons[3]
-> `codons[0:3]` is the same as `codons[:3]`
+> `codons[1:3]` returns every value starting with the value of codons[1] up to but not including codons[3]  
+> `codons[3:]` returns every value starting with the value of codons[3] and every value after.  
+> `codons[:3]` returns every value up to but not including codons[3]  
+> `codons[0:3]` is the same as `codons[:3]`   
 
 
 #### List Operators
