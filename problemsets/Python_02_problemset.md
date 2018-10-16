@@ -9,7 +9,7 @@ GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
 
 2. How about 'TTT'?
 
-3. Save the DNA string to a variable and do [1 and 2](https://github.com/prog4biol/pfb2018#membership-operators) again.
+3. If you didn't already save the DNA string to a variable, do that now and redo [1 and 2](https://github.com/prog4biol/pfb2018#membership-operators).
 
 4. In the interpretor use `bool` to test a variety of values like '', 0, 0.0, FALSE, false, True, true, 'True', 'False' to see if they evalue to True or False.
 
