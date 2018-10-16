@@ -2002,7 +2002,7 @@ You can call `dir()` on any object, most often, you'll use it in the interactive
 Notes about quotation marks:  
 
 - Single and double quotes are equivalent.  
-- A variable name inside quotes is just the string identifier, not the value stored inside the variable.
+- A variable name inside quotes is just the string identifier, not the value stored inside the variable. `format()` is useful for variable interpolation in python 
 - Triple quotes are used before and after a string that spans multiple lines.  
 
 Use of quotation examples:  
@@ -2018,7 +2018,7 @@ on and on.
 
 #### Strings and the `print()` function
 
-We saw examples of `print()` earlier. Lets talk about it a bit more.  `print()` is a function that takes one or more comma-separated arguments. 
+We saw examples of `print()` earlier. Lets talk about it a bit more.  `print()` is a function that takes one or more comma-separated arguments.
 
 Let's use the `print()` function to print a string.  
 ```python
@@ -2096,12 +2096,12 @@ TTT
 ```
 > The new value of the variable 'dna' is printed to the screen when `dna` is an argument for the `print()` function.
 
-#### Errors and Printing
+#### `print()` and Common Errors
 
 Let's look at the typical errors you will encounter when you use the `print()` function.
 
 What will happen if you forget to close your quotes?
-```python
+```
 >>> print("GGTCTAC)
   File "<stdin>", line 1
     print("GGTCTAC)
@@ -2116,9 +2116,6 @@ What will happen if you forget to enclose a string you want to print in quotes?
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 NameError: name 'GGTCTAC' is not defined
->>> GGTCTAC = 5  # define a variable
->>> print(GGTCTAC)
-5
 ```
 > We get a 'NameError' when the literal string is not enclosed in quotes because Python is looking for a variable with the name GGTCTAC
 
@@ -2258,7 +2255,7 @@ Let's create a new string object.
 ```python
 dna = "ATGCTTG"
 ```
-> Look familiar? It should!!! Creating a string object is what we have been doing all along!!! Jeez!!!
+> Look familiar?
 
 Now that we have a string object we can use string methods. The way you use a method is to put a '.' between the object and the method name.
 ```python
@@ -2310,7 +2307,18 @@ attgct
 
 #### Find and Count
 
-`count(str)` returns the number of exact matches of `str` it found (as an int)
+The positional index of an exact string in a larger string can be found and returned with the string method 
+`find()`. An exact string is given as an argument and the index of its first occurrence is returned. -1 is returned if it is not found.
+
+```python
+>>> dna = 'ATTAAAGGGCCC'
+>>> dna.find('T')
+1
+>>> dna.find('N')
+-1
+```
+
+> The substring 'T' is found for the first time at index 1 in the string 'dna' so 1 is returned. The substring 'N' is not found, so -1 is returned.`count(str)` returns the number (as an int) of exact matches of str it found
 
 ```python
 >>> dna = 'ATGCTGCATT'
@@ -2320,7 +2328,7 @@ attgct
 > The number of times 'T' is found is returned. The string stored in 'dna' is not altered.
 
 
-#### Find and Replace
+#### Replace one string with another
 
 `replace(str1,str2)` returns a new string with all matches of `str1` in a string replaced with `str2`. 
 
@@ -2364,7 +2372,14 @@ This string 'ATTAAAGGGCCC' is made up of the following sequence of characters, a
 | 10             | C         |
 | 11             | C         |
 
-Let's return the 4th, 5th, and 6th nucleotides. To do this, we need to count like a computer and start our string at 0 and return the 3rd, 4th, and 5th characters. This will be everything from 3 to 6. Python counts the gaps before each character in the string, starting at 0.
+Let's return the 4th, 5th, and 6th nucleotides. To do this, we need to start counting at 0 and remember that python counts the gaps between each character. 
+
+```
+index      0   1   2   3   4   5   6   7   8 ...
+string       A   T   T   A   A   A   G   G  ...
+```
+
+
 
 ```python
 >>> dna = 'ATTAAAGGGCCC'
@@ -2400,38 +2415,22 @@ CCC
 ```
 > When the second argument is left blank and the first argument is negative (-X), X characters from the end of the string are returned.
 
+#### Reverse a string or a list
 
-Reverse a string or a list with object[::-1]. 
+ There is no reverse function, you need to use a slice with step -1 and empty start and end.
 
-Leave the start and end empty and just use the step as -1.
-
-For a string:
+For a string, it looks like this
 
 ```python
->>> dna='GATGGG'
+>>> dna='GATGAA'
 >>> dna[::-1]
-'GGGTAG'
+'AAGTAG'
 ```
-
-
-#### Locate and Report
-
-The positional index of an exact string in a larger string can be found and returned with the string method 
-`find()`. An exact string is given as an argument and the index of its first occurrence is returned. -1 is returned if it is not found.
-
-```python
->>> dna = 'ATTAAAGGGCCC'
->>> dna.find('T')
-1
->>> dna.find('N')
--1
-```
-> The substring 'T' is found for the first time at index 1 in the string 'dna' so 1 is returned. The substring 'N' is not found, so -1 is returned.
 
 
 #### Other String Methods
 
-Since these are methods, be sure to use in this format string.method().
+Since these are methods, be sure to use in this syntax `string.method()`.
 
 | function                       | Description                              |
 | ------------------------------ | ---------------------------------------- |
@@ -2453,17 +2452,17 @@ Lets look at this string:
 ```
 Let's split on 'xx' and get a list of the 0's  
 
-What is the 's' in `s.split('delim')` ?
+What is the 's' in `s.split(delim)` ?
 
-What is the 'delim' in `s.split('delim')` ?
+What is the 'delim' in `s.split(delim)` ?
 
 Let's try it:
 ```python
 >>> string_to_split='00000xx000xx000000000000xx0xx00'
 >>> string_to_split.split('xx')
 ['00000', '000', '000000000000', '0', '00']
->>> list_of_zeros = string_to_split.split('xx')
->>> print(list_of_zeros)
+>>> zero_parts = string_to_split.split('xx')
+>>> print(zero_parts)
 ['00000', '000', '000000000000', '0', '00']
 ```
 > We started with a string and now have a list with all the delimeters removed
@@ -2509,8 +2508,8 @@ Let's take a list of expression values and create a tab delimited string that wi
 >>> expression_values = ['4.73', '7.91', '3.65']
 >>>expression_values
 ['4.73', '7.91', '3.65']
->>> new_list_expression_values = '\t'.join(expression_values)
->>> new_list_expression_values
+>>> expression_value_string = '\t'.join(expression_values)
+>>> expression_value_string
 '4.73\t7.91\t3.65'
 ```
 > print this to a file and open it in Excel! It is beautiful!! 
@@ -2531,11 +2530,11 @@ This sequence: {} is {} nucleotides long and is found in {}.
 >>> print(new_string)
 This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.
 ```
-We put together the three variables and literal strings into a single string using the function `format()`. The original string is not altered, a new string is returned that incorporates the arguments. You can save the returned value in a new variable. Each `{}` is a placeholder for the strings that need to be inserted. 
+We put together the three variables and literal strings into a single string using the function `format()`. The original string is not altered, a new string is returned that incorporates the arguments. You can save the returned value in a new variable. Each `{}` is a placeholder for the string that needs to be inserted. 
 
 Something nice about `format()` is that you can print int and string variable types without converting first.
 
-You can also directly call the format function on a string inside a print function. Here are two examples
+You can also directly call `format()` inside a `print()` function. Here are two examples
 
 ```python
 >>> string = "This sequence: {} is {} nucleotides long and is found in {}."
@@ -2547,8 +2546,6 @@ Or you use the `format()` function on a literal string:
 >>> print( "This sequence: {} is {} nucleotides long and is found in {}.".format(dna,dna_len,gene_name))
 This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.
 ```
-> There is no need to store the string in a variable.
-
 #### The `format()` mini-language
 
 So far, we have just used `{}` to show where to insert the value of a variable in a string. You can add special characters inside the `{}` to change the way the variable is formatted when it's inserted into the string. 
@@ -2577,9 +2574,9 @@ Lets right justify some numbers.
 
 How about padding with zeroes? This means the five-character field will be filled as needed with zeroes to the left of any numbers you want to display
 ```python
->>> print( "{:>05}".format(2) )
+>>> print( "{:05}".format(2) )
 00002
->>> print( "{:>05}".format(20) )
+>>> print( "{:05}".format(20) )
 00020
 ```
 
@@ -2592,7 +2589,7 @@ Use a `<` to indicate left-justification.
 >>> print( "{:<5} genes".format(200) )
 200   genes
 ```
-Center aligning is done with `^` instead of `>` or `<`. You can also pad with characters other than 0. Here let's try `_` or underscore as in `:_^`.
+Center aligning is done with `^` instead of `>` or `<`. You can also pad with characters other than 0. Here let's try `_` or underscore as in `:_^`. The fill symbol goes before the alignment symbol.
 ```python
 >>> print( "{:_^10}".format(2) )
 ____2_____
@@ -2602,8 +2599,6 @@ ____20____
 ___200____
 
 ```
-> Text can be centered by using ':^10'. 10 of course is your column width. The '^' indicates center justification. In our example an underscore is used to replace the empty spaces to make things easier to see.
-
 
 #### Summary of special formatting symbols so far
 
