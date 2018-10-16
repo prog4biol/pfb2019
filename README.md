@@ -1450,6 +1450,28 @@ In Python we can write statements that perform mathematical calculations. To do 
 | `//`     | Floor Division (result is the quotient with digits after the decimal point removed. If one of the operands is negative, the result is floored, i.e., rounded away from zero | `3//2`  ; `-11//3` | 1 ; -4 |
 
 
+__modulus__
+
+![3 divided by 2 is 1 with a remainder of 1. Modulus returns the remainer](https://github.com/prog4biol/pfb2018/blob/master/images/modulus.png)
+
+__floor examples__
+
+```python
+>>> 3/2
+1.5
+>>> 3//2
+1
+>>> -11/3
+-3.6666666666666665
+>>> -11//3
+-4
+>>> 11/3
+3.6666666666666665
+>>> 11//3
+3
+```
+
+
 
 #### Assignment Operators  
 
@@ -1548,7 +1570,7 @@ Operators are listed in order of precedence. Highest listed first. Not all the o
 | `not in`                                 | Negative membership operator             |
 | `not` `or` `and`                         | logical operators                        |
 
-Note: Find out more about [bitwise operators](https://www.tutorialspoint.com/python/bitwise_operators_example.htm). We will see these operators used in the section on [Sets](https://github.com/prog4biol/pfb2018#set-operators).
+Note: Find out more about [bitwise operators](https://www.tutorialspoint.com/python/bitwise_operators_example.htm). 
 
 ### Truth
 
@@ -2772,10 +2794,10 @@ This works in exactly the same way with lists as it does with strings. This is b
 >>> print (codons[0:3])
 ['atg', 'aaa', 'agg']
 ```
-> `codons[1:3]` returns every value starting with the value of codons[1] up to but not including codons[3]
-> `codons[3:]` returns every value starting with the value of codons[3] and every value after.
-> `codons[:3]` returns every value up to but not including codons[3]
-> `codons[0:3]` is the same as `codons[:3]`
+> `codons[1:3]` returns every value starting with the value of codons[1] up to but not including codons[3]  
+> `codons[3:]` returns every value starting with the value of codons[3] and every value after.  
+> `codons[:3]` returns every value up to but not including codons[3]  
+> `codons[0:3]` is the same as `codons[:3]`   
 
 
 #### List Operators
