@@ -2,18 +2,19 @@ Python 1 Problem Set
 ==================
  
 
-1. Start up the Python Interactive Interpreter. Print out "Hello New York"
-2. Working with variables:
+1. Start up the Python Interactive Interpreter. 
+    - Print out "Hello New York"
     - Store your name in a variable
     - Print the contents of this variable.
-3. Working with a text editor. Using nano to write a script. 
+    
+2. Working with a text editor. Use nano to write a script. 
    - Make sure to include `#!/usr/bin/env python3` at the top!! 
-   - Print out, your name  
+   - Add code to print out, your name  
    
         ```
          My name: Sofia
         ```
-    - Make it executable using `chmod` (only have to do this one time per script).
+    - On the command line make it executable using `chmod` (only have to do this one time per script).
     - Run it from the command line. 
     - Now add some code to print out your favorite color:  
   
