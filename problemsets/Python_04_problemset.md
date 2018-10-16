@@ -47,7 +47,7 @@ Python 4 Problem Set -- Lists and Loops
 7. Sort the elements of the above list, then iterate through each element using a `for` loop and:
    - Print each element.
    - Calculate two cumulative sums, one of all the even values and one of all the odd values. 
-   - Print the only the final two sums. The output from your script should be:
+   - Print only the final two sums. The output from your script should be:
    
    ```
    Sum of even numbers: 150 
