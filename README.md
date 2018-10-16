@@ -869,7 +869,7 @@ Here are a few more advanced Unix commands that are very useful, and when you ha
 
 It is often necessary to create and write to a file while using the terminal. This makes it essential to use a terminal text editor. There are many text editors out there. Some of our favorite are Emacs and vim. We are going to start you out with a simple text editor called  `nano`
 
-The way you use nano to create a file is simply by typing the command _nano_ followed by the name of the file you wish to create.
+The way you use nano to create a file is simply by typing the command _nano_, followed by the name of the file you wish to create.
 
 ```
 (~) 71% nano firstFile.txt
@@ -897,14 +897,14 @@ Things to notice:
 
 Keyboard commands are the only way to interact with the editor. You cannot use your mouse or trackpad.
 
-Find more commands by using `control g`:  
+Find more commands by using `control g`  
 
 ![The help menu displays a listing of useful commands.](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/nano-help.png)  
 
 The Meta key is \<esc\>. To use the Meta+key, hit \<esc\>, release, then hit the following key
 
 Helpful commands:
--  Jump to a specific line:
+-  Jump to a specific line
     - control + _ then line number 
 -  Copy a block of highlighted text
     - control + ^ then move your cursor to start to highlight a block for copying 
@@ -933,7 +933,7 @@ Using a Version Control System makes it possible to edit a document with others 
 
 #### Storing Versions 
 
-A Version Control System allows you to save versions of your files and to attach notes to each version. Each save will contain information about the lines that were added or alted.
+A Version Control System allows you to save versions of your files and to attach notes to each version. Each save will contain information about the lines that were added or altered.
 
 #### Restoring Previous Versions  
 
@@ -960,7 +960,7 @@ A repository is a project that contains all of the project files, and stores eac
 
 Let's Do It!
 
-Follow Steps 1 and 2 to create the remote repository. Follow Step 3 to create your local repository and link it to the remote.
+Follow Steps 1 and 2 to create the remote repository. Follow Step 3 to create your local repository and link it to the remote repository.
 
 1. Navigate to GitHub --> Create Account / Log In --> Go To Repositories --> Click 'New'  
 
@@ -975,9 +975,9 @@ Follow Steps 1 and 2 to create the remote repository. Follow Step 3 to create yo
   ![Create a directory on your computer and follow these instructions.](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/github-newRepoInstructions.png)  
 
 
-   - Open your terminal and navigate to the location you want to put a directory for your problem sets
+   - Open your terminal and navigate to the location where you want to put a directory for your problem sets
    - Create a new directory directory (i.e., PFB_problemsets)
-   - Follow the instructions provided when you created your repository. These are my instructions, yours will be different.
+   - Follow the instructions provided when you created your repository. These are my instructions; yours will be different.
 
 ```
 echo "# PFB_problemsets" >> README.md
@@ -994,15 +994,15 @@ You now have a repository!
 Let's back up a bit and talk more about git and about these commands. For basic git use, these are almost all the commands you will need to know.
 
 Every git repository has three main elements called _trees_:
-1. _The Working Directory_ contains your files
-2. _The Index_ is the staging area
-3. _The HEAD_ points to the last commit you made.
-> There are a few new words here, we will explain them as we go
+1. The _Working Directory_ contains your files
+2. The _Index_ is the staging area
+3. The _HEAD_ points to the last commit you made.
+> There are a few new words here. We will explain them as we go
 
 | command                                 | description                              |
 | --------------------------------------- | ---------------------------------------- |
-| `git init`                              | Creates your new local repository with the three trees on (local machine) |
-| `git remote add remote-name URL`        | Links your local repository to a __remote__ repository that is often named _origin_ and is found at the given URL. |
+| `git init`                              | Creates your new local repository with the three trees (local machine) |
+| `git remote add remote-name URL`        | Links your local repository to a __remote__ repository that is often named _origin_ and is found at the given URL |
 | `git add filename`                      | Propose changes and add file(s) with changes to the index or staging area (local machine) |
 | `git commit -m 'message'`               | Confirm or commit that you really want to add your changes to the HEAD (local machine) |
 | `git push -u remote-name remote-branch` | Upload your committed changes in the HEAD to the specified remote repository to the specified branch |
@@ -1015,10 +1015,10 @@ Let's Do it!
 3. Add a line of text to the new file.
 4. Save (control + o) and Exit (control + x)
 5. (Add) Stage your changes. `git add git_exercises.txt`
-6. (Commit) Become sure you want your changes your changes. `git commit -m 'added a line of text'`
+6. (Commit) Become sure you want your changes. `git commit -m 'added a line of text'`
 7. (Push) Sync/Upload your changes to the __remote__ repository. `git push origin master`
 
-That is all there is to it! There are more complicated things you can do but we won't get into those. You will know when you are ready to learn more about git when you figure out there is something you want to do but don't know how. There are thousands of online tutorials for you to search and follow.
+That is all there is to it! There are more complicated things you can do, but we won't get into those. You will know when you are ready to learn more about git when you figure out there is something you want to do but don't know how. There are thousands of online tutorials for you to search and follow.
 
 #### Cloning a Repository
 
@@ -1039,7 +1039,7 @@ Now you have a copy of the course material on your computer!
 
 #### Bringing Changes in from the Remote Repository to your Local Repository
 
-If changes are made to any of these files in the online, remote repository, and you want to update your copy you can _pull_ the changes.
+If changes are made to any of these files in the online, remote repository, and you want to update your local copy, you can _pull_ the changes.
 `git pull`  
 
 | command                                 | description                              |
