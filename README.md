@@ -955,7 +955,7 @@ git is the Version Control System we will be using for tracking changes in our f
 
 Usually you have a local copy of your project/repository and a remote copy. The __local__ repository is stored on your computer and the __remote__ is on a online service like GitHub.
 
-![Relationship between local and remote repositories](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/git_remotes.png)
+![Relationship between local and remote repositories](https://github.com/prog4biol/pfb2018/blob/git_updates/images/git_remotes.png)
 
 You can use a webbrowser to interact with the remote and the terminal to interact with the local repository.
 
@@ -994,7 +994,7 @@ To create a local repository follow the steps you get when you create the remote
 
 
 
-![Local repository has three trees](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/trees.png)
+![Local repository has three trees](https://github.com/prog4biol/pfb2018/blob/git_updates/images/trees.png)
 
 Every git repository has three main elements called _trees_: 
 1. _The Working Directory_ contains your files
