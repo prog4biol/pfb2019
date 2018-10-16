@@ -1198,6 +1198,7 @@ Python does not allow punctuation characters such as `@`, `$`, and `%` within a 
  * Strong private variable names begin with two underscores. (ex. `__private`)
  * Python language-defined special names begin and end with two underscores. (ex. `__special__`)
 
+
 Picking good variable names for the objects you name yourself is very important. Don't call your variables things like `items` or `my_list` or `data` or `var`. Except for where you have a very simple piece of code, or you are plotting a graph, don't call your objects `x` or `y` either. All these name examples are not decriptive of what kind of data you will find in the variable or object. Worse is to call a variable that contains gene names as `sequences`. Why is this such a bad idea? Think about what would happen if you filled your car up at a store labelled 'gas station' that sold lemonade. In computer science, names should always accurately describe the object they are attached to. This reduces possibility of bugs in your code, makes it much easier to understand if you come back to it after six months or share your code with someone, and makes it faster to write code that works right. Even though it takes a bit of time and effort to think up a good name for an object, it will prevent so many problems in the future!
 
 #### Reserved Words
@@ -1215,7 +1216,7 @@ def         import      try
 del         in          while
 elif        is          with
 else        lambda      yield
-except
+except      list        hash
 ```
 
 #### Lines and Indentation
@@ -5450,7 +5451,6 @@ lines = args.line
 if args.out:
   print("writing output to", args.out)
 ```
-
 
 
 ### Many more modules that do many things
