@@ -23,7 +23,8 @@ Python 1 Problem Set
          My favorite color: Green
         ```
    - Save it, and run it from the command line. 
-   - Now add some code to print out your favorite activity:
+   - Now add some code to create a variable with your favorite activity. Make sure to give your variable a descriptive name.
+   - Print out the variable with your favorite activity:
 
        ```
          My name: Sofia
