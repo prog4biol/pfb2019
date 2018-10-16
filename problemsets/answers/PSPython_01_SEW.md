@@ -7,15 +7,19 @@
 
 1. Start up the Python Interactive Interpreter. Print out "Hello New York"
 
-python3
-print('"Hello New York"')
+	```
+	python3
+	print('"Hello New York"')
+	```
 
 2. Working with variables:
     - Store your name in a variable
     - Print the contents of this variable.
 
-myName = 'Shasta'
-print(myName)
+	```
+	myName = 'Shasta'
+	print(myName)
+	```
 
 3. Working with a text editor. Using nano to write a script. 
    - Make sure to include `#!/usr/bin/env python3` at the top!! 
@@ -122,7 +126,7 @@ print(myName)
 		print(myFavAnimal + "is my favorite animal.")	
 		```
 		
-        >>>  Remeber, write a bit, then run your code, write some more, then run again. This makes code easier to debug. 
+        >>>  Remember, write a bit, then run your code, write some more, then run again. This makes code easier to debug. 
 
 4. Use `sys.argv` (make sure to import sys!!!) to retrieve your name, favorite color, favorite activity, and favorite animal from the command line. Remember to check out the [example in the notes](https://github.com/prog4biol/pfb2018#command-line-parameters-a-special-built-in-list)
 		```python
@@ -130,10 +134,10 @@ print(myName)
 		
 		import sys
 		
-		myName = sys.ARGV[1]
-		myFavColor = sys.ARGV[2]
-		myFavActivity = sys.ARGV[3]
-		myFavAnimal = sys.ARGV[4]
+		myName = sys.argv[1]
+		myFavColor = sys.argv[2]
+		myFavActivity = sys.argv[3]
+		myFavAnimal = sys.argv[4]
 
 		print(myName + "is my name.")
 		print(myFavColor + "is my favorite color.")
