@@ -47,5 +47,6 @@ GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
     -  if the number is larger than 50 and divisible by 3, print "it is larger than 50 and divisible by 3"  
     -  save it and run it
 
+13. In your previous nested loops, test the number 50. What prints to the screen? Is it the correct response? If not, you have a semantic error and need to alter your code to be correct with any number.  
 
-13. ADD/COMMIT/PUSH
+14. ADD/COMMIT/PUSH
