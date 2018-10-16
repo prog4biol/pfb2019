@@ -1450,6 +1450,22 @@ In Python we can write statements that perform mathematical calculations. To do 
 | `//`     | Floor Division (result is the quotient with digits after the decimal point removed. If one of the operands is negative, the result is floored, i.e., rounded away from zero | `3//2`  ; `-11//3` | 1 ; -4 |
 
 
+__modulus__
+
+![3 divided by 2 is 1 with a remainder of 1. Modulus returns the remainer](https://github.com/prog4biol/pfb2018/blob/master/images/modulus.png)
+
+__floor__
+
+```python
+>>> 3//2
+1
+>>> -11/3
+-3.6666666666666665
+>>> -11//3
+-4
+```
+
+
 
 #### Assignment Operators  
 
