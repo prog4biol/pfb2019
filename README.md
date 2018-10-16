@@ -955,7 +955,7 @@ git is the Version Control System we will be using for tracking changes in our f
 
 Usually you have a local copy of your project/repository and a remote copy. The __local__ repository is stored on your computer and the __remote__ is on a online service like GitHub.
 
-![Relationship between local and remote repistories](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/git_remotes.png)
+![Relationship between local and remote repositories](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/git_remotes.png)
 
 You can use a webbrowser to interact with the remote and the terminal to interact with the local repository.
 
