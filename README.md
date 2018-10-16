@@ -1273,7 +1273,8 @@ Numbers and strings are two common data types. Literal numbers and strings like 
 For Example:  
 ```python
 gene_count = 5
-gene_length = 10
+# change the value of gene_count
+gene_count = 10
 ```
 >Recall the section above on variable and object names (and variables are objects in Python).
 
