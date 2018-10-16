@@ -14,55 +14,72 @@ Python 4 Problem Set -- Lists and Loops
         j.  Remove an element from somewhere other than the beginning or the end.  
 	k.  Use `join` to create a string. Join the elements on ', ' 
 	
+2. Write a script that splits a string into a list. In your script: 
+	- Save the string `sapiens, erectus, neanderthalensis` as a variable.
+	- Print the string. 
+	- Split the string into individual words and print the result of the split. (Think about the ', '.)
+	- Store the resulting list in a new variable.
+	- Print the list.	
+	- Sort the list alphbetically and print (hint: lookup the function `sorted()`). 
+	- Sort the list by length of each string and print. (The shortest string should be first). [Check out documentation of the key argument](https://www.programiz.com/python-programming/methods/built-in/sorted).
 
-2. Write a script that:
-        - splits a string into a list.
-	- the string `sapiens, erectus, neanderthalensis`
-	- print the string before you split. 
-	- split the string and print the result of the split. Think about the ', '.
-	- store the resulting list in a new variable
-	- print the list
-	- sort the list alphbetically and print
-	- sort the list by length and print. [Check out documentation of the key argument](https://www.programiz.com/python-programming/methods/built-in/sorted).
-
-
-3. Interrogate the difference between these two ways to copy a list. Both are not correct. 
-  - use the assignment operator
-     - create a list, for exampale: `my_list = ['a', 'bb', 'ccc']`
-     - make a copy   `list_copy = my_list`
-     - print the original list `print(my_list)`
-     - alter the list_copy after the "copy" by adding a new element to list_copy
-     - print the original list again `print(my_list)`
-   - use the copy() method:  
-     - create a list, for exampale: `my_list2 = ['a', 'bb', 'ccc']`  
-     - make a copy with the copy() method `list_copy2 = my_list2.copy()`  
-     - print the original list  
-     - alter list_copy2  
-     - print the original list   
+3. Using the Python interpreter, interrogate the difference between these two ways to copy a list. Careful! One of these is NOT correct. 
+   - Method 1
+     - Create a list. For example: `my_list = ['a', 'bb', 'ccc']`
+     - Make a copy using the `=` assignment operator:  `list_copy = my_list`
+     - Print the original list `print(my_list)`
+     - Alter the `list_copy` by adding a new element using `append()`
+     - Print the original list again `print(my_list)`
+   - Method 2  
+     - Create a list. For example: `my_list2 = ['a', 'bb', 'ccc']`  
+     - Make a copy with the copy() method `list_copy2 = my_list2.copy()`  
+     - Print the original list `print(my_list2)`
+     - Alter the `list_copy2` by adding a new element using `append()`   
+     - Print the original list again `print(my_list2)`   
 
 4. Write a script that uses a `while` loop to print out the numbers 1 to 100
-5. Write a script that uses a `while loop` to calculate the [factorial](https://en.wikipedia.org/wiki/Factorial) of 1000.  
+
+5. Write a script that uses a `while loop` to calculate the [factorial](https://en.wikipedia.org/wiki/Factorial) of 1000. 
+
 6. Iterate through each element of this list using a `for` loop: [101,2,15,22,95,33,2,27,72,15,52]
-   - Print out only the values that are even (use modulus operator).
+   - Print out only the values that are even (hint: use the modulus operator).
+   
 7. Sort the elements of the above list, then iterate through each element using a `for` loop and:
    - Print each element.
    - Calculate two cumulative sums, one of all the even values and one of all the odd values. 
-   - Print the only the final two sums.
+   - Print the only the final two sums. The output from your script should be:
+   
+   ```
+   Sum of even numbers: 150 
+   Sum of odds: 286
+   ```
+   
 8. Write a script that uses `range()` in a `for` loop to print out every number between 0 and 99  
-      - Modify your loop to print out every number bewteen 1 and 100
-      - Create a new script that uses list comprehension to do the same, uses range to print out every number bewteen 1 and 100
-9. Write a new script that takes the start and end values from the command line. If you call your script like this `count.py 3 10` it will print the numbers from 3 to 10.
+      - Modify your loop to print out every number between 1 and 100.
+      
+9. Create a new script that uses list comprehension to do the same thing as problem 8. (Use `range()` to print out every number between 1 and 100.)
+
+10. Write a new script that takes the start and end values from the command line. If you call your script like this `count.py 3 10` it will print the numbers from 3 to 10.
       - Modify your script so that it will only print the number if it is odd.
-10. Make a list with the following data  `['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']`. Use a `for` loop to iterate through each element of this list and:
-   - Print out each element
-   - Print out the length and the sequence i.e., "4\\tATGC\\n"
-11. Use list comprehension to generate a list of tuples of sequences and lengths with the list from #10. Print out the length and the sequence i.e., "4\\tATGC\\n".
+      
+11. Write a new script to create a list with the following data  `['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']`. Use a `for` loop to iterate through each element of this list and:
+   - Print out each element.
+   - Print out the length and the sequence. The output should look like:
+   
+   ```
+   14	ATGCCCGGCCCGGC
+   24	GCGTGCTAGCAATACGATAAACCGG
+   12	ATATATATCGAT
+   8	ATGGGCCC
+   ```
+   
+11. Use list comprehension to generate a list of tuples. The tuples should contain sequences and lengths from the previous problem. Print out the length and the sequence i.e., "4\\tATGC\\n".
+
 12. Modify the script from #11 so that you also print out the number (postion in the list) of each sequence i.e. "1\\t4\\tACGT\\n"
 
 13. Have you been commiting you work?
 
-
-## Fun Challange Problems. These are real scripts you might use in real life. You have already learned all you need to know to do each. If you don't have enough time in this session to complete, come back and try later.
+## Fun challenge problems! These are real scripts you might use in real life. You have already learned all you need to know to do each. If you don't have enough time in this session to complete, come back and try later.
 
 1. Create a shuffled sequence ([Fisher-Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle))
     - Use a for loop to perform the following procedure N times (N = length of seq)
