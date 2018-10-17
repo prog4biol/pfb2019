@@ -240,6 +240,7 @@ if user_input > 0:
 		print(user_input, "is equal to 50.")
 	else:
 		print(user_input, "is positive and greater than 50.")
+        
 elif user_input == 0:
 	print(user_input, "is equal to 0.")
 else:
