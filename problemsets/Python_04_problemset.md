@@ -90,7 +90,7 @@ Python 4 Problem Set -- Lists and Loops
     - Print the final shuffled sequence
     - Remember to test your code with test data. 
 
-2. Calculate sequence identity: Start with 2 very similar DNA sequences. Use your favorites or use [Python_04.fasta](https://raw.githubusercontent.com/srobb1/pfb2018/master/files/Python_04.fasta)
+2. Calculate sequence identity: Start with 2 very similar DNA sequences. Use your favorites or use [Python_04.fasta](https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/Python_04.fasta)
     - Align with ClustalW, TCoffee, or some other web alignment application. 
     - Output should be in FASTA format.
     - Store (copy and paste) each aligned sequence, including dashes, as two separate string variables. 
