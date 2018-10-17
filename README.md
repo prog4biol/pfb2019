@@ -3945,16 +3945,16 @@ How about a non-exact match. Let's search for a methylation site that has to mat
 - followed by a G 
 
 This could match any of these:  
-GCAG  
-GCTG  
-GCGG  
-GCCG  
-GCG  
-ACAG  
-ACTG  
-ACGG  
-ACCG  
-ACG  
+- GCAG  
+- GCTG  
+- GCGG  
+- GCCG  
+- GCG  
+- ACAG  
+- ACTG  
+- ACGG  
+- ACCG  
+- ACG  
 
 We could test for each of these, or use regular expressions. This is exactly what regular expressions can do for us.  
 ```python
@@ -3963,9 +3963,12 @@ We could test for each of these, or use regular expressions. This is exactly wha
 >>> print(found)
 <_sre.SRE_Match object; span=(7, 10), match='ACG'>
 ```
-> Here you can see in the returned information that ACG starts at string postion 7 (nt 8). The first position following the end of the match is at string postion 10 (nt 11).
+> Here you can see in the returned information that ACG starts at string postion 7 (nt 8). 
+>
+> The first position following the end of the match is at string postion 10 (nt 11).
 
 What about other potential matches in our DNA string? We can use `findall()` function to find all matches.
+
 ```python
 >>> dna = 'ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG'
 >>> found=re.findall(r"[GA]C.?G",dna)
@@ -3975,12 +3978,31 @@ What about other potential matches in our DNA string? We can use `findall()` fun
 > `findall()` returns a list of all the pieces of the string that match the regex.
 
 A quick count of all the matching sites can be done by counting the length of the returned list.
+
 ```python
 >>> len (re.findall(r"[GA]C.?G",dna))
 7
 ```
+
 > There are 7 methylation sites.
-> Here we have another example of nesting. We call the `findall()` function, searching for all the matches of a methylation site. This function returns a list, the list is past to the `len()` function, which in turn returns the number of elements in the list.
+>
+> Here we have another example of nesting. 
+>
+> We call the `findall()` function, searching for all the matches of a methylation site. 
+>
+> This function returns a list, the list is past to the `len()` function, which in turn returns the number of elements in the list.
+
+
+![try it](images/Try-It-Now.jpg)
+
+1. If you want to find just the first occurrence of a pattern, what method do you use?
+
+2. If you want to find all the occurrences of a pattern, what method do you use?
+
+3. What operator have we seen that will report if an exact match is in a sequence (string, list, etc)?
+
+4. What string method have we seen that will count the number of occurrences of an exact match in a string?
+
 
 Let's talk a bit more about all the new characters we see in the pattern.
 
