@@ -3993,7 +3993,7 @@ A quick count of all the matching sites can be done by counting the length of th
 > This function returns a list, the list is past to the `len()` function, which in turn returns the number of elements in the list.
 
 
-__Let' Try It__
+__Let' Try It__  
 ![try it](images/Try-It-Now.jpg)
 
 1. If you want to find just the first occurrence of a pattern, what method do you use?
@@ -4115,7 +4115,7 @@ g.*t
 ```
 >  matches US telephone numbers (no extra text allowed).
 
-__Let' Try It__
+__Let' Try It__  
 ![try it](images/Try-It-Now.jpg)
 
 1. What would be a pattern to recognize an email address?
@@ -4153,7 +4153,7 @@ big bad (wolf|sheep)
 > - "big bad wolf"
 > - "big bad sheep"
 
-__Let' Try It__
+__Let' Try It__  
 ![try it](images/Try-It-Now.jpg)
 
 1. What would a pattern to match 'ATG' followed by a C or a T look like?
@@ -4181,7 +4181,7 @@ Who's afraid of the big (bad )?wolf\?
 >
 > This also shows how to literally match special characters. Use a '\\' in to escape them.
 
-__Let' Try It__
+__Let' Try It__  
 ![try it](images/Try-It-Now.jpg)
 
 1. What pattern could you use to capture the ID in a sequence record of a FASTA file in a subpattern.
@@ -4486,7 +4486,7 @@ Who's afraid of the bad big wolf?
 > \\2 refers to the second subpattern
 > \\1 refers to the first subpattern
 
-__Let' Try It__
+__Let' Try It__  
 ![try it](images/Try-It-Now.jpg)
 
 1. How would you use regular expressions to find all occurrences of 'ATG' and replace with '-M-' in this sequence 'GCAGAGGTGATGGACTCCGTAATGGCCAAATGACACGT'? 
