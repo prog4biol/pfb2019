@@ -74,11 +74,11 @@ Python 4 Problem Set -- Lists and Loops
    8	ATGGGCCC
    ```
    
-11. Use list comprehension to generate a list of tuples. The tuples should contain sequences and lengths from the previous problem. Print out the length and the sequence (i.e., "4\\tATGC\\n").
+12. Use list comprehension to generate a list of tuples. The tuples should contain sequences and lengths from the previous problem. Print out the length and the sequence (i.e., "4\\tATGC\\n").
 
-12. Modify the script from #11 so that you also print out the number (postion in the list) of each sequence (i.e., "1\\t4\\tACGT\\n")
+13. Modify the script from #11 so that you also print out the number (postion in the list) of each sequence (i.e., "1\\t4\\tACGT\\n")
 
-13. Have you been commiting you work?
+14. Have you been commiting you work?
 
 ## Fun challenge problems! These are real scripts you might use in real life. You have already learned all you need to know to do each. If you don't have enough time in this session to complete, come back and try later.
 
@@ -90,7 +90,7 @@ Python 4 Problem Set -- Lists and Loops
     - Print the final shuffled sequence
     - Remember to test your code with test data. 
 
-2. Calculate sequence identity: Start with 2 very similar DNA sequences. Use your favorites or use [Python_04.fasta](https://raw.githubusercontent.com/srobb1/pfb2018/master/files/Python_04.fasta)
+2. Calculate sequence identity: Start with 2 very similar DNA sequences. Use your favorites or use [Python_04.fasta](https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/Python_04.fasta)
     - Align with ClustalW, TCoffee, or some other web alignment application. 
     - Output should be in FASTA format.
     - Store (copy and paste) each aligned sequence, including dashes, as two separate string variables. 
