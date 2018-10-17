@@ -21,7 +21,7 @@ Python 4 Problem Set -- Lists and Loops
 	- Split the string into individual words and print the result of the split. (Think about the ', '.)
 	- Store the resulting list in a new variable.
 	- Print the list.	
-	- Sort the list alphbetically and print (hint: lookup the function `sorted()`). 
+	- Sort the list alphabetically and print (hint: lookup the function `sorted()`). 
 	- Sort the list by length of each string and print. (The shortest string should be first). [Check out documentation of the key argument](https://www.programiz.com/python-programming/methods/built-in/sorted).
 
 3. Using the Python interpreter, interrogate the difference between these two ways to copy a list. Careful! One of these is NOT what you might expect. 
