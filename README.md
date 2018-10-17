@@ -3993,6 +3993,7 @@ A quick count of all the matching sites can be done by counting the length of th
 > This function returns a list, the list is past to the `len()` function, which in turn returns the number of elements in the list.
 
 
+__Let' Try It__
 ![try it](images/Try-It-Now.jpg)
 
 1. If you want to find just the first occurrence of a pattern, what method do you use?
@@ -4029,7 +4030,7 @@ A group of characters that are allowed to be matched one time. There are a few p
 | `\W`  | Not a word character, or `[^A-Za-z0-9_]` |
 | `\s`  | White space character. Also can be written `[ \r\t\n]`. Note the space character after the first `[` |
 | `\S`  | Not whitespace. Also `[^ \r\\t\n]`       |
-
+| `[^]` |a carat within a bracketed list of characters indicates anything but the characters that follows |
 
 #### Anchors
 
@@ -4052,30 +4053,27 @@ g..t
 ```
 g[gatc][gatc]t
 ```
-> matches "gaat", "gttt", "gatt", and "gotta get an agatt" (once)</li>
+> matches "gaat", "gttt", "gatt", and "gotta get an agatt" (once)
 
 ```
-\d\d\d-\d\d\d\d`
+\d\d\d-\d\d\d\d
 ```
-> matches 376-8380, and 5128-8181
-> but not 055-98-2818.
+> matches 376-8380, and 5128-8181 but not 055-98-2818.
 
 ```
 ^\d\d\d-\d\d\d\d
 ```
->  matches 376-8380 and 376-83801
->  but not 5128-8181.
+>  matches 376-8380 and 376-83801 but not 5128-8181.
 
 ```
 ^\d\d\d-\d\d\d\d$
 ```
-> only matches telephone numbers (without area code)
+> only matches telephone numbers (US telephone numbers without area code)
 
 ```
 \bcat
 ```
-> matches "cat", "catsup" and "more catsup please" 
-> but not "scat".
+> matches "cat", "catsup" and "more catsup please" but not "scat".
 
 ```
 \bcat\b
@@ -4117,10 +4115,11 @@ g.*t
 ```
 >  matches US telephone numbers (no extra text allowed).
 
+__Let' Try It__
+![try it](images/Try-It-Now.jpg)
 
-Something to think about.  
-1) What would be a pattern to recognize an email address?
-2) What would be a pattern to recognize the ID portion of a sequence record in a FASTA file?
+1. What would be a pattern to recognize an email address?
+2. What would be a pattern to recognize the ID portion of a sequence record in a FASTA file?
 
 
 #### Variables and Patterns
@@ -4142,12 +4141,23 @@ A pipe '|' can be used to indicated that either the pattern before or after the 
 ```
 big bad (wolf|sheep)
 ```
-> This pattern must match a string that contains "big" followed by a space followed by "bad" followed by a space followed by _either_ "wolf" or "sheep" 
-> This would match, "big bad wolf"
-> Or "big bad sheep"
+> This pattern must match a string that contains:
+>
+> - "big" followed by a space followed by 
+> - "bad" followed by 
+> - a space followed by 
+> - *either* "wolf" or "sheep"
+>
+>  This would match:
+>
+> - "big bad wolf"
+> - "big bad sheep"
 
-Something to think about.
-1) What would a pattern to match 'ATG' followed by a C or a T look like?
+__Let' Try It__
+![try it](images/Try-It-Now.jpg)
+
+1. What would a pattern to match 'ATG' followed by a C or a T look like?
+
 
 #### Subpatterns
 
@@ -4162,20 +4172,27 @@ You can combine parenthesis and quantifiers to quantify entire subpatterns.
 ```
 Who's afraid of the big (bad )?wolf\?
 ```
-> This matches "Who's afraid of the big bad wolf?".
-> As well as "Who's afraid of the big wolf?".
+> This matches:
+>
+> - "Who's afraid of the big bad wolf?"
+> - As well as "Who's afraid of the big wolf?".
+>
 > The 'bad ' is optional, it can be present 0 or 1 times in our string.
-> This also shows how to literally match special characters. Use a '\' in to escape them.
+>
+> This also shows how to literally match special characters. Use a '\\' in to escape them.
 
-Something to think about:
-How would you create a pattern to capture the ID in a sequence record of a FASTA file in a subpattern.
+__Let' Try It__
+![try it](images/Try-It-Now.jpg)
+
+1. What pattern could you use to capture the ID in a sequence record of a FASTA file in a subpattern.
 
 Example FASTA sequence record.
+
 ```
->ID Optional Descrption
-SEQUENCE
-SEQUENCE
-SEQUENCE 
+  >ID Optional Descrption
+  SEQUENCE
+  SEQUENCE
+  SEQUENCE 
 ```
 
 
@@ -4193,21 +4210,30 @@ Once a subpattern matches, you can refer to it within the same regular expressio
 ```
 Who's afraid of the big bad w(.)\1f
 ```
-> This would match "Who's afraid of the big bad woof"
-> "Who's afraid of the big bad weef"
-> "Who's afraid of the big bad waaf"
-> But Not, "Who's afraid of the big bad wolf" 
-> Or, "Who's afraid of the big bad wife"
+> This would match:
+>
+> -  "Who's afraid of the big bad woof"
+> -  "Who's afraid of the big bad weef"
+> -  "Who's afraid of the big bad waaf"  
+>
+> But Not:
+>
+> -  "Who's afraid of the big bad wolf"
+> -  "Who's afraid of the big bad wife" 
 
 
 In a similar vein, 
 ```
 \b(\w+)s love \1 food\b
 ```
-> This pattern will match "dogs love dog food"
-> But not "dogs love monkey food".
-> We were able to use the subpattern within the regular expression by using `\1` 
-> If there were more subpatterns they would be `\2`, `\3` , `\4`, etc
+> This pattern will match 
+>
+> - "dogs love dog food"  
+> - But not "dogs love monkey food".  
+>
+> We were able to use the subpattern within the regular expression by using `\1`
+>
+>  If there were more subpatterns they would be `\2`, `\3` , `\4`, etc
 
 
 
@@ -4234,9 +4260,9 @@ TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA
 >>  print(downstream)
 CCGGTTTCCAAAGACAGTCTTCTAA
 ```
-> 1) This pattern will recognize a consensus transcription start site (TATTAT) 
-> 2) And store the 50 base pairs upstream of the site 
-> 3) And the 25 base pairs downstream of the site
+> 1. This pattern will recognize a consensus transcription start site (TATTAT) 
+> 2. And store the 50 base pairs upstream of the site 
+> 3. And the 25 base pairs downstream of the site
 
 
 If you want to find the upstream and downstream sequence of ALL 'TATTAT' sites, use the `findall()` function.
@@ -4261,16 +4287,16 @@ downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 upstream: TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA
 downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 ```
-> 1) This code executes the `findall()` function once  
-> 2) The subpatterns are returned   
-> 3) The subpatterns are stored in the variables upstream and downstream  
-> 4) The for block of code is executed  
-> 5) The `findall()` searches again  
-> 6) A match is found  
-> 7) New subpatterns are returned and stored in the variables upstream and downstream
-> 8) The for block of code gets executed again  
-> 9) The `findall()` searches again, but no match is found  
-> 10) The for loop ends  
+> 1. This code executes the `findall()` function once 
+> 2. The subpatterns are returned in a tuple 
+> 3. The subpatterns are stored in the variables upstream and downstream  
+> 4. The for block of code is executed  
+> 5. The `findall()` searches again  
+> 6. A match is found 
+> 7.  New subpatterns are returned and stored in the variables upstream and downstream
+> 8. The for block of code gets executed again 
+> 9.  The `findall()` searches again, but no match is found  
+> 10. The for loop ends  
 
 
 
@@ -4287,14 +4313,14 @@ downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 upstream: TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA
 downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 ```
-> 1) This code executes `finditer()` function once.  
-> 2) The match object is returned. A match object will have all the information about the match  
-> 3) In the for block we call the `group()` method on the first match object returned  
-> 4) We print out the first and second subpattern using the `group()` method  
-> 5) The `finditer()` function is executed a second time and a match is found  
-> 6) The second match object is returned  
-> 7) The second subpatterns are retrieved from the match object using the `group()` method  
-> 8) The `finditer()` function is executed again, but no matches found, so the loop ends  
+> 1. This code executes `finditer()` function once. 
+> 2. The match object is returned. A match object will have all the information about the match.
+> 3.  In the for block we call the `group()` method on the first match object returned
+> 4. We print out the first and second subpattern using the `group()` method
+> 5. The `finditer()` function is executed a second time and a match is found
+> 6. The second match object is returned
+> 7.  The second subpatterns are retrieved from the match object using the `group()` method 
+> 8. The `finditer()` function is executed again, but no matches found, so the loop ends  
 
 
 #### Get position of the subpattern with `finditer()`
@@ -4317,9 +4343,7 @@ for found in re.finditer(r"(.{50})TATTAT(.{25})"  , dna):
   dn_start = found.start(2) + 1
   dn_end   = found.end(2)   + 1
 
-  output = [ whole , up , str(up_start), str(up_end) , down , str(dn_start) , str(dn_end)  ]
-
-  print( "\t".join(output) )
+  print( whole , up , up_start, up_end , down , dn_start , dn_end , sep="\t" )
 ```
 > we can use these match object methods `group()`, `start()`, `end()` to get the string, start position, and end position of each subpattern. 
 
@@ -4344,9 +4368,8 @@ By default, regular expressions are "greedy".  They try to match as much as they
 >>> print(found.group(1))
 fox ate my box
 ```
-> The pattern f.+x does not match what you might expect, it matches past 'fox' all the way out to 'fox ate my box'.  
-> The '.+' id greedy 
-> As many characters as possible are found that are between the 'f' and the 'x'. 
+> The pattern f.+x does not match what you might expect, it matches past 'fox' all the way out to 'fox ate my box'.  The '.+' id greedy As many characters as possible are found that are between the 'f' and the 'x'. 
+
 
 Let's make this match lazy by using '?'
 ```python
@@ -4390,7 +4413,7 @@ TTG
 
 #### Truth and Regular Expression Matches
 
-The `search()`, `match()`, `findall()`, and `finditer()` can be used in conditional tests. If a match is not found an empty list or 'None' is returned. These both are False.
+The `search()`, `match()`, `findall()`, and `finditer()` can be used in conditional tests. If a match is not found an empty list or 'None' is returned. These are both False.
 
 ```python
 >>> found=re.search( r"(.{50})TATTATZ(.{25})"  , dna )
@@ -4421,7 +4444,7 @@ None
 
 
 
-__Using Regular expressions in substitutions__
+#### Using Regular expressions in substitutions 
 
 Earlier we went over how to find an **exact pattern** and replace it using the `replace()` method. To find a pattern, or inexact match, and make a replacement the regular expression `sub()` function is used. This function takes the pattern, the replacement, the string to be searched, the number of times to do the replacement, and flags.
 
@@ -4436,7 +4459,7 @@ Who's afraid of the big bad wolf?
 > The value of variable str has not been altered  
 > The new string can be stored in a new variable for later use.
 
-Let's save the returned new string in a variable
+Let's save the new string that is returned in a variable
 ```python
 >>> str = "He had a wife."
 >>> new_str = re.sub(r'w.+f' , 'goat', str)
@@ -4463,8 +4486,10 @@ Who's afraid of the bad big wolf?
 > \\2 refers to the second subpattern
 > \\1 refers to the first subpattern
 
-Something to think about.  
-How would you use regular expressions to find all occurrences of 'ATG' and replace with '-M-' in this sequence 'GCAGAGGTGATGGACTCCGTAATGGCCAAATGACACGT'? 
+__Let' Try It__
+![try it](images/Try-It-Now.jpg)
+
+1. How would you use regular expressions to find all occurrences of 'ATG' and replace with '-M-' in this sequence 'GCAGAGGTGATGGACTCCGTAATGGCCAAATGACACGT'? 
 
 #### Regular Expression Option Modifiers
 
