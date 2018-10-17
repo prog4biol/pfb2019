@@ -40,7 +40,7 @@ Python 4 Problem Set -- Lists and Loops
 
 4. Write a script that uses a `while` loop to print out the numbers 1 to 100
 
-5. Write a script that uses a `while loop` to calculate the [factorial](https://en.wikipedia.org/wiki/Factorial) of 1000. 
+5. Write a script that uses a `while` loop to calculate the [factorial](https://en.wikipedia.org/wiki/Factorial) of 1000. 
 
 6. Iterate through each element of this list using a `for` loop: [101,2,15,22,95,33,2,27,72,15,52]
    - Print out only the values that are even (hint: use the modulus operator).
