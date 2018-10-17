@@ -3,7 +3,7 @@ Python 8 - Data Structures -Problem Set
 
 __Don't forget to use a small test data set when you are testing your code. Make sure you know what the correct answer should be__
 
-1. Take a mulit-FASTA [Python_08.fasta](https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/Python_08.fasta) file from user input and calculate the nucleotide composition for each sequence. Use a datastructure to keep count. Print out each sequence name and its compostion in this format `seqName\tA_count\tT_count\tG_count\C_count`
+1. Take a multi-FASTA [Python_08.fasta](https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/Python_08.fasta) file from user input and calculate the nucleotide composition for each sequence. Use a datastructure to keep count. Print out each sequence name and its compostion in this format `seqName\tA_count\tT_count\tG_count\C_count`
 
 Here is a structure of a handy datastructure to store this information
 ```
