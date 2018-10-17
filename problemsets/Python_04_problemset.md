@@ -83,9 +83,9 @@ Python 4 Problem Set -- Lists and Loops
 ## Fun challenge problems! These are real scripts you might use in real life. You have already learned all you need to know to do each. If you don't have enough time in this session to complete, come back and try later.
 
 1. Create a shuffled sequence ([Fisher-Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle))
-    - Use a for loop to perform the following procedure N times (N = length of seq)
-    - Select a random position A with randrange()
-    - Select a random position B with randrange()
+    - Use a `for` loop to perform the following procedure N times (N = length of seq)
+    - Select a random position A with `randrange()`
+    - Select a random position B with `randrange()`
     - Exchange the letters at list indices A and B
     - Print the final shuffled sequence
     - Remember to test your code with test data. 
