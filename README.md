@@ -1092,7 +1092,7 @@ Python has
 
 **Functions** do something with data, such as a calculation. Some functions are already built into Python. You can create your own functions as well. 
 
-**Objects** are a way of grouping a set of data and functions (methods) that act on that data
+**Objects** are a way of grouping a set of data and functions (methods) that act on that data.
 
 **Classes** are a way to encapsulate (organize) variables and functions. Objects get their variables and methods from the class they belong to. 
 
@@ -1105,7 +1105,7 @@ There are two versions of Python: Python 2 and Python 3. We will be using 3. Thi
 
 #### Interactive Interpreter
 
-Python can be run one line at a time in an interactive interpreter. You can think of this as a Python shell. To launch the interpreter type the following into your terminal window:  
+Python can be run one line at a time in an interactive interpreter. You can think of this as a Python shell. To launch the interpreter, type the following into your terminal window:  
 
 `$ python3`    
 
@@ -1136,7 +1136,7 @@ print("Hello, PFB2018!")
 
 #### Running Python Scripts
 
-Typing the Python command followed by the name of a script makes Python execute the script. Recall that we just saw you can run an interactive interpreter by just typing `python` on the command line
+Typing the Python command followed by the name of a script makes Python execute the script. Recall that we just saw you can run an interactive interpreter by just typing `python` on the command line.
 
 Execute the Python script like this (% represents the prompt)
 
@@ -1162,7 +1162,7 @@ You can look at the permissions with
 -rwxr-xr-x  1 sprochnik  staff  60 Oct 16 14:29 hello.py
 ```
 
-The first 10 characters you see displayed on the line have special meanings. The first character (`-`) tells you what kind of file `hello.py` is. `-` means a normal file, `d` a directory, `l` a link. The next nine characters come in three sets of three. The first set refers to the your permissions, the second set your group's permissions and the last set to everyone else. Each three character set shows in order `rwx` for read, write, execute. If someone doesn't have a permission, a `-` is displayed instead of a letter. The three 'x' characters means anyone can execute or run this script. 
+The first 10 characters you see displayed on the line have special meanings. The first character (`-`) tells you what kind of file `hello.py` is. `-` means a normal file, `d` a directory, `l` a link. The next nine characters come in three sets of three. The first set refers to the your permissions, the second set your group's permissions, and the last set to everyone else. Each three character set shows in order `rwx` for read, write, execute. If someone doesn't have a permission, a `-` is displayed instead of a letter. The three 'x' characters means anyone can execute or run this script. 
 
 We also need to add a line at the beginning of the script that tells the shell to run python3 to interpret the script. This line starts with `#`, so it looks like a comment to python. The `!` (exclamation mark or bang) is important as is the space between `env` and `python3`. The program `/usr/bin/env` looks for where `python3` is installed and runs the script with `python3`. The details may seem a bit complex, but you can just copy and paste this 'magic' line.
 
@@ -1173,7 +1173,7 @@ The file hello.py now looks like this
 print("Hello, PFB2018!")
 ```
 
-Now you can simply type the symbol for the current directory `.` follwed by a `/` and the name of the script to run it. Like this
+Now you can simply type the symbol for the current directory `.` followed by a `/` and the name of the script to run it. Like this
 
 ```
 % ./hello.py
@@ -1187,16 +1187,16 @@ Hello, PFB2018!
 
 #### Python Variable Names
 
-A Python variable name is a name used to identify a variable, function, class, module or other object. A variable name starts with a letter, `A` to `Z` or `a` to `z`, or an underscore (`_`) followed by zero or more letters, underscores, and digits (`0` to `9`).
+A Python variable name is a name used to identify a variable, function, class, module, or other object. A variable name starts with a letter, `A` to `Z` or `a` to `z`, or an underscore (`_`), followed by zero or more letters, underscores, and digits (`0` to `9`).
 
 Python does not allow punctuation characters such as `@`, `$`, and `%` within a variable name. Python is a case sensitive programming language. Thus, `seq_id` and `seq_ID` are two different variable names in Python.
 
 #### Naming conventions for Python Variable Names
 
- * The first character is lowercase, unless it is a name of a class. Classes should begin with an uppercase characters. (ex. `Seq`)
- * Private variable names begin with an underscore. (ex. `_private`)
- * Strong private variable names begin with two underscores. (ex. `__private`)
- * Python language-defined special names begin and end with two underscores. (ex. `__special__`)
+ * The first character is lowercase, unless it is a name of a class. Classes should begin with an uppercase characters (ex. `Seq`).
+ * Private variable names begin with an underscore (ex. `_private`).
+ * Strong private variable names begin with two underscores (ex. `__private`).
+ * Python language-defined special names begin and end with two underscores (ex. `__special__`).
 
 
 Picking good variable names for the objects you name yourself is very important. Don't call your variables things like `items` or `my_list` or `data` or `var`. Except for where you have a very simple piece of code, or you are plotting a graph, don't call your objects `x` or `y` either. All these name examples are not decriptive of what kind of data you will find in the variable or object. Worse is to call a variable that contains gene names as `sequences`. Why is this such a bad idea? Think about what would happen if you filled your car up at a store labelled 'gas station' that sold lemonade. In computer science, names should always accurately describe the object they are attached to. This reduces possibility of bugs in your code, makes it much easier to understand if you come back to it after six months or share your code with someone, and makes it faster to write code that works right. Even though it takes a bit of time and effort to think up a good name for an object, it will prevent so many problems in the future!
@@ -1265,7 +1265,7 @@ Blank lines are also important for increasing the readability of the code. You s
 
 This is our first look at variables and data types. Each data type will be discussed in more detail in subsequent sections. 
 
-The first concept to consider is that Python data types are either immutable (unchangeable) or not. Literal numbers, strings, and tuples cannot be changed. Lists, dictionaries, and sets can be changed. So can individual (scalar) variables. You can store data in memory by putting it in different kinds variables. You use the `=` sign to assign a value to a variable.
+The first concept to consider is that Python data types are either immutable (unchangeable) or not. Literal numbers, strings, and tuples cannot be changed. Lists, dictionaries, and sets can be changed. So can individual (scalar) variables. You can store data in memory by putting it in different kinds of variables. You use the `=` sign to assign a value to a variable.
 
 #### Numbers and Strings
 
@@ -1288,7 +1288,7 @@ average = 2.531    # this is a float
 message = "Welcome to Python" # this is a string
 ```
 
-`10`, `2.531`, and `"Welcome to Python"` are singular (scalar) pieces of data and each is stored in its own variable.
+`10`, `2.531`, and `"Welcome to Python"` are singular (scalar) pieces of data, and each is stored in its own variable.
 
 Collections of data can also be stored in special data types, i.e., tuples, lists, sets, and dictionaries. You should always try to store like with like, so each element in the collection should be the same kind of data, like an expression value from RNA-seq or a count of how many exons are in a gene or a read sequence. Why do you think this might be?
 
@@ -1313,7 +1313,7 @@ Collections of data can also be stored in special data types, i.e., tuples, list
 
 #### Tuples
 
-- Tuples are similar to lists and contain ordered, *indexed* collection of data.
+- Tuples are similar to lists and contain ordered, *indexed* collections of data.
 - **Tuples are immutable: you can't change the values or the number of values**
 - A tuple is enclosed in parentheses and items are separated by commas.
 ```python
@@ -1344,7 +1344,7 @@ Collections of data can also be stored in special data types, i.e., tuples, list
 
 - They store unordered collections of key/value pairs.
 
-- A dictionary is enclosed in curly braces. and sets of Key/Value pairs are separated by commas 
+- A dictionary is enclosed in curly braces, and sets of Key/Value pairs are separated by commas 
 
 - A colon is written between each key and value. Commas separate key:value pairs.
 
@@ -1365,7 +1365,7 @@ Collections of data can also be stored in special data types, i.e., tuples, list
 
 Command line parameters follow the name of a script or program and have spaces between them. They allow a user to pass information to a script on the command line when that script is being run. Python stores all the pieces of the command line in a special list called `sys.argv`. 
 
-You need to import the `sys` module at the beginning of your script like this
+You need to import the module named `sys` at the beginning of your script like this
 
 ```python
 #!/usr/bin/env python3
@@ -1644,7 +1644,7 @@ False
 ### Logic: Control Statements
 
 
-Control Statements are used to direct the flow of your code and create the opportunity for decision making. Control statements foundation is build on truth.
+Control Statements are used to direct the flow of your code and create the opportunity for decision making. The foundation of control statements is building on truth.
 
 #### If Statement
 
@@ -1673,7 +1673,7 @@ found AGC in your dna sequence
 
 **else**
 
-- The`if` portion of the if/else statement behave as before. 
+- The`if` portion of the if/else statement behaves as before. 
 - The first indented block is executed if the condition is true.
 - If the condition is false, the second indented else block is executed.
 
@@ -1692,7 +1692,7 @@ did not find ATG in your dna sequence
 
 #### if/elif
 
-- The if condition is tested as before and the indented block is executed if the condition is true.
+- The if condition is tested as before, and the indented block is executed if the condition is true.
 - If it's false, the indented block following the elif is executed if the first elif condition is true. 
 - Any remaining elif conditions will be tested in order until one is found to be true. If none is true, the else indented block is executed.
 
@@ -1735,7 +1735,7 @@ else:
 ```
 Returns:  
 ```
-20 is less than 100
+20 is less than 50
 ```
 
 What happens when count is 50?  
@@ -1810,7 +1810,7 @@ Sometimes one type of number needs to be changed to another for a function to be
 
 #### Numeric Functions
 
-Here are a list of functions that take numbers as arguments. These use useful things like rounding.
+Here is a list of functions that take numbers as arguments. These use useful things like rounding.
 
 
 
@@ -1818,7 +1818,7 @@ Here are a list of functions that take numbers as arguments. These use useful th
 | ----------------- | ---------------------------------------- |
 | `abs(x)`          | The absolute value of x: the (positive) distance between x and zero. |
 | `round(x [,n])`   | x rounded to n digits from the decimal point. round() rounds to an even integer if the value is exactly between two integers, so round(0.5) is 0 and round(-0.5) is 0. round(1.5) is 2. **Rounding to a fixed number of decimal places can give unpredictable results.** |
-| `max(x1, x2,...)` | The largest positive argument is returned |
+| `max(x1, x2,...)` | The largest argument is returned |
 | `min(x1, x2,...)` | The smallest argument is returned        |
 
 ```python
@@ -1847,7 +1847,7 @@ Here are a list of functions that take numbers as arguments. These use useful th
 ```
 
 
-Many numeric functions are not built into the Python core and need to be included in our script if we want to use them. To include them at the tip of the script type: 
+Many numeric functions are not built into the Python core and need to be imported into our script if we want to use them. To include them, at the top of the script type: 
 `import math`
 
 These next functions are found in the math module and need to be imported. To use these functions, prepend the function with the module name, i.e, `math.ceil(15.5)`  
@@ -1923,7 +1923,7 @@ ValueError: math domain error
 
 ### Comparing two numbers
 
-Often times it is necessary to compare two numbers and find out if the first number is less than, equal to, or greater than the second.
+Oftentimes, it is necessary to compare two numbers and find out if the first number is less than, equal to, or greater than the second.
 
 The simple function `cmp(x,y)` is not available in Python 3. 
 
@@ -1934,11 +1934,11 @@ cmp = (x>y)-(x<y)
 
 It returns three different values depending on x and y
 
-- if x<y -1 is returned
+- if x<y, then -1 is returned
 
-- if x>y 1 is returned
+- if x>y, then 1 is returned
 
-- x == y 0 is returned
+- x == y, then 0 is returned
 
 ---
 
