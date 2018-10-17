@@ -5,7 +5,7 @@ Python 4 Problem Set -- Lists and Loops
 	a.  Create a list of 5 of your favorite things.  
 	b.  Use the `print()` function your list.  
 	c.  Use the `print()` function to print out the middle element.  
-	d.  Now replace the middle element with a different item, your favorite song, or song bird. Check out the differences. 
+	d.  Now replace the middle element with a different item, your favorite song, or song bird. Check out the differences.  
 	e.  Use the same print statement from b. to print your new list.  
 	f.  Add a new element to the end. [Read about append()](https://www.tutorialspoint.com/python/list_append.htm).  
 	g.  Add a new element to the beginning. [Read about insert()](https://www.tutorialspoint.com/python/list_insert.htm).  
