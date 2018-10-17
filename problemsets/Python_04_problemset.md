@@ -24,7 +24,7 @@ Python 4 Problem Set -- Lists and Loops
 	- Sort the list alphbetically and print (hint: lookup the function `sorted()`). 
 	- Sort the list by length of each string and print. (The shortest string should be first). [Check out documentation of the key argument](https://www.programiz.com/python-programming/methods/built-in/sorted).
 
-3. Using the Python interpreter, interrogate the difference between these two ways to copy a list. Careful! One of these is NOT correct. 
+3. Using the Python interpreter, interrogate the difference between these two ways to copy a list. Careful! One of these is NOT what you might expect. 
    - Method 1
      - Create a list. For example: `my_list = ['a', 'bb', 'ccc']`
      - Make a copy using the `=` assignment operator:  `list_copy = my_list`
