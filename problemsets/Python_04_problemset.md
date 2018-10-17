@@ -2,7 +2,8 @@ Python 4 Problem Set -- Lists and Loops
 ===================
 
 1. For the next series of tasks about lists use the interpreter:  
-	a.  Create a list of 5 of your favorite things.  
+	a.  Create a list of 5 of your favorite things. 
+	b.  Use the `print()` your list.
 	b.  Use the `print()` function to print out the middle element.  
 	c.  Now replace the middle element with a different item, your favorite song, or song bird.  
 	d.  Use the same print statement from b. to print your new list.  
