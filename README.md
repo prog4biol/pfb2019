@@ -4558,13 +4558,15 @@ AA-TA
 
 The alignment in a list of lists.
 ```python
-aln = [['A', 'T', '-', 'T', 'G'],
+aln = [
+['A', 'T', '-', 'T', 'G'],
 ['A', 'A', 'T', 'A', 'G'],
 ['T', '-', 'T', 'T', 'G'],
-['A', 'A', '-', 'T', 'A']]
+['A', 'A', '-', 'T', 'A']
+]
 ```
 
-Get an the full length of one sequence:
+Get the full length of one sequence:
 ```python
 >>> seq = aln[2]
 >>> seq
@@ -4596,11 +4598,11 @@ You can nest dictionaries in lists as well:
 
 ```python
 >>> records = [
-... {'name' : 'actgctagt', 'accession' : 'ABC123', 'genetic_code' : 1},
-... {'name' : 'ttaggttta', 'accession' : 'XYZ456', 'genetic_code' : 1},
-... {'name' : 'cgcgatcgt', 'accession' : 'HIJ789', 'genetic_code' : 5}
+... {'seq' : 'actgctagt', 'accession' : 'ABC123', 'genetic_code' : 1},
+... {'seq' : 'ttaggttta', 'accession' : 'XYZ456', 'genetic_code' : 1},
+... {'seq' : 'cgcgatcgt', 'accession' : 'HIJ789', 'genetic_code' : 5}
 ... ]
->>> records[0]['name']
+>>> records[0]['seq']
 'actgctagt'
 >>> records[0]['accession']
 'ABC123'
@@ -4672,6 +4674,107 @@ Dictionaries of dictionaries is my favorite!! You can do so many useful things w
 {'C': 1, 'G': 1, 'A': 3, 'T': 1}
 ```
 > Here we store a gene name as the outermost key, with a second level of keys for qualities of the gene, like sequence, length, nucleotide composition. We can retrieve a quality by using the gene name and quality in conjunction.
+
+To retrieve just one gene's nucleotide composition
+```python
+>>> genes['gene1']['nt_comp']
+{'C': 2, 'G': 1, 'A': 1, 'T': 2}
+```
+
+Alter one gene's nucleotide count with `=` assignment operator:
+```python
+>>> genes['gene1']['nt_comp']
+{'C': 2, 'G': 1, 'A': 1, 'T': 2}
+>>>
+>>> genes['gene1']['nt_comp']['T']=6
+>>> genes['gene1']['nt_comp']
+{'C': 2, 'G': 1, 'A': 1, 'T': 6}
+```
+
+Alter one gene's nucleotide count with `+=` assignment operator:
+```python
+>>> genes['gene1']['nt_comp']
+{'C': 2, 'G': 1, 'A': 1, 'T': 6}
+>>>
+>>> genes['gene1']['nt_comp']['A']+=1
+>>>
+>>> genes['gene1']['nt_comp']
+{'C': 2, 'G': 1, 'A': 2, 'T': 2}
+>>>
+>>>
+```
+
+To retrieve the A composition of every gene use a for loop.
+```python
+>>> for gene in genes:
+...   A_comp = genes[gene]['nt_comp']['A']
+...   print(gene+":","As=", A_comp)
+...
+gene1: As= 2
+gene2: As= 3
+```
+
+
+
+#### Building Complex Datastructures
+
+Below is an example of building a list with a mixed collection of value types. This list has values that are dictionaries and values that are lists. 
+
+The dictionary which is a list value has a key that has a dictionary as a value.
+
+```
+[[1, 2, 3], [4, 5, 6], {'key': 'value', 'key2': {'something_new': 'Yay'}}]
+```
+
+Just spaced differently:
+```
+[
+   [1, 2, 3], 
+   [4, 5, 6], 
+   {
+       'key': 'value',
+       'key2': 
+            {
+                'something_new': 'Yay'
+            }
+    }
+ ]
+```
+
+Building this data structure in the interpreter:
+
+```python
+>>> new_data = []
+>>> new_data
+[]
+>>> new_data.append([1,2,3])
+>>> new_data
+[[1, 2, 3]]
+>>> new_data[0]
+[1, 2, 3]
+>>> new_data.append([4,5,6])
+>>> new_data
+[[1, 2, 3], [4, 5, 6]]
+>>> new_data[1]
+[4, 5, 6]
+>>> new_data[1][2]
+6
+>>> new_data.append({})
+>>> new_data
+[[1, 2, 3], [4, 5, 6], {}]
+>>> new_data[2]['key']='value'
+>>> new_data
+[[1, 2, 3], [4, 5, 6], {'key': 'value'}]
+>>> new_data[2]['key2']={}
+>>> new_data
+[[1, 2, 3], [4, 5, 6], {'key2': {}, 'key': 'value'}]
+>>> new_data[2]['key2']['something_new']='Yay'
+>>> new_data
+[[1, 2, 3], [4, 5, 6], {'key2': {'something_new': 'Yay'}, 'key': 'value'}]
+>>>
+```
+
+Same example in a script file: [Building Complex Datastructures](https://github.com/prog4bio/pfb2018/blob/master/scripts/building_datastructures.py)
 
 
 
