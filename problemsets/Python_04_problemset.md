@@ -38,7 +38,7 @@ Python 4 Problem Set -- Lists and Loops
      - Alter the `list_copy2` by adding a new element using `append()`   
      - Print the original list again `print(my_list2)`   
 
-4. Write a script that uses a `while` loop to print out the numbers 1 to 100
+4. Write a script that uses a `while` loop to print out the numbers 1 to 100.
 
 5. Write a script that uses a `while` loop to calculate the [factorial](https://en.wikipedia.org/wiki/Factorial) of 1000. 
 
