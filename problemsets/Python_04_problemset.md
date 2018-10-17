@@ -110,6 +110,3 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACC
       - the end postion in the orginal sequence
       - the length of each fragemnt
    - sort the fragments by length and print out as they would appear on a agrose gel. (big to little)
-
-
-16. Have you been commiting you work?
