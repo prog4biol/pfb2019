@@ -65,7 +65,7 @@ Python 4 Problem Set -- Lists and Loops
       
 11. Write a new script to create a list with the following data  `['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']`. Use a `for` loop to iterate through each element of this list and:
    - Print out each element.
-   - Print out the length and the sequence, separared by a tab. The output should look like:
+   - Print out the length and the sequence, separated by a tab. The output should look like:
    
    ```
    14	ATGCCCGGCCCGGC
@@ -74,9 +74,9 @@ Python 4 Problem Set -- Lists and Loops
    8	ATGGGCCC
    ```
    
-11. Use list comprehension to generate a list of tuples. The tuples should contain sequences and lengths from the previous problem. Print out the length and the sequence i.e., "4\\tATGC\\n".
+11. Use list comprehension to generate a list of tuples. The tuples should contain sequences and lengths from the previous problem. Print out the length and the sequence (i.e., "4\\tATGC\\n").
 
-12. Modify the script from #11 so that you also print out the number (postion in the list) of each sequence i.e. "1\\t4\\tACGT\\n"
+12. Modify the script from #11 so that you also print out the number (postion in the list) of each sequence (i.e., "1\\t4\\tACGT\\n")
 
 13. Have you been commiting you work?
 
