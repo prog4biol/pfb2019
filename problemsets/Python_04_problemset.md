@@ -9,11 +9,11 @@ Python 4 Problem Set -- Lists and Loops
 	e.  Use the same print statement from b. to print your new list.  
 	f.  Add a new element to the end. [Read about append()](https://www.tutorialspoint.com/python/list_append.htm).  
 	g.  Add a new element to the beginning. [Read about insert()](https://www.tutorialspoint.com/python/list_insert.htm).  
-        g.  Add a new element somewhere other than the beginning or the end.  
-        h.  Remove an element from the end. [Read about pop()](https://www.tutorialspoint.com/python/list_pop.htm).  
-        i.  Remove an element from the beginning.  
-        j.  Remove an element from somewhere other than the beginning or the end.  
-	k.  Use `join` to create a string. Join the elements on ', ' 
+        h.  Add a new element somewhere other than the beginning or the end.  
+        i.  Remove an element from the end. [Read about pop()](https://www.tutorialspoint.com/python/list_pop.htm).  
+        j.  Remove an element from the beginning.  
+        k.  Remove an element from somewhere other than the beginning or the end.  
+	l.  Use `join` to create a string. Join the elements on ', ' 
 	
 2. Write a script that splits a string into a list. In your script: 
 	- Save the string `sapiens, erectus, neanderthalensis` as a variable.
