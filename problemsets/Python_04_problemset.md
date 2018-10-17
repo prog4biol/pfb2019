@@ -16,11 +16,15 @@ Python 4 Problem Set -- Lists and Loops
 	l.  Use `join` to create a string. Join the elements on ', ' 
 	
 2. Write a script that splits a string into a list. In your script: 
-	- Save the string `sapiens, erectus, neanderthalensis` as a variable.
-	- Print the string. 
-	- Split the string into individual words and print the result of the split. (Think about the ', '.)
-	- Store the resulting list in a new variable.
-	- Print the list.	
+	- Save the string `sapiens, erectus, neanderthalensis` as a variable named `taxa`.
+	- Print `taxa`.
+	- Print `taxa[1]`, what do you get?
+	- Print `type(taxa)`. What is it's type?
+	- Split `taxa` into individual words and print the result of the split. (Think about the ', '.)
+	- Store the result of `split` in a new variable named `species`.
+	- Print `species`.
+	- Print the `species[1]`, What do you get?
+	- Print `type(species)`. What is it's type?
 	- Sort the list alphabetically and print (hint: lookup the function `sorted()`). 
 	- Sort the list by length of each string and print. (The shortest string should be first). [Check out documentation of the key argument](https://www.programiz.com/python-programming/methods/built-in/sorted).
 
