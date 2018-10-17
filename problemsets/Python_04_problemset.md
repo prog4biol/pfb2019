@@ -13,7 +13,7 @@ Python 4 Problem Set -- Lists and Loops
         i.  Remove an element from the end. [Read about pop()](https://www.tutorialspoint.com/python/list_pop.htm).  
         j.  Remove an element from the beginning.  
         k.  Remove an element from somewhere other than the beginning or the end.  
-	l.  Use `join` to create a string. Join the elements on ', ' 
+	l.  Use `join` to create a string. Join the element on ', ' 
 	
 2. Write a script that splits a string into a list. In your script: 
 	- Save the string `sapiens, erectus, neanderthalensis` as a variable.
