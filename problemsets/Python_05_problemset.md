@@ -12,7 +12,7 @@ Python 5 - Dictionaries and Sets - Problem Set
 > | tree | [Cedar](https://sciencing.com/cedar-trees-5432718.html) |
 
 
-2. Print your only your favorite book.
+2. Print out your favorite book.
 ```python
 print(fav_dict['book'])
 ```
