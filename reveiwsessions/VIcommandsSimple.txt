@@ -1,0 +1,40 @@
+you should use vi, because it's simpler
+and lighter
+and cooler
+
+MODES
+
+i			insert mode
+escape			command mode
+
+CUTTING AND PASTING
+
+dd			delete (cut) line
+cc			cut line
+yy			yank line (copy)
+yw			yank word
+p			paste into next line
+P			paste at cursor
+u			undo
+ctrl r			redo
+
+MOVING AROUND
+
+0			beginning of line
+$			end of line
+shift arrow key		beginning/end of word 
+:number			move cursor to the (number) line
+arrow key		move up, down, left, right
+{			up a paragraph
+}			down a paragraph
+
+SAVING AND  EXITING
+
+:w			write file
+:q			quit vi
+:q!			quit without saving
+:wq			write file and quit vi
+
+OTHER
+
+:set nu			add number lines
