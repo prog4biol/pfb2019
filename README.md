@@ -4774,7 +4774,7 @@ Building this data structure in the interpreter:
 >>>
 ```
 
-Same example in a script file: [Building Complex Datastructures](https://github.com/prog4bio/pfb2018/blob/master/scripts/building_datastructures.py)
+Same example in a script file: [Building Complex Datastructures](https://github.com/prog4biol/pfb2018/blob/master/scripts/building_datastructures.py)
 
 
 
