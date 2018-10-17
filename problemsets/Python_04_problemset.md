@@ -3,16 +3,17 @@ Python 4 Problem Set -- Lists and Loops
 
 1. For the next series of tasks about lists use the interpreter:  
 	a.  Create a list of 5 of your favorite things.  
-	b.  Use the `print()` function to print out the middle element.  
-	c.  Now replace the middle element with a different item, your favorite song, or song bird.  
-	d.  Use the same print statement from b. to print your new list.  
-	e.  Add a new element to the end. [Read about append()](https://www.tutorialspoint.com/python/list_append.htm).  
-	f.  Add a new element to the beginning. [Read about insert()](https://www.tutorialspoint.com/python/list_insert.htm).  
-        g.  Add a new element somewhere other than the beginning or the end.  
-        h.  Remove an element from the end. [Read about pop()](https://www.tutorialspoint.com/python/list_pop.htm).  
-        i.  Remove an element from the beginning.  
-        j.  Remove an element from somewhere other than the beginning or the end.  
-	k.  Use `join` to create a string. Join the elements on ', ' 
+	b.  Use the `print()` function to print your list.  
+	c.  Use the `print()` function to print out the middle element.  
+	d.  Now replace the middle element with a different item, your favorite song, or song bird.  
+	e.  Use the same print statement from b. to print your new list. Check out the differences.   
+	f.  Add a new element to the end. [Read about append()](https://www.tutorialspoint.com/python/list_append.htm).  
+	g.  Add a new element to the beginning. [Read about insert()](https://www.tutorialspoint.com/python/list_insert.htm).  
+        h.  Add a new element somewhere other than the beginning or the end.  
+        i.  Remove an element from the end. [Read about pop()](https://www.tutorialspoint.com/python/list_pop.htm).  
+        j.  Remove an element from the beginning.  
+        k.  Remove an element from somewhere other than the beginning or the end.  
+	l.  Use `join` to create a string. Join the elements on ', ' 
 	
 2. Write a script that splits a string into a list. In your script: 
 	- Save the string `sapiens, erectus, neanderthalensis` as a variable.
@@ -20,10 +21,10 @@ Python 4 Problem Set -- Lists and Loops
 	- Split the string into individual words and print the result of the split. (Think about the ', '.)
 	- Store the resulting list in a new variable.
 	- Print the list.	
-	- Sort the list alphbetically and print (hint: lookup the function `sorted()`). 
+	- Sort the list alphabetically and print (hint: lookup the function `sorted()`). 
 	- Sort the list by length of each string and print. (The shortest string should be first). [Check out documentation of the key argument](https://www.programiz.com/python-programming/methods/built-in/sorted).
 
-3. Using the Python interpreter, interrogate the difference between these two ways to copy a list. Careful! One of these is NOT correct. 
+3. Using the Python interpreter, interrogate the difference between these two ways to copy a list. Careful! One of these is NOT what you might expect. 
    - Method 1
      - Create a list. For example: `my_list = ['a', 'bb', 'ccc']`
      - Make a copy using the `=` assignment operator:  `list_copy = my_list`
@@ -37,9 +38,9 @@ Python 4 Problem Set -- Lists and Loops
      - Alter the `list_copy2` by adding a new element using `append()`   
      - Print the original list again `print(my_list2)`   
 
-4. Write a script that uses a `while` loop to print out the numbers 1 to 100
+4. Write a script that uses a `while` loop to print out the numbers 1 to 100.
 
-5. Write a script that uses a `while loop` to calculate the [factorial](https://en.wikipedia.org/wiki/Factorial) of 1000. 
+5. Write a script that uses a `while` loop to calculate the [factorial](https://en.wikipedia.org/wiki/Factorial) of 1000. 
 
 6. Iterate through each element of this list using a `for` loop: [101,2,15,22,95,33,2,27,72,15,52]
    - Print out only the values that are even (hint: use the modulus operator).
@@ -64,7 +65,7 @@ Python 4 Problem Set -- Lists and Loops
       
 11. Write a new script to create a list with the following data  `['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']`. Use a `for` loop to iterate through each element of this list and:
    - Print out each element.
-   - Print out the length and the sequence, separared by a tab. The output should look like:
+   - Print out the length and the sequence, separated by a tab. The output should look like:
    
    ```
    14	ATGCCCGGCCCGGC
@@ -73,18 +74,18 @@ Python 4 Problem Set -- Lists and Loops
    8	ATGGGCCC
    ```
    
-11. Use list comprehension to generate a list of tuples. The tuples should contain sequences and lengths from the previous problem. Print out the length and the sequence i.e., "4\\tATGC\\n".
+11. Use list comprehension to generate a list of tuples. The tuples should contain sequences and lengths from the previous problem. Print out the length and the sequence (i.e., "4\\tATGC\\n").
 
-12. Modify the script from #11 so that you also print out the number (postion in the list) of each sequence i.e. "1\\t4\\tACGT\\n"
+12. Modify the script from #11 so that you also print out the number (postion in the list) of each sequence (i.e., "1\\t4\\tACGT\\n")
 
 13. Have you been commiting you work?
 
 ## Fun challenge problems! These are real scripts you might use in real life. You have already learned all you need to know to do each. If you don't have enough time in this session to complete, come back and try later.
 
 1. Create a shuffled sequence ([Fisher-Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle))
-    - Use a for loop to perform the following procedure N times (N = length of seq)
-    - Select a random position A with randrange()
-    - Select a random position B with randrange()
+    - Use a `for` loop to perform the following procedure N times (N = length of seq)
+    - Select a random position A with `randrange()`
+    - Select a random position B with `randrange()`
     - Exchange the letters at list indices A and B
     - Print the final shuffled sequence
     - Remember to test your code with test data. 
@@ -109,6 +110,3 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACC
       - the end postion in the orginal sequence
       - the length of each fragemnt
    - sort the fragments by length and print out as they would appear on a agrose gel. (big to little)
-
-
-16. Have you been commiting you work?
