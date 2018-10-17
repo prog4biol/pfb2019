@@ -61,21 +61,27 @@ else:
 	
 print('\nEnd of script.\n')
 
-#========
-# Notes
-#========
-
-#elif n >= 0: <---did not work
-#etc etc
 ```
-####Consider creating a README.md file
+####Creating a README.md file
 
 When are README's useful?
 
-* For personal organization when you have many projects ongoing
-* For collaborators or people interested in your code need an overview of what it does
-* To archive the purpose of the code, special instructions for installing or using, the language it is written in etc.
+* For personal organization when you have many projects ongoing (GitHub will automatically prompt you to write one when you create a new repository)
+* For collaborators or people interested in your code who need an overview of what it does
+* To archive the purpose of the project, special instructions for installing or using the code, the language it is written in etc.
 * Listing authorship and acknowledgements
+
+#####A quick note about Markdown
+
+######What is .md?
+
+Markdown (.md) is a lightwight markup language. Markdown files are text files (like the ones you have been creating) with a small amount of formatting.
+* Here is a Markdown cheat sheet: 
+
+​		https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf
+* Here is a tutorial on Markdown:
+
+​		https://www.markdowntutorial.com/
 
 
 
