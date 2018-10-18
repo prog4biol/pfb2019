@@ -3503,7 +3503,7 @@ These functions work on several other data types too!
 | `dict.copy()`                          | Returns a shallow copy of dictionary dict. [Shallow vs. deep](https://www.geeksforgeeks.org/copy-python-deep-copy-shallow-copy/) copying only matters in multidimensional data structures. |
 | `dict.fromkeys(seq,value)`             | Create a new dictionary with keys from seq (Python sequence type) and values set to value. |
 | `dict.items()`                         | Returns a list of (key, value) tuple pairs |
-| `dict.pop(key)`                        | Removes the key:value pair and returns the value |  
+| `dict.pop(key)`                        | Removes the key:value pair and returns the value |
 | `dict.keys()`                          | Returns list of keys                     |
 | `dict.get(key, default = None)`        | get value from dict[key], use default if not not present |
 | `dict.setdefault(key, default = None)` | Similar to get(), but will set dict[key] = default if key is not already in dict |
@@ -3705,7 +3705,7 @@ The most common access modes are read (r) and write (w).
 
 #### Reading the contents of a file
 
-Now that we have opened a file and created a file object we can do things with it, like read it. Lets read all the contents at once.  
+Now that we have opened a file and created a file object we can do things with it, like read it. Let's read all the contents at once.  
 
 Let's go to the command line and  `cat` the contents of the file to see what's in it first
 
@@ -3778,7 +3778,8 @@ Many people add this because it closes the file for you automatically. Good prog
 ```python
 #!/usr/bin/env python3
 
-with open("seq.nt.fa","r") as file_object: #cleans up after exiting with block
+with open("seq.nt.fa","r") as file_object: #cleans up after exiting 
+                                           # the with block
   for line in file_object:
     line = line.rstrip()
   	print(line)
@@ -3873,7 +3874,7 @@ seq_read  = open("sequence_data.txt","r")
 genes = {}
 for line in seq_read:
     line = line.rstrip()
-    id,seq = line.split() #split on whitespace                                                        
+    id,seq = line.split() #split on whitespace
     genes[id] =	seq
 seq_read.close()
 print(genes)
@@ -3890,7 +3891,7 @@ Output:
 
 ### [Link to Python 6 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_06_problemset.md)
 
-\pagebreak
+
 
 ---
 ## Python 7
