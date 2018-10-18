@@ -4066,31 +4066,36 @@ g..t
 > matches "gaat", "goat", and "gotta get a goat" (twice)
 
 
+<br><br> 
 ```
 g[gatc][gatc]t
 ```
-> matches "gaat", "gttt", "gatt", and "gotta get an agatt" (once)
+> matches "gaat", "gttt", "gatt", and "gotta get an agatt" (once) 
+  
 
+<br><br> 
 ```
 \d\d\d-\d\d\d\d
 ```
 > matches 376-8380, and 5128-8181 but not 055-98-2818.
 
+<br><br> 
+
 ```
 ^\d\d\d-\d\d\d\d
 ```
 >  matches 376-8380 and 376-83801 but not 5128-8181.
-
+<br><br> 
 ```
 ^\d\d\d-\d\d\d\d$
 ```
 > only matches telephone numbers (US telephone numbers without area code)
-
+<br><br> 
 ```
 \bcat
 ```
 > matches "cat", "catsup" and "more catsup please" but not "scat".
-
+<br><br> 
 ```
 \bcat\b
 ```
