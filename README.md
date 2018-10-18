@@ -5609,14 +5609,15 @@ Does unix-like wildcard file path expansion.
 >>> glob.glob('pdfs/*.pdf')
 ['pdfs/python1.pdf', 'pdfs/python2.pdf', 'pdfs/python3.pdf', 'pdfs/python4.pdf', 'pdfs/python6.pdf', 'pdfs/python8.pdf', 'pdfs/unix1.pdf', 'pdfs/unix2.pdf']
 >>> fasta_files = glob.glob('sequences/*.fa')
->>> ```
+>>> 
+```
 
 
 #### argparse
 
 Great (if quite complicated) tool for parsing command line arguments and automatically generating help messages for scripts (very handy!). Here's a simple script that explains a little of what it does.
 
-​```python
+```python
 #!/usr/bin/env python3
 import argparse
 parser = argparse.ArgumentParser(description="A test program that reads in some number of lines from an input file. The output can be screen or an output file")
