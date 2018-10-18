@@ -5080,7 +5080,7 @@ File needs to be a FASTA file and end with .fa
 
 ### Functions
 
-Functions consist of lines of code that do something useful and that you want to run more than once. You also give that function a name so you can refer to it in your code. This avoids copying and pasting the code to many places in your script and makes your code easier to read.
+Functions consist of several lines of code that do something useful and that you want to run more than once. You also give that function a name so you can refer to it in your code. This avoids copying and pasting the code to many places in your script and makes your code easier to read.
 
 Let's see some examples.
 
@@ -5134,9 +5134,9 @@ This code will print 0.45161290322580644 to the screen. You can save this value 
 dna_gc = gc_content('GTACCTTGATTTCGTATTCTGAGAGGCTGCT')
 ```
 
-As you can see we can write a nice clear line of python to call this function and because the function has a name that describes what it does it's easy to understand how the code works. Don't define your functions like this `def my_function(a):`!
+As you can see we can write a nice clear line of python to call this function and because the function has a name that describes what it does it's easy to understand how the code works. Don't give your functions names like this `def my_function(a):`!
 
-How could you convert the GC fraction to % GC. Use format()
+How could you convert the GC fraction to % GC. Use `format()`.
 
 ```python
 dna_string = "GTACCTTGATTTCGTATTCTGAGAGGCTGCT"
@@ -5157,22 +5157,14 @@ This sequence is 45.16% GC
 2. The function must have a name. This name should clearly describe what the function does. Here is our example `gc_content`
 3. You can pass variables to functions but you don't have to. In the definition line, you place variables your function needs inside parentheses like this `(dna)`. This variable only exists inside the function.
 4. The first line of the function must end with a `:` so the complete function definition line looks like this ```def gc_content(dna):```
-5. The next lines of code, the function body, needs to be indented. This code comprises what the function does.
+5. The next lines of code, the function body, need to be indented. This code comprises what the function does.
 6. You can return a value as the last line of the function, but this is not required. This line `return gc_content` at the end of our function definition passes the value of gc_content back to the code that called the function in your main script.
 
 
 #### Naming Arguments
 
-You can name your argument variables anything you want, but they should describe the data they contain. The name needs to be consistent within your function. You could change `dna` to `seqeunce` like this
+You can name your argument variables anything you want, but the name should describe the data contained. The name needs to be consistent within your function. 
 
-```python
-def gc_content(sequence):   # give our function a name and parameter 'sequence'
-   c_count = sequence.count('C')
-   g_count = sequence.count('G')
-   dna_len = len(sequence)
-   gc_content = (c_count + g_count) / dna_len
-   return gc_content # return the value of gc_content to the code that called this function
-```
 #### Keyword Arguments
 
 Arguments can be named and these names can be used when the function is called. This name is called a 'keyword' 
