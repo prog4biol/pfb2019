@@ -1,4 +1,4 @@
-## A Few Good Practices in Coding
+## :snake: A Few Good Practices in Coding :snake:
 
 ####Writing clear scripts
 
@@ -20,7 +20,7 @@ elif n > 0:
 else:
 	print(n, 'is negative')
 ```
-The code is correct, but the variable has a non-descriptive name. There are no blank lines between portions of the code, and there is no indication about what the script is attempting to do.
+The code is correct, but the variable has a non-descriptive name. There are no blank lines between portions of the code, and there is no indication about what the script is attempting to do.​
 
 **A clearer version:**
 
