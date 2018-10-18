@@ -3694,7 +3694,7 @@ Hello, PFB2018!
 
 #### Reading input from the keyboard
 
-This is something new. There is a function which prints a message to the screen and waits for input from the keyboard. This input can be stored in a variable. It always starts as a string. Convert to an int or float if you want a number.
+This is something new. There is a function which prints a message to the screen and waits for input from the keyboard. This input can be stored in a variable. It always starts as a string. Convert to an int or float if you want a number. When you are done entering text, press the enter key to end the input. A newline character is not included in the input.
 
 ```python 
 >>> user_input = input("Type Something Now: ")
@@ -3715,7 +3715,7 @@ The most common access modes are read (r) and write (w).
 #### Open a File
 
 ```python
->>> file_object = open("seq.nt.fa","r")
+>>> file_object = open("seq.nt.txt","r")
 ```
 > 'file_object' is a name of a variable. This can be anything, but make it a helpful name that describes what kind of file you are opening.
 
@@ -3727,7 +3727,7 @@ Now that we have opened a file and created a file object we can do things with i
 Let's go to the command line and  `cat` the contents of the file to see what's in it first.
 
 ```bash
-$ cat seq.nt.fa
+$ cat seq.nt.txt
 ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
 ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 $ 
@@ -3735,7 +3735,7 @@ $
 
 Note the new lines. Now, lets print the contents to the screen with Python. We will use `read()` to read the entire contents of the file into a variable. 
 ```python
->>> file = open("seq.nt.fa","r")
+>>> file = open("seq.nt.txt","r")
 >>> contents = file.read()
 >>> print(contents)  # note newline characters are part of the file!
 ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
@@ -3751,7 +3751,7 @@ Here's another way to read data in from a file. A `for` loop can be used to iter
 ```python
 #!/usr/bin/env python3
 
-file = open("seq.nt.fa","r")
+file = open("seq.nt.txt","r")
 for line in file: # Python magic: reads in a line from file
   print(line)
 ```
@@ -3771,7 +3771,7 @@ Let's use `rstrip()` method to remove the newline from our file input.
 $ cat file_for_rstrip.py
 #!/usr/bin/env python3
 
-file_object = open("seq.nt.fa","r")
+file_object = open("seq.nt.txt","r")
 for line in file_object:
   line = line.rstrip()
   print(line)
@@ -3794,8 +3794,8 @@ Many people add this, because it closes the file for you automatically. Good pro
 ```python
 #!/usr/bin/env python3
 
-with open("seq.nt.fa","r") as file_object: #cleans up after exiting 
-                                           # the with block
+with open("seq.nt.txt","r") as file_object: #cleans up after exiting 
+                                            # the with block
   for line in file_object:
     line = line.rstrip()
   	print(line)
@@ -3838,7 +3838,7 @@ Now, let's get crazy! Lets read from one file a line at a time. Do something to 
 
 total_nts = 0
 # open two file objects, one for reading, one for writing
-with open("seq.nt.fa","r") as seq_read, open("nt.counts.txt","w") as seq_write:
+with open("seq.nt.txt","r") as seq_read, open("nt.counts.txt","w") as seq_write:
   for line in seq_read:
     line = line.rstrip()
     nt_count = len(line)
@@ -3860,7 +3860,7 @@ $ cat nt.counts.txt
 71
 Total: 142
 ```
-> The file we are reading from is named, "seq.nt.fa"  
+> The file we are reading from is named, "seq.nt.txt"  
 > The file we are writing to is named, "nt.counts.txt"  
 > We read each line, calculate the length of each line, and print the length  
 > We also create a variable to keep track of the total nt count  
