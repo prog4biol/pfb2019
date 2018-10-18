@@ -78,7 +78,7 @@ Python 4 Problem Set -- Lists and Loops
    8	ATGGGCCC
    ```
    
-12. Use list comprehension to generate a list of tuples. The tuples should contain sequences and lengths from the previous problem. Print out the length and the sequence (i.e., "4\\tATGC\\n").
+12. Use list comprehension to generate a list of tuples. The tuples should contain sequences and lengths from the previous problem. Print out the length and the sequence (i.e., "4\\tATGC\\n").  A list of tuples looks like this [(4,'ATGC'),(2,'GC')]. Use `yourList.append( yourTuple )`.  Check out the second example [here](https://www.w3schools.com/python/ref_list_append.asp)
 
 13. Modify the script from #11 so that you also print out the number (postion in the list) of each sequence (i.e., "1\\t4\\tACGT\\n")
 
