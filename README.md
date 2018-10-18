@@ -3707,7 +3707,7 @@ The most common access modes are read (r) and write (w).
 
 Now that we have opened a file and created a file object we can do things with it, like read it. Let's read all the contents at once.  
 
-Let's go to the command line and  `cat` the contents of the file to see what's in it first
+Let's go to the command line and  `cat` the contents of the file to see what's in it first.
 
 ```bash
 $ cat seq.nt.fa
@@ -3720,7 +3720,6 @@ Note the new lines. Now, lets print the contents to the screen with Python. We w
 ```python
 >>> file = open("seq.nt.fa","r")
 >>> contents = file.read()
-seq.nt.fa
 >>> print(contents)  # note newline characters are part of the file!
 ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
 ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
@@ -3771,9 +3770,9 @@ ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 
 > Where do the newlines in the above output come from?
 
-####Opening a file with `with open() as fh:`
+#### Opening a file with `with open() as fh:`
 
-Many people add this because it closes the file for you automatically. Good programming practice. Your code will clean up as it runs. For more advanced coding, `with ... as ...` saves limited resources like filehandles and database connections. For now, we just need to know that the `with ... as ...:` does the same as `fh = open(...) ... fh.close()`. So here's what the adapted code looks like
+Many people add this, because it closes the file for you automatically. Good programming practice. Your code will clean up as it runs. For more advanced coding, `with ... as ...` saves limited resources like filehandles and database connections. For now, we just need to know that the `with ... as ...:` does the same as `fh = open(...) ... fh.close()`. So here's what the adapted code looks like
 
 ```python
 #!/usr/bin/env python3
@@ -3790,7 +3789,7 @@ with open("seq.nt.fa","r") as file_object: #cleans up after exiting
 
 Writing to a file is nothing more than opening a file for writing then using the `write()` method.  
 
-The `write()` method is like the `print()` function. The biggest difference is that it writes to your file object instead of the screen. Unlike `print()` it does not add a newline by default.  `write()` takes a single string argument. 
+The `write()` method is like the `print()` function. The biggest difference is that it writes to your file object instead of the screen. Unlike `print()`, it does not add a newline by default.  `write()` takes a single string argument. 
 
 Let's write a few lines to a file named "writing.txt".  
 ```python
@@ -3847,16 +3846,16 @@ Total: 142
 ```
 > The file we are reading from is named, "seq.nt.fa"  
 > The file we are writing to is named, "nt.counts.txt"  
-> We read each line, calculate the length of each line and print the length  
+> We read each line, calculate the length of each line, and print the length  
 > We also create a variable to keep track of the total nt count  
 > At the end, we print out the total count of nts  
-> Finally we close each of the files  
+> Finally, we close each of the files  
 
 
 
 #### Building a Dictionary from a File
 
-This is a very common task. It will use a loop, file I/O and a dictionary.
+This is a very common task. It will use a loop, file I/O, and a dictionary.
 
 Assume we have a file called "sequence_data.txt" that contains tab-delimited gene names and sequences that looks something like this
 
@@ -3870,7 +3869,7 @@ How can we read this whole file in to a dictionary?
 ```python
 #!/usr/bin/env python3                                                                                    
 
-seq_read  = open("sequence_data.txt","r")
+seq_read = open("sequence_data.txt","r")
 genes = {}
 for line in seq_read:
     line = line.rstrip()
