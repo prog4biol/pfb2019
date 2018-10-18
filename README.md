@@ -3362,7 +3362,7 @@ The value can be accessed and passed directly to a function or stored in a varia
 >>> print(genes['TP53'])
 GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 >>>
->>> seq = genes['TP53'];
+>>> seq = genes['TP53']
 >>> print(seq)
 GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 ```
@@ -3503,6 +3503,7 @@ These functions work on several other data types too!
 | `dict.copy()`                          | Returns a shallow copy of dictionary dict. [Shallow vs. deep](https://www.geeksforgeeks.org/copy-python-deep-copy-shallow-copy/) copying only matters in multidimensional data structures. |
 | `dict.fromkeys(seq,value)`             | Create a new dictionary with keys from seq (Python sequence type) and values set to value. |
 | `dict.items()`                         | Returns a list of (key, value) tuple pairs |
+| `dict.pop(key)`                        | Removes the key:value pair and returns the value |  
 | `dict.keys()`                          | Returns list of keys                     |
 | `dict.get(key, default = None)`        | get value from dict[key], use default if not not present |
 | `dict.setdefault(key, default = None)` | Similar to get(), but will set dict[key] = default if key is not already in dict |
