@@ -10,7 +10,7 @@ Python 7 - Regular Expressions - Problem Set
 4. If a line matches the format of a FASTA header, extract the sequence name and description using sub patterns (groups). 
 	- Print lines something like this `id:"extracted seq name" desc:"extracted description"`
 
-5. Create or modify your FASTA parser to use regular expressions. Also make sure your parser can deal with a sequence that is split over many lines.
+5. Create a FASTA parser, or modify your FASTA parser from the previous problem set, to use regular expressions. Also make sure your parser can deal with a sequence that is split over many lines.
 
 6. The enzyme ApoI has a restriction site: R^AATTY where R and Y are degenerate nucleotideides. See the IUPAC table to identify the nucleotide possibilities for the R and Y. Write a regular expression to find and print all occurrences of the site in the following sequence [Python_07_ApoI.fasta](https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/Python_07_ApoI.fasta). 
 
