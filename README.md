@@ -5592,12 +5592,13 @@ To get a random index from an element of `list` use `i=random.randrange(len(list
 #### statistics
 
 Typical statistical quantities
-| example                         | description                              |
-| ------------------------------- | ---------------------------------------- |
-| statistics.mean([1,2,3,4,5])    | mean or average                          |
-| statistics.median([ 2,3,4,5])   | median = 3.5                             |
-| statistics.stdev([1,2,3,4,5])   | standard deviation of sample (square root of sample variance) |
-| statistics.pstdev([1,2,3,4,5])q | estimate of population standard deviation |
+
+| example                         | description                              |  
+| ------------------------------- | ---------------------------------------- |  
+| statistics.mean([1,2,3,4,5])    | mean or average                          |  
+| statistics.median([ 2,3,4,5])   | median = 3.5                             |  
+| statistics.stdev([1,2,3,4,5])   | standard deviation of sample (square root of sample variance) |  
+| statistics.pstdev([1,2,3,4,5])q | estimate of population standard deviation |  
 
 #### glob
 
