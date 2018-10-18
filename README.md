@@ -2905,10 +2905,13 @@ The while loop will continue to execute a block of code as long as the test expr
 
 ```
 while expression:
+  # these statements get executed every time the code enters the loop 
   statement1
   statement2
   more_statements
+# code below here gets executed after the while loop exits
 rest_of_code_goes_here
+more_code
 ```
 > The condition is the expression. The while loop block of code is the collection of indented statements following the expression.
 
@@ -2955,8 +2958,8 @@ An infinite loop occurs when a while condition is always true. Here is an exampl
 #!/usr/bin/env python3
 
 count = 0
-while count < 5:
-  print("count:" , count)
+while count < 5:            # this is normally a bug!!
+  print("count:" , count)   # forgot to increment count in the loop!!
 print("Done") 
 ```
 
@@ -2975,7 +2978,21 @@ count: 0
 ...
 ```
 > What caused the expression to always be `True`? 
-> The statement that increments the count is missing, so it will always be smaller than 5. To stop the code from forever printing use ctrl+c.
+> The statement that increments the count is missing, so it will always be smaller than 5. To stop the code from  printing forever use ctrl+c. Behavior like this is almost always due to a bug in the code.
+
+A better way to write an infinite loop is with `True`. You'll need to include something like `if ...: break` 
+
+```python
+#!/usr/bin/env python3
+count=0
+while True:
+  print("count:",count)
+  # you probably want to add if...: break 
+  # so you can get out of the infinite loop
+print('Finished the loop')
+```
+
+
 
 #### While/Else
 
@@ -3819,15 +3836,14 @@ Now, let's get crazy! Lets read from one file a line at a time. Do something to 
 ```python
 #!/usr/bin/env python3
 
-seq_read  = open("seq.nt.fa","r")
-seq_write = open("nt.counts.txt","w")
-
 total_nts = 0
-for line in seq_read:
-  line = line.rstrip()
-  nt_count = len(line)
-  total_nts += nt_count
-  seq_write.write(str(nt_count) + "\n")
+# open two file objects, one for reading, one for writing
+with open("seq.nt.fa","r") as seq_read, open("nt.counts.txt","w") as seq_write:
+  for line in seq_read:
+    line = line.rstrip()
+    nt_count = len(line)
+    total_nts += nt_count
+    seq_write.write(str(nt_count) + "\n")
 
 seq_write.write("Total: " + str(total_nts) +"\n")
 
@@ -3867,15 +3883,14 @@ BRCA1   GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
 How can we read this whole file in to a dictionary? 
 
 ```python
-#!/usr/bin/env python3                                                                                    
+#!/usr/bin/env python3
 
-seq_read = open("sequence_data.txt","r")
 genes = {}
-for line in seq_read:
+with open("sequence_data.txt","r") as seq_read:
+  for line in seq_read:
     line = line.rstrip()
-    id,seq = line.split() #split on whitespace
-    genes[id] =	seq
-seq_read.close()
+    gene_id,seq = line.split() #split on whitespace
+    genes[gene_id] = seq
 print(genes)
 ```
 
@@ -4825,7 +4840,7 @@ We have already seen quite a few exceptions throughout the lecture notes, here a
   - AttributeError: 'int' object has no attribute 'lower'
   - IndexError: list assignment index out of range
   - NameError: name 'HDAC' is not defined
-  
+
 [Link to Python Documentation of built in types of exceptions](https://www.tutorialspoint.com/python3/python_exceptions.htm)
 
 We can use the exception to our advantage to help the people who are running the script. We can use a try/except condition like an if/else block to look for exceptions and to execute specific code if we **do not have** an exception and do something different if we **do have** an exception.
@@ -5593,12 +5608,12 @@ To get a random index from an element of `list` use `i=random.randrange(len(list
 
 Typical statistical quantities
 
-| example                         | description                              |  
-| ------------------------------- | ---------------------------------------- |  
-| statistics.mean([1,2,3,4,5])    | mean or average                          |  
-| statistics.median([ 2,3,4,5])   | median = 3.5                             |  
-| statistics.stdev([1,2,3,4,5])   | standard deviation of sample (square root of sample variance) |  
-| statistics.pstdev([1,2,3,4,5])q | estimate of population standard deviation |  
+| example                         | description                              |
+| ------------------------------- | ---------------------------------------- |
+| statistics.mean([1,2,3,4,5])    | mean or average                          |
+| statistics.median([ 2,3,4,5])   | median = 3.5                             |
+| statistics.stdev([1,2,3,4,5])   | standard deviation of sample (square root of sample variance) |
+| statistics.pstdev([1,2,3,4,5])q | estimate of population standard deviation |
 
 #### glob
 
