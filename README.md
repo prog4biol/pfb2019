@@ -4788,7 +4788,7 @@ There are also specific data table and frame handling libraries like [Pandas](ht
 ### Exceptions
 
 
-There are a few different types of errors when coding. Syntax errors, logic errors, and exceptions. You have probably encountered all three. Sytax and logic errors are issues you need to deal with while coding. An exception is a special type of error that can be informative and used to write code to respond to this type of error. This is especially relavent when dealing with user input. What if they don't give you any, or it is the wrong kind of input. We want our code to be able to detect these types of errors and respond accordingly.
+There are a few different types of errors when coding. Syntax errors, logic errors, and exceptions. You have probably encountered all three. Syntax and logic errors are issues you need to deal with while coding. An exception is a special type of error that can be informative and used to write code to respond to this type of error. This is especially relavent when dealing with user input. What if they don't give you any, or it is the wrong kind of input. We want our code to be able to detect these types of errors and respond accordingly.
 
 ```python
 #!/usr/bin/env python3
@@ -4814,10 +4814,10 @@ Traceback (most recent call last):
     file = sys.argv[1]
 IndexError: list index out of range 
 ```
-> We get an **IndexError** exception
+> We get an **IndexError** exception, which is raised when an index is not found in a sequence.
 
 
-We have already seen quite a few exceptions, here are some:   
+We have already seen quite a few exceptions throughout the lecture notes, here are some:   
   - ValueError: math domain error
   - AttributeError: 'list' object has no attribute 'rstrip'
   - SyntaxError: EOL while scanning string literal
@@ -4826,8 +4826,10 @@ We have already seen quite a few exceptions, here are some:
   - AttributeError: 'int' object has no attribute 'lower'
   - IndexError: list assignment index out of range
   - NameError: name 'HDAC' is not defined
+  
+[Link to Python Documentation of built in types of exceptions](https://www.tutorialspoint.com/python3/python_exceptions.htm)
 
-We can use the exception to our advantage to help out our users. We can use a try/except condition to look for exceptions and to do something if we do not have an exception and do something different if we do have an exception.
+We can use the exception to our advantage to help the people who are running the script. We can use a try/except condition like an if/else block to look for exceptions and to execute specific code if we **do not have** an exception and do something different if we **do have** an exception.
 
 ```python
 #!/usr/bin/env python3
@@ -4860,7 +4862,7 @@ Please provide a file name
 What if the user provides input but it is not a valid file or the path is incorrect? Or if you want to check to see if the user provided input as well as if it can open the input.  
 
 
-We can add multiple exception tests. Each except statement can specify what kind of exception it is waiting to recieve. If that kind of exception occures, that block of code will be executed.
+We can add multiple exception tests, like if/elif block. Each except statement can specify what kind of exception it is waiting to recieve. If that kind of exception occures, that block of code will be executed.
 ```python
 import sys
 
@@ -4872,14 +4874,17 @@ try:
   for line in FASTA:
     line = line.rstrip()
     print(line)
-except IndexError:  
+except IndexError: 
   print("Please provide a file name")
 except IOError:    
   print("Can't find file:" , file)
 ```
-> Here we test for an IndexError and a IOError. The IndexError occurs when we try to access a list element that does not exists. The IOError happens when we try to access a file that does not exist.
+> Here we test for an IndexError: Raised when an index is not found in a sequence.
+> The IndexError occurs when we try to access a list element that does not exists. 
+> And we test for a IOError: Raised when an input/ output operation fails, such as the print statement or the open() function when trying to open a file that does not exist.   
+> The IOError happens when we try to access a file that does not exist.
 
-Let's run it with no input.
+Let's run it with a file that does not exist.
 ```
 $ python scripts/exceptions_try_files.py test.txt
 User provided file name: test.txt
@@ -4999,7 +5004,7 @@ except ValueError:
 except IOError as ex:
   print("Can't find file:" , file , ': ' , ex.strerror  )
 ```
-> Here we created an except to catch any ValueError
+> Here we created an exception to catch any ValueError
 
 Let's Run it.
 ```bash
@@ -5013,7 +5018,7 @@ But what if there is another ValueError, how can we tell if it is do to the FAST
 
 #### Creating Custom Exceptions
 
-We can create our own custom exception. We will need to create a new class of exception. Below is the sytax to do this.
+We can create our own custom exception. We will need to create a new class of exception. Below is the syntax to do this.
 
 ```python
 import sys
