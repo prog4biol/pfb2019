@@ -3734,9 +3734,11 @@ Same example in a script file: [Building Complex Datastructures](https://github.
 
 
 
-There are also specific data table and frame handling libraries like [Pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Here is a [intro](https://pandas.pydata.org/pandas-docs/stable/dsintro.html) to data structures in Panda.
+There are also specific data table and frame handling libraries like [Pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
 
+Here is a [intro](https://pandas.pydata.org/pandas-docs/stable/dsintro.html) to data structures in Panda.
 
+Here is a very nice [interactive tutorial](https://www.learnpython.org/en/Pandas_Basics)
 
 
 ### Exceptions
@@ -3968,7 +3970,7 @@ File needs to be a FASTA file and end with .fa
 ```
 > We get a great error message now.
 
-But what if there is another ValueError, how can we tell if it is do to the FASTA file extension or not? 
+But what if there is another ValueError, how can we tell if has anything to do with the FASTA file extension or not? Answer: the message will be different.
 
 #### Creating Custom Exceptions
 
