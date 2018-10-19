@@ -4465,7 +4465,7 @@ oops = subprocess.check_call(['ls', '-l'])
 oops = subprocess.check_call('ls -l', shell=True)
 ```
 
-##### Redirect stdout to a file
+##### Redirect stdout to a file inside python subprocess
 
 You can't write `ls -l > listing.txt`  to redirect stdout in the subprocess method, so use this instead
 
@@ -4588,7 +4588,7 @@ if args.out:
 
 time, HTML, XML, email, CGI, sockets, audio, GUIs with Tk, debugging, testing, unix utils
 
-Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
+Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics, pandas for data, scikitlearn for machine learning.
 
 ---
 
