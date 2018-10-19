@@ -1950,9 +1950,9 @@ It returns three different values depending on x and y
 
 ### Sequences
 
-In the next section, we will learn about strings, tuples and lists. These are all examples of python sequences. A string is a sequence of characters `'ACGTGA'`, a tuple `(0.23, 9.74, -8.17, 3.24, 0.16)` and a list `['dog', 'cat', 'bird']` are sequences of any kind of data. We'll see much more detail in a bit.
+In the next section, we will learn about strings, tuples, and lists. These are all examples of python sequences. A string is a sequence of characters `'ACGTGA'`, a tuple `(0.23, 9.74, -8.17, 3.24, 0.16)`, and a list `['dog', 'cat', 'bird']` are sequences of any kind of data. We'll see much more detail in a bit.
 
-In Python a type of object gets operations that belong to that type. Sequences have sequence operations so strings can also use sequence operations. Strings also have their own specific operations.
+In Python, a type of object gets operations that belong to that type. Sequences have sequence operations so strings can also use sequence operations. Strings also have their own specific operations.
 
 You can ask what the length of any sequence is
 
@@ -4066,31 +4066,36 @@ g..t
 > matches "gaat", "goat", and "gotta get a goat" (twice)
 
 
+<br><br> 
 ```
 g[gatc][gatc]t
 ```
-> matches "gaat", "gttt", "gatt", and "gotta get an agatt" (once)
+> matches "gaat", "gttt", "gatt", and "gotta get an agatt" (once) 
+  
 
+<br><br> 
 ```
 \d\d\d-\d\d\d\d
 ```
 > matches 376-8380, and 5128-8181 but not 055-98-2818.
 
+<br><br> 
+
 ```
 ^\d\d\d-\d\d\d\d
 ```
 >  matches 376-8380 and 376-83801 but not 5128-8181.
-
+<br><br> 
 ```
 ^\d\d\d-\d\d\d\d$
 ```
 > only matches telephone numbers (US telephone numbers without area code)
-
+<br><br> 
 ```
 \bcat
 ```
 > matches "cat", "catsup" and "more catsup please" but not "scat".
-
+<br><br> 
 ```
 \bcat\b
 ```

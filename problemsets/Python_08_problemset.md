@@ -46,8 +46,34 @@ TGT TGA
 
 5. Now reverse complement each sequence and print out all six reading frames to a file called 'Python_08.codons-6frames.nt'
 
-6. Translate each of the six reading frames into amino acids. Create one file for which you print the six reading frames (Python_08.codons-6frames.nt) and one file for which you print the translation of the six reading frames (Python_08.translated.aa).
+6. Translate each of the six reading frames into amino acids. Create one file for which you print the six reading frames (Python_08.codons-6frames.nt) and one file for which you print the translation of the six reading frames (Python_08.translated.aa). Use the following translation table:
 
-7. Find the longest peptide sequence (M-->Stop) of all the six translated reading frames for a single sequence. Do this for all the sequence records. For each sequence, print out in FASTA format the six frames of codons to one file (Python_08.codons-6frames.nt), the translations to a second file (Python_08.translated.aa), and the single longest translated peptide to a third file (Python_08.translated-longest.aa).
+```python
+translation_table = {
+    'GCT':'A', 'GCC':'A', 'GCA':'A', 'GCG':'A',
+    'CGT':'R', 'CGC':'R', 'CGA':'R', 'CGG':'R', 'AGA':'R', 'AGG':'R',
+    'AAT':'N', 'AAC':'N',
+    'GAT':'D', 'GAC':'D',
+    'TGT':'C', 'TGC':'C',
+    'CAA':'Q', 'CAG':'Q',
+    'GAA':'E', 'GAG':'E',
+    'GGT':'G', 'GGC':'G', 'GGA':'G', 'GGG':'G',
+    'CAT':'H', 'CAC':'H',
+    'ATT':'I', 'ATC':'I', 'ATA':'I',
+    'TTA':'L', 'TTG':'L', 'CTT':'L', 'CTC':'L', 'CTA':'L', 'CTG':'L',
+    'AAA':'K', 'AAG':'K',
+    'ATG':'M',
+    'TTT':'F', 'TTC':'F',
+    'CCT':'P', 'CCC':'P', 'CCA':'P', 'CCG':'P',
+    'TCT':'S', 'TCC':'S', 'TCA':'S', 'TCG':'S', 'AGT':'S', 'AGC':'S',
+    'ACT':'T', 'ACC':'T', 'ACA':'T', 'ACG':'T',
+    'TGG':'W',
+    'TAT':'Y', 'TAC':'Y',
+    'GTT':'V', 'GTC':'V', 'GTA':'V', 'GTG':'V',
+    'TAA':'*', 'TGA':'*', 'TAG':'*'
+}
+```
+
+7. Find the longest peptide sequence (M => Stop) of all the six translated reading frames for a single sequence. Do this for all the sequence records. For each sequence, print out in FASTA format the six frames of codons to one file (Python_08.codons-6frames.nt), the translations to a second file (Python_08.translated.aa), and the single longest translated peptide to a third file (Python_08.translated-longest.aa).
 
 8. Finally determine which subset of codons produced the longest peptide for each sequence record. Print this to a fourth file in FASTA format (Python_08.orf-longest.nt).  
