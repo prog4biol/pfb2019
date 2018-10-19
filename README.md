@@ -4016,7 +4016,7 @@ File needs to be a FASTA file and end with .fa
 
 
 ---
-## Python 9
+# Python 9
 
 ### Functions
 
@@ -4595,7 +4595,7 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics,
 ### [Link to Python 9 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_0_problemset.md)
 
 ---
-## Python 10
+# Python 10
 
 ### Classes
 
