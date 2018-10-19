@@ -26,8 +26,9 @@
   a. Add in a method that returns the sequence record in FASTA format.  
   b. Write some some lines of code, outside your class (in your main program) that gets and prints the sequence in FASTA format using your new method.
 
+## Challenge Question
 
-
+1. Create a method that can compare two DNA Sequence records and returns True if they are the same or False if they are differet. Sameness is based on name, organism, and seqeunce. All need to be the same for two objects to be considered the same.
 
 
 
