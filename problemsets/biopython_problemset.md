@@ -1,6 +1,17 @@
 # Biopython problem set
 
-### Preparation for problems
+
+## FASTA Parser
+
+1. Create a new FASTA parser that uses BioPython to get the sequence name, description, and sequence.
+2. Print out the GC content of each sequence.
+  ```
+  someseq1  .45
+  someseq2  .56
+  ```
+
+## Parsing BLAST output
+### Preparation for problem
 
 Preparation:
 
@@ -9,6 +20,7 @@ Preparation:
 ```
 wget ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz
 ```
+**Make sure to not add this to your gitHub Repository. It is tooooo big and with cause problems**
 
 2. Unzip the file using the Unix command 'gunzip':
 
