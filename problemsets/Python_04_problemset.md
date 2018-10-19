@@ -16,11 +16,15 @@ Python 4 Problem Set -- Lists and Loops
 	l.  Use `join` to create a string. Join the elements on ', ' 
 	
 2. Write a script that splits a string into a list. In your script: 
-	- Save the string `sapiens, erectus, neanderthalensis` as a variable.
-	- Print the string. 
-	- Split the string into individual words and print the result of the split. (Think about the ', '.)
-	- Store the resulting list in a new variable.
-	- Print the list.	
+	- Save the string `sapiens, erectus, neanderthalensis` as a variable named `taxa`.
+	- Print `taxa`.
+	- Print `taxa[1]`, what do you get?
+	- Print `type(taxa)`. What is it's type?
+	- Split `taxa` into individual words and print the result of the split. (Think about the ', '.)
+	- Store the result of `split` in a new variable named `species`.
+	- Print `species`.
+	- Print the `species[1]`, What do you get?
+	- Print `type(species)`. What is it's type?
 	- Sort the list alphabetically and print (hint: lookup the function `sorted()`). 
 	- Sort the list by length of each string and print. (The shortest string should be first). [Check out documentation of the key argument](https://www.programiz.com/python-programming/methods/built-in/sorted).
 
@@ -69,12 +73,12 @@ Python 4 Problem Set -- Lists and Loops
    
    ```
    14	ATGCCCGGCCCGGC
-   24	GCGTGCTAGCAATACGATAAACCGG
+   25	GCGTGCTAGCAATACGATAAACCGG
    12	ATATATATCGAT
    8	ATGGGCCC
    ```
    
-12. Use list comprehension to generate a list of tuples. The tuples should contain sequences and lengths from the previous problem. Print out the length and the sequence (i.e., "4\\tATGC\\n").
+12. Use list comprehension to generate a list of tuples. The tuples should contain sequences and lengths from the previous problem. Print out the length and the sequence (i.e., "4\\tATGC\\n").  A list of tuples looks like this [(4,'ATGC'),(2,'GC')]. Use `yourList.append( yourTuple )`.  Check out the second example [here](https://www.w3schools.com/python/ref_list_append.asp)
 
 13. Modify the script from #11 so that you also print out the number (postion in the list) of each sequence (i.e., "1\\t4\\tACGT\\n")
 

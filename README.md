@@ -1,1076 +1,11 @@
-Programming For Biology 2018
-============================
-
-
-__Instructors__  
-Simon Prochnik  
-Sofia Robb     
-
----
-
-__Table of Contents__
-
-   * [Big Picture](#big-picture)
-      * [Why?](#why)
-      * [Helpful Tips](#helpful-tips)
-   * [Unix](#unix)
-      * [Unix 1](#unix-1)
-         * [Unix Overview](#unix-overview)
-            * [What is the Command-Line?](#what-is-the-command-line)
-         * [The Basics](#the-basics)
-            * [Logging into Your Workstation](#logging-into-your-workstation)
-            * [Bringing up the Command-Line](#bringing-up-the-command-line)
-            * [OK. I've Logged in.  What Now?](#ok-ive-logged-in--what-now)
-            * [Command-Line Prompt](#command-line-prompt)
-            * [Issuing Commands](#issuing-commands)
-            * [Command-Line Editing](#command-line-editing)
-            * [Wildcards](#wildcards)
-            * [Home Sweet Home](#home-sweet-home)
-            * [Getting Around](#getting-around)
-            * [Essential Unix Commands](#essential-unix-commands)
-            * [Getting Information About Commands](#getting-information-about-commands)
-            * [Finding Out What Commands are on Your Computer](#finding-out-what-commands-are-on-your-computer)
-            * [Arguments and Command Line Switches](#arguments-and-command-line-switches)
-            * [Spaces and Funny Characters](#spaces-and-funny-characters)
-            * [Useful Commands](#useful-commands)
-            * [Manipulating Directories](#manipulating-directories)
-            * [Networking](#networking)
-            * [Standard I/O and Redirection](#standard-io-and-redirection)
-            * [A Simple Example](#a-simple-example)
-            * [Redirection Meta-Characters](#redirection-meta-characters)
-            * [Filters, Filenames and Standard Input](#filters-filenames-and-standard-input)
-            * [Standard I/O and Pipes](#standard-io-and-pipes)
-            * [More Pipe Idioms](#more-pipe-idioms)
-         * [Advanced Unix](#advanced-unix)
-         * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Unix_01_problemset.md">Link to Unix 1 Problem Set</a>](#link-to-unix-1-problem-set)
-      * [Unix 2](#unix-2)
-         * [Text Editors](#text-editors)
-      * [Git for Beginners](#git-for-beginners)
-         * [The Big Picture.](#the-big-picture)
-            * [Collaboration](#collaboration)
-            * [Storing Versions](#storing-versions)
-            * [Restoring Previous Versions](#restoring-previous-versions)
-            * [Backup](#backup)
-            * [The Details](#the-details)
-         * [The Basics](#the-basics-1)
-            * [Creating a new repository](#creating-a-new-repository)
-            * [Cloning a Repository](#cloning-a-repository)
-            * [Bringing Changes in from the Remote Repository to your Local Repository](#bringing-changes-in-from-the-remote-repository-to-your-local-repository)
-            * [Keeping track of differences between local and remote repositories](#keeping-track-of-differences-between-local-and-remote-repositories)
-            * [Links to <em>Slightly</em> less basic topics](#links-to-slightly-less-basic-topics)
-         * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Unix_02_problemset.md">Link To Unix 2 Problem Set</a>](#link-to-unix-2-problem-set)
-   * [Python](#python)
-      * [Python 1](#python-1)
-         * [Python Overview](#python-overview)
-         * [Running Python](#running-python)
-            * [Interactive Interpreter](#interactive-interpreter)
-            * [Python Scripts](#python-scripts)
-            * [Running Python Scripts](#running-python-scripts)
-            * [A quicker/better way to run python scripts](#a-quickerbetter-way-to-run-python-scripts)
-         * [Syntax](#syntax)
-            * [Python Variable Names](#python-variable-names)
-            * [Naming conventions for Python Variable Names](#naming-conventions-for-python-variable-names)
-            * [Reserved Words](#reserved-words)
-            * [Lines and Indentation](#lines-and-indentation)
-            * [Comments](#comments)
-            * [Blank Lines](#blank-lines)
-         * [Data Types and Variables](#data-types-and-variables)
-            * [Numbers and Strings](#numbers-and-strings)
-            * [Lists](#lists)
-            * [Tuples](#tuples)
-            * [Dictionary](#dictionary)
-            * [Command line parameters: A Special Built-in List](#command-line-parameters-a-special-built-in-list)
-            * [What kind of object am I working with?](#what-kind-of-object-am-i-working-with)
-         * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_01_problemset.md">Link to Python 1 Problem Set</a>](#link-to-python-1-problem-set)
-      * [Python 2](#python-2)
-         * [Operators](#operators)
-            * [Arithmetic Operators](#arithmetic-operators)
-            * [Assignment Operators](#assignment-operators)
-            * [Comparison Operators](#comparison-operators)
-            * [Logical Operators](#logical-operators)
-            * [Membership Operators](#membership-operators)
-            * [Operator Precedence](#operator-precedence)
-         * [Truth](#truth)
-            * [Use bool() to test for truth](#use-bool-to-test-for-truth)
-         * [Logic: Control Statements](#logic-control-statements)
-            * [If Statement](#if-statement)
-            * [if/elif](#ifelif)
-         * [Numbers](#numbers)
-            * [integer](#integer)
-            * [floating point number](#floating-point-number)
-            * [complex number](#complex-number)
-            * [Conversion functions](#conversion-functions)
-            * [Numeric Functions](#numeric-functions)
-         * [Comparing two numbers](#comparing-two-numbers)
-         * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_02_problemset.md">Link to Python 2 Problem Set</a>](#link-to-python-2-problem-set)
-      * [Python 3](#python-3)
-         * [Sequences](#sequences)
-         * [What functions go with my object?](#what-functions-go-with-my-object)
-         * [Strings](#strings)
-            * [Quotation Marks](#quotation-marks)
-            * [Strings and the print() function](#strings-and-the-print-function)
-            * [Errors and Printing](#errors-and-printing)
-            * [Special/Escape Characters](#specialescape-characters)
-            * [Concatenation](#concatenation)
-            * [The difference between string   and integer  ](#the-difference-between-string--and-integer-)
-            * [Determine the length of a string](#determine-the-length-of-a-string)
-            * [Changing String Case](#changing-string-case)
-            * [Find and Count](#find-and-count)
-            * [Find and Replace](#find-and-replace)
-            * [Extracting a Substring, or Slicing](#extracting-a-substring-or-slicing)
-            * [Locate and Report](#locate-and-report)
-            * [Other String Methods](#other-string-methods)
-         * [String Formatting](#string-formatting)
-            * [The format() mini-language](#the-format-mini-language)
-            * [Summary of special formatting symbols so far](#summary-of-special-formatting-symbols-so-far)
-            * [What's the point?](#whats-the-point)
-         * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_03_problemset.md">Link to Python 3 Problem Set</a>](#link-to-python-3-problem-set)
-      * [Python 4](#python-4)
-         * [Lists and Tuples](#lists-and-tuples)
-            * [Lists](#lists-1)
-            * [Tuples](#tuples-1)
-            * [Back to Lists](#back-to-lists)
-            * [Accessing Values in Lists](#accessing-values-in-lists)
-            * [Changing Values in a List](#changing-values-in-a-list)
-            * [Extracting a Subset of a List, or Slicing](#extracting-a-subset-of-a-list-or-slicing)
-            * [List Operators](#list-operators)
-            * [List Functions](#list-functions)
-            * [List Methods](#list-methods)
-            * [Building a List one Value at a Time](#building-a-list-one-value-at-a-time)
-         * [Loops](#loops)
-            * [While loop](#while-loop)
-            * [While Loop Syntax](#while-loop-syntax)
-            * [Infinite Loops](#infinite-loops)
-            * [While/Else](#whileelse)
-            * [For Loops](#for-loops)
-            * [For Loop Syntax](#for-loop-syntax)
-            * [For/Else](#forelse)
-            * [Loop Control](#loop-control)
-            * [Loop Control: Break](#loop-control-break)
-            * [Loop Control: Continue](#loop-control-continue)
-            * [Iterators](#iterators)
-            * [List Comprehension](#list-comprehension)
-         * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_04_problemset.md">Link to Python 4 Problem Set</a>](#link-to-python-4-problem-set)
-      * [Python 5](#python-5)
-         * [Dictionaries](#dictionaries)
-            * [Creating a Dictionary](#creating-a-dictionary)
-            * [Accessing Values in Dictionaries](#accessing-values-in-dictionaries)
-            * [Changing Values in a Dictionary](#changing-values-in-a-dictionary)
-            * [Accessing Each Dictionary Key/Value](#accessing-each-dictionary-keyvalue)
-            * [Building a Dictionary one Key/Value at a Time](#building-a-dictionary-one-keyvalue-at-a-time)
-            * [Checking That Dictionary Keys Exist](#checking-that-dictionary-keys-exist)
-            * [Dictionary Operators](#dictionary-operators)
-            * [Sorting Dictionary Keys](#sorting-dictionary-keys)
-            * [Dictionary Functions](#dictionary-functions)
-            * [Dictionary Methods](#dictionary-methods)
-         * [Sets](#sets)
-            * [Set Operators](#set-operators)
-            * [Set Functions](#set-functions)
-            * [Set Methods](#set-methods)
-         * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_05_problemset.md">Link to Python 5 Problem Set</a>](#link-to-python-5-problem-set)
-      * [Python 6](#python-6)
-         * [I/O and Files](#io-and-files)
-            * [Writing to the Screen](#writing-to-the-screen)
-            * [Reading input from the keyboard](#reading-input-from-the-keyboard)
-            * [Reading from a File](#reading-from-a-file)
-            * [Open a File](#open-a-file)
-            * [Reading the contents of a file](#reading-the-contents-of-a-file)
-            * [Writing to a File](#writing-to-a-file)
-            * [Building a Dictionary from a File](#building-a-dictionary-from-a-file)
-         * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_06_problemset.md">Link to Python 6 Problem Set</a>](#link-to-python-6-problem-set)
-      * [Python 7](#python-7)
-         * [Regular Expressions](#regular-expressions)
-            * [Individual Characters](#individual-characters)
-            * [Character Classes](#character-classes)
-            * [Anchors](#anchors)
-            * [Quantifiers](#quantifiers)
-            * [Variables and Patterns](#variables-and-patterns)
-            * [Either Or](#either-or)
-            * [Subpatterns](#subpatterns)
-            * [Using Subpatterns Inside the Regular Expression Match](#using-subpatterns-inside-the-regular-expression-match)
-            * [Using Subpatterns Outside the Regular Expression](#using-subpatterns-outside-the-regular-expression)
-            * [Get position of the subpattern with finditer()](#get-position-of-the-subpattern-with-finditer)
-            * [Subpatterns and Greediness](#subpatterns-and-greediness)
-            * [Practical Example: Codons](#practical-example-codons)
-            * [Truth and Regular Expression Matches](#truth-and-regular-expression-matches)
-            * [Using subpatterns in the replacement](#using-subpatterns-in-the-replacement)
-            * [Regular Expression Option Modifiers](#regular-expression-option-modifiers)
-         * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_07_problemset.md">Link to Python 7 Problem Set</a>](#link-to-python-7-problem-set)
-      * [Python 8](#python-8)
-         * [Data Structures](#data-structures)
-            * [List of lists](#list-of-lists)
-            * [Lists of dictionaries](#lists-of-dictionaries)
-            * [Dictionaries of lists](#dictionaries-of-lists)
-            * [Dictionaries of dictionaries](#dictionaries-of-dictionaries)
-         * [Exceptions](#exceptions)
-            * [try/except/else/finally](#tryexceptelsefinally)
-            * [Getting more information about an exception](#getting-more-information-about-an-exception)
-            * [Raising an Exception](#raising-an-exception)
-            * [Creating Custom Exceptions](#creating-custom-exceptions)
-         * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_08_problemset.md">Link to Python 8 Problem Set</a>](#link-to-python-8-problem-set)
-      * [Python 9](#python-9)
-         * [Functions](#functions)
-            * [Defining a Function that calculates GC Content](#defining-a-function-that-calculates-gc-content)
-            * [Using your function to calculate GC content](#using-your-function-to-calculate-gc-content)
-            * [The details](#the-details-1)
-            * [Naming Arguments](#naming-arguments)
-            * [Keyword Arguments](#keyword-arguments)
-            * [Default Values for Arguments](#default-values-for-arguments)
-            * [Lambda expressions](#lambda-expressions)
-         * [Scope](#scope)
-            * [Local Variables](#local-variables)
-            * [Global](#global)
-         * [Modules](#modules)
-            * [Getting information about modules with pydoc](#getting-information-about-modules-with-pydoc)
-            * [os.path](#ospath)
-            * [os.system](#ossystem)
-            * [subprocess](#subprocess)
-               * [Capturing output from a shell pipeline](#capturing-output-from-a-shell-pipeline)
-               * [Capturing output the long way (for a single command)](#capturing-output-the-long-way-for-a-single-command)
-               * [Check the exit status of a command](#check-the-exit-status-of-a-command)
-               * [Redirect stdout to a file](#redirect-stdout-to-a-file)
-            * [sys](#sys)
-            * [re](#re)
-            * [collections](#collections)
-            * [copy](#copy)
-            * [math](#math)
-            * [random](#random)
-            * [statistics](#statistics)
-            * [glob](#glob)
-         * [Many more modules that do many things](#many-more-modules-that-do-many-things)
-         * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_0_problemset.md">Link to Python 9 Problem Set</a>](#link-to-python-9-problem-set)
-      * [Python 10](#python-10)
-         * [Classes](#classes)
-         * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_10_problemset.md">Link to Python 10 Problem Set</a>](#link-to-python-10-problem-set)
-
-***
-
 # Programming For Biology 2018
 
 __Instructors__  
 Simon Prochnik  
 Sofia Robb     
 
-# Big Picture
 
-## Why?
-
-Why is it important for **biologists** to learn to program?
-
-You might already know the answer to this question since you are here.   
-
-We firmly believe that knowing how to program is just as essential as knowing how to run a gel or set up a PCR reaction. The data we now get from a single experiment can be overwhelming. This data often needs to be reformatted, filtered, and analyzed in unique ways. Programming allows you to perform these tasks in an **efficient** and **reproducible** way.
-
-
-## Helpful Tips
-
-What are our tips for having a successful programming course?
-
-
-1. Practice, practice, practice. Please spend as much time as possible actually coding.
-
-2. Write only a line or two of code, then test it. If you write too many lines, it becomes more difficult to debug if there is an error.
-
-3. Errors are not failures. Every error you get is a learning opportunity. Every single error you debug is a major success. Fixing errors is how you will cement what you have learned.
-
-4. Don't spend too much time trying to figure out a problem. While it's a great learning experience to try to solve an issue on your own, it's not fun getting frustrated or spending a lot of time stuck. We are here to help you, so please ask us whenever you need help.
-
-5. Lectures are important, but the practice is more important.
-
-6. Review sessions are important, but practice is more important.
-
-7. Our key goal is to slowly, but surely, teach you how to solve problems on your own.
-
----
-
-# Unix
-
-## Unix 1
-
-### Unix Overview
-
-#### What is the Command-Line?
-
-Underlying the pretty Mac OSX Graphical User Interface (GUI) is a powerful command-line operating system (OS). The command-line gives you access to the internals of the OS, and is also a convenient way to write custom software and scripts.  
-
-
-Many bioinformatics tools are written to run on the command-line and have no Graphical User Interface. In many cases, a command-line tool is more versatile than a graphical tool, because you can easily combine command-line tools into automated scripts that accomplish tasks without human intervention.  
-
-
-In this course, we will be writing Python scripts and running them exclusively from the command-line based.
-
-### The Basics
-
-#### Logging into Your Workstation
-
-
-Your workstation is an iMac. To log into it, provide your user name and password. Your username will be the first letter of your first name and two first letters of your last. You can check your username [here](https://github.com/prog4biol/pfb2018/blob/master/usernames.md).
-
-For example, for Sofia Robb her username will be sro. The password is cshl.
-
-_Your username:_ sro
-
-_Your password:_ cshl
-
-#### Bringing up the Command-Line 
-
-
-To bring up the command-line, use the Finder to navigate to _Applications->Utilities_ and double-click on the _Terminal_ application. This will bring up a window like the following:
-
-![OSX Terminal](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/terminal_screenshot.png)
-
-
-
-You can open several Terminal windows at once. This is often helpful.
-
-
-You will be using the Terminal application a lot, so I suggest that you drag its icon into the shortcuts bar at the bottom of your screen.
-
-
-#### OK. I've Logged in.  What Now?
-
-
-The terminal window is running **shell** called "bash." The shell is a loop that:
-1. Prints a prompt
-2. Reads a line of input from the keyboard
-3. Parses the line into one or more commands
-4. Executes the commands (which usually print some output to the terminal)
-5. Go back step 1.
-
-
-There are many different shells with bizarre names like **bash**, **sh**, **csh**, **tcsh**, **ksh**, and **zsh**.  The "sh" part means shell.  Each shell has different and somewhat confusing features. We have set up your accounts to use **bash**.  Stay with **bash** and you'll get used to it, eventually.
-
-
-#### Command-Line Prompt
-
-
-Most of bioinformatics is done by running command-line software in a shell, so you should take some time to learn to use the shell effectively.
-
-
-This is a command-line prompt:
-
-```
-bush202>
-```
-
-
-This is another:
-
-```
-(~) 51%
-```
-
-This is another:
-
-```
-srobb@bush202 1:12PM>
-```
-
-What you get depends on how the system administrator has customized your login.  You can customize it yourself when you know how.
-
-
-The prompt tells you the shell is ready to accept a command.  When a long-running command is going, the prompt will not reappear until the system is ready to deal with your next request.
-
-#### Issuing Commands
-
-
-Type in a command and press the &lt;Enter&gt; key.  If the command has output, it will appear on the screen.  Example:
-
-```
-(~) 53% ls -F
-GNUstep/                 cool_elegans.movies.txt  man/
-INBOX                    docs/                    mtv/
-INBOX~                   etc/                     nsmail/
-Mail@                    games/                   pcod/
-News/                    get_this_book.txt        projects/
-axhome/                  jcod/                    public_html/
-bin/                     lib/                     src/
-build/                   linux/                   tmp/
-ccod/
-(~) 54%
-```
-
-The command here is `ls -F`, which produces a listing of files and directories in the current directory (more on that later).  Below its output, the command prompt appears again.
-
-
-Some programs will take a long time to run. After you issue their command names, you won't recover the shell prompt until they're done. You can either launch a new shell (from Terminal's File menu), or run the command in the background by adding an ampersand after the command
-
-```
-(~) 54% long_running_application &
-(~) 55%
-```
-> The command will now run in the background until it is finished. If it has any output, the output will be printed to the terminal window. You may wish to capture the output in a file (called redirection). We'll describe this later.
-
-#### Command-Line Editing
-
-Most shells offer command-line editing.  Up until the comment you press \<Enter\>, you can go back over the command-line and edit it using the keyboard.  Here are the most useful keystrokes:
-
-- _Backspace_: Delete the previous character and back up one.
-- _Left arrow_, right arrow: Move the text insertion point (cursor) one character to the left or right.
-- _control-a (^a)_: Move the cursor to the beginning of the line. (Mnemonic: A is first letter of alphabet)
-- _control-e (^e)_: Move the cursor to the end of the line. Mnemonic: E for the End (^z was already used for interrupt a command).
-- _control-d (^d)_: Delete the character currently under the cursor. D=Delete.
-- _control-k (^k)_: Delete the entire line from the cursor to the end. k=kill.  The line isn't actually deleted, but put into a temporary holding place called the "kill buffer". This is like cutting text
-- _control-y (^y)_: Paste the contents of the kill buffer onto the command-line starting at the cursor.  y=yank. This is like paste.
-- _Up arrow, down arrow_: Move up and down in the command history.  This lets you reissue previous commands, possibly after modifying them.
-
-There are also some useful shell commands you can issue:  
-
-- `history` Show all the commands that you have issued recently, nicely numbered.
-- `!<number>` Reissue an old command, based on its number (which you can get from `history`).
-- `!!` Reissue the immediate previous command.
-- `!<partial command string>`: Reissue the previous command that began with the indicated letters.  For example, `!l` (the letter el, not a number 1) would reissue the`ls -F` command from the earlier example.
-
-**bash** offers automatic command completion and spelling correction.  If you type part of a command and then the tab key, it will prompt you with all the possible completions of the command.  For example:
-
-```
-(~) 51% fd<tab><tab>
-(~) 51% fd
-fd2ps    fdesign  fdformat fdlist   fdmount  fdmountd fdrawcmd fdumount
-(~) 51%
-```
-> If you hit tab after typing a command, but before pressing \<Enter\>, **bash** will prompt you with a list of file names. This is because many commands operate on files.
-
-#### Wildcards
-
-You can use wildcards when referring to files.  `*` stands for zero or more characters.  `?` stands for any single character.  For example, to list all files with the extension ".txt", run `ls` with the wildcard pattern "*.txt"
-
-```
-(~) 56% ls -F *.txt
-final_exam_questions.txt  genomics_problem.txt
-genebridge.txt            mapping_run.txt
-```
-
-There are several more advanced types of wildcard patterns that you can read about in the **tcsh** manual page.  For example, if you want to match files that begin with the characters "f" or "g" and end with ".txt", you can use a range of characters inside square brackets `[f-g]` as part of the wildcard pattern. Here's an example
-
-```
-(~) 57% ls -F [f-g]*.txt
-final_exam_questions.txt  genebridge.txt            genomics_problem.txt
-```
-
-#### Home Sweet Home
-
-
-When you first log in, you'll be placed in a part of the system that is your personal directory, called the _home directory_.  You are free to do with this area what you will: in particular you can create and delete files and other directories.  In general, you cannot create files elsewhere in the system.
-
-Your home directory lives somewhere in the filesystem.  On our iMacs, it is a directory with the same name as your login name, located in `/Users`.  The full directory path is therefore `/Users/username`.  Since this is a pain to write, the shell allows you to abbreviate it as `~username` (where "username" is your user name), or simply as `~`.  The weird character (called "tilde" or "twiddle") is usually hidden at the upper left corner of your keyboard.
-
-To see what is in your home directory, issue the command `ls -F`:
-
-```
-(~) % ls -F
-INBOX         Mail/         News/         nsmail/       public_html/
-```
-
-This shows one file "INBOX" and four directories ("Mail", "News") and so on.  (The `-F` in the command turns on fancy mode, which appends special characters to directory listings to tell you more about what you're seeing.  `/` at the end of a filename means that file is a directory.)
-
-
-In addition to the files and directories shown with `ls -F`, there may be one or more hidden files.  These are files and directories whose names start with a `.` (called the "dot" character).  To see these hidden files, add an `a` to the options sent to the `ls` command:
-
-```
-(~) % ls -aF
-./                .cshrc            .login            Mail/
-../               .fetchhost        .netscape/        News/
-.Xauthority       .fvwmrc           .xinitrc*         nsmail/
-.Xdefaults        .history          .xsession@        public_html/
-.bash_profile     .less             .xsession-errors
-.bashrc           .lessrc           INBOX
-```
-> Whoa!  There's a lot of hidden stuff there.  But don't go deleting dot files.  Many of them are essential configuration files for commands and other programs.  For example, the `.profile` file contains configuration information for the **bash** shell.  You can peek into it and see all of **bash**'s many options.  You can edit it (when you know what you're doing) in order to change things like the command prompt and command search path.
-
-
-#### Getting Around
-
-
-You can move around from directory to directory using the `cd` command.  Give the name of the directory you want to move to, or give no name to move back to your home directory.  Use the `pwd` command to see where you are (or rely on the prompt, if configured):
-
-```
-(~/docs/grad_course/i) 56% cd
-(~) 57% cd /
-(/) 58% ls -F
-bin/         dosc/        gmon.out     mnt/         sbin/
-boot/        etc/         home@        net/         tmp/
-cdrom/       fastboot     lib/         proc/        usr/
-dev/         floppy/      lost+found/  root/        var/
-(/) 59% cd ~/docs/
-(~/docs) 60% pwd
-/usr/home/lstein/docs
-(~/docs) 62% cd ../projects/
-(~/projects) 63% ls
-Ace-browser/               bass.patch
-Ace-perl/                  cgi/
-Foo/                       cgi3/
-Interface/                 computertalk/
-Net-Interface-0.02/        crypt-cbc.patch
-Net-Interface-0.02.tar.gz  fixer/
-Pts/                       fixer.tcsh
-Pts.bak/                   introspect.pl*
-PubMed/                    introspection.pm
-SNPdb/                     rhmap/
-Tie-DBI/                   sbox/
-ace/                       sbox-1.00/
-atir/                      sbox-1.00.tgz
-bass-1.30a/                zhmapper.tar.gz
-bass-1.30a.tar.gz
-(~/projects) 64%
-```
-> Each directory contains two special hidden directories named `.` and `..`. The first, `.` refers always to the current directory. `..` refers to the parent directory.  This lets you move upward in the directory hierarchy like this:
-
-```
-(~/docs) 64% cd ..
-```
-
-and to do arbitrarily weird things like this:
-
-```
-(~/docs) 65% cd ../../lstein/docs
-```
-> The latter command moves upward two levels, and then into a directory named `docs` inside a directory called `lstein`.
-
-
-If you get lost, the `pwd` command prints out the full path to the current directory:
-
-```
-(~) 56% pwd
-/Users/lstein
-```
-
-#### Essential Unix Commands
-
-
-With the exception of a few commands that are built directly into the shell, all Unix commands are standalone executable programs.  When you type the name of a command, the shell will search through all the directories listed in the PATH environment variable for an executable of the same name.  If found, the shell will execute the command. Otherwise, it will give a "command not found" error.
-
-
-Most commands live in `/bin`, `/usr/bin`, or `/usr/local/bin`.
-
-#### Getting Information About Commands
-
-
-The `man` command will give a brief synopsis of a command. Let's get information about the command `wc`
-
-```
-(~) 76% man wc
-Formatting page, please wait...
-WC(1)                                                       WC(1)
-
-NAME
-       wc - print the number of bytes, words, and lines in files
-
-SYNOPSIS
-       wc [-clw] [--bytes] [--chars] [--lines] [--words] [--help]
-       [--version] [file...]
-
-DESCRIPTION
-       This manual page documents the  GNU  version  of  wc.   wc
-       counts  the  number  of bytes, whitespace-separated words,
-...
-```
-
-#### Finding Out What Commands are on Your Computer
-
-The `apropos` command will search for commands matching a keyword or phrase. Here's an example that looks for commands related to 'column'
-
-```
-(~) 100% apropos column
-showtable (1)        - Show data in nicely formatted columns
-colrm (1)            - remove columns from a file
-column (1)           - columnate lists
-fix132x43 (1)        - fix problems with certain (132 column) graphics
-modes
-```
-
-
-#### Arguments and Command Line Switches 
-
-
-Many commands take arguments.  Arguments are often the names of one or more files to operate on.  Most commands also take command-line "switches" or "options", which fine-tune what the command does.  Some commands recognize "short switches" that consist of a minus sign `-` followed by a single character, while others recognize "long switches" consisting of two minus signs `--` followed by a whole word.
-
-
-The `wc` (word count) program is an example of a command that recognizes both long and short options.  You can pass it the `-c`,  `-w` and/or `-l` options to count the characters, words, and lines in a text file, respectively.  Or you can use the longer but more readable `--chars`,  `--words` or `--lines` options.  Both these examples count the number of characters and lines in the text file `/var/log/messages`:
-
-```
-(~) 102% wc -c -l /var/log/messages
-     23     941 /var/log/messages
-(~) 103% wc --chars --lines /var/log/messages
-     23     941 /var/log/messages
-```
-
-You can cluster short switches by concatenating them together, as shown in this example:
-
-```
-(~) 104% wc -cl /var/log/messages
-     23     941 /var/log/messages
-```
-
-Many commands will give a brief usage summary when you call them with the `-h` or `--help` switch.
-
-#### Spaces and Funny Characters
-
-The shell uses whitespace (spaces, tabs, and other non-printing characters) to separate arguments.  If you want to embed whitespace in an argument, put single quotes around it.  For example:
-
-```
-mail -s 'An important message' 'Bob Ghost <bob@ghost.org>'
-```
-This will send an e-mail to the fictitious person Bob Ghost.  The `-s` switch takes an argument, which is the subject line for the e-mail.  Because the desired subject contains spaces, it has to have quotes around it. Likewise, my name and e-mail address, which contain embedded spaces, must also be quoted in this way.
-
-
-Certain special non-printing characters have _escape codes_ associated with them:
-
-
-| Escape Code | Description                              |
-| ----------- | ---------------------------------------- |
-| \\n         | new line character                       |
-| \\t         | tab character                            |
-| \\r         | carriage return character                |
-| \\a         | bell character (ding! ding!)             |
-| \\nnn       | the character whose ASCII code is **nnn** |
-
-
-#### Useful Commands
-
-Here are some commands that are used extremely frequently.  Use `man` to learn more about them.  Some of these commands may be useful for solving the problem set ;-)
-
-#### Manipulating Directories
-
-| Command | Description                              |
-| ------- | ---------------------------------------- |
-| `ls`    | Directory listing.  Most frequently used as `ls -F` (decorated listing), `ls -l` (long listing), `ls -a` (list all files). |
-| `mv`    | Rename or move a file or directory.      |
-| `cp`    | Copy a file.                             |
-| `rm`    | Remove (delete) a file.                  |
-| `mkdir` | Make a directory.                         |
-| `rmdir` | Remove a directory.                       |
-| `ln`    | Create a symbolic or hard link.          |
-| `chmod` | Change the permissions of a file or directory. |
-
-
-| Command           | Description                              |
-| ----------------- | ---------------------------------------- |
-| `cat`             | Concatenate program.  Can be used to concatenate multiple files together into a single file, or, much more frequently, to view the contents of a file or files in the terminal. |
-| `echo`            | print a copy of some text to the screen. E.g. `echo 'Hello World!'` |
-| `more`            | Scroll through a file page by page.  Very useful when viewing large files.  Works even with files that are too big to be opened by a text editor. |
-| `less`            | A version of `more` with more features.  |
-| `head`            | View the first few lines of a file.  You can control how many lines to view. |
-| `tail`            | View the end of a file.  You can control how many lines to view.  You can also use `tail -f` to view a file that you are writing to. |
-| `wc`              | Count words, lines and/or characters in one or more files. |
-| `tr`              | Substitute one character for another.  Also useful for deleting characters. |
-| `sort`            | Sort the lines in a file alphabetically or numerically. |
-| `uniq`            | Remove duplicated lines in a file.       |
-| `cut`             | Remove columns from each line of a file or files. |
-| `fold`            | Wrap each input line to fit in a specified width. |
-| `grep`            | Filter a file for lines matching a specified pattern.  Can also be reversed to print out lines that don't match the specified pattern. |
-| `gzip` (`gunzip`) | Compress (uncompress) a file.            |
-| `tar`             | Archive or unarchive an entire directory into a single file. |
-| `emacs`           | Run the Emacs text editor (good for experts). |
-| `vi`              | Run the vi text editor (better for experts). |
-
-
-#### Networking
-
-| Command                | Description                              |
-| ---------------------- | ---------------------------------------- |
-| `ssh`                  | A secure (encrypted) way to log into machines. |
-| `scp`                  | A secure way to copy (cp) files to and from remote machines. |
-| `ping`                 | See if a remote host is up.              |
-| `ftp`/ `sftp` (secure) | Transfer files using the File Transfer Protocol. |
-
-#### Standard I/O and Redirection
-
-
-Unix commands communicate via the command-line interface.  They can print information out to the terminal for you to see, and accept input from the keyboard (that is, from _you_!)
-
-
-Every Unix program starts out with three connections to the outside world.  These connections are called "streams", because they act like a stream of information (metaphorically speaking):
-
-
-| Stream Type     | Description                              |
-| --------------- | ---------------------------------------- |
-| standard input  | This is a communications stream initially attached to the keyboard.  When the program reads from standard input, it reads whatever text you type in. |
-| standard output | This stream is initially attached to the terminal. Anything the program prints to this channel appears in your terminal window. |
-| standard error  | This stream is also initially attached to the terminal. It is a separate channel intended for printing error messages. |
-
-The word "initially" might lead you to think that standard input, output, and error can somehow be detached from their starting places and reattached somewhere else.  And you'd be right.  You can attach
-one or more of these three streams to a file, a device, or even to another program.  This sounds esoteric, but it is actually very useful.
-
-#### A Simple Example
-
-
-The `wc` program counts lines, characters, and words in data sent to its standard input.  You can use it interactively like this:
-
-```
-(~) 62% wc
-Mary had a little lamb,
-little lamb,
-little lamb.
-
-Mary had a little lamb,
-whose fleece was white as snow.
-^D
-      6      20     107
-```
-In this example, I ran the `wc` program.  It waited for me to type in a little poem.  When I was done, I typed the END-OF-FILE character, control-d (^d for short).  `wc` then printed out three numbers indicating the number of lines, words, and characters in the input.
-
-More often, you'll want to count the number of lines in a big file; say a file filled with DNA sequences.  You can do this by _redirecting_ the contents of a file to the standard input of  `wc`. This uses
-the `<`  symbol:
-
-```
-(~) 63% wc < big_file.fasta
-      2943    2998     419272
-```
-
-If you wanted to record these counts for posterity, you could redirect standard output as well using the `>` symbol:
-
-```
-(~) 64% wc < big_file.fasta > count.txt
-```
-
-
-Now if you `cat` the file _count.txt_, you'll see that the data has been recorded.  `cat` works by taking its standard input and copying it to standard output.  We redirect standard input from the _count.txt_ file, and leave standard output at its default, attached to the terminal:
-
-```
-(~) 65% cat < count.txt
-      2943    2998     419272
-```
-
-#### Redirection Meta-Characters
-
-Here's the complete list of redirection commands for `bash`:
-
-| Redirect command    | Description                              |
-| ------------------- | ---------------------------------------- |
-| `< myfile.txt`      | Redirect the contents of the file to standard input |
-| `> myfile.txt`      | Redirect standard output to file         |
-| `>> logfile.txt`    | Append standard output to the end of the file |
-| `1 > myfile.txt`    | Redirect just standard output to file (same as above) |
-| `2 > myfile.txt`    | Redirect just standard error to file     |
-| `> myfile.txt 2>&1` | Redirect both stdout and stderr to file  |
-
-
-These can be combined.  For example, this command redirects standard input from the file named `/etc/passwd`, writes its results into the file `search.out`, and writes its error messages (if any) into a file named `search.err`.  What does it do?  It searches the password file for a user named "root" and returns all lines that refer to that user.
-
-```
-(~) 66% grep root < /etc/passwd > search.out 2> search.err
-```
-
-#### Filters, Filenames, and Standard Input
-
-Many Unix commands act as filters, taking data from a file or standard input, transforming the data, and writing the results to standard output.  Most filters are designed so that if they are called with one or more filenames on the command-line, they will use those files as input.  Otherwise they will act on standard input.  For example, these two commands are equivalent:
-
-```
-(~) 66% grep 'gatttgc' < big_file.fasta
-(~) 67% grep 'gatttgc' big_file.fasta
-```
-Both commands use the `grep` command to search for the string "gatttgc" in the file `big_file.fasta`.  The first one searches standard input, which happens to be redirected from the file.  The second command is explicitly given the name of the file on the command line.
-
-
-Sometimes you want a filter to act on a series of files, one of which happens to be standard input.  Many commands let you use `-` on the command-line as an alias for standard input.  Example:
-
-```
-(~) 68% grep 'gatttgc' big_file.fasta bigger_file.fasta -
-```
-This example searches for "gatttgc" in three places.  First it looks in file `big_file.fasta`, then in `bigger_file.fasta`, and lastly in standard input (which, since it isn't redirected, will come from the keyboard).
-
-
-#### Standard I/O and Pipes
-
-
-The coolest thing about the Unix shell is its ability to chain commands together into pipelines.  Here's an example:
-
-```
-(~) 65% grep gatttgc big_file.fasta | wc -l
-22
-```
-There are two commands here. `grep` searches a file or standard input for lines containing a particular string.  Lines which contain the string are printed to standard output.  `wc -l` is the familiar word count program, which counts words, lines, and characters in a file or standard input.  The `-l` command-line option instructs `wc` to print out just the line count.  The `|` character, which is known as a "pipe", connects the two commands together so that the standard output of `grep` becomes the standard input of `wc`. Think of pipes connecting streams of flowing data. 
-
-
-What does this pipe do?  It prints out the number of lines in which the string "gatttgc" appears in the file `big_file.fasta`.
-
-#### More Pipe Idioms
-
-Pipes are very powerful. Here are some common command-line idioms.
-
-**Count the Number of Times a Pattern does NOT Appear in a File**
-
-The example at the top of this section showed you how to count the number of lines in which a particular string pattern appears in a file.  What if you want to count the number of lines in which a pattern does **not** appear?
-
-Simple.  Reverse the test with the `-v` switch:
-
-```
-(~) 65% grep -v gatttgc big_file.fasta | wc -l
-2921
-```
-
-**Uniquify Lines in a File**
-
-
-If you have a long list of names in a text file, and you want to weed out the duplicates:
-
-```
-(~) 66% sort long_file.txt | uniq > unique.out
-```
-This works by sorting all the lines alphabetically and piping the result to the `uniq` program, which removes duplicate lines that occur one after another.  That's why you need to sort first. The output is placed in a file named `unique.out`.
-
-**Concatenate Several Lists and Remove Duplicates**
-
-
-If you have several lists that might contain repeated entries among them, you can combine them into a single unique list by concatenating them together, then sorting and uniquifying them as before:
-
-```
-(~) 67% cat file1 file2 file3 file4 | sort | uniq
-```
-
-**Count Unique Lines in a File**
-
-
-If you just want to know how many unique lines there are in the file, add a `wc` to the end of the pipe:
-
-```
-(~) 68% sort long_file.txt | uniq | wc -l
-```
-
-**Page Through a Really Long Directory Listing**
-
-
-Pipe the output of `ls` to the `more` program, which shows a page at a time.  If you have it, the `less` program is even better:
-
-```
-(~) 69% ls -l | more
-```
-
-**Monitor a Growing File for a Pattern**
-
-
-Pipe the output of `tail -f` (which monitors a growing file and prints out the new lines) to `grep`.  For example, this will monitor the `/var/log/syslog`file for the appearance of e-mails addressed to 'mzhang':
-
-```
-(~) 70% tail -f /var/log/syslog | grep mzhang
-```
-
-### Advanced Unix
-
-Here are a few more advanced Unix commands that are very useful, and when you have time you should investigate further. We list the page numbers in the Internet Version (v3) of 'The Linux Command Line' by William Shotts.
-
- - `awk` 
- - `sed` (p.295)
- - `perl` one-liners
- - `for` loops (p. 453)
-
----
-
-
-### [Link to Unix 1 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Unix_01_problemset.md)
-
----
-## Unix 2
-
-
-### Text Editors
-
-
-It is often necessary to create and write to a file while using the terminal. This makes it essential to use a terminal text editor. There are many text editors out there. Some of our favorite are Emacs and vim. We are going to start you out with a simple text editor called  `nano`
-
-The way you use nano to create a file is simply by typing the command _nano_, followed by the name of the file you wish to create.
-
-```
-(~) 71% nano firstFile.txt
-```
-
-This is what you will see:
-
-![Create a new file with nano.](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/nano_new.png)  
-
-
-
-![Modified and not saved. In the top right corner it says "Modified"](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/nano-modifided.png)  
-
-
-
-Things to notice:
-- At the top
-  - the name of the program (nano) and its version number
-  - the name of the file you’re editing
-  - and whether the file has been modified since it was last saved.
-- In the middle
-  - you will see either a blank area or text you have typed
-- At the bottom
-  - A listing of keyboard commands such as Save (control + o) and Exit (control + x)
-
-Keyboard commands are the only way to interact with the editor. You cannot use your mouse or trackpad.
-
-Find more commands by using `control g`  
-
-![The help menu displays a listing of useful commands.](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/nano-help.png)  
-
-The Meta key is \<esc\>. To use the Meta+key, hit \<esc\>, release, then hit the following key
-
-Helpful commands:
--  Jump to a specific line
-    - control + _ then line number 
--  Copy a block of highlighted text
-    - control + ^ then move your cursor to start to highlight a block for copying 
-    - Meta + ^ to end your highlight block
--  Paste 
-    - control + u
-
-
-Nano is a beginner's text editor. vi and Emacs are better choices once you become a bit more comfortable using the terminal. These editors do cool stuff like syntax highlighting.
-
-
-## Git for Beginners
-
-Git is a tool for managing files and versions of files. It is a _Version Control System_. It allows you to keep track of changes. You are going to be using Git to manage your course work and keep your copy of the lecture notes and files up to date. Git can help you do very complex task with files. We are going to keep it simple.
-
-
-### The Big Picture.
-
-
-A Version Control System is good for Collaborations, Storing Versions, Restoring Previous Versions, and Managing Backups.
-
-#### Collaboration  
-
-Using a Version Control System makes it possible to edit a document with others without the fear of overwriting someone's changes, even if more than one person is working on the same part of the document. All the changes can be merged into one document. These documents are all stored one place. 
-
-
-#### Storing Versions 
-
-A Version Control System allows you to save versions of your files and to attach notes to each version. Each save will contain information about the lines that were added or altered.
-
-#### Restoring Previous Versions  
-
-Since you are keeping track of versions, it is possible to revert all the files in a project or just one file to a previous version.
-
-
-#### Backup  
-
-A Version Control System makes it so that you work locally and sync your work remotely. This means you will have a copy of your project on your computer and the Version Control System Server you are using.
-
-#### The Details
-
-git is the Version Control System we will be using for tracking changes in our files.
-
-[GitHub](https://github.com/) is the Version Control System Server we will be using. They provide free account for all public projects.
-
-
-### The Basics
-
-#### Creating a new repository 
-
-A repository is a project that contains all of the project files, and stores each file's revision history. Repositories can have multiple collaborators. Repositories usually have two components, one remote and one local.
-
-
-Let's Do It!
-
-Follow Steps 1 and 2 to create the remote repository. Follow Step 3 to create your local repository and link it to the remote repository.
-
-1. Navigate to GitHub --> Create Account / Log In --> Go To Repositories --> Click 'New'  
-
-  ![To create a new repository click the 'New' Button in the top right corner.](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/github-newRepoButton.png)  
-
-2. Add a name (i.e., PFB_problemsets) and a description (i.e., Solutions for PFB Problem Sets) and click "Create Repository"  
-
-  ![Fill in the form and click the 'Create Repository Button'](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/github-newRepoForm.png)  
-
-3. Create a directory on your computer and follow the instructions provided.  
-
-  ![Create a directory on your computer and follow these instructions.](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/github-newRepoInstructions.png)  
-
-
-   - Open your terminal and navigate to the location where you want to put a directory for your problem sets
-   - Create a new directory directory (i.e., PFB_problemsets)
-   - Follow the instructions provided when you created your repository. These are my instructions; yours will be different.
-
-```
-echo "# PFB_problemsets" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/srobb1/PFB_problemsets.git
-git push -u origin master
-```
-
-
-You now have a repository!
-
-Let's back up a bit and talk more about git and about these commands. For basic git use, these are almost all the commands you will need to know.
-
-Every git repository has three main elements called _trees_:
-1. The _Working Directory_ contains your files
-2. The _Index_ is the staging area
-3. The _HEAD_ points to the last commit you made.
-> There are a few new words here. We will explain them as we go
-
-| command                                 | description                              |
-| --------------------------------------- | ---------------------------------------- |
-| `git init`                              | Creates your new local repository with the three trees (local machine) |
-| `git remote add remote-name URL`        | Links your local repository to a __remote__ repository that is often named _origin_ and is found at the given URL |
-| `git add filename`                      | Propose changes and add file(s) with changes to the index or staging area (local machine) |
-| `git commit -m 'message'`               | Confirm or commit that you really want to add your changes to the HEAD (local machine) |
-| `git push -u remote-name remote-branch` | Upload your committed changes in the HEAD to the specified remote repository to the specified branch |
-
-
-Let's Do it!
-
-1. Make sure you are in your local repository
-2. Create a new file with nano: `nano git_exercises.txt`
-3. Add a line of text to the new file.
-4. Save (control + o) and Exit (control + x)
-5. (Add) Stage your changes. `git add git_exercises.txt`
-6. (Commit) Become sure you want your changes. `git commit -m 'added a line of text'`
-7. (Push) Sync/Upload your changes to the __remote__ repository. `git push origin master`
-
-That is all there is to it! There are more complicated things you can do, but we won't get into those. You will know when you are ready to learn more about git when you figure out there is something you want to do but don't know how. There are thousands of online tutorials for you to search and follow.
-
-#### Cloning a Repository
-
-Sometimes you want to download and use someone else's repository. 
-
-Let's clone the course material.
-
-Let's do it!
-
-1. Go to our [PFB2018 GitHub Repository](https://github.com/prog4biol/pfb2018)
-2. Click the 'Clone or Download' Button
-3. Copy the URL
-  ~[Clone PFB2018](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/github-clone.png)
-4. _Clone_ the repository to your local machine
-   `git clone https://github.com/prog4biol/pfb2018.git`
-
-Now you have a copy of the course material on your computer!
-
-#### Bringing Changes in from the Remote Repository to your Local Repository
-
-If changes are made to any of these files in the online, remote repository, and you want to update your local copy, you can _pull_ the changes.
-`git pull`  
-
-| command                                 | description                              |
-| --------------------------------------- | ---------------------------------------- |
-| `git pull` | To get changes from the remote into your local copy|
-
-
-#### Keeping track of differences between local and remote repositories
-
-If you are ever wondering what do you need to add to your remote repository use the `git status` command. This will provide you with a list of files that have been modified, deleted, and those that are untracked. Untracked files are those that have never been added to the staging area with `git add`
-
-| command                                 | description                              |
-| --------------------------------------- | ---------------------------------------- |
-| `git status` | To see a list of files that have been modified, deleted, and those that are untracked |
-
-
-#### Links to *slightly* less basic topics  
-
-You will KNOW if you need to use these features of git.
-
-1. [View Commit History](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)
-2. [Resolving Merge Conflicts](https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/)
-3. [Undoing Previous Commits](https://github.com/blog/2019-how-to-undo-almost-anything-with-git)
-
----
-
-### [Link To Unix 2 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Unix_02_problemset.md)
-
----
-
-# Python
+# Python Lectures
 
 
 ## Python 1
@@ -1950,9 +885,9 @@ It returns three different values depending on x and y
 
 ### Sequences
 
-In the next section, we will learn about strings, tuples and lists. These are all examples of python sequences. A string is a sequence of characters `'ACGTGA'`, a tuple `(0.23, 9.74, -8.17, 3.24, 0.16)` and a list `['dog', 'cat', 'bird']` are sequences of any kind of data. We'll see much more detail in a bit.
+In the next section, we will learn about strings, tuples, and lists. These are all examples of python sequences. A string is a sequence of characters `'ACGTGA'`, a tuple `(0.23, 9.74, -8.17, 3.24, 0.16)`, and a list `['dog', 'cat', 'bird']` are sequences of any kind of data. We'll see much more detail in a bit.
 
-In Python a type of object gets operations that belong to that type. Sequences have sequence operations so strings can also use sequence operations. Strings also have their own specific operations.
+In Python, a type of object gets operations that belong to that type. Sequences have sequence operations so strings can also use sequence operations. Strings also have their own specific operations.
 
 You can ask what the length of any sequence is
 
@@ -2905,10 +1840,13 @@ The while loop will continue to execute a block of code as long as the test expr
 
 ```
 while expression:
+  # these statements get executed every time the code enters the loop 
   statement1
   statement2
   more_statements
+# code below here gets executed after the while loop exits
 rest_of_code_goes_here
+more_code
 ```
 > The condition is the expression. The while loop block of code is the collection of indented statements following the expression.
 
@@ -2955,8 +1893,8 @@ An infinite loop occurs when a while condition is always true. Here is an exampl
 #!/usr/bin/env python3
 
 count = 0
-while count < 5:
-  print("count:" , count)
+while count < 5:            # this is normally a bug!!
+  print("count:" , count)   # forgot to increment count in the loop!!
 print("Done") 
 ```
 
@@ -2975,7 +1913,21 @@ count: 0
 ...
 ```
 > What caused the expression to always be `True`? 
-> The statement that increments the count is missing, so it will always be smaller than 5. To stop the code from forever printing use ctrl+c.
+> The statement that increments the count is missing, so it will always be smaller than 5. To stop the code from  printing forever use ctrl+c. Behavior like this is almost always due to a bug in the code.
+
+A better way to write an infinite loop is with `True`. You'll need to include something like `if ...: break` 
+
+```python
+#!/usr/bin/env python3
+count=0
+while True:
+  print("count:",count)
+  # you probably want to add if...: break 
+  # so you can get out of the infinite loop
+print('Finished the loop')
+```
+
+
 
 #### While/Else
 
@@ -3362,7 +2314,7 @@ The value can be accessed and passed directly to a function or stored in a varia
 >>> print(genes['TP53'])
 GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 >>>
->>> seq = genes['TP53'];
+>>> seq = genes['TP53']
 >>> print(seq)
 GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 ```
@@ -3503,6 +2455,7 @@ These functions work on several other data types too!
 | `dict.copy()`                          | Returns a shallow copy of dictionary dict. [Shallow vs. deep](https://www.geeksforgeeks.org/copy-python-deep-copy-shallow-copy/) copying only matters in multidimensional data structures. |
 | `dict.fromkeys(seq,value)`             | Create a new dictionary with keys from seq (Python sequence type) and values set to value. |
 | `dict.items()`                         | Returns a list of (key, value) tuple pairs |
+| `dict.pop(key)`                        | Removes the key:value pair and returns the value |
 | `dict.keys()`                          | Returns list of keys                     |
 | `dict.get(key, default = None)`        | get value from dict[key], use default if not not present |
 | `dict.setdefault(key, default = None)` | Similar to get(), but will set dict[key] = default if key is not already in dict |
@@ -3676,7 +2629,7 @@ Hello, PFB2018!
 
 #### Reading input from the keyboard
 
-This is something new. There is a function which prints a message to the screen and waits for input from the keyboard. This input can be stored in a variable. It always starts as a string. Convert to an int or float if you want a number.
+This is something new. There is a function which prints a message to the screen and waits for input from the keyboard. This input can be stored in a variable. It always starts as a string. Convert to an int or float if you want a number. When you are done entering text, press the enter key to end the input. A newline character is not included in the input.
 
 ```python 
 >>> user_input = input("Type Something Now: ")
@@ -3697,19 +2650,19 @@ The most common access modes are read (r) and write (w).
 #### Open a File
 
 ```python
->>> file_object = open("seq.nt.fa","r")
+>>> file_object = open("seq.nt.txt","r")
 ```
 > 'file_object' is a name of a variable. This can be anything, but make it a helpful name that describes what kind of file you are opening.
 
 
 #### Reading the contents of a file
 
-Now that we have opened a file and created a file object we can do things with it, like read it. Lets read all the contents at once.  
+Now that we have opened a file and created a file object we can do things with it, like read it. Let's read all the contents at once.  
 
-Let's go to the command line and  `cat` the contents of the file to see what's in it first
+Let's go to the command line and  `cat` the contents of the file to see what's in it first.
 
 ```bash
-$ cat seq.nt.fa
+$ cat seq.nt.txt
 ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
 ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 $ 
@@ -3717,9 +2670,8 @@ $
 
 Note the new lines. Now, lets print the contents to the screen with Python. We will use `read()` to read the entire contents of the file into a variable. 
 ```python
->>> file = open("seq.nt.fa","r")
+>>> file = open("seq.nt.txt","r")
 >>> contents = file.read()
-seq.nt.fa
 >>> print(contents)  # note newline characters are part of the file!
 ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
 ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
@@ -3734,7 +2686,7 @@ Here's another way to read data in from a file. A `for` loop can be used to iter
 ```python
 #!/usr/bin/env python3
 
-file = open("seq.nt.fa","r")
+file = open("seq.nt.txt","r")
 for line in file: # Python magic: reads in a line from file
   print(line)
 ```
@@ -3754,7 +2706,7 @@ Let's use `rstrip()` method to remove the newline from our file input.
 $ cat file_for_rstrip.py
 #!/usr/bin/env python3
 
-file_object = open("seq.nt.fa","r")
+file_object = open("seq.nt.txt","r")
 for line in file_object:
   line = line.rstrip()
   print(line)
@@ -3770,14 +2722,15 @@ ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 
 > Where do the newlines in the above output come from?
 
-####Opening a file with `with open() as fh:`
+#### Opening a file with `with open() as fh:`
 
-Many people add this because it closes the file for you automatically. Good programming practice. Your code will clean up as it runs. For more advanced coding, `with ... as ...` saves limited resources like filehandles and database connections. For now, we just need to know that the `with ... as ...:` does the same as `fh = open(...) ... fh.close()`. So here's what the adapted code looks like
+Many people add this, because it closes the file for you automatically. Good programming practice. Your code will clean up as it runs. For more advanced coding, `with ... as ...` saves limited resources like filehandles and database connections. For now, we just need to know that the `with ... as ...:` does the same as `fh = open(...) ... fh.close()`. So here's what the adapted code looks like
 
 ```python
 #!/usr/bin/env python3
 
-with open("seq.nt.fa","r") as file_object: #cleans up after exiting with block
+with open("seq.nt.txt","r") as file_object: #cleans up after exiting 
+                                            # the with block
   for line in file_object:
     line = line.rstrip()
   	print(line)
@@ -3788,7 +2741,7 @@ with open("seq.nt.fa","r") as file_object: #cleans up after exiting with block
 
 Writing to a file is nothing more than opening a file for writing then using the `write()` method.  
 
-The `write()` method is like the `print()` function. The biggest difference is that it writes to your file object instead of the screen. Unlike `print()` it does not add a newline by default.  `write()` takes a single string argument. 
+The `write()` method is like the `print()` function. The biggest difference is that it writes to your file object instead of the screen. Unlike `print()`, it does not add a newline by default.  `write()` takes a single string argument. 
 
 Let's write a few lines to a file named "writing.txt".  
 ```python
@@ -3818,15 +2771,14 @@ Now, let's get crazy! Lets read from one file a line at a time. Do something to 
 ```python
 #!/usr/bin/env python3
 
-seq_read  = open("seq.nt.fa","r")
-seq_write = open("nt.counts.txt","w")
-
 total_nts = 0
-for line in seq_read:
-  line = line.rstrip()
-  nt_count = len(line)
-  total_nts += nt_count
-  seq_write.write(str(nt_count) + "\n")
+# open two file objects, one for reading, one for writing
+with open("seq.nt.txt","r") as seq_read, open("nt.counts.txt","w") as seq_write:
+  for line in seq_read:
+    line = line.rstrip()
+    nt_count = len(line)
+    total_nts += nt_count
+    seq_write.write(str(nt_count) + "\n")
 
 seq_write.write("Total: " + str(total_nts) +"\n")
 
@@ -3843,18 +2795,18 @@ $ cat nt.counts.txt
 71
 Total: 142
 ```
-> The file we are reading from is named, "seq.nt.fa"  
+> The file we are reading from is named, "seq.nt.txt"  
 > The file we are writing to is named, "nt.counts.txt"  
-> We read each line, calculate the length of each line and print the length  
+> We read each line, calculate the length of each line, and print the length  
 > We also create a variable to keep track of the total nt count  
 > At the end, we print out the total count of nts  
-> Finally we close each of the files  
+> Finally, we close each of the files  
 
 
 
 #### Building a Dictionary from a File
 
-This is a very common task. It will use a loop, file I/O and a dictionary.
+This is a very common task. It will use a loop, file I/O, and a dictionary.
 
 Assume we have a file called "sequence_data.txt" that contains tab-delimited gene names and sequences that looks something like this
 
@@ -3866,15 +2818,14 @@ BRCA1   GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
 How can we read this whole file in to a dictionary? 
 
 ```python
-#!/usr/bin/env python3                                                                                    
+#!/usr/bin/env python3
 
-seq_read  = open("sequence_data.txt","r")
 genes = {}
-for line in seq_read:
+with open("sequence_data.txt","r") as seq_read:
+  for line in seq_read:
     line = line.rstrip()
-    id,seq = line.split() #split on whitespace                                                        
-    genes[id] =	seq
-seq_read.close()
+    gene_id,seq = line.split() #split on whitespace
+    genes[gene_id] = seq
 print(genes)
 ```
 
@@ -3889,7 +2840,7 @@ Output:
 
 ### [Link to Python 6 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_06_problemset.md)
 
-\pagebreak
+
 
 ---
 ## Python 7
@@ -4050,31 +3001,36 @@ g..t
 > matches "gaat", "goat", and "gotta get a goat" (twice)
 
 
+<br><br> 
 ```
 g[gatc][gatc]t
 ```
-> matches "gaat", "gttt", "gatt", and "gotta get an agatt" (once)
+> matches "gaat", "gttt", "gatt", and "gotta get an agatt" (once) 
 
+
+<br><br> 
 ```
 \d\d\d-\d\d\d\d
 ```
 > matches 376-8380, and 5128-8181 but not 055-98-2818.
 
+<br><br> 
+
 ```
 ^\d\d\d-\d\d\d\d
 ```
 >  matches 376-8380 and 376-83801 but not 5128-8181.
-
+<br><br> 
 ```
 ^\d\d\d-\d\d\d\d$
 ```
 > only matches telephone numbers (US telephone numbers without area code)
-
+<br><br> 
 ```
 \bcat
 ```
 > matches "cat", "catsup" and "more catsup please" but not "scat".
-
+<br><br> 
 ```
 \bcat\b
 ```
@@ -4778,15 +3734,17 @@ Same example in a script file: [Building Complex Datastructures](https://github.
 
 
 
-There are also specific data table and frame handling libraries like [Pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Here is a [intro](https://pandas.pydata.org/pandas-docs/stable/dsintro.html) to data structures in Panda.
+There are also specific data table and frame handling libraries like [Pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
 
+Here is a [intro](https://pandas.pydata.org/pandas-docs/stable/dsintro.html) to data structures in Panda.
 
+Here is a very nice [interactive tutorial](https://www.learnpython.org/en/Pandas_Basics)
 
 
 ### Exceptions
 
 
-There are a few different types of errors when coding. Syntax errors, logic errors, and exceptions. You have probably encountered all three. Sytax and logic errors are issues you need to deal with while coding. An exception is a special type of error that can be informative and used to write code to respond to this type of error. This is especially relavent when dealing with user input. What if they don't give you any, or it is the wrong kind of input. We want our code to be able to detect these types of errors and respond accordingly.
+There are a few different types of errors when coding. Syntax errors, logic errors, and exceptions. You have probably encountered all three. Syntax and logic errors are issues you need to deal with while coding. An exception is a special type of error that can be informative and used to write code to respond to this type of error. This is especially relavent when dealing with user input. What if they don't give you any, or it is the wrong kind of input. We want our code to be able to detect these types of errors and respond accordingly.
 
 ```python
 #!/usr/bin/env python3
@@ -4812,10 +3770,10 @@ Traceback (most recent call last):
     file = sys.argv[1]
 IndexError: list index out of range 
 ```
-> We get an **IndexError** exception
+> We get an **IndexError** exception, which is raised when an index is not found in a sequence.
 
 
-We have already seen quite a few exceptions, here are some:   
+We have already seen quite a few exceptions throughout the lecture notes, here are some:   
   - ValueError: math domain error
   - AttributeError: 'list' object has no attribute 'rstrip'
   - SyntaxError: EOL while scanning string literal
@@ -4825,7 +3783,9 @@ We have already seen quite a few exceptions, here are some:
   - IndexError: list assignment index out of range
   - NameError: name 'HDAC' is not defined
 
-We can use the exception to our advantage to help out our users. We can use a try/except condition to look for exceptions and to do something if we do not have an exception and do something different if we do have an exception.
+[Link to Python Documentation of built in types of exceptions](https://www.tutorialspoint.com/python3/python_exceptions.htm)
+
+We can use the exception to our advantage to help the people who are running the script. We can use a try/except condition like an if/else block to look for exceptions and to execute specific code if we **do not have** an exception and do something different if we **do have** an exception.
 
 ```python
 #!/usr/bin/env python3
@@ -4858,7 +3818,7 @@ Please provide a file name
 What if the user provides input but it is not a valid file or the path is incorrect? Or if you want to check to see if the user provided input as well as if it can open the input.  
 
 
-We can add multiple exception tests. Each except statement can specify what kind of exception it is waiting to recieve. If that kind of exception occures, that block of code will be executed.
+We can add multiple exception tests, like if/elif block. Each except statement can specify what kind of exception it is waiting to recieve. If that kind of exception occures, that block of code will be executed.
 ```python
 import sys
 
@@ -4870,14 +3830,17 @@ try:
   for line in FASTA:
     line = line.rstrip()
     print(line)
-except IndexError:  
+except IndexError: 
   print("Please provide a file name")
 except IOError:    
   print("Can't find file:" , file)
 ```
-> Here we test for an IndexError and a IOError. The IndexError occurs when we try to access a list element that does not exists. The IOError happens when we try to access a file that does not exist.
+> Here we test for an IndexError: Raised when an index is not found in a sequence.
+> The IndexError occurs when we try to access a list element that does not exists. 
+> And we test for a IOError: Raised when an input/ output operation fails, such as the print statement or the open() function when trying to open a file that does not exist.   
+> The IOError happens when we try to access a file that does not exist.
 
-Let's run it with no input.
+Let's run it with a file that does not exist.
 ```
 $ python scripts/exceptions_try_files.py test.txt
 User provided file name: test.txt
@@ -4997,7 +3960,7 @@ except ValueError:
 except IOError as ex:
   print("Can't find file:" , file , ': ' , ex.strerror  )
 ```
-> Here we created an except to catch any ValueError
+> Here we created an exception to catch any ValueError
 
 Let's Run it.
 ```bash
@@ -5007,11 +3970,11 @@ File needs to be a FASTA file and end with .fa
 ```
 > We get a great error message now.
 
-But what if there is another ValueError, how can we tell if it is do to the FASTA file extension or not? 
+But what if there is another ValueError, how can we tell if has anything to do with the FASTA file extension or not? Answer: the message will be different.
 
 #### Creating Custom Exceptions
 
-We can create our own custom exception. We will need to create a new class of exception. Below is the sytax to do this.
+We can create our own custom exception. We will need to create a new class of exception. Below is the syntax to do this.
 
 ```python
 import sys
@@ -5055,11 +4018,11 @@ File needs to be a FASTA file and end with .fa
 
 
 ---
-## Python 9
+# Python 9
 
 ### Functions
 
-Functions consist of lines of code that do something useful and that you want to run more than once. You also give that function a name so you can refer to it in your code. This avoids copying and pasting the code to many places in your script and makes your code easier to read.
+Functions consist of several lines of code that do something useful and that you want to run more than once. You also give that function a name so you can refer to it in your code. This avoids copying and pasting the code to many places in your script and makes your code easier to read.
 
 Let's see some examples.
 
@@ -5113,9 +4076,9 @@ This code will print 0.45161290322580644 to the screen. You can save this value 
 dna_gc = gc_content('GTACCTTGATTTCGTATTCTGAGAGGCTGCT')
 ```
 
-As you can see we can write a nice clear line of python to call this function and because the function has a name that describes what it does it's easy to understand how the code works. Don't define your functions like this `def my_function(a):`!
+As you can see we can write a nice clear line of python to call this function and because the function has a name that describes what it does it's easy to understand how the code works. Don't give your functions names like this `def my_function(a):`!
 
-How could you convert the GC fraction to % GC. Use format()
+How could you convert the GC fraction to % GC. Use `format()`.
 
 ```python
 dna_string = "GTACCTTGATTTCGTATTCTGAGAGGCTGCT"
@@ -5136,22 +4099,14 @@ This sequence is 45.16% GC
 2. The function must have a name. This name should clearly describe what the function does. Here is our example `gc_content`
 3. You can pass variables to functions but you don't have to. In the definition line, you place variables your function needs inside parentheses like this `(dna)`. This variable only exists inside the function.
 4. The first line of the function must end with a `:` so the complete function definition line looks like this ```def gc_content(dna):```
-5. The next lines of code, the function body, needs to be indented. This code comprises what the function does.
+5. The next lines of code, the function body, need to be indented. This code comprises what the function does.
 6. You can return a value as the last line of the function, but this is not required. This line `return gc_content` at the end of our function definition passes the value of gc_content back to the code that called the function in your main script.
 
 
 #### Naming Arguments
 
-You can name your argument variables anything you want, but they should describe the data they contain. The name needs to be consistent within your function. You could change `dna` to `seqeunce` like this
+You can name your argument variables anything you want, but the name should describe the data contained. The name needs to be consistent within your function. 
 
-```python
-def gc_content(sequence):   # give our function a name and parameter 'sequence'
-   c_count = sequence.count('C')
-   g_count = sequence.count('G')
-   dna_len = len(sequence)
-   gc_content = (c_count + g_count) / dna_len
-   return gc_content # return the value of gc_content to the code that called this function
-```
 #### Keyword Arguments
 
 Arguments can be named and these names can be used when the function is called. This name is called a 'keyword' 
@@ -5193,7 +4148,7 @@ def gc_content(dna='A'):   # give our function a name and parameter 'dna'
 
 #### Lambda expressions
 
-Lambda expressions can be used to define simple (one-line) anonymous functions. There are some uses for lambda which we won't go into here. We are showing it to you because sometimes you will come across it.
+Lambda expressions can be used to define simple (one-line) functions. There are some uses for lambda which we won't go into here. We are showing it to you because sometimes you will come across it.
 
 Here is a one line custom function, like the functions we have already talked about:
 ```python
@@ -5512,7 +4467,7 @@ oops = subprocess.check_call(['ls', '-l'])
 oops = subprocess.check_call('ls -l', shell=True)
 ```
 
-##### Redirect stdout to a file
+##### Redirect stdout to a file inside python subprocess
 
 You can't write `ls -l > listing.txt`  to redirect stdout in the subprocess method, so use this instead
 
@@ -5586,6 +4541,7 @@ To get a random index from an element of `list` use `i=random.randrange(len(list
 #### statistics
 
 Typical statistical quantities
+
 | example                         | description                              |
 | ------------------------------- | ---------------------------------------- |
 | statistics.mean([1,2,3,4,5])    | mean or average                          |
@@ -5602,14 +4558,15 @@ Does unix-like wildcard file path expansion.
 >>> glob.glob('pdfs/*.pdf')
 ['pdfs/python1.pdf', 'pdfs/python2.pdf', 'pdfs/python3.pdf', 'pdfs/python4.pdf', 'pdfs/python6.pdf', 'pdfs/python8.pdf', 'pdfs/unix1.pdf', 'pdfs/unix2.pdf']
 >>> fasta_files = glob.glob('sequences/*.fa')
->>> ```
+>>> 
+```
 
 
 #### argparse
 
 Great (if quite complicated) tool for parsing command line arguments and automatically generating help messages for scripts (very handy!). Here's a simple script that explains a little of what it does.
 
-​```python
+```python
 #!/usr/bin/env python3
 import argparse
 parser = argparse.ArgumentParser(description="A test program that reads in some number of lines from an input file. The output can be screen or an output file")
@@ -5633,14 +4590,14 @@ if args.out:
 
 time, HTML, XML, email, CGI, sockets, audio, GUIs with Tk, debugging, testing, unix utils
 
-Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics
+Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics, pandas for data, scikitlearn for machine learning.
 
 ---
 
 ### [Link to Python 9 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_0_problemset.md)
 
 ---
-## Python 10
+# Python 10
 
 ### Classes
 

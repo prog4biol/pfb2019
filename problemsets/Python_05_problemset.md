@@ -5,9 +5,9 @@ Python 5 - Dictionaries and Sets - Problem Set
 
 > Some of my favorites:
 >
-> | Type | Favorite                                 | 
-> | ---- | ---------------------------------------- | 
-> | book | [Jitterbug Perfume](https://en.wikipedia.org/wiki/Jitterbug_Perfume) | 
+> | Type | Favorite                                 |
+> | ---- | ---------------------------------------- |
+> | book | [Jitterbug Perfume](https://en.wikipedia.org/wiki/Jitterbug_Perfume) |
 > | song | [Tom Petty - I Won't Back Down](https://www.youtube.com/watch?v=nvlTJrNJ5lA) |
 > | tree | [Cedar](https://sciencing.com/cedar-trees-5432718.html) |
 
@@ -31,13 +31,13 @@ fav_thing = 'organism'
 print(fav_dict[fav_thing])
 ```
 
-6. Take a value from the command line for `fav_thing` and print the value of that item from the dictionary. Maybe you want to print out all the keys to the user so that they know what to pick from. Check out `raw_input()`. Here is a <a href="https://www.tutorialspoint.com/python/python_files_io.htm">link</a>.
+6. Take a value from the command line for `fav_thing` and print the value of that item from the dictionary. Maybe you want to print out all the keys to the user so that they know what to pick from. Check out `input()`. Here is a <a href="https://www.tutorialspoint.com/python/python_files_io.htm">link</a>.
 
 7. Change the value of your favorite organism.
 
 8. Get the `fav_thing` from the command line and a new value for that key. Change the value with the user inputted value.
 
-9. Use a `for` loop to print out each key and value of the dictionary. 
+9. Use a `for` loop to print out each key and value of the dictionary.
 
 10. Write a script to find the intersection, difference, union, and symetrical difference between these two sets.
 
@@ -59,7 +59,5 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACC
   - iterate over each unique character and count the number found in the sequence
   - store each count in a dictionary. example: `nt_comp['A']=2`
   - when you are done counting each character calculate and report the nucleotide composition and the GC content.
-  
- 13. Are you still committing your work?
- 
 
+ 13. Are you still committing your work?
