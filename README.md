@@ -5206,7 +5206,7 @@ def gc_content(dna='A'):   # give our function a name and parameter 'dna'
 
 #### Lambda expressions
 
-Lambda expressions can be used to define simple (one-line) anonymous functions. There are some uses for lambda which we won't go into here. We are showing it to you because sometimes you will come across it.
+Lambda expressions can be used to define simple (one-line) functions. There are some uses for lambda which we won't go into here. We are showing it to you because sometimes you will come across it.
 
 Here is a one line custom function, like the functions we have already talked about:
 ```python
