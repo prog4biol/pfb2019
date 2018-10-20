@@ -4611,7 +4611,7 @@ These new functions makes our code easier to read and to write, especially if yo
 
 A conceptual difference between a fucntion and a class is that a function usually does one thing, while a class will do many related things to help solve a problem.
 
-What is a class really, what does it do? A class doesn't really do anything except for setting a listof rules for creating a new custom object. Every time you use the class you are creating an instance of a type of object.   
+What is a class really, what does it do? A class doesn't really do anything except for setting a list of rules for creating a new custom object. Every time you use the class you are creating an instance of a type of object.   
 
 #### You have been using classes to create objects
 
@@ -4661,7 +4661,7 @@ DNARecord Rules:
 
 
 
-Here is the first draft of our class. We will go through each section of this code below:
+Here is the first, but not final draft of our class. We will go through each section of this code below:
 
 ```python
 class DNARecord(object):
@@ -4755,7 +4755,7 @@ Now let's create a new DNARecord object:
 
 #### Retrieving attribute values
 
-Now that  a new DNARecord object has been created, and assigned to the variable `dna_rec_obj`, we can access its attributes using the following format, `object.attribute_name` 
+Now that a new DNARecord object has been created, and assigned to the variable `dna_rec_obj`, we can access its attributes using the following format, `object.attribute_name` 
 
 To get the gene name of the object we created, we simply write `dna_rec_obj.gene_name`. 
 
@@ -4773,7 +4773,7 @@ Let's try it:
 
 #### Using class methods
 
-To call a method on our new object, we use a similar format `object.method_name`.
+To call a method associated with our new object, we use a similar format `object.method_name`.
 
 So to call the `get_AT()` method, we would use `dna_rec_obj.get_AT() `
 
