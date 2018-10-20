@@ -205,7 +205,7 @@ Sofia Robb
             * [Raising an Exception](pfb.md/#raising-an-exception)
             * [Creating Custom Exceptions](pfb.md/#creating-custom-exceptions)
          * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_08_problemset.md">Link to Python 8 Problem Set</a>](pfb.md/#link-to-python-8-problem-set)
-   * [Python 9](pfb.md/#python-9)
+      * [Python 9](pfb.md/#python-9)
          * [Functions](pfb.md/#functions)
             * [Defining a Function that calculates GC Content](pfb.md/#defining-a-function-that-calculates-gc-content)
             * [Using your function to calculate GC content](pfb.md/#using-your-function-to-calculate-gc-content)
