@@ -1,7 +1,9 @@
 
 # rerun if any changes are made to the # ## ### #### in the README.md
-START=`grep -n Instructors ../README.md | tail -1 | awk -F ':'  {'print $1'}`
-tail +$START ../README.md | ./gh-md-toc - > toc.md
+head -n 6 ../pfb.md > toc.md
+START=2
+tail +$START ../unix.md | ./gh-md-toc - | perl -p -e 's/\(#/\(unix.md\/#/' >> toc.md
+tail +$START ../pfb.md  | ./gh-md-toc - | perl -p -e 's/\(#/\(pfb.md\/#/' >> toc.md
 
 
 

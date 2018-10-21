@@ -20,7 +20,7 @@ Python 5 - Dictionaries and Sets - Problem Set
 fav_dict = {
 		'book' : 'Lonesome Dove',
 		'song' : 'Only Skin',
-		'tree' : 'Maple'
+		'tree' : 'Sequoia'
 		}
 ```
 

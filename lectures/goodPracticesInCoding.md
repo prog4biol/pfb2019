@@ -7,7 +7,7 @@
 ```
 vi script.py 
 ```
-The above name is not very descriptive.
+The above name is not very descriptive. :disappointed:
 
 ```python
 #!/usr/bin/env python3
@@ -20,14 +20,14 @@ elif n > 0:
 else:
 	print(n, 'is negative')
 ```
-The code is correct, but the variable has a non-descriptive name. There are no blank lines between portions of the code, and there is no indication about what the script is attempting to do.​
+The code is correct, but the variable has a non-descriptive name. There are no blank lines between portions of the code, and there is no indication about what the script is attempting to do.
 
 **A clearer version:**
 
 ```
 vi PFB_PS_2.5.py
 ```
-The above name tells you the project (Programming for Biology), the problem set (PS_2), and the question (5).
+The above name tells you the project (Programming for Biology), the problem set (PS_2), and the question (5). :tada:
 
 ```python
 #!/usr/bin/env python3

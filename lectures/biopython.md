@@ -444,7 +444,7 @@ It will handle other sequence search tools such as FASTA, HMMER etc as well as B
 
 You'll write something like this
 
-```
+```python
 >>> from Bio import SearchIO
 >>> idx = SearchIO.index('tab_2226_tblastn_001.txt', 'blast-tab')
 >>> sorted(idx.keys())
