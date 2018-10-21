@@ -12,7 +12,7 @@ Sofia Robb
 ## Structural Variation -- Tomas Marques
   - Lecture
 ## Sequence Homology -- Brandi Cantarel
-  - [Lecture 1](https://bcantarel.github.io/cshl_programming_biology2018/HomologyAlignments.pdf) [Lecture 2](https://bcantarel.github.io/cshl_programming_biology2018/PSIBlastHmmer.pdf)
+  - [Lecture1](https://bcantarel.github.io/cshl_programming_biology2018/HomologyAlignments.pdf) [Lecture2](https://bcantarel.github.io/cshl_programming_biology2018/PSIBlastHmmer.pdf)
   - [Workshop](https://github.com/prog4biol/pfb2018/blob/master/workshops/Seqeunce_homology/README.md)
 ## Genome Assembly -- Deb Triant
   - Lecture
