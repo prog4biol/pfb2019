@@ -6,6 +6,9 @@ Sofia Robb
 
 # Workshops
 
+## BioPython  -- Sofia Robb
+  - [Lecture](https://github.com/prog4biol/pfb2018/blob/master/lectures/biopython.md)
+  - [Workshop](https://github.com/prog4biol/pfb2018/blob/master/problemsets/biopython_problemset.md)
 ## NGS -- Mike Campbell
   - [Lecture](https://github.com/mscampbell/pfb2018/blob/master/slides/Mike_pfb_talk.pdf) 
   - [Workshop](https://github.com/prog4biol/pfb2018/tree/master/workshops/NGS)
