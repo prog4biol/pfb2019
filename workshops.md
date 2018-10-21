@@ -26,6 +26,8 @@ Sofia Robb
 ## RNAseq -- Brian Hass
   - Lecture
   - Workshop
+## Ethics and Responsibility in Bioinformatics -- Simon Prochnik
+  - Lecture
 ## GMOD -- Scott Cain
   - Lecture
   - Workshop
