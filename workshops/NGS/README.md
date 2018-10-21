@@ -2,7 +2,7 @@
 clone Mike's repoisitory. Make sure you don't clone it into one of your other repositories.
 
 ```
-clone https://github.com/mscampbell/pfb2018.git
+git clone https://github.com/mscampbell/pfb2018.git
 ```
 
 Link to Problem Set:
