@@ -1,0 +1,216 @@
+LOCUS       NM_204156               3193 bp    mRNA    linear   VRT 16-SEP-2018
+DEFINITION  Gallus gallus histone deacetylase 1 (HDAC1), mRNA.
+ACCESSION   NM_204156 XM_001233396
+VERSION     NM_204156.1
+KEYWORDS    RefSeq.
+SOURCE      Gallus gallus (chicken)
+  ORGANISM  Gallus gallus
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Archelosauria; Archosauria; Dinosauria; Saurischia; Theropoda;
+            Coelurosauria; Aves; Neognathae; Galloanserae; Galliformes;
+            Phasianidae; Phasianinae; Gallus.
+REFERENCE   1  (bases 1 to 3193)
+  AUTHORS   Kurosawa K, Lin W and Ohta K.
+  TITLE     Distinct roles of HDAC1 and HDAC2 in transcription and
+            recombination at the immunoglobulin loci in the chicken B cell line
+            DT40
+  JOURNAL   J. Biochem. 148 (2), 201-207 (2010)
+   PUBMED   20511365
+  REMARK    GeneRIF: transcription levels at IgL and IgH were decreased in
+            HDAC1(-/-) cells, while other genes actively transcribed in B cells
+            were slightly up-regulated compared to the levels in wild-type
+            cells.
+REFERENCE   2  (bases 1 to 3193)
+  AUTHORS   Slattery EL, Speck JD and Warchol ME.
+  TITLE     Epigenetic influences on sensory regeneration: histone deacetylases
+            regulate supporting cell proliferation in the avian utricle
+  JOURNAL   J. Assoc. Res. Otolaryngol. 10 (3), 341-353 (2009)
+   PUBMED   19340485
+  REMARK    GeneRIF: HDAC1 and HDAC2 are positive regulators of regenerative
+            proliferation but they are not critical for avian hair cell
+            differentiation.
+REFERENCE   3  (bases 1 to 3193)
+  AUTHORS   Ahanda ML, Ruby T, Wittzell H, Bed'Hom B, Chausse AM, Morin V,
+            Oudin A, Chevalier C, Young JR and Zoorob R.
+  TITLE     Non-coding RNAs revealed during identification of genes involved in
+            chicken immune responses
+  JOURNAL   Immunogenetics 61 (1), 55-70 (2009)
+   PUBMED   19009289
+REFERENCE   4  (bases 1 to 3193)
+  AUTHORS   Verdin E, Dequiedt F and Kasler HG.
+  TITLE     Class II histone deacetylases: versatile regulators
+  JOURNAL   Trends Genet. 19 (5), 286-293 (2003)
+   PUBMED   12711221
+  REMARK    Review article
+REFERENCE   5  (bases 1 to 3193)
+  AUTHORS   Takami Y, Kikuchi H and Nakayama T.
+  TITLE     Chicken histone deacetylase-2 controls the amount of the IgM
+            H-chain at the steps of both transcription of its gene and
+            alternative processing of its pre-mRNA in the DT40 cell line
+  JOURNAL   J. Biol. Chem. 274 (34), 23977-23990 (1999)
+   PUBMED   10446166
+REFERENCE   6  (bases 1 to 3193)
+  AUTHORS   Sun JM, Chen HY, Moniwa M, Samuel S and Davie JR.
+  TITLE     Purification and characterization of chicken erythrocyte histone
+            deacetylase 1
+  JOURNAL   Biochemistry 38 (18), 5939-5947 (1999)
+   PUBMED   10231548
+COMMENT     VALIDATED REFSEQ: This record has undergone validation or
+            preliminary review. The reference sequence was derived from
+            AJ453995.1, AF044169.1, AADN05000596.1 and CF251344.1.
+            On Oct 4, 2007 this sequence version replaced XM_001233396.1.
+            
+            ##Evidence-Data-START##
+            Transcript exon combination :: ERR2365562.127602.1,
+                                           ERR2365565.63606.1 [ECO:0000332]
+            RNAseq introns              :: mixed/partial sample support
+                                           SAMEA2201357, SAMEA2201358
+                                           [ECO:0000350]
+            ##Evidence-Data-END##
+            COMPLETENESS: complete on the 3' end.
+PRIMARY     REFSEQ_SPAN         PRIMARY_IDENTIFIER PRIMARY_SPAN        COMP
+            1-541               AJ453995.1         1-541
+            542-1253            AF044169.1         517-1228
+            1254-1254           AADN05000596.1     659461-659461
+            1255-1615           AF044169.1         1230-1590
+            1616-1961           CF251344.1         299-644
+            1962-3193           AADN05000596.1     661421-662652
+FEATURES             Location/Qualifiers
+     source          1..3193
+                     /organism="Gallus gallus"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:9031"
+                     /chromosome="23"
+                     /map="23"
+                     /breed="Red Jungle Fowl"
+     gene            1..3193
+                     /gene="HDAC1"
+                     /note="histone deacetylase 1"
+                     /db_xref="CGNC:2394"
+                     /db_xref="GeneID:373961"
+     exon            1..121
+                     /gene="HDAC1"
+                     /inference="alignment:Splign:2.1.0"
+     misc_feature    43..45
+                     /gene="HDAC1"
+                     /note="upstream in-frame stop codon"
+     CDS             73..1515
+                     /gene="HDAC1"
+                     /EC_number="3.5.1.98"
+                     /note="HD1"
+                     /codon_start=1
+                     /product="histone deacetylase 1"
+                     /protein_id="NP_989487.1"
+                     /db_xref="CGNC:2394"
+                     /db_xref="GeneID:373961"
+                     /translation="MALTQGTKRKVCYYYDGDVGNYYYGQGHPMKPHRIRMTHNLLLN
+                     YGLYRKMEIYRPHKANAEEMTKYHSDDYIKFLRSIRPDNMSEYSKQMQRFNVGEDCPV
+                     FDGLFEFCQLSAGGSVASAVKLNKQQTDIAVNWAGGLHHAKKSEASGFCYVNDIVLAI
+                     LELLKYHQRVLYIDIDIHHGDGVEEAFYTTDRVMTVSFHKYGEYFPGTGDLRDIGAGK
+                     GKYYAVNYPLRDGIDDESYEAIFKPVISKVMETFQPSAVVLQCGSDSLSGDRLGCFNL
+                     TIKGHAKCVEFVKSFNLPMLMLGGGGYTIRNVARCWTYETAVALDTEIPNELPYNDYF
+                     EYFGPDFKLHISPSNMTNQNTNEYLEKIKQRLFENLRMLPHAPGVQMQPIPEDAVQED
+                     SGDEEEEDPEKRISIRNSDKRISCDEEFSDSEDEGEGGRKNVANFKKAKRVKTEEEKE
+                     EEEKKDEKEEEKAKEEKAEPKGVKEETKST"
+     misc_feature    97..1035
+                     /gene="HDAC1"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="propagated from UniProtKB/Swiss-Prot (P56517.1);
+                     Region: Histone deacetylase"
+     exon            122..234
+                     /gene="HDAC1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            235..352
+                     /gene="HDAC1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            353..427
+                     /gene="HDAC1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            428..566
+                     /gene="HDAC1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            567..708
+                     /gene="HDAC1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            709..801
+                     /gene="HDAC1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            802..910
+                     /gene="HDAC1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            911..1051
+                     /gene="HDAC1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            1052..1160
+                     /gene="HDAC1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            1161..1291
+                     /gene="HDAC1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            1292..1438
+                     /gene="HDAC1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            1439..1487
+                     /gene="HDAC1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            1488..3193
+                     /gene="HDAC1"
+                     /inference="alignment:Splign:2.1.0"
+ORIGIN      
+        1 ggccccggcc ggtggggcgg gttgcgttgc gctgcgcggc ggtagggtct gcggccgtgg
+       61 ggaggcagga aaatggcgct gacgcagggg accaagcgga aagtctgcta ctactacgac
+      121 ggtgatgttg gaaactatta ctatggccag ggacacccca tgaagcccca caggatccgg
+      181 atgacccaca acctactgct gaactacggc ctttacagga agatggagat atatcgccct
+      241 cacaaggcga acgcggagga gatgaccaag taccacagtg atgactacat caaattcctg
+      301 agatccatcc gcccagacaa catgtctgag tacagcaagc agatgcaaag atttaacgtt
+      361 ggggaggact gccctgtgtt cgatgggctg tttgagttct gtcagctctc tgctggaggc
+      421 tccgttgcca gcgctgtgaa gctgaacaag caacagacag atattgctgt gaattgggca
+      481 ggaggccttc accacgctaa gaagtcggag gcttctggct tctgttatgt caacgatatt
+      541 gtcctggcta tcttggagct cttaaagtat caccagaggg tcctgtatat tgacattgat
+      601 attcaccatg gagatggtgt ggaggaagcc ttctatacca cagaccgtgt gatgaccgtg
+      661 tcctttcata agtatggaga gtacttccca ggaacagggg acctgcggga cattggtgca
+      721 ggcaaaggca aatactatgc tgtcaactat cccctccggg atgggattga tgatgagtcc
+      781 tacgaggcaa tattcaagcc ggtgatatct aaagtgatgg agacattcca gcctagtgca
+      841 gttgtcctgc agtgcgggtc ggattctctg tccggggaca ggctgggttg ttttaatctg
+      901 accatcaaag gtcatgccaa gtgtgtggag tttgtcaaaa gttttaattt gcctatgctg
+      961 atgctgggag gaggtggcta tacgatccgc aacgtggcca gatgctggac ctatgagact
+     1021 gctgtggctt tggacactga gatcccaaat gagctcccat ataatgacta ttttgagtac
+     1081 ttcggaccag actttaagct gcacatcagt ccctcaaaca tgaccaacca gaataccaat
+     1141 gagtatctcg agaagatcaa gcagcgtctc tttgagaatc tgcgcatgct gcctcatgcc
+     1201 cctggcgtcc agatgcagcc aattcctgag gatgctgttc aggaagacag tggagatgaa
+     1261 gaagaagaag atcctgagaa gcgcatttca atccgcaatt ctgataagag aatatcctgt
+     1321 gatgaagaat tctctgactc tgaagatgaa ggggaaggag ggcgcaaaaa tgttgccaac
+     1381 tttaagaagg ccaagcgtgt gaaaacagag gaggaaaagg aggaggagga gaagaaggat
+     1441 gagaaagaag aggaaaaagc aaaagaggag aaagccgaac ccaagggggt gaaggaagag
+     1501 acaaaatcca cctaagatgg ctgcagctgg acagtacctg tcagtgcata gttatcgtag
+     1561 gttagcttct ctggttgcct cccattccac aggatttata ttttatatat gtttctgtat
+     1621 atatttctat ataaatatat aaatgacttg agaactgtaa attattcctt gctgcactcc
+     1681 gctgggagca gacagggagg actctgcaga gtagagagac ccgcactgcc caggattggt
+     1741 gcctgggaag tttcactctt tgccttccac tgcctcctta gtgtgtcttt aaaaagaatc
+     1801 acttcctttc tttgctctcc tctgaagtaa ccacccttga aaatgaataa tttaagtaga
+     1861 agtagtgtct gcatttcagg ttaggtggaa agatggccat gaaacttttt tttttcttct
+     1921 tttcctttct cttttatttt attttatttt atcttttttt gtgggagata tgaattccca
+     1981 aattaagcct gtgagagact gagtgttcct ttggtcttca gtctgattcc accatggcaa
+     2041 gtaactgcaa gctggtgccg cttctcaggg tcaaatagtg cagttcttga acagagttgg
+     2101 ctaccttcct gcagcaaact ggtggaaaga gatgaagcag cttacaagca gatcagaaaa
+     2161 tcgctcgagt caatctgccc aagagccctg caggtataga tctggaaaat gccaagtgaa
+     2221 aatcaccctg atgtggtggt gaacgttttc caggatgtgg cagacctcat tagcggggca
+     2281 gcgctgtgca tcgcccatag gagaagggat ggaatcttta tgcacttgtt tcctatacct
+     2341 gtgcccctct ttgcagggag gaggtgagtt actgcccatc tggctgcctg cttcactctg
+     2401 cttctgccca cagcttcgtg tgctgtaatt gcttctcagt actgatctgt gtccttgctg
+     2461 aaaccgtagc agagcaggac agacagacgg agcccagctg atgcctctgc tccacgtgtc
+     2521 actcgctgag aaactctttc tgaagcagac atgttttcaa gtggaacctt tcctgtcttt
+     2581 gctctcaagg ccagtaaatg cggagagcct ttttatcagc agtctgagct gttatctgta
+     2641 cgagggaaca gcagatgggg ctctgtacgt ttttataact gctcctcttc ctcctcccac
+     2701 acgttatctc acacccaaag gtcttttgtg atcagagctg gcctttctca caccttgctt
+     2761 tgtacagctg agcgtgagat gagcgctccg tgggatgctt tgctgagctc cgactttgca
+     2821 gaagttctgc aggcagttct gactcgctgc tctccttcct ccgggggatt cctctgtcca
+     2881 taagaggatc tgtacctccc ccggggtgct gctggtggtt tcaactctaa taatgctgct
+     2941 aacttaacac aggttatttt taaaatgttt tattttttta aatgcttttt tccccccttt
+     3001 tccaccgtaa gttttgtagt ctcttggaac ctgagtggcg tctcactcct gctcttcagt
+     3061 gtttgtatgt gaagcgagag agatcagtgt atctttgtgt cttggggagg gggggggaaa
+     3121 tatattgtgg ttttttaaag atgcttttat tttaaatttt gagaatcttt gtaataaaac
+     3181 gtacatttct atg
+//
+
