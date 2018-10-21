@@ -248,6 +248,7 @@ Sofia Robb
                * [<strong><strong>init</strong></strong>](pfb.md/#init)
          * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_10_problemset.md">Link to Python 10 Problem Set</a>](pfb.md/#link-to-python-10-problem-set)
    * [Workshops](workshops.md/#workshops)
+      * [BioPython  -- Sofia Robb](workshops.md/#biopython-----sofia-robb)
       * [NGS -- Mike Campbell](workshops.md/#ngs----mike-campbell)
       * [Structural Variation -- Tomas Marques](workshops.md/#structural-variation----tomas-marques)
       * [Sequence Homology -- Brandi Cantarel](workshops.md/#sequence-homology----brandi-cantarel)
