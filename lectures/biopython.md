@@ -57,21 +57,14 @@ If we get no errors, biopython is installed correctly.
 
 ## Biopython documentation
 
-Biopython wiki page
+[Biopython wiki page](http://biopython.org/)
 
-http://biopython.org/
+[Getting started](http://biopython.org/wiki/Category%3AWiki_Documentation)
 
-Getting started
+[Biopython tutorial](http://biopython.org/DIST/docs/tutorial/Tutorial.html#chapter:Bio.SeqIO)
 
-http://biopython.org/wiki/Category%3AWiki_Documentation
+[Complete tree of Biopython Classes](http://biopython.org/DIST/docs/api/Bio-module.html)
 
-Biopython tutorial
-
-ttp://biopython.org/DIST/docs/tutorial/Tutorial.html#chapter:Bio.SeqIO
-
-Complete tree of Biopython Classes
-
-http://biopython.org/DIST/docs/api/Bio-module.html
 
 
 
@@ -81,11 +74,11 @@ This is the core of biopython. And uses the Seq object. Seq is part of Bio. This
 
 ```python
 #!/usr/bin/env python3
-import Bio.Seq                           # }
-seqobj = Bio.Seq.Seq('ATGCGATCGAGC')     # } that's a lot of Seqs
+import Bio.Seq                          
+seqobj = Bio.Seq.Seq('ATGCGATCGAGC')     
 # convert to string with str(seqobj)
 seq_str = str(seqobj)
-print('{:s} has {:d} nucleotides'.format( seq_str , len(seq_str)))
+print('{} has {} nucleotides'.format( seq_str , len(seq_str)))
 ```
 
 produces 
@@ -98,75 +91,99 @@ ATGCGATCGAGC has 12 nucleotides
 
 Another way to import modules is with `from ... import ...` . This saves typing the Class name every time. Bio.Seq is the class name. Bio is the superclass. Seq is a subclass inside Bio. It's written Bio.Seq. Seq has several different subclasses, of which one is called Seq. So we have Bio.Seq.Seq. To make the creation simpler, we call Seq() after we import with `from ... import ...` like this
 
-```python3
+```python
 #!/usr/bin/env python3
 from Bio.Seq import Seq
 seqobj=Seq('ATGCGATCGAGC')
 seq_str=str(seqobj)
 protein = seqobj.translate()
 prot_str = str(protein)
-print('{:s} translates to {:s}'.format(seq_str,prot_str))
+print('{} translates to {}'.format(seq_str,prot_str))
 ```
 
 produces
 
 ```
-ATGCGATCGAGC
+ATGCGATCGAGC translates to MRSS
 ```
 
 #### Bio.Alphabets
+
+Visit biopython.org to read about [Sequences and Alphabets](http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc17)
 
 A Seq object likes to know what alphabet it uses A,C,G,T for DNAAlpabet etc. Not essential for most uses, but prevents you trying to translate a protein sequence!
 
 __Specific Alphabets__
 
-```
+For DNA
+
+```python
 >>> seqobj
 Seq('ATG', Alphabet())
 >>> from Bio.Alphabet import DNAAlphabet
->>> so=Seq('ATG',DNAAlphabet())
->>> so
+>>> seqobj=Seq('ATG',DNAAlphabet())
+>>> seqobj
 Seq('ATG', DNAAlphabet())
->>> so.translate()
+>>> seqobj.translate()
 Seq('M', ExtendedIUPACProtein())
-
-
 ```
 
 For proteins
 
-```
-from Bio.Alphabet import ProteinAlphabet
-seqobj = Seq('MGT', ProteinAlphabet())
+```python
+>>> seqobj = Seq('MGT')
+>>> seqobj.translate()
+Seq('X', ExtendedIUPACProtein())
 ```
 
-__Generic Alphabets__
+> 'X' Thats not right! Wait! Why did python let us translate MGT, its not DNA?
 
+
+```python
+>>> from Bio.Alphabet import ProteinAlphabet
+>>> seqobj = Seq('MGT', ProteinAlphabet())
+>>> seqobj.translate()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/smr/anaconda3/envs/py3.6/lib/python3.5/site-packages/Bio/Seq.py", line 1059, in translate
+    raise ValueError("Proteins cannot be translated!")
+ValueError: Proteins cannot be translated!
 ```
->>> from Bio.Seq import Seq
->>> from Bio.Alphabet import generic_dna, generic_protein
->>> my_seq = Seq("AGTACACTGGT")
->>> my_seq
-Seq('AGTACACTGGT', Alphabet())
->>> my_dna = Seq("AGTACACTGGT", generic_dna)
->>> my_dna
-Seq('AGTACACTGGT', DNAAlphabet())
->>> my_protein = Seq("AGTACACTGGT", generic_protein)
->>> my_protein
-Seq('AGTACACTGGT', ProteinAlphabet())
-```
+
+> Thats better.
 
 ### Extracting a subsequence
 
 You can use a range [0:3] to get the first codon
 
-`seqobj[0:3]`
+Visit biopython.org to read about [Slicing a sequence](http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc19)
+
+```python
+>>> seqobj=Seq('ATGCGATCGAGC')
+>>> seqobj[0:3]
+Seq('ATG', Alphabet())
+```
+
+Let's use Regular expressions in conjunction with BioPython to get every codon
+
+```python
+>>> seqobj=Seq('ATGCGATCGAGC')
+>>> import re
+>>> for codon in re.findall(r"(.{3})",str(seqobj)):
+...   print(codon)
+...
+ATG
+CGA
+TCG
+AGC
+>>>
+```
 
 
 
 ## Read a FASTA file
 
-We were learning how to read a fasta file line by line. SeqIO.parse() is the main method for reading from almost any file format. We'll need a fasta file. We can use Python_05.fasta which looks like this
+We were learning how to read a fasta file line by line. SeqIO.parse() is the main method for reading from almost any file format. We'll need a fasta file. We can use [seq.nt.fa](https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/seq.nt.fa) which looks like this
 
 ```
 >seq1
@@ -186,7 +203,8 @@ GTAATCAGAACAGAGGT
 
 Get help on the parse() method with 
 
-```
+```python
+>>> from Bio import SeqIO
 >>> help(SeqIO.parse)
 
 Help on function parse in module Bio.SeqIO:
@@ -201,28 +219,13 @@ parse(handle, format, alphabet=None)
           cannot be automatically inferred from the file itself
           (e.g. format="fasta" or "tab")
     
-    Typical usage, opening a file to read in, and looping over the record(s):
-    
-    >>> from Bio import SeqIO
-    >>> filename = "Fasta/sweetpea.nu"
-    >>> for record in SeqIO.parse(filename, "fasta"):
-    ...    print("ID %s" % record.id)
-    ...    print("Sequence length %i" % len(record))
-    ...    print("Sequence alphabet %s" % record.seq.alphabet)
-    ID gi|3176602|gb|U78617.1|LOU78617
-    Sequence length 309
-    Sequence alphabet SingleLetterAlphabet()
-
 ...
 ```
-
-This uses the old `"..." % var` formatting syntax.
 
 Here's a script to read fasta records and print out some information
 
 ```python
 #!/usr/bin/env python3
-# assumes we are in the pfb2017 directory
 from Bio import SeqIO
 for seq_record in SeqIO.parse("./files/Python_05.fasta", "fasta"):   # give filename and format
   print('ID',seq_record.id)
@@ -249,6 +252,40 @@ Length 209
 
 ```
 
+Here is another example of opening a FASTA file, retrieving each sequence record, and doing something the data.
+
+```python
+
+#!/usr/bin/env python3
+from Bio import SeqIO
+filename = "files/seq.nt.fa"
+for seq_record in SeqIO.parse(filename, "fasta"):   
+  print('ID',seq_record.id)
+  print('len {}'.format(len(record)))
+  print('translation {}'.format(record.seq.translate(to_stop=False)))
+```
+> We added the translation of the DNA sequence into protein
+Output:  
+
+```bash
+ID seq1
+len 180
+alphabet SingleLetterAlphabet()
+translation KSSSR*CDRWR*SKCPMGHQLWCMSESLVRDSLSNCCTQ**HVEIP*ASRVVQ*NTPLVN
+ID seq2
+len 180
+alphabet SingleLetterAlphabet()
+translation ATEPRTPT*PNLT*PTV*S*P*G*EAMS*PACPNRPDLTGLT*PP*PNQANLTKP*KKES
+ID seq3
+len 98
+alphabet SingleLetterAlphabet()
+translation MKVT*RLFDA*IVQF*KLTFC*SQVLVYNIN*
+ID seq4
+len 209
+alphabet SingleLetterAlphabet()
+translation MLTKVSVRTCR*ATLKKETTCQIETINSAMEIRTTISLEIKIEITGTISLIT*CRIKGIINLIQVIRTE
+```
+
 
 #### Convert fasta file to python dictionary in one line
 
@@ -261,11 +298,27 @@ There are three ways of doing this that use up more memory if you want more flex
 
 ```
 
-Other methods set up a database or a way to read data as you need it.
 
-###Seq methods
+Let's retrieve some info from our new dictionary
 
+```python
+>>> id_dict['seq4']
+SeqRecord(seq=Seq('ATGCTAACCAAAGTTTCAGTTCGGACGTGTCGATGAGCGACGCTCAAAAAGGAA...GGT', SingleLetterAlphabet()), id='seq4', name='seq4', description='seq4', dbxrefs=[])
+>>> id_dict['seq4'].seq
+Seq('ATGCTAACCAAAGTTTCAGTTCGGACGTGTCGATGAGCGACGCTCAAAAAGGAA...GGT', SingleLetterAlphabet())
+>>> str(id_dict['seq4'].seq)
+'ATGCTAACCAAAGTTTCAGTTCGGACGTGTCGATGAGCGACGCTCAAAAAGGAAACAACATGCCAAATAGAAACGATCAATTCGGCGATGGAAATCAGAACAACGATCAGTTTGGAAATCAAAATAGAAATAACGGGAACGATCAGTTTAATAACATGATGCAGAATAAAGGGAATAATCAATTTAATCCAGGTAATCAGAACAGAGGT'
+>>>
 ```
+> need to use this format to get the string of the sequence: `str(id_dict['seq4'].seq)`
+
+
+
+### Seq methods
+
+Visit biopython.org to read how [Sequences act like strings](http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc18)
+
+```python
 seqobj.count("A")  # counts how many As are in sequence
 seqobj.find("ATG") # find coordinate of ATG (-1 for not found)
 ```
@@ -295,7 +348,7 @@ Additional attributes:
 
 SeqRecord objects have .format() to convert to a string in various formats
 
-```
+```python
 >>> seq.format('fasta')
 '>seq1\nAAGAGCAGCTCGCGCTAATGTGATAGATGGCGGTAAAGTAAATGTCCTATGGGCCACCAA\nTTATGGTGTATGAGTGAATCTCTGGTCCGAGATTCACTGAGTAACTGCTGTACACAGTAG\nTAACACGTGGAGATCCCATAAGCTTCACGTGTGGTCCAATAAAACACTCCGTTGGTCAAC\n'
 
@@ -310,12 +363,18 @@ To read sequences from a genbank file instead, not much changes.
 ```python
 #!/usr/bin/env python3
 from Bio import SeqIO
-for seq_record in SeqIO.parse("test_genome.gb", "genbank"):
+for seq_record in SeqIO.parse("files/sequence.gb", "genbank"):
   print('ID',seq_record.id)
-  print('Sequence',str(seq_record.seq))
+  print('Sequence',str(seq_record.seq)[0:60],'...')
   print('Length',len(seq_record))
 ```
 
+Output: 
+```
+ID NM_204156.1
+Sequence GGCCCCGGCCGGTGGGGCGGGTTGCGTTGCGCTGCGCGGCGGTAGGGTCTGCGGCCGTGG ...
+Length 3193
+```
 
 
 ## File Format Conversions
@@ -325,7 +384,7 @@ Many are straightforward, others are a little more complicated because the alpha
 ```python
 #!/usr/bin/env python3
 from Bio import SeqIO
-records = SeqIO.parse("./files/Python_05.fasta", "fasta")   # give filename and format
+fasta_records = SeqIO.parse("files/seq.nt.fa", "fasta")  
 count = SeqIO.write(records , './files/seqs.tab' , 'tab')
 ```
 
@@ -385,7 +444,7 @@ It will handle other sequence search tools such as FASTA, HMMER etc as well as B
 
 You'll write something like this
 
-```
+```python
 >>> from Bio import SearchIO
 >>> idx = SearchIO.index('tab_2226_tblastn_001.txt', 'blast-tab')
 >>> sorted(idx.keys())

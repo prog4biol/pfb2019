@@ -1,36 +1,34 @@
 # Python 10 Problem Set -- Classes
 
-#### first draft
-#### need to go over this again
 
 1. Create a DNA sequence class that will contain a sequence, its name, and it's organism of origin. Do this by creating an \_\_init\_\_ function.
 
-2. Add in a method that returns the sequence. 
+2. Write some some lines of code, outside your class (in your main program) that sets the name, DNA sequence, and organism for a gene.
 
-3. Write some some lines of code, outside your class that sets and name, DNA sequence, and organism for a gene.
-4. Write some some lines of code, outside your class that gets and prints the sequence.
+3. Write some some lines of code, outside your class that:
+  a. uses the object sequence attribute to retrieve and print the sequence.  
+  b. uses the object name attribute to retrieve and print the name.   
+  c. uses the object organism attribute to retrieve and print the organism.  
 
-5. Add in a method that returns the seqeunce name. 
-6. Write some some lines of code, outside your class that gets and prints the sequence name.
+4. Sequence length method 
+  a. Add a method to your class that caclulates and returns the length of the sequence.  
+  b. Write some some lines of code, outside your class (in your main program) that gets and prints the sequence length using your new method.
 
-7. Add in a method that returns the sequence organism.
-8. Write some some lines of code, outside your class that gets and prints the sequence organism.
+5. Nucleotide composition method
+  a. Add in a method that caclulates and returns the nucleotide composition.  
+  b. Write some some lines of code, outside your class (in your main program) that gets and prints the sequence nucleotide compositio using your new method.
+  
+6. GC content method
+  a. Add in a method that caclulates and returns the GC content.  
+  b. Write some some lines of code, outside your class (in your main program) that gets and prints the sequence GC content using your new method.
 
-9. Add in a method that caclulates and returns the length of the sequence.
-10. Write some some lines of code, outside your class that gets and prints the sequence length.
+7. FASTA Formatter method
+  a. Add in a method that returns the sequence record in FASTA format.  
+  b. Write some some lines of code, outside your class (in your main program) that gets and prints the sequence in FASTA format using your new method.
 
-11. Add in a method that caclulates and returns the nucleotide composition.
-12. Write some some lines of code, outside your class that gets and prints the sequence nucleotide composition.
+## Challenge Question
 
-13. Add in a method that caclulates and returns the GC content.
-14. Write some some lines of code, outside your class that gets and prints the sequence GC content.
-
-15. Add in a method that returns the sequence record in FASTA format.
-16. Write some some lines of code, outside your class that gets and prints the sequence in FASTA format.
-
-
-
-
+1. Create a method that can compare two DNA Sequence records and returns True if they are the same or False if they are differet. Sameness is based on name, organism, and seqeunce. All need to be the same for two objects to be considered the same.
 
 
 

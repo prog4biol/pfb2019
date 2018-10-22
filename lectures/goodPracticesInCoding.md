@@ -1,13 +1,13 @@
 ## :snake: A Few Good Practices in Coding :snake:
 
-####Writing clear scripts
+#### Writing clear scripts
 
 **A not very clear version:**
 
 ```
 vi script.py 
 ```
-The above name is not very descriptive.
+The above name is not very descriptive. :disappointed:
 
 ```python
 #!/usr/bin/env python3
@@ -20,14 +20,14 @@ elif n > 0:
 else:
 	print(n, 'is negative')
 ```
-The code is correct, but the variable has a non-descriptive name. There are no blank lines between portions of the code, and there is no indication about what the script is attempting to do.​
+The code is correct, but the variable has a non-descriptive name. There are no blank lines between portions of the code, and there is no indication about what the script is attempting to do.
 
 **A clearer version:**
 
 ```
 vi PFB_PS_2.5.py
 ```
-The above name tells you the project (Programming for Biology), the problem set (PS_2), and the question (5).
+The above name tells you the project (Programming for Biology), the problem set (PS_2), and the question (5). :tada:
 
 ```python
 #!/usr/bin/env python3
@@ -65,7 +65,7 @@ print('\nEnd of script.\n')
 
 The code is much clearer. The variable is more clearly named, and the code immediately tells you the file owner, the name, and a short description for what it does. The libraries, the variables, and the scripts are clearly organized. There are comments that tell you what parts of the script do.
 
-####Creating a README.md file
+#### Creating a README.md file
 
 When are README's useful?
 
@@ -81,9 +81,9 @@ When are README's useful?
 
   ​	https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
 
-#####A quick note about Markdown
+##### A quick note about Markdown
 
-######What is .md?
+###### What is .md?
 
 Markdown (.md) is a lightwight markup language. Markdown files are text files (like the ones you have been creating) with a small amount of formatting.
 * Here is a Markdown cheat sheet: 

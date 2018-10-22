@@ -1,6 +1,40 @@
 # Biopython problem set
 
-### Preparation for problems
+## Install Biopython on your machine
+
+```
+conda install biopython
+```
+
+## FASTA Parser
+
+1. Create a new FASTA parser that uses BioPython to get the sequence name, description, and sequence.
+2. Add in some code to print out stats about your FASTA records in your mult-FASTA file:
+  1. total number of sequences
+  2. total number of nucleotides
+  3. average length of sequences
+  4. shortest seqeunce length
+  5. longest seqeunce length
+  6. average GC content
+  7. highest GC content
+  8. lowest GC content
+  ```
+  seqeunce count:
+  total number of nucleotides:
+  avg len:
+  shortest len:
+  longest len:
+  avg GC content:
+  lowest GC content:
+  highest GC content:
+
+  ```
+  
+3. use a small test set
+4. Run your code on https://github.com/prog4biol/pfb2018/blob/master/files/Python_08.fasta
+
+## Parsing BLAST output
+### Preparation for problem
 
 Preparation:
 
@@ -9,6 +43,7 @@ Preparation:
 ```
 wget ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz
 ```
+**Make sure to not add this to your gitHub Repository. It is tooooo big and with cause problems**
 
 2. Unzip the file using the Unix command 'gunzip':
 
