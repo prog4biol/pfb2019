@@ -255,7 +255,7 @@ Sofia Robb
       * [Genome Assembly -- Deb Triant](workshops.md/#genome-assembly----deb-triant)
       * [Bioinformatics and Useful Tools -- Simon Prochnik](workshops.md/#bioinformatics-and-useful-tools----simon-prochnik)
       * [Aligners -- Alex Dobin](workshops.md/#aligners----alex-dobin)
-      * [RNAseq -- Brian Hass](workshops.md/#rnaseq----brian-hass)
+      * [RNAseq -- Brian Haas](workshops.md/#rnaseq----brian-haas)
       * [Ethics and Responsibility in Bioinformatics -- Simon Prochnik](workshops.md/#ethics-and-responsibility-in-bioinformatics----simon-prochnik)
       * [GMOD -- Scott Cain](workshops.md/#gmod----scott-cain)
       * [Ontologies -- Nicole Vasilevsky](workshops.md/#ontologies----nicole-vasilevsky)
