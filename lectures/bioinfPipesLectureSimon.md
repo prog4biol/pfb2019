@@ -208,7 +208,7 @@ We won't talk about DBs more here, but they are useful for larger data projects.
 
 ### Public databases
 
-__NCBI __
+__NCBI__  
 nr (proteins)  
 nt (nucleotides)  
 Lots of data, uncurated, complete
