@@ -22,6 +22,7 @@ Sofia Robb
   - [Workshop](https://github.com/prog4biol/pfb2018/blob/master/workshops/GenomeAssembly)
 ## Bioinformatics and Useful Tools -- Simon Prochnik
   - [Lecture](https://github.com/prog4biol/pfb2018/blob/master/lectures/bioinfPipesLectureSimon.md)
+  - [jupytr notebook lecture notes](https://github.com/prog4biol/pfb2018/blob/master/lectures/jupyterNotebook.md)
 ## Aligners -- Alex Dobin
   - [Lecture](https://github.com/prog4biol/pfb2018/blob/master/lectures/2018_ProgrammingForBiologistsCSHL_Dobin.pdf)
   - [Workshop](https://github.com/prog4biol/pfb2018/tree/master/workshops/Aligners)
