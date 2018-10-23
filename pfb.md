@@ -387,7 +387,7 @@ In Python we can write statements that perform mathematical calculations. To do 
 
 __modulus__
 
-![3 divided by 2 is 1 with a remainder of 1. Modulus returns the remainer](https://github.com/prog4biol/pfb2018/blob/master/images/modulus.png)
+![3 divided by 2 is 1 with a remainder of 1. Modulus returns the remainer](images/modulus.png)
 
 __floor examples__
 
