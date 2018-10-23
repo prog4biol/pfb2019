@@ -359,7 +359,7 @@ We'll cover `dir()` in more detail later
 
 ---
 
-### [Link to Python 1 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Python_01_problemset.md)
+### [Link to Python 1 Problem Set](problemsets/Python_01_problemset.md)
 
 -------
 
