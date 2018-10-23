@@ -102,7 +102,7 @@ Tab completes filenames and commands. Useful for opening local files if you know
 
 Start a cell with `!` then the unix command you want to run
 
-![](/Users/sprochnik/git/pfb2018/images/ls.png)
+![](../images/ls.png)
 
 Some unix commands are also available as magics
 
@@ -115,11 +115,11 @@ Start these with `%` for a single line magic command or `%%` for a multi-line ma
 %cd            change directory, and keep track of directories you have visited
 
 You can view the previous output with `_`, also `__` and `___`
-![](/Users/sprochnik/git/pfb2018/images/previousOutput.png)
+![](../images/previousOutput.png)
 
 Some magic commands are available as just the command (note different outputs and see more detailed documentation if you are curious)
 
-![](/Users/sprochnik/git/pfb2018/images/cdVersions.png)
+![](../images/images/cdVersions.png)
 
 ## Help
 

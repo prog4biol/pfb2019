@@ -76,3 +76,9 @@ GTCATCTTCT
 6. Create a new function that computes and returns the reverse complement of a sequence
 	- it will take a DNA sequence without spaces and no header as an argument and return the reverse complement, with no spaces and no header.
 	- example `revComp_sequence = get_reverse_complement(dna)`
+	
+	
+7. Pipelines:  
+  a. Create a script that runs a command with `subprocess.run`.    
+  b. Check the exit status  
+  c. If exit status is good, run a second command.  
