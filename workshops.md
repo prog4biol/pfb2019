@@ -25,9 +25,9 @@ Sofia Robb
 ## Aligners -- Alex Dobin
   - Lecture
   - Workshop
-## RNAseq -- Brian Hass
-  - Lecture
-  - Workshop
+## RNAseq -- Brian Haas
+  - [Lecture](https://github.com/trinityrnaseq/CSHLProgForBiol2018/blob/master/rnaseq_slides_PFB2018.pdf)
+  - [Workshop](), 
 ## Ethics and Responsibility in Bioinformatics -- Simon Prochnik
   - Lecture
 ## GMOD -- Scott Cain
