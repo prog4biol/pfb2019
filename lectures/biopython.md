@@ -6,7 +6,7 @@ Biopython is a collection of python modules that contain code for manipulating b
 
 ## Installing Biopython
 
-This is very straightforward once you have anaconda or minconda installed. I use miniconda because it's smaller. We are going to use `sudo` because this will give us permission to install in the 'correct' directory python is expecting to find the modules. Other users will be able to use it too. Using `sudo` can cause problems, but it's ok here. You will need the administrator password for the machine. If you don't have this, ask the person who does administration on your machine.
+This is very straightforward once you have anaconda or minconda installed. I use miniconda because it's smaller. We are going to use `sudo`, because this will give us permission to install in the 'correct' directory python is expecting to find the modules. Other users will be able to use it too. Using `sudo` can cause problems, but it's ok here. You will need the administrator password for the machine. If you don't have this, ask the person who does administration on your machine.
 
 ```bash
 % sudo conda install biopython
@@ -136,7 +136,7 @@ For proteins
 Seq('X', ExtendedIUPACProtein())
 ```
 
-> 'X' Thats not right! Wait! Why did python let us translate MGT, its not DNA?
+> 'X' That's not right! Wait! Why did python let us translate MGT? It's not DNA?
 
 
 ```python
@@ -150,7 +150,7 @@ Traceback (most recent call last):
 ValueError: Proteins cannot be translated!
 ```
 
-> Thats better.
+> That's better.
 
 ### Extracting a subsequence
 
@@ -261,8 +261,9 @@ from Bio import SeqIO
 filename = "files/seq.nt.fa"
 for seq_record in SeqIO.parse(filename, "fasta"):   
   print('ID',seq_record.id)
-  print('len {}'.format(len(record)))
-  print('translation {}'.format(record.seq.translate(to_stop=False)))
+  print('len {}'.format(len(seq_record)))
+  print('alphabet {}'.format(seq_record.alphabet)
+  print('translation {}'.format(seq_record.seq.translate(to_stop=False)))
 ```
 > We added the translation of the DNA sequence into protein
 Output:  
@@ -385,7 +386,7 @@ Many are straightforward, others are a little more complicated because the alpha
 #!/usr/bin/env python3
 from Bio import SeqIO
 fasta_records = SeqIO.parse("files/seq.nt.fa", "fasta")  
-count = SeqIO.write(records , './files/seqs.tab' , 'tab')
+count = SeqIO.write(seq_records , './files/seqs.tab' , 'tab')
 ```
 
 
