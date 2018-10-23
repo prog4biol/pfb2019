@@ -1,6 +1,6 @@
 ## :snake: A Few Good Practices in Coding :snake:
 
-####Writing clear scripts
+#### Writing clear scripts
 
 **A not very clear version:**
 
@@ -65,7 +65,7 @@ print('\nEnd of script.\n')
 
 The code is much clearer. The variable is more clearly named, and the code immediately tells you the file owner, the name, and a short description for what it does. The libraries, the variables, and the scripts are clearly organized. There are comments that tell you what parts of the script do.
 
-####Creating a README.md file
+#### Creating a README.md file
 
 When are README's useful?
 
@@ -81,9 +81,9 @@ When are README's useful?
 
   ​	https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
 
-#####A quick note about Markdown
+##### A quick note about Markdown
 
-######What is .md?
+###### What is .md?
 
 Markdown (.md) is a lightwight markup language. Markdown files are text files (like the ones you have been creating) with a small amount of formatting.
 * Here is a Markdown cheat sheet: 

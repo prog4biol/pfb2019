@@ -1,5 +1,10 @@
 # Biopython problem set
 
+## Install Biopython on your machine
+
+```
+conda install biopython
+```
 
 ## FASTA Parser
 
