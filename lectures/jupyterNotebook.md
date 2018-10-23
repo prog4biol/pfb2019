@@ -32,7 +32,7 @@ You'll see a lot of messages appear in the screen and a broswer window will open
 
 You can start a new project and make other files with the New drop down menu
 
-Let's click on the projects folder and make a new folder in there. Click on the box next to the new 'Untitled Folder' and select rename above to chance the name to final_project. 
+Let's click on the projects folder, and make a new folder in there. Click on the box next to the new 'Untitled Folder' and select rename above to change the name to final_project. 
 
 ![rename](../images/rename.tiff)
 
@@ -44,7 +44,7 @@ Now we can make a new python3 notebook.
 
 ![blank](../images/blanknotebook.png)
 
-You'll see a blue bar on the left of the box. This is called a 'cell'. If you select the cell it changes to green
+You'll see a blue bar on the left of the box. This is called a 'cell'. If you select the cell it changes to green.
 
 You can start typing python. Return lets you type in several lines of python at once. Option-return runs each box as you finish typing commands. 
 
@@ -52,17 +52,17 @@ You can start typing python. Return lets you type in several lines of python at 
 
 You can also use the play and stop and rerun buttons.
 
-Let's change a to be a string and rerun the `print(a)` code with the play button. Note line number change and the output has changed too!
+Let's change a to be a string and rerun the `print(a)` code with the play button. Note the line number change and the output has changed too!
 
 ![print](../images/print.png)
 
 ## Adding text, changing formatting
 
-You can add headers and other text, that will for example explain what you are doing, by changing the format of a box to Markdown.
+You can add headers and other text, that will, for example, explain what you are doing by changing the format of a box to Markdown.
 
 ![markdown](../images/markdown.png)
 
-When you have finished typing you can run the cell to convert to formatted text
+When you have finished typing, you can run the cell to convert to formatted text
 
 ![text](../images/text.png)
 
@@ -78,13 +78,13 @@ There are tons of useful features here, including deleting cells, moving them up
 
 ## Cell menu
 
-Run cells or groups of cells. Change cell type
+Run cells or groups of cells. Change cell type.
 
 
 
 ## Kernel menu 
 
-Controls to start, stop suspend the kernel running your python
+Controls to start, stop, and suspend the kernel running your python
 
 
 
@@ -92,7 +92,7 @@ Controls to start, stop suspend the kernel running your python
 
 You will definitely want to commit and push before you make edits to your notebook. If you make a mess, you'll be able to roll back the changes. Great for collaborating with your project team! 
 
-github know how to render .ipynb files (the format for these notebooks) so you can display the files nicely on the github website.
+github knows how to render .ipynb files (the format for these notebooks), so you can display the files nicely on the github website.
 
 ## File and command completion
 
@@ -104,7 +104,7 @@ Start a cell with `!` then the unix command you want to run
 
 ![](../images/ls.png)
 
-Some unix commands are also available as magics
+Some unix commands are also available as magics.
 
 ## 'Magic' commands
 
@@ -114,7 +114,7 @@ Start these with `%` for a single line magic command or `%%` for a multi-line ma
 %timeit      time some code
 %cd            change directory, and keep track of directories you have visited
 
-You can view the previous output with `_`, also `__` and `___`
+You can view the previous output with `_`, also `__`, and `___`
 ![](../images/previousOutput.png)
 
 Some magic commands are available as just the command (note different outputs and see more detailed documentation if you are curious)
