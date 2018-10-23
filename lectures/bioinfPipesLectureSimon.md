@@ -123,7 +123,7 @@ while_else.py 	 simonp
 
 Here's a way to save typing
 
-`alias` is a unix comand that goes in your ~/.profile file. Make one with emacs if you don't have one already. 
+`alias` is a unix comand that goes in your ~/.profile file. Make one with VI if you don't have one already. 
 
 ```bash
 alias ll='ls -l'
@@ -134,7 +134,7 @@ To get these changes, `source ~/.profile` or open a new window in terminal. Now 
 
 
 
-## Workflows, and approaches
+## Workflows and approaches
 
  ### Saving time and effort.
 
@@ -272,7 +272,7 @@ exec  pdb
 q quits  
 h gets help  
 
-Good idea to make alias for python3 -m pdb  in .profile. How would we do that?
+It's a good idea to make alias for python3 -m pdb  in .profile. How would we do that?
 
 ### Write bigger python coding projects? 
 
@@ -284,7 +284,7 @@ A nice IDE. See review session soon.
 
 Even though python is much slower than C and C++, is your script running too slowly? How can you tell? 
 Two things to think about
-* is debugging painfully slow? use the smallest test data sets you can to test and debug your script
-* Do you have time to get a cup of coffee while your script is running? If you come back to your script and it's still running, and you're bored, look into speeding it up. Look up profilers, parallelization, other peoples' experiences (seqanswers.com, stackoverflow.com
+* Is debugging painfully slow? Use the smallest test data sets you can to test and debug your script
+* Do you have time to get a cup of coffee while your script is running? If you come back to your script and it's still running, and you're bored, look into speeding it up. Look up profilers, parallelization, other peoples' experiences (seqanswers.com, stackoverflow.com)
 
 Once you are a decent programmer, the speed up you'll get  (a few milliseconds) from tinkering with your script (several hours) will not be worth it.
