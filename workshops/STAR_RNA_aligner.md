@@ -4,6 +4,8 @@
 
 ## Tutorial
 
+**While you are working through this workshop, look at the files are in ~spr/starAlignerWorkshop/ **
+
 
 
 ### Installation
