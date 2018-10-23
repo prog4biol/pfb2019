@@ -4,7 +4,7 @@
 
 ## Tutorial
 
-**While you are working through this workshop, look at the files are in ~spr/starAlignerWorkshop/ and refer to the documentation for STAR `https://github.com/alexdobin/STAR/blob/master/doc/STARmanual.pdf` 
+**While you are working through this workshop, look at the files are in ~spr/starAlignerWorkshop/ and refer to the documentation for STAR** `https://github.com/alexdobin/STAR/blob/master/doc/STARmanual.pdf`
 
 You can skip all the STAR tasks and go straight to writing a python script if you want
 
@@ -14,7 +14,7 @@ STAR is available on github at `https://github.com/alexdobin/STAR`
 
 Installation is very easy.
 
-**You will need to log into your mac workstation as the `admin` user. **
+**You will need to log into your mac workstation as the `admin` user.**
 
 You should have a `git` directory in your home directory for all the repos you have cloned. It's a good idea to organize your code like this. Clone the STAR repository into this directory.
 
@@ -77,7 +77,7 @@ STAR is installed! You can type `STAR` from any directory in your terminal to ru
 
 ### Find data
 
-**Also see files in ~spr/starAlignerWorkshop/ **
+**Also see files in ~spr/starAlignerWorkshop/**
 
 see `https://www.gencodegenes.org/human/`
 
