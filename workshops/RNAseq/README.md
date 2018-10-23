@@ -1,4 +1,4 @@
-# RNAseq Workshop -- Brian Hass
+# RNAseq Workshop -- Brian Haas
 
 Clone Brian's Repository. Make sure to not clone it inside one of your existing repositories
 
