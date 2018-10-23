@@ -134,8 +134,13 @@ Your script should read in the contents of `Log.final.out` and `Log.out ` and pr
 input filename1
 input filename 2 (if there is one)     
 reference genome      
-% reads mapped 
+% reads uniquely mapped
+mismatch rate per base
+toal % reads mapped to multiple loci
+total % reads unmapped
+
 number of GT/AG splices     
+
 number of GC/AG splices     
 number of AT/AC splices     
 number of non-canonical splices
