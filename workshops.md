@@ -19,7 +19,7 @@ Sofia Robb
   - [Workshop](https://github.com/prog4biol/pfb2018/blob/master/workshops/Seqeunce_homology/README.md)
 ## Genome Assembly -- Deb Triant
   - [Lecture](https://github.com/prog4biol/pfb2018/blob/master/lectures/Triant_GenomeAssembly_CSHL2018.pdf) [Lecture2](https://github.com/prog4biol/pfb2018/blob/master/lectures/Triant_AssemblyWorkshop_CSHL2018.pdf)
-  - [Workshop](https://github.com/prog4biol/pfb2018/blob/master/workshops/GenomeAssembly/genomeassembly_problemset.md)
+  - [Workshop](https://github.com/prog4biol/pfb2018/blob/master/workshops/GenomeAssembly)
 ## Bioinformatics and Useful Tools -- Simon Prochnik
   - [Lecture](https://github.com/prog4biol/pfb2018/blob/master/lectures/bioinfPipesLectureSimon.md)
   - [Workshop](https://github.com/prog4biol/pfb2018/blob/master/problemsets/pipelines_problemset.md)
