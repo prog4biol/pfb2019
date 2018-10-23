@@ -2,7 +2,7 @@
 
 ### Getting help
 
-pydoc  
+`pydoc`  
 google 'python3 list comprehensions`  
 https://docs.python.org/3/    -> Quick search  
 Help is available inside python interactive shell
