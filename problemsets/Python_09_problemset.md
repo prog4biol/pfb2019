@@ -79,7 +79,6 @@ GTCATCTTCT
 	
 	
 7. Pipelines: 
-
-  a. Create a script that runs a command with `subprocess.run`.
-  b. Check the exit status
-  c. If exit status is good, run a second command.
+  a. Create a script that runs a command with `subprocess.run`.  
+  b. Check the exit status  
+  c. If exit status is good, run a second command.  
