@@ -66,7 +66,7 @@ In unix, there is a list of directories that binaries live in called `PATH	`. Ad
 In a text editor, add a line to `~/.profile` like this. This is how you add a directory to PATH
 
 ```
-export PATH='/usr/local/bin:$PATH'
+export PATH="/usr/local/bin:$PATH"
 ```
 
 now type `source ~/.profile` and then `echo $PATH`
