@@ -23,11 +23,11 @@ Sofia Robb
 ## Bioinformatics and Useful Tools -- Simon Prochnik
   - [Lecture](https://github.com/prog4biol/pfb2018/blob/master/lectures/bioinfPipesLectureSimon.md)
 ## Aligners -- Alex Dobin
-  - Lecture
-  - Workshop
+  - [Lecture](https://github.com/prog4biol/pfb2018/blob/master/lectures/2018_ProgrammingForBiologistsCSHL_Dobin.pdf)
+  - [Workshop](https://github.com/prog4biol/pfb2018/tree/master/workshops/Aligners)
 ## RNAseq -- Brian Haas
   - [Lecture](https://github.com/trinityrnaseq/CSHLProgForBiol2018/blob/master/rnaseq_slides_PFB2018.pdf)
-  - [Workshop](), 
+  - [Workshop](https://github.com/prog4biol/pfb2018/tree/master/workshops/RNAseq) 
 ## Ethics and Responsibility in Bioinformatics -- Simon Prochnik
   - Lecture
 ## GMOD -- Scott Cain
