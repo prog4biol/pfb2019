@@ -72,7 +72,7 @@ BEGIN { print "File\tOwner"}   # block executed before main script
 END { print " - DONE -" }      # block executed after main script
 ```
 
-You could run it like this `awk table.awk`. Each column (whitespace-separated) in the input appears in your script as $1, $2, $3 etc. A bit like sys.argv in python.
+You could run it like this `awk table.awk`. Each column (whitespace-separated) in the input appears in your script as \$1, \$2, \$3 etc. A bit like sys.argv in python.
 
 Let's ignore the BEGIN and END blocks for now.
 
