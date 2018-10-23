@@ -2789,7 +2789,7 @@ print("Wrote 'nt.counts.txt'")
 
 Output:
 ```
-$ python file_read_write.py
+$ python3 file_read_write.py
 $ cat nt.counts.txt
 71
 71
@@ -2847,7 +2847,7 @@ Output:
 
 ### Regular Expressions
 
-Regular Expressions is a language for pattern matching. Many different computer languages incorporate regular expressions as well as some unix commands like grep and sed. So far we have seen a few functions for finding exact matches in strings, but this is not always sufficient.  
+Regular Expressions is a language for pattern matching. Many different computer languages incorporate regular expressions, as do some unix commands, like grep and sed. So far we have seen a few functions for finding exact matches in strings, but this is not always sufficient.  
 
 Functions that utilize regular expressions allow for non-exact pattern matching.  
 
@@ -2872,7 +2872,7 @@ Let's start simple and find an exact match for the EcoRI restriction site in a s
 Found an EcoRI site!
 >>>
 ```
-> Since we can search for control characters like a tab (\t) it is good to get in the habit of using the raw string function 
+> Since we can search for control characters like a tab (\t), it is good to get in the habit of using the raw string function 
 > `r`
 >  when defining patterns.
 
@@ -2970,7 +2970,7 @@ The pattern in made up of atoms.  Each atom represents **ONE** character.
 
 #### Character Classes
 
-A group of characters that are allowed to be matched one time. There are a few predefined classes, symbol that means a series of characters.
+A group of characters that are allowed to be matched one time. There are a few predefined classes, which are symbols that means a series of characters.
 
 | Atom  | Description                              |
 | ----- | ---------------------------------------- |
@@ -3087,7 +3087,7 @@ Variables can be used to store patterns.
 >>> len (re.findall(pattern,dna))
 7
 ```
-> In this example we stored our methylation pattern in the variable named 'pattern' and used it as the first argument to `findall`.
+> In this example, we stored our methylation pattern in the variable named 'pattern' and used it as the first argument to `findall`.
 
 
 #### Either Or
@@ -3209,10 +3209,10 @@ Example:
 ```python
 >>> dna = 'ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG'
 >>> found=re.search( r"(.{50})TATTAT(.{25})"  , dna )
->>> upstream = found.group(1))
+>>> upstream = found.group(1)
 >>> print(upstream)
 TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA
->>> downstream = found.group(2))
+>>> downstream = found.group(2)
 >>  print(downstream)
 CCGGTTTCCAAAGACAGTCTTCTAA
 ```
@@ -3311,7 +3311,7 @@ TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTA
 
 
 
-**FYI:** `match()` function is another regular expression function that looks for patterns. It is similar to search but it only looks at the beginning of the string for the pattern while `search()` looks in the entire string. Usually `finditer()` , `search()` and `findall()` will be more useful.
+**FYI:** `match()` function is another regular expression function that looks for patterns. It is similar to search but it only looks at the beginning of the string for the pattern while `search()` looks in the entire string. Usually `finditer()` , `search()`, and `findall()` will be more useful.
 
 
 #### Subpatterns and Greediness
@@ -3324,7 +3324,7 @@ By default, regular expressions are "greedy".  They try to match as much as they
 >>> print(found.group(1))
 fox ate my box
 ```
-> The pattern f.+x does not match what you might expect, it matches past 'fox' all the way out to 'fox ate my box'.  The '.+' id greedy As many characters as possible are found that are between the 'f' and the 'x'. 
+> The pattern f.+x does not match what you might expect, it matches past 'fox' all the way out to 'fox ate my box'.  The '.+' id is greedy As many characters as possible are found that are between the 'f' and the 'x'. 
 
 
 Let's make this match lazy by using '?'
