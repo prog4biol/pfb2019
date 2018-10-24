@@ -18,7 +18,7 @@ Sofia Robb
   - [Lecture1](workshops/Sequence_homology/HomologyAlignments.pdf) [Lecture2](workshops/Sequence_homology/PSIBlastHmmer.pdf)
   - [Workshop](workshops/Sequence_homology/README.md)
 ## Genome Assembly -- Deb Triant
-  - [Lecture](lectures/Triant_GenomeAssembly_CSHL2018.pdf) [Lecture2](workshops/GenomeAssembly/Triant_AssemblyWorkshop_CSHL2018.pdf)
+  - [Lecture](lectures/Triant_GenomeAssembly_CSHL2018.pdf)
   - [Workshop](workshops/GenomeAssembly)
 ## Bioinformatics and Useful Tools -- Simon Prochnik
   - [Lecture](lectures/bioinfPipesLectureSimon.md)
