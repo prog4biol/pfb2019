@@ -15,8 +15,8 @@ Sofia Robb
 ## Structural Variation -- Tomas Marques
   - [Lecture](lectures/CSH_TMB_2018%20copy2pg.pdf)
 ## Sequence Homology -- Brandi Cantarel
-  - [Lecture1](workshops/Seqeunce_homology/HomologyAlignments.pdf) [Lecture2](workshops/PSIBlastHmmer.pdf)
-  - [Workshop](workshops/Seqeunce_homology/Seqeunce_homology/README.md)
+  - [Lecture1](workshops/Sequence_homology/HomologyAlignments.pdf) [Lecture2](workshops/Sequence_homology/PSIBlastHmmer.pdf)
+  - [Workshop](workshops/Sequence_homology/README.md)
 ## Genome Assembly -- Deb Triant
   - [Lecture](lectures/Triant_GenomeAssembly_CSHL2018.pdf) [Lecture2](workshops/GenomeAssembly/Triant_AssemblyWorkshop_CSHL2018.pdf)
   - [Workshop](workshops/GenomeAssembly)
