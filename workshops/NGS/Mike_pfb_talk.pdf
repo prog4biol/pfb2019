@@ -40,7 +40,7 @@
   
   <meta name="pjax-timeout" content="1000">
   
-  <meta name="request-id" content="F36C:3AAD:232F12D:41623FF:5BD0D99D" data-pjax-transient>
+  <meta name="request-id" content="F382:3AAE:2ADBC94:4CD4EFD:5BD0D9C4" data-pjax-transient>
 
 
   
@@ -51,7 +51,7 @@
     <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
     <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
 
-  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="F36C:3AAD:232F12D:41623FF:5BD0D99D" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" />
+  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="F382:3AAE:2ADBC94:4CD4EFD:5BD0D9C4" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" />
 <meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
 
 
@@ -69,11 +69,11 @@
     <meta name="user-login" content="">
 
       <meta name="expected-hostname" content="github.com">
-    <meta name="js-proxy-site-detection-payload" content="YWM0MWIxY2ZhZGVhNjk3NzZlYWQ5OTdkZGExMGJiMTM3ZDA0NGNjN2QyZDUwZDY2MTJlMzYzZTBhMjA4Nzk2ZHx7InJlbW90ZV9hZGRyZXNzIjoiMTQzLjQ4LjUzLjIyNSIsInJlcXVlc3RfaWQiOiJGMzZDOjNBQUQ6MjMyRjEyRDo0MTYyM0ZGOjVCRDBEOTlEIiwidGltZXN0YW1wIjoxNTQwNDEzODUzLCJob3N0IjoiZ2l0aHViLmNvbSJ9">
+    <meta name="js-proxy-site-detection-payload" content="OTgxYjVjZDQ2MTA1MGUxMTc0NzRhNmQ5YjZlZDM1YmQwMTI2MzAyNGM2MjUwNGJjYjBmYTE2YmMyNmVkYzEyN3x7InJlbW90ZV9hZGRyZXNzIjoiMTQzLjQ4LjUzLjIyNSIsInJlcXVlc3RfaWQiOiJGMzgyOjNBQUU6MkFEQkM5NDo0Q0Q0RUZEOjVCRDBEOUM0IiwidGltZXN0YW1wIjoxNTQwNDEzODkyLCJob3N0IjoiZ2l0aHViLmNvbSJ9">
 
     <meta name="enabled-features" content="DASHBOARD_V2_LAYOUT_OPT_IN,EXPLORE_DISCOVER_REPOSITORIES,UNIVERSE_BANNER,MARKETPLACE_PLAN_RESTRICTION_EDITOR">
 
-  <meta name="html-safe-nonce" content="96e9ff81de5ea4e581fe22d0500391d49f7bd7f0">
+  <meta name="html-safe-nonce" content="abbadd0c06ec23fb2f4cf34583e14cce1149b094">
 
   <meta http-equiv="x-pjax-version" content="d5fca0caf9fa335680dd5d2e54dd8bb1">
   
@@ -177,7 +177,7 @@
           autocapitalize="off"
           aria-autocomplete="list"
           aria-controls="jump-to-results"
-          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=47fDYwzQMSQa3WBfwK3dkaImKzp7Mr0VD8LCNvjY2HmF97IY9KESbhjbkpflcc46fES54EuyDrypCY0Om5sttQ=="
+          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=ik+AzM9X2EVcLWuOqSQQ+ppNbVwFCIBN8DALvCsyiyeNRpX0zov9kW+Y6xNqVJlLoScCEjbLZKpdyi/la1FWZw=="
           spellcheck="false"
           autocomplete="off"
           >
@@ -386,7 +386,7 @@
         <div class="signup-prompt-bg rounded-1">
       <div class="signup-prompt p-4 text-center mb-4 rounded-1">
         <div class="position-relative">
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/site/dismiss_signup_prompt" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="4qpD7pBinzogiHSieWIzdiliXBMcmp0UKMd2XS66zDZKkpunFEGDOfA3g9YbnkQtowXZb+JSkgmwfh886/Rbqg==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/site/dismiss_signup_prompt" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="uYElnBRRHO5B767+oKwESdWFdYOmica25gdxGH6ysfVPkvTxkJ8XUS3iF08QoQTnbtmDnY/F55D+hcCvplC2ng==" />
             <button type="submit" class="position-absolute top-0 right-0 btn-link link-gray" data-ga-click="(Logged out) Sign up prompt, clicked Dismiss, text:dismiss">
               Dismiss
             </button>
@@ -537,7 +537,7 @@
     </div>
 
 
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/mscampbell/pfb2018/delete/master/slides/Mike_pfb_talk.pdf" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="ipIYbN7zbJt8e4Rsl8VGf8arChv2sJK8aZjQaD8VS3yb5O1a+BHnLrw3p4MGnmH3PI/3NBR3DNJJHkxs/GbYwg==" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/mscampbell/pfb2018/delete/master/slides/Mike_pfb_talk.pdf" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="nJje0le/oVIFN/LOZmRgafir3fwOqyqnyYXMo5rNc16RjSWX/Txy2KfY0eEdsAhRiHYwRNNa/C3HdI51hxvzjQ==" />
           <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
             aria-label="You must be signed in to make or propose changes" data-disable-with>
             <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
@@ -555,14 +555,14 @@
       
   <div class="render-wrapper ">
     <div class="render-container is-render-pending js-render-target  "
-      data-identity="9e7b99f9-e7ed-4025-80ed-449c3b4b6b64"
+      data-identity="57be1881-f3ea-4d50-9620-ea638682cb2d"
       data-host="https://render.githubusercontent.com"
       data-type="pdf">
       <img class="octospinner mx-auto" alt="" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-128.gif" width="64" height="64" />
       <div class="render-viewer-error">Sorry, something went wrong. <a href="https://github.com/mscampbell/pfb2018/blob/master/slides/Mike_pfb_talk.pdf">Reload?</a></div>
       <div class="render-viewer-fatal">Sorry, we cannot display this file.</div>
       <div class="render-viewer-invalid">Sorry, this file is invalid so it cannot be displayed.</div>
-      <iframe class="render-viewer " src="https://render.githubusercontent.com/view/pdf?commit=8509bbaab886859c14a539be5fc10f788e37a6ad&amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6d7363616d7062656c6c2f706662323031382f383530396262616162383836383539633134613533396265356663313066373838653337613661642f736c696465732f4d696b655f7066625f74616c6b2e706466&amp;nwo=mscampbell%2Fpfb2018&amp;path=slides%2FMike_pfb_talk.pdf&amp;repository_id=153807722&amp;repository_type=Repository#9e7b99f9-e7ed-4025-80ed-449c3b4b6b64" sandbox="allow-scripts allow-same-origin allow-top-navigation ">Viewer requires iframe.</iframe>
+      <iframe class="render-viewer " src="https://render.githubusercontent.com/view/pdf?commit=8509bbaab886859c14a539be5fc10f788e37a6ad&amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6d7363616d7062656c6c2f706662323031382f383530396262616162383836383539633134613533396265356663313066373838653337613661642f736c696465732f4d696b655f7066625f74616c6b2e706466&amp;nwo=mscampbell%2Fpfb2018&amp;path=slides%2FMike_pfb_talk.pdf&amp;repository_id=153807722&amp;repository_type=Repository#57be1881-f3ea-4d50-9620-ea638682cb2d" sandbox="allow-scripts allow-same-origin allow-top-navigation ">Viewer requires iframe.</iframe>
     </div>
   </div>
 
@@ -595,7 +595,7 @@
 <div class="footer container-lg px-3" role="contentinfo">
   <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
     <ul class="list-style-none d-flex flex-wrap ">
-      <li class="mr-3">&copy; 2018 <span title="0.10695s from unicorn-5698dd846c-cc6mx">GitHub</span>, Inc.</li>
+      <li class="mr-3">&copy; 2018 <span title="0.13204s from unicorn-5698dd846c-vlrn7">GitHub</span>, Inc.</li>
         <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
         <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
         <li class="mr-3"><a href="https://help.github.com/articles/github-security/" data-ga-click="Footer, go to security, text:security">Security</a></li>
