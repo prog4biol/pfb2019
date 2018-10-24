@@ -23,9 +23,9 @@ Sofia Robb
 ## Bioinformatics and Useful Tools -- Simon Prochnik
   - [Lecture](lectures/bioinfPipesLectureSimon.md)
   - [jupyter notebook lecture notes](lectures/jupyterNotebook.md)
-## Aligners -- Alex Dobin
-  - [Lecture](workshops/Aligners/2018_ProgrammingForBiologistsCSHL_Dobin.pdf)
-  - [Workshop](workshops/Aligners)
+## STAR RNA Aligner -- Alex Dobin
+  - [Lecture](workshops/STAR_RNA_aligner/2018_ProgrammingForBiologistsCSHL_Dobin.pdf)
+  - [Workshop](workshops/STAR_RNA_aligner)
 ## RNAseq -- Brian Haas
   - [Lecture](workshops/RNAseq/rnaseq_slides_PFB2018.pdf)
   - [Workshop](workshops/RNAseq) 
