@@ -32,8 +32,8 @@ Sofia Robb
 ## Ethics and Responsibility in Bioinformatics -- Simon Prochnik
   - Lecture
 ## GMOD -- Scott Cain
-  - Lecture
-  - Workshop
+  - [Lecture]()
+  - [Workshop](workshops/GMOD)
 ## Ontologies -- Nicole Vasilevsky
   - Lecture
   - Workshop
