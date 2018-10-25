@@ -1,4 +1,4 @@
-## :snake: A Few Good Practices in Coding :snake:
+## A Few Good Practices in Coding
 
 #### Writing clear scripts
 
@@ -7,7 +7,7 @@
 ```
 vi script.py 
 ```
-The above name is not very descriptive. :disappointed:
+The above name is not very descriptive.
 
 ```python
 #!/usr/bin/env python3
@@ -27,7 +27,7 @@ The code is correct, but the variable has a non-descriptive name. There are no b
 ```
 vi PFB_PS_2.5.py
 ```
-The above name tells you the project (Programming for Biology), the problem set (PS_2), and the question (5). :tada:
+The above name tells you the project (Programming for Biology), the problem set (PS_2), and the question (5). 
 
 ```python
 #!/usr/bin/env python3

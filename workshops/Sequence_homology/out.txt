@@ -1,0 +1,461 @@
+# /nfs/public/ro/es/appbin/linux-x86_64/fasta-36.3.6f2/ssearch36 -p -b 1000 -d 1000 -s BL62 -E "0.001 0" -f 11 -g 1 -L -T 4 -l /nfs/public/ro/es/data/idata/latest/fastacfg/fasta3db @:1- +uniprotkb_swissprot+
+SSEARCH performs a Smith-Waterman search
+ version 36.3.6 Aug., 2014(preload9)
+Please cite:
+ T. F. Smith and M. S. Waterman, (1981) J. Mol. Biol. 147:195-197; 
+ W.R. Pearson (1991) Genomics 11:635-650
+
+Query: @
+  1>>>sp|P45796.1|XYND_PAEPO RecName: Full=Arabinoxylan arabinofuranohydrolase; Short=AXH; AltName: Full=AXH-m2,3; Short=AXH-m23; AltName: Full=Alpha-L-arabinofuranosidase; Short=AF; Flags: Precursor - 635 aa
+Library: UniProtKB/Swiss-Prot
+  200544181 residues in 558590 sequences
+
+Statistics:  Expectation_n fit: rho(ln(x))= 4.6333+/-0.000178; mu= 8.1455+/- 0.010
+ mean_var=23.5818+/- 4.774, 0's: 91 Z-trim(131.3): 100  B-trim: 27 in 1/64
+ Lambda= 0.264111
+ statistics sampled from 60000 (193567) to 558483 sequences
+Algorithm: Smith-Waterman (SSE2, Michael Farrar 2006) (7.2 Nov 2010)
+Parameters: BL62 matrix (11:-4), open/ext: -11/-1
+ Scan time: 25.610
+
+The best scores are:                                      s-w bits E(558590)
+SP:XYND_PAEPO P45796 Arabinoxylan arabinofuranohyd ( 635) 3370 1289.0       0
+SP:XYND_BACSU Q45071 Arabinoxylan arabinofuranohyd ( 513) 1961 752.2 6.6e-216
+SP:XY11A_PSEXY P83513 Bifunctional xylanase/deacet ( 602)  328 130.0 1.6e-28
+SP:XYLB_BACOV P49943 Xylosidase/arabinosidase OS=B ( 325)  250 100.4 6.7e-20
+SP:XYNA2_CLOSR P33558 Endo-1,4-beta-xylanase A OS= ( 512)  230 92.7 2.3e-17
+SP:XYNB_PRERU P48791 Beta-xylosidase OS=Prevotella ( 319)  220 89.0 1.8e-16
+SP:XYNA1_CLOSR Q8GJ44 Endo-1,4-beta-xylanase A OS= ( 651)  216 87.3 1.3e-15
+SP:XYLA_CLOSR P48790 Xylosidase/arabinosidase OS=C ( 473)  196 79.7 1.7e-13
+SP:XYNZ_CLOTH P10478 Endo-1,4-beta-xylanase Z OS=C ( 837)  180 73.5 2.3e-11
+
+>>SP:XYND_PAEPO P45796 Arabinoxylan arabinofuranohydrolase
+OS=Paenibacillus polymyxa OX=1406 GN=xynD PE=1 SV=1 (635 aa)
+ s-w opt: 3370  Z-score: 6911.4  bits: 1289.0 E(558590):    0
+Smith-Waterman score: 3370; 100.0% identity (100.0% similar) in 635 aa overlap (1-635:1-635)
+
+               10        20        30        40        50        60
+sp|P45 MIRKCLVLFLSFALLLSVFPMLNVDAANRPLAKIPGNSNPLMDHKLGADPYSLVYDGRVY
+       ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+SP:XYN MIRKCLVLFLSFALLLSVFPMLNVDAANRPLAKIPGNSNPLMDHKLGADPYSLVYDGRVY
+               10        20        30        40        50        60
+
+               70        80        90       100       110       120
+sp|P45 IFMSSDTYVYNKDGSIKENDFSALDRIQVISSTDMVNWTDHGTIPVAGANNKNSGRGIAK
+       ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+SP:XYN IFMSSDTYVYNKDGSIKENDFSALDRIQVISSTDMVNWTDHGTIPVAGANNKNSGRGIAK
+               70        80        90       100       110       120
+
+              130       140       150       160       170       180
+sp|P45 WASNSWAPAVAHKKINGRDKFFLYFANGGAGIGVLTADTPIGPWTDPLGKALVTHSTPGM
+       ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+SP:XYN WASNSWAPAVAHKKINGRDKFFLYFANGGAGIGVLTADTPIGPWTDPLGKALVTHSTPGM
+              130       140       150       160       170       180
+
+              190       200       210       220       230       240
+sp|P45 AGVTWLFDPAVLVDDDGTGYLYSGGGIPNESDPASIANPKTARVIKLGADMTSVIGSATT
+       ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+SP:XYN AGVTWLFDPAVLVDDDGTGYLYSGGGIPNESDPASIANPKTARVIKLGADMTSVIGSATT
+              190       200       210       220       230       240
+
+              250       260       270       280       290       300
+sp|P45 IDAPYLFEDSGIHKYNGKYYYSYCINFAGTHPQQYPAGEIGYMVSDNPMGPFTYKGHFLK
+       ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+SP:XYN IDAPYLFEDSGIHKYNGKYYYSYCINFAGTHPQQYPAGEIGYMVSDNPMGPFTYKGHFLK
+              250       260       270       280       290       300
+
+              310       320       330       340       350       360
+sp|P45 NPYTFFGVGGNNHHAVFNFKNEWYVVYHAQTVSKAQIGAGKGYRSPHINKLVHKEDGSIS
+       ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+SP:XYN NPYTFFGVGGNNHHAVFNFKNEWYVVYHAQTVSKAQIGAGKGYRSPHINKLVHKEDGSIS
+              310       320       330       340       350       360
+
+              370       380       390       400       410       420
+sp|P45 EVQGNMTGIAQLSNMNPYTRVEAETIAWQAGVTTEPTQASGGPISNLNVTNIHNGDWIAV
+       ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+SP:XYN EVQGNMTGIAQLSNMNPYTRVEAETIAWQAGVTTEPTQASGGPISNLNVTNIHNGDWIAV
+              370       380       390       400       410       420
+
+              430       440       450       460       470       480
+sp|P45 GKADFGSAGAKTFKANVATNVGGNIEVRLDSETGPLVGSLKVPSTGGMQTWREVETTINN
+       ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+SP:XYN GKADFGSAGAKTFKANVATNVGGNIEVRLDSETGPLVGSLKVPSTGGMQTWREVETTINN
+              430       440       450       460       470       480
+
+              490       500       510       520       530       540
+sp|P45 ATGVHNIYLVFTGSGSGNLLNLDAWQFTPNTGGNTITKVEAENMKIGGTYAGKISAPFDG
+       ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+SP:XYN ATGVHNIYLVFTGSGSGNLLNLDAWQFTPNTGGNTITKVEAENMKIGGTYAGKISAPFDG
+              490       500       510       520       530       540
+
+              550       560       570       580       590       600
+sp|P45 VALYANADYVSYSQYFANSTHNISVRGASSNAGTAKVDLVIGGVTVGSFNFTGKTPTVQT
+       ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+SP:XYN VALYANADYVSYSQYFANSTHNISVRGASSNAGTAKVDLVIGGVTVGSFNFTGKTPTVQT
+              550       560       570       580       590       600
+
+              610       620       630     
+sp|P45 LSNITHATGDQEIKLALTSDDGTWDAYVDFIEFSL
+       :::::::::::::::::::::::::::::::::::
+SP:XYN LSNITHATGDQEIKLALTSDDGTWDAYVDFIEFSL
+              610       620       630     
+
+>>SP:XYND_BACSU Q45071 Arabinoxylan arabinofuranohydrolase
+OS=Bacillus subtilis (strain 168) OX=224308 GN=xynD PE=1
+SV=2 (513 aa)
+ s-w opt: 1961  Z-score: 4011.9  bits: 752.2 E(558590): 6.6e-216
+Smith-Waterman score: 1961; 70.3% identity (89.8% similar) in 511 aa overlap (1-508:1-511)
+
+               10        20         30        40        50         
+sp|P45 MIRKCLVLFLSFALLLSVFPMLNVDAA-NRPLAKIPGNSNPLMDHKLGADPYSLVYDGRV
+       : .:: : .  ..:::: .   .. :: .  .::  ::::::.:: ::::: .:.:.:::
+SP:XYN MRKKCSVCLWILVLLLSCLSGKSAYAATSTTIAKHIGNSNPLIDHHLGADPVALTYNGRV
+               10        20        30        40        50        60
+
+      60        70        80        90       100       110         
+sp|P45 YIFMSSDTYVYNKDGSIKENDFSALDRIQVISSTDMVNWTDHGTIPVAGANNKNSGRGIA
+       ::.:::: : ::..:.::.:.:. :.:. ::::.:::::::::.:::::::. :.:::::
+SP:XYN YIYMSSDDYEYNSNGTIKDNSFANLNRVFVISSADMVNWTDHGAIPVAGANGANGGRGIA
+               70        80        90       100       110       120
+
+     120       130       140       150       160       170         
+sp|P45 KWASNSWAPAVAHKKINGRDKFFLYFANGGAGIGVLTADTPIGPWTDPLGKALVTHSTPG
+       :::. ::::..: :::::.:::::::::.:.::::::::.::::::::.:: ::: ::::
+SP:XYN KWAGASWAPSIAVKKINGKDKFFLYFANSGGGIGVLTADSPIGPWTDPIGKPLVTPSTPG
+              130       140       150       160       170       180
+
+     180       190       200       210         220       230       
+sp|P45 MAGVTWLFDPAVLVDDDGTGYLYSGGGIPNESDPAS--IANPKTARVIKLGADMTSVIGS
+       :.::.:::::::.::::::::::.:::.:. :.:..   :::::::::::: :::::.::
+SP:XYN MSGVVWLFDPAVFVDDDGTGYLYAGGGVPGVSNPTQGQWANPKTARVIKLGPDMTSVVGS
+              190       200       210       220       230       240
+
+       240       250       260       270       280       290       
+sp|P45 ATTIDAPYLFEDSGIHKYNGKYYYSYCINFAGTHPQQYPAGEIGYMVSDNPMGPFTYKGH
+       :.:::::..:::::.::::: :::::::::.:::: . : ::::::.:..:::::::.::
+SP:XYN ASTIDAPFMFEDSGLHKYNGTYYYSYCINFGGTHPADKPPGEIGYMTSSSPMGPFTYRGH
+              250       260       270       280       290       300
+
+       300       310       320       330       340       350       
+sp|P45 FLKNPYTFFGVGGNNHHAVFNFKNEWYVVYHAQTVSKAQIGAGKGYRSPHINKLVHKEDG
+       ::::: .::: :::::::::::::::::::::::::.: .::::::::::::::::. ::
+SP:XYN FLKNPGAFFGGGGNNHHAVFNFKNEWYVVYHAQTVSSALFGAGKGYRSPHINKLVHNADG
+              310       320       330       340       350       360
+
+       360       370       380       390       400       410       
+sp|P45 SISEVQGNMTGIAQLSNMNPYTRVEAETIAWQAGVTTEPTQASGGPISNLNVTNIHNGDW
+       ::.:: .: .:..:.::.:::.::::::.::.. . :: . : :::..: .::.:.::::
+SP:XYN SIQEVAANYAGVTQISNLNPYNRVEAETFAWNGRILTEKSTAPGGPVNNQHVTSIQNGDW
+              370       380       390       400       410       420
+
+       420       430       440       450       460       470       
+sp|P45 IAVGKADFGSAGAKTFKANVATNVGGNIEVRLDSETGPLVGSLKVPSTGGMQTWREVETT
+       ::::.::::..::..::::::...::.:::::::  : :::.:.:::::: :::::.::.
+SP:XYN IAVGNADFGAGGARSFKANVASTLGGKIEVRLDSADGKLVGTLNVPSTGGAQTWREIETA
+              430       440       450       460       470       480
+
+       480       490       500       510       520       530       
+sp|P45 INNATGVHNIYLVFTGSGSGNLLNLDAWQFTPNTGGNTITKVEAENMKIGGTYAGKISAP
+       ...:::::....::::.:.:::.:.: ::::                             
+SP:XYN VSGATGVHKVFFVFTGTGTGNLFNFDYWQFTQR                           
+              490       500       510                              
+
+       540       550       560       570       580       590       
+sp|P45 FDGVALYANADYVSYSQYFANSTHNISVRGASSNAGTAKVDLVIGGVTVGSFNFTGKTPT
+
+>>SP:XY11A_PSEXY P83513 Bifunctional xylanase/deacetylase
+OS=Pseudobutyrivibrio xylanivorans OX=185007 GN=xyn11A PE=1
+SV=2 (602 aa)
+ s-w opt: 328  Z-score: 647.6  bits: 130.0 E(558590): 1.6e-28
+Smith-Waterman score: 328; 47.3% identity (80.2% similar) in 131 aa overlap (510-635:237-367)
+
+     480       490       500       510            520       530    
+sp|P45 NATGVHNIYLVFTGSGSGNLLNLDAWQFTPNTGGNTIT-----KVEAENMKIGGTYAGKI
+                                     :.:.: .:     :...:.:  .: :.:.:
+SP:XY1 SVYKNNMTIGGSSSSSGNQGGNQGGNTGNENAGNNLVTVADADKIQCETMTKSGQYTGNI
+        210       220       230       240       250       260      
+
+          540       550       560       570       580       590    
+sp|P45 SAPFDGVALYANADYVSYSQYFANSTHNISVRGASSNAGTAKVDLVIGGVTVGSFNFTGK
+       :.::.::::::: : :.:.::::..::....::.:.:   :.::: ::: . :.: .  .
+SP:XY1 SSPFNGVALYANNDAVKYTQYFASGTHDFTLRGCSNNNKMARVDLKIGGQNKGTFYYGDS
+        270       280       290       300       310       320      
+
+          600       610       620       630                        
+sp|P45 TPTVQTLSNITHATGDQEIKLALTSDDGTWDAYVDFIEFSL                   
+        :.  :..:..:.::.: :.:..:.::: ::::.:... :.                   
+SP:XY1 YPAEYTIKNVSHGTGNQTIELVVTADDGQWDAYLDYFNNSVEPGCSLVPGAVVVLVALGS
+        330       340       350       360       370       380      
+
+SP:XY1 SSNTGNNSGTNTQNQKLIALTFDDGPSSTTSQVLDMLEKYNVKATFFLIGQNVNSNTASI
+        390       400       410       420       430       440      
+
+>>SP:XYLB_BACOV P49943 Xylosidase/arabinosidase OS=Bacteroides
+ovatus OX=28116 GN=xsa PE=2 SV=1 (325 aa)
+ s-w opt: 250  Z-score: 492.9  bits: 100.4 E(558590): 6.7e-20
+Smith-Waterman score: 250; 30.7% identity (50.7% similar) in 355 aa overlap (48-364:15-322)
+
+        20        30        40        50        60        70       
+sp|P45 VFPMLNVDAANRPLAKIPGNSNPLMDHKLGADPYSLVYDGRVYIFMSSDTYVYNKDGSIK
+                                     :::   :.::..::. : :      ...: 
+SP:XYL                 MKTEKRYLVPGDYMADPAVHVFDGKLYIYPSHDW-----ESGIA
+                               10        20        30              
+
+        80            90         100       110       120       130 
+sp|P45 END----FSALDRIQVISSTDMVNWT--DHGTIPVAGANNKNSGRGIAKWASNSWAPAVA
+       :::    :.  :  .: :  :..:    :::.. ..  .   .:: .       :   :.
+SP:XYL ENDNGDHFNMKD-YHVYSMDDVMNGEIKDHGVV-LSTEDIPWAGRQL-------WDCDVV
+      40        50         60        70         80               90
+
+             140           150       160       170       180       
+sp|P45 HKKINGRDKFFLYFA----NGGAGIGVLTADTPIGPWTDPLGKALVTHSTPGMAGVTWLF
+        :      :...::     :    ::: ..: : ::.        . ...: : : .. .
+SP:XYL CKD----GKYYMYFPLKDQNDIFRIGVAVSDKPYGPF--------IPEANP-MKG-SYSI
+                  100       110       120                130       
+
+       190       200                    210       220       230    
+sp|P45 DPAVLVDDDGTGYLYSGG-------------GIPNESDPASIANPKTARVIKLGADMTSV
+       ::::  : ::. :.: ::             .. .   : .  .   .:: .:. :: . 
+SP:XYL DPAVWDDGDGNYYIYFGGLWGGQLQRYRNNKALESAILPEGEEEAIPSRVARLSEDMMEF
+        140       150       160       170       180       190      
+
+          240                     250       260       270       280
+sp|P45 IGSATTI-----DAPYL---------FEDSGIHKYNGKYYYSYCINFAGTHPQQYPAGEI
+         .  ..     :.  :         :: : .::::::::.::  . . ::   : .:  
+SP:XYL AEEPRAVVILDEDGKPLTAGDTERRFFEASWMHKYNGKYYFSY--STGDTHLLCYATG--
+        200       210       220       230         240       250    
+
+              290       300       310       320       330       340
+sp|P45 GYMVSDNPMGPFTYKGHFLKNPYTFFGVGGNNHHAVFNFKNEWYVVYHAQTVSKAQIGAG
+            ::: :::::.: .: .:     :: ..:::. .::..::. .:  . :.     :
+SP:XYL -----DNPYGPFTYQGVIL-TPV----VGWTTHHAIVEFKGKWYLFHHDCVPSE-----G
+                 260            270       280       290            
+
+               350       360       370       380       390         
+sp|P45 KGY-RSPHINKLVHKEDGSISEVQGNMTGIAQLSNMNPYTRVEAETIAWQAGVTTEPTQA
+       : . ::  . .: .  :: :  ..:                                   
+SP:XYL KTWLRSLKVCELQYDADGRIITIEGKDE                                
+       300       310       320                                     
+
+>>SP:XYNA2_CLOSR P33558 Endo-1,4-beta-xylanase A
+OS=Clostridium stercorarium OX=1510 GN=xynA PE=1 SV=2 (512 aa)
+ s-w opt: 230  Z-score: 447.3  bits: 92.7 E(558590): 2.3e-17
+Smith-Waterman score: 230; 32.9% identity (61.4% similar) in 249 aa overlap (398-618:267-497)
+
+       370       380       390       400       410       420       
+sp|P45 GIAQLSNMNPYTRVEAETIAWQAGVTTEPTQASGGPISNLNVTNIHNGDWIAVGKADFGS
+                                     :. : : .. ..  :.::. .. .. ::::
+SP:XYN TPAPSQSPIRRDAFSIIEAEEYNSTNSSTLQVIGTPNNGRGIGYIENGNTVTYSNIDFGS
+        240       250       260       270       280       290      
+
+       430       440       450       460       470       480       
+sp|P45 AGAKTFKANVATNVGGNIEVRLDSETGPLVGSLKVPSTGGMQTWREVETTINNATGVHNI
+        ::  :.:.:::.:. .:..: :: :: :.:.: : :::. .:.. :.:.:.. ::::.:
+SP:XYN -GATGFSATVATEVNTSIQIRSDSPTGTLLGTLYVSSTGSWNTYQTVSTNISKITGVHDI
+         300       310       320       330       340       350     
+
+       490       500            510          520                   
+sp|P45 YLVFTGSGSGNLLNLDAWQFT-----PNTGGNT---ITKVEAE--------NMKI-----
+        :::.:      .:.: . :.     :  : ::    . ..::        :..:     
+SP:XYN VLVFSGP-----VNVDNFIFSRSSPVPAPGDNTRDAYSIIQAEDYDSSYGPNLQIFSLPG
+         360            370       380       390       400       410
+
+        530       540       550       560       570             580
+sp|P45 GGTYAGKISAPFDGVALYANADYVSYSQYFANSTHNISVRGASSNAGTAKVDL------V
+       ::.  : :.  ..  . : : :       :.... ....: :..:: : .: :      .
+SP:XYN GGSAIGYIENGYS--TTYKNID-------FGDGATSVTARVATQNATTIQVRLGSPSGTL
+              420         430              440       450       460 
+
+              590       600        610       620       630     
+sp|P45 IGGVTVGSFNFTGKTPTVQTLS-NITHATGDQEIKLALTSDDGTWDAYVDFIEFSL
+       .: . :::   ::.  : . .: .:....: ..: :...                 
+SP:XYN LGTIYVGS---TGSFDTYRDVSATISNTAGVKDIVLVFSGPVNVDWFVFSKSGT  
+                470       480       490       500       510    
+
+>>SP:XYNB_PRERU P48791 Beta-xylosidase OS=Prevotella
+ruminicola OX=839 GN=xynB PE=3 SV=1 (319 aa)
+ s-w opt: 220  Z-score: 431.3  bits: 89.0 E(558590): 1.8e-16
+Smith-Waterman score: 220; 26.8% identity (50.2% similar) in 317 aa overlap (48-328:13-288)
+
+        20        30        40        50        60        70       
+sp|P45 VFPMLNVDAANRPLAKIPGNSNPLMDHKLGADPYSLVYDGRVYIFMSSDTYVYNKDGSIK
+                                     ::: . :.::..::. : :      .:.  
+SP:XYN                   MKAKYVFPSDYMADPAANVFDGKLYIYPSHDY----DSGECF
+                                 10        20        30            
+
+        80        90       100       110       120       130       
+sp|P45 ENDFSALDRIQVISSTDMVNWTDHGTIPVAGANNKNSGRGIAKWASNSWAPAVAHKKING
+       ..: . ..              :. .. . :   .....  .:  . .  : : .:..  
+SP:XYN DDDGGHFQM------------KDYHVLCIDGDPMEQDAKDCGKQFGIEDIPWV-EKQLWD
+       40                    50        60        70         80     
+
+             140           150       160       170       180       
+sp|P45 RD------KFFLYFA----NGGAGIGVLTADTPIGPWTDPLGKALVTHSTPGMAGVTWLF
+       .:      :..: ..    .:   .:: .:: : ::..        ..:          .
+SP:XYN NDCVEKDGKYYLIYSAKDYTGVFHLGVAVADKPEGPFVPEADPIRGSYS----------I
+          90       100       110       120       130               
+
+       190       200                    210       220       230    
+sp|P45 DPAVLVDDDGTGYLYSGG-------------GIPNESDPASIANPKTARVIKLGADMTSV
+       ::.:. ::::  :.: ::              .  :  : .  .:  .:: .. .:. . 
+SP:XYN DPCVFKDDDGEIYVYFGGIWGGQLQWYKDNKMLKAEHLPEGKEDPLPSRVARMTGDVKQF
+         140       150       160       170       180       190     
+
+                      240        250       260       270       280 
+sp|P45 I------------GSATTIDAPY-LFEDSGIHKYNGKYYYSYCINFAGTHPQQYPAGEIG
+                    :.    : :. .:: : .::::::::.::  . . ::        . 
+SP:XYN AEAPRAVIIVDETGKPLPADDPHRFFEASWMHKYNGKYYFSY--STGDTHL-------LC
+         200       210       220       230         240             
+
+             290       300       310       320       330       340 
+sp|P45 YMVSDNPMGPFTYKGHFLKNPYTFFGVGGNNHHAVFNFKNEWYVVYHAQTVSKAQIGAGK
+       : :.::: :::::.: .:.       :: ..::.. ..:..::. .:             
+SP:XYN YAVGDNPYGPFTYQGVILEPV-----VGWTTHHSIVEYKGKWYLFHHDCVPSNDTTWLRS
+        250       260            270       280       290       300 
+
+             350       360       370       380       390       400 
+sp|P45 GYRSPHINKLVHKEDGSISEVQGNMTGIAQLSNMNPYTRVEAETIAWQAGVTTEPTQASG
+                                                                   
+SP:XYN LKVAELEYDAEGHIKTVK                                          
+             310                                                   
+
+>>SP:XYNA1_CLOSR Q8GJ44 Endo-1,4-beta-xylanase A
+OS=Clostridium stercorarium OX=1510 GN=xynA PE=1 SV=2 (651 aa)
+ s-w opt: 216  Z-score: 416.2  bits: 87.3 E(558590): 1.3e-15
+Smith-Waterman score: 216; 32.6% identity (61.5% similar) in 239 aa overlap (398-618:266-496)
+
+       370       380       390       400       410       420       
+sp|P45 GIAQLSNMNPYTRVEAETIAWQAGVTTEPTQASGGPISNLNVTNIHNGDWIAVGKADFGS
+                                     :. : : .. ..  :.::. .. .. ::::
+SP:XYN TPAPSQSPIRRDAFSIIEAEEYNSTNSSTLQVIGTPNNGRGIGYIENGNTVTYSNIDFGS
+         240       250       260       270       280       290     
+
+       430       440       450       460       470       480       
+sp|P45 AGAKTFKANVATNVGGNIEVRLDSETGPLVGSLKVPSTGGMQTWREVETTINNATGVHNI
+        ::  :.:.:::.:. .:..: :: :: :.:.: : :::. .:.. :.:.:.. ::::.:
+SP:XYN -GATGFSATVATEVNTSIQIRSDSPTGTLLGTLYVSSTGSWNTYQTVSTNISKITGVHDI
+          300       310       320       330       340       350    
+
+       490       500            510          520        530        
+sp|P45 YLVFTGSGSGNLLNLDAWQFT-----PNTGGNT---ITKVEAENMKIG-GTYAGKISAPF
+        :::.:      .:.: . :.     :  : ::    . ..::.   . :     .: : 
+SP:XYN VLVFSGP-----VNVDNFIFSRSSPVPAPGDNTRDAYSIIQAEDYDSSYGPNLQIFSLPG
+          360            370       380       390       400         
+
+      540         550        560       570             580         
+sp|P45 DGVAL-YANADY-VSYSQY-FANSTHNISVRGASSNAGTAKV------DLVIGGVTVGSF
+        : :. : .  : ..:..  :::.  .:..: :.. . . .:        ..: . : : 
+SP:XYN GGSAIGYIENGYSTTYNNVNFANGLSSITARVATQISTSIQVRAGGATGTLLGTIYVPST
+     410       420       430       440       450       460         
+
+     590       600       610       620       630                   
+sp|P45 NFTGKTPTVQTLSNITHATGDQEIKLALTSDDGTWDAYVDFIEFSL              
+       :   .  .:   .:... :: ..: :...                               
+SP:XYN NSWDSYQNV--TANLSNITGVHDITLVFSGPVNVDYFVFTPANVNSGPTSPVGGTRSAFS
+     470         480       490       500       510       520       
+
+>>SP:XYLA_CLOSR P48790 Xylosidase/arabinosidase OS=Clostridium
+stercorarium OX=1510 GN=xylA PE=1 SV=1 (473 aa)
+ s-w opt: 196  Z-score: 378.1  bits: 79.7 E(558590): 1.7e-13
+Smith-Waterman score: 196; 25.1% identity (48.0% similar) in 510 aa overlap (40-499:11-465)
+
+      10        20        30        40        50        60         
+sp|P45 LSFALLLSVFPMLNVDAANRPLAKIPGNSNPLMDHKLGADPYSLVYDGRVYIFMSSDTYV
+                                     :  ..   :.::  :..:::::. : : . 
+SP:XYL                     MRKQRFNPYLPSWEYIPDAEPY--VFNGRVYIYGSHDRF-
+                                   10        20          30        
+
+      70        80        90       100       110       120         
+sp|P45 YNKDGSIKENDFSALDRIQVISSTDMVNWTDHGTIPVAGANNKNSGRGIAKWASNSWAPA
+         .  ..  ::. . .        :. .:  .:.:     .  :    ..      .:: 
+SP:XYL --NGHAFCLNDYVCWSA----PVDDLSEWRYEGVIYRKTDDPLNPDGRMC-----LYAPD
+          40        50            60        70        80           
+
+     130       140       150        160       170        180       
+sp|P45 VAHKKINGRDKFFLYFANGGAGI-GVLTADTPIGPWTDPLGKALVTHSTP-GMAGVTW-L
+       :.   ..   ...::..   . . .: ..::: : . .  : .  . .:  :     :  
+SP:XYL VT---LGPDGRYYLYYVLDKVPVVSVAVCDTPAGKY-EFYGYVRYADGTRLGEREGDWPQ
+            90       100       110        120       130       140  
+
+        190       200       210       220       230       240      
+sp|P45 FDPAVLVDDDGTGYLYSGGGIPNESDPASIANPKTARVIKLGADMTSVIGSATTI--DAP
+       ::::::.. . : :::.:        : .  . : : .  :: :: .:. . . :  . :
+SP:XYL FDPAVLTEGERT-YLYTG------FCPKGDKSRKGAMATVLGPDMLTVVEEPVIIVPSEP
+            150              160       170       180       190     
+
+                    250       260       270       280       290    
+sp|P45 Y----------LFEDSGIHKYNGKYYYSYCINFAGTHPQQYPAGEIGYMVSDNPMGPFTY
+       :          .::  .:.: .  ::. :         ..    :. : .: .:   : :
+SP:XYL YSRGSGFEGHEFFEAPSIRKKGDTYYFIY---------SSVVMHELCYATSKHPTKGFKY
+         200       210       220                230       240      
+
+          300                    310       320       330       340 
+sp|P45 KGHFLKN-------------PYTFFGVGGNNHHAVFNFKNEWYVVYHAQTVSKAQIGAGK
+        : ...:             :  .   ::::: .. ....:::. :: .:        : 
+SP:XYL GGVIVSNCDLHIDSYKPAEKPMYY---GGNNHGSIVEINGEWYIFYHRHT-------NGT
+        250       260       270          280       290             
+
+              350       360       370         380                  
+sp|P45 GY-RSPHINKLVHKEDGSISEVQGNMTGIAQ--LSNMNPYTRVEAETI------------
+       .. :.  ..:.   ::::: .:. .  : :.  : . . :    : ..            
+SP:XYL SFSRQGCMEKIKILEDGSIPQVEMTSCGSADEPLPGRGEYPAYIACNLFCGEESVYTDLT
+        300       310       320       330       340       350      
+
+         390             400       410       420       430         
+sp|P45 -AWQAGVTTEPTQ------ASGGPISNLNVTNIHNGDWIAVGKADFGSAGAKTFKANVAT
+        ::. .   . ::       . : :.:..       :  ..:   :   : :. : .:  
+SP:XYL GAWMNNQFPKITQDGKDGDEEPGYIANMK-------DSATAGFKYFDCKGIKSVKIKVRG
+        360       370       380              390       400         
+
+     440       450       460       470       480       490         
+sp|P45 NVGGNIEVRLDSETGPLVGSLKVPSTGGMQTWREVETTINNATGVHNIYLVFTGSGSGNL
+          : .::.  : .: ..:.. :  ..    : : ...:    :.: .:... ::::..:
+SP:XYL YCRGVFEVKT-SWNGEVLGKIPVEFSN---IWTEFSASIPIPDGIHALYFTYRGSGSASL
+     410        420       430          440       450       460     
+
+     500       510       520       530       540       550         
+sp|P45 LNLDAWQFTPNTGGNTITKVEAENMKIGGTYAGKISAPFDGVALYANADYVSYSQYFANS
+                                                                   
+SP:XYL KSFTLCTD                                                    
+         470                                                       
+
+>>SP:XYNZ_CLOTH P10478 Endo-1,4-beta-xylanase Z OS=Clostridium
+thermocellum (strain ATCC 27405 / DSM 1237 / NBRC 103400 /
+NCIMB 10682 / NRRL B-4536 / VPI 7372) OX=203119 GN=xynZ
+PE=1 SV=3 (837 aa)
+ s-w opt: 180  Z-score: 339.7  bits: 73.5 E(558590): 2.3e-11
+Smith-Waterman score: 180; 36.2% identity (67.7% similar) in 130 aa overlap (379-507:299-419)
+
+      350       360       370       380       390       400        
+sp|P45 NKLVHKEDGSISEVQGNMTGIAQLSNMNPYTRVEAETIAWQAGVTTEPTQASG-GPISNL
+                                     ::.:::      :....  .  :  : .. 
+SP:XYN LWNFLQMADEAGLTRDGNTPVPTPSPKPANTRIEAEDYD---GINSSSIEIIGVPPEGGR
+      270       280       290       300          310       320     
+
+       410       420       430       440       450       460       
+sp|P45 NVTNIHNGDWIAVGKADFGSAGAKTFKANVATNVGGNIEVRLDSETGPLVGSLKVPSTGG
+       ..  : .::...  . :::. :: .:::.::.   .:::.::.. .: :.:.:.: ::: 
+SP:XYN GIGYITSGDYLVYKSIDFGN-GATSFKAKVANANTSNIELRLNGPNGTLIGTLSVKSTGD
+         330       340        350       360       370       380    
+
+       470       480       490       500       510       520       
+sp|P45 MQTWREVETTINNATGVHNIYLVFTGSGSGNLLNLDAWQFTPNTGGNTITKVEAENMKIG
+        .:..:   .:...::....:::: :      .:.: . :                    
+SP:XYN WNTYEEQTCSISKVTGINDLYLVFKGP-----VNIDWFTFGVESSSTGLGDLNGDGNINS
+          390       400       410            420       430         
+
+       530       540       550       560       570       580       
+sp|P45 GTYAGKISAPFDGVALYANADYVSYSQYFANSTHNISVRGASSNAGTAKVDLVIGGVTVG
+                                                                   
+SP:XYN SDLQALKRHLLGISPLTGEALLRADVNRSGKVDSTDYSVLKRYILRIITEFPGQGDVQTP
+     440       450       460       470       480       490         
+
+
+
+635 residues in 1 query   sequences
+200544181 residues in 558590 library sequences
+ Tcomplib [36.3.6 Aug., 2014(preload9)] (4 proc)
+ start: Fri Oct 19 03:11:13 2018 done: Fri Oct 19 03:11:20 2018
+ Total Scan time: 25.610 Total Display time:  0.060
+
+Function used was SSEARCH [36.3.6 Aug., 2014(preload9)]
