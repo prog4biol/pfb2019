@@ -8,7 +8,7 @@ Write a simple De Bruijn graph-based assembler for DNA sequences that takes kmer
 
 
 
-TA: 
+TA:  LUKAS
 
 Students:
 
@@ -48,7 +48,7 @@ o   BONUS ROUND: find proteins that share a similar evolutionary age as a querie
 
 
 
-TA: 
+TA: JESSEN 
 
 Students:
 
@@ -86,7 +86,7 @@ Consider making the steps in the simulator interactive so a user can decide whet
 
 
 
-TA: 
+TA: SHASTA
 
 Students:
 
@@ -116,7 +116,7 @@ PCA details: plotting parameters might include codon composition, frequency, typ
 
 
 
-TA: 
+TA: JOE
 
 Students:
 
@@ -140,7 +140,7 @@ Construct a python wrapper to run RNAseq on multiple samples using STAR & DESeq 
 
 ### 
 
-TA: 
+TA: KIRSTEN
 
 Students:
 
