@@ -38,4 +38,5 @@ Sofia Robb
   - [Lecture](Ontologies/IntroToOntologies_CSH_2018-10-28g.pdf)
   - [Workshop](Ontologies)
 ## Protein Function -- Paul Thomas
-  - Lecture
+  - [Lecture](Protein_Function_Annotation/PaulThomas_cshl2018.pdf)
+  - [Workshop](Protein_Function_Annotation)
