@@ -10,8 +10,9 @@ Use [http://pantherdb.org/](http://pantherdb.org/)
  4. submit
  
  On next page
-   - upload Piwi_ref for your reference
+   - upload Piwi_ref as your reference list 
    - select GO biological Process complete
+   - launch analysis
 
 ## Input files
  - download files from the [our repository](files) github repository directory
