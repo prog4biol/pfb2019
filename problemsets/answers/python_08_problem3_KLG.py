@@ -17,6 +17,8 @@
 ## import sys to pull files in from the command line
 import sys
 
+## import re for regular expressions
+import re
 
 ## make lists to tell our program what types of things we will accept from our fastas
 fasta_extensions = ['fasta', 'fa', 'nt']
@@ -87,24 +89,16 @@ nuc_index = 0
 
 for seq_id in seqs:
     sequence = seqs[seq_id]  ## pull out our sequence
-    codons = []              ## initialize a list to store our codons
-    codon_temp = ''          ## initialize a string to store our 3 nucleotides
-    nuc_index = 0            ## reinitialize our counter for each unique sequence id
     ## for each nucleotide in our sequence 
     for nucleotide in sequence:
         ## if it isn't an acceptable nucleotide, throw our last exception
         if nucleotide not in nucleotides:
           raise Exception('Nucleotides not one of "A/T/G/C"')
           sys.exit(1)
-        ## if our counter is less than or equal to 2 (remember python counts 0, 1, 2)
-        if nuc_index <= 2:
-          codon_temp = codon_temp + nucleotide ## add a nucleotide to our codon string
-          nuc_index += 1 ## increment our counter by one
-        else:
-          codons.append(codon_temp) ## add our single codon to our codons list
-          codon_temp = '' ## reinitialize our codon string
-          nuc_index = 0 ## reinitialize our counter
 
+
+    sequence = seqs[seq_id]  ## pull out our sequence
+    codons = re.findall(r"(.{3})", sequence) ## from lecture example      
     ## once we have made it through the whole sequence    
     print(seq_id + '-frame-1-codons') ## print our an ID for our first frame of codons
     print(" ".join(codons)) ## join and print our list of codons

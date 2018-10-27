@@ -19,7 +19,7 @@
 
 ## import sys to pull files in from the command line
 import sys
-
+import re
 ## create a handle for our file
 fasta = open(sys.argv[1], 'r')
 
@@ -53,22 +53,7 @@ nuc_index = 0
 
 for seq_id in seqs:
     sequence = seqs[seq_id]  ## pull out our sequence
-    codons = []              ## initialize a list to store our codons
-    codon_temp = ''          ## initialize a string to store our 3 nucleotides
-    nuc_index = 0            ## reinitialize our counter for each unique sequence id
-    ## for each nucleotide in our sequence
-    for nucleotide in sequence:
-        ## if our counter is less than or equal to 2 (remember python counts 0, 1, 2)
-        if nuc_index <= 2:
-            codon_temp = codon_temp + nucleotide ## add a nucleotide to our codon string
-            nuc_index += 1 ## increment our counter by one
-        ## if we have counted 3 and added 3 nucleotides to our string
-        else:
-            codons.append(codon_temp) ## add our single codon to our codons list
-            codon_temp = ''           ## reinitialize our codon string
-            nuc_index = 0             ## reinitialize our counter
-            
-    ## once we have made it through the whole sequence
+    codons = re.findall(r"(.{3})", sequence) ## from lecture example
     print(seq_id + '-frame-1-codons') ## print our an ID for our first frame of codons
     print(" ".join(codons))           ## join and print our list of codons
 
