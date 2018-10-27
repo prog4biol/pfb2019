@@ -5,7 +5,7 @@
 **A not very clear version:**
 
 ```
-vi script.py 
+vi script.py
 ```
 The above name is not very descriptive.
 
@@ -27,7 +27,7 @@ The code is correct, but the variable has a non-descriptive name. There are no b
 ```
 vi PFB_PS_2.5.py
 ```
-The above name tells you the project (Programming for Biology), the problem set (PS_2), and the question (5). 
+The above name tells you the project (Programming for Biology), the problem set (PS_2), and the question (5).
 
 ```python
 #!/usr/bin/env python3
@@ -37,7 +37,7 @@ The above name tells you the project (Programming for Biology), the problem set 
 # Description: This script tests and prints to standard output whether a number is 0, positive, or negative.
 
 #====================
-# Required Libraries
+# Required Modules
 #====================
 
 import sys
@@ -53,12 +53,12 @@ myNum = int(sys.argv[1]) #Remember to turn command line arguments into integers!
 #========
 
 if myNum == 0: #This line tests if n is equal to 0
-	print(myNum, 'equals 0.') 
-elif n > 0: 
+	print(myNum, 'equals 0.')
+elif n > 0:
 	print(myNum, 'is positive.')
 else:
 	print(myNum, 'is negative.')
-	
+
 print('\nEnd of script.\n')
 
 ```
@@ -86,13 +86,10 @@ When are README's useful?
 ###### What is .md?
 
 Markdown (.md) is a lightwight markup language. Markdown files are text files (like the ones you have been creating) with a small amount of formatting.
-* Here is a Markdown cheat sheet: 
+* Here is a Markdown cheat sheet:
 
   ​	https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf
 
 * Here is a tutorial on Markdown:
 
   ​	https://www.markdowntutorial.com/
-
-
-
