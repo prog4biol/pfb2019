@@ -2,73 +2,64 @@
 
 
 
-# 1 DNA Assembler
+## 1. DNA Assembler
 
-Write a simple De Bruijn graph-based assembler for DNA sequences that takes kmer- length and other parameters as inputs. 
-
-
-
-TA:  LUKAS
-
-Students:
+Write a simple De Bruijn graph-based assembler for DNA sequences that takes kmer length and other parameters as inputs. 
 
 
 
+**TA**: Lukas Kuderna
+
+**Group Name**: Vagina
+
+**Students**:
+
+- August Thies
+- Caitlin Spaulding
+- Maxim Gerashchenko
+- Magda Lewandowska
+- Ragini Bhargava
+
+**Repo**: [https://github.com/lukud/PFB_DBGAssembler](https://github.com/lukud/PFB_DBGAssembler)
+
+**Notebook**: 
 
 
 
-
-
-
-
-
-
-
-# 2 Protein evolution
+## 2. Protein evolution
 
 Visualize how the classes and localization of human proteins emerged over time
 
- o   For (a set of) human proteins, estimate the evolutionary age by detection of orthologs
+- For (a set of) human proteins, estimate the evolutionary age by detection of orthologs using <https://www.orthodb.org/> or some other similar tool
 
-§  Using <https://www.orthodb.org/> or some other similar tool
+- Classify the proteins based on GO terms:
+  - Function
+  - Molecular class
+  - Subcellular location
 
-o   Classify the proteins based on GO terms
+- Visualize how the distributions of GO terms has changed over evolutionary time
 
-§  Function
-
-§  Molecular class
-
-§  Subcellular location
-
-o   Visualize how the distributions of GO terms has changed over evolutionary time
-
-o   BONUS ROUND: find proteins that share a similar evolutionary age as a queried protein -proffer a guess as to the function based on distinguishing features from that time
-
- Second Bonus round: add in a prediction of indel possibility (see paper describing the compactness of a residue (it’s Ooi number) here   <https://www.ncbi.nlm.nih.gov/pubmed/3818558>)
+- *Bonus round*: find proteins that share a similar evolutionary age as a queried protein -proffer a guess as to the function based on distinguishing features from that time
+-  *Second Bonus round*: add in a prediction of indel possibility (see paper describing the compactness of a residue (it’s Ooi number) here   <https://www.ncbi.nlm.nih.gov/pubmed/3818558>)
 
 
 
-TA: JESSEN 
+**TA**: Jessen Bredeson
 
-Students:
+**Group Name**: Jessen's Angels
 
+**Students**:
 
+- Ahmed Moustafa
+- Matthew Waas
+- Stephanie Lam
 
-
+**Repo**: [https://github.com/bredeson/PFB2018-final-project](https://github.com/bredeson/PFB2018-final-project)
 
 
 
 
-
-
-
-
-
-
-
-
-
-# 3 Evolution Simulation Program 
+## 3. Evolution Simulation Program 
 
 Create a program that simulates virtual people (veeples) with typified behavior and families. Veeples will have genomes made up of fixed length strings (genes) with associated fitnesses that can be passed on the to the next generation if they successfully mate (so we will have ‘male’ and ‘female’ veeples). 
 
@@ -86,25 +77,22 @@ Consider making the steps in the simulator interactive so a user can decide whet
 
 
 
-TA: SHASTA
+**TA**: Shasta Webb
 
-Students:
+**Group Name**: 4Fs of Life
 
+**Students**:
 
+- Christiane Alves
+- Elizabeth Miller
+- Miriam Feuerman
+- Scott Friedland
 
-
-
-
-
-
-
-
-
+**Repo**: [https://github.com/webbshasta/pfb2018_FinalProject](https://github.com/webbshasta/pfb2018_FinalProject)
 
 
-# 4 Sound idea
 
-
+## 4. Sound idea
 
 When DNA sequences are input into the prompt, the program will translate them into codons. The 20 unique codons and the stop codon (21 total) will then be converted into musical notation which will be played using a third party software. Twenty one codons will span one and a half octaves plus sharps and a pause. The program will also have BLASTed the sequence to find the most likely gene the sequence originates from so that in the next prompt the user can choose to play the corresponding DNA-song for the references (human, yeast, grape). 
 
@@ -114,56 +102,39 @@ PCA details: plotting parameters might include codon composition, frequency, typ
 
 
 
+**TA**: Joseph Orkin
 
+**Group Name**: DJ Master Mix
 
-TA: JOE
+**Students**:
 
-Students:
+- Bushra Gorsi
+- Francesca Jean
+- Julie Chaves
+- Jannine Forst
+- Mandy Wong
+- Stella Paffenholz
 
-
-
-
-
-
-
-
-
-
-
-
+**Repo**: [https://github.com/nomascus/DJMM](https://github.com/nomascus/DJMM)
 
 
 
-# 5 RNA-seq pipeline
+## 5. RNA-seq pipeline
 
-Construct a python wrapper to run RNAseq on multiple samples using STAR & DESeq and kallisto and sleuth. Compare two pipelines.
-
-### 
-
-TA: KIRSTEN
-
-Students:
+Construct a python wrapper to run RNAseq on multiple samples using STAR & DESeq and kallisto and sleuth. Compare the two pipelines.
 
 
 
+**TA**: Kirsten Gotting
 
+**Group Name**: RNAstars
 
+**Students**:
 
+- Ashley Chin
+- Christina Hodson
+- Eric Hill
 
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
+**Repo**: [https://github.com/kirstengott/PFB-RNAstars](https://github.com/kirstengott/PFB-RNAstars)
 
 
