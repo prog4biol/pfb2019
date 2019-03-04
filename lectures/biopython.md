@@ -262,7 +262,7 @@ filename = "files/seq.nt.fa"
 for seq_record in SeqIO.parse(filename, "fasta"):   
   print('ID',seq_record.id)
   print('len {}'.format(len(seq_record)))
-  print('alphabet {}'.format(seq_record.alphabet)
+  print('alphabet {}'.format(seq_record.seq.alphabet)
   print('translation {}'.format(seq_record.seq.translate(to_stop=False)))
 ```
 > We added the translation of the DNA sequence into protein
