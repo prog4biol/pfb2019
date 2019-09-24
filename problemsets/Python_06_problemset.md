@@ -1,7 +1,7 @@
 Python 6 - IO - Problem Set
 ===================
 
-1. Write a script to do the following to [Python_06.txt](https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/Python_06.txt)
+1. Write a script to do the following to [Python_06.txt](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_06.txt)
    - Open and read the contents.  
    - Uppercase each line
    - Print each line to the STDOUT
@@ -10,10 +10,10 @@ Python 6 - IO - Problem Set
 2. Modifiy the script in the previous problem to write the contents to a new file called "Python_06_uc.txt"
 
 
-3. Open and print the reverse complement of each sequence in [Python_06.seq.txt](https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/Python_06.seq.txt). Each line is the following format:    `seqName\tsequence\n.` Make sure to print the output in fasta format including the sequence name and a note in the description that this is the reverse complement. Print to STDOUT and capture the output into a file with a command line redirect '>'. 
+3. Open and print the reverse complement of each sequence in [Python_06.seq.txt](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_06.seq.txt). Each line is the following format:    `seqName\tsequence\n.` Make sure to print the output in fasta format including the sequence name and a note in the description that this is the reverse complement. Print to STDOUT and capture the output into a file with a command line redirect '>'. 
    - **Remember is is always a good idea to start with a test set for which you know the correct output.**
 
-4. Open the [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) file [Python_06.fastq](https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/Python_06.fastq) and go through each line of the file. Count the number of lines and the number of characters per line. Have your program report the:  
+4. Open the [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) file [Python_06.fastq](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_06.fastq) and go through each line of the file. Count the number of lines and the number of characters per line. Have your program report the:  
     - total number of lines  
     - total number of characters  
     - average line length   
@@ -81,7 +81,7 @@ __Now do the same on the command line with `comm` command. You might need to `so
 
 
 ## Extra: Expand on last problemset exercise on nucleotide composition
-  - get the raw file [Python_06.seq.txt](https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/Python_06.seq.txt)
+  - get the raw file [Python_06.seq.txt](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_06.seq.txt)
   - in a script, open this file
   - iterate over each line in this file (seqName\tsequence\n)
      - for each sequence:

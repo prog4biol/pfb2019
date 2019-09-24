@@ -44,7 +44,7 @@ Python 1 Problem Set
         ```
         >>>  Remember, write a bit, then run your code, write some more, then run again. This makes code easier to debug. 
 
-4. Use `sys.argv` (make sure to import sys!!!) to retrieve your name, favorite color, favorite activity, and favorite animal from the command line. Remember to check out the [example in the notes](https://github.com/prog4biol/pfb2018#command-line-parameters-a-special-built-in-list). Print all the variables in one print statement.
+4. Use `sys.argv` (make sure to import sys!!!) to retrieve your name, favorite color, favorite activity, and favorite animal from the command line. Remember to check out the [example in the notes](https://github.com/prog4biol/pfb2019#command-line-parameters-a-special-built-in-list). Print all the variables in one print statement.
     - try using commas to separate your print arguments. 
     - try using '+' to separate your print arguments.
 

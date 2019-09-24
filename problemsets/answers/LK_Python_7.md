@@ -1,7 +1,7 @@
 Python 7 - Regular Expressions - Problem Set
 ===================
 
-1. In the file [Python_07_nobody.txt](https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/Python_07_nobody.txt) find every occurrence of 'Nobody' and print out the position.
+1. In the file [Python_07_nobody.txt](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_07_nobody.txt) find every occurrence of 'Nobody' and print out the position.
 
 
 ```python
@@ -11,7 +11,7 @@ with open('Python_07_nobody.txt') as nobody:
 		for found in re.finditer(r"Nobody", line):
 			print("Found match in line {} pos {}".format(line_number, found.start()+1))
 ```
-2. In the file [Python_07_nobody.txt](https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/Python_07_nobody.txt) substitute every occurrence of 'Nobody' with your favorite name and write an output file with that person's name (ex. Michael.txt).
+2. In the file [Python_07_nobody.txt](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_07_nobody.txt) substitute every occurrence of 'Nobody' with your favorite name and write an output file with that person's name (ex. Michael.txt).
 
 
 ```python
@@ -25,7 +25,7 @@ with open('Python_07_nobody.txt') as nobody:
 m.close()
 ```
 
-3. Using pattern matching, find all the header lines in [Python_07.fasta](https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/Python_07.fasta). Note that the format for a header in a fasta file is a line that starts with a greater than symbol and is followed by some text (e.g. `>seqName description` where seqName is the sequence name or identifier. The identifier cannot have spaces in it. The description that follows it can have spaces.)
+3. Using pattern matching, find all the header lines in [Python_07.fasta](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_07.fasta). Note that the format for a header in a fasta file is a line that starts with a greater than symbol and is followed by some text (e.g. `>seqName description` where seqName is the sequence name or identifier. The identifier cannot have spaces in it. The description that follows it can have spaces.)
 
 ```python
 with open('Python_07.fasta') as fasta:
@@ -78,7 +78,7 @@ for sequence in sequences:
 
 ```		
 
-6. The enzyme ApoI has a restriction site: R^AATTY where R and Y are degenerate nucleotideides. See the IUPAC table to identify the nucleotide possibilities for the R and Y. Write a regular expression to find and print all occurrences of the site in the following sequence [Python_07_ApoI.fasta](https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/Python_07_ApoI.fasta).
+6. The enzyme ApoI has a restriction site: R^AATTY where R and Y are degenerate nucleotideides. See the IUPAC table to identify the nucleotide possibilities for the R and Y. Write a regular expression to find and print all occurrences of the site in the following sequence [Python_07_ApoI.fasta](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_07_ApoI.fasta).
 
 ```
 >seq1

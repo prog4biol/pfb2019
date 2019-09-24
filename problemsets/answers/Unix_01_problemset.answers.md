@@ -26,11 +26,11 @@ Navigate into this new directory called problemsets. Verify that you are in the 
 $ cd problemsets
 $ pwd
 ```
-Use wget to copy https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/sequences.nt.fa from the web into your problemsets directory. If wget is not available on your system, use curl -O as an alternative.
+Use wget to copy https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/sequences.nt.fa from the web into your problemsets directory. If wget is not available on your system, use curl -O as an alternative.
 ```sh
-$ wget  https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/sequences.nt.fa
+$ wget  https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/sequences.nt.fa
 ```
-Without using a text editor calculate or report these qualities for the file sequences.nt.fa. This file can be found here https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/sequences.nt.fa
+Without using a text editor calculate or report these qualities for the file sequences.nt.fa. This file can be found here https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/sequences.nt.fa
 How many lines does this file contain?
 ```sh
 $ wc -l sequences.nt.fa
@@ -56,9 +56,9 @@ Rename sequences.nt.fa to cancer_genes.fasta. (Hint: read the man page for mv)
 $ mv sequences.nt.fa cancer_genes.fasta
 ```
 9. Copy this remote file: to your problemset directory.
-Use wget to copy https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/cuffdiff.txt from the web into your problemsets directory. If wget is not available on your system, use curl -O as an alternative.
+Use wget to copy https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/cuffdiff.txt from the web into your problemsets directory. If wget is not available on your system, use curl -O as an alternative.
 ```sh
-$ wget https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/cuffdiff.txt
+$ wget https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/cuffdiff.txt
 ```
 Do the following to cuffdiff.txt. The descriptions of each column in the file are in the table below.
 Look at the first few lines of the file

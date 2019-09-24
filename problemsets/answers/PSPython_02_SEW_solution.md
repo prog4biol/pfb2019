@@ -5,7 +5,7 @@ Python 2 Problem Set -- Operators, Truth, Logic
 ###Solutions
 ###Author: Shasta Webb
 
-1. Use the Interactive Interpretor to test to see if you can find an ['ATG' in](https://github.com/prog4biol/pfb2018#membership-operators) the following DNA string:
+1. Use the Interactive Interpretor to test to see if you can find an ['ATG' in](https://github.com/prog4biol/pfb2019#membership-operators) the following DNA string:
 
 ```
 GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
@@ -25,7 +25,7 @@ python3
 True
 ```
 
-3. If you didn't already save the DNA string to a variable, do that now and redo [1 and 2](https://github.com/prog4biol/pfb2018#membership-operators).
+3. If you didn't already save the DNA string to a variable, do that now and redo [1 and 2](https://github.com/prog4biol/pfb2019#membership-operators).
 
 ```
 python3
@@ -52,7 +52,7 @@ True
 
 5. Using a text editor, write a script that 
     - Assigns a value to a variable
-    - Has a [if/else statment](https://github.com/prog4biol/pfb2018#logic-control-statements) in which:
+    - Has a [if/else statment](https://github.com/prog4biol/pfb2019#logic-control-statements) in which:
        - It prints out a confirmation of truth if the value is true
        - It prints out "Not True" if the value is not true. 
 
@@ -81,7 +81,7 @@ $ git commit -m 'adding ps2.5.py'
 $ git push
 ```
 
-7. Write a new script that does the same as the question #5, but gets the value you will store in the variable from the command line. [Remember `sys` in the notes](pfb2018#command-line-parameters-a-special-built-in-list). 
+7. Write a new script that does the same as the question #5, but gets the value you will store in the variable from the command line. [Remember `sys` in the notes](pfb2019#command-line-parameters-a-special-built-in-list). 
 
 ```
 #!/usr/bin/env python3
@@ -98,7 +98,7 @@ else:
 print("End of script.\n")
 ```
 
-8. Create a script that has a [if/else statement](https://github.com/prog4biol/pfb2018#if-statement) that (remember to write a little bit at a time and test it)
+8. Create a script that has a [if/else statement](https://github.com/prog4biol/pfb2019#if-statement) that (remember to write a little bit at a time and test it)
     - Test to see if a number is positive or negative
     - print "positive" if it is positive
     - print "negative" if it is negative
@@ -117,7 +117,7 @@ else:
 print("End of script.\n")
 ```
 
-9. Add an [elif](https://github.com/prog4biol/pfb2018#ifelif) to test if the number is equal to 0. Save it and run it.
+9. Add an [elif](https://github.com/prog4biol/pfb2019#ifelif) to test if the number is equal to 0. Save it and run it.
 
 ```python
 !/usr/bin/env python3

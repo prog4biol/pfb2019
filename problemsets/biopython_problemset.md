@@ -31,7 +31,7 @@ conda install biopython
   ```
   
 3. use a small test set
-4. Run your code on https://github.com/prog4biol/pfb2018/blob/master/files/Python_08.fasta
+4. Run your code on https://github.com/prog4biol/pfb2019/blob/master/files/Python_08.fasta
 
 ## Parsing BLAST output
 ### Preparation for problem

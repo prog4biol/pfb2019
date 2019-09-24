@@ -1,7 +1,7 @@
 # Unix 2 Problem Set
 
 
-1. If you have not already done so, follow [Steps 1-3 in Unix: GIT for Beginners](https://github.com/prog4biol/pfb2018#git-for-beginners). Here is a **summary** of those steps, **Please go to lecture for detailed steps**:
+1. If you have not already done so, follow [Steps 1-3 in Unix: GIT for Beginners](https://github.com/prog4biol/pfb2019#git-for-beginners). Here is a **summary** of those steps, **Please go to lecture for detailed steps**:
    - Create a GitHub Account and Click "New" to create a new repository.
    - Add info about your repository
    - Please see the lecture notes for more detailed steps. In summary you will be doing the following: Create a local (your machine) directory with `mkdir <dirname>`, move into the new directory with `cd <dirname>` and set it up as a repository with `git init`. Now link it to your remote repository with `git remote add`.

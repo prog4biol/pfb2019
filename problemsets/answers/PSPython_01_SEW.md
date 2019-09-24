@@ -3,7 +3,7 @@
 #==========================================
 
 #File owner: 	Shasta Webb
-#Date: 			October 15, 2018
+#Date: 			October 15, 2019
 
 1. Start up the Python Interactive Interpreter. 
 
@@ -134,7 +134,7 @@
 		
         >>>  Remember, write a bit, then run your code, write some more, then run again. This makes code easier to debug. 
 
-3. Use `sys.argv` (make sure to import sys!!!) to retrieve your name, favorite color, favorite activity, and favorite animal from the command line. Remember to check out the [example in the notes](https://github.com/prog4biol/pfb2018#command-line-parameters-a-special-built-in-list)
+3. Use `sys.argv` (make sure to import sys!!!) to retrieve your name, favorite color, favorite activity, and favorite animal from the command line. Remember to check out the [example in the notes](https://github.com/prog4biol/pfb2019#command-line-parameters-a-special-built-in-list)
 
 		```python
 		#!/usr/bin/env python3
