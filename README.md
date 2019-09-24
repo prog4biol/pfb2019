@@ -1,4 +1,4 @@
-# Programming For Biology 2018
+# Programming For Biology 2019
 
 __Instructors__  
 Simon Prochnik  
@@ -36,7 +36,7 @@ Sofia Robb
             * [Standard I/O and Pipes](unix.md/#standard-io-and-pipes)
             * [More Pipe Idioms](unix.md/#more-pipe-idioms)
          * [Advanced Unix](unix.md/#advanced-unix)
-         * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Unix_01_problemset.md">Link to Unix 1 Problem Set</a>](unix.md/#link-to-unix-1-problem-set)
+         * [<a href="problemsets/Unix_01_problemset.md">Link to Unix 1 Problem Set</a>](unix.md/#link-to-unix-1-problem-set)
       * [Unix 2](unix.md/#unix-2)
          * [Text Editors](unix.md/#text-editors)
       * [Git for Beginners](unix.md/#git-for-beginners)
@@ -52,7 +52,7 @@ Sofia Robb
             * [Bringing Changes in from the Remote Repository to your Local Repository](unix.md/#bringing-changes-in-from-the-remote-repository-to-your-local-repository)
             * [Keeping track of differences between local and remote repositories](unix.md/#keeping-track-of-differences-between-local-and-remote-repositories)
             * [Links to <em>slightly</em> less basic topics](unix.md/#links-to-slightly-less-basic-topics)
-         * [<a href="https://github.com/prog4biol/pfb2018/blob/master/problemsets/Unix_02_problemset.md">Link To Unix 2 Problem Set</a>](unix.md/#link-to-unix-2-problem-set)
+         * [<a href="problemsets/Unix_02_problemset.md">Link To Unix 2 Problem Set</a>](unix.md/#link-to-unix-2-problem-set)
    * [Python Lectures](pfb.md/#python-lectures)
       * [Python 1](pfb.md/#python-1)
          * [Python Overview](pfb.md/#python-overview)
