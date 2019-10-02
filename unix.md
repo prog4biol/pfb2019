@@ -626,19 +626,19 @@ It is often necessary to create and write to a file while using the terminal. Th
 
 What is **vi**?
 
->>> **vi** is a command line text editor. vi is included in every Linux installation. You don't have to install it, ever.
+> **vi** is a command line text editor. vi is included in every Linux installation. You don't have to install it, ever.
 
 
 
 What is a command line text editor?
 
->>> A command line text editor is an text editor that you use from the command line. In most command line text editors, don't expect to be able to point and click. You will need to naviage with keyboard key strokes. The two most popular text editors are **vi** and **emacs**. You are free to use either, but we will start with **vi** since the keystrokes are less complex than in **emacs**.
+> A command line text editor is an text editor that you use from the command line. In most command line text editors, don't expect to be able to point and click. You will need to naviage with keyboard key strokes. The two most popular text editors are **vi** and **emacs**. You are free to use either, but we will start with **vi** since the keystrokes are less complex than in **emacs**.
 
 
 
 Why do I care about command line text editors?
 
->>> If you are logged into a remote machine, a command line text editor is the fastest, easiest, most efficient way to write text files.
+> If you are logged into a remote machine, a command line text editor is the fastest, easiest, most efficient way to write text files.
 
 
 
