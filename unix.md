@@ -1,4 +1,4 @@
-# Programming For Biology 2018
+# Programming For Biology 2019
 
 __Instructors__  
 Simon Prochnik  
@@ -57,7 +57,7 @@ In this course, we will be writing Python scripts and running them exclusively f
 #### Logging into Your Workstation
 
 
-Your workstation is an iMac. To log into it, provide your user name and password. Your username will be the first letter of your first name and two first letters of your last. You can check your username [here](https://github.com/prog4biol/pfb2018/blob/master/usernames.md).
+Your workstation is an iMac. To log into it, provide your user name and password. Your username will be the first letter of your first name and two first letters of your last. You can check your username [here](usernames.md).
 
 For example, for Sofia Robb her username will be sro. The password is cshl.
 
@@ -611,7 +611,7 @@ Here are a few more advanced Unix commands that are very useful, and when you ha
 ---
 
 
-### [Link to Unix 1 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Unix_01_problemset.md)
+### [Link to Unix 1 Problem Set](problemsets/Unix_01_problemset.md)
 
 ---
 ## Unix 2
@@ -1005,12 +1005,12 @@ Let's clone the course material.
 
 Let's do it!
 
-1. Go to our [PFB2018 GitHub Repository](https://github.com/prog4biol/pfb2018)
+1. Go to our [PFB GitHub Repository](https://github.com/prog4biol/pfb2019)
 2. Click the 'Clone or Download' Button
 3. Copy the URL
-  ~[Clone PFB2018](images/github-clone.png)
+  ~[Clone PFB2019](images/github-clone.png)
 4. _Clone_ the repository to your local machine
-   `git clone https://github.com/prog4biol/pfb2018.git`
+   `git clone https://github.com/prog4biol/pfb2019.git`
 
 Now you have a copy of the course material on your computer!
 
@@ -1043,7 +1043,7 @@ You will KNOW if you need to use these features of git.
 
 ---
 
-### [Link To Unix 2 Problem Set](https://github.com/prog4biol/pfb2018/blob/master/problemsets/Unix_02_problemset.md)
+### [Link To Unix 2 Problem Set](problemsets/Unix_02_problemset.md)
 
 ---
 
