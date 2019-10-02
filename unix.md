@@ -805,7 +805,7 @@ Enter into **Command Mode** for all commands. If you are unsure that you are in 
 
 
 
-## Saving and Exiting
+### Saving and Exiting
 
 Remember to enter into **Command Mode** with `<esc>` key
 
@@ -823,7 +823,7 @@ Save and exit the file you currently have open
 
 
 
-## Getting around
+### Getting around
 
 Remember to enter into **Command Mode** with `<esc>` key
 
@@ -846,7 +846,7 @@ Remember to enter into **Command Mode** with `<esc>` key
 
 
 
-## Deleting content
+### Deleting content
 
 Remember to enter into **Command Mode** with `<esc>` key
 
@@ -857,7 +857,7 @@ Remember to enter into **Command Mode** with `<esc>` key
 
 
 
-## Undoing
+### Undoing
 
 Remember to enter into **Command Mode** with `<esc>` key
 
@@ -866,7 +866,7 @@ Remember to enter into **Command Mode** with `<esc>` key
 
 
 
-## Other Useful Tips
+### Other Useful Tips
 
 - **:set number**  display line numbers
 
@@ -886,9 +886,9 @@ Remember to enter into **Command Mode** with `<esc>` key
 
 
 
-![mug_vi](/Users/smr/Library/Containers/com.apple.Preview/Data/Desktop/mug_vi.jpg)
+![mug_vi](../images/mug_vi.jpg)
 
-![mug_vi_detailed](/Users/smr/Library/Containers/com.apple.Preview/Data/Desktop/mug_vi_detailed.jpg)
+![mug_vi_detailed](../images/mug_vi_detailed.jpg)
 
 
 
