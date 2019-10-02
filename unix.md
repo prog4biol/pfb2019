@@ -886,9 +886,9 @@ Remember to enter into **Command Mode** with `<esc>` key
 
 
 
-![mug_vi](../images/mug_vi.jpg)
+![mug_vi](images/mug_vi.jpg)
 
-![mug_vi_detailed](../images/mug_vi_detailed.jpg)
+![mug_vi_detailed](images/mug_vi_detailed.jpg)
 
 
 
