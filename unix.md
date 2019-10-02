@@ -809,11 +809,11 @@ __Saving and Exiting__
 
 Remember to enter into **Command Mode** with `<esc>` key
 
-`:wq` - Save (**W**rite) and **Q**uit
-
-`:q!` - **Q**uit without Saving!!!
-
-`:w` - Save (**W**rite) Only
+|key stroke | meaning | 
+|-----------|---------|  
+|`:wq` | Save (**W**rite) and **Q**uit |   
+|`:q!` | **Q**uit without Saving!!! |  
+|`:w`  | Save (**W**rite) Only |  
 
   
 
@@ -827,18 +827,20 @@ __Getting around__
 
 Remember to enter into **Command Mode** with `<esc>` key
 
-Arrow keys - move the cursor around
- `j`, `k`, `h`, `l` - move the cursor down, up, left and right (similar to the arrow keys)
- `0` (zero)- move cursor to beginning of current line
- `^` (caret) - move cursor to beginning of current line
- `$` - move cursor to end of the current line
- `:n` - move to the nth line in the file
- `nG` - move to the **n**th line (eg 5G moves to 5th line)
- `G` - move to the last line
- `w` - move to the beginning of the next word
- `nw` - move forward n word (eg 2w moves two words forwards)
- `b` - move to the beginning of the previous word
- `nb` - move back n word
+|key stroke | meaning | 
+|-----------|---------|  
+|Arrow keys  | move the cursor around |  
+|`j`, `k`, `h`, `l` | move the cursor down, up, left and right (similar to the arrow keys) |  
+|`0` (zero) | move cursor to beginning of current line |  
+|`^` (caret) | move cursor to beginning of current line |  
+|`$`  |  move cursor to end of the current line |  
+|`:n` | move to the nth line in the file |  
+|`nG` | move to the **n**th line (eg 5G moves to 5th line) |  
+|`G` | move to the last line |  
+|`w` | move to the beginning of the next word |  
+|`nw`| move forward n word (eg 2w moves two words forwards) |  
+|`b` | move to the beginning of the previous word |  
+|`nb` | move back n word |  
 
 
 
@@ -848,12 +850,13 @@ Arrow keys - move the cursor around
 __Deleting content__
 
 Remember to enter into **Command Mode** with `<esc>` key
-|key stroke | meaning |
-|---|---|
-|`x` | delete a single character  |
-|`nx` | delete n characters (eg 5x deletes five characters)  |
-|`dd` | delete the current line  |
-|`dn` | d followed by a movement command. Delete to where the movement command would have taken you. (eg d5w means delete 5 words)|
+
+|key stroke | meaning | 
+|-----------|---------|  
+|`x`        | delete a single character  |   
+|`nx`       | delete n characters (eg 5x deletes five characters)  |  
+|`dd`       | delete the current line  |  
+|`dn`       | d followed by a movement command. Delete to where the movement command would have taken you. (eg d5w means delete 5 words)|  
 
 
 
@@ -861,17 +864,21 @@ __Undoing__
 
 Remember to enter into **Command Mode** with `<esc>` key
 
-`u` - Undo the last action (you may keep pressing u to keep undoing)
-`U` (Note: capital)** - Undo all changes to the current line
+|key stroke | meaning | 
+|-----------|---------|  
+| `u` | Undo the last action (you may keep pressing u to keep undoing)  |  
+| `U` | (Note: capital)** - Undo all changes to the current line  |  
 
 
 
 #### Other Useful Tips
 
-`:set number`  display line numbers
-`:set nonumber` turn off line numbers
-`:/[search text]` find [this text] in your file 
-      `n` go to next occurance of your search result
+|key stroke | meaning | 
+|-----------|---------|  
+| `:set number` | display line numbers | 
+| `:set nonumber` | turn off line numbers |  
+| `:/[search text]` | find [this text] in your file |  
+| `n` | go to next occurance of your search result | 
 
   
 
