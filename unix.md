@@ -622,7 +622,7 @@ Here are a few more advanced Unix commands that are very useful, and when you ha
 
 It is often necessary to create and write to a file while using the terminal. This makes it essential to use a terminal text editor. There are many text editors out there. Some of our favorite are Emacs and vim. We are going to start you out with a simple text editor called  `nano`
 
-## Introduction to vi
+### Introduction to vi
 
 What is **vi**?
 
@@ -644,11 +644,11 @@ Why do I care about command line text editors?
 
 
 
-## Getting Started with vi
+#### Getting Started with vi
 
 
 
-### Opening a file
+__Opening a file__
 
 
 
@@ -726,7 +726,7 @@ Read what the message says and type `:q<Enter>` to **Q**uit or exit.
 
 
 
-#### vi has two modes.
+__vi has two modes.__
 
 1. **Insert Mode**
 
@@ -740,11 +740,11 @@ Read what the message says and type `:q<Enter>` to **Q**uit or exit.
 
  
 
-## Creating, Writing, And Saving a File Walk through
+#### Creating, Writing, And Saving a File Walk through
 
 
 
-#### Create
+__Create__
 
 From the command line open a new file by typing 
 
@@ -752,7 +752,7 @@ From the command line open a new file by typing
 
 
 
-#### Write
+__Write__
 
 Start typing content. To do this we need to enter **Insert Mode**. 
 
@@ -780,7 +780,7 @@ Start typing your file contents. Remember that all keystrokes are ones you want 
 
 
 
-#### Save
+__Save__
 
 
 
@@ -799,13 +799,13 @@ If, instead you want to exit, since you are already in Command Mode you can use 
 
 
 
-## Common Activities and vi Commands
+#### Common Activities and vi Commands
 
 Enter into **Command Mode** for all commands. If you are unsure that you are in **command mode**, just press the `<esc>` key. It will not hurt if you are already in **Command Mode**
 
 
 
-### Saving and Exiting
+__Saving and Exiting__
 
 Remember to enter into **Command Mode** with `<esc>` key
 
@@ -823,7 +823,7 @@ Save and exit the file you currently have open
 
 
 
-### Getting around
+__Getting around__
 
 Remember to enter into **Command Mode** with `<esc>` key
 
@@ -846,7 +846,7 @@ Remember to enter into **Command Mode** with `<esc>` key
 
 
 
-### Deleting content
+__Deleting content__
 
 Remember to enter into **Command Mode** with `<esc>` key
 
@@ -857,7 +857,7 @@ Remember to enter into **Command Mode** with `<esc>` key
 
 
 
-### Undoing
+__Undoing__
 
 Remember to enter into **Command Mode** with `<esc>` key
 
@@ -866,7 +866,7 @@ Remember to enter into **Command Mode** with `<esc>` key
 
 
 
-### Other Useful Tips
+#### Other Useful Tips
 
 - **:set number**  display line numbers
 
