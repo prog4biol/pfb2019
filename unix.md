@@ -622,51 +622,275 @@ Here are a few more advanced Unix commands that are very useful, and when you ha
 
 It is often necessary to create and write to a file while using the terminal. This makes it essential to use a terminal text editor. There are many text editors out there. Some of our favorite are Emacs and vim. We are going to start you out with a simple text editor called  `nano`
 
-The way you use nano to create a file is simply by typing the command _nano_, followed by the name of the file you wish to create.
+## Introduction to vi
+
+What is **vi**?
+
+>>> **vi** is a command line text editor. vi is included in every Linux installation. You don't have to install it, ever.
+
+
+
+What is a command line text editor?
+
+>>> A command line text editor is an text editor that you use from the command line. In most command line text editors, don't expect to be able to point and click. You will need to naviage with keyboard key strokes. The two most popular text editors are **vi** and **emacs**. You are free to use either, but we will start with **vi** since the keystrokes are less complex than in **emacs**.
+
+
+
+Why do I care about command line text editors?
+
+>>> If you are logged into a remote machine, a command line text editor is the fastest, easiest, most efficient way to write text files.
+
+
+
+
+
+## Getting Started with vi
+
+
+
+### Opening a file
+
+
+
+On the command line, type `vi` followed by a file name.
+
+```bash
+srobb% vi <file>
+```
+
+
+
+Let's try it:
+
+```bash
+srobb% vi first_vi_file.txt
+```
+
+
+
+You will see this in your terminal.
 
 ```
-(~) 71% nano firstFile.txt
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+"first_vi_file.txt" [New File]
 ```
 
-This is what you will see:
-
-![Create a new file with nano.](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/nano_new.png)  
+Notice the file name at the bottom.
 
 
 
-![Modified and not saved. In the top right corner it says "Modified"](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/nano-modifided.png)  
+
+
+If you **do not** include a file name you will see something similar to this:
+
+```bash
+~
+~
+~
+~
+~                                                VIM - Vi IMproved
+~
+~                                                version 8.0.1283
+~                                            by Bram Moolenaar et al.
+~                                   Vim is open source and freely distributable
+~
+~                                          Become a registered Vim user!
+~                                 type  :help register<Enter>   for information
+~
+~                                 type  :q<Enter>               to exit
+~                                 type  :help<Enter>  or  <F1>  for on-line help
+~                                 type  :help version8<Enter>   for version info
+~
+~
+~
+
+```
+
+Read what the message says and type `:q<Enter>` to **Q**uit or exit.
 
 
 
-Things to notice:
-- At the top
-  - the name of the program (nano) and its version number
-  - the name of the file you’re editing
-  - and whether the file has been modified since it was last saved.
-- In the middle
-  - you will see either a blank area or text you have typed
-- At the bottom
-  - A listing of keyboard commands such as Save (control + o) and Exit (control + x)
+#### vi has two modes.
 
-Keyboard commands are the only way to interact with the editor. You cannot use your mouse or trackpad.
+1. **Insert Mode**
 
-Find more commands by using `control g`  
+2. **Command Mode**
 
-![The help menu displays a listing of useful commands.](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/nano-help.png)  
+   
 
-The Meta key is \<esc\>. To use the Meta+key, hit \<esc\>, release, then hit the following key
+**Insert Mode** is for typing your file contents. All keyboard strokes will be interpreted as characters you want to see in your file.
 
-Helpful commands:
--  Jump to a specific line
-    - control + _ then line number 
--  Copy a block of highlighted text
-    - control + ^ then move your cursor to start to highlight a block for copying 
-    - Meta + ^ to end your highlight block
--  Paste 
-    - control + u
+**Command Mode** is for using commands. All keyboard stokes will be interprested as commands and ***not*** as part of your file. Common commands are for deleting, copying, searching, replacing, and saving.
+
+ 
+
+## Creating, Writing, And Saving a File Walk through
 
 
-Nano is a beginner's text editor. vi and Emacs are better choices once you become a bit more comfortable using the terminal. These editors do cool stuff like syntax highlighting.
+
+#### Create
+
+From the command line open a new file by typing 
+
+`vi first_vi_file.txt` 
+
+
+
+#### Write
+
+Start typing content. To do this we need to enter **Insert Mode**. 
+
+To do this type `i`.
+
+
+
+Your vi session will now look like this:
+
+```bash
+~
+~
+~
+~
+~
+~
+-- INSERT (paste) --
+```
+
+Notice the `INSERT` at the bottom of the screen.
+
+
+
+Start typing your file contents. Remember that all keystrokes are ones you want to see in your file and that your mouse will not work.
+
+
+
+#### Save
+
+
+
+Now that the file contains some content let's enter **Command Mode** so that we can save our file.
+
+
+
+1. Press the `<ESC>` key to enter **Command Mode**.
+2. type `:w` (colon followed by a w) to **Save (Write)**
+
+
+
+If you want to type some more content, enter **Insert Mode** (`i`). 
+
+If, instead you want to exit, since you are already in Command Mode you can use the quit keystrokes `:q`
+
+
+
+## Common Activities and vi Commands
+
+Enter into **Command Mode** for all commands. If you are unsure that you are in **command mode**, just press the `<esc>` key. It will not hurt if you are already in **Command Mode**
+
+
+
+## Saving and Exiting
+
+Remember to enter into **Command Mode** with `<esc>` key
+
+- **:wq** - Save (**W**rite) and **Q**uit
+
+- **:q!** - **Q**uit without Saving!!!
+
+- **:w** - Save (**W**rite) Only
+
+  
+
+Most commands within vi are executed as soon as you press a sequence of keys. Any command beginning with a colon ( : ) requires you to hit <enter> to complete the command.
+
+Save and exit the file you currently have open
+
+
+
+## Getting around
+
+Remember to enter into **Command Mode** with `<esc>` key
+
+- **Arrow keys** - move the cursor around
+- **j, k, h, l** - move the cursor down, up, left and right (similar to the arrow keys)
+- **0** (zero)- move cursor to beginning of current line
+- **^** (caret) - move cursor to beginning of current line
+- **$** - move cursor to end of the current line
+- **:n** - move to the nth line in the file
+- **nG** - move to the **n**th line (eg 5G moves to 5th line)
+- **G** - move to the last line
+- **w** - move to the beginning of the next word
+- **nw** - move forward n word (eg 2w moves two words forwards)
+- **b** - move to the beginning of the previous word
+- **nb** - move back n word
+- **{** - move backward one paragraph
+- **}** - move forward one paragraph
+
+
+
+
+
+## Deleting content
+
+Remember to enter into **Command Mode** with `<esc>` key
+
+- **x** - delete a single character
+- **nx** - delete n characters (eg 5x deletes five characters)
+- **dd** - delete the current line
+- **dn** - d followed by a movement command. Delete to where the movement command would have taken you. (eg d5w means delete 5 words)
+
+
+
+## Undoing
+
+Remember to enter into **Command Mode** with `<esc>` key
+
+- **u** - Undo the last action (you may keep pressing u to keep undoing)
+- **U (Note: capital)** - Undo all changes to the current line
+
+
+
+## Other Useful Tips
+
+- **:set number**  display line numbers
+
+- **:set nonumber** turn off line numbers
+
+- **:/[search text]** find [this text] in your file 
+
+  - **n** go to next occurance of your search result
+
+  
+
+
+
+## Mug of vi
+
+
+
+
+
+![mug_vi](/Users/smr/Library/Containers/com.apple.Preview/Data/Desktop/mug_vi.jpg)
+
+![mug_vi_detailed](/Users/smr/Library/Containers/com.apple.Preview/Data/Desktop/mug_vi_detailed.jpg)
+
+
 
 
 ## Git for Beginners
