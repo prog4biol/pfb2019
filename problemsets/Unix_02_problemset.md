@@ -28,7 +28,7 @@
   - `git push`
   - Visit the your GitHub repository website (on github.com) and see the file from your local repository that you just pushed up to your remote repository.
 
-8. Using your text editor (nano is a good one to start with) create a fasta file and name it `mysequences.txt`. Make sure it ends up in your problem sets files directory.
+8. Using your text editor (vi is a good one to start with) create a fasta file and name it `mysequences.txt`. Make sure it ends up in your problem sets files directory.
 
 This is fasta file format:
 ```
@@ -46,5 +46,5 @@ ATGGCGTCTTGGCCTTAAAAGCTC
 14. Sync your remote repo with your local repo. Make sure to add each file you changed or use `git add *`. Don't forget to commit and push.
 15. Read the man page for `rm` and `cp` to find out how to remove and copy a directory.
 16. Print out your history and redirect it to a file called `unixBasics.history.txt`
-17. Open this file with your text editor and delete any lines you do not want to keep. See this [google search](https://www.google.com/search?rlz=1C5CHFA_enUS596US596&q=nano+delete+entire+line&oq=nano+delete+entire+line&gs_l=psy-ab.3..0j0i5i30k1.28765.29854.0.30351.7.6.0.0.0.0.186.526.0j3.3.0....0...1.1.64.psy-ab..5.2.362...0i13k1j0i7i5i30k1.0.Ub2zfH_lp_o) for info on delete entire lines in nano.
+17. Open this file with your text editor and delete any lines you do not want to keep. See this [google search](https://www.google.com/search?rlz=1C5CHFA_enUS596US596&q=vi+delete+entire+line&oq=vi+delete+entire+line&gs_l=psy-ab.3..0j0i5i30k1.28765.29854.0.30351.7.6.0.0.0.0.186.526.0j3.3.0....0...1.1.64.psy-ab..5.2.362...0i13k1j0i7i5i30k1.0.Ub2zfH_lp_o) for info on deleting entire lines in vi.
 18. Make sure all your files are synced with your remote repository.
