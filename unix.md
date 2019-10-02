@@ -848,11 +848,12 @@ Arrow keys - move the cursor around
 __Deleting content__
 
 Remember to enter into **Command Mode** with `<esc>` key
-
-`x` - delete a single character
-`nx` - delete n characters (eg 5x deletes five characters)
-`dd` - delete the current line
-`dn` - d followed by a movement command. Delete to where the movement command would have taken you. (eg d5w means delete 5 words)
+|key stroke | meaning |
+|---|---|
+|`x` | delete a single character  |
+|`nx` | delete n characters (eg 5x deletes five characters)  |
+|`dd` | delete the current line  |
+|`dn` | d followed by a movement command. Delete to where the movement command would have taken you. (eg d5w means delete 5 words)|
 
 
 
