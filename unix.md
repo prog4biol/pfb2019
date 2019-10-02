@@ -70,7 +70,7 @@ _Your password:_ cshl
 
 To bring up the command-line, use the Finder to navigate to _Applications->Utilities_ and double-click on the _Terminal_ application. This will bring up a window like the following:
 
-![OSX Terminal](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/terminal_screenshot.png)
+![OSX Terminal](images/terminal_screenshot.png)
 
 
 
@@ -941,15 +941,15 @@ Follow Steps 1 and 2 to create the remote repository. Follow Step 3 to create yo
 
 1. Navigate to GitHub --> Create Account / Log In --> Go To Repositories --> Click 'New'  
 
-  ![To create a new repository click the 'New' Button in the top right corner.](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/github-newRepoButton.png)  
+  ![To create a new repository click the 'New' Button in the top right corner.](images/github-newRepoButton.png)  
 
 2. Add a name (i.e., PFB_problemsets) and a description (i.e., Solutions for PFB Problem Sets) and click "Create Repository"  
 
-  ![Fill in the form and click the 'Create Repository Button'](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/github-newRepoForm.png)  
+  ![Fill in the form and click the 'Create Repository Button'](images/github-newRepoForm.png)  
 
 3. Create a directory on your computer and follow the instructions provided.  
 
-  ![Create a directory on your computer and follow these instructions.](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/github-newRepoInstructions.png)  
+  ![Create a directory on your computer and follow these instructions.](images/github-newRepoInstructions.png)  
 
 
    - Open your terminal and navigate to the location where you want to put a directory for your problem sets
@@ -1008,7 +1008,7 @@ Let's do it!
 1. Go to our [PFB2018 GitHub Repository](https://github.com/prog4biol/pfb2018)
 2. Click the 'Clone or Download' Button
 3. Copy the URL
-  ~[Clone PFB2018](https://raw.githubusercontent.com/prog4biol/pfb2018/master/images/github-clone.png)
+  ~[Clone PFB2018](images/github-clone.png)
 4. _Clone_ the repository to your local machine
    `git clone https://github.com/prog4biol/pfb2018.git`
 
