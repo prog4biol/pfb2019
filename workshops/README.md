@@ -6,37 +6,34 @@ Sofia Robb
 
 # Workshops
 
-## BioPython  -- Sofia Robb
+## BioPython  -- Simon Prochnik
   - [Lecture](../lectures/biopython.md)
   - [Workshop](../problemsets/biopython_problemset.md)
-## NGS -- Mike Campbell
-  - [Lecture](NGS/Mike_pfb_talk.pdf) 
+## NGS -- Anoja Perera
+  - [Lecture](NGS/tbd.pdf) 
   - [Workshop](NGS)
 ## Structural Variation -- Tomas Marques
   - [Lecture](../lectures/CSH_TMB_2018%20copy2pg.pdf)
-## Sequence Homology -- Brandi Cantarel
-  - [Lecture1](Sequence_homology/HomologyAlignments.pdf) [Lecture2](workshops/Sequence_homology/PSIBlastHmmer.pdf)
-  - [Workshop](Sequence_homology/README.md)
+## Sequence Homology -- Bill Pearson
+  - [Lecture1](Sequence_homology/tbd) [Lecture2](workshops/Sequence_homology/tbd.pdf)
+  - [Workshop](Sequence_homology/tdb)
 ## Genome Assembly -- Deb Triant
-  - [Lecture](../lectures/Triant_GenomeAssembly_CSHL2018.pdf)
+  - [Lecture](../lectures/tbd.pdf)
   - [Workshop](GenomeAssembly)
 ## Bioinformatics and Useful Tools -- Simon Prochnik
-  - [Lecture](../lectures/bioinfPipesLectureSimon.md)
+  - [Lecture](../lectures/tbd)
   - [jupyter notebook lecture notes](lectures/jupyterNotebook.md)
 ## STAR RNA Aligner -- Alex Dobin
-  - [Lecture](STAR_RNA_aligner/2018_ProgrammingForBiologistsCSHL_Dobin.pdf)
+  - [Lecture](STAR_RNA_aligner/tbd)
   - [Workshop](STAR_RNA_aligner)
 ## RNAseq -- Brian Haas
-  - [Lecture](RNAseq/rnaseq_slides_PFB2018.pdf)
+  - [Lecture](RNAseq/tbd)
   - [Workshop](RNAseq) 
 ## Ethics and Responsibility in Bioinformatics -- Simon Prochnik
   - Lecture
 ## GMOD -- Scott Cain
-  - [Lecture](GMOD/Pfb_GMOD_lecture_2018.pdf)
+  - [Lecture](GMOD/tbd)
   - [Workshop](GMOD)
-## Ontologies -- Nicole Vasilevsky
-  - [Lecture](Ontologies/IntroToOntologies_CSH_2018-10-28g.pdf)
-  - [Workshop](Ontologies)
-## Protein Function -- Paul Thomas
-  - [Lecture](Protein_Function_Annotation/PaulThomas_cshl2018.pdf)
+## Protein Function -- Huaiyu Mi
+  - [Lecture](Protein_Function_Annotation/tdb)
   - [Workshop](Protein_Function_Annotation)
