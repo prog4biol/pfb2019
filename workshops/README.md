@@ -13,9 +13,9 @@ Sofia Robb
   - [Lecture](NGS/tbd.pdf) 
   - [Workshop](NGS)
 ## Structural Variation -- Tomas Marques
-  - [Lecture](../lectures/CSH_TMB_2018%20copy2pg.pdf)
+  - [Lecture](../lectures/tbd)
 ## Sequence Homology -- Bill Pearson
-  - [Lecture1](Sequence_homology/tbd) [Lecture2](workshops/Sequence_homology/tbd.pdf)
+  - [Lecture1](Sequence_homology/tbd) [Lecture2](Sequence_homology/tbd.pdf)
   - [Workshop](Sequence_homology/tdb)
 ## Genome Assembly -- Deb Triant
   - [Lecture](../lectures/tbd.pdf)
