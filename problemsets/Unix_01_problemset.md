@@ -1,11 +1,6 @@
 # Unix Basics Quick Review and Problem Set
 
-__Table of Contents__
-
- * [Quick Review](#quick-review)
- * [Problem Set](#problem-set)
-
-Quick Review
+useful commands
 =========================
 
 | command         | description                              |
