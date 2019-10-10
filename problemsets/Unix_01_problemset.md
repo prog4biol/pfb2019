@@ -28,7 +28,7 @@ useful commands
 
 
 
-### Useful UNIX command examples to try
+### Try these examples
 
 **The files you need later in this review are in our [github repository](https://github.com/prog4biol/pfb2019). There will be direction on how to retrieve them**
 
