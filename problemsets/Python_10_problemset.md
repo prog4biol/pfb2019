@@ -5,25 +5,25 @@
 
 2. Write some some lines of code, outside your class (in your main program) that sets the name, DNA sequence, and organism for a gene.
 
-3. Write some some lines of code, outside your class that:
-  a. uses the object sequence attribute to retrieve and print the sequence.  
+3. Write some some lines of code, outside your class that:  
+  a. uses the object sequence attribute to retrieve and print the sequence.   
   b. uses the object name attribute to retrieve and print the name.   
   c. uses the object organism attribute to retrieve and print the organism.  
 
-4. Sequence length method 
-  a. Add a method to your class that caclulates and returns the length of the sequence.  
+4. Sequence length method   
+  a. Add a method to your class that caclulates and returns the length of the sequence.   
   b. Write some some lines of code, outside your class (in your main program) that gets and prints the sequence length using your new method.
 
-5. Nucleotide composition method
-  a. Add in a method that caclulates and returns the nucleotide composition.  
+5. Nucleotide composition method  
+  a. Add in a method that caclulates and returns the nucleotide composition.    
   b. Write some some lines of code, outside your class (in your main program) that gets and prints the sequence nucleotide compositio using your new method.
   
-6. GC content method
-  a. Add in a method that caclulates and returns the GC content.  
+6. GC content method  
+  a. Add in a method that caclulates and returns the GC content.    
   b. Write some some lines of code, outside your class (in your main program) that gets and prints the sequence GC content using your new method.
 
-7. FASTA Formatter method
-  a. Add in a method that returns the sequence record in FASTA format.  
+7. FASTA Formatter method  
+  a. Add in a method that returns the sequence record in FASTA format.    
   b. Write some some lines of code, outside your class (in your main program) that gets and prints the sequence in FASTA format using your new method.
 
 ## Challenge Question
