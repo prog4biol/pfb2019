@@ -18,8 +18,20 @@ Python 6 - IO - Problem Set
     - total number of characters  
     - average line length   
 
+5. Write your first FASTA parser. This is a script that reads in a FASTA file and stores each FASTA record separately for easy access for future analysis.
 
-5. You are going to generate a couple of gene list that are saved in files, add their contents to sets, and compare them. 
+Things to keep in mind:
+   - open your file
+   - read each line
+   - is your line a header line? is it a sequence line?
+   - does a single FASTA record have one line of sequence or multiple lines of sequence
+   
+   HINTS: use file I/O, if statements and dictionaries to write your first FASTA parser. Some other useful functions and methods are find, split, string concatenation.
+
+
+
+
+6. You are going to generate a couple of gene list that are saved in files, add their contents to sets, and compare them. 
 
 __Generate Gene Lists:__
 
@@ -80,13 +92,11 @@ A. Find all the genes that are transcription factors for cell proliferation
 __Now do the same on the command line with `comm` command. You might need to `sort` each file first.__
 
 
-## Extra: Expand on last problemset exercise on nucleotide composition
+## Extra: Expand on an exercise from ProblemSet 5 on nucleotide composition
   - get the raw file [Python_06.seq.txt](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_06.seq.txt)
   - in a script, open this file
   - iterate over each line in this file (seqName\tsequence\n)
      - for each sequence:
          - calculate and store the count of each unique nucleotide character in a dictionary
          - report the name, total of each nucleotide count, and the GC content 
- 
- ## Extra: Now that you know how to open a file and iterate over each line, you can write your first FASTA parser
-   - use file I/O, `if` statements and dictionaries to write your first FASTA parser. Some other useful functions and methods are `find`, `split`, string concatenation.
+
