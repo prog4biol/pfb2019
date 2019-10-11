@@ -3012,29 +3012,22 @@ g[gatc][gatc]t
 ```
 \d\d\d-\d\d\d\d
 ```
-> matches 376-8380, and 5128-8181 but not 055-98-2818.
+> matches 867-5309, and 5867-5309 but not 8-67-5309.
 
 <br><br> 
 
 ```
 ^\d\d\d-\d\d\d\d
 ```
->  matches 376-8380 and 376-83801 but not 5128-8181.
+>  matches 867-5309 and 867-53091 but not 5867-5309.
 <br><br> 
 ```
 ^\d\d\d-\d\d\d\d$
 ```
-> only matches telephone numbers (US telephone numbers without area code)
+> only matche 3 digits followed by a dash followed by 4 digits, not extra characters anywhere are allowed
 <br><br> 
-```
-\bcat
-```
-> matches "cat", "catsup" and "more catsup please" but not "scat".
-<br><br> 
-```
-\bcat\b
-```
-> only text containing the word "cat".
+
+
 
 #### Quantifiers
 
