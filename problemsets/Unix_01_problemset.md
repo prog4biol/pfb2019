@@ -70,9 +70,14 @@ date ; sleep 2 ; date
 > If you want to know more about `sleep` type `man sleep`
 
 
+__Download a file__
+You can use `wget` or `curl` to download files. On some systems only one of these may be available
+```
+curl -O https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/cuffdiff.txt
+```
 
 __Redirect STDOUT__  
-You can redirect the output of a command into a file. [Get the file](https://github.com/prog4biol/pfb2019/blob/master/problemsets/Unix_01_problemset.md#get-cuffdiff)
+You can redirect the output of a command into a file. 
 ```
 cd ~
 grep Chr7 cuffdiff.txt > fav_chr_cuffdiff.txt
@@ -126,13 +131,17 @@ You can redirect both STDOUT and STDERR to **two separate** files in one command
 cat fav_chr_cuffdiff.txt blablabla.file
 
 # redirect to two files, STDOUT to out.txt, STDERR to err.txt 
+cat fav_chr_cuffdiff.txt blablabla.file 1> out.txt 2> err.txt
+
+# this does the same, do you see the difference?
 cat fav_chr_cuffdiff.txt blablabla.file > out.txt 2> err.txt
+
 ```
 > Examine the contents of `out.txt` and `err.txt`
 
 You can also redirect both STDOUT and STDERR to **the same** file.
 ```
-cat fav_chr_cuffdiff.txt blablabla.file > all_out_err.txt 2>&1
+cat fav_chr_cuffdiff.txt blablabla.file &> all_out_err.txt 
 ```
 
 
