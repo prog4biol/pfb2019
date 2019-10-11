@@ -3779,7 +3779,10 @@ Here is a [intro](https://pandas.pydata.org/pandas-docs/stable/dsintro.html) to 
 
 Here is a very nice [interactive tutorial](https://www.learnpython.org/en/Pandas_Basics)
 
+---
+### [Link to Python 8 Problem Set](problemsets/Python_08_problemset.md)
 
+## Python 9
 ### Exceptions
 
 
@@ -4052,12 +4055,12 @@ File needs to be a FASTA file and end with .fa
 
 ---
 
-### [Link to Python 8 Problem Set](problemsets/Python_08_problemset.md)
+### [Link to Python 9 Problem Set](problemsets/Python_09_problemset.md)
 
 
 
 ---
-## Python 9
+## Python 10
 
 ### Functions
 
@@ -4633,12 +4636,12 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics,
 
 ---
 
-### [Link to Python 9 Problem Set](problemsets/Python_0_problemset.md)
+### [Link to Python 10 Problem Set](problemsets/Python_10_problemset.md)
 
 ---
 
 
-## Python 10
+## Python 11
 
 ### Classes
 
@@ -4901,7 +4904,7 @@ name: COX1   seq: ATATATTATTATATTATA
 
 ---
 
-### [Link to Python 10 Problem Set](problemsets/Python_10_problemset.md)
+### [Link to Python 11 Problem Set](problemsets/Python_11_problemset.md)
 
 ---
 
