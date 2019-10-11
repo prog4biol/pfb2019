@@ -1929,34 +1929,6 @@ print('Finished the loop')
 
 
 
-#### While/Else
-
-An Else statment can be used with a while statement. It behaves in the same way as and Else with an If statement. When the while statement is false, the else block is executed ONE TIME.
-
-```python
-#!/usr/bin/env python3
-
-count = 0
-while count < 5:
-  print("count:" , count)
-  count+=1
-else:
-  print("count:", count, "is now not less than 5")
-print("Done")
-```
-
-Output:
-```
-$ python while_else.py
-count: 0
-count: 1
-count: 2
-count: 3
-count: 4
-count: 5 is now not less than 5
-Done
-```
-> The while loop was executed five times like before. Now when count is equal to 5 and therefore not less than 5, the else block is executed. Finally the lines of code outside the while/else are executed.
 
 #### For Loops
 
