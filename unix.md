@@ -599,14 +599,14 @@ Pipe the output of `tail -f` (which monitors a growing file and prints out the n
 (~) 70% tail -f /var/log/syslog | grep mzhang
 ```
 
-### Advanced Unix
+### More Unix
 
-Here are a few more advanced Unix commands that are very useful, and when you have time you should investigate further. We list the page numbers in the Internet Version (v3) of 'The Linux Command Line' by William Shotts.
+Here are a few more advanced Unix commands that are very useful, and when you have time you should investigate further. We list the page numbers for the Linux Phrasebook Second Edition by Scott Granneman or links to online tutorials.
 
- - `awk` 
- - `sed` (p.295)
- - `perl` one-liners
- - `for` loops (p. 453)
+ - `awk` (Linux Phrasebook p.194-198)([online tutorial](https://www.tutorialspoint.com/awk/index.htm))
+ - `sed` (Linux Phrasebook p.188-194)([online tutorial](https://www.tutorialspoint.com/sed/index.htm))
+ - `perl` one-liners ([online tutoral](https://catonmat.net/introduction-to-perl-one-liners))
+ - `for` loops ([online tutorial](https://www.tutorialspoint.com/unix/for-loop.htm))
 
 ---
 
