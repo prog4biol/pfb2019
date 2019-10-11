@@ -1,4 +1,4 @@
-# Python 10 Problem Set -- Classes
+# Python 11 Problem Set -- Classes
 
 
 1. Create a DNA sequence class that will contain a sequence, its name, and it's organism of origin. Do this by creating an \_\_init\_\_ function.
