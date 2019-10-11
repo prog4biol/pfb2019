@@ -2389,7 +2389,6 @@ Normally you won't do this. We'll talk about ways to build a dictionary from a f
 > dict[key] = new_value  
 
 
-
 #### Checking That Dictionary Keys Exist
 
 Python generates an error (NameError) if you try to access a key that does not exist.  
@@ -2425,6 +2424,53 @@ found
 GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 >>> 
 ```
+
+
+#### Building a Dictionary one Key/Value at a Time using a loop
+
+Now we have all the tools to build a dictionary one key/value using a for loop. This is how you will be building dictionaries more often in real life.
+
+```python
+#!/usr/bin/env python3
+
+# create a new empty dictionary
+nt_count={}
+
+# loop example from loops lecture
+dna = 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'
+for nt in dna:
+
+  # is this nt in our dictionary?
+  if nt in nt_count:
+    # if it is, lets increment our count
+    previous_count = nt_count[nt]
+    new_count = previous_count + 1
+    nt_count[nt] = new_count
+  else:
+    # if not, lets add this nt to our dictionary and make count = 1
+    nt_count[nt] = 1;
+
+print(nt_count)
+```
+> {'G': 20, 'T': 21, 'A': 13, 'C': 16}
+
+What is another way we could increment our count?
+
+```python
+nt_count={}
+
+dna = 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'
+for nt in dna:
+  if nt in nt_count:
+    nt_count[nt] += 1
+  else:
+    nt_count[nt] = 1;
+
+print(nt_count)
+```
+> remember that `count=count+1` is the same as `count+=1`
+
+
 
 #### Sorting Dictionary Keys
 
