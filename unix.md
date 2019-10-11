@@ -496,7 +496,7 @@ Here's the complete list of redirection commands for `bash`:
 | `>> logfile.txt`    | Append standard output to the end of the file |
 | `1 > myfile.txt`    | Redirect just standard output to file (same as above) |
 | `2 > myfile.txt`    | Redirect just standard error to file     |
-| `> myfile.txt 2>&1` | Redirect both stdout and stderr to file  |
+| `&> myfile.txt` | Redirect both stdout and stderr to file  |
 
 
 These can be combined.  For example, this command redirects standard input from the file named `/etc/passwd`, writes its results into the file `search.out`, and writes its error messages (if any) into a file named `search.err`.  What does it do?  It searches the password file for a user named "root" and returns all lines that refer to that user.
