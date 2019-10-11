@@ -3509,6 +3509,16 @@ __Let' Try It__
 
 You can use more than one flag by concatenating them with `|`.  `re.search(r"ATG",dna , re.I|re.M)`
 
+
+### Helpful Regex tools
+
+There are a lot of online tools for actually seeing what is happening in your regular expression. Search for `Python Regular Expression Tester` 
+
+ - [regex101](https://regex101.com/)  
+ - [pyregex](http://www.pyregex.com/)
+ - [pythex](https://pythex.org/)
+ 
+
 ---
 
 
