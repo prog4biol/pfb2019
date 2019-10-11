@@ -1035,6 +1035,31 @@ If you are ever wondering what do you need to add to your remote repository use 
 | `git status` | To see a list of files that have been modified, deleted, and those that are untracked |
 
 
+#### Deleting and moving files
+
+|command | description |
+| ------ |-------------|
+| `git rm` | Remove files from the working tree and from the index |
+| `git mv` | Remove files from the working tree and from the index |
+
+> these two commands will update your index as well as change your local files. If you use just `rm` or `mv` you will have to update the index with add/commit. 
+
+#### Get a copy of file on your remote
+
+Sometimes you really really mess up a file, or you delete it by mistake. You have a small heart attack then you remember that you have a good copy in your remote github repo. How do you get it in your local repo?
+
+```
+git checkout <filename>
+```
+> Whew, what a life saver!  
+
+#### Tips
+
+1. Adding files over 50M will break your git repo. Don't add large files. Don't blindly use `git add -A` when there might be large files present. You will be very sad if you do.  
+2. Don't clone a git repository into another git repository. This makes git really unhappy. 
+3. Don't be afraid to ask your questions on Google. git can be complicated and a lot of people ask a lot of questions that get answered in online forums, or GitHub will have a tutorial
+
+
 #### Links to *slightly* less basic topics  
 
 You will KNOW if you need to use these features of git.
