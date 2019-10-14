@@ -1,42 +1,27 @@
 | name | id |
 |------|-----|
-|Ashley Chin|ach|
-|Ahmed Moustafa|amo|
-|August Thies|ath|
-|Bushra Gorsi|bgo|
-|Christiane Alves|cal|
-|Christina Hodson|cho|
-|Caitlin Spaulding|csp|
-|Eric Hill|ehi|
-|Elizabeth Miller| emi|
-|Francesca Jean|fje|
-|Julie Chaves|jch|
-|Jacqueline Giovanniello|jgi|
-|Jannine Forst|jfo|
-|Jessen Bresdon|jbr|
-|Joseph Orkin|jok|
-|Kirsten Gotting|kgo|
-|Lukas Kuderna|lku|
-|Miriam Feuerman|mfe|
-|Maxim Gerashchenko|mge|
-|Mustafa Jibrin|mji|
-|Magda Lewandowska|mle|
-|Matthew Waas|mwa|
-|Mandy Wong|mwo|
-|Ragini Bhargava |rbh|
-|Scott Friedland|sfr|
-|Stephanie Lam|sla|
-|Stella Paffenholz|spa|
-|Shasta Webb|swe|
-|Zhezhen Yu|zyu|
-
-
-
-
-
-
-
-
-
-
-
+|Douglas Barrows   |dba|
+|Cynthia Cardinault|cca|
+|Luca Cirillo      |lci|
+|Emmanuel Crespo   |ecr|
+|Omer Donmez       |odo|
+|Nicole Fischer    |nfi|
+|Renee Geck        |rge|
+|Rebecca Hennessey |rhe|
+|Mareike Janiak    |mja|
+|Julian Kimura     |jki|
+|Mina Kojima       |mik|
+|Zachary Konkel    |zko|
+|Marya Kozinova    |mko|
+|Alissa Lance-Byrne|ala|
+|Marina Mann       |mma|
+|Diyendo Massilani |dma|
+|Carla Mavian      |cma|
+|Cody Saraceno     |csa|
+|Kelsey Scott      |ksc|
+|Brooke Tomlinson  |bto|
+|Hunter Underhill  |hun|
+|John Werner       |jwe|
+|Hardeep Gumber    |hgu|
+|Augusto Diniz     |adi|
+|Gukham Kim        |gki|
