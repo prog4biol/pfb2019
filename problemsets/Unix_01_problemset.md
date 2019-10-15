@@ -70,9 +70,11 @@ date ; sleep 2 ; date
 > If you want to know more about `sleep` type `man sleep`
 
 
-__Download a file__
-You can use `wget` or `curl` to download files. On some systems only one of these may be available
+__Download a file__. 
+
+Change directory to your home directory. You likely have permissions to write to your home directory. Now use `wget` or `curl` to download files. On some systems only one of these may be available
 ```
+cd ~
 curl -O https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/cuffdiff.txt
 ```
 
@@ -143,7 +145,7 @@ You can also redirect both STDOUT and STDERR to **the same** file.
 ```
 cat fav_chr_cuffdiff.txt blablabla.file &> all_out_err.txt 
 ```
-
+> Check out what is in the `all_out_err.txt`
 
 Problem Set
 ===========
@@ -162,7 +164,7 @@ Problem Set
 
 6. Use `wget` to copy <https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/sequences.nt.fa> from the web into your problemsets directory. If `wget` is not available on your system, use `curl -O` as an alternative.
 
-7. Without using a text editor calculate or report these qualities for the file `sequences.nt.fa`.
+7. Without using a text editor use unix commands to find these qualities for the file `sequences.nt.fa`.
   This file can be found here <https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/sequences.nt.fa>
       - How many lines does this file contain?   
       - How many characters?    (Hint: check out the options of wc)
@@ -172,7 +174,7 @@ Problem Set
 
 8. Rename `sequences.nt.fa` to `cancer_genes.fasta`. (Hint: read the man page for mv)
 
-<div id="get-cuffdiff"></a> 9. Copy this remote file: <https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/cuffdiff.txt> to your problemset directory. 
+9. Copy this remote file, cuffdiff.txt, to your problemset directory. Here is the url you can use: <https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/cuffdiff.txt>
 
 Use `wget` to copy <https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/cuffdiff.txt> from the web into your problemsets directory. If `wget` is not available on your system, use `curl -O` as an alternative.
 
@@ -183,7 +185,7 @@ Use `wget` to copy <https://raw.githubusercontent.com/prog4biol/pfb2019/master/f
     - Look at the first few lines of the file
     - Sort the file by log fold change 'log2(fold_change)', from highest to lowest, and save in a new file in your directory called sorted.cuffdiff.out
     - Sort the file (log fold change highest to lowest) then print out only the first 100 lines. Save in a file called `top100.sorted.cuffdiff.out`.
-    - Sort the file by log fold change, print out the top 100, print only first column. This will be a list of the genes with the largest change in expression. Make sure your list is sorted by gene name and is unique. Save this curated list in a file called `differentially.expressed.genes.txt`.
+    - Sort the file by log fold change, print out the top 100, print only first column. This will be a list of the top 100 genes with the largest change in expression. Make sure your list is sorted by gene name and is unique. Save this curated list in a file called `differentially.expressed.genes.txt`.
 
 
 
