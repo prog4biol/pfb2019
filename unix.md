@@ -965,8 +965,20 @@ Follow Step 3 to create your __local repository__ and **link it** to the __remot
 3. Create a directory on your computer and follow the instructions provided.  
 
   ![Create a directory on your computer and follow these instructions.](images/github-newRepoInstructions.png)  
+    
+    - Open your terminal and navigate to the location where you want to put a directory for your problem sets  
+    - Create a new directory directory (i.e., PFB_problemsets)  
+    - Follow the instructions provided when you created your repository. These are my instructions; yours will be different. 
+    
 
 
+The new local repository consists of three "trees" maintained by git. The first one is your "Working Directory" which holds the actual files. the second one is the "Index" which acts as a staging area and finally the "HEAD" which points to the last commit you've made.
+
+Every git local repository has three main elements called _trees_:
+1. The _Working Directory_ contains your files
+2. The _Index_ is the staging area
+3. The _HEAD_ points to the last commit you made.
+> There are a few new words here. We will explain them as we go
 
 
 
@@ -974,27 +986,7 @@ Follow Step 3 to create your __local repository__ and **link it** to the __remot
 ![Local repository has three trees](images/trees.png)
 
 
-Every git repository has three main elements called _trees_:
-1. The _Working Directory_ contains your files
-2. The _Index_ is the staging area
-3. The _HEAD_ points to the last commit you made.
-> There are a few new words here. We will explain them as we go
 
-
-The new local repository consists of three "trees" maintained by git. The first one is your "Working Directory" which holds the actual files. the second one is the "Index" which acts as a staging area and finally the "HEAD" which points to the last commit you've made.
-
-   - Open your terminal and navigate to the location where you want to put a directory for your problem sets
-   - Create a new directory directory (i.e., PFB_problemsets)
-   - Follow the instructions provided when you created your repository. These are my instructions; yours will be different.
-
-```
-echo "# PFB_problemsets" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/srobb1/PFB_problemsets.git
-git push -u origin master
-```
 
 __Command Review__
 
@@ -1008,17 +1000,24 @@ __Command Review__
 | `git push -u remote-name remote-branch` | Upload your committed changes in the HEAD to the specified remote repository to the specified branch |
 
 
-Let's Do it!
 
-1. Make sure you are in your local repository
-2. Create a new file with vi: `vi git_exercises.txt`
-3. Add a line of text to the new file.
-4. Save (control + o) and Exit (control + x)
-5. (Add) Stage your changes. `git add git_exercises.txt`
-6. (Commit) Become sure you want your changes. `git commit -m 'added a line of text'`
-7. (Push) Sync/Upload your changes to the __remote__ repository. `git push origin master`
+__Follow Me__
 
-You now have a **local** repository that is linked to a **remote**. `git remote add` connects your local to the remote. Before this command the local will know nothing about your remote and vice versa. 
+Create a **local** repository that is linked to a **remote**. `git remote add` connects your local to the remote. Before this command the local will know nothing about your remote and vice versa. 
+
+1. Create a new remote repository on github.
+2. Follow all instructions given to you on github.
+
+Add some files to your new repository:
+
+3. Change directory to your local repository
+4. Create a new file with vi: `vi git_exercises.txt`
+5. Add a line of text to the new file.
+6. Save `:w` and Exit `:q`
+7. (Add) Stage your changes. `git add git_exercises.txt`
+8. (Commit) Become sure you want your changes. `git commit -m 'added a line of text'`
+9. (Push) Sync/Upload your changes to the __remote__ repository. `git push origin master`
+
 
 That is all there is to it! There are more complicated things you can do, but we won't get into those. You will know when you are ready to learn more about git when you figure out there is something you want to do but don't know how. There are thousands of online tutorials for you to search and follow.
 
