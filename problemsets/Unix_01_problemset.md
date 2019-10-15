@@ -145,7 +145,7 @@ You can also redirect both STDOUT and STDERR to **the same** file.
 ```
 cat fav_chr_cuffdiff.txt blablabla.file &> all_out_err.txt 
 ```
-
+> Check out what is in the `all_out_err.txt`
 
 Problem Set
 ===========
