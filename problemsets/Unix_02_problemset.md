@@ -6,6 +6,9 @@
    - Create a GitHub Account and Click "New" to create a new repository.
    - Add info about your repository
    - Please see the lecture notes for more detailed steps. In summary you will be doing the following: Create a local (your machine) directory with `mkdir <dirname>`, move into the new directory with `cd <dirname>` and set it up as a repository with `git init`. Now link it to your remote repository with `git remote add`.
+   
+   
+   Don't `git init` in your home directory. Make a new directory (something like pfb_problemsets or problemsets or problem_sets), change directory into the new directory, then `git init` 
 
 2. Move any files you created in Unix_01 Problem set to your local problemset git repository.
 
