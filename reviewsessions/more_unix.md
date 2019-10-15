@@ -56,3 +56,7 @@ Count the number of unique items in column one of your file.
 
 Check the computational processing going on
 
+`echo $PWD/file.txt`
+
+Get the full path to the file you are working on
+
