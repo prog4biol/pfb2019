@@ -41,4 +41,15 @@ test
 test
 
 
+`paste file1.txt file2.txt`
+
+This will join two files line by line and display on the screen
+
+`column -t |less -S`
+
+Makes a messy table have clean columns and presents it with an easily viewable scrolling display 
+
+`zgrep -v "##" file.vcf.gz| column -t |less -S`
+
+Display a vcf without all the header garbage
 
