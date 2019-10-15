@@ -76,7 +76,8 @@ Check the computational processing going on
 Get the full path to the file you are working on
 
 
-__Jessen__
+__Jessen__  
+
 `cat badfile | tr '\r' '\n' >goodfile`
 
 Sometimes you have carriage returns instead of newline and you want to replace all of them. This command replaces all \r (carriage returns) with \n (newlines). The old file is not changed, but the new file has the changes.
