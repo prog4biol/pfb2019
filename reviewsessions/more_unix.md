@@ -35,10 +35,13 @@ Compares two **sorted** files and prints out content depending on the flags
 
 
 
-__Daniel__
 
-test
-test
+
+### Simon
+
+Quick way to see sequence identifiers in a fasta file
+
+`grep ">" sequences.fa`
 
 
 
