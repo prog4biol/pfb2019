@@ -7,7 +7,7 @@ __Sofia__
 
 list the contents of your directory with all the information sorted by most recent at the top, but only show me the top 10.
 
-
+Simon suggests `ls -ltrh`  as an alternative, which lists all files so that the last file you modified shows up at the bottom of the list (just above the prompt) and prints file sizes in readable form e.g. '10M' for megabytes
 
 `perl -pe s/\r/\n/g badfile > newfile`
 
