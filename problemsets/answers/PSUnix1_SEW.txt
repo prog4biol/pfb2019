@@ -1,0 +1,77 @@
+# Shasta Webb
+# CSHL Programming for Biology 
+# TA Preparation 
+# Unix Problem Set I
+#===============================================
+
+#2 What is the full path to your home directory?
+
+echo ~
+
+#3 Go up one directory? How many files does it contain? How many directories?
+
+cd ..
+
+#4 Make a directory called problemsets.
+
+mkdir problemsets
+
+#5 Navigate into this new directory called problemsets. Verify that you are in the correct directory by using pwd.
+
+cd problemsets/
+
+#6 Use wget to copy https://raw.githubusercontent.com/srobb1/pfb2017/master/files/sequences.nt.fa from the web into your problemsets directory. If wget is not available on your system, use curl -O as an alternative.
+
+curl -O https://github.com/prog4biol/pfb2017/blob/master/files/sequences.nt.fa
+
+#7 Without using a text editor calculate or report these qualities for the file sequences.nt.fa. This file can be found here https://raw.githubusercontent.com/srobb1/pfb2017/master/files/sequences.nt.fa
+
+#7a How many lines does this file contain?
+
+wc -l sequences.nt.fa
+
+#7b How many characters? (Hint: check out the options of wc)
+
+wc -m sequences.nt.fa
+
+#7c What is the first line of this file? (Hint: read the man page of head)
+
+head -1 sequences.nt.fa
+
+#7d What are the last 3 lines? (Hint: read the man page of tail)
+
+tail -3 sequences.nt.fa
+
+#7e How many sequences are in the file? (Hint: use grep) (Note: The start of a sequence is indicated by a > character.)
+
+grep '>' sequences.nt.fa | wc -l
+
+#8 Rename sequences.nt.fa to cancer_genes.fasta. (Hint: read the man page for mv)
+
+mv seqs.nt.fa cancer_genes.fa
+
+#9 Copy this remote file: https://raw.githubusercontent.com/srobb1/pfb2017/master/files/cuffdiff.txt to your problemset directory.
+
+#10 Do the following to cuffdiff.txt. The descriptions of each column in the file are in the table below.
+
+#10a Look at the first few lines of the file.
+
+head -3 cuffdiff.txt
+
+#10b Sort the file by log fold change 'log2(fold_change)', from highest to lowest, and save in a new file in your directory called sorted.cuffdiff.out
+
+This will extract just the column: cat cuffdiff.txt | cut -f 10 | sort >sorted.cuffdiff.txt
+
+This will sort in descending order by specified column: sort -r -g -k 10 cuffdiff.txt >sorted.cuffdiff.txt 
+
+This will test it: cat sorted.cuffdiff.txt | cut -f 10
+
+#10c Sort the file (log fold change highest to lowest) then print out only the first 100 lines. Save in a file called top100.sorted.cuffdiff.out
+
+sort -r -g -k 10 cuffdiff.txt | head -100 >top100.sorted.cuffdiff.txt
+
+#10d Sort the file by log fold change, print out the top 100, print only first column. This will be a list of the genes with the largest change in expression. Make sure your list is sorted by gene name and is unique. Save this curated list in a file called differentially.expressed.genes.txt.
+
+sort -r -g -k 10 cuffdiff.txt | head -100 | cut -f 1 | sort | uniq >differentially.expressed.genes.txt
+
+
