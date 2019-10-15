@@ -23,15 +23,15 @@ This will print out the date and time before you run some script and after. Now 
 
 `comm -[1][2][3] file1 file2`
 
-Compares two sorted files and prints out content depending on the flags
+Compares two **sorted** files and prints out content depending on the flags
 
 
 
 `comm -3 file1 file2`
 
 `-3` will print out only the shared lines
-`-1` will prit out the lines unique to file1
-`-2` will pritn out the lines unique to file2
+`-1` will print out the lines unique to file1
+`-2` will print out the lines unique to file2
 
 
 
