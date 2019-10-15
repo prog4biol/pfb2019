@@ -21,7 +21,7 @@ This will print out the date and time before you run some script and after. Now 
 
 
 
-`comm -[1][2][3] file1 file2``
+`comm -[1][2][3] file1 file2`
 
 Compares two sorted files and prints out content depending on the flags
 
