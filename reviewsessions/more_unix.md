@@ -78,6 +78,11 @@ Get the full path to the file you are working on
 
 __Jessen__  
 
+`od -c badfile`
+
+prints out every character, character by character, every character. Now you can SEE tabs, new lines, carriage returns, and other weird characters
+
+
 `cat badfile | tr '\r' '\n' >goodfile`
 
 Sometimes you have carriage returns instead of newline and you want to replace all of them. This command replaces all \r (carriage returns) with \n (newlines). The old file is not changed, but the new file has the changes.
