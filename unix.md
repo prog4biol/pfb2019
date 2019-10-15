@@ -943,7 +943,7 @@ Usually you have a local copy of your project/repository and a remote copy. The 
 
 You can use a web browser to interact with the remote and the terminal to interact with the local repository.
 
-#### Creating a new repository 
+### Creating a new repository 
 
 A repository is a project that contains all of the project files, and stores each file's revision history. Repositories can have multiple collaborators. Repositories usually have two components, one __remote__ and one __local__.
 
@@ -1055,7 +1055,7 @@ git checkout <filename>
 3. Don't be afraid to ask your questions on Google. git can be complicated and a lot of people ask a lot of questions that get answered in online forums, or GitHub will have a tutorial
 
 
-#### Cloning a Repository
+### Cloning a Repository
 
 Sometimes you want to download and use someone else's repository. This is different form above where we created our own repository. This is just a copy of someone else's repository
 
