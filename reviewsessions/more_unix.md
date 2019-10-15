@@ -9,9 +9,9 @@ list the contents of your directory with all the information sorted by most rece
 
 Simon suggests `ls -ltrh`  as an alternative, which lists all files so that the last file you modified shows up at the bottom of the list (just above the prompt) and prints file sizes in readable form e.g. '10M' for megabytes
 
-`perl -pe s/\r/\n/g badfile > newfile`
+`perl -pe 's/\r/\n/g' badfile > newfile`
 
-Sometimes you have carriage returns instead of newline and you want to replace all of them. This command replaces all \r (carriage returns) with \n (newlines). The old file is not changed, but the new file has the changes.
+Sometimes you have carriage returns instead of newline and you want to replace all of them. This command replaces all \r (carriage returns) with \n (newlines). The old file is not changed, but the new file has the changes. 
 
 
 
