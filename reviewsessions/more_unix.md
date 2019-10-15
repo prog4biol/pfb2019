@@ -37,7 +37,7 @@ Compares two **sorted** files and prints out content depending on the flags
 
 
 
-### Simon
+___Simon___
 
 Quick way to see sequence identifiers in a fasta file
 
@@ -50,7 +50,7 @@ Quick way to see sequence identifiers in a fasta file
 
 This will join two files line by line and display on the screen
 
-`column -t |less -S`
+`column -t tab-file.txt |less -S`
 
 Makes a messy table have clean columns and presents it with an easily viewable scrolling display 
 
@@ -73,6 +73,31 @@ Count the number of unique items in column one of your file.
 Check the computational processing going on
 
 `echo $PWD/file.txt`
-
 Get the full path to the file you are working on
+
+
+__Jessen__
+`cat badfile | tr '\r' '\n' >goodfile`
+
+Sometimes you have carriage returns instead of newline and you want to replace all of them. This command replaces all \r (carriage returns) with \n (newlines). The old file is not changed, but the new file has the changes.
+
+
+`find . -size +1g`
+
+Recursively find files 1 Gb in size or larger.
+
+
+`alias ll='ls -lGgotrh'`
+
+Create a command alias to `ll` to pretty print files and directories with color, owner, group, and permissions.
+
+
+`fold -w 100 one-line.fasta >line-wrapped.fasta`
+
+Wrap the lines of a fasta file to 100 bp wide.
+
+
+cat input.fastq | paste - - - - | cut -f1,2 | tr '@\t' '>\n' >output.fasta`
+
+Convert a FASTQ file to FASTA file.
 
