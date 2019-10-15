@@ -943,7 +943,7 @@ Usually you have a local copy of your project/repository and a remote copy. The 
 
 You can use a web browser to interact with the remote and the terminal to interact with the local repository.
 
-#### Creating a new repository 
+### Creating a new repository 
 
 A repository is a project that contains all of the project files, and stores each file's revision history. Repositories can have multiple collaborators. Repositories usually have two components, one __remote__ and one __local__.
 
@@ -966,9 +966,7 @@ Follow Step 3 to create your __local repository__ and **link it** to the __remot
 
   ![Create a directory on your computer and follow these instructions.](images/github-newRepoInstructions.png)  
     
-    - Open your terminal and navigate to the location where you want to put a directory for your problem sets  
-    - Create a new directory directory (i.e., PFB_problemsets)  
-    - Follow the instructions provided when you created your repository. These are my instructions; yours will be different. 
+
     
 
 
@@ -1021,32 +1019,6 @@ Add some files to your new repository:
 
 That is all there is to it! There are more complicated things you can do, but we won't get into those. You will know when you are ready to learn more about git when you figure out there is something you want to do but don't know how. There are thousands of online tutorials for you to search and follow.
 
-#### Cloning a Repository
-
-Sometimes you want to download and use someone else's repository. 
-
-Let's clone the course material.
-
-Let's do it!
-
-1. Go to our [PFB GitHub Repository](https://github.com/prog4biol/pfb2019)
-2. Click the 'Clone or Download' Button
-3. Copy the URL
-  ~[Clone PFB2019](images/github-clone.png)
-4. _Clone_ the repository to your local machine
-   `git clone https://github.com/prog4biol/pfb2019.git`
-
-Now you have a copy of the course material on your computer!
-
-#### Bringing Changes in from the Remote Repository to your Local Repository
-
-If changes are made to any of these files in the online, remote repository, and you want to update your local copy, you can _pull_ the changes.
-`git pull`  
-
-| command                                 | description                              |
-| --------------------------------------- | ---------------------------------------- |
-| `git pull` | To get changes from the remote into your local copy|
-
 
 #### Keeping track of differences between local and remote repositories
 
@@ -1075,11 +1047,45 @@ git checkout <filename>
 ```
 > Whew, what a life saver!  
 
+
 #### Tips
 
 1. Adding files over 50M will break your git repo. Don't add large files. Don't blindly use `git add -A` when there might be large files present. You will be very sad if you do.  
 2. Don't clone a git repository into another git repository. This makes git really unhappy. 
 3. Don't be afraid to ask your questions on Google. git can be complicated and a lot of people ask a lot of questions that get answered in online forums, or GitHub will have a tutorial
+
+
+### Cloning a Repository
+
+Sometimes you want to download and use someone else's repository. This is different form above where we created our own repository. This is just a copy of someone else's repository
+
+Let's clone the course material.
+
+Let's do it!
+
+1. Go to our [PFB GitHub Repository](https://github.com/prog4biol/pfb2019)
+2. Click the 'Clone or Download' Button
+3. Copy the URL
+  ~[Clone PFB2019](images/github-clone.png)
+4. _Clone_ the repository to your local machine
+   `git clone https://github.com/prog4biol/pfb2019.git`
+
+Now you have a copy of the course material on your computer!
+
+#### Bringing Changes in from the Remote Repository to your Local Repository
+
+If changes are made to any of these files in the online, remote repository, and you want to update your local copy, you can _pull_ the changes.
+`git pull`  
+
+| command                                 | description                              |
+| --------------------------------------- | ---------------------------------------- |
+| `git pull` | To get changes from the remote into your local copy|
+
+
+
+
+
+
 
 
 #### Links to *slightly* less basic topics  

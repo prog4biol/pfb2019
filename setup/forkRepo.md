@@ -24,6 +24,9 @@ For a more in-depth tutorial on forking, please visit the [GitHub Help](https://
 
 How To Sync
 -------
+
+[Link to online GitHub Instructions](https://help.github.com/en/articles/syncing-a-fork)
+
 Now that your forked repo is cloned and configured with "upstream", you have a three-node directed-graph of remote and local repositories. The graph is directed because changes will flow in only one direction, as shown in the following diagram:
 ```
      [upstream/pfb2019] <-- [origin/pfb2019]
