@@ -43,6 +43,8 @@ Quick way to see sequence identifiers in a fasta file
 
 `grep ">" sequences.fa`
 
+### Joe
+
 
 `paste file1.txt file2.txt`
 
