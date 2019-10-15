@@ -967,9 +967,7 @@ Follow Step 3 to create your __local repository__ and **link it** to the __remot
   ![Create a directory on your computer and follow these instructions.](images/github-newRepoInstructions.png)  
 
 
-   - Open your terminal and navigate to the location where you want to put a directory for your problem sets
-   - Create a new directory directory (i.e., PFB_problemsets)
-   - Follow the instructions provided when you created your repository. These are my instructions; yours will be different.
+
 
 
 
@@ -998,6 +996,8 @@ git remote add origin https://github.com/srobb1/PFB_problemsets.git
 git push -u origin master
 ```
 
+__Command Review__
+
 
 | command                                 | description                              |
 | --------------------------------------- | ---------------------------------------- |
@@ -1011,7 +1011,7 @@ git push -u origin master
 Let's Do it!
 
 1. Make sure you are in your local repository
-2. Create a new file with nano: `vi git_exercises.txt`
+2. Create a new file with vi: `vi git_exercises.txt`
 3. Add a line of text to the new file.
 4. Save (control + o) and Exit (control + x)
 5. (Add) Stage your changes. `git add git_exercises.txt`
