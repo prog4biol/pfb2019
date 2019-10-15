@@ -31,7 +31,7 @@ Now that your forked repo is cloned and configured with "upstream", you have a t
 ```
      [upstream/pfb2019] <-- [origin/pfb2019]
               |                  ^
-	          V                  |
+	      V                  |
              [local/pfb2019] ----+
 ```
 
