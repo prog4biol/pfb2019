@@ -42,3 +42,17 @@ test
 
 
 
+__Kirsten__
+
+`cat file.txt | cut -f 1 | sort | uniq -c`
+
+Cuts out the first column in a whitespace delimited file and pulls out and counts the unique elements
+
+`cat file.txt | cut -f 1 | sort | uniq | wc -l`
+
+Count the number of unique items in column one of your file.
+
+`top`
+
+Check the computational processing going on
+
