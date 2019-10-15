@@ -70,7 +70,8 @@ date ; sleep 2 ; date
 > If you want to know more about `sleep` type `man sleep`
 
 
-__Download a file__
+__Download a file__. 
+
 Change directory to your home directory. You likely have permissions to write to your home directory. Now use `wget` or `curl` to download files. On some systems only one of these may be available
 ```
 cd ~
