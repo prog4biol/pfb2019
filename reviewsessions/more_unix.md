@@ -53,3 +53,21 @@ Makes a messy table have clean columns and presents it with an easily viewable s
 
 Display a vcf without all the header garbage
 
+__Kirsten__
+
+`cat file.txt | cut -f 1 | sort | uniq -c`
+
+Cuts out the first column in a whitespace delimited file and pulls out and counts the unique elements
+
+`cat file.txt | cut -f 1 | sort | uniq | wc -l`
+
+Count the number of unique items in column one of your file.
+
+`top`
+
+Check the computational processing going on
+
+`echo $PWD/file.txt`
+
+Get the full path to the file you are working on
+
