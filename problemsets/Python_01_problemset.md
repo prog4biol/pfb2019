@@ -7,7 +7,7 @@ Python 1 Problem Set
     - Store your name in a variable
     - Print the contents of this variable.
     
-2. Working with a text editor. Use nano to write a script. 
+2. Working with a text editor. Use vi to write a script. 
    - Make sure to include `#!/usr/bin/env python3` at the top!! 
    - Add code to print out, your name  
    
