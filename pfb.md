@@ -511,7 +511,7 @@ Note: Find out more about [bitwise operators](https://www.tutorialspoint.com/pyt
 ### Truth
 
 
-Lets take a step back, What is truth?  
+Lets take a step back... What is truth?  
 
 Everything is true, except for:  
 
@@ -628,9 +628,9 @@ did not find ATG in your dna sequence
 
 #### if/elif
 
-- The if condition is tested as before, and the indented block is executed if the condition is true.
-- If it's false, the indented block following the elif is executed if the first elif condition is true. 
-- Any remaining elif conditions will be tested in order until one is found to be true. If none is true, the else indented block is executed.
+- The `if` condition is tested as before, and the indented block is executed if the condition is true.
+- If it's false, the indented block following the `elif` is executed if the first `elif` condition is true. 
+- Any remaining `elif` conditions will be tested in order until one is found to be true. If none is true, the `else` indented block is executed.
 
 ```python
 count = 60
@@ -746,7 +746,7 @@ Sometimes one type of number needs to be changed to another for a function to be
 
 #### Numeric Functions
 
-Here is a list of functions that take numbers as arguments. These use useful things like rounding.
+Here is a list of functions that take numbers as arguments. These do useful things like rounding.
 
 
 
