@@ -459,7 +459,7 @@ little lamb.
 
 Mary had a little lamb,
 whose fleece was white as snow.
-^D
+^d * NOTE - this needs to be typed but will not be show up in terminal window
       6      20     107
 ```
 In this example, I ran the `wc` program.  It waited for me to type in a little poem.  When I was done, I typed the END-OF-FILE character, control-d (^d for short).  `wc` then printed out three numbers indicating the number of lines, words, and characters in the input.
@@ -625,7 +625,7 @@ Here are a few more advanced Unix commands that are very useful, and when you ha
 ### Text Editors
 
 
-It is often necessary to create and write to a file while using the terminal. This makes it essential to use a terminal text editor. There are many text editors out there. Some of our favorite are Emacs and vim. We are going to start you out with a simple text editor called  `nano`
+It is often necessary to create and write to a file while using the terminal. This makes it essential to use a terminal text editor. There are many text editors out there. Some of our favorite are Emacs and vim. We are going to start you out with a simple text editor called  `vi`
 
 ### Introduction to vi
 
@@ -822,9 +822,7 @@ Remember to enter into **Command Mode** with `<esc>` key
 
   
 
-Most commands within vi are executed as soon as you press a sequence of keys. Any command beginning with a colon ( : ) requires you to hit <enter> to complete the command.
-
-Save and exit the file you currently have open
+Most commands within vi are executed as soon as you press a sequence of keys. Any command beginning with a colon ( : ) requires you to hit `<enter>` to complete the command.
 
 
 
@@ -941,7 +939,7 @@ Usually you have a local copy of your project/repository and a remote copy. The 
 
 ![Relationship between local and remote repositories](images/git_remotes.png)
 
-You can use a web browser to interact with the remote and the terminal to interact with the local repository.
+You can use a web browser to interact with the remote server (gitHub) and the terminal to interact with the local repository.
 
 ### Creating a new repository 
 
@@ -962,7 +960,7 @@ Follow Step 3 to create your __local repository__ and **link it** to the __remot
   ![Fill in the form and click the 'Create Repository Button'](images/github-newRepoForm.png)  
 
 
-3. Create a directory on your computer and follow the instructions provided.  
+3. Create a directory on your computer, navigate into it, and then and follow the instructions provided.  
 
   ![Create a directory on your computer and follow these instructions.](images/github-newRepoInstructions.png)  
     
@@ -1033,8 +1031,8 @@ If you are ever wondering what do you need to add to your remote repository use 
 
 |command | description |
 | ------ |-------------|
-| `git rm` | Remove files from the working tree and from the index |
-| `git mv` | Remove files from the working tree and from the index |
+| `git rm` | Remove files from the index, or from the working tree and from the index |
+| `git mv` | Move or rename a file, a directory, or a symlink |
 
 > these two commands will update your index as well as change your local files. If you use just `rm` or `mv` you will have to update the index with add/commit. 
 
