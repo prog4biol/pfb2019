@@ -1,12 +1,12 @@
-##Tips for Organized Coding
+## Tips for Organized Coding
 
 1. Naming directories
 
 `mkdir pfb2019_SEW`
 
-•Keep directory names informative.
-•No spaces or special characters.
-•No extensions (e.g., .txt, .fasta)
+ - Keep directory names informative.
+ - No spaces or special characters.
+ - No extensions (e.g., .txt, .fasta)
 
 2. Naming files
 
