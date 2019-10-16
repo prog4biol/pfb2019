@@ -6,7 +6,7 @@
 
 ```
 set tabstop=2
-set numbers
+set number
 syntax on
 ```
 
