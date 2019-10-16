@@ -496,7 +496,7 @@ Operators are listed in order of precedence. Highest listed first. Not all the o
 | `+` `-`                                  | Addition and subtraction                 |
 | `>>` `<<`                                | Right and left bitwise shift             |
 | `&`                                      | Bitwise 'AND'                            |
-| `^` `|`                                 | Bitwise exclusive 'OR' and regular 'OR'  |
+| `^` `\|`                                 | Bitwise exclusive 'OR' and regular 'OR' (really just a pipe, no backslash) |
 | `<=` `<` `>` `>=`                        | Comparison operators                     |
 | `<>` `==` `!=`                           | Equality operators                       |
 | `=` `%=` `/=` `//=` `-=` `+=` `*=` `**=` | Assignment operators                     |
