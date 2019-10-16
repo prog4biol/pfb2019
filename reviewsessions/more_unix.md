@@ -87,8 +87,11 @@ prints out every character, character by character, every character. Now you can
 
 Sometimes you have carriage returns instead of newline and you want to replace all of them. This command replaces all \r (carriage returns) with \n (newlines). The old file is not changed, but the new file has the changes.
 
+`yes > yes.txt`
+Create a file full of just lines of yes. Make sure to kill it sometime with Cnt-C
 
-`find . -size +1g`
+
+`find . -size +1G`
 
 Recursively find files 1 Gb in size or larger.
 
