@@ -1,0 +1,47 @@
+mens	small	heather seafoam
+womens	medium	Heather Purple
+womens	medium	berry
+mens 	medium 	heather coral silk
+womens	Small	Kiwi
+mens	large	Graphite Heather
+mens	large	sport grey
+mens	small	Carolina Blue
+mens	large	heather purple
+mens	large	heather coral silk
+mens	Medium	Heather Royal
+mens	large	Heather Irish
+womens	Medium	heather purple 
+mens	xs	white
+mens	Medium	heather royal
+womens	Small	Berry
+mens	medium	Heather Galapagos Blue
+womens	Medium	Royal heather
+womens	Small	Antique Heliconia
+womens	large	kiwi
+womens	Small	Antique Heliconia
+mens	xl	Heather cardinal
+womens	xs	Heather orange
+mens	small	Cornsilk
+mens	medium	Heather Forest
+mens	small	dark heather
+mens	small	Heather Maroon
+mens	small	Royal Blue
+womens	medium	kiwi
+mens	medium	gold
+mens	large	Heather Royal
+mens	xl	indigo blue
+womens	medium	berry
+mens	medium	Heather Military Green
+mens	medium	dark heather
+mens	medium	Carolina Blue
+mens	large	Carolina Blue
+womens	medium	Carolina Blue
+Mens	Medium	Iris
+child	4T	green
+child	3T	pink
+child	2T	orange
+child	6T	pink
+child	4T	green
+Womens	Medium	Kiwi
+Womens	Medium	heather purple
+mens	small	olive
