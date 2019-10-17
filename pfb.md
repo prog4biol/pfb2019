@@ -1542,10 +1542,10 @@ __Here are some of the ALIGNMENT options:__
 
 | Option | Meaning                                  |      |
 | ------ | ---------------------------------------- | ---- |
-| '<'    | Forces the field to be left-aligned within the available space (this is the default for most objects). |      |
-| '>'    | Forces the field to be right-aligned within the available space (this is the default for numbers). |      |
-| '='    | Forces the padding to be placed after the sign (if any) but before the digits. This is used for printing fields in the form ‘+000000120’. This alignment option is only valid for numeric types. |      |
-| '^'    | Forces the field to be centered within the available space. |      |
+| `<`    | Forces the field to be left-aligned within the available space (this is the default for most objects). |      |
+| `>`    | Forces the field to be right-aligned within the available space (this is the default for numbers). |      |
+| `=`    | Forces the padding to be placed after the sign (if any) but before the digits. This is used for printing fields in the form ‘+000000120’. This alignment option is only valid for numeric types. |      |
+| `^`    | Forces the field to be centered within the available space. |      |
 
 >Here's an example 
 >
