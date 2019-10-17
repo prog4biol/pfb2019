@@ -1019,7 +1019,7 @@ ATG
 ATGGGTCTAC
 ```
 
-Something to think about: Values of variables are variable. Or in other words, they are mutable, changeable.  
+Something to think about: Values of variables are variable. Or in other words, they are mutable or changeable.  
 ```python
 >>>dna = 'ATG'
 ATG
@@ -1308,7 +1308,7 @@ This string 'ATTAAAGGGCCC' is made up of the following sequence of characters, a
 | 10             | C         |
 | 11             | C         |
 
-Let's return the 4th, 5th, and 6th nucleotides. To do this, we need to start counting at 0 and remember that python counts the gaps between each character. 
+Let's return the 4th, 5th, and 6th nucleotides. To do this, we need to start counting at 0 and remember that python counts the gaps between each character, starting with zero. 
 
 ```
 index      0   1   2   3   4   5   6   7   8 ...
@@ -1575,7 +1575,7 @@ __Common Types__
 #### What's the point?
 
 
-So much can be done with the `format()` function. Here is one last example, but not the last functionality of this function.  Let truncate a long floating point number.  The default is 6 decimal places. Note that the function rounds to the nearest decimal place, but not always exactly the way you expect because of the way computers represent decimals with 1s and 0s.
+So much can be done with the `format()` function. Here is one last example, but not the last functionality of this function.  Let round a floating point number to fewer decimal places, starting with a lot.  (The default is 6.) Note that the function rounds to the nearest decimal place, but not always exactly the way you expect because of the way computers represent decimals with 1s and 0s.
 
 ```python
 '{:f}'.format(3.141592653589793)
