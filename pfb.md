@@ -80,7 +80,7 @@ Execute the Python script like this (% represents the prompt)
 % python3 hello.py 
 ```
 
-This produces the following resul in the Terminal:
+This produces the following result in the Terminal:
 ```bash
 Hello, PFB2019!
 ```
@@ -375,22 +375,22 @@ An operator in a programming language is a symbol that tells the compiler or int
 In Python we can write statements that perform mathematical calculations. To do this we need to use operators that are specific for this purpose. Here are arithmetic operators:
 
 
-| Operator | Description                              | Example            | Result |
-| -------- | ---------------------------------------- | ------------------ | ------ |
-| `+`      | Addition                                 | `3+2`              | 5      |
-| `-`      | Subtraction                              | `3-2`              | 1      |
-| `*`      | Multiplication                           | `3*2`              | 6      |
-| `/`      | Division                                 | `3/2`              | 1.5    |
-| `%`      | Modulus (divides left operand by right operand and returns the remainder) | `3%2`              | 1      |
-| `**`     | Exponent                                 | `3**2`             | 9      |
-| `//`     | Floor Division (result is the quotient with digits after the decimal point removed. If one of the operands is negative, the result is floored, i.e., rounded away from zero | `3//2`  ; `-11//3` | 1 ; -4 |
+| Operator | Description                                                  | Example          | Result      |
+| -------- | ------------------------------------------------------------ | ---------------- | ----------- |
+| `+`      | Addition                                                     | `3+2`            | 5           |
+| `-`      | Subtraction                                                  | `3-2`            | 1           |
+| `*`      | Multiplication                                               | `3*2`            | 6           |
+| `/`      | Division                                                     | `3/2`            | 1.5         |
+| `%`      | Modulus (divides left operand by right operand and returns the remainder) | `3%2`            | 1           |
+| `**`     | Exponent                                                     | `3**2`           | 9           |
+| `//`     | Floor Division (result is the quotient with digits after the decimal point removed. If one of the operands is negative, the result is floored, i.e., rounded away from zero | `3//2`  `-11//3` | 1        -4 |
 
 
-__modulus__
+__Modulus__
 
 ![3 divided by 2 is 1 with a remainder of 1. Modulus returns the remainer](images/modulus.png)
 
-__floor examples__
+__Floor examples__
 
 ```python
 >>> 3/2
@@ -886,7 +886,7 @@ It returns three different values depending on x and y
 
 ### Sequences
 
-In the next section, we will learn about strings, tuples, and lists. These are all examples of python sequences. A string is a sequence of characters `'ACGTGA'`, a tuple `(0.23, 9.74, -8.17, 3.24, 0.16)`, and a list `['dog', 'cat', 'bird']` are sequences of any kind of data. We'll see much more detail in a bit.
+In the next section, we will learn about strings, tuples, and lists. These are all examples of python sequences. A sequence of characters `'ACGTGA'`, a tuple `(0.23, 9.74, -8.17, 3.24, 0.16)`, and a list `['dog', 'cat', 'bird']` are sequences of different types of data. We'll see more detail in a bit.
 
 In Python, a type of object gets operations that belong to that type. Sequences have sequence operations so strings can also use sequence operations. Strings also have their own specific operations.
 
@@ -901,7 +901,7 @@ You can ask what the length of any sequence is
 3
 ```
 
-You can also use string-specific functions on strings, but not on lists and vice versa. We'll learn a lot more about this later on. `rstrip()` is a string method or function. You get an error if you try to use it on a list.
+You can also use string-specific functions on strings, but not on lists and vice versa. We'll learn more about this later on. `rstrip()` is a string method or function. You get an error if you try to use it on a list.
 
 ```python
 >>> 'ACGTGA'.rstrip('A')
@@ -920,7 +920,7 @@ How do you find out what functions work with an object? There's a handy function
 >>> dir('ACGTGA')
 ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
 ```
-`dir()` will return all atributes of an object, among them its functions. Technically, functions belonging to a specific object are called methods.
+`dir()` will return all atributes of an object, among them its functions. Technically, functions belonging to a specific class (object type) are called methods.
 You can call `dir()` on any object, most often, you'll use it in the interactive Python shell. 
 
 ### Strings
@@ -939,7 +939,7 @@ Notes about quotation marks:
 
 - Single and double quotes are equivalent.  
 - A variable name inside quotes is just the string identifier, not the value stored inside the variable. `format()` is useful for variable interpolation in python 
-- Triple quotes are used before and after a string that spans multiple lines.  
+- Triple quotes (single or doubel) are used before and after a string that spans multiple lines.  
 
 Use of quotation examples:  
 
@@ -3490,7 +3490,6 @@ There are a lot of online tools for actually seeing what is happening in your re
  - [regex101](https://regex101.com/)  
  - [pyregex](http://www.pyregex.com/)
  - [pythex](https://pythex.org/)
- 
 
 ---
 
