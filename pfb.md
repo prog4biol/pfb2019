@@ -2358,7 +2358,7 @@ Because Python generates a NameError if you try to use a key that doesn't exist 
 
 The best way to check whether a key exists is to use `in`
 
-```
+```python
 >>> gene = 'TP53'
 >>> if gene in genes: 
 ...     print('found')
@@ -2376,6 +2376,9 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 #### Building a Dictionary one Key/Value at a Time using a loop
 
 Now we have all the tools to build a dictionary one key/value using a for loop. This is how you will be building dictionaries more often in real life.
+
+
+Here we are going to count and store nucleotide counts:  
 
 ```python
 #!/usr/bin/env python3
@@ -2591,6 +2594,53 @@ The symmetric difference is the elements that are only in the first set plus the
 | `set.union(sets)`                       | returns the union of set and the other provided sets |
 | `set.update(set2)`                      | update set with the union of set and set2 |
 
+
+
+
+
+#### Build a dictionary of NT counts using a set and loops
+
+Let us put a twist on our nt count script. Let's use a set to find all the unique nts, then use the string `count()` method to count the nucleotide instead if incrementing the count as we did earlier.
+
+Code:  
+
+
+```python
+#!/usr/bin/env python3
+
+# create a new empty dictionary
+nt_count = {}
+
+# get a set of unique characters in our DNA string
+
+dna = 'GTACCNTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'
+unique = set(dna)
+
+print('unique nt: ', unique) ## {'C', 'A', 'G', 'T', 'N'}
+
+# iterate through each unique nucleotide
+for nt in dna:
+  # count the number of this unique nt in dna
+  count = dna.count(nt)
+
+  # add our count to our dict
+  nt_count[nt] = count
+
+
+print('nt count:', nt_count)
+
+```
+
+
+Output:  
+
+
+```
+unique nt:  {'N', 'C', 'T', 'G', 'A'}
+nt count: {'G': 20, 'T': 21, 'A': 13, 'C': 16, 'N': 1}
+
+```
+> We have the count for all NTs even ones we might not expect.
 
 
 ---
