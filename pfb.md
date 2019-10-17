@@ -1675,7 +1675,7 @@ aaa
 >>> print(codons[2])
 agg
 ```
-> The 3 values are independently accesses and immediately printed. They are not stored in a variable.
+> The 3 values are independently accessed and immediately printed. They are not stored in a variable.
 
 
 If you want to access the values starting at the end of the list, use negative indices.
@@ -1757,7 +1757,7 @@ use the syntax [start : end : step] to slice and dice your python seqeunce
 | `min(list)`                             | returns the value with the lowest ASCII value (=earliest in ASCII alphabet) | `min(['a','A','z'])` returns `'A'`       |
 | `list(seq)`                             | converts a tuple into a list             | `list(('a','A','z'))` returns `['a', 'A', 'z']` |
 | `sorted(list, key=None, reverse=False)` | returns a sorted list based on the key provided | `sorted(['a','A','z'])` returns `['A', 'a', 'z']` |
-|                                         | `str.lower()` makes all the elements lowercase before sorting | `sorted(['a','A','z'],key=str.lower)` returns `['a', 'A', 'z']` |
+| `sorted(list, key=str.lower, reverse=False)`  | `str.lower()` makes all the elements lowercase before sorting | `sorted(['a','A','z'],key=str.lower)` returns `['a', 'A', 'z']` |
 
 
 #### List Methods
@@ -1839,7 +1839,7 @@ The while loop will continue to execute a block of code as long as the test expr
 
 #### While Loop Syntax
 
-```
+```python
 while expression:
   # these statements get executed every time the code enters the loop 
   statement1
@@ -2020,7 +2020,8 @@ range(0, 5)
 [0, 1, 2, 3, 4]
 ```
 
-The function `range()` can be used in conjunction with a for loop to iterate over a range of numbers. Range also starts at 0 and thinks about the gaps between the numbers.
+The function `range()` can be used in conjunction with a for loop to iterate over a range of numbers. Range also starts at 0 and thinks about the gaps between the numbers.  
+
 Code:
 ```python
 #!/usr/bin/env python3
@@ -2060,33 +2061,6 @@ Output:
 4
 ```
 
-
-
-
-#### For/Else
-
-An else statement can be used with a for loop as well. The else block of code will be executed when the for loop exits normally.
-
-Code:
-```python
-#!/usr/bin/env python3
-
-for num in range(5):
-  print(num)
-else:
-  print("Completed for loop")
-```
-
-Output:
-```
-$ python3 list_range_else.py
-0
-1
-2
-3
-4
-Completed for loop
-```
 
 #### Loop Control
 
