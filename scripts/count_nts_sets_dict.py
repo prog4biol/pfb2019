@@ -11,7 +11,7 @@ unique = set(dna)
 print('unique nt: ', unique) ## {'C', 'A', 'G', 'T', 'N'}
 
 # iterate through each unique nucleotide
-for nt in dna:
+for nt in unique:
   # count the number of this unique nt in dna
   count = dna.count(nt)
 
