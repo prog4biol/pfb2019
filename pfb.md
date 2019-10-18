@@ -2642,7 +2642,6 @@ nt count: {'G': 20, 'T': 21, 'A': 13, 'C': 16, 'N': 1}
 ```
 > We have the count for all NTs even ones we might not expect.
 
-
 ---
 
 ### [Link to Python 5 Problem Set](problemsets/Python_05_problemset.md)
@@ -2773,7 +2772,7 @@ Many people add this, because it closes the file for you automatically. Good pro
 #!/usr/bin/env python3
 
 with open("seq.nt.txt","r") as file_object: #cleans up after exiting 
-                                            # the with block
+                                            # the 'with' block
   for line in file_object:
     line = line.rstrip()
   	print(line)
@@ -2782,7 +2781,7 @@ with open("seq.nt.txt","r") as file_object: #cleans up after exiting
 
 #### Writing to a File
 
-Writing to a file is nothing more than opening a file for writing then using the `write()` method.  
+Writing to a file just required opening a file for writing then using the `write()` method.  
 
 The `write()` method is like the `print()` function. The biggest difference is that it writes to your file object instead of the screen. Unlike `print()`, it does not add a newline by default.  `write()` takes a single string argument. 
 
