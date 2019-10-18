@@ -1768,12 +1768,12 @@ For these examples use: `nums = [1,2,3]` and `codons = [ 'atg' , 'aaa' , 'agg' ]
 
 | Method                    | Description                              | Example                                  |
 | ------------------------- | ---------------------------------------- | ---------------------------------------- |
-| `list.append(obj)`        | appends an object to the end of a list   | nums.append(9) ; print(list) ; returns [1,2,3,9] |
+| `list.append(obj)`        | appends an object to the end of a list   | nums.append(9) ; print(nums) ; returns [1,2,3,9] |
 | `list.count(obj)`         | counts the occurrences of an object in a list | nums.count(2) returns 1                  |
 | `list.index(obj)`         | returns the lowest index where the given object is found | nums.index(2) returns 1                  |
 | `list.pop()`              | removes and returns the last value in the list. The list is now one element shorter | nums.pop() returns 3                     |
-| `list.insert(index, obj)` | inserts a value at the given index. Remember to think about the divisions between the elements | list.insert(0,100) ; print(list) returns [100, 1, 2, 3] |
-| `list.extend(new_list)`   | appends `new_list` to the end of `list`  | list.extend([7, 8]) ; print(list) returns [1, 2, 3, 7,8] |
+| `list.insert(index, obj)` | inserts a value at the given index. Remember to think about the divisions between the elements | nums.insert(0,100) ; print(nums) returns [100, 1, 2, 3] |
+| `list.extend(new_list)`   | appends `new_list` to the end of `list`  | nums.extend([7, 8]) ; print(nums) returns [1, 2, 3, 7,8] |
 | `list.pop(index)`         | removes and returns the value of the index argument. The list is now 1 value shorter | nums.pop(0) returns 1                    |
 | `list.remove(obj)`        | finds the lowest index of the given object and removes it from the list. The list is now one element shorter | codons.remove('aaa') ; print(codons) returns  [ 'atg' , 'agg' ] |
 | `list.reverse()`          | reverses the order of the list           | nums.reverse() ; print(nums) returns [3,2,1] |
@@ -2297,7 +2297,7 @@ Other assignment operators can also be used to change a value of a dictionary ke
 
 #### Accessing Each Dictionary Key/Value
 
-Since a dictionary is a sequence we can iterate through its contents.
+Since a dictionary is an iterable object, we can iterate through its contents.
 
 A for loop can be used to retrieve each key of a dictionary one a time:
 ```python
@@ -2453,7 +2453,7 @@ These functions work on several other data types too!
 | `dict.items()`                         | Returns a list of (key, value) tuple pairs |
 | `dict.pop(key)`                        | Removes the key:value pair and returns the value |
 | `dict.keys()`                          | Returns list of keys                     |
-| `dict.get(key, default = None)`        | get value from dict[key], use default if not not present |
+| `dict.get(key, default = None)`        | get value from dict[key], use default if not present |
 | `dict.setdefault(key, default = None)` | Similar to get(), but will set dict[key] = default if key is not already in dict |
 | `dict.update(dict2)`                   | Adds dictionary dict2's key-values pairs to dict |
 | `dict.values()`                        | Returns list of dictionary dict's values |
@@ -2619,7 +2619,7 @@ unique = set(dna)
 print('unique nt: ', unique) ## {'C', 'A', 'G', 'T', 'N'}
 
 # iterate through each unique nucleotide
-for nt in dna:
+for nt in unique:
   # count the number of this unique nt in dna
   count = dna.count(nt)
 
@@ -2822,10 +2822,8 @@ with open("seq.nt.txt","r") as seq_read, open("nt.counts.txt","w") as seq_write:
     total_nts += nt_count
     seq_write.write(str(nt_count) + "\n")
 
-seq_write.write("Total: " + str(total_nts) +"\n")
+  seq_write.write("Total: " + str(total_nts) +"\n")
 
-seq_read.close()
-seq_write.close()
 print("Wrote 'nt.counts.txt'")
 ```
 
