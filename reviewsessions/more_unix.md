@@ -58,6 +58,10 @@ Makes a messy table have clean columns and presents it with an easily viewable s
 
 Display a vcf without all the header garbage
 
+`cut -f 1 file.fq | sort | uniq -d`
+
+Print duplicate lines in a file, if there are none, print nothing. 
+
 __Kirsten__
 
 `cat file.txt | cut -f 1 | sort | uniq -c`
