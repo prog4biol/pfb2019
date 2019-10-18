@@ -64,7 +64,7 @@ _In the same Ensembl window, follow the steps below to get genes that have been 
 13. Export all results to "File" "TSV" --> GO
 14. Rename the file to "alpaca_stemcellproliferation_genes.tsv"
 
-_In the same Ensembl window, follow the steps below to get genes that have been labeled with Gene Ontology term "stem cell proliferation". For extra information on pigmentation, check out [pigmentation](http://purl.obolibrary.org/obo/GO_0043473)_
+_In the same Ensembl window, follow the steps below to get genes that have been labeled with Gene Ontology term "pigmentation". For extra information on pigmentation, check out [pigmentation](http://purl.obolibrary.org/obo/GO_0043473)_
 
 
 15. Click "Filters"
