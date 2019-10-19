@@ -3774,7 +3774,7 @@ Building this data structure in the interpreter:
 
 Same example in a script file: [Building Complex Datastructures](scripts/building_datastructures.py)
 
-__Course T-shirt Organiztion and Counting__
+__Course T-shirt Organization and Counting__
 
 We have a spreadsheet of everyone's style, size, color. We want to know how many of each unique combination of style-size-color we need to order
 
@@ -3841,6 +3841,102 @@ womens	medium	royal heather	1
 womens	medium	kiwi	2
 ...
 ```
+
+This is what the data structure we just built looks likes
+```
+{
+  'mens': 
+    {
+      'small': 
+        {
+           'heather seafoam': 1, 
+           'carolina blue': 1, 
+           'cornsilk': 1, 
+           'dark heather': 1, 
+           'heather maroon': 1, 
+           'royal blue': 1, 
+           'olive': 1
+        }, 
+      'large': 
+        {
+          'graphite heather': 1, 
+          'sport grey': 1, 
+          'heather purple': 1, 
+          'heather coral silk': 1, 
+          'heather irish': 1, 
+          'heather royal': 1, 
+          'carolina blue': 1
+        }, 
+      'medium': 
+        {
+          'heather coral silk': 1,
+          'heather royal': 2, 
+          'heather galapagos blue': 1, 
+          'heather forest': 1, 
+          'gold': 1, 
+          'heather military green': 1, 
+          'dark heather': 1, 
+          'carolina blue': 1, 
+          'iris': 1
+        }, 
+      'xs': 
+        {
+          'white': 1
+        }, 
+      'xl': 
+        {
+          'heather cardinal': 1, 
+          'indigo blue': 1
+        }
+          }, 
+  'womens': 
+    {
+      'medium': 
+        {
+          'heather purple': 3, 
+          'berry': 2, 
+          'royal heather': 1, 
+          'kiwi': 2, 
+          'carolina blue': 1
+        }, 
+      'small': 
+        {
+          'kiwi': 1, 
+          'berry': 1, 
+          'antique heliconia': 2
+        }, 
+      'large': 
+        {
+          'kiwi': 1
+        }, 
+      'xs': 
+        {
+          'heather orange': 1
+        }
+    },
+  'child': 
+    {
+      '4t': 
+        {
+          'green': 2
+        }, 
+      '3t': 
+        {
+          'pink': 1
+        }, 
+      '2t': 
+        {
+          'orange': 1
+        }, 
+      '6t': 
+        {
+          'pink': 1
+        }
+    }
+}
+
+```
+
 
 
 There are also specific data table and frame handling libraries like [Pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
