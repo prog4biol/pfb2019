@@ -3843,7 +3843,7 @@ womens	medium	kiwi	2
 ```
 
 This is what the data structure we just built looks likes
-```
+```python
 {
   'mens': 
     {
