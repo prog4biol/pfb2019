@@ -3774,6 +3774,73 @@ Building this data structure in the interpreter:
 
 Same example in a script file: [Building Complex Datastructures](scripts/building_datastructures.py)
 
+__Course T-shirt Organiztion and Counting__
+
+We have a spreadsheet of everyone's style, size, color. We want to know how many of each unique combination of style-size-color we need to order
+
+[shirts.txt](files/shirts.txt) 
+```
+mens	small	heather seafoam
+womens	medium	Heather Purple
+womens	medium	berry
+mens 	medium 	heather coral silk
+womens	Small	Kiwi
+Mens	large	Graphite Heather
+mens	large	sport grey
+mens	small	Carolina Blue
+```
+
+We want something like this:
+
+```
+womens	small	antique heliconia	2
+womens	xs	heather orange	1
+womens	medium	kiwi	2
+womens	medium	royal heather	1
+```
+
+[shirts.py](scripts/shirts.py)
+```python
+#!/usr/bin/env python3
+
+shirts = {}
+with open("shirts.txt","r") as file_object:
+  for line in file_object:
+    line = line.rstrip()
+    [style, size, color] = line.split("\t")
+    style = style.lower()
+    size = size.lower()
+    color = color.lower()
+    if style not in shirts:
+        shirts[style] = {}
+    if size not in shirts[style]:
+        shirts[style][size] = {}
+    if color not in shirts[style][size]:
+        shirts[style][size][color] = 0
+
+    shirts[style][size][color] += 1
+
+for style in shirts:
+  for size in shirts[style]:
+    for color in shirts[style][size]:
+      count = shirts[style][size][color]
+      print(style,size,color,count,sep="\t")
+
+```
+ 
+Output:
+```
+sro$ python3 shirts.py
+mens	small	heather maroon	1
+mens	small	royal blue	1
+mens	small	olive	1
+mens	large	graphite heather	1
+womens	medium	heather purple	3
+womens	medium	berry	2
+womens	medium	royal heather	1
+womens	medium	kiwi	2
+...
+```
 
 
 There are also specific data table and frame handling libraries like [Pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
