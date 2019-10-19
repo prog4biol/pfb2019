@@ -3718,12 +3718,12 @@ gene2: As= 3
 
 #### Building Complex Datastructures
 
-Below is an example of building a list with a mixed collection of value types. This list has values that are dictionaries and values that are lists. 
+Below is an example of building a list with a mixed collection of value types. Remember that all elements inside a list or dictionary should be the same type. In other words, the values in a list should all be lists or dictonaries or scalar values. This allows you to loop over the data structure.
 
 The dictionary which is a list value has a key that has a dictionary as a value.
 
 ```
-[[1, 2, 3], [4, 5, 6], {'key': 'value', 'key2': {'something_new': 'Yay'}}]
+[{'gene1' : {'sequence' : [1, 2, 3], [4, 5, 6], [7,8,9]]
 ```
 
 Just spaced differently:
@@ -4232,7 +4232,7 @@ File needs to be a FASTA file and end with .fa
 
 ### Functions
 
-Functions consist of several lines of code that do something useful and that you want to run more than once. You also give that function a name so you can refer to it in your code. This avoids copying and pasting the code to many places in your script and makes your code easier to read.
+Functions consist of several lines of code that do something useful and that you want to run more than once. There are built-in functions in python. You can also write your own. You also give your function a name so you can refer to it in your code. This avoids copying and pasting the same code to many places in your script and makes your code easier to read.
 
 Let's see some examples.
 
@@ -4245,7 +4245,7 @@ Hello world!
 5
 ```
 
-You can also define your own functions with  `def` Let's write a function that calculates the GC content. Let's define this as the fraction of nucleotides in a DNA sequence that are G or C. It can vary from 0 to 1.
+You can define your own functions with  `def` Let's write a function that calculates the GC content. Let's define this as the fraction of nucleotides in a DNA sequence that are G or C. It can vary from 0 to 1.
 
 First we can look at the code that makes the calculation, then we can convert those lines of code into a function.
 
@@ -4346,7 +4346,7 @@ TypeError: gc_content() missing 1 required positional argument: 'dna'
 You can define default values for arguments when you define your function.
 
 ```python
-def gc_content(dna='A'):   # give our function a name and parameter 'dna'
+def gc_content(dna='N'):   # give our function a name and parameter 'dna'
    c_count = dna.count('C')
    g_count = dna.count('G')
    dna_len = len(dna)
@@ -4380,7 +4380,7 @@ List comprehensions can often be used instead of lambdas and may be easier to re
 
 ### Scope
 
-Almost all python variables are global. This means they are available everywhere in your code. The most important exception is variables thare are defined in functions which only exist inside their function. This is called 'local'. Remember that python blocks are defined as code at the same level of indentation.
+Almost all python variables are global. This means they are available everywhere in your code.  Remember that python blocks are defined as code at the same level of indentation.
 
 ```python
 #!/usr/bin/env python3
@@ -4391,8 +4391,8 @@ if True:  # this if condition will always be True
   # we want to make sure the block gets executed
   # so we can show you what happens
   print('Inside if block')
-  y = 10
   x = 30
+  y = 10
   print("x=", x)
   print("y=", y)
 
@@ -4417,7 +4417,7 @@ y= 10
 
 ```
 
-Inside a function, global variables are visible, but it's better to pass variables to a function as arguments
+The most important exception to variables being global is that variables that are defined in **functions** are **local** i.e. they only exist inside their function. Inside a function, global variables are visible, but it's better to pass variables to a function as arguments
 
 ```python
 def show_n():
@@ -4426,7 +4426,7 @@ n = 5
 show_n()
 ```
 
-The output is this `5` as you would expect, but this is better programming practice. Why? We'll see a little later.
+The output is this `5` as you would expect, but the example below is better programming practice. Why? We'll see a little later.
 
 ```python3
 def show_n(n):
@@ -4448,7 +4448,7 @@ Variables inside functions are local and therefore can only been accessed from w
 def set_local_x_to_five(x):
   print('Inside def')
   x = 5 # local to set_local_x_to_five()
-  y=5
+  y=5   # also local
   print("x =",x)
   print("y = ",y)
 
@@ -4519,7 +4519,7 @@ After function call
 greeting = I say hello
 
 ```
-> Note that the function has changed the value of the global variable. You might not want to do this.
+> Note that the function has changed the value of the global variable. You might not want to do this. 
 
 
 
