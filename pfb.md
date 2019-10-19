@@ -2424,7 +2424,7 @@ print(nt_count)
 
 #### Sorting Dictionary Keys
 
-If you want to print the contents of a dictionary, you probably want to sort the keys then iterate over the keys with a for loop. Why do you want to sort the keys?
+If you want to print the contents of a dictionary, you should sort the keys then iterate over the keys with a for loop. Why do you want to sort the keys?
 
 ```python
 for gene_key in sorted(genes):
