@@ -4786,10 +4786,20 @@ parser.add_argument("-o","--outfile", help = "optional: supply output filename, 
 args = parser.parse_args()
 # arguments appear in args
 filename = args.file
-lines = args.line
+lines = args.lines
 if args.out:
   print("writing output to", args.out)
 ```
+
+With this module, -h help comes for free. --outfile type arguments are optional unless you write 'required=True' like this
+
+```
+parser.add_argument('-f', "-fasta", required=True, help='Output fasta filename', dest='outfile')
+
+```
+
+
+
 
 
 ### Many more modules that do many things
