@@ -3570,7 +3570,7 @@ Get the full length of one sequence:
 >>> seq
 ['T', '-', 'T', 'T', 'G']
 ```
-> Use the outer most index to access each sequence
+> Use the outermost index to access each sequence
 
 Retrieve the nucleotide at a particular position in a sequence.
 ```python
@@ -3578,7 +3578,7 @@ Retrieve the nucleotide at a particular position in a sequence.
 >>> nt
 'T'
 ```
-> Use the outer most index to access the sequence of interest and the inner most index to access the position
+> Use the outermost index to access the sequence of interest and the inner most index to access the position
 
 
 Get every nucleotide in a single column:
@@ -3587,7 +3587,7 @@ Get every nucleotide in a single column:
 >>> col
 ['T', 'A', 'T', 'T']
 ```
-> Retrieve each sequence from the aln list then the 3rd column for each sequence. 
+> Retrieve each sequence from the aln list then the 4th column for each sequence. 
 
 
 #### Lists of dictionaries
@@ -3827,7 +3827,7 @@ for style in shirts:
       print(style,size,color,count,sep="\t")
 
 ```
- 
+
 Output:
 ```
 sro$ python3 shirts.py
