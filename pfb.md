@@ -2427,10 +2427,12 @@ print(nt_count)
 If you want to print the contents of a dictionary, you should sort the keys then iterate over the keys with a for loop. Why do you want to sort the keys?
 
 ```python
-for gene_key in sorted(genes):
+for gene_key in sorted(genes): # python allows you to use this shortcut in a for loop
+                               # you don't have to write genes.keys() in a for loop
+                               # to iterate over the keys
   print(gene_key, '=>' , genes[gene_key])
 ```
-> This will print the same order of keys every time you run your script. 
+> This will print keys in the same order every time you run your script. Dictionaries are unordered, so without sorting, you'll get a different order every time you run the script, which could be confusing.
 
 
 #### Dictionary Functions
