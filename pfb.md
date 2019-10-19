@@ -3704,7 +3704,7 @@ Alter one gene's nucleotide count with `+=` assignment operator:
 
 To retrieve the A composition of every gene use a for loop.
 ```python
->>> for gene in genes:
+>>> for gene in sorted(genes):
 ...   A_comp = genes[gene]['nt_comp']['A']
 ...   print(gene+":","As=", A_comp)
 ...
