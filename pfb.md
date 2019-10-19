@@ -3912,7 +3912,7 @@ except:
 ```
 > We need to "try" to get a user provided argument. If we are successful then we can print it out. If we try and fail, we execute the code in the except portion of our try/except and print that we need a file name. 
 
-Let's run it WITH iser input
+Let's run it WITH user input
 ```bash
 $ python3 scripts/exceptions_try.py test.txt
 User provided file: test.txt
@@ -3978,7 +3978,7 @@ except _ExceptionType_:
   # if there is an exception of "ExceptionType" this block will be executed
   # there can be more than one except block, just like an elif
 except:
-  # if there are any exceptions that are not of _ExceptionType_ this except block will be executed
+  # if there are any exceptions that are not of "ExceptionType" this except block will be executed
 else: 
   # the else block is executed after the try block has been completed, which means there were no exceptions raised
 finally:
