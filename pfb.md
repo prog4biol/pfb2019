@@ -3692,12 +3692,12 @@ Alter one gene's nucleotide count with `=` assignment operator:
 Alter one gene's nucleotide count with `+=` assignment operator:
 ```python
 >>> genes['gene1']['nt_comp']
-{'C': 2, 'G': 1, 'A': 1, 'T': 1}
+{'C': 2, 'G': 1, 'A': 1, 'T': 6}
 >>>
 >>> genes['gene1']['nt_comp']['A']+=1
 >>>
 >>> genes['gene1']['nt_comp']
-{'C': 2, 'G': 1, 'A': 2, 'T': 2}
+{'C': 2, 'G': 1, 'A': 2, 'T': 6}
 >>>
 >>>
 ```
