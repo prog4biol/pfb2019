@@ -4821,9 +4821,9 @@ Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics,
 
 The advantages of writing classes and writing functions are very similar. 
 
-When we write functions we group core Python functions and methods to create a unique collection  statements that occur in a specific order. 
+When we write functions we group core Python functions and methods to create a unique collection statements that occur in a specific order. 
 
-These new functions makes our code easier to read and to write, especially if you will use the function many times.
+These new functions make our code easier to read and to write, especially if you will use the function many times.
 
 A conceptual difference between a fucntion and a class is that a function usually does one thing, while a class will do many related things to help solve a problem.
 
@@ -4873,7 +4873,7 @@ DNARecord Rules:
 2. DNARecord must have a name [attribute]
 3. DNARecord must have an organism [attribute]
 4. DNARecord will be able to calculate AT content [method]
-5. DNARecord will be able to calculate the reverse complementation [method]
+5. DNARecord will be able to calculate the reverse complement [method]
 
 
 
@@ -4902,10 +4902,13 @@ class DNARecord(object):
     at_content = (a_count + t_count) / length 
     return at_content
 
-  dna_rec_obj = DNARecord() 
-  print('Created a record for ' + dna_rec_obj.gene_name + ' from ' + d.species_name) 
-  print('AT is ' + str(dna_rec_obj.get_AT()))
-  print('complement is ' + dna_rec_obj.reverse_complement())
+## create a new DNARecord Object
+dna_rec_obj = DNARecord() 
+
+## Use New DNARecord object
+print('Created a record for ' + dna_rec_obj.gene_name + ' from ' + dna_rec_obj.species_name) 
+print('AT is ' + str(dna_rec_obj.get_AT()))
+print('complement is ' + dna_rec_obj.reverse_complement())
 ```
 
 Now let's go through each section: 
@@ -4998,6 +5001,16 @@ Let's try it:
 ```python
 >>> dna_rec_obj.sequence
 'ACGTAGCTGACGATC'
+>>> dna_rec_obj.get_AT()
+0.4666666666666667
+
+```
+
+
+Now let's try out the `reverse_complement()` method
+```python
+>>> dna_rec_obj.sequence
+'ACGTAGCTGACGATC'
 >>> dna_rec_obj.reverse_complement()
 TGCATCGACTGCTAG
 ```
@@ -5024,7 +5037,7 @@ The `init` function will automatically get called when you create an object.
 
 It conatins the instructions for creating a new DNARecord Object. 
 
-Our __\_\_init\_\___ instructions indicate that we want to create object attributes called sequence, gene_name, and species_name and to set them to the values provided as arguments when the object was created.
+Our __\_\_init\_\___ instructions indicate that we want to create object attributes called sequence, gene_name, and species_name and to set them with the values provided as arguments when the object was created.
 
 Here is our new class definition and new object creation when using the  __\_\_init\_\___  function:
 
@@ -5057,6 +5070,7 @@ class DNARecord(object):
     at_content = (a_count + t_count) / length
     return at_content
 
+## Create new DNARecord Objects with user defined data
 dna_rec_obj_1 = DNARecord('ACTGATCGTTACGTACGAGT', 'ABC1', 'Drosophila melanogaster')
 dna_rec_obj_2 = DNARecord('ATATATTATTATATTATA', 'COX1', 'Homo sapiens')
 
@@ -5072,7 +5086,7 @@ name: ABC1   seq: ACTGATCGTTACGTACGAGT
 name: COX1   seq: ATATATTATTATATTATA
 ```
 
-
+Now you can create as many DNASequence Objects as you like, each contains information about a different sequence.
 
 
 
