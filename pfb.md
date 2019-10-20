@@ -4864,7 +4864,7 @@ The first step is to decide what attributes and what methods it will have.
 
 
 
-__Let's create a DNARecord class.__
+__Create a DNARecord Class.__
 
 When we create a class, we are really setting up a series of rules that a DNARecord object must follow.
 
@@ -4953,14 +4953,15 @@ Next, we define our class methods:
     return at_content
 ```
 
-The methods are using an argument called `self`, i.e., `length = len(self.sequence)`. This is a special variable that when used within a class refers to the object that will be created by this class.
+The methods are using an argument called `self`, i.e., `length = len(self.sequence)`. This is a special variable that you use inside a class. With it you can access all the data that is contained inside the object when it is created.
 
-Use `self.attribute` to retrieve the value of variables created within the class. Here we use `self.sequence` to retrieve the information stored in our class attribute sequence.
+Use `self.attribute` format to retrieve the value of variables created within the class. Here we use `self.sequence` to retrieve the information stored in our attribute named `sequence`.
 
 ```python
 replacement1 = self.sequence.replace('A', 't') 
 ```
 
+#### Creating a DNARecord Object
 
 
 The above class is a set of rules that need to be followed when creating a new DNARecord object. 
@@ -4970,6 +4971,7 @@ Now let's create a new DNARecord object:
   dna_rec_obj = DNARecord() 
 ```
 
+`dna_rec_obj` is our new DNARecord object that was creating using the rules we put into place in the class definition.
 
 
 #### Retrieving attribute values
@@ -4977,6 +4979,8 @@ Now let's create a new DNARecord object:
 Now that a new DNARecord object has been created, and assigned to the variable `dna_rec_obj`, we can access its attributes using the following format, `object.attribute_name` 
 
 To get the gene name of the object we created, we simply write `dna_rec_obj.gene_name`. 
+
+This is possible because within our class definition we create a `gene_name` variable.
 
 Let's try it:
 
@@ -4994,9 +4998,10 @@ Let's try it:
 
 To call a method associated with our new object, we use a similar format `object.method_name`.
 
-So to call the `get_AT()` method, we would use `dna_rec_obj.get_AT() `
+So to call the `get_AT()` method, we would use `dna_rec_obj.get_AT() `. This should look familiar, you have done used class methods over and over again: `some_string.count('A')` 
 
-Let's try it:
+Let's try it with our `dna_rec_obj`:  
+
 
 ```python
 >>> dna_rec_obj.sequence
@@ -5007,14 +5012,14 @@ Let's try it:
 ```
 
 
-Now let's try out the `reverse_complement()` method
+Now let's use the `reverse_complement()` method
 ```python
 >>> dna_rec_obj.sequence
 'ACGTAGCTGACGATC'
 >>> dna_rec_obj.reverse_complement()
 TGCATCGACTGCTAG
 ```
-
+Wow!! Getting the reverse complement in one line is pretty nice!
 
 
 #### Getting data into a new instance of our class
@@ -5025,19 +5030,21 @@ We can now create a DNARecord object and retrieve the object attributes and use 
 
 But..... It always contains the same gene_name, sequence, and species information 😟 
 
-Let's make our class more generic, or in other words, make it so that we can provide this information everytime we create a new DNARecord object.
+Let's make our class more generic, or in other words, make it so that a user can provide a new gene name, gene sequence, and source organism everytime a DNARecord object is created.
 
 
 
 ##### __\_\_init\_\___
 
-To do this we need to create an `__init__` function. 
+To do this we need to add an `__init__` function to our Object Rules, or Class. 
 
 The `init` function will automatically get called when you create an object. 
 
-It conatins the instructions for creating a new DNARecord Object. 
+It contains specific instructions for creating a new DNARecord Object. 
 
-Our __\_\_init\_\___ instructions indicate that we want to create object attributes called sequence, gene_name, and species_name and to set them with the values provided as arguments when the object was created.
+It specifies how many pieces of data we want to collect from the creator of a DNAObject to use within a DNAObject.
+
+Below our __\_\_init\_\___ instructions indicate that we want to create object attributes called `sequence`, `gene_name`, and `species_name` and to set them with the values provided as arguments when the object was created.
 
 Here is our new class definition and new object creation when using the  __\_\_init\_\___  function:
 
@@ -5081,12 +5088,12 @@ for d in [ dna_rec_obj_1, dna_rec_obj_2 ]:
 Output:
 
 ```bash
-(py3.7) mp181vbhv2j:scripts smr$ python3 dnaRecord_init.py
+$ python3 dnaRecord_init.py
 name: ABC1   seq: ACTGATCGTTACGTACGAGT
 name: COX1   seq: ATATATTATTATATTATA
 ```
 
-Now you can create as many DNASequence Objects as you like, each contains information about a different sequence.
+Now you can create as many DNASequence Objects as you like, each can contain information about a different sequence.
 
 
 
