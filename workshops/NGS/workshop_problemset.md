@@ -1,9 +1,9 @@
 NGS Workshop Tutorial
 =====================
 
-**NOTE:** Unless otherwise specified, example command lines are available in this workshop's [lecture notes](https://github.com/prog4biol/pfb2019/blob/master/workshops/NGS/bio_info_formats.pdf) 
+**NOTE:** Unless otherwise specified, example command lines are available in this workshop's [lecture notes](https://github.com/bredeson/pfb2019/blob/master/workshops/NGS/bio_info_formats.pdf) 
 
-1. Download the [genome](https://github.com/prog4biol/pfb2019/blob/master/workshops/NGS/data/Scerevisiae.fasta.gz) and [annotation](https://github.com/prog4biol/pfb2019/blob/master/workshops/NGS/data/Scerevisiae.gff3.gz) files using `wget`, then decompress them with `gunzip`.
+1. Download the [genome](https://github.com/bredeson/pfb2019/blob/master/workshops/NGS/data/Scerevisiae.fasta.gz) and [annotation](https://github.com/bredeson/pfb2019/blob/master/workshops/NGS/data/Scerevisiae.gff3.gz) files using `wget`, then decompress them with `gunzip`.
 
 2. Index the genome as described in the lecture notes.
 
@@ -22,7 +22,7 @@ NGS Workshop Tutorial
    - For which metrics are there warnings?
    - Are there any over-represented sequences in the file? If so, what is it?
 
-5. Next, run the Trimmomatic adapter trimmer on the FASTQ files in "PE" mode, using this [adapter file](https://github.com/prog4biol/pfb2019/blob/master/workshops/NGS/data/adapters.fa). What fraction of the data were discarded?
+5. Next, run the Trimmomatic adapter trimmer on the FASTQ files in "PE" mode, using this [adapter file](https://github.com/bredeson/pfb2019/blob/master/workshops/NGS/data/adapters.fa). What fraction of the data were discarded?
 
 6. Align the reads to the genome sequence using BWA-MEM. Convert the file to BAM format, sort the BAM file, and index it (see lecture notes for how).
 
