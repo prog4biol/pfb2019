@@ -1,7 +1,7 @@
 NGS Workshop Tutorial
 =====================
 
-**NOTE:** Unless otherwise specified, example command lines are available in this workshop's [lecture notes](https://github.com/bredeson/pfb2019/blob/master/workshops/NGS/bio_info_formats.pdf) 
+**NOTE:** Unless otherwise specified, example command lines are available in this workshop's [lecture notes](https://github.com/prog4biol/pfb2019/blob/master/workshops/NGS/bio_info_formats.pdf) 
 
 1. Download the [genome](https://github.com/prog4biol/pfb2019/blob/master/workshops/NGS/data/Scerevisiae.fasta.gz) and [annotation](https://github.com/prog4biol/pfb2019/blob/master/workshops/NGS/data/Scerevisiae.gff3.gz) files using `wget`, then decompress them with `gunzip`.
 
