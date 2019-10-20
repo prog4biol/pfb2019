@@ -76,10 +76,10 @@ This is the core of biopython. And uses the Seq object. Seq is part of Bio. This
 #!/usr/bin/env python3
 import Bio.Seq                          
 seqobj = Bio.Seq.Seq('ATGCGATCGAGC')     
-# convert to string with str(seqobj)
-seq_str = str(seqobj)
-print('{} has {} nucleotides'.format( seq_str , len(seq_str)))
+print('{} has {} nucleotides'.format( seqobj , len(seqobj)))
 ```
+> Note: Sometimes you might have to convert an object to string to get sequence `seq_str = str(seqobj)`. The Seq Object predicts that if a user writes `print(seqobj)` they will want to print the sequence string not the entire Seq Object. Likewise, the Seq Object predicts that if a user writes `len(seqobj)` they will want to caluculate the length of the sequence not the length of the entire Seq Object
+
 
 produces 
 
@@ -95,10 +95,8 @@ Another way to import modules is with `from ... import ...` . This saves typing 
 #!/usr/bin/env python3
 from Bio.Seq import Seq
 seqobj=Seq('ATGCGATCGAGC')
-seq_str=str(seqobj)
 protein = seqobj.translate()
-prot_str = str(protein)
-print('{} translates to {}'.format(seq_str,prot_str))
+print('{} translates to {}'.format(seqobj,protein))
 ```
 
 produces
@@ -162,6 +160,8 @@ Visit biopython.org to read about [Slicing a sequence](http://biopython.org/DIST
 >>> seqobj=Seq('ATGCGATCGAGC')
 >>> seqobj[0:3]
 Seq('ATG', Alphabet())
+>>> print(seqobj[0:3])
+ATG
 ```
 
 Let's use Regular expressions in conjunction with BioPython to get every codon
@@ -178,12 +178,25 @@ TCG
 AGC
 >>>
 ```
+> The Seq Object has not predicted that if we use seqobj as input to `findall()` that we want to search the just the sequence. But it has predicted that if we use the `str()` we want to return the sequence that is contained within our object.
 
+__Data types__
 
+The Seq Object predicts that if we want a string if we `print()` our seqobj or if we try to caculate `len()` of our seqobj. The authors have coded this functionality into the Class rules. They did not predict, or write into the Class rules that if we use `findall()` that we want to search the just the sequence. The Class does not know how to handle this. But it has predicted that if we use the `str()` we want to return the sequence that is contained within our object.
+
+```python
+>>> seqobj=Seq('ATGCGATCGAGC')
+>>> str(seqobj)
+'ATGCGATCGAGC'
+>>> type(str(seqobj))
+<class 'str'>
+>>> type(seqobj)
+<class 'Bio.Seq.Seq'>
+```
 
 ## Read a FASTA file
 
-We were learning how to read a fasta file line by line. SeqIO.parse() is the main method for reading from almost any file format. We'll need a fasta file. We can use [seq.nt.fa](https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/seq.nt.fa) which looks like this
+We were learning how to read a fasta file line by line. `SeqIO.parse()` is the main method for reading from almost any file format. We'll need a fasta file. We can use [seq.nt.fa](https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/seq.nt.fa) which looks like this
 
 ```
 >seq1
@@ -227,9 +240,9 @@ Here's a script to read fasta records and print out some information
 ```python
 #!/usr/bin/env python3
 from Bio import SeqIO
-for seq_record in SeqIO.parse("./files/Python_05.fasta", "fasta"):   # give filename and format
+for seq_record in SeqIO.parse("../files/seq.nt.fa", "fasta"):   # give filename and format
   print('ID',seq_record.id)
-  print('Sequence',str(seq_record.seq))
+  print('Sequence',seq_record.seq)
   print('Length',len(seq_record))
     
 ```
@@ -252,17 +265,71 @@ Length 209
 
 ```
 
+__How do you know what attributes are available__
+
+You can use option-tab in the interpreter to find out. Type the object then a . then option-tab. You will get a list of attributes and methods you can use with this specific object.
+
+```python
+>>> from Bio import SeqIO
+>>> for seq_record in SeqIO.parse("../files/seq.nt.fa", "fasta"):
+...   print(seq_record.
+seq_record.annotations          seq_record.id                   seq_record.seq
+seq_record.dbxrefs              seq_record.letter_annotations   seq_record.translate(
+seq_record.description          seq_record.lower(               seq_record.upper(
+seq_record.features             seq_record.name
+seq_record.format(              seq_record.reverse_complement(
+...   print(seq_record.
+
+```
+
+
+
+
+__Seq Object vsSeqRecord Object__
+
+These two Objects are not identical. As you have seen we can directly print the sequence that is stored within a `Seq` Object. But this is not possible with `SeqRecord`. You need to use the `seq()` method to retrieve just the sequence bit of the `SeqRecord` Object.
+
+
+```python
+>>> from Bio.Seq import Seq
+>>> seqobj=Seq('ATGCGATCGAGC')
+>>> print(seqobj)
+ATGCGATCGAGC
+>>>
+>>> type(seqobj)
+<class 'Bio.Seq.Seq'>
+>>>
+>>> from Bio import SeqIO
+>>> filename = "../files/seq.nt.fa"
+>>> for seq_record in SeqIO.parse(filename, "fasta"):
+...   type(seq_record)
+...   print(seq_record.seq)
+...   print(seq_record)
+...
+<class 'Bio.SeqRecord.SeqRecord'>
+AAGAGCAGCTCGCGCTAATGTGATAGATGGCGGTAAAGTAAATGTCCTATGGGCCACCAATTATGGTGTATGAGTGAATCTCTGGTCCGAGATTCACTGAGTAACTGCTGTACACAGTAGTAACACGTGGAGATCCCATAAGCTTCACGTGTGGTCCAATAAAACACTCCGTTGGTCAAC
+ID: seq1
+Name: seq1
+Description: seq1
+Number of features: 0
+Seq('AAGAGCAGCTCGCGCTAATGTGATAGATGGCGGTAAAGTAAATGTCCTATGGGC...AAC', SingleLetterAlphabet())
+```
+
+
+
+
+
 Here is another example of opening a FASTA file, retrieving each sequence record, and doing something the data.
 
 ```python
 
 #!/usr/bin/env python3
 from Bio import SeqIO
-filename = "files/seq.nt.fa"
+filename = "../files/seq.nt.fa"
 for seq_record in SeqIO.parse(filename, "fasta"):   
   print('ID',seq_record.id)
   print('len {}'.format(len(seq_record)))
-  print('alphabet {}'.format(seq_record.seq.alphabet)
+  print('alphabet {}'.format(seq_record.seq.alphabet))
   print('translation {}'.format(seq_record.seq.translate(to_stop=False)))
 ```
 > We added the translation of the DNA sequence into protein
@@ -293,7 +360,7 @@ translation MLTKVSVRTCR*ATLKKETTCQIETINSAMEIRTTISLEIKIEITGTISLIT*CRIKGIINLIQVIRT
 There are three ways of doing this that use up more memory if you want more flexibility. `Bio.SeqIO.to_dict()` is the most flexible but also reads the entire fasta file into memory as a python dictionary so might take a lot of time and memory.
 
 ```
->>> id_dict = SeqIO.to_dict(SeqIO.parse('files/Python_05.fasta', 'fasta'))
+>>> id_dict = SeqIO.to_dict(SeqIO.parse('../files/seq.nt.fa', 'fasta'))
 >>> id_dict
 {'seq1': SeqRecord(seq=Seq('AAGAGCAGCTCGCGCTAATGTGATAGATGGCGGTAAAGTAAATGTCCTATGGGC...AAC', SingleLetterAlphabet()), id='seq1', name='seq1', description='seq1', dbxrefs=[]), 'seq2': SeqRecord(seq=Seq('GCCACAGAGCCTAGGACCCCAACCTAACCTAACCTAACCTAACCTACAGTTTGA...TCT', SingleLetterAlphabet()), id='seq2', name='seq2', description='seq2', dbxrefs=[]), 'seq3': SeqRecord(seq=Seq('ATGAAAGTTACATAAAGACTATTCGATGCATAAATAGTTCAGTTTTGAAAACTT...AAT', SingleLetterAlphabet()), id='seq3', name='seq3', description='seq3', dbxrefs=[]), 'seq4': SeqRecord(seq=Seq('ATGCTAACCAAAGTTTCAGTTCGGACGTGTCGATGAGCGACGCTCAAAAAGGAA...GGT', SingleLetterAlphabet()), id='seq4', name='seq4', description='seq4', dbxrefs=[])}
 
@@ -322,6 +389,56 @@ Visit biopython.org to read how [Sequences act like strings](http://biopython.or
 ```python
 seqobj.count("A")  # counts how many As are in sequence
 seqobj.find("ATG") # find coordinate of ATG (-1 for not found)
+```
+
+OR, as mentioned earlier in the interpreter you can use option+tab to find out what methods are available:
+
+```python
+>>> seqobj=Seq('ATGCGATCGAGC')
+>>> seqobj.
+seqobj.alphabet             seqobj.find(                seqobj.rstrip(              seqobj.transcribe(
+seqobj.back_transcribe(     seqobj.lower(               seqobj.split(               seqobj.translate(
+seqobj.complement(          seqobj.lstrip(              seqobj.startswith(          seqobj.ungap(
+seqobj.count(               seqobj.reverse_complement(  seqobj.strip(               seqobj.upper(
+seqobj.count_overlap(       seqobj.rfind(               seqobj.tomutable(
+seqobj.endswith(            seqobj.rsplit(              seqobj.tostring(
+>>> seqobj.
+
+```
+
+AND, you can use the help() in the interpreter to find out more
+```python
+>>> help(seqobj.count_overlap)
+Help on method count_overlap in module Bio.Seq:
+
+count_overlap(sub, start=0, end=9223372036854775807) method of Bio.Seq.Seq instance
+    Return an overlapping count.
+
+    For a non-overlapping search use the count() method.
+
+    Returns an integer, the number of occurrences of substring
+    argument sub in the (sub)sequence given by [start:end].
+    Optional arguments start and end are interpreted as in slice
+    notation.
+
+    Arguments:
+     - sub - a string or another Seq object to look for
+     - start - optional integer, slice start
+     - end - optional integer, slice end
+
+    e.g.
+
+    >>> from Bio.Seq import Seq
+    >>> print(Seq("AAAA").count_overlap("AA"))
+    3
+    >>> print(Seq("ATATATATA").count_overlap("ATA"))
+    4
+    >>> print(Seq("ATATATATA").count_overlap("ATA", 3, -1))
+    1
+
+    Where substrings do not overlap, should behave the same as
+    the count() method:
+:
 ```
 
 
@@ -355,6 +472,17 @@ SeqRecord objects have .format() to convert to a string in various formats
 
 ```
 
+In the interpreter:
+
+```python
+...   seq_record.
+seq_record.annotations          seq_record.id                   seq_record.seq
+seq_record.dbxrefs              seq_record.letter_annotations   seq_record.translate(
+seq_record.description          seq_record.lower(               seq_record.upper(
+seq_record.features             seq_record.name
+seq_record.format(              seq_record.reverse_complement(
+```
+
 
 
 ## Retrieving annotations from GenBank file
@@ -364,7 +492,7 @@ To read sequences from a genbank file instead, not much changes.
 ```python
 #!/usr/bin/env python3
 from Bio import SeqIO
-for seq_record in SeqIO.parse("files/sequence.gb", "genbank"):
+for seq_record in SeqIO.parse("../files/sequence.gb", "genbank"):
   print('ID',seq_record.id)
   print('Sequence',str(seq_record.seq)[0:60],'...')
   print('Length',len(seq_record))
@@ -385,8 +513,8 @@ Many are straightforward, others are a little more complicated because the alpha
 ```python
 #!/usr/bin/env python3
 from Bio import SeqIO
-fasta_records = SeqIO.parse("files/seq.nt.fa", "fasta")  
-count = SeqIO.write(seq_records , './files/seqs.tab' , 'tab')
+fasta_records = SeqIO.parse("../files/seq.nt.fa", "fasta")  
+count = SeqIO.write(seq_records , '../files/seqs.tab' , 'tab')
 ```
 
 
@@ -406,7 +534,7 @@ Even easier is the convert() method. Let's try fastq to fasta.
 ```python
 #!/usr/bin/env python3
 from Bio import SeqIO
-count = SeqIO.convert('./files/pfb.fastq', 'fastq', './files/pfb.converted.fa', 'fasta')
+count = SeqIO.convert('../files/pfb.fastq', 'fastq', '../files/pfb.converted.fa', 'fasta')
 ```
 
 Hmm, was that easy or what??!??!!?
@@ -422,36 +550,111 @@ You can get biopython to run the blast for you too. See `Bio.NCBIWWW`
 To parse the output, you'll write something like this
 
 ```python
+from Bio.Blast import NCBIXML
+result_handle = open("UTKBKAM5014-Alignment.xml")
+blast_records = NCBIXML.parse(result_handle)
+for blast_record in blast_records:
+   query_id = blast_record.query_id
+   for alignment in blast_record.alignments:
+     for hsp in alignment.hsps:
+        if hsp.expect < 1e-10:
+           print('qid:' , query_id , 'hit_id:' , alignment.title, 'E:' , hsp.expect )
+```
 
->>> from Bio.Blast import NCBIXML
->>> result_handle = open("my_blast.xml")
->>> blast_records = NCBIXML.parse(result_handle)
->>> for blast_record in blast_records:
->>>   for alignment in blast_record.alignments:
->>>     for hsp in alignment.hsps:
->>>        if hsp.expect < 1e-10:
->>>           print('id', alignment.title)
->>>           print('E = ' , hsp.expect)
+Output:
+
+```
+qid: Query_26141 hit_id: sp|Q13547.1| RecName: Full=Histone deacetylase 1; Short=HD1 [Homo sapiens] >sp|Q5RAG0.1| RecName: Full=Histone deacetylase 1; Short=HD1 [Pongo abelii] E: 0.0
+qid: Query_26141 hit_id: sp|O09106.1| RecName: Full=Histone deacetylase 1; Short=HD1 [Mus musculus] E: 0.0
+qid: Query_26141 hit_id: sp|Q4QQW4.1| RecName: Full=Histone deacetylase 1; Short=HD1 [Rattus norvegicus] E: 0.0
+qid: Query_26141 hit_id: sp|Q32PJ8.1| RecName: Full=Histone deacetylase 1; Short=HD1 [Bos taurus] E: 0.0
+qid: Query_26141 hit_id: sp|P56517.1| RecName: Full=Histone deacetylase 1; Short=HD1 [Gallus gallus] E: 0.0
+qid: Query_26141 hit_id: sp|O42227.1| RecName: Full=Probable histone deacetylase 1-B; Short=HD1-B; AltName: Full=RPD3 homolog [Xenopus laevis] E: 0.0
+...
 
 ```
 
+
+Just so you know:
+
+A BLAST Search Report:
+ - A `blast_records` can contain multiple queries. 
+ - The results for each query are considered a `blast_record`
+ - Each `blast_record` will have info about the query, like blast_record.query_id
+ - Each `blast_record` will have information about each hit. A Hit is considered an `alignment`
+ - An `alignment` has the following info: alignment.accession, alignment.hit_id, alignment.length, alignment.hit_def, alignment.hsps, alignment.title
+ - Each `alignment` will have 1 or more `hsps`. 
+ - An HSP is a high scroring pair or a series of smaller alignments that make up the complete alignment.
+ - `hsps` have the following info: hsp.align_length, hsp.frame, hsp.match, hsp.query, hsp.sbjct, hsp.score, hsp.bits            hsp.gaps, hsp.num_alignments, hsp.query_end, hsp.sbjct_end, hsp.strand, hsp.expect, hsp.identities, hsp.positives, hsp.query_start, hsp.sbjct_start
+ 
+   
+   ![NCBI BLAST HIT ALIGNMENT](../images/NCBIBLAST.hit.aln.png)
+ 
+
+```xml
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>Query_26141</Iteration_query-ID>
+  <Iteration_query-def>CAG46518.1 HDAC1 [Homo sapiens]</Iteration_query-def>
+  <Iteration_query-len>482</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>sp|Q13547.1|</Hit_id>
+  <Hit_def>RecName: Full=Histone deacetylase 1; Short=HD1 [Homo sapiens] &gt;sp|Q5RAG0.1| RecName: Full=Histone deacetylase 1; Short=HD1 [Pongo abelii]</Hit_def>
+  <Hit_accession>Q13547</Hit_accession>
+  <Hit_len>482</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1008.82</Hsp_bit-score>
+      <Hsp_score>2607</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>482</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>482</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>482</Hsp_identity>
+      <Hsp_positive>482</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>482</Hsp_align-len>
+      <Hsp_qseq>MAQTQGTRRKVCYYYDGDVGNYYYGQGHPMKPHRIRMTHNLLLNYGLYRKMEIYRPHKANAEEMTKYHSDDYIKFLRSIRPDNMSEYSKQMQRFNVGEDCPVFDGLFEFCQLSTGGSVASAVKLNKQQTDIAVNWAGGLHHAKKSEASGFCYVNDIVLAILELLKYHQRVLYIDIDIHHGDGVEEAFYTTDRVMTVSFHKYGEYFPGTGDLRDIGAGKGKYYAVNYPLRDGIDDESYEAIFKPVMSKVMEMFQPSAVVLQCGSDSLSGDRLGCFNLTIKGHAKCVEFVKSFNLPMLMLGGGGYTIRNVARCWTYETAVALDTEIPNELPYNDYFEYFGPDFKLHISPSNMTNQNTNEYLEKIKQRLFENLRMLPHAPGVQMQAIPEDAIPEESGDEDEDDPDKRISICSSDKRIACEEEFSDSEEEGEGGRKNSSNFKKAKRVKTEDEKEKDPEEKKEVTEEEKTKEEKPEAKGVKEEVKLA</Hsp_qseq>
+      <Hsp_hseq>MAQTQGTRRKVCYYYDGDVGNYYYGQGHPMKPHRIRMTHNLLLNYGLYRKMEIYRPHKANAEEMTKYHSDDYIKFLRSIRPDNMSEYSKQMQRFNVGEDCPVFDGLFEFCQLSTGGSVASAVKLNKQQTDIAVNWAGGLHHAKKSEASGFCYVNDIVLAILELLKYHQRVLYIDIDIHHGDGVEEAFYTTDRVMTVSFHKYGEYFPGTGDLRDIGAGKGKYYAVNYPLRDGIDDESYEAIFKPVMSKVMEMFQPSAVVLQCGSDSLSGDRLGCFNLTIKGHAKCVEFVKSFNLPMLMLGGGGYTIRNVARCWTYETAVALDTEIPNELPYNDYFEYFGPDFKLHISPSNMTNQNTNEYLEKIKQRLFENLRMLPHAPGVQMQAIPEDAIPEESGDEDEDDPDKRISICSSDKRIACEEEFSDSEEEGEGGRKNSSNFKKAKRVKTEDEKEKDPEEKKEVTEEEKTKEEKPEAKGVKEEVKLA</Hsp_hseq>
+      <Hsp_midline>MAQTQGTRRKVCYYYDGDVGNYYYGQGHPMKPHRIRMTHNLLLNYGLYRKMEIYRPHKANAEEMTKYHSDDYIKFLRSIRPDNMSEYSKQMQRFNVGEDCPVFDGLFEFCQLSTGGSVASAVKLNKQQTDIAVNWAGGLHHAKKSEASGFCYVNDIVLAILELLKYHQRVLYIDIDIHHGDGVEEAFYTTDRVMTVSFHKYGEYFPGTGDLRDIGAGKGKYYAVNYPLRDGIDDESYEAIFKPVMSKVMEMFQPSAVVLQCGSDSLSGDRLGCFNLTIKGHAKCVEFVKSFNLPMLMLGGGGYTIRNVARCWTYETAVALDTEIPNELPYNDYFEYFGPDFKLHISPSNMTNQNTNEYLEKIKQRLFENLRMLPHAPGVQMQAIPEDAIPEESGDEDEDDPDKRISICSSDKRIACEEEFSDSEEEGEGGRKNSSNFKKAKRVKTEDEKEKDPEEKKEVTEEEKTKEEKPEAKGVKEEVKLA</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>2</Hit_num>
+  <Hit_id>sp|O09106.1|</Hit_id>
+  <Hit_def>RecName: Full=Histone deacetylase 1; Short=HD1 [Mus musculus]</Hit_def>
+  <Hit_accession>O09106</Hit_accession>
+  <Hit_len>482</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+  ...
+
+```
 
 
 ### You can also use the more general SearchIO
 
 The code exists, but is likely to change over the next few versions of biopython.
 
-It will handle other sequence search tools such as FASTA, HMMER etc as well as BLAST. ReturnsQuery objects that contain one or more Hit objects that contain one or more HSP objects, like in a blast report. Can handle blast tab-separated text output. 
+It will handle other sequence search tools such as FASTA, HMMER etc as well as BLAST. ReturnsQuery objects that contain one or more Hit objects that contain one or more HSP objects, like in a blast report. Can handle blast tab-separated text output `-outfmt 6`. 
 
 You'll write something like this
 
 ```python
 >>> from Bio import SearchIO
->>> idx = SearchIO.index('tab_2226_tblastn_001.txt', 'blast-tab')
+>>> idx = SearchIO.index('hdac_vs_uniprot.tab.txt' , 'blast-tab')
 >>> sorted(idx.keys())
-['gi|11464971:4-101', 'gi|16080617|ref|NP_391444.1|']
->>> idx['gi|16080617|ref|NP_391444.1|']
-QueryResult(id='gi|16080617|ref|NP_391444.1|', 3 hits)
+['CAG46518.1']
+>>> idx['CAG46518.1']
+QueryResult(id='CAG46518.1', 103 hits)
 >>> idx.close()
 
 ```
