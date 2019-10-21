@@ -541,9 +541,9 @@ Hmm, was that easy or what??!??!!?
 
 ## Parsing BLAST output
 
-For simple BLAST parsing, ask for output format in tab-separated columns (`-outfmt 6` or `-outfmt 7`) Both these formats are customizable! See next section. 
+For simple parsing, or non BioPython parsing of NCBI BLAST results, use output formated in tab-separated columns (`-outfmt 6` or `-outfmt 7`) Both these formats are customizable when running the BLAST locally.
 
-If you want to parse the full output of blast with biopython, it's best to work with XML formatted BLAST output `-outfmt 5`. It breaks the parsing method less easily. Code is stable for working with NCBI blast.
+If you want to parse the full output of BLAST with biopython, it's necessary work with __XML__ formatted BLAST output `-outfmt 5`.
 
 You can get biopython to run the blast for you too. See `Bio.NCBIWWW`
 
@@ -575,20 +575,23 @@ qid: Query_26141 hit_id: sp|O42227.1| RecName: Full=Probable histone deacetylase
 ```
 
 
-About BLAST Search Report:
- - `blast_records` of type <class 'generator'> can contain multiple queries (the sequence you are using as input)
- - The results for each query are considered a `blast_record` of type <class Bio.Blast.Record.Blast>
+About BLAST Search Report and BioPython:
+ - `blast_records` (type <class 'generator'>) can contain handle multiple queries (the sequence you are using as input)
+ - The results for each query are considered a `blast_record` (<class Bio.Blast.Record.Blast>)
  - Each `blast_record`  will have info about the query, like blast_record.query_id
  - Each `blast_record` will have information about each hit.
- - A Hit is considered an `alignment` of type <class 'Bio.Blast.Record.Alignment'>
+ - A Hit is considered an `alignment` (<class 'Bio.Blast.Record.Alignment'>)
  - An `alignment` has the following info: alignment.accession, alignment.hit_id, alignment.length, alignment.hit_def, alignment.hsps, alignment.title
- - Each `alignment` will have 1 or more `hsp` of type <class 'Bio.Blast.Record.HSP'>. 
+ - Each `alignment` will have 1 or more `hsp` (<class 'Bio.Blast.Record.HSP'>). 
  - An HSP is a "high scoring pair" or a series of smaller alignments that make up the complete alignment.
  - `hsp` have the following info: hsp.align_length, hsp.frame, hsp.match, hsp.query, hsp.sbjct, hsp.score, hsp.bits            hsp.gaps, hsp.num_alignments, hsp.query_end, hsp.sbjct_end, hsp.strand, hsp.expect, hsp.identities, hsp.positives, hsp.query_start, hsp.sbjct_start
  
    
    ![NCBI BLAST HIT ALIGNMENT](../images/NCBIBLAST.hit.aln.png)
  
+
+
+Sample of BLAST XML output:  
 
 ```xml
 <Iteration>
@@ -638,25 +641,6 @@ About BLAST Search Report:
 
 ```
 
-
-### You can also use the more general SearchIO
-
-The code exists, but is likely to change over the next few versions of biopython.
-
-It will handle other sequence search tools such as FASTA, HMMER etc as well as BLAST. ReturnsQuery objects that contain one or more Hit objects that contain one or more HSP objects, like in a blast report. Can handle blast tab-separated text output `-outfmt 6`. 
-
-You'll write something like this
-
-```python
->>> from Bio import SearchIO
->>> idx = SearchIO.index('hdac_vs_uniprot.tab.txt' , 'blast-tab')
->>> sorted(idx.keys())
-['CAG46518.1']
->>> idx['CAG46518.1']
-QueryResult(id='CAG46518.1', 103 hits)
->>> idx.close()
-
-```
 
 
 
