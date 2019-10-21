@@ -78,7 +78,7 @@ NGS Workshop Tutorial
 
 15. Filter SNPs and Indels for variant loci within the center 95% of the depth distribution (use your distribution from above; estimating by eye is fine). To filter loci, use VCFtools:
     ```bash
-    vcftools --recode --stdout --max-missing 1 --minDP <lower-threshold> --maxDP <upper-threshold> --vcf <your.vcf> >your.filtered.vcf
+    vcftools --recode --recode-INFO-all --stdout --max-missing 1 --minDP <lower-threshold> --maxDP <upper-threshold> --vcf <your.vcf> >your.filtered.vcf
 
 16. Finally, how many of these SNPs and Indels intersect CDS features? (*HINT*: extract CDS features into a new GFF3 file and use `bedtools intersect` to do this to extract unique SNP loci).
 
