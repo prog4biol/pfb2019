@@ -77,8 +77,6 @@ Vectorization with Pandas series is **~390x** faster than crude looping
 
 "Slicing" refers to subsetting, or extracting rows and columns from a data frame. Here we'll read in a data frame, look at the contents, and subset it by slicing out arbitrary regions.
 
-
-
 ```
 import pandas as pd
 
@@ -86,8 +84,9 @@ import pandas as pd
 cell_attributes = pd.read_csv("./meta_data.csv", index_col = 0)
 
 type(cell_attributes)
-```
+``` 
 
+Note: We can read/write data in many other formats like tab delimited text `.tsv` and excel spreadsheets `.xlsx`. Please refer to [this document]() for a full description of Pandas I/O tools.
 
 
 ```
@@ -134,18 +133,29 @@ cell_attributes.columns.values[[0,1,3,5,7]]
 Now we can apply the same indexing pattern to our **iloc** method to return only the columns we're interested in. I've also included a few more slicing variations so you can get a feel for more complex slicing patterns.
 
 
-
 ```
 # Return columns 0, 1, 3, 5, and 7
 cell_attributes.iloc[:,[0,1,3,5,7]].head(10)
 
 # Return rows 1 through 5 and columns 0, 1, 3, 5, and 7
 cell_attributes.iloc[:5,[0,1,3,5,7]].head(10)
-
-# Return rows 1 through 5, columns 1 through 3, and column 7
-cell_attributes.iloc[:5, 0:3 + 7].head(10)
 ```
 
+##### Complex slicing patterns
+
+```
+# the method r_ allows us to slice with multiple ranges
+from numpy import r_
+
+# Let's see what it returns before we slice our data frame
+pd.np.r_[1:2, 4, 5:7]
+
+# With column names
+cell_attributes.columns.values[pd.np.r_[1:2, 4, 5:7]]
+
+# With the first 5 rows of the data frame
+cell_attributes.iloc[:5,pd.np.r_[1:3, 5:7]]
+```
 
 
 ### Ordering dataframes by column values
@@ -196,7 +206,29 @@ cell_df_sub['tree_ident'] == 1 | \
     (cell_df_sub['n_genes'] > 1000)
 ```
 
-The End
+### Performing mathmatical operations on vectors
+
+Lets look at a couple examples where we apply caculations to our data frame. First lets calculate some summary statistics. This can be a useful when viewing our results for the first time to get a handle on how our data is distributed.
+
+```
+# Returning summary statistics for all columns
+cell_df_sub.describe()
+
+# Returning summary statistics for a single column
+cell_df_sub.loc[:,'n_counts'].describe()
+```
+
+`n_counts` refers to the number of counts for "unique molecular identifiers", which are barcodes for individual transcripts within in a single cell. Ideally, if the number of `n_counts` is high, then the number of genes per cell should also be high. The number of genes per cell is in the `n_genes` column. Lets see if this observation holds true by calculating the pairwise correlation between these two variables. 
+
+
+```
+# Simply add the .corr() method to your dataframe subset
+cell_df_sub.loc[:,['n_counts','n_genes']].corr()
+```
+
+That summarizes our introduction to Pandas. As you can see, Pandas greatly simplifies the process of exploring and making calculations in data frames and matricies. Check out the link below for the offical documentation.
+
+[Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/index.html)
 
 
 
