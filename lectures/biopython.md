@@ -178,25 +178,25 @@ TCG
 AGC
 >>>
 ```
-> The Seq Object has not predicted that if we use seqobj as input to `findall()` that we want to search the just the sequence. But it has predicted that if we use the `str()` we want to return the sequence that is contained within our object.
+> The Seq Object has not predicted that if we use seqobj as input to `findall()` that we want to search just the sequence. But it has predicted that if we use the `str()` we want to return the sequence that is contained within our object.
 
 __Data types__
 
-The Seq Object predicts that if we want a string if we `print()` our seqobj or if we try to caculate `len()` of our seqobj. The authors have coded this functionality into the Class rules. They did not predict, or write into the Class rules that if we use `findall()` that we want to search the just the sequence. The Class does not know how to handle this. But it has predicted that if we use the `str()` we want to return the sequence that is contained within our object.
+The Seq Object predicts that we want a string when we `print()` our seqobj or if we try to caculate `len()` or if we try to take a substr `seqobj[0:3]` of our seqobj. The authors have coded this functionality into the Class rules. They did not predict, or write into the Class rules that if we use `findall()` that we want to search just the sequence. The Class does not know how to handle this. But it has predicted that if we use the `str()` we want to return the sequence that is contained within our object.
 
 ```python
 >>> seqobj=Seq('ATGCGATCGAGC')
+>>> type(seqobj)
+<class 'Bio.Seq.Seq'>
 >>> str(seqobj)
 'ATGCGATCGAGC'
 >>> type(str(seqobj))
 <class 'str'>
->>> type(seqobj)
-<class 'Bio.Seq.Seq'>
 ```
 
 ## Read a FASTA file
 
-We were learning how to read a fasta file line by line. `SeqIO.parse()` is the main method for reading from almost any file format. We'll need a fasta file. We can use [seq.nt.fa](https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/seq.nt.fa) which looks like this
+Earlier in the course were learning how to read a fasta file line by line. We are going to go over the BioPython way to do this. `SeqIO.parse()` is the main method for reading from almost any file format. The examples will use [seq.nt.fa](https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/seq.nt.fa): 
 
 ```
 >seq1
@@ -265,9 +265,11 @@ Length 209
 
 ```
 
-__How do you know what attributes are available__
+__How do you know what methods and attributes are available?__
 
-You can use option-tab in the interpreter to find out. Type the object then a . then option-tab. You will get a list of attributes and methods you can use with this specific object.
+In the last example we used the `id()` and `seq()`. How do we find out that we could use these or what are other options are?
+
+You can use option+tab in the interpreter to find out. Type the object then a '.' then option+tab. You will get a list of attributes and methods you can use with this specific object.
 
 ```python
 >>> from Bio import SeqIO
@@ -285,9 +287,9 @@ seq_record.format(              seq_record.reverse_complement(
 
 
 
-__Seq Object vsSeqRecord Object__
+__Seq Object vs SeqRecord Object__
 
-These two Objects are not identical. As you have seen we can directly print the sequence that is stored within a `Seq` Object. But this is not possible with `SeqRecord`. You need to use the `seq()` method to retrieve just the sequence bit of the `SeqRecord` Object.
+The Seq Object and the SeqRecord Object two Objects are not the same. As you have seen we can directly print the sequence that is stored within a `Seq` Object. But this is not possible with `SeqRecord`. You need to use the `seq()` method to retrieve just the sequence bit of the `SeqRecord` Object.
 
 
 ```python
@@ -316,10 +318,7 @@ Seq('AAGAGCAGCTCGCGCTAATGTGATAGATGGCGGTAAAGTAAATGTCCTATGGGC...AAC', SingleLetter
 ```
 
 
-
-
-
-Here is another example of opening a FASTA file, retrieving each sequence record, and doing something the data.
+Here is another example of opening a FASTA file, retrieving each sequence record, and doing something the data. We are going to translate each sequence record
 
 ```python
 
@@ -355,9 +354,10 @@ translation MLTKVSVRTCR*ATLKKETTCQIETINSAMEIRTTISLEIKIEITGTISLIT*CRIKGIINLIQVIRT
 ```
 
 
-#### Convert fasta file to python dictionary in one line
+#### Convert FASTA file to Python dictionary in one line
 
-There are three ways of doing this that use up more memory if you want more flexibility. `Bio.SeqIO.to_dict()` is the most flexible but also reads the entire fasta file into memory as a python dictionary so might take a lot of time and memory.
+`Bio.SeqIO.to_dict()` reads the entire FASTA file into memory and stores the contents in a dictionary.  
+
 
 ```
 >>> id_dict = SeqIO.to_dict(SeqIO.parse('../files/seq.nt.fa', 'fasta'))
@@ -406,7 +406,8 @@ seqobj.endswith(            seqobj.rsplit(              seqobj.tostring(
 
 ```
 
-AND, you can use the help() in the interpreter to find out more
+AND, you can use the help() in the interpreter to find out more:  
+
 ```python
 >>> help(seqobj.count_overlap)
 Help on method count_overlap in module Bio.Seq:
@@ -514,7 +515,7 @@ Many are straightforward, others are a little more complicated because the alpha
 #!/usr/bin/env python3
 from Bio import SeqIO
 fasta_records = SeqIO.parse("../files/seq.nt.fa", "fasta")  
-count = SeqIO.write(seq_records , '../files/seqs.tab' , 'tab')
+count = SeqIO.write(fasta_records , '../files/seqs.tab' , 'tab')
 ```
 
 
@@ -529,7 +530,7 @@ seq3    ATGAAAGTTACATAAAGACTATTCGATGCATAAATAGTTCAGTTTTGAAAACTTACATTTTGTTAAAGTCAG
 seq4    ATGCTAACCAAAGTTTCAGTTCGGACGTGTCGATGAGCGACGCTCAAAAAGGAAACAACATGCCAAATAGAAACGATCAATTCGGCGATGGAAATCAGAACAACGATCAGTTTGGAAATCAAAATAGAAATAACGGGAACGATCAGTTTAATAACATGATGCAGAATAAAGGGAATAATCAATTTAATCCAGGTAATCAGAACAGAGGT
 ```
 
-Even easier is the convert() method. Let's try fastq to fasta.
+Even easier is the convert() method. Let's try FASTQ to FASTA.
 
 ```python
 #!/usr/bin/env python3
@@ -537,13 +538,13 @@ from Bio import SeqIO
 count = SeqIO.convert('../files/pfb.fastq', 'fastq', '../files/pfb.converted.fa', 'fasta')
 ```
 
-Hmm, was that easy or what??!??!!?
+Was that easy or what??!??!!?
 
 ## Parsing BLAST output
 
-For simple BLAST parsing, ask for output format in tab-separated columns (`-outfmt 6` or `-outfmt 7`) Both these formats are customizable! See next section. 
+For simple parsing, or non BioPython parsing of NCBI BLAST results, use output formated in tab-separated columns (`-outfmt 6` or `-outfmt 7`) Both these formats are customizable when running the BLAST locally.
 
-If you want to parse the full output of blast with biopython, it's best to work with XML formatted BLAST output `-outfmt 5`. It breaks the parsing method less easily. Code is stable for working with NCBI blast.
+If you want to parse the full output of BLAST with biopython, it's necessary work with __XML__ formatted BLAST output `-outfmt 5`.
 
 You can get biopython to run the blast for you too. See `Bio.NCBIWWW`
 
@@ -575,21 +576,23 @@ qid: Query_26141 hit_id: sp|O42227.1| RecName: Full=Probable histone deacetylase
 ```
 
 
-Just so you know:
-
-A BLAST Search Report:
- - A `blast_records` can contain multiple queries. 
- - The results for each query are considered a `blast_record`
- - Each `blast_record` will have info about the query, like blast_record.query_id
- - Each `blast_record` will have information about each hit. A Hit is considered an `alignment`
+About BLAST Search Report and BioPython:
+ - `blast_records` (type <class 'generator'>) can contain handle multiple queries (the sequence you are using as input)
+ - The results for each query are considered a `blast_record` (<class Bio.Blast.Record.Blast>)
+ - Each `blast_record`  will have info about the query, like blast_record.query_id
+ - Each `blast_record` will have information about each hit.
+ - A Hit is considered an `alignment` (<class 'Bio.Blast.Record.Alignment'>)
  - An `alignment` has the following info: alignment.accession, alignment.hit_id, alignment.length, alignment.hit_def, alignment.hsps, alignment.title
- - Each `alignment` will have 1 or more `hsps`. 
- - An HSP is a high scroring pair or a series of smaller alignments that make up the complete alignment.
- - `hsps` have the following info: hsp.align_length, hsp.frame, hsp.match, hsp.query, hsp.sbjct, hsp.score, hsp.bits            hsp.gaps, hsp.num_alignments, hsp.query_end, hsp.sbjct_end, hsp.strand, hsp.expect, hsp.identities, hsp.positives, hsp.query_start, hsp.sbjct_start
+ - Each `alignment` will have 1 or more `hsp` (<class 'Bio.Blast.Record.HSP'>). 
+ - An HSP is a "high scoring pair" or a series of smaller alignments that make up the complete alignment.
+ - `hsp` have the following info: hsp.align_length, hsp.frame, hsp.match, hsp.query, hsp.sbjct, hsp.score, hsp.bits            hsp.gaps, hsp.num_alignments, hsp.query_end, hsp.sbjct_end, hsp.strand, hsp.expect, hsp.identities, hsp.positives, hsp.query_start, hsp.sbjct_start
  
    
    ![NCBI BLAST HIT ALIGNMENT](../images/NCBIBLAST.hit.aln.png)
  
+
+
+Sample of BLAST XML output:  
 
 ```xml
 <Iteration>
@@ -639,25 +642,6 @@ A BLAST Search Report:
 
 ```
 
-
-### You can also use the more general SearchIO
-
-The code exists, but is likely to change over the next few versions of biopython.
-
-It will handle other sequence search tools such as FASTA, HMMER etc as well as BLAST. ReturnsQuery objects that contain one or more Hit objects that contain one or more HSP objects, like in a blast report. Can handle blast tab-separated text output `-outfmt 6`. 
-
-You'll write something like this
-
-```python
->>> from Bio import SearchIO
->>> idx = SearchIO.index('hdac_vs_uniprot.tab.txt' , 'blast-tab')
->>> sorted(idx.keys())
-['CAG46518.1']
->>> idx['CAG46518.1']
-QueryResult(id='CAG46518.1', 103 hits)
->>> idx.close()
-
-```
 
 
 
