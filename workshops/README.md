@@ -6,17 +6,17 @@ Sofia Robb
 
 # Workshops
 
-## BioPython  -- Simon Prochnik
+## BioPython  -- Sofia Robb
   - [Lecture](../lectures/biopython.md)
   - [Workshop](../problemsets/biopython_problemset.md)
 ## NGS -- Anoja Perera
-  - [Lecture](NGS/tbd.pdf) 
+  - [Lecture](NGS/CSHL_Sequencing_AP_2019.pdf) 
   - [Workshop](NGS)
-## Structural Variation -- Tomas Marques
-  - [Lecture](../lectures/tbd)
 ## Sequence Homology -- Bill Pearson
-  - [Lecture1](Sequence_homology/tbd) [Lecture2](Sequence_homology/tbd.pdf)
-  - [Workshop](Sequence_homology/tdb)
+  - [Lecture1](Sequence_homology/cshl_pfb_19a.pdf) 
+  - [Workshop1](https://fasta.bioch.virginia.edu/mol_evol/)
+  - [Lecture2](Sequence_homology/cshl_pfb_19a.pdf)
+  - [Workshop2](https://fasta.bioch.virginia.edu/mol_evol/pfb_python_matrices.html)
 ## Genome Assembly -- Deb Triant
   - [Lecture](../lectures/tbd.pdf)
   - [Workshop](GenomeAssembly)
@@ -37,3 +37,5 @@ Sofia Robb
 ## Protein Function -- Huaiyu Mi
   - [Lecture](Protein_Function_Annotation/tdb)
   - [Workshop](Protein_Function_Annotation)
+## Structural Variation -- Tomas Marques
+  - [Lecture](../lectures/tbd)
