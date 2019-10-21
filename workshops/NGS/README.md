@@ -12,8 +12,9 @@ NGS Workshop Tutorial
    ```bash
    export PATH=$PWD/software/bin:$PATH;
    ```
+   **NOTE**: You need to replaced `$PWD` above with the full, expanded path the the `software/bin` dir if you put the `export` statement in your `.bash_profile` or `.bashrc`. 
 
-3. Download the [genome](https://github.com/bredeson/pfb2019/blob/master/workshops/NGS/data/Scerevisiae.fasta.gz) and [annotation](https://github.com/bredeson/pfb2019/blob/master/workshops/NGS/data/Scerevisiae.gff3.gz) files using `wget` and decompress them both with `gunzip`.
+3. Download the [genome](https://www.dropbox.com/s/goo2bt4br9mqxtt/Scerevisiae.fasta.gz) and [annotation](https://www.dropbox.com/s/uq8mfp125jlgknq/Scerevisiae.gff3.gz) files using `wget` and decompress them both with `gunzip`.
 
 4. Index the genome as described in the lecture notes.
 
@@ -32,7 +33,7 @@ NGS Workshop Tutorial
    - For which metrics are there warnings?
    - Are there any over-represented sequences in the file? If so, what is it?
 
-7. Next, run the Trimmomatic adapter trimmer on the FASTQ files in "PE" mode, using this [adapter file](https://github.com/bredeson/pfb2019/blob/master/workshops/NGS/data/adapters.fa). What fraction of the data were discarded?
+7. Next, run the Trimmomatic adapter trimmer on the FASTQ files in "PE" mode, using this [adapter file](https://www.dropbox.com/s/tpmhcz24jluq97s/adapters.fa). What fraction of the data were discarded? **NOTE**: Trimmomatic is in it's own subdirectory `sofware/Trimmomatic-0.39/trimmomatic-0.39.jar`.
 
 8. Align the reads to the genome sequence using BWA-MEM. Convert the file to BAM format, sort the BAM file, and index it (see lecture notes for how).
 
