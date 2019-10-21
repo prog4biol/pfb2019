@@ -52,6 +52,9 @@ gunzip uniprot_sprot.fasta.gz
 ```
 This will create a file `uniprot_sprot.fasta`
 
+**Do not add uniprot_sprot.fasta to your github repo. It is too big.*** To be safe, find your .gitignore in the root of your github repository. Add `uniprot_sprot.fasta*` anywhere in the file. Make sure to add this file to our index as you are updating your repo.
+
+
 3. What does the file contain? How many records? Does it look intact? How do you know?
 
 Extract IDs from fasta file
@@ -94,6 +97,10 @@ __Run BLAST+__
       - `-db` The file name of the FASTA formated file you formated with `makeblastdb`
       - `-out` A name of your choice for your output file, otherwise, the output is printed to the screen
       - `-evalue` The Expectation value (E) threshold for returning hits. 1e-5 is a common cutoff (Bill will say 1e-2, but we will be a tad more conservative)
-      - `-outfmt` You can choose the output format of your BLAST report. XML(5) and TAB(6) are the most common, but there are many other very helpful formats
+      - `-outfmt` Choose the output format of your BLAST report as XML(5) `-outfmt 5` .  TAB(6) is also common output but unparsable by BioPython.  
+      
+__Parse BLAST Output__
+
+1. Use BioPython to parse your XML BLAST results. Print out all the hit sequence ID that are better than 1e-5 as well as their descriptions in tab separated columns.
   
 
