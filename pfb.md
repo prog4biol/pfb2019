@@ -5017,7 +5017,7 @@ Now let's use the `reverse_complement()` method
 >>> dna_rec_obj.sequence
 'ACGTAGCTGACGATC'
 >>> dna_rec_obj.reverse_complement()
-TGCATCGACTGCTAG
+GATCGTCAGCTACGT
 ```
 Wow!! Getting the reverse complement in one line is pretty nice!
 
