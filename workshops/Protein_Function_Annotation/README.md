@@ -72,19 +72,22 @@ Currently, there are three options for service types (--service or -s).
 
 These files (in JSON format) are in the params/ folder. They should be edited according to the uploaded data and the type of call. 
  
-**enrich.json** 
+**enrich.json**   
+
 **This file should be used when _enrich_ is specified as the service type. There are four items to be specified in this file.**
- 1. "organism": "**9606**", --specify an organism with a taxon ID. (see Appendix on How to find a taxon ID?)
- 2. "annotDataSet": "**GO:0008150**", --specify an annotation data set. (see Appendix on How to find the ID for supported annotation dataset?)  
+ 1. "organism": "**9606**" --specify an organism with a taxon ID. (see Appendix on How to find a taxon ID?)
+ 2. "annotDataSet": "**GO:0008150**" --specify an annotation data set. (see Appendix on How to find the ID for supported annotation dataset?)  
  3. "enrichmentTestType": "**FISHER**", --enter either FISHER (for Fisher's Exact test) or BINOMIAL (for binomial distribution test)  
  4. "correction": "**FDR**" --specify the multi test correction method (FDR, BONFERRONI, or NONE)
  
-**geneinfo.json** 
+**geneinfo.json**   
+
 **This file should be used when _geneinfo_ is specified as the service type. The organism taxon ID needs to be specified to match the uploaded data.**
  
- **ortholog.json** 
+ **ortholog.json**   
+ 
 **This file should be used when _ortholog_ is specified as the service type. There are two items to be specified**
- 1. "organism": "**9606**", -- specify the organism of the uploaded genes
+ 1. "organism": "**9606**" -- specify the organism of the uploaded genes
  2. "orthologType": "**LDO**" -- specify the type of ortholog, e.g., LDO (for least divergent ortholog), or all.
 
 
