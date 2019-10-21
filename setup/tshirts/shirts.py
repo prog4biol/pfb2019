@@ -33,4 +33,7 @@ for style in shirts:
   for size in shirts[style]:
     for color in shirts[style][size]:
       count = shirts[style][size][color]
-      print(style,size,color,count)
+      print(style,size,color,count,sep="\t")
+
+
+print(shirts)

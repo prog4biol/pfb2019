@@ -1,7 +1,7 @@
 mens	small	heather seafoam
 womens	medium	Heather Purple
 womens	medium	berry
-mens 	medium 	heather coral silk
+mens	medium 	heather coral silk
 womens	Small	Kiwi
 mens	large	Graphite Heather
 mens	large	sport grey
