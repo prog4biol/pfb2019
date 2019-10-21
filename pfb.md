@@ -5053,7 +5053,7 @@ Here is our new class definition and new object creation when using the  __\_\_i
 class DNARecord(object):
   
   # define class attributes
-  def __init__(self, sequence, gene_name, species_name): ## note that __init__ is wrapped with two underscores on either side
+  def __init__(self, sequence, gene_name, species_name): ## note that '__init__' is wrapped with two underscores
     #sequence = 'ACGTAGCTGACGATC'
     #gene_name = 'ABC1'
     #species_name = 'Drosophila melanogaster'
