@@ -575,17 +575,16 @@ qid: Query_26141 hit_id: sp|O42227.1| RecName: Full=Probable histone deacetylase
 ```
 
 
-Just so you know:
-
-A BLAST Search Report:
- - A `blast_records` can contain multiple queries. 
- - The results for each query are considered a `blast_record`
- - Each `blast_record` will have info about the query, like blast_record.query_id
- - Each `blast_record` will have information about each hit. A Hit is considered an `alignment`
+About BLAST Search Report:
+ - `blast_records` of type <class 'generator'> can contain multiple queries (the sequence you are using as input)
+ - The results for each query are considered a `blast_record` of type <class Bio.Blast.Record.Blast>
+ - Each `blast_record`  will have info about the query, like blast_record.query_id
+ - Each `blast_record` will have information about each hit.
+ - A Hit is considered an `alignment` of type <class 'Bio.Blast.Record.Alignment'>
  - An `alignment` has the following info: alignment.accession, alignment.hit_id, alignment.length, alignment.hit_def, alignment.hsps, alignment.title
- - Each `alignment` will have 1 or more `hsps`. 
- - An HSP is a high scroring pair or a series of smaller alignments that make up the complete alignment.
- - `hsps` have the following info: hsp.align_length, hsp.frame, hsp.match, hsp.query, hsp.sbjct, hsp.score, hsp.bits            hsp.gaps, hsp.num_alignments, hsp.query_end, hsp.sbjct_end, hsp.strand, hsp.expect, hsp.identities, hsp.positives, hsp.query_start, hsp.sbjct_start
+ - Each `alignment` will have 1 or more `hsp` of type <class 'Bio.Blast.Record.HSP'>. 
+ - An HSP is a "high scoring pair" or a series of smaller alignments that make up the complete alignment.
+ - `hsp` have the following info: hsp.align_length, hsp.frame, hsp.match, hsp.query, hsp.sbjct, hsp.score, hsp.bits            hsp.gaps, hsp.num_alignments, hsp.query_end, hsp.sbjct_end, hsp.strand, hsp.expect, hsp.identities, hsp.positives, hsp.query_start, hsp.sbjct_start
  
    
    ![NCBI BLAST HIT ALIGNMENT](../images/NCBIBLAST.hit.aln.png)
