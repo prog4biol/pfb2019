@@ -1,4 +1,3 @@
-# GO Enrichment Workhop
 
 <!----- Conversion time: 0.88 seconds.
 
