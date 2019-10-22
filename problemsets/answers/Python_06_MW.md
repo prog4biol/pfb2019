@@ -136,25 +136,23 @@ for line in fasta_fileobj:  			## iterate through file object with for loop
 
     if line.startswith('>'):
 	line = line.lstrip('>')  		## remove leading `>` char
-	sequence_info = line.split(maxsplit=1)  ## split on only first space
-	sequence_name = sequence_info[0]
-	
+	sequence_info = line.split(maxsplit=1)  	## split on only first space
+
+
 	if len(sequence_info) > 1:
 		sequence_desc = sequence_info[1]
 
 	else:					## sequence has no description, set to empty
-	sequence_desc = ''
+		sequence_desc = ''
 	
 	if len(sequence_string) > 0:
 		sequence_dict[sequence_name] = sequence_string	
 		sequence_string = ''  		## reset for the new sequence
 		
            
-       line = line.lstrip('>')  		## remove leading `>` char
-       sequence_info = line.split(maxsplit=1)  	## split on only first space
-
-       sequence_name = sequence_info[0]
-        if len(sequence_info) > 1:
+	sequence_name = sequence_info[0]
+        
+	if len(sequence_info) > 1:
             sequence_desc = sequence_info[1]
         else:
             # sequence has no description, set to empty

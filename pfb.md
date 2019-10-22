@@ -5042,7 +5042,7 @@ The `init` function will automatically get called when you create an object.
 
 It contains specific instructions for creating a new DNARecord Object. 
 
-It specifies how many pieces of data we want to collect from the creator of a DNAObject to use within a DNAObject.
+It specifies how many pieces of data we want to collect from the creator of a DNARecord object to use within a DNARecord object.
 
 Below our __\_\_init\_\___ instructions indicate that we want to create object attributes called `sequence`, `gene_name`, and `species_name` and to set them with the values provided as arguments when the object was created.
 

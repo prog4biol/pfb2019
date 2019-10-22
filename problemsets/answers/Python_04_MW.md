@@ -336,10 +336,30 @@ for nt in nt_list:
 12. Use list comprehension to generate a list of tuples. The tuples should contain sequences and lengths from the previous problem. Print out the length and the sequence (i.e., "4\\tATGC\\n").  A list of tuples looks like this [(4,'ATGC'),(2,'GC')]. Use `yourList.append( yourTuple )`.  Check out the second example [here](https://www.w3schools.com/python/ref_list_append.asp)
 
 
+```python
+
+#!/usr/bin/env python3 
+
+nt_list = ['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']
+
+my_tup_list = [(len(nt),nt) for nt in nt_list]		## generates a list of tuples with form (length of sequence, sequence)
+
+
+```
+
 
 13. Modify the script from #11 so that you also print out the number (postion in the list) of each sequence (i.e., "1\\t4\\tACGT\\n")
 
+```python
 
+#!/usr/bin/env python3
+
+nt_list = ['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']
+
+for index in range(len(nt_list)):       ## specifies the iterator as an index as opposed to iterating through the list using 'Python-magic'
+	print(index + 1, len(nt_list[index]), nt_list[index],sep='\t')  ## prints index (scaled by 1 for humans), length and nt in list, separated by tab
+
+```
 
 14. Have you been commiting you work?
 
@@ -352,6 +372,35 @@ for nt in nt_list:
     - Exchange the letters at list indices A and B
     - Print the final shuffled sequence
     - Remember to test your code with test data. 
+
+```python
+
+#!/usr/bin/env python3
+
+import random						## imports the random module
+
+dna = input('Please enter a DNA sequence: ')		## prompts the user for a DNA sequence, saving as a string
+dnaLen = len(dna)					## records the len of the DNA sequence
+dnaLis = list(dna)					## converts the string to a list to enable site-specific mutation
+
+for nt in range(dnaLen):				## sets up for loop to go site by site through sequence
+   randApos=random.randrange(dnaLen)			## select two random positions
+   randBpos=random.randrange(dnaLen)
+   randA = dnaLis[randApos]				## record the nt at the specified random positions
+   randB = dnaLis[randBpos]
+   dnaLis[randApos] = randB				## swap out the nt at those positions
+   dnaLis[randBpos] = randA
+   print(dnaLis)					## not necessary, but lets you view sequence as it is shuffled	
+
+dnaSeq=''						## initialize empty string
+for nt in range(dnaLen):				## a for loop to generate a string version of dna sequence from its list representation
+   dnaSeq += dnaLis[nt]
+   
+print(dnaSeq)
+
+```
+
+
 
 2. Calculate sequence identity: Start with 2 very similar DNA sequences. Use your favorites or use [Python_04.fasta](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_04.fasta)
     - Align with ClustalW, TCoffee, or some other web alignment application. 
