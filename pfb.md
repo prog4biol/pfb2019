@@ -4825,7 +4825,7 @@ When we write functions we group core Python functions and methods to create a u
 
 These new functions make our code easier to read and to write, especially if you will use the function many times.
 
-A conceptual difference between a fucntion and a class is that a function usually does one thing, while a class will do many related things to help solve a problem.
+A conceptual difference between a function and a class is that a function usually does one thing, while a class will do many related things to help solve a problem.
 
 What is a class really, what does it do? A class doesn't really do anything except for setting a list of rules for creating a new custom object. Every time you use the class you are creating an instance of a type of object.   
 
