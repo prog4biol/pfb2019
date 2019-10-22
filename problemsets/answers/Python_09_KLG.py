@@ -21,11 +21,12 @@ try:
     in_file = sys.argv[1] # if no input is provided
 except:
     print('No input provided')
-    sys.exit()
+    sys.exit(1) ## make sure you have the 1 to return an error code
 
 
 
-## Here's an example of how to define your own error class, this can come in handy if you want to check for the same error over and over again
+## Here's an example of how to define your own error class
+## this can come in handy if you want to check for the same error over and over again
 class NotFASTAError(Exception):
   pass
     
@@ -42,7 +43,7 @@ try:
     fasta_file= open(in_file, 'r') ## try to open the file, if we can't open it the user likely hasn't provided an input. Exit from the script. 
 except:
     print('Cannot open file')
-    sys.exit()
+    sys.exit(1)
 
 
 seq_dict = {}
@@ -55,11 +56,11 @@ for line in fasta_file:
     else:
         for nucleotide in line:
             if nucleotide not in ['A', 'T', 'G', 'C', 'N']:
-                raise Exception(("Offending nucleotide", nucleotide, "not one of ['A', 'T', 'G', 'C', 'N']")) ## this is another way to raise an anonymous exception the fly
+                raise Exception(("Offending nucleotide", nucleotide, "not one of ['A', 'T', 'G', 'C', 'N']")) ## this is a way to raise an anonymous exception the fly
                 sys.exit(1)
         seq_dict[seqid] += line
 
-## print out to columns
+## print out to columns/tab delimited format
 for seq_id in seq_dict:
     print(seq_id, seq_dict[seq_id], sep = "\t")
 
