@@ -13,11 +13,11 @@ In this exercise you will generate a gene list, get the GO annotations, and sear
    2. Get the term name for a specific Gene ontology accession., i.e., GO:0006355 (regulation of transcription, DNA-templated)
        `term_obj = ont['REF:ACCESSION']`
        `term_name = term_obj.name`
-   3. Use pronto `rchildren()` to retrieve all children terms of your term and to store the ID of each term in a dictionary with the term name as the value
-     1. make sure to use the `id` method to retrieve the id of each term object that is returned by `rchildren()`
+   3. Use pronto `subclasses()` to retrieve all children terms of your term and to store the ID of each term in a dictionary with the term name as the value
+     1. make sure to use the `id` method to retrieve the id of each term object that is returned by `subclasses()`
          ```
          all_children={}
-         for child in ont['REF:ACCESSION'].rchildren():
+         for child in ont['REF:ACCESSION'].subclasses():
             all_children[child.id] = child.name
          ```
          Add the parent term as well
@@ -48,7 +48,7 @@ GO_GENES = sys.argv[1] # this is your gene list (gene_id\tgo_id\tgo_name)
 MY_GO_ID = sys.argv[2] # this is the GO term you want to search for in your gene list
 
 # create an object of class Ontology with the GO ontology
-ont = pronto.Ontology('your/path2/pfb2017/files/go.owl')
+ont = pronto.Ontology('your/path2/pfb2017/files/go.obo.gz')
 
 # get the term name of the provided GO ID
 term_obj = ont[MY_GO_ID]
@@ -61,7 +61,7 @@ all_children={}
 all_children[MY_GO_ID] = term_name
 
 # add all children of the parent term to dictionary
-for child in ont[MY_GO_ID].rchildren():
+for child in ont[MY_GO_ID].subclasses():
   all_children[child.id] = child.name
 
 # open genes file 
