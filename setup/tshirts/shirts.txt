@@ -1,7 +1,7 @@
 mens	small	heather seafoam
 womens	medium	Heather Purple
 womens	medium	berry
-mens	medium 	heather coral silk
+mens 	medium 	heather coral silk
 womens	Small	Kiwi
 mens	large	Graphite Heather
 mens	large	sport grey
@@ -35,7 +35,7 @@ mens	medium	Heather Military Green
 mens	medium	dark heather
 mens	medium	Carolina Blue
 mens	large	Carolina Blue
-womens	medium	Carolina Blue
+womens	Medium	Heather Purple
 Mens	Medium	Iris
 child	4T	green
 child	3T	pink
