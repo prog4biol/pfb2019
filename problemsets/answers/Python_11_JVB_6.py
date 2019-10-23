@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 6. GC content method
 #    a. Add in a method that caclulates and returns the GC content.
 #    b. Write some some lines of code, outside your class (in your main

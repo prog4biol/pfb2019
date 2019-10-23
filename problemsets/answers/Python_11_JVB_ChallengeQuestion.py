@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Challenge Question
 # 1. Create a method that can compare two DNA Sequence records and returns
 #    True if they are the same or False if they are differet. Sameness is

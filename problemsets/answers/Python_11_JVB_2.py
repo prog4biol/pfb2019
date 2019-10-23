@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 2. Write some some lines of code, outside your class (in your main
 #    program) that sets the name, DNA sequence, and organism for a gene.
 

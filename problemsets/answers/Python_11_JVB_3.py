@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 3. Write some some lines of code, outside your class that:
 #    a. uses the object sequence attribute to retrieve and print the sequence.
 #    b. uses the object name attribute to retrieve and print the name.

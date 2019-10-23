@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 5. Nucleotide composition method
 #    a. Add in a method that caclulates and returns the nucleotide
 #       composition.

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 1. Create a DNA sequence class that will contain a sequence, its name,
 #    and it's organism of origin. Do this by creating an __init__ function.
 

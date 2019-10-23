@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 4. Sequence length method
 #    a. Add a method to your class that caclulates and returns the length
 #       of the sequence.

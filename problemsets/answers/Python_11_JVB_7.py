@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 7. FASTA Formatter method
 #    a. Add in a method that returns the sequence record in FASTA format.
 #    b. Write some some lines of code, outside your class (in your main
