@@ -71,6 +71,8 @@ When are README's useful?
 
 * For personal organization when you have many projects ongoing (GitHub will automatically prompt you to write one when you create a new repository.)
 
+* To create appendices for manuscripts and neatly include code.
+
 * For collaborators or people interested in your code who need an overview of what it does
 
 * To archive the purpose of the project, special instructions for installing or using the code, the language it is written in etc.
