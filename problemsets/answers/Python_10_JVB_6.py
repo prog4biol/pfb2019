@@ -9,6 +9,12 @@
 
 import sys
 
+
+# global variable private to this class
+NUCLEOTIDE_COMPLEMENT = str.maketrans(
+    'acgturyswkmbdhvnACGTURYSWKMBDHVN',
+    'tgcaayrwsmkvhdbnTGCAAYRWSMKVHDBN'
+)
         
 def wrap(maybe_linear_sequence, width=None):
     """
@@ -71,9 +77,9 @@ def reverse_complement(sequence):
     """
     # Do it all in one go:
     # 1. `sequences[::-1]` reverses the string, which creates another string
-    # 2. `string.replace('ATCG','TAGC')` complements the sequence string and
-    #    outputs another string, which gets returned
-    return sequence[::-1].replace('ATCG','TAGC')
+    # 2. `string.translate(NUCLEOTIDE_COMPLEMENT)` complements the sequence 
+    #    string and outputs another string, which gets returned
+    return sequence[::-1].translate(NUCLEOTIDE_COMPLEMENT)
 
 # If someone (accidentally?) tries to import this script, the following code
 # would get executed, which is not what we want. Writing the following line
