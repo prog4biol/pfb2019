@@ -13,5 +13,4 @@
 | Python10  | JVB  |  KLG | 
 | Python11  | JVB  | DD  | 
 | Biopython  | JVB  | DD  | 
-| Ontology  | KLG  | DD  | 
-| Pipelines  |  JVB | DD  | 
+
