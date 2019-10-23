@@ -65,7 +65,7 @@ Currently, there are three options for service types (--service or -s).
 
 *   _enrich_ -- This is the statistical overrepresentation test on a list of genes.
 *   _geneinfo_ -- This call provides GO and pathway annnotations to the uploaded genes.
-*   _ortholog_ -- This call returns the orthologs of the uploaded list. Maximum of 10 genes can be loaded.
+*   _ortholog_ -- This call returns the orthologs of the uploaded list. Maximum of 10 genes can be loaded. The orthologs can be from a specified genome, or from all genomes in the PANTHER database (132 total).
 
 
 ### Parameter File
@@ -83,9 +83,10 @@ This file should be used when _enrich_ is specified as the service type. There a
 This file should be used when _geneinfo_ is specified as the service type. The organism taxon ID needs to be specified to match the uploaded data.
  
  **ortholog.json**   
- This file should be used when _ortholog_ is specified as the service type. There are two items to be specified
+ This file should be used when _ortholog_ is specified as the service type. There are three items to be specified
  1. "organism": "**9606**" -- specify the organism of the uploaded genes
  2. "orthologType": "**LDO**" -- specify the type of ortholog, e.g., LDO (for least divergent ortholog), or all.
+ 3. "targetOrganism": “10090,7227” -- specifiy the taxon ids for the target organisms, separated by a comma.
 
 
 ### User Gene List
