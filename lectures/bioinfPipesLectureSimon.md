@@ -183,7 +183,7 @@ fastqc
 
 ### resequencing, variant calling
 
-GATK
+GATK, FreeBayes
 
 ### finding genes
 
@@ -208,13 +208,12 @@ We won't talk about DBs more here, but they are useful for larger data projects.
 
 ### Public databases
 
-__NCBI__  
-nr (proteins)  
-nt (nucleotides)  
-Lots of data, uncurated, complete
+__NCBI__ (sequences, searching)  
+Landmark (modle organisms)
+Above are better than: nr (proteins),  nt (nucleotides)  Lots of data, uncurated, complete
 Sequence Read Archive (SRA) 454, illumina, short reads
 
-__Uniprot__
+__Uniprot__ (sequences, searching)
 http://www.uniprot.org
 Curated, smaller, not as inclusive as nr. 
 Helpful for speeding up analysis: UniRef90 (sequences clustered at 90% identity, which is approximately genus level). Much smaller than full database. 
@@ -276,9 +275,7 @@ It's a good idea to make alias for python3 -m pdb  in .profile. How would we do 
 
 ### Write bigger python coding projects? 
 
-PyCharm
-
-A nice IDE. See review session soon.
+PyCharm An ok IDE. People also like sublime.
 
 ### Tell if my code is slow
 
