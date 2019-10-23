@@ -169,7 +169,86 @@ Data consistency, corruption, sanity checks
   formats - see biopython  
   (un)compression  
 
+## Designing and Implementing a Bioinformatics Pipeline
+
+Say you want to automate blast runs
+
+```
+makeblastdb -in EcoliO157.uniprot.fa -dbtype prot -parse_seqids
+
+blastp -query ilvG.bacteria.prot.fa -db EcoliO157.uniprot.fa -outfmt 7 -out ilvG.bacteria.prot.fa.blastp.out -evalue 1e-10
+
+```
+
+
+
+Here's a script.
+
+We need to print a usage message
+
+We need to track when and how the script was run
+
+We need to run blastp
+
+We need to check blastp ran ok (unix return code)
+
+```python
+#!/usr/bin/env python3                                                           
+import subprocess
+import sys
+import datetime
+
+# help message                                                                   
+if len(sys.argv) < 4:
+    print('Usage: {}   <query protein fasta>  <formatted database>  <min E-value\
+>'.format(sys.argv[0]))
+    exit(1)
+# get cmd line params                                                            
+query = sys.argv[1]
+db = sys.argv[2]
+evalue = sys.argv[3]
+
+# 2019-10-23 13:49:27.232603                                                     
+now = str(datetime.datetime.now())
+# cut down to 2019-10-23 13:49                                                   
+now = now[0:16]
+
+#log run command and time/date to screen                                         
+print('#' , ' '.join(sys.argv))
+print('#' , 'was run on', now)
+
+#generate output file                                                            
+out = query + '.blastp.out'
+
+
+# run the command                                                                
+blastcmd = 'blastp -query ' + query + ' -db ' + db + ' -outfmt 7 -out ' + out + \
+' -evalue ' + evalue
+
+# object is returned after run command                                           
+blastcmd_run = subprocess.run(blastcmd, shell=True , stdout = subprocess.PIPE, s\
+tderr=subprocess.PIPE)
+
+# Now we need to check the UNIX return code                                      
+# always do this!                                                                
+# 0 = success                                                                    
+# non-zero =failure                                                              
+if blastcmd_run.returncode != 0:
+    print("FAILED!")
+    exit(2)
+
+# now parse results                                                              
+# ...                                                                            
+
+
+```
+
+
+
+
+
 ## Bioinformatics How do I ...?
+
 Here are some bare-bones guidelines to get you going.
 ### filtering illumina sequence data: 
 
