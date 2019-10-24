@@ -1,6 +1,6 @@
 # RNAseq Workshop -- Brian Haas
 
-Clone [Brian's Repository](https://github.com/trinityrnaseq/CSHLProgForBiol2018). 
+Clone [Brian's Repository](https://github.com/trinityrnaseq/CSHLProgForBiol2019). 
 
 ## Make sure to not clone it inside one of your existing repositories
 
