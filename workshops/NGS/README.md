@@ -88,3 +88,4 @@ NGS Workshop Tutorial
    - Navigate through `Genomes` => `Load Genomes from File...` and select the genome FASTA file.
    - Navigate `File` => `Load from File...` and load a VCF/GFF3/BED file.
 
+To See answers to the above questions, go to Jessen's [repo](https://github.com/bredeson/pfb2019/blob/answers/workshops/NGS/README.md) on the answers branch.
