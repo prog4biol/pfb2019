@@ -1,0 +1,7 @@
+#Project Ideas
+
+####Daniel 
+
+### A Simple Web Application for Querying scRNA-seq Data 
+
+Querying analyses generated from NGS data typically requires programming skills that are not formally taught to biologists. A typical bench researcher who generates such data can be wholly dependent on a collaborator proficient in writing code to extract meaningful patterns. Unfortunately, the number of datasets being generated far outweighs the number of individuals capable of analyzing the data. This phenomena has led to a bottleneck in NGS analysis. Indeed, there are some aspects of analysis that are time consuming and simply require programming literacy, however, there are other aspects can be very repetitive, particularly with tasks that are aimed towards generating figures for exploring data. These short repetitive tasks are a great candidate for a new type of web application written in high level programming languages such as Python and R. This allows an individual with basic programming skills to create an interactive app without any experience in web development. Here we propose a simple application for exploring single cell RNA seq data where the end user can create heatmaps and scatterplots based on their genes of interest. This application can not only reduce the workload for the bioinformatician, but also facilitates collaboration and data exploration. 
