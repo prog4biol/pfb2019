@@ -192,53 +192,78 @@ We need to run blastp
 
 We need to check blastp ran ok (unix return code)
 
+Print summary table of hits
+
 ```python
-#!/usr/bin/env python3                                                           
+#!/usr/bin/env python3
 import subprocess
 import sys
-import datetime
+import datetime 
 
-# help message                                                                   
+# help message
 if len(sys.argv) < 4:
-    print('Usage: {}   <query protein fasta>  <formatted database>  <min E-value\
->'.format(sys.argv[0]))
+    print('Usage: {}   <query protein fasta>  <formatted database>  <min E-value>'.format(sys.argv[0]))
     exit(1)
-# get cmd line params                                                            
+# get cmd line params
 query = sys.argv[1]
 db = sys.argv[2]
 evalue = sys.argv[3]
 
-# 2019-10-23 13:49:27.232603                                                     
+if not query.endswith( ('.fa','.fasta') ):
+    print('Query input file needs to end with .fa or .fasta')
+    exit(12)
+
+# 2019-10-23 13:49:27.232603
 now = str(datetime.datetime.now())
-# cut down to 2019-10-23 13:49                                                   
+# cut down to 2019-10-23 13:49
 now = now[0:16]
 
-#log run command and time/date to screen                                         
+#log run command and time/date to screen
 print('#' , ' '.join(sys.argv))
 print('#' , 'was run on', now)
 
-#generate output file                                                            
+#generate output file
 out = query + '.blastp.out'
 
+# run the command
+blastcmd = 'blastp -query ' + query + ' -db ' + db + ' -outfmt 7 -out ' + out + ' -evalue ' + evalue
 
-# run the command                                                                
-blastcmd = 'blastp -query ' + query + ' -db ' + db + ' -outfmt 7 -out ' + out + \
-' -evalue ' + evalue
+# object is returned after run command
+blastcmd_run = subprocess.run(blastcmd, shell=True , stdout = subprocess.PIPE, stderr=subprocess.PIPE)
 
-# object is returned after run command                                           
-blastcmd_run = subprocess.run(blastcmd, shell=True , stdout = subprocess.PIPE, s\
-tderr=subprocess.PIPE)
-
-# Now we need to check the UNIX return code                                      
-# always do this!                                                                
-# 0 = success                                                                    
-# non-zero =failure                                                              
+# Now we need to check the UNIX return code
+# always do this!
+# 0 = success
+# non-zero =failure
 if blastcmd_run.returncode != 0:
     print("FAILED!")
     exit(2)
 
-# now parse results                                                              
-# ...                                                                            
+# now parse results, 
+homologs = {}
+with open(out,'r') as blast_results:
+    for line in blast_results:
+        line = line.rstrip()
+        if line.startswith('#'): # skip comment lines
+            continue
+        fields = line.split('\t')
+        query = fields[0]
+        subject = fields[1]
+        evalue = float(fields[10]) # this will be a string because 
+                            # we read in from a file
+                            # don't forget to convert to float
+        # collect hits and evalues into dictionary
+        if query not in homologs:
+            homologs[query] = [ (subject, evalue) ]
+        else:
+            homologs[query].append( (subject,evalue) )
+
+print('Hit summary')
+for query in sorted(homologs):
+    print('Query:',query)
+    for data in homologs[query]:
+        query,evalue = data
+        print('{} E-value={}'.format( query, evalue) )
 
 
 ```
@@ -360,6 +385,7 @@ PyCharm An ok IDE. People also like sublime.
 
 Even though python is much slower than C and C++, is your script running too slowly? How can you tell? 
 Two things to think about
+
 * Is debugging painfully slow? Use the smallest test data sets you can to test and debug your script
 * Do you have time to get a cup of coffee while your script is running? If you come back to your script and it's still running, and you're bored, look into speeding it up. Look up profilers, parallelization, other peoples' experiences (seqanswers.com, stackoverflow.com)
 
