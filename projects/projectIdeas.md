@@ -1,4 +1,4 @@
-#Project Ideas
+# Project Ideas
 
 
 
@@ -7,7 +7,7 @@ We will do up to 6 projects for 6 TAs. At least one project idea needs to be cul
 
 
 
-### 1. (CRISPRi/a) guide RNA design tool
+## 1. (CRISPRi/a) guide RNA design tool
 
  
 
@@ -41,17 +41,17 @@ o  We could incorporate a module where someone finds all the potential gRNA site
 
  
 
-#### TAs interested
+### TAs interested
 
-1
+1.
 
-2
+2.
 
-3
+3.
 
 
 
-### **2a. DAta MaNagement Interface Tool (DAMNIT)**
+## **2. DAta MaNagement Interface Tool (DAMNIT)**
 
 
 
@@ -61,57 +61,26 @@ The volume of sequencing data being produced continues to out-pace the ability t
 
 **Programming concepts required by the project:**
 
-\1.   Use of common Python data structures, especially dictionary insertion and look-up
+1.   Use of common Python data structures, especially dictionary insertion and look-up
 
-\2.   Using modules (including os, sys, pickle, subprocess, hashlib)
+2.   Using modules (including os, sys, pickle, subprocess, hashlib)
 
-\3.   Interfacing with the operating system using built-in Python functions and the subprocess module
+3.   Interfacing with the operating system using built-in Python functions and the subprocess module
 
-\4.   Implementing depth-first and breadth-first recursive algorithms
-
-
-
-#### TAs interested
-
-1
-
-2
-
-3
+4.   Implementing depth-first and breadth-first recursive algorithms
 
 
 
-### 2b. Process/Filter ChIP-seq data with peaks already called in bed files. 
+### TAs interested
 
- 
+1.
 
-When performing ChIP-seq there are regions of the genome that always have peaks called that are artifacts. Scientists have created a list of blacklist sites throughout the genome where these artifacts occur. Routinely, people remove the blacklist sites. Here is an example of blacklist sites that could be removed https://github.com/Boyle-Lab/Blacklist/tree/master/lists . A script could be written that removes the blacklist sites with bedintersect and write a new filtered file. In addition, scientist oftentimes will remove the mitochondrial chromosomes from bedfiles, if they are only focusing on the nuclear genome. The script would incorporate the option to remove mitochondrial peaks as well. Also, it could have the option to provide the percentage of the genome covered by the bed file. This is useful in ATAC-seq samples especially. It tells you the percentage of the genome that is “open”. This can be done easily by using the Jaccard option in bedtools. In the script as well, it would have the option to output a log file with the commands used. In addition to the percent of the peaks removed from the blacklist sites and from the mitochondria, the percentage of the genome covered by the bed file could all be included in the log file. The actual peaks that were removed could be included in tab delimited format within the log file. 
+2.
 
- 
-
-Another script could be written to create a PCA of replicates or could be used in patient/control comparisons. bedtools multiinter, part of bedtools, can create a matrix from the user provided bed files. Afterwards, a PCA plot could be generated using the matrix of bed positions. This would be useful to observe clustering of replicates and patient vs control samples. 
-
- 
-
-Another script could be written to annotate the closest gene downstream of the ChIP-seq peak and perform a GO analysis. This could provide useful information on what genes are nearby and indicate if there are any GO terms using DAVID. 
-
- 
-
-These 3 scripts would be a good test of knowledge from this course. Providing many different ways to apply our knowledge in different ways. Building these 3 different scripts would provide a challenging opportunity to test our skills with python programming. 
+3.
 
 
-
-#### TAs interested
-
-1
-
-2
-
-3
-
-
-
-### **3. Text-based Turn Game**
+## **3. Text-based Turn Game**
 
  
 
@@ -123,29 +92,29 @@ A text-based turn game is a terminal-based interactive gaming style usually invo
 
 **Programming concepts required by the project:**
 
-\1.   Accept terminal input from the player to prompt actions
+1.   Accept terminal input from the player to prompt actions
 
-\2.   Construct object classes with an abstract interface for people, monsters, etc. which will enable interaction between them (fight, converse).
+2.   Construct object classes with an abstract interface for people, monsters, etc. which will enable interaction between them (fight, converse).
 
-\3.   Modular programming. Each situation a user is presented with in the text-based game world is potentially a different module to be loaded in a main command script. Given a well-planned character object development, programmers will be able to construct scenarios (i.e., modules) that plug into the main program.
+3.   Modular programming. Each situation a user is presented with in the text-based game world is potentially a different module to be loaded in a main command script. Given a well-planned character object development, programmers will be able to construct scenarios (i.e., modules) that plug into the main program.
 
-\4.   Use the `random` module to introduce an element of chance into the gameplay.
-
-
-
-#### TAs interested
-
-1
-
-2
-
-3
+4.   Use the `random` module to introduce an element of chance into the gameplay.
 
 
 
+### TAs interested
+
+1.
+
+2.
+
+3.
 
 
-### 6. Web Application for Querying existing (sc)RNA-seq Data and displaying plots etc 
+
+
+
+## 6. Web Application for Querying existing (sc)RNA-seq Data and displaying plots etc 
 
 Querying analyses generated from NGS data typically requires programming skills that are not formally taught to biologists. A typical bench researcher who generates such data can be wholly dependent on a collaborator proficient in writing code to extract meaningful patterns. Unfortunately, the number of datasets being generated far outweighs the number of individuals capable of analyzing the data. This phenomena has led to a bottleneck in NGS analysis. Indeed, there are some aspects of analysis that are time consuming and simply require programming literacy, however, there are other aspects can be very repetitive, particularly with tasks that are aimed towards generating figures for exploring data. These short repetitive tasks are a great candidate for a new type of web application written in high level programming languages such as Python and R. This allows an individual with basic programming skills to create an interactive app without any experience in web development. Here we propose a simple application for exploring single cell RNA seq data where the end user can create heatmaps and scatterplots based on their genes of interest. This application can not only reduce the workload for the bioinformatician, but also facilitates collaboration and data exploration. 
 
@@ -153,19 +122,19 @@ Querying analyses generated from NGS data typically requires programming skills 
 
 
 
-#### TAs interested
+### TAs interested
 
-1
+1.
 
-2
+2.
 
-3
-
-
+3.
 
 
 
-### 4.  RNAseq data cleanup, analysis and visualization for data sets such as unidentified metagenomics RNAseq reads
+
+
+## 4.  RNAseq data cleanup, analysis and visualization for data sets such as unidentified metagenomics RNAseq reads
 
 Input style: curated bacterial RNA or RNA-seq analyses from well annotated repository of diverse bacteria
 
@@ -219,7 +188,7 @@ Strategy: basic pipeline to parse the transcripts in order to explore the distri
 
 
 
-#### TAs interested
+### TAs interested
 
 1
 
@@ -237,7 +206,7 @@ Strategy: basic pipeline to parse the transcripts in order to explore the distri
 
  
 
-### 5. Variant calling and mapping SNPs to proteins
+## 5. Variant calling and mapping SNPs to proteins
 
  
 
@@ -312,13 +281,13 @@ Additional ideas for features if time permits:
 
 
 
-#### TAs interested
+### TAs interested
 
-1
+1.
 
-2
+2.
 
-3
+3.
 
 
 
