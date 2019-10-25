@@ -51,7 +51,7 @@ o  We could incorporate a module where someone finds all the potential gRNA site
 
 
 
-### **2a. DAta MaNagement Interface Tool (DAMNIT)**
+### **2. DAta MaNagement Interface Tool (DAMNIT)**
 
 
 
@@ -78,37 +78,6 @@ The volume of sequencing data being produced continues to out-pace the ability t
 2
 
 3
-
-
-
-### 2b. Process/Filter ChIP-seq data with peaks already called in bed files. 
-
- 
-
-When performing ChIP-seq there are regions of the genome that always have peaks called that are artifacts. Scientists have created a list of blacklist sites throughout the genome where these artifacts occur. Routinely, people remove the blacklist sites. Here is an example of blacklist sites that could be removed https://github.com/Boyle-Lab/Blacklist/tree/master/lists . A script could be written that removes the blacklist sites with bedintersect and write a new filtered file. In addition, scientist oftentimes will remove the mitochondrial chromosomes from bedfiles, if they are only focusing on the nuclear genome. The script would incorporate the option to remove mitochondrial peaks as well. Also, it could have the option to provide the percentage of the genome covered by the bed file. This is useful in ATAC-seq samples especially. It tells you the percentage of the genome that is “open”. This can be done easily by using the Jaccard option in bedtools. In the script as well, it would have the option to output a log file with the commands used. In addition to the percent of the peaks removed from the blacklist sites and from the mitochondria, the percentage of the genome covered by the bed file could all be included in the log file. The actual peaks that were removed could be included in tab delimited format within the log file. 
-
- 
-
-Another script could be written to create a PCA of replicates or could be used in patient/control comparisons. bedtools multiinter, part of bedtools, can create a matrix from the user provided bed files. Afterwards, a PCA plot could be generated using the matrix of bed positions. This would be useful to observe clustering of replicates and patient vs control samples. 
-
- 
-
-Another script could be written to annotate the closest gene downstream of the ChIP-seq peak and perform a GO analysis. This could provide useful information on what genes are nearby and indicate if there are any GO terms using DAVID. 
-
- 
-
-These 3 scripts would be a good test of knowledge from this course. Providing many different ways to apply our knowledge in different ways. Building these 3 different scripts would provide a challenging opportunity to test our skills with python programming. 
-
-
-
-#### TAs interested
-
-1
-
-2
-
-3
-
 
 
 ### **3. Text-based Turn Game**
