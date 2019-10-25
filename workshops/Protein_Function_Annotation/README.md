@@ -137,7 +137,6 @@ __geneinfo__
 
 __enrich__
 ```
-
 % python3 pthr_go_annots.py -s enrich -p params/enrich.json -f resources/test_ids.txt
 ```
 
