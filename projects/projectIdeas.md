@@ -105,15 +105,7 @@ Querying analyses generated from NGS data typically requires programming skills 
 
 
 
-#### (  Continuation of previous project RNAseq data cleanup, analysis and visualization for data sets such as unidentified metagenomics RNAseq reads)
 
-Input style: curated bacterial RNA or RNA-seq analyses from well annotated repository of diverse bacteria
-
-
-
-When dealing with RNAseq from organisms containing obligate, facultative, opportunistic and pathogenic symbionts, read alignments are never 100%. Usually, a large proportion of total reads will align to the host organism, while the rest remain unmapped, and unknown. What to do with these reads? There are currently a fair number of metatranscriptomic microbiome pipelines. To expand this repertoire, we will develop two tools. The first pipeline will input orphaned reads and blast them to attempt a taxonomy assignment. The second pipeline will verify taxonomy for one gene of interest by identifying homologs present in distant organisms through blast. The full report will give thorough discussions on the statistics used including the probability that our proteins are found in the database and the probability that our results would occur by chance. The goal would be to show the reproducibility by using standard statistics and well described methods.
-
-The data generated from various RNA-seq pipelines seem to follow a trend and often consist of: gene name, unique reads mapped, total reads mapped, expression values and some comparison value relative to wildtype. However, tools for processing the output are not as readily available and are often tailored to each experiment. The goal of this pipeline is to provide such a tool for generic data handling between a WT and mutant/condition. We have a lot of ideas and are trying to make a story out of our selfish desires so bear with us its almost over. To do so, a script will be written that parses RNA-seq data, trimms the data based on stringent parameters, and produces a tabular output of the RNA-seq expression data that has been deemed reliable. A second script will assign scores to ontology classes (obtained and parsed from KEGG) and generate a figure depicting general trends in the bacteria’s transcriptome. Finally, if time permits, a script will be written to generate a “gene translator.” All coding sequences of one bacterial strain will be blasted against another strain and vice versa. If the same hit is returned with an acceptable E-value, then these genes will be considered the same and appended to the “translator” output file. Genes that do not return a match will also be saved to the translator file, but as a new line (without a match.)
 
  
 
@@ -249,15 +241,15 @@ Steps:
 
 a.   The Ensembl genome browser allows you to filter by some parameters and outputs an excel file. I would only export SNPs that are: 
 
-​                        i.     Located in exons
+                        i.     Located in exons
 
-​                       ii.     Missense 
+                       ii.     Missense 
 
-​                      iii.     Alter protein sequence
+                      iii.     Alter protein sequence
 
 2.   Parse and sort the output file:
 
-​                        i.     Extract columns for nucleotide change, amino acid change, amino acid coordinate, SIFT score, and PolyPhen score
+                        i.     Extract columns for nucleotide change, amino acid change, amino acid coordinate, SIFT score, and PolyPhen score
 
 3.   Map affected amino acids to protein sequence 
 
@@ -291,7 +283,15 @@ Additional ideas for features if time permits:
 
 
 
+### TA TBD ###
 
+#### RNASeq Analysis Pipeline with Mystery Unaligned Reads
+
+Build a Python Pipeline for RNAseq Analysis which includes trimming, aligning, quantifying, and testing for differential expression. Then take all unaligned reads and identify your contaminate/symbiote/organelle. 
+
+To enrich your differential expression analysis incorporate transcript annotation/Gene Ontology/Pathways/Panther.
+
+Is any of the differential expression between samples potentially caused by variants? Call SNPs and predict variant effect on transcripts.
 
 
 
