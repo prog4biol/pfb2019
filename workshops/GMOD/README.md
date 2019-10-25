@@ -2,19 +2,26 @@
 
 URLs for workshop:
 
-Apollo
-```
+
+   
+
+
+Apollo:
+
 http://genomearchitect.github.io/demo/ 
+
+
+```
 username: demo@demo.com 
 password: demo
 ```
 
-JBrowse
-```
-http://staging.wormbase.org/tools/genome/jbrowse
-```
+JBrowse at Wormbase:
+
+https://www.wormbase.org/tools/genome/jbrowse-simple/?data=data%2Fc_elegans_PRJNA13758
+
 
 Site Using Tripal
-```
+
 https://tripal.info/sites_using_tripal
-```
+
