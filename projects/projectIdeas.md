@@ -199,7 +199,28 @@ Strategy: basic pipeline to parse the transcripts in order to explore the distri
 
 ## DNA sequence analysis
 
-DNA is not a random sequence of bases, rather it comprises kmers that are over-represented ('DNA words'). This project will analyse the human genome sequence to find all such DNA words, running statistical tests to determine which are over-represented and subsequent analysis will investigate relationships between these words and known motifs and/or functions (e.g. codons).
+DNA sequence analysis: kmer words
+
+
+DNA is not a random sequence of bases, rather it comprises kmers that are over-represented ('DNA words'). This project will analyze reference genome sequences to find all such DNA words, running statistical tests to determine which are over-represented, and subsequent analysis will investigate relationships between these words and known motifs and/or functions. Then, we will convert these motifs into English (based on word use abundance) and use Python's natural language toolkit to search for chance occurrences grammatical comprehensibility.  
+
+1) Kmer motif abundance testing 
+
+-Write code to identify all kmers of a given size in a reference genome. 
+-Run statistical abundance tests for each kmer within each chromosome (book chapter) to find the frequency distribution of kmers within each chromosome
+-Generate histograms and density plots of kmer abundance in sliding windows throughout the genome
+-Then find all the positions of these most abundant kmers in the reference
+-Search for positional associations between abundant kmers (motifs) and the frequencies of these motifs within chromosomes  
+-Repeat this analysis with kmers of different sizes 
+
+2) Kmers as language
+
+-Find a list of words in the English language ordered by the frequency of usage
+-Associate this ordered list with the ordered lists of kmers
+-Take the kmer (word) motifs generated earlier and use Python's natural language toolkit to search for sensible grammar within the generated language.
+-Try to identify if any comprehensible kmer sentences exist in the reference genomes 
+-Compare the kmer sentences within closely related taxa to see if/how the language differs 
+-Repeat this analysis with kmers of different sizes to see if it influences linguistic comprehension
 
 ### TA Joe
 
