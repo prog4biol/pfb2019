@@ -1,13 +1,4 @@
-# Project Ideas
-
-
-
-
-We will do up to 6 projects for 6 TAs. At least one project idea needs to be culled (we suggest 2a or 2b)
-
-
-
-## 1. (CRISPRi/a) guide RNA design tool
+# 1. (CRISPRi/a) guide RNA design tool
 
  
 
@@ -41,17 +32,23 @@ o  We could incorporate a module where someone finds all the potential gRNA site
 
  
 
-### TAs interested
+### TA Matt
 
-1.
+1. 
 
 2.
 
 3.
 
+4
+
+5
 
 
-## **2. DAta MaNagement Interface Tool (DAMNIT)**
+
+
+
+# **2. DAta MaNagement Interface Tool (DAMNIT)**
 
 
 
@@ -71,16 +68,22 @@ The volume of sequencing data being produced continues to out-pace the ability t
 
 
 
-### TAs interested
+### TA Jessen
 
-1.
+1. 
 
 2.
 
 3.
 
+4
 
-## **3. Text-based Turn Game**
+5
+
+
+
+
+# **3. Text-based Turn Game**
 
  
 
@@ -102,39 +105,29 @@ A text-based turn game is a terminal-based interactive gaming style usually invo
 
 
 
-### TAs interested
+### TA Shasta
 
-1.
+1. 
 
 2.
 
 3.
 
+4
+
+5
 
 
 
 
-## 6. Web Application for Querying existing (sc)RNA-seq Data and displaying plots etc 
+
+# 6+4. Web Application for Querying existing (sc)RNA-seq Data and displaying plots etc 
 
 Querying analyses generated from NGS data typically requires programming skills that are not formally taught to biologists. A typical bench researcher who generates such data can be wholly dependent on a collaborator proficient in writing code to extract meaningful patterns. Unfortunately, the number of datasets being generated far outweighs the number of individuals capable of analyzing the data. This phenomena has led to a bottleneck in NGS analysis. Indeed, there are some aspects of analysis that are time consuming and simply require programming literacy, however, there are other aspects can be very repetitive, particularly with tasks that are aimed towards generating figures for exploring data. These short repetitive tasks are a great candidate for a new type of web application written in high level programming languages such as Python and R. This allows an individual with basic programming skills to create an interactive app without any experience in web development. Here we propose a simple application for exploring single cell RNA seq data where the end user can create heatmaps and scatterplots based on their genes of interest. This application can not only reduce the workload for the bioinformatician, but also facilitates collaboration and data exploration. 
 
 
 
-
-
-### TAs interested
-
-1.
-
-2.
-
-3.
-
-
-
-
-
-## 4.  RNAseq data cleanup, analysis and visualization for data sets such as unidentified metagenomics RNAseq reads
+#### (  Continuation of previous project RNAseq data cleanup, analysis and visualization for data sets such as unidentified metagenomics RNAseq reads)
 
 Input style: curated bacterial RNA or RNA-seq analyses from well annotated repository of diverse bacteria
 
@@ -188,13 +181,37 @@ Strategy: basic pipeline to parse the transcripts in order to explore the distri
 
 
 
-### TAs interested
+
+
+### TA Daniel
+
+1. 
+
+2.
+
+3.
+
+4.
+
+5.
+
+
+
+## DNA sequence analysis
+
+DNA is not a random sequence of bases, rather it comprises kmers that are over-represented ('DNA words'). This project will analyse the human genome sequence to find all such DNA words, running statistical tests to determine which are over-represented and subsequent analysis will investigate relationships between these words and known motifs and/or functions (e.g. codons).
+
+### TA Joe
 
 1
 
 2
 
 3
+
+4
+
+5
 
 
 
@@ -206,7 +223,7 @@ Strategy: basic pipeline to parse the transcripts in order to explore the distri
 
  
 
-## 5. Variant calling and mapping SNPs to proteins
+# 5. Variant calling and mapping SNPs to proteins
 
  
 
@@ -220,7 +237,7 @@ Here, we propose to develop a pipeline using a python wrap around each module to
 
 Resources available:
 
-\1.   Mpileup files from tumor DNA capture-panel (118 genes) enriched NGS of pancreatic cancer representing intra-ductal papillary mucinous neoplasm (stage I), stage II-III pancreatic cancer, and stage IV pancreatic cancer.
+\1.   ~~Mpileup~~ bam files from tumor DNA capture-panel (118 genes) enriched NGS of pancreatic cancer representing intra-ductal papillary mucinous neoplasm (stage I), stage II-III pancreatic cancer, and stage IV pancreatic cancer.
 
 \2.   The Ensembl Variant Effect Predictor will be used for variant classification including output from SIFT and Polyphen – predictive algorithms that determine if a DNA variant alters/disrupts protein function.
 
@@ -281,13 +298,19 @@ Additional ideas for features if time permits:
 
 
 
-### TAs interested
+### TA Kirsten
 
-1.
+1. 
 
 2.
 
 3.
+
+4
+
+5
+
+
 
 
 
