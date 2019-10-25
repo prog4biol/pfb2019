@@ -34,15 +34,8 @@ o  We could incorporate a module where someone finds all the potential gRNA site
 
 ### TA Matt
 
-1. 
 
-2.
 
-3.
-
-4
-
-5
 
 
 
@@ -70,15 +63,8 @@ The volume of sequencing data being produced continues to out-pace the ability t
 
 ### TA Jessen
 
-1. 
 
-2.
 
-3.
-
-4
-
-5
 
 
 
@@ -107,21 +93,13 @@ A text-based turn game is a terminal-based interactive gaming style usually invo
 
 ### TA Shasta
 
-1. 
-
-2.
-
-3.
-
-4
-
-5
 
 
 
 
 
-# 6+4. Web Application for Querying existing (sc)RNA-seq Data and displaying plots etc 
+
+# 4. Web Application for Querying existing (sc)RNA-seq Data and displaying plots etc 
 
 Querying analyses generated from NGS data typically requires programming skills that are not formally taught to biologists. A typical bench researcher who generates such data can be wholly dependent on a collaborator proficient in writing code to extract meaningful patterns. Unfortunately, the number of datasets being generated far outweighs the number of individuals capable of analyzing the data. This phenomena has led to a bottleneck in NGS analysis. Indeed, there are some aspects of analysis that are time consuming and simply require programming literacy, however, there are other aspects can be very repetitive, particularly with tasks that are aimed towards generating figures for exploring data. These short repetitive tasks are a great candidate for a new type of web application written in high level programming languages such as Python and R. This allows an individual with basic programming skills to create an interactive app without any experience in web development. Here we propose a simple application for exploring single cell RNA seq data where the end user can create heatmaps and scatterplots based on their genes of interest. This application can not only reduce the workload for the bioinformatician, but also facilitates collaboration and data exploration. 
 
@@ -185,15 +163,10 @@ Strategy: basic pipeline to parse the transcripts in order to explore the distri
 
 ### TA Daniel
 
-1. 
 
-2.
 
-3.
 
-4.
 
-5.
 
 
 
@@ -224,15 +197,9 @@ DNA is not a random sequence of bases, rather it comprises kmers that are over-r
 
 ### TA Joe
 
-1
 
-2
 
-3
 
-4
-
-5
 
 
 
@@ -272,13 +239,13 @@ Resources available:
 
 Input:
 
-\1.   Output file from Ensembl with SNP info (see example attached)
+1.   Output file from Ensembl with SNP info (see example attached)
 
-\2.   Protein sequence  
+2.   Protein sequence  
 
 Steps: 
 
-\1.   Output data file with SNP information:
+1.   Output data file with SNP information:
 
 a.   The Ensembl genome browser allows you to filter by some parameters and outputs an excel file. I would only export SNPs that are: 
 
@@ -288,11 +255,11 @@ a.   The Ensembl genome browser allows you to filter by some parameters and outp
 
 ​                      iii.     Alter protein sequence
 
-\2.   Parse and sort the output file:
+2.   Parse and sort the output file:
 
 ​                        i.     Extract columns for nucleotide change, amino acid change, amino acid coordinate, SIFT score, and PolyPhen score
 
-\3.   Map affected amino acids to protein sequence 
+3.   Map affected amino acids to protein sequence 
 
 a.   Only include those with scores that predict that the amino acid change is probably deleterious (SIFT score < 0.05 AND PolyPhen score >0.85)  
 
@@ -321,15 +288,8 @@ Additional ideas for features if time permits:
 
 ### TA Kirsten
 
-1. 
 
-2.
 
-3.
-
-4
-
-5
 
 
 
