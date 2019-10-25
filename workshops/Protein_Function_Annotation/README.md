@@ -30,7 +30,7 @@ The script is developed in the GitHub repository in the following location:
 
 [https://github.com/pantherdb/pantherapi-pyclient](https://github.com/pantherdb/pantherapi-pyclient) 
 
-If you have a GitHub account, you can clone the repo to your desktop app. If not, you can simply download the repo to your desktop.
+If you have a GitHub account, you can clone the repo to your desktop app. If not, you can simply download the repo to your desktop. __Don't Clone This Into Another Repository__
 
 _<span style="text-decoration:underline;">PANTHER API Service</span>_
 
@@ -41,6 +41,7 @@ Example client code for calling can be found in the[ Panther API services](http:
 
 ## Installation
 
+```
 $ git clone https://github.com/pantherdb/pantherapi-pyclient.git
 
 $ cd pantherapi-pyclient
@@ -50,12 +51,13 @@ $ python3 -m venv env
 $ . env/bin/activate (bash) or source env/bin/activate.csh (C-shell or tcsh)
 
 $ pip install -r requirements.txt
-
+```
 
 ## Running
 
+```
 $ python3 pthr_go_annots.py --service <service type> --params_file <parameter file> --seq_id_file <gene list file>
-
+```
 
 ### Service Types
 
@@ -98,6 +100,7 @@ This should be a simple text file (.txt) with one gene identifier per line. Plea
 
 ## Usage
 
+```
 $ python3 pthr_go_annots.py -h
 
 usage: pthr_go_annots.py [-h] [-s SERVICE] [-p PARAMS_FILE] [-f SEQ_ID_FILE]
@@ -108,9 +111,7 @@ optional arguments:
 
   -s SERVICE, --service SERVICE
 
-                        Panther API service to call (e.g. 'enrich',
-
-                        'geneinfo', 'ortholog')
+                        Panther API service to call (e.g. 'enrich', 'geneinfo', 'ortholog')
 
   -p PARAMS_FILE, --params_file PARAMS_FILE
 
@@ -120,14 +121,27 @@ optional arguments:
 
                         File path to list of sequence identifiers
 
+
+```
+
 _<span style="text-decoration:underline;">Examples:</span>_
 
+
+__geneinfo__
+```
 % python3 pthr_go_annots.py -s geneinfo -p params/geneinfo.json -f resources/test_ids.txt
+```
+
+__enrich__
+```
 
 % python3 pthr_go_annots.py -s enrich -p params/enrich.json -f resources/test_ids.txt
+```
 
+__ortholog__
+```
 % python3 pthr_go_annots.py -s ortholog -p params/ortholog.json -f resources/test_ids_ortholog.txt
-
+```
 
 ## Appendix
 
@@ -140,7 +154,10 @@ There are three ways to find the exact taxon IDs for genomes supported by PANTHE
 
 1. Go to the PANTHER Open API site ([http://panthertest3.med.usc.edu:8083/services/tryItOut.jsp?url=%2Fservices%2Fapi%2Fpanther](http://panthertest3.med.usc.edu:8083/services/tryItOut.jsp?url=%2Fservices%2Fapi%2Fpanther)), and use the /supportedgenomes service.
 2. Go directly to the API link page ([http://panthertest3.med.usc.edu:8083/services/oai/pantherdb/supportedgenomes](http://panthertest3.med.usc.edu:8083/services/oai/pantherdb/supportedgenomes)). 
-3. Run the following command: curl -X POST "http://panthertest3.med.usc.edu:8083/services/oai/pantherdb/supportedgenomes" -H  "accept: application/json"
+3. Run the following command: 
+```
+curl -X POST "http://panthertest3.med.usc.edu:8083/services/oai/pantherdb/supportedgenomes" -H  "accept: application/json"
+```
 
 Use the taxon ID that corresponds to the genomes in the ‘name’ field.
 
@@ -153,7 +170,10 @@ There are three similar ways to find the IDs or text needed for the supported an
 
 1. Go to the PANTHER Open API site ([http://panthertest3.med.usc.edu:8083/services/tryItOut.jsp?url=%2Fservices%2Fapi%2Fpanther](http://panthertest3.med.usc.edu:8083/services/tryItOut.jsp?url=%2Fservices%2Fapi%2Fpanther)), and use the /supportedannotdatasets service.
 2. Go directly to the API link page ([http://panthertest3.med.usc.edu:8083/services/oai/pantherdb/supportedannotdatasets](http://panthertest3.med.usc.edu:8083/services/oai/pantherdb/supportedannotdatasets)). 
-3. Run the following command: curl -X POST "http://panthertest3.med.usc.edu:8083/services/oai/pantherdb/supportedannotdatasets" -H  "accept: application/json"
+3. Run the following command:  
+```
+curl -X POST "http://panthertest3.med.usc.edu:8083/services/oai/pantherdb/supportedannotdatasets" -H  "accept: application/json"
+```
 
 Use the text in the ‘id’ field for the parameter files.
 
