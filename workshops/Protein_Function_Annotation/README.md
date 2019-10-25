@@ -100,6 +100,9 @@ This should be a simple text file (.txt) with one gene identifier per line. Plea
 
 ## Usage
 
+
+Sofia Says: Check out the nice usage of `argparse`!!!
+
 ```
 $ python3 pthr_go_annots.py -h
 
