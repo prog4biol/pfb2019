@@ -30,7 +30,9 @@ The script is developed in the GitHub repository in the following location:
 
 [https://github.com/pantherdb/pantherapi-pyclient](https://github.com/pantherdb/pantherapi-pyclient) 
 
-If you have a GitHub account, you can clone the repo to your desktop app. If not, you can simply download the repo to your desktop. __Don't Clone This Into Another Repository__
+If you have a GitHub account, you can clone the repo to your desktop app. If not, you can simply download the repo to your desktop. 
+
+Sofia Says: __Don't Clone This Into Another Repository__
 
 _<span style="text-decoration:underline;">PANTHER API Service</span>_
 
