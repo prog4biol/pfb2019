@@ -57,7 +57,7 @@ The volume of sequencing data being produced continues to out-pace the ability t
 
 TA: Shasta  
 TeamName: VI (visiually impaired)  
-GitHub Repo:  
+GitHub Repo: 
 Participants:    
  - Renee  
  - Cody
@@ -129,8 +129,11 @@ DNA is not a random sequence of bases, rather it comprises kmers that are over-r
 # 6 RNASeq Analysis Pipeline with Mystery Unaligned Reads
 
 TA: Kirsten  
-TeamName:   
-GitHub Repo:  
+
+TeamName: RNA1   
+
+GitHub Repo:[Link](https://github.com/kirstengott/pfb2019_rna1)
+
 Participants:  
  - Marina
  - Cynthia
