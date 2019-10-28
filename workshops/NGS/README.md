@@ -1,5 +1,6 @@
 NGS Workshop Tutorial
 =====================
+To See answers to the below questions, go to Jessen's the answers branch of his [repo](https://github.com/bredeson/pfb2019/blob/answers/workshops/NGS/README.md).
 
 **NOTE:** Unless otherwise specified, example command lines are available in this workshop's [lecture notes](https://github.com/bredeson/pfb2019/blob/master/workshops/NGS/bio_info_formats.pdf) 
 
@@ -88,4 +89,4 @@ NGS Workshop Tutorial
    - Navigate through `Genomes` => `Load Genomes from File...` and select the genome FASTA file.
    - Navigate `File` => `Load from File...` and load a VCF/GFF3/BED file.
 
-To See answers to the above questions, go to Jessen's [repo](https://github.com/bredeson/pfb2019/blob/answers/workshops/NGS/README.md) on the answers branch.
+
