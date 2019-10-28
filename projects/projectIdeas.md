@@ -53,7 +53,7 @@ The volume of sequencing data being produced continues to out-pace the ability t
 
 
 
-# 3. Text-based Turn Game
+# 3. Command Line Adventure Game
 
 TA: Shasta  
 TeamName: VI (visiually impaired)  
@@ -68,18 +68,19 @@ Participants:
 Project Desc:  
 
 
-A text-based turn game is a terminal-based interactive gaming style usually involving gameplay genres in the realms of escape rooms and strategy games. The user is typically thrust into a first-person scenario in which he/she is required to use his/her wits to survive and escape a risky scenario. For this project I propose writing a text-based turn game as an exercise in modular and collaborative code development. This project will leverage object-oriented programming to build the user’s character, monsters, and environments the user must navigate. The user will collect and store items and weapons, inspect their surroundings, and fight or flee from enemies in his/her attempt to escape their perilous plight. 
+The main goal of this project was to create a command line adventure game. In this game, a user first fills out a personality quiz, which generates a character for them. Each character comes pre-set with certain attributes which can change throughout the game. This game creates an object class called "user" which creates a user object with a series of attributes and methods. This object is then used in a game script that calls multiple modules individually written by team members. The user object is adjusted based on encounters in the game.
 
- 
-
+This game incorporates the following programming concepts:
 
 1.   Accept terminal input from the player to prompt actions
 
-2.   Construct object classes with an abstract interface for people, monsters, etc. which will enable interaction between them (fight, converse).
+2.   Construct object classes with an abstract interface for characters.
 
-3.   Modular programming. Each situation a user is presented with in the text-based game world is potentially a different module to be loaded in a main command script. Given a well-planned character object development, programmers will be able to construct scenarios (i.e., modules) that plug into the main program.
+3.   Modular programming. Each situation a user is presented with in the text-based game world is a different module to be loaded in a main command script. Given a well-planned character object development, programmers will be able to construct scenarios (i.e., modules) that plug into the main program.
 
 4.   Use the `random` module to introduce an element of chance into the gameplay.
+
+5. Create modules that can be called for formatting output. 
 
 
 
