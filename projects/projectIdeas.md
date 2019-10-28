@@ -111,7 +111,7 @@ TA: Joe
 TeamName:   
 GitHub Repo:  
 Participants:  
- - Allisa
+ - Alissa
  - Diyendo
 
 Project Desc:  
