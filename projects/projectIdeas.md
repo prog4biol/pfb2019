@@ -57,7 +57,7 @@ The volume of sequencing data being produced continues to out-pace the ability t
 
 TA: Shasta  
 TeamName: VI (visiually impaired)  
-GitHub Repo: 
+GitHub Repo:  
 Participants:    
  - Renee  
  - Cody
