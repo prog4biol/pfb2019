@@ -184,6 +184,20 @@ sudo apt-get install apache2
 sudo systemctl restart apache2
 ```
 
+## Enabling CGI webservers on the AWS instance
+
+First, install Apache2 as described above. Then, Add the following line to `/etc/apache2/apache2.conf`:
+```
+ServerName damnit.programmingforbiology.org
+```
+Then enable cgi scripts:
+```bash
+cd /etc/apache2/mods-enabled/
+sudo ln -s ../mods-available/cgi.load
+mkdir -p /usr/lib/cgi-bin && chmod -R 755 /usr/lib/cgi-bin
+sudo systemctl restart apache2
+```
+
 ## Opening a Jupyter notebook on the AWS instance
 
 The installed Anaconda Python lacks a web browser, and requires tunneling the connection to Jupyter via a localhost port (the original instructions can be found [here](https://towardsdatascience.com/setting-up-and-using-jupyter-notebooks-on-aws-61a9648db6c5)):
@@ -237,7 +251,7 @@ sudo chgrp -R $project_name $project_root/$project_name
 sudo chmod 0770 $project_root/$project_name
 sudo chmod 0770 $project_root/$project_name/share
 
-for user in `cut -f2 $project_name.txt`
+for user in `grep -v '^#' $project_name.txt | cut -f2`
   do
       user_home=$project_root/$project_name/$user
       echo "$user => $user_home"
