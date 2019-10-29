@@ -88,7 +88,8 @@ This game incorporates the following programming concepts:
 
 TA: Daniel  
 TeamName: FISH n' SEQ: Facilitative Illustration by/for Stupid Humans  
-GitHub Repo:  https://github.com/JulianKimura/FISHn-SEQ
+GitHub Repo:  https://github.com/JulianKimura/FISHn-SEQ  
+
 Participants:  
  - Luca 
  - Agusto
