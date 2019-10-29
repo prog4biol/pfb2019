@@ -28,28 +28,25 @@ Note: interference CRISPR guide RNAs need TSS to be included in gff.
 # 2. DAta MaNagement Interface Tool (DAMNIT)
 
 TA: Jessen  
-TeamName: DAMNIT  
-GitHub Repo:  
+TeamName: DAMNIT (**DA**ta **M**a**N**agement **I**nterface **T**ool)
+GitHub Repo: https://github.com/katiemharding/ProjectDAMNIT  
 Participants:  
  - Omer  
  - Katie  
 
 Project Desc:  
 
-The volume of sequencing data being produced continues to out-pace the ability to store and efficiently manage it. I propose a software development project to build a command-line application for managing and archiving data files with a Git-like interface. The software is envisioned to 1) traverse directories on a file system and archive only new or modified files, providing a non-redundant data store; 2) detect files with identical contents (but not necessarily identical names) to already-archived files via SHA checksums; 3) perform file comparison and only store differences (changes) in file contents using time-stamped tarballs; 4) store user-defined file/project metadata; 5) implement an interface to search for and list previously-archived files; and 6) retrieving all root files and apply changes while unarchiving.
+The volume of sequencing data being produced continues to out-pace the ability to store and efficiently manage it. This software development project endeavors to build a command-line application for managing and archiving data files with a Git-like interface. The software was envisioned to 1) traverse directories on a file system and archive only new or modified files, providing a non-redundant data store; 2) detect files with identical contents (but not necessarily identical names) to already-archived files via SHA checksums; 3) perform file comparison and only store differences (changes) in file contents using time-stamped tarballs; 4) store user-defined file/project metadata; 5) implement an interface to search for and list previously-archived files; and 6) retrieving all root files and apply changes while unarchiving.
 
- 
-
-**Programming concepts required by the project:**
+**Programming concepts exercised by the project:**
 
 1.   Use of common Python data structures, especially dictionary insertion and look-up
 
-2.   Using modules (including os, sys, pickle, subprocess, hashlib)
+2.   Using modules (including os, sys, json, subprocess)
 
-3.   Interfacing with the operating system using built-in Python functions and the subprocess module
+3.   Interfacing with the operating system using built-in Python functions and the subprocess module (especially with `diff`, `patch`, and `md5`)
 
 4.   Implementing depth-first and breadth-first recursive algorithms
-
 
 
 
