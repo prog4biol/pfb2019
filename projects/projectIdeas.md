@@ -11,7 +11,7 @@ Participants:
  - John
  - Mina
  
-Project Desc:  
+Project Desc: https://github.com/mrwaas/funny_CRISPR_pun  
 
 Cat Piss: CRISPR Anotation Tool for Parsing In Silico Sequences
 
@@ -20,8 +20,6 @@ Cat Piss: CRISPR Anotation Tool for Parsing In Silico Sequences
 Note: interference CRISPR guide RNAs need TSS to be included in gff.
 
 2) Compute activation, deletion, or interference CRISPER guide RNAs on a user targeted locus in a genome FASTA. 
-
-3) Visualize genome wide guide RNAs in a genome browser.
 
 
 
