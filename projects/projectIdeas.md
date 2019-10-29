@@ -87,8 +87,8 @@ This game incorporates the following programming concepts:
 # 4. Web Application for Querying existing (sc)RNA-seq Data and displaying plots etc 
 
 TA: Daniel  
-TeamName:   
-GitHub Repo:  
+TeamName: FISH n' SEQ: Facilitative Illustration by/for Stupid Humans
+GitHub Repo:  https://github.com/JulianKimura/FISHn-SEQ
 Participants:  
  - Luca 
  - Agusto
