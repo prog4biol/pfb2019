@@ -110,8 +110,8 @@ Create a web tool with a data dashboard for visualizing and exploring publicly a
 
 
 TA: Joe  
-TeamName:   
-GitHub Repo:  
+TeamName: MERKat  
+GitHub Repo:  https://github.com/nomascus/MERKat  
 Participants:  
  - Alissa
  - Diyendo
