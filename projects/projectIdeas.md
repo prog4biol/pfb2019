@@ -134,7 +134,7 @@ TA: Kirsten
 
 TeamName: RNA1   
 
-GitHub Repo:[Link](https://github.com/kirstengott/pfb2019_rna1)
+GitHub Repo: https://github.com/kirstengott/pfb2019_rna1  
 
 Participants:  
  - Marina
