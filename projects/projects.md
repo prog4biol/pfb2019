@@ -2,7 +2,7 @@
 
 TA: Matt  
 TeamName: litterbox  
-GitHub Repo:  
+GitHub Repo:  https://github.com/mrwaas/funny_CRISPR_pun  
 Participants:  
  - Zach
  - Becky
