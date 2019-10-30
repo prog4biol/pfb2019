@@ -2,7 +2,7 @@
 
 TA: Matt  
 TeamName: litterbox  
-GitHub Repo:  
+GitHub Repo:  https://github.com/mrwaas/funny_CRISPR_pun  
 Participants:  
  - Zach
  - Becky
@@ -27,10 +27,10 @@ Note: interference CRISPR guide RNAs need TSS to be included in gff.
 
 # 2. DAta MaNagement Interface Tool (DAMNIT)
 
-TA: Jessen  
-TeamName: DAMNIT (**DA**ta **M**a**N**agement **I**nterface **T**ool)
-GitHub Repo: https://github.com/katiemharding/ProjectDAMNIT  
-Participants:  
+TA: Jessen    
+TeamName: DAMNIT (**DA**ta **M**a**N**agement **I**nterface **T**ool)  
+GitHub Repo: https://github.com/katiemharding/ProjectDAMNIT    
+Participants:   
  - Omer  
  - Katie  
 
