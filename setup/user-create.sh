@@ -16,7 +16,7 @@ for user in `cut -f2 $project_name.txt`
       echo "$user => $user_home"
       sudo useradd -m $user -d $user_home -g $project_name -s /bin/bash
       sudo mkdir -p $user_home/.ssh
-      sudo cp ~/PFB2018-student.pub $user_home/.ssh/authorized_keys
+      sudo cp ~/PFB2019-student.pub $user_home/.ssh/authorized_keys
       sudo chown -R $user:$project_name $user_home/.ssh
       sudo chmod 0700 $user_home/.ssh
       sudo chmod 0400 $user_home/.ssh/authorized_keys
