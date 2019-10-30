@@ -15,8 +15,8 @@ Strong project proposals and project-end presentations satisfy the following poi
 
 In addition to discussing the above points, strong presentations integrate:
 
-- Live demos
+- Live demos (on command line or in Jupyter notebook)
 - Code walk-throughs/highlights
 - Discussion of lessons learned
-- Future directions/improvments
+- Future directions/improvements
 
