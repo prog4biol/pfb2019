@@ -1,7 +1,7 @@
 Project Proposal and Presentation Guide
 =======================================
 
-A strong project proposal (and project-end presentation) will satisfy the following points:
+Strong project proposals and project-end presentations satisfy the following points:
 
 - Description of problem, biological or other (3-4 sentences)
 
@@ -11,7 +11,7 @@ A strong project proposal (and project-end presentation) will satisfy the follow
     - Desired inputs/outputs
     - Potential challenges that may be encountered
 
-- Anticipated programming concepts (logic, data structures, modules, algorithms, etc.) to be used in implementing the solution (1-2 sentences for each concept)
+- Anticipated programming concepts (logic, data structures, modules, algorithms, *etc*.) to be used in implementing the solution (1-2 sentences for each concept)
 
 In addition to discussing the above points, strong presentations integrate:
 
