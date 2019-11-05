@@ -5,10 +5,11 @@ Strong project proposals and project-end presentations satisfy the following poi
 
 - Description of problem, biological or other (3-4 sentences)
 
-- Proposed programming solution (3-8 sentences)
+- Proposed programming solution (1-3 sentences per sub-point)
     - Overview of features/stages/components to be implemented
     - How the proposed program/software solves the problem
-    - Desired inputs/outputs
+    - Desired inputs (data sets, files etc)
+    - Desired outputs (files, output to screen, plots, etc)
     - Potential challenges that may be encountered
 
 - Anticipated programming concepts (logic, data structures, modules, algorithms, *etc*.) to be used in implementing the solution (1-2 sentences for each concept)
