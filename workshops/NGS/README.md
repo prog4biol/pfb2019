@@ -1,5 +1,6 @@
 NGS Workshop Tutorial
 =====================
+To See answers to the below questions, go to Jessen's the answers branch of his [repo](https://github.com/bredeson/pfb2019/blob/answers/workshops/NGS/README.md).
 
 **NOTE:** Unless otherwise specified, example command lines are available in this workshop's [lecture notes](https://github.com/bredeson/pfb2019/blob/master/workshops/NGS/bio_info_formats.pdf) 
 
@@ -47,7 +48,7 @@ NGS Workshop Tutorial
 
 11. Use `samtools view` to keep alignments with `PAIRED` and `PROPER_PAIR` flags *AND DO NOT* contain `UNMAP`, `MUNMAP`, `SECONDARY`, `QCFAIL`, `DUP`, or `SUPPLEMENTARY` flags; write the output as a BAM file. Index this new file with SAMtools (*HINT*: see `samtools flags` for help with flags). Be sure to index your filtered BAM file.
 
-12. Using the base quality score determined in *Step 9* as the minimum base quality threshold, call SNPs using the GATK HaplotypeCaller.
+12. Using the base quality score determined in *Step 10* as the minimum base quality threshold, call SNPs using the GATK HaplotypeCaller.
 
 13. Use the `samtools depth` command to calculate the per-site depth of reads in the genome (see `samtools depth --help` for more info). The output file contains three columns: the chromosome name, position (1-based), and depth. For example:
     ```
@@ -87,4 +88,5 @@ NGS Workshop Tutorial
    - Open IGV
    - Navigate through `Genomes` => `Load Genomes from File...` and select the genome FASTA file.
    - Navigate `File` => `Load from File...` and load a VCF/GFF3/BED file.
+
 
