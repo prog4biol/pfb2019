@@ -576,6 +576,7 @@ False
 False
 ```
 
+Note: Find out more about [bool()](https://www.scaler.com/topics/bool-in-python/).
 
 ### Logic: Control Statements
 
